@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<DatabaseCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MsSqlDatabase>
+    <Name>Demo</Name>
+    <Description />
+    <Active>true</Active>
+    <DifferentSecondaryDatabase>false</DifferentSecondaryDatabase>
+    <OperatorName>?</OperatorName>
+    <WindowsAuthentication>false</WindowsAuthentication>
+    <LicencesSelection>false</LicencesSelection>
+    <IsOptimalization>true</IsOptimalization>
+    <BatchLinks>100</BatchLinks>
+    <BatchFeatures>100</BatchFeatures>
+    <BatchSubTables>40</BatchSubTables>
+    <NonCollectedRows>50000</NonCollectedRows>
+    <LockNotification>false</LockNotification>
+    <Server>.\SQLEXPRESS</Server>
+    <DatabaseName>Demo</DatabaseName>
+    <User>sa</User>
+    <Password>=BFD33B09DC6FC81E6B67D033C50BD7F517</Password>
+    <Trusted>false</Trusted>
+    <SecondaryServer />
+    <SecondaryDatabaseName />
+    <SecondaryUser />
+    <SecondaryTrusted>false</SecondaryTrusted>
+    <VirtualTeleKeySerial>00000000</VirtualTeleKeySerial>
+    <UseConnectionString>false</UseConnectionString>
+    <NetworkLibrary>Default</NetworkLibrary>
+    <Timeout>15</Timeout>
+  </MsSqlDatabase>
+  <MsSqlDatabase>
+    <Name>TestDanych</Name>
+    <Description />
+    <Active>true</Active>
+    <DifferentSecondaryDatabase>false</DifferentSecondaryDatabase>
+    <OperatorName>?</OperatorName>
+    <WindowsAuthentication>false</WindowsAuthentication>
+    <LicencesSelection>false</LicencesSelection>
+    <IsOptimalization>true</IsOptimalization>
+    <BatchLinks>100</BatchLinks>
+    <BatchFeatures>100</BatchFeatures>
+    <BatchSubTables>40</BatchSubTables>
+    <NonCollectedRows>50000</NonCollectedRows>
+    <LockNotification>false</LockNotification>
+    <Server>.\SQLEXPRESS</Server>
+    <DatabaseName>TestDanych</DatabaseName>
+    <User>sa</User>
+    <Password>=BF123D3F3D4EE7D8E56010C3E2EC3EF55F</Password>
+    <Trusted>false</Trusted>
+    <SecondaryServer />
+    <SecondaryDatabaseName />
+    <SecondaryUser />
+    <SecondaryTrusted>false</SecondaryTrusted>
+    <VirtualTeleKeySerial>00000000</VirtualTeleKeySerial>
+    <UseConnectionString>false</UseConnectionString>
+    <NetworkLibrary>Default</NetworkLibrary>
+    <Timeout>15</Timeout>
+  </MsSqlDatabase>
+</DatabaseCollection>
