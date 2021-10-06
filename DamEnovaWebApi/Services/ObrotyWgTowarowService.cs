@@ -1,0 +1,64 @@
+﻿using DamEnovaWebApi.Enova;
+using DamEnovaWebApi.Models;
+using Soneta.Business;
+using Soneta.Handel;
+using Soneta.Magazyny;
+using Soneta.Towary;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace DamEnovaWebApi.Services
+{
+    public class ObrotyWgTowarowService
+    {
+        public List<DamObrotyWgTowarow> GetObroty()
+        {
+            using (Session session = Connection.enovalogin.CreateSession(false, false))
+            {
+                List<DamObrotyWgTowarow> obroty = new List<DamObrotyWgTowarow>();
+
+                HandelModule hamodule = HandelModule.GetInstance(session);
+                Magazyn mag = hamodule.Magazyny.Magazyny.WgNazwa["Magazyn główny"];
+                TowaryModule tm = TowaryModule.GetInstance(session);
+                Towary towary = tm.Towary;
+
+                ObrotyTowaruWorker o = new ObrotyTowaruWorker();
+
+                foreach (Towar towar in tm.Towary)
+                {
+                    DamObrotyWgTowarow damDokument = new DamObrotyWgTowarow();
+
+                    o.Towar = towar;
+
+                    damDokument.ID = towar.ID;
+
+                    damDokument.Typ = towar.Typ.ToString();
+                    damDokument.Kod = towar.Kod;
+                    damDokument.Nazwa = towar.Nazwa;
+
+                    SetDataFromWorker(damDokument, towar, o);
+
+                    obroty.Add(damDokument);
+                }
+                return obroty;
+            }
+        }
+
+        private void SetDataFromWorker(DamObrotyWgTowarow damDokument, Towar towar, ObrotyTowaruWorker o)
+        {
+            try
+            {
+                damDokument.Ilosc = o.Ilość.Value;
+                damDokument.Marza = o.Marża;
+                damDokument.MarzaProcent = ((double)o.ProcentMarża);
+                damDokument.WartoscP = o.WartośćRozchodu;
+                damDokument.WartoscR = o.WartośćRozchodówSprzedaż;
+            }
+            catch (Exception)
+            {
+            }
+        }
+    }
+}

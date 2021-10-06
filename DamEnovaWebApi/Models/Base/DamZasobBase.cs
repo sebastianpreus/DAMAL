@@ -5,10 +5,11 @@ using System.Web;
 
 namespace DamEnovaWebApi.Models.Base
 {
-    public class DamZasobBase
+    public class DamZasobBase : DamModelBase
     {
         public string Nazwa { get; set; }
         public double Ilosc { get; set; }
+        public string JednostkaMiary { get; set; }
         public decimal Wartosc { get; set; }
         public double Cena { get; set; }
         public string Dokument { get; set; }

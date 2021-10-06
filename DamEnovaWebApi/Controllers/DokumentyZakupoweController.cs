@@ -15,20 +15,23 @@ using System.Web.Http.Results;
 namespace DamEnovaWebApi.Controllers
 {
     [BasicAuthentication]
-    public class ZasobyController : ODataController
+    public class DokumentyZakupoweController : ODataController
     {
         private static ODataValidationSettings _validationSettings = new ODataValidationSettings();
         private Connection _connection;
 
-        public ZasobyController()
+        public DokumentyZakupoweController()
         {
             _connection = new Connection();
             _connection.ConnectToEnova();
         }
 
-        // GET: odata/Zasobs
-        public IHttpActionResult GetZasoby(ODataQueryOptions<DamZasob> queryOptions)
+        // GET: odata/Dokumenty        
+        public IHttpActionResult GetDokumentyZakupowe(ODataQueryOptions<DamDokumentZakupowy> queryOptions)
         {
+            //if (queryOptions.Filter == null || queryOptions.Filter.RawValue.Contains("Typ eq"))
+            //    return BadRequest("Brak typu dokumentu w zapytaniu");
+
             try
             {
                 queryOptions.Validate(_validationSettings);
@@ -38,16 +41,23 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ex.Message);
             }
 
-            ZasobyService zasobyService = new ZasobyService();
-            List<DamZasob> zasobs = zasobyService.GetZasoby();
+            DokumentyZakupoweService dokumentyService = new DokumentyZakupoweService();
 
-            IQueryable result = queryOptions.ApplyTo(zasobs.AsQueryable());
+            //ODataUriParser oDataUriParser = new ODataUriParser(DamDokument, new Uri("name eq 'Facebook' or name eq 'Twitter' and subscribers gt 30"));
+            //var result = oDataUriParser.ParseFilter();
+            //"name eq 'Facebook' or name eq 'Twitter' and subscribers gt 30",
+            //edm,
+            //typeof(DamDokument));
+
+            List<DamDokumentZakupowy> dokumenty = dokumentyService.GetDokumenty("");
+
+            IQueryable result = queryOptions.ApplyTo(dokumenty.AsQueryable());
 
             return Ok(result, result.GetType());
-        }
+        }        
 
-        // GET: odata/Zasobs(5)
-        public IHttpActionResult GetDamZasob([FromODataUri] string key, ODataQueryOptions<DamZasob> queryOptions)
+        // GET: odata/Dokumenty(5)
+        public IHttpActionResult GetDamDokumentZakupowy([FromODataUri] string key, ODataQueryOptions<DamDokumentZakupowy> queryOptions)
         {
             // validate the query.
             try
@@ -59,7 +69,7 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ex.Message);
             }
 
-            // return Ok<DamZasob>(damZasob);
+            // return Ok<DamDokument>(damDokument);
             return StatusCode(HttpStatusCode.NotImplemented);
         }
 

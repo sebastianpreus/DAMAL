@@ -1,4 +1,4 @@
-﻿using Soneta.Business.App;
+using Soneta.Business.App;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,6 @@ namespace DamEnovaWebApi.Enova
 
         public void ConnectToEnova()
         {
-
             if (enovalogin == null)
             {
                 /////////////////////////////////////////////////////////////////
@@ -37,7 +36,7 @@ namespace DamEnovaWebApi.Enova
                 //
                 //enovalogin = database.Login(false, "Damian", "");
 
-                enovalogin = database.Login(false, damconf.EnovaUser, damconf.EnovaUserPwd);
+                enovalogin = database.Login(false, damconf.EnovaUser, damconf.EnovaUserPwd, false);
             }
 
             //Session session = enovalogin.CreateSession(false, false);        

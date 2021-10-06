@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -18,23 +18,21 @@ using DamEnovaWebApi.Authentication;
 namespace DamEnovaWebApi.Controllers
 {
     [BasicAuthentication]
-    public class KontrahenciController : ODataController
+    public class ZamowieniaOdbiorcyController : ODataController
     {
         private static ODataValidationSettings _validationSettings = new ODataValidationSettings();
-        private static NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
         private Connection _connection;
+        // GET: odata/PrzyjeciaMagazynowe
 
-        public KontrahenciController()
+        public ZamowieniaOdbiorcyController()
         {
             _connection = new Connection();
             _connection.ConnectToEnova();
         }
 
-        // GET: odata/Kontrahents        
-        public IHttpActionResult GetKontrahenci(ODataQueryOptions<DamKontrahent> queryOptions)
+        public IHttpActionResult GetZamowieniaOdbiorcy(ODataQueryOptions<DamZamowienieOdbiorcy> queryOptions)
         {
-            _logger.Info("Start - Pobieranie kontrahentów");
-            
+            // validate the query.
             try
             {
                 queryOptions.Validate(_validationSettings);
@@ -42,19 +40,21 @@ namespace DamEnovaWebApi.Controllers
             catch (ODataException ex)
             {
                 return BadRequest(ex.Message);
-            }             
+            }
 
-            KontrahenciService kontrahenciService = new KontrahenciService();
-            List<DamKontrahent> kontrahents = kontrahenciService.GetKontrahenci();
+            ZamowieniaOdbiorcyService zamowieniaOdbiorcyService = new ZamowieniaOdbiorcyService();
 
-            IQueryable result = queryOptions.ApplyTo(kontrahents.AsQueryable());
+            List<DamZamowienieOdbiorcy> zamowieniaOdbiorcy = zamowieniaOdbiorcyService.GetZamowieniaOdbiorcy();
 
-            return Ok(result, result.GetType());            
+            IQueryable result = queryOptions.ApplyTo(zamowieniaOdbiorcy.AsQueryable());
+
+            return Ok(result, result.GetType());
         }
 
-        // GET: odata/Kontrahents(5)
-        public IHttpActionResult GetDamKontrahent([FromODataUri] string key, ODataQueryOptions<DamKontrahent> queryOptions)
-        {            
+        // GET: odata/PrzyjeciaMagazynowe(5)
+        public IHttpActionResult GetWydanieMagazynowe([FromODataUri] int key, ODataQueryOptions<DamPrzyjecieMagazynowe> queryOptions)
+        {
+            // validate the query.
             try
             {
                 queryOptions.Validate(_validationSettings);
@@ -64,7 +64,7 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ex.Message);
             }
 
-            // return Ok<DamKontrahent>(damKontrahent);
+            // return Ok<DamPrzyjecieMagazynowe>(damPrzyjecieMagazynowe);
             return StatusCode(HttpStatusCode.NotImplemented);
         }
 

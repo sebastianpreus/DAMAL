@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -30,15 +30,15 @@ namespace DamEnovaWebApi.Enova
                 xml_global_DBuser = "sa";
                 xml_global_DBpassword = "Symfonia1";
                 xml_global_DBserver = @"DESKTOP-2CVI6HT\SQLEXPRESS";
+                //xml_global_DBserver = @".\ENOVA";                
 
-                //xml_global_EnovaFirma = "TestDanych";
-                //xml_global_EnovaUser = "Damal1";
-                //xml_global_EnovaUserPwd = "Lamad1#";
+                xml_global_EnovaFirma = "TestDanych";
+                xml_global_EnovaUser = "Damal1";
+                xml_global_EnovaUserPwd = "Lamad1#";
 
-                xml_global_EnovaFirma = "Demo";
-                xml_global_EnovaUser = "Administrator";
-                xml_global_EnovaUserPwd = "";
-
+                //xml_global_EnovaFirma = "Demo";
+                //xml_global_EnovaUser = "Administrator";
+                //xml_global_EnovaUserPwd = "";
             }
             catch (Exception e)
             {

@@ -1,22 +1,26 @@
-﻿using Soneta.CRM;
-using System;
-using System.Collections.Generic;
+using DamEnovaWebApi.Models.Base;
+using Soneta.CRM;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DamEnovaWebApi.Models
 {
-    public class DamKontrahent
+    public class DamKontrahent : DamModelBase
     {
-        [Key]
         public string Kod { get; set; }
         public string Nazwa { get; set; }
         public string EuVAT { get; set; }
         public string NIP { get; set; }
         public bool JestIncydentalny { get; set; }
-        public DamAdres AdresDoKorespondencji { get; set; }
-        public DamAdres Adres { get; set; }
+
+        //[ForeignKey("AdresDoKorespondencji")]
+        //public int AdresDoKorespondencjiId { get; set; }
+        //public DamAdres AdresDoKorespondencji { get; set; }
+
+        [ForeignKey("DamAdres")]
+        public int DamAdresId { get; set; }        
+        public DamAdres DamAdres { get; set; }
+
         ////public StatusPodmiotu StatusPodmiotu { get; set; }
         public bool PodatnikVAT { get; set; }
         ////public RodzajPodmiotu RodzajPodmiotuZakup { get; set; }
@@ -67,16 +71,19 @@ namespace DamEnovaWebApi.Models
 
         public void MapEnovaObject(Kontrahent kontrahent)
         {
+            //PK
+            this.ID = kontrahent.ID;
+
             this.Kod = kontrahent.Kod;
             this.Nazwa = kontrahent.Nazwa;
-
             this.EuVAT = kontrahent.EuVAT;
             this.NIP = kontrahent.NIP;
             this.JestIncydentalny = kontrahent.JestIncydentalny;
             //DamAdres adres = new DamAdres();
             //adres.MapEnovaObject(kontrahent.Adres);
-            this.AdresDoKorespondencji = new DamAdres(kontrahent.AdresDoKorespondencji);
-            this.Adres = new DamAdres(kontrahent.Adres);
+            //this.AdresDoKorespondencji = new DamAdres(kontrahent.AdresDoKorespondencji);            
+            this.DamAdres = new DamAdres(kontrahent.Adres);
+            this.DamAdresId = this.DamAdres.ID;
             //public StatusPodmiotu StatusPodmiotu { get; set; }
             this.PodatnikVAT = kontrahent.PodatnikVAT;
             //public RodzajPodmiotu RodzajPodmiotuZakup { get; set; }

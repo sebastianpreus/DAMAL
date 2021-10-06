@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -18,23 +18,20 @@ using DamEnovaWebApi.Authentication;
 namespace DamEnovaWebApi.Controllers
 {
     [BasicAuthentication]
-    public class KontrahenciController : ODataController
+    public class ObrotyWgDokumentowRozchodyController : ODataController
     {
         private static ODataValidationSettings _validationSettings = new ODataValidationSettings();
-        private static NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
         private Connection _connection;
 
-        public KontrahenciController()
+        public ObrotyWgDokumentowRozchodyController()
         {
             _connection = new Connection();
             _connection.ConnectToEnova();
         }
 
-        // GET: odata/Kontrahents        
-        public IHttpActionResult GetKontrahenci(ODataQueryOptions<DamKontrahent> queryOptions)
+        public IHttpActionResult GetObrotyWgDokumentowRozchody(ODataQueryOptions<DamObrotyWgDokumentow> queryOptions)
         {
-            _logger.Info("Start - Pobieranie kontrahentów");
-            
+            // validate the query.
             try
             {
                 queryOptions.Validate(_validationSettings);
@@ -42,19 +39,21 @@ namespace DamEnovaWebApi.Controllers
             catch (ODataException ex)
             {
                 return BadRequest(ex.Message);
-            }             
+            }
 
-            KontrahenciService kontrahenciService = new KontrahenciService();
-            List<DamKontrahent> kontrahents = kontrahenciService.GetKontrahenci();
+            ObrotyWgDokumentowService obrotyService = new ObrotyWgDokumentowService();
 
-            IQueryable result = queryOptions.ApplyTo(kontrahents.AsQueryable());
+            List<DamObrotyWgDokumentow> obroty = obrotyService.GetObroty("Rozchód");
 
-            return Ok(result, result.GetType());            
+            IQueryable result = queryOptions.ApplyTo(obroty.AsQueryable());
+
+            return Ok(result, result.GetType());
         }
 
-        // GET: odata/Kontrahents(5)
-        public IHttpActionResult GetDamKontrahent([FromODataUri] string key, ODataQueryOptions<DamKontrahent> queryOptions)
-        {            
+        // GET: odata/PrzyjeciaMagazynowe(5)
+        public IHttpActionResult GetObrotyWgDokumentowRozchod([FromODataUri] int key, ODataQueryOptions<DamObrotyWgDokumentow> queryOptions)
+        {
+            // validate the query.
             try
             {
                 queryOptions.Validate(_validationSettings);
@@ -64,7 +63,7 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ex.Message);
             }
 
-            // return Ok<DamKontrahent>(damKontrahent);
+            // return Ok<DamPrzyjecieMagazynowe>(damPrzyjecieMagazynowe);
             return StatusCode(HttpStatusCode.NotImplemented);
         }
 

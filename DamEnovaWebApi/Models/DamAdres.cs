@@ -1,4 +1,5 @@
-﻿using Soneta.Core;
+using DamEnovaWebApi.Models.Base;
+using Soneta.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Web;
 
 namespace DamEnovaWebApi.Models
 {
-    public class DamAdres
+    public class DamAdres : DamModelBase
     {
         public const string KodPL = "PL";
         public const string Polska = "polska";
@@ -20,6 +21,8 @@ namespace DamEnovaWebApi.Models
         public string Faks { get; set; }
         public string Telefon { get; set; }
 
+        public virtual ICollection<DamKontrahent> DamKontrahenci { get; set; }
+
         public DamAdres(Adres adres)
         {
             MapEnovaObject(adres);
@@ -27,6 +30,9 @@ namespace DamEnovaWebApi.Models
 
         public void MapEnovaObject(Adres adres)
         {
+            //PK
+            this.ID = adres.ID;
+
             this.KodPocztowy = adres.KodPocztowyS;
             this.KodKraju = adres.KodKraju;
             this.Kraj = adres.Kraj;

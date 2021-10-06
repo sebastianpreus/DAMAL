@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Web;
 
 namespace DamEnovaWebApi.Enova
 {
@@ -14,7 +10,7 @@ namespace DamEnovaWebApi.Enova
         {
             // Wymuś katalog Enova, zastąp zmienną prywatną w klasie Loader przez referencję
             typeof(Soneta.Start.Loader).GetField("assemblyPath", BindingFlags.Static | BindingFlags.NonPublic).SetValue(null, @"C:\Program Files (x86)\Soneta\enova365 2012.3.4.0");
-
+            
             // Uruchom loader
             loader = new Soneta.Start.Loader();
             loader.WithUI = false;
