@@ -46,14 +46,12 @@ namespace DamEnovaWebApi.Controllers
 
             KontrahenciService kontrahenciService = new KontrahenciService();
             List<DamKontrahent> kontrahents = kontrahenciService.GetKontrahenci();
-
             IQueryable result = queryOptions.ApplyTo(kontrahents.AsQueryable());
-
             return Ok(result, result.GetType());            
         }
 
         // GET: odata/Kontrahents(5)
-        public IHttpActionResult GetDamKontrahent([FromODataUri] string key, ODataQueryOptions<DamKontrahent> queryOptions)
+        public IHttpActionResult GetDamKontrahent([FromODataUri] int key, ODataQueryOptions<DamKontrahent> queryOptions)
         {            
             try
             {
@@ -64,8 +62,10 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ex.Message);
             }
 
-            // return Ok<DamKontrahent>(damKontrahent);
-            return StatusCode(HttpStatusCode.NotImplemented);
+            KontrahenciService kontrahenciService = new KontrahenciService();
+            List<DamKontrahent> kontrahents = kontrahenciService.GetKontrahenci(key);
+            IQueryable result = queryOptions.ApplyTo(kontrahents.AsQueryable());
+            return Ok(result, result.GetType());
         }
 
         private IHttpActionResult Ok(object content, Type type)

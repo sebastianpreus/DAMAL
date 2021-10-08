@@ -43,16 +43,13 @@ namespace DamEnovaWebApi.Controllers
             }
 
             WydaniaMagazynoweService wydaniaMagazynoweService = new WydaniaMagazynoweService();
-
             List<DamWydanieMagazynowe> wydaniaMagazynowe = wydaniaMagazynoweService.GetWydaniaMagazynowe();
-
             IQueryable result = queryOptions.ApplyTo(wydaniaMagazynowe.AsQueryable());
-
             return Ok(result, result.GetType());
         }
 
         // GET: odata/PrzyjeciaMagazynowe(5)
-        public IHttpActionResult GetWydanieMagazynowe([FromODataUri] int key, ODataQueryOptions<DamPrzyjecieMagazynowe> queryOptions)
+        public IHttpActionResult GetDamWydanieMagazynowe([FromODataUri] int key, ODataQueryOptions<DamWydanieMagazynowe> queryOptions)
         {
             // validate the query.
             try
@@ -64,8 +61,10 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ex.Message);
             }
 
-            // return Ok<DamPrzyjecieMagazynowe>(damPrzyjecieMagazynowe);
-            return StatusCode(HttpStatusCode.NotImplemented);
+            WydaniaMagazynoweService wydaniaMagazynoweService = new WydaniaMagazynoweService();
+            List<DamWydanieMagazynowe> wydaniaMagazynowe = wydaniaMagazynoweService.GetWydaniaMagazynowe(key);
+            IQueryable result = queryOptions.ApplyTo(wydaniaMagazynowe.AsQueryable());
+            return Ok(result, result.GetType());
         }
 
         private IHttpActionResult Ok(object content, Type type)

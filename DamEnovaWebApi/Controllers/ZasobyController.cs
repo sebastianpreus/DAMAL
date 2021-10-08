@@ -40,14 +40,12 @@ namespace DamEnovaWebApi.Controllers
 
             ZasobyService zasobyService = new ZasobyService();
             List<DamZasob> zasobs = zasobyService.GetZasoby();
-
             IQueryable result = queryOptions.ApplyTo(zasobs.AsQueryable());
-
             return Ok(result, result.GetType());
         }
 
         // GET: odata/Zasobs(5)
-        public IHttpActionResult GetDamZasob([FromODataUri] string key, ODataQueryOptions<DamZasob> queryOptions)
+        public IHttpActionResult GetDamZasob([FromODataUri] int key, ODataQueryOptions<DamZasob> queryOptions)
         {
             // validate the query.
             try
@@ -59,8 +57,10 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ex.Message);
             }
 
-            // return Ok<DamZasob>(damZasob);
-            return StatusCode(HttpStatusCode.NotImplemented);
+            ZasobyService zasobyService = new ZasobyService();
+            List<DamZasob> zasobs = zasobyService.GetZasoby(key);
+            IQueryable result = queryOptions.ApplyTo(zasobs.AsQueryable());
+            return Ok(result, result.GetType());
         }
 
         private IHttpActionResult Ok(object content, Type type)

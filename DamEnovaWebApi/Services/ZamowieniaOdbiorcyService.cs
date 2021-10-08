@@ -12,7 +12,7 @@ namespace DamEnovaWebApi.Services
 {
     public class ZamowieniaOdbiorcyService
     {
-        public List<DamZamowienieOdbiorcy> GetZamowieniaOdbiorcy()
+        public List<DamZamowienieOdbiorcy> GetZamowieniaOdbiorcy(int? id = null)
         {
             using (Session session = Connection.enovalogin.CreateSession(false, false))
             {
@@ -22,6 +22,8 @@ namespace DamEnovaWebApi.Services
                 View view1 = hamodule.DokHandlowe.CreateView();
 
                 view1.Condition = new FieldCondition.Equal("Kategoria", "Zamówienie odbiorcy");
+                if (id != null)
+                    view1.Condition &= new FieldCondition.Equal("ID", id);
 
                 foreach (DokumentHandlowy dok in view1)
                 {

@@ -75,7 +75,6 @@ namespace DamEnovaWebApi
             var damObrotyTowary = builder.EntitySet<DamObrotyWgTowarow>("ObrotyWgTowarow").EntityType;
 
 
-
             config.MapODataServiceRoute("odata", "odata", builder.GetEdmModel());
 
             config.Count().Filter().OrderBy().Expand().Select().MaxTop(null);

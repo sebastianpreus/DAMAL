@@ -43,16 +43,13 @@ namespace DamEnovaWebApi.Controllers
             }
 
             PrzesunieciaMagazynoweService przesunieciaMagazynoweService = new PrzesunieciaMagazynoweService();
-
             List<DamPrzesuniecieMagazynowe> przesuniecieMagazynowe = przesunieciaMagazynoweService.GetPrzesuniecieMagazynowe();
-
             IQueryable result = queryOptions.ApplyTo(przesuniecieMagazynowe.AsQueryable());
-
             return Ok(result, result.GetType());
         }
 
         // GET: odata/PrzyjeciaMagazynowe(5)
-        public IHttpActionResult GetPrzesuniecieMagazynowe([FromODataUri] int key, ODataQueryOptions<DamPrzyjecieMagazynowe> queryOptions)
+        public IHttpActionResult GetDamPrzesuniecieMagazynowe([FromODataUri] int key, ODataQueryOptions<DamPrzesuniecieMagazynowe> queryOptions)
         {
             // validate the query.
             try
@@ -64,8 +61,10 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ex.Message);
             }
 
-            // return Ok<DamPrzyjecieMagazynowe>(damPrzyjecieMagazynowe);
-            return StatusCode(HttpStatusCode.NotImplemented);
+            PrzesunieciaMagazynoweService przesunieciaMagazynoweService = new PrzesunieciaMagazynoweService();
+            List<DamPrzesuniecieMagazynowe> przesuniecieMagazynowe = przesunieciaMagazynoweService.GetPrzesuniecieMagazynowe(key);
+            IQueryable result = queryOptions.ApplyTo(przesuniecieMagazynowe.AsQueryable());
+            return Ok(result, result.GetType());
         }
 
         private IHttpActionResult Ok(object content, Type type)

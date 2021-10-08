@@ -49,7 +49,7 @@ namespace DamEnovaWebApi.Controllers
             //edm,
             //typeof(DamDokument));
 
-            List<DamDokumentZakupowy> dokumenty = dokumentyService.GetDokumenty("");
+            List<DamDokumentZakupowy> dokumenty = dokumentyService.GetDokumenty();
 
             IQueryable result = queryOptions.ApplyTo(dokumenty.AsQueryable());
 
@@ -57,7 +57,7 @@ namespace DamEnovaWebApi.Controllers
         }        
 
         // GET: odata/Dokumenty(5)
-        public IHttpActionResult GetDamDokumentZakupowy([FromODataUri] string key, ODataQueryOptions<DamDokumentZakupowy> queryOptions)
+        public IHttpActionResult GetDamDokumentZakupowy([FromODataUri] int key, ODataQueryOptions<DamDokumentZakupowy> queryOptions)
         {
             // validate the query.
             try
@@ -69,8 +69,10 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ex.Message);
             }
 
-            // return Ok<DamDokument>(damDokument);
-            return StatusCode(HttpStatusCode.NotImplemented);
+            DokumentyZakupoweService dokumentyService = new DokumentyZakupoweService();
+            List<DamDokumentZakupowy> dokumenty = dokumentyService.GetDokumenty(key);
+            IQueryable result = queryOptions.ApplyTo(dokumenty.AsQueryable());
+            return Ok(result, result.GetType());
         }
 
         private IHttpActionResult Ok(object content, Type type)

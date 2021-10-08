@@ -9,7 +9,7 @@ namespace DamEnovaWebApi.Services
 {
     public class DokumentyZakupoweService
     {
-        public List<DamDokumentZakupowy> GetDokumenty(string typDokumentu)
+        public List<DamDokumentZakupowy> GetDokumenty(int? id = null)
         {
             using (Session session = Connection.enovalogin.CreateSession(false, false))
             {
@@ -19,19 +19,22 @@ namespace DamEnovaWebApi.Services
                 Soneta.Handel.HandelModule hamodule = Soneta.Handel.HandelModule.GetInstance(session);
                 // Definicja dla której szukamy
                 string _typDokumentu = "ZK";
-                Soneta.Handel.DefDokHandlowego def = hamodule.DefDokHandlowych.WgSymbolu[_typDokumentu];
+                DefDokHandlowego def = hamodule.DefDokHandlowych.WgSymbolu[_typDokumentu];
                 // Magazyn dla którego szukamy
                 //Soneta.Magazyny.Magazyn mag = hamodule.Magazyny.Magazyny.WgSymbol["F"];
                 //Mając powyższe możemy utworzyć View z założonym odpowiednim warunkiem:
 
                 // Przykład #2
-                Soneta.Business.View view1 = hamodule.DokHandlowe.CreateView();
+                View view1 = hamodule.DokHandlowe.CreateView();
+
                 // i zakładamy warunki:
                 //view1.Condition = new FieldCondition.Equal("Definicja", def);
                 //view1.Condition = new FieldCondition.Equal(Magazyn, mag);
                 //view1.Condition = new FieldCondition.Equal(Stan, Soneta.Handel.StanDokumentuHandlowego.Bufor);
 
                 view1.Condition = new FieldCondition.Equal("Kategoria", "Zakup");
+                if (id != null)
+                    view1.Condition &= new FieldCondition.Equal("ID", id);
                 foreach (DokumentHandlowy dok in view1)
                 {
                     DamDokumentZakupowy damDokument = new DamDokumentZakupowy();

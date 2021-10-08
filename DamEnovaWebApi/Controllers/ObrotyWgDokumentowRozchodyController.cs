@@ -42,16 +42,13 @@ namespace DamEnovaWebApi.Controllers
             }
 
             ObrotyWgDokumentowService obrotyService = new ObrotyWgDokumentowService();
-
             List<DamObrotyWgDokumentow> obroty = obrotyService.GetObroty("Rozchód");
-
             IQueryable result = queryOptions.ApplyTo(obroty.AsQueryable());
-
             return Ok(result, result.GetType());
         }
 
         // GET: odata/PrzyjeciaMagazynowe(5)
-        public IHttpActionResult GetObrotyWgDokumentowRozchod([FromODataUri] int key, ODataQueryOptions<DamObrotyWgDokumentow> queryOptions)
+        public IHttpActionResult GetDamObrotyWgDokumentow([FromODataUri] int key, ODataQueryOptions<DamObrotyWgDokumentow> queryOptions)
         {
             // validate the query.
             try
@@ -63,8 +60,10 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ex.Message);
             }
 
-            // return Ok<DamPrzyjecieMagazynowe>(damPrzyjecieMagazynowe);
-            return StatusCode(HttpStatusCode.NotImplemented);
+            ObrotyWgDokumentowService obrotyService = new ObrotyWgDokumentowService();
+            List<DamObrotyWgDokumentow> obroty = obrotyService.GetObroty("Rozchód", key);
+            IQueryable result = queryOptions.ApplyTo(obroty.AsQueryable());
+            return Ok(result, result.GetType());
         }
 
         private IHttpActionResult Ok(object content, Type type)

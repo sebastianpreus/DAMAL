@@ -12,7 +12,7 @@ namespace DamEnovaWebApi.Services
 {
     public class PrzesunieciaMagazynoweService
     {
-        public List<DamPrzesuniecieMagazynowe> GetPrzesuniecieMagazynowe()
+        public List<DamPrzesuniecieMagazynowe> GetPrzesuniecieMagazynowe(int? id = null)
         {
             using (Session session = Connection.enovalogin.CreateSession(false, false))
             {
@@ -22,6 +22,8 @@ namespace DamEnovaWebApi.Services
                 View view1 = hamodule.DokHandlowe.CreateView();
 
                 view1.Condition = new FieldCondition.Equal("Kategoria", "Przyjęcie magazynowe");
+                if (id != null)
+                    view1.Condition &= new FieldCondition.Equal("ID", id);
 
                 foreach (DokumentHandlowy dok in view1)
                 {
@@ -40,6 +42,7 @@ namespace DamEnovaWebApi.Services
                     damDokument.Netto = dok.Suma.Netto;
                     damDokument.VAT = dok.Suma.VAT;
                     damDokument.Wartosc = dok.BruttoCy.Value;
+                    damDokument.Waluta = dok.BruttoCy.Symbol;
 
                     foreach (PozycjaDokHandlowego poz in dok.Pozycje)
                     {

@@ -43,16 +43,13 @@ namespace DamEnovaWebApi.Controllers
             }
 
             ZamowieniaOdbiorcyService zamowieniaOdbiorcyService = new ZamowieniaOdbiorcyService();
-
             List<DamZamowienieOdbiorcy> zamowieniaOdbiorcy = zamowieniaOdbiorcyService.GetZamowieniaOdbiorcy();
-
             IQueryable result = queryOptions.ApplyTo(zamowieniaOdbiorcy.AsQueryable());
-
             return Ok(result, result.GetType());
         }
 
         // GET: odata/PrzyjeciaMagazynowe(5)
-        public IHttpActionResult GetWydanieMagazynowe([FromODataUri] int key, ODataQueryOptions<DamPrzyjecieMagazynowe> queryOptions)
+        public IHttpActionResult GetDamZamowienieOdbiorcy([FromODataUri] int key, ODataQueryOptions<DamZamowienieOdbiorcy> queryOptions)
         {
             // validate the query.
             try
@@ -64,8 +61,10 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ex.Message);
             }
 
-            // return Ok<DamPrzyjecieMagazynowe>(damPrzyjecieMagazynowe);
-            return StatusCode(HttpStatusCode.NotImplemented);
+            ZamowieniaOdbiorcyService zamowieniaOdbiorcyService = new ZamowieniaOdbiorcyService();
+            List<DamZamowienieOdbiorcy> zamowieniaOdbiorcy = zamowieniaOdbiorcyService.GetZamowieniaOdbiorcy(key);
+            IQueryable result = queryOptions.ApplyTo(zamowieniaOdbiorcy.AsQueryable());
+            return Ok(result, result.GetType());
         }
 
         private IHttpActionResult Ok(object content, Type type)

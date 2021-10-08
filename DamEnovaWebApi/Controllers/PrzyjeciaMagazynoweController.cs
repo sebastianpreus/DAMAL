@@ -43,11 +43,8 @@ namespace DamEnovaWebApi.Controllers
             }
 
             PrzyjeciaMagazynoweService przyjeciaMagazynoweService = new PrzyjeciaMagazynoweService();
-
             List<DamPrzyjecieMagazynowe> przyjeciaMagazynowe = przyjeciaMagazynoweService.GetPrzyjeciaMagazynowe();
-
             IQueryable result = queryOptions.ApplyTo(przyjeciaMagazynowe.AsQueryable());
-
             return Ok(result, result.GetType());
         }
 
@@ -64,8 +61,10 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ex.Message);
             }
 
-            // return Ok<DamPrzyjecieMagazynowe>(damPrzyjecieMagazynowe);
-            return StatusCode(HttpStatusCode.NotImplemented);
+            PrzyjeciaMagazynoweService przyjeciaMagazynoweService = new PrzyjeciaMagazynoweService();
+            List<DamPrzyjecieMagazynowe> przyjeciaMagazynowe = przyjeciaMagazynoweService.GetPrzyjeciaMagazynowe(key);
+            IQueryable result = queryOptions.ApplyTo(przyjeciaMagazynowe.AsQueryable());
+            return Ok(result, result.GetType());
         }
 
         private IHttpActionResult Ok(object content, Type type)

@@ -13,7 +13,7 @@ namespace DamEnovaWebApi.Services
 {
     public class ObrotyWgTowarowService
     {
-        public List<DamObrotyWgTowarow> GetObroty()
+        public List<DamObrotyWgTowarow> GetObroty(int? id = null)
         {
             using (Session session = Connection.enovalogin.CreateSession(false, false))
             {
@@ -23,10 +23,14 @@ namespace DamEnovaWebApi.Services
                 Magazyn mag = hamodule.Magazyny.Magazyny.WgNazwa["Magazyn główny"];
                 TowaryModule tm = TowaryModule.GetInstance(session);
                 Towary towary = tm.Towary;
+                View view1 = towary.CreateView();
+                
+                if (id != null)
+                    view1.Condition = new FieldCondition.Equal("ID", id);
 
                 ObrotyTowaruWorker o = new ObrotyTowaruWorker();
 
-                foreach (Towar towar in tm.Towary)
+                foreach (Towar towar in view1)
                 {
                     DamObrotyWgTowarow damDokument = new DamObrotyWgTowarow();
 

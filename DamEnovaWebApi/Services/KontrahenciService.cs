@@ -11,27 +11,16 @@ namespace DamEnovaWebApi.Services
 {
     public class KontrahenciService
     {
-        public List<DamKontrahent> GetKontrahenci()
+        public List<DamKontrahent> GetKontrahenci(int? id = null)
         {
             //DamalEnova damalEnova = new DamalEnova();
             using (Session session = Connection.enovalogin.CreateSession(false, false))
             {
                 CRMModule cm = CRMModule.GetInstance(session);
                 Kontrahenci khlst = cm.Kontrahenci;
-                Soneta.Business.View khview = khlst.CreateView();
-
-                // I założyć filtr, np tylko kontrahentów, zawierających literkę 
-                // 's' w nazwie i o kodzie nie !INCYDENTALNY.
-                // Operatory
-                // & to jest AND
-                // | to jest OR
-                // ! to jest NOT
-
-                //khview.Condition &= new FieldCondition.Like("Nazwa", "*s*")
-                //    & !new FieldCondition.Equal("Kod", "!INCYDENTALNY");
-
-                //khview.Condition &= new FieldCondition.Like("Nazwa", "*abc*");
-                //& new FieldCondition.Like("Kod", "*" + "abc" + "*");
+                View khview = khlst.CreateView();
+                if (id != null)
+                    khview.Condition &= new FieldCondition.Equal("ID", id);
 
                 List<DamKontrahent> kontrahents = new List<DamKontrahent>();
 

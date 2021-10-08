@@ -11,7 +11,7 @@ namespace DamEnovaWebApi.Services
 {
     public class ZasobyService
     {
-        public List<DamZasob> GetZasoby()
+        public List<DamZasob> GetZasoby(int? id = null)
         {
             //DamalEnova damalEnova = new DamalEnova();
             using (Session session = Connection.enovalogin.CreateSession(false, false))
@@ -20,6 +20,8 @@ namespace DamEnovaWebApi.Services
 
                 Zasoby zasoby = mg.Zasoby;
                 View mgview = zasoby.CreateView();
+                if (id != null)
+                    mgview.Condition &= new FieldCondition.Equal("ID", id);
 
                 List<DamZasob> damZasoby = new List<DamZasob>();
                 foreach (Zasob zasob in mgview)

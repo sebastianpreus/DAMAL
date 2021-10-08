@@ -16,6 +16,7 @@ namespace DamEnovaWebApi.Models
         public decimal Netto { get; set; }
         public decimal VAT { get; set; }
         public decimal Wartosc { get; set; }
+        public string Waluta { get; set; }
 
         public virtual ICollection<DamPrzesuniecieMagazynowePozycja> PozycjeDokumentu { get; set; }
         public virtual ICollection<DamPrzesuniecieMagazynowePowiazany> DokumentyPowiazane { get; set; }

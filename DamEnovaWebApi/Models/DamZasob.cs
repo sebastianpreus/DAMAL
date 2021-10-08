@@ -18,6 +18,7 @@ namespace DamEnovaWebApi.Models
 
         public void MapEnovaObject(Zasob zasob)
         {
+            this.ID = zasob.ID;
             this.Kod = zasob.Towar.Kod;
             this.Nazwa = zasob.Towar.Nazwa;
             this.Ilosc = zasob.IlośćZasobu.Value;
