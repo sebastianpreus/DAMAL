@@ -40,7 +40,7 @@ namespace DamEnovaWebApi.Enova
                 //xml_global_EnovaUser = "Administrator";
                 //xml_global_EnovaUserPwd = "";
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 //MessageBox.Show(e.Message);
                 //messa("Exception: {0}", e.Message);

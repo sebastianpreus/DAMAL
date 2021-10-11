@@ -342,6 +342,7 @@
     <Compile Include="Controllers\PrzesunieciaMagazynoweController.cs" />
     <Compile Include="Controllers\PrzyjeciaMagazynoweController.cs" />
     <Compile Include="Controllers\ObrotyWgDokumentowPrzychodyController.cs" />
+    <Compile Include="Controllers\ZamowieniaOdbiorcyOdPozycjiController.cs" />
     <Compile Include="Controllers\ZamowieniaOdbiorcyController.cs" />
     <Compile Include="Controllers\WydaniaMagazynoweController.cs" />
     <Compile Include="Controllers\ZasobyController.cs" />
@@ -381,6 +382,10 @@
     <Compile Include="Models\WydanieMagazynowe\DamWydanieMagazynowePowiazany.cs" />
     <Compile Include="Models\WydanieMagazynowe\DamWydanieMagazynowePozycja.cs" />
     <Compile Include="Models\WydanieMagazynowe\DamWydanieMagazynoweZasob.cs" />
+    <Compile Include="Models\ZamowienieOdbiorcyOdPozycji\DamZamowienieOdbiorcyOdPozycji.cs" />
+    <Compile Include="Models\ZamowienieOdbiorcyOdPozycji\DamZamowienieOdbiorcyOdPozycjiPowiazany.cs" />
+    <Compile Include="Models\ZamowienieOdbiorcyOdPozycji\DamZamowienieOdbiorcyOdPozycjiPozycja.cs" />
+    <Compile Include="Models\ZamowienieOdbiorcyOdPozycji\DamZamowienieOdbiorcyOdPozycjiZasob.cs" />
     <Compile Include="Models\ZamowienieOdbiorcy\DamZamowienieOdbiorcyPowiazany.cs" />
     <Compile Include="Models\ZamowienieOdbiorcy\DamZamowienieOdbiorcyPozycja.cs" />
     <Compile Include="Models\ZamowienieOdbiorcy\DamZamowienieOdbiorcy.cs" />
@@ -393,6 +398,7 @@
     <Compile Include="Services\PrzesunieciaMagazynoweService.cs" />
     <Compile Include="Services\PrzyjeciaMagazynoweService.cs" />
     <Compile Include="Services\WydaniaMagazynoweService.cs" />
+    <Compile Include="Services\ZamowieniaOdbiorcyOdPozycjiService.cs" />
     <Compile Include="Services\ZamowieniaOdbiorcyService.cs" />
     <Compile Include="Services\ZasobyService.cs" />
   </ItemGroup>
