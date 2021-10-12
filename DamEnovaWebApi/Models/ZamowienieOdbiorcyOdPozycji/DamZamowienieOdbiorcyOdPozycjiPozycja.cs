@@ -22,6 +22,11 @@ namespace DamEnovaWebApi.Models
         public int PozostaloIloscFV { get; set; }
         public int StanPokryciaPozycji { get; set; }
         public string Waluta { get; set; }
+        public string Priorytet { get; set; }
+        public DateTime DataOd { get; set; }
+        public DateTime DataDo { get; set; }
+        public string CzasOd { get; set; }
+        public string CzasDo { get; set; }
 
 
         public int DamZamowienieOdbiorcyOdPozycjiId { get; set; }

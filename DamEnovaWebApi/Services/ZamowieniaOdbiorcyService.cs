@@ -67,6 +67,15 @@ namespace DamEnovaWebApi.Services
                         //pozycja.PozostaloIloscFV = poz.
                         //pozycja.StanPokryciaPozycji = poz.
                         pozycja.Waluta = poz.Suma.BruttoCy.Symbol;
+                        if (poz.ParametryRezerwacji.Priorytet != null)
+                            pozycja.Priorytet = poz.ParametryRezerwacji.Priorytet.ToString();
+                        if (poz.ParametryRezerwacji.DataDo.Year < 9999)
+                        {
+                            pozycja.DataOd = poz.ParametryRezerwacji.DataOd;
+                            pozycja.DataDo = poz.ParametryRezerwacji.DataDo;
+                            pozycja.CzasOd = poz.ParametryRezerwacji.CzasOd.ToString();
+                            pozycja.CzasDo = poz.ParametryRezerwacji.CzasDo.ToString();
+                        }
 
                         damDokument.PozycjeDokumentu.Add(pozycja);
                     }
