@@ -116,6 +116,8 @@ namespace DamEnovaWebApi
             //Obroty Wg Towarów
             var damObrotyTowary = builder.EntitySet<DamObrotyWgTowarow>("ObrotyWgTowarow").EntityType;
 
+            //Stany Magazynowe
+            var damStanyMagazynowe = builder.EntitySet<DamStanMagazynowy>("StanyMagazynowe").EntityType;
 
             config.MapODataServiceRoute("odata", "odata", builder.GetEdmModel());
 
