@@ -56,4 +56,32 @@
     <NetworkLibrary>Default</NetworkLibrary>
     <Timeout>15</Timeout>
   </MsSqlDatabase>
+  <MsSqlDatabase>
+    <Name>BametPBabrajKH</Name>
+    <Description />
+    <Active>true</Active>
+    <DifferentSecondaryDatabase>false</DifferentSecondaryDatabase>
+    <OperatorName>?</OperatorName>
+    <WindowsAuthentication>false</WindowsAuthentication>
+    <LicencesSelection>false</LicencesSelection>
+    <IsOptimalization>true</IsOptimalization>
+    <BatchLinks>100</BatchLinks>
+    <BatchFeatures>100</BatchFeatures>
+    <BatchSubTables>40</BatchSubTables>
+    <NonCollectedRows>50000</NonCollectedRows>
+    <LockNotification>false</LockNotification>
+    <Server>.\SQLEXPRESS</Server>
+    <DatabaseName>BametPBabrajKH</DatabaseName>
+    <User>sa</User>
+    <Password>=BFA1540C0B72B1C3B9C862EBCFCB73F518</Password>
+    <Trusted>false</Trusted>
+    <SecondaryServer />
+    <SecondaryDatabaseName />
+    <SecondaryUser />
+    <SecondaryTrusted>false</SecondaryTrusted>
+    <VirtualTeleKeySerial>00000000</VirtualTeleKeySerial>
+    <UseConnectionString>false</UseConnectionString>
+    <NetworkLibrary>Default</NetworkLibrary>
+    <Timeout>15</Timeout>
+  </MsSqlDatabase>
 </DatabaseCollection>
