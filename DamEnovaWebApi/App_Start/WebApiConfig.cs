@@ -119,6 +119,10 @@ namespace DamEnovaWebApi
             //Stany Magazynowe
             var damStanyMagazynowe = builder.EntitySet<DamStanMagazynowy>("StanyMagazynowe").EntityType;
 
+            //Magazyny
+            var damMagazyny = builder.EntitySet<DamMagazyn>("Magazyny").EntityType;
+
+
             config.MapODataServiceRoute("odata", "odata", builder.GetEdmModel());
 
             config.Count().Filter().OrderBy().Expand().Select().MaxTop(null);

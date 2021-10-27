@@ -335,6 +335,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Authentication\BasicAuthenticationAttribute.cs" />
     <Compile Include="Authentication\UserValidate.cs" />
+    <Compile Include="Controllers\MagazyController.cs" />
     <Compile Include="Controllers\StanyMagazynoweController.cs" />
     <Compile Include="Controllers\DokumentyZakupoweController.cs" />
     <Compile Include="Controllers\KontrahenciController.cs" />
@@ -378,6 +379,7 @@
     <Compile Include="Models\PrzyjecieMagazynowe\DamPrzyjecieMagazynowePowiazany.cs" />
     <Compile Include="Models\PrzyjecieMagazynowe\DamPrzyjecieMagazynowePozycja.cs" />
     <Compile Include="Models\PrzyjecieMagazynowe\DamPrzyjecieMagazynoweZasob.cs" />
+    <Compile Include="Models\StanMagazynowy\DamMagazyn.cs" />
     <Compile Include="Models\StanMagazynowy\DamStanMagazynowy.cs" />
     <Compile Include="Models\WydanieMagazynowe\DamWydanieMagazynoweBase.cs" />
     <Compile Include="Models\WydanieMagazynowe\DamWydanieMagazynowe.cs" />
@@ -393,6 +395,7 @@
     <Compile Include="Models\ZamowienieOdbiorcy\DamZamowienieOdbiorcy.cs" />
     <Compile Include="Models\ZamowienieOdbiorcy\DamZamowienieOdbiorcyZasob.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\MagazynyService.cs" />
     <Compile Include="Services\StanyMagazynoweService.cs" />
     <Compile Include="Services\DokumentyZakupoweService.cs" />
     <Compile Include="Services\KontrahenciService.cs" />

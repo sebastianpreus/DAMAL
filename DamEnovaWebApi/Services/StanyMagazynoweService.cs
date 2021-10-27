@@ -19,6 +19,7 @@ namespace DamEnovaWebApi.Services
 
                 MagazynyModule mm = MagazynyModule.GetInstance(session);
                 Magazyny mags = mm.Magazyny;
+
                 foreach (Magazyn m in mags.WgNazwa)
                 {
                     var magNazwa = m.Nazwa;
@@ -29,6 +30,8 @@ namespace DamEnovaWebApi.Services
                 Towary towary = tm.Towary;
 
                 StanMagazynuWorker stanMag = new StanMagazynuWorker();
+                StanRezerwacjiWorker stanRez = new StanRezerwacjiWorker();
+
 
                 foreach (Towar towar in towary.WgNazwy)
                 {
@@ -38,24 +41,43 @@ namespace DamEnovaWebApi.Services
                     stanMag.Data = DateTime.Now;
                     DamStanMagazynowy stanMagazynowy = new DamStanMagazynowy();
 
+                    //pola z enova i dokumentu word (rysunek 3)
                     stanMagazynowy.Kod = towar.Kod;
-                    stanMagazynowy.NazwaTowaru = towar.Nazwa;
+                    stanMagazynowy.Nazwa = towar.Nazwa;
+                    stanMagazynowy.StanZamowien = stanMag.StanZamówień.Value;
+                    stanMagazynowy.StanProdukcji = stanMag.StanProdukcji.Value;
+                    stanMagazynowy.StanZapotrzebowaniaNaSurowce = stanMag.StanZapotrzebowaniaNaSurowce.Value;
+                    stanMagazynowy.StanMinus = stanMag.StanMinus.Value;
+                    stanMagazynowy.WartoscMagazynu = stanMag.WartośćMagazynu;
+                    stanMagazynowy.StanKsięgowy = stanMag.StanKsięgowyMagazynu.Value;
+                    stanMagazynowy.WartoscKsiegowa = stanMag.WartośćKsięgowaMagazynu;
+                    stanMagazynowy.Hurtowa = towar.Ceny["Hurtowa"].Netto.Value;
+                    stanMagazynowy.Narzut = ((double)stanMag.WgCeny["Hurtowa"].NarzutProcent);
+
+                    //pozostałe pola (w word rysunek 2) : 
                     stanMagazynowy.EAN = towar.EAN;
-                    stanMagazynowy.StanRazem = stanMag.StanRazem;
-                    stanMagazynowy.StanZamówien = stanMag.StanZamówień;
-                    //Podstawowa/N
-                    //Hurtowa/N
-                    //Detaliczna/B
-                    //ProcentVAT
+                    stanMagazynowy.StanRazem = stanMag.StanRazem.Value;
+                    stanMagazynowy.Podstawowa = towar.Ceny["Podstawowa"].Netto.Value;
+                    stanMagazynowy.Detaliczna = towar.Ceny["Detaliczna"].Brutto.Value;
+
+                    //pozostałe: 
+                    stanMagazynowy.ProcentVAT = ((double)towar.ProcentVAT);
+                    stanMagazynowy.StanMagazynu = stanMag.StanMagazynu.Value;
+                    stanMagazynowy.WartoscKsiegowaMagazynu = stanMag.WartośćKsięgowaMagazynu;
+                    stanMagazynowy.SredniaCenaZakupu = stanMag.CenaŚrednioważona;
+                    stanMagazynowy.WartoscHurtowa = stanMag.WgCeny["Hurtowa"].WartośćNetto; //DL tutaj do weryfikacji
+
+                    stanRez.Towar = towar;
+                    stanRez.Magazyn = mm.Magazyny.WgNazwa[nazwaMagazynu];
+                    stanRez.Data = DateTime.Now;
+
+                    stanMagazynowy.Zarezerwowano = stanRez.IloscRezerwowana.Value;
+                    stanMagazynowy.IloscDostepna = stanRez.IloscDostepna.Value;
+
                     //DoProdukcji
                     //dystrybutor
                     //EKSPLOATACJA
-                    
-                    
-                    //stanMagazynowy.StanMagazynu = stanMag.StanMagazynu.Value;
-                    //stanMagazynowy.WartoscMagazynu = stanMag.WartośćMagazynu;
-                    //stanMagazynowy.WartoscKsiegowaMagazynu = stanMag.WartośćKsięgowaMagazynu;
-                    
+
                     stanyMagazynowe.Add(stanMagazynowy);
                 }
                 return stanyMagazynowe;
