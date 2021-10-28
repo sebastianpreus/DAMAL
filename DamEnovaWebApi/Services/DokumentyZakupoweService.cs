@@ -3,13 +3,14 @@ using DamEnovaWebApi.Models;
 using Soneta.Business;
 using Soneta.Handel;
 using Soneta.Magazyny;
+using System;
 using System.Collections.Generic;
 
 namespace DamEnovaWebApi.Services
 {
     public class DokumentyZakupoweService
     {
-        public List<DamDokumentZakupowy> GetDokumenty(int? id = null)
+        public List<DamDokumentZakupowy> GetDokumenty(int? id = null, string dataOd = "", string dataDo = "")
         {
             using (Session session = Connection.enovalogin.CreateSession(false, false))
             {
@@ -35,6 +36,11 @@ namespace DamEnovaWebApi.Services
                 view1.Condition = new FieldCondition.Equal("Kategoria", "Zakup");
                 if (id != null)
                     view1.Condition &= new FieldCondition.Equal("ID", id);
+                if(!String.IsNullOrEmpty(dataOd))
+                    view1.Condition &= new FieldCondition.GreaterEqual("Data", dataOd);
+                if (!String.IsNullOrEmpty(dataDo))
+                    view1.Condition &= new FieldCondition.LessEqual("Data", dataDo);
+
                 foreach (DokumentHandlowy dok in view1)
                 {
                     DamDokumentZakupowy damDokument = new DamDokumentZakupowy();

@@ -32,13 +32,13 @@ namespace DamEnovaWebApi.Enova
                 xml_global_DBserver = @"DESKTOP-2CVI6HT\SQLEXPRESS";
                 //xml_global_DBserver = @".\ENOVA";                
 
-                //xml_global_EnovaFirma = "TestDanych";
-                //xml_global_EnovaUser = "Damal1";
-                //xml_global_EnovaUserPwd = "Lamad1#";
+                xml_global_EnovaFirma = "TestDanych";
+                xml_global_EnovaUser = "Damal1";
+                xml_global_EnovaUserPwd = "Lamad1#";
 
-                xml_global_EnovaFirma = "BametPBabrajKH";
-                xml_global_EnovaUser = "Administrator";
-                xml_global_EnovaUserPwd = "";
+                //xml_global_EnovaFirma = "BametPBabrajKH";
+                //xml_global_EnovaUser = "Administrator";
+                //xml_global_EnovaUserPwd = "";
 
                 //BAMET:
                 //xml_global_DBName = "Bamet_to_SOP3";
