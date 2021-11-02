@@ -29,9 +29,6 @@ namespace DamEnovaWebApi.Controllers
         // GET: odata/Dokumenty        
         public IHttpActionResult GetMagazyny(ODataQueryOptions<DamMagazyn> queryOptions)
         {
-            //if (queryOptions.Filter == null || queryOptions.Filter.RawValue.Contains("Typ eq"))
-            //    return BadRequest("Brak typu dokumentu w zapytaniu");
-
             try
             {
                 queryOptions.Validate(_validationSettings);

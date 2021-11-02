@@ -27,7 +27,23 @@ namespace DamEnovaWebApi.Services
                 foreach (Zasob zasob in mgview)
                 {
                     DamZasob damZasob = new DamZasob();
-                    damZasob.MapEnovaObject(zasob);
+
+                    damZasob.ID = zasob.ID;
+                    damZasob.Kod = zasob.Towar.Kod;
+                    damZasob.Nazwa = zasob.Towar.Nazwa;
+                    damZasob.Ilosc = zasob.IlośćZasobu.Value;
+                    damZasob.JednostkaMiary = zasob.IlośćZasobu.Symbol;
+                    damZasob.Wartosc = zasob.Partia.Wartosc;
+                    damZasob.Cena = zasob.Partia.Cena;
+                    damZasob.Dokument = zasob.Partia.Dokument.Numer.NumerPelny;
+                    damZasob.Data = zasob.Partia.Dokument.Data;
+                    //this.DaokumentPierw = zasob.Partia.WgDokument;
+                    //this.Data = zasob.Partia.WgDokument;
+                    if (zasob.PartiaPierwotna.KontrahentPartii != null)
+                        damZasob.Dostawca = zasob.PartiaPierwotna.KontrahentPartii.Nazwa;
+                    damZasob.Typ = zasob.Towar.Typ.ToString();
+
+
                     damZasoby.Add(damZasob);
                 }
                 return damZasoby;

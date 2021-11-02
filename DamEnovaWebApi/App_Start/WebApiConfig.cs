@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web.Http;
 using DamEnovaWebApi.Authentication;
 using DamEnovaWebApi.Models;
+using Microsoft.AspNet.OData.Batch;
 using Microsoft.AspNet.OData.Builder;
 using Microsoft.AspNet.OData.Extensions;
 
@@ -13,7 +14,6 @@ namespace DamEnovaWebApi
     {
         public static void Register(HttpConfiguration config)
         {
-
             // Web API configuration and services
             // Web API routes
             config.MapHttpAttributeRoutes();
@@ -99,19 +99,17 @@ namespace DamEnovaWebApi
             builder.EntitySet<DamObrotyWgDokumentowPowiazany>("DamObrotyWgDokumentowPowiazany").EntityType.HasOptional(s => s.DamObrotyWgDokumentow);
             builder.EntitySet<DamObrotyWgDokumentowZasob>("DamObrotyWgDokumentowZasob").EntityType.HasOptional(s => s.DamObrotyWgDokumentow);
 
-
             //ZamowieniaOdbiorcyOdPozycji
             var damZamowieniaOdbiorcyOdPozycjiPozycja = builder.EntitySet<DamZamowienieOdbiorcyOdPozycjiPozycja>("ZamowieniaOdbiorcyOdPozycji").EntityType;
-            damZamowieniaOdbiorcyOdPozycjiPozycja.HasRequired(x => x.DamZamowienieOdbiorcyOdPozycji);
-            
-            //damZamowieniaOdbiorcyOdPozycji.HasMany(x => x.DokumentyPowiazane);
-            //damZamowieniaOdbiorcyOdPozycji.HasMany(x => x.ZasobyDokumentu);
+            damZamowieniaOdbiorcyOdPozycjiPozycja.HasOptional(x => x.DamZamowienieOdbiorcyOdPozycji);
 
-            //var damZamowienieOdbiorcyOdPozycji = builder.EntitySet<DamZamowienieOdbiorcyOdPozycji>("DamZamowienieOdbiorcyOdPozycji").EntityType.HasOptional(s => s.DamZamowienieOdbiorcyOdPozycjiPozycja);
+            var damZamowienieOdbiorcyOdPozycji = builder.EntitySet<DamZamowienieOdbiorcyOdPozycji>("DamZamowienieOdbiorcyOdPozycji").EntityType;
+            damZamowienieOdbiorcyOdPozycji.HasMany(s => s.DokumentyPowiazane);
+            damZamowienieOdbiorcyOdPozycji.HasMany(s => s.ZasobyDokumentu);
+            damZamowienieOdbiorcyOdPozycji.HasOptional(s => s.DamZamowienieOdbiorcyOdPozycjiPozycja);
 
             builder.EntitySet<DamZamowienieOdbiorcyOdPozycjiPowiazany>("DamZamowienieOdbiorcyOdPozycjiPowiazany").EntityType.HasOptional(s => s.DamZamowienieOdbiorcyOdPozycji);
             builder.EntitySet<DamZamowienieOdbiorcyOdPozycjiZasob>("DamZamowienieOdbiorcyOdPozycjiZasob").EntityType.HasOptional(s => s.DamZamowienieOdbiorcyOdPozycji);
-
 
             //Obroty Wg Towarów
             var damObrotyTowary = builder.EntitySet<DamObrotyWgTowarow>("ObrotyWgTowarow").EntityType;
@@ -122,8 +120,8 @@ namespace DamEnovaWebApi
             //Magazyny
             var damMagazyny = builder.EntitySet<DamMagazyn>("Magazyny").EntityType;
 
-
-            config.MapODataServiceRoute("odata", "odata", builder.GetEdmModel());
+            var odataBatchHandler = new DefaultODataBatchHandler(GlobalConfiguration.DefaultServer);
+            config.MapODataServiceRoute("odata", "odata", builder.GetEdmModel(), odataBatchHandler);
 
             config.Count().Filter().OrderBy().Expand().Select().MaxTop(null);
 

@@ -354,6 +354,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Filter.cs" />
     <Compile Include="Models\Base\DamModelBase.cs" />
     <Compile Include="Models\DamAdres.cs" />
     <Compile Include="Models\DamDokumentBase.cs" />

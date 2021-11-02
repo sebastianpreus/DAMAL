@@ -14,6 +14,7 @@ using DamEnovaWebApi.Enova;
 using DamEnovaWebApi.Services;
 using System.Web.Http.Results;
 using DamEnovaWebApi.Authentication;
+using DamEnovaWebApi.Helpers;
 
 namespace DamEnovaWebApi.Controllers
 {
@@ -42,8 +43,14 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ex.Message);
             }
 
+            Filter filter = new Filter();
+            if (queryOptions.Filter != null)
+            {
+                filter.ParseQuery(queryOptions.Filter.RawValue);
+            }
+
             PrzyjeciaMagazynoweService przyjeciaMagazynoweService = new PrzyjeciaMagazynoweService();
-            List<DamPrzyjecieMagazynowe> przyjeciaMagazynowe = przyjeciaMagazynoweService.GetPrzyjeciaMagazynowe();
+            List<DamPrzyjecieMagazynowe> przyjeciaMagazynowe = przyjeciaMagazynoweService.GetPrzyjeciaMagazynowe(filter);
             IQueryable result = queryOptions.ApplyTo(przyjeciaMagazynowe.AsQueryable());
             return Ok(result, result.GetType());
         }
@@ -61,8 +68,14 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ex.Message);
             }
 
+            Filter filter = new Filter(key);
+            if (queryOptions.Filter != null)
+            {
+                filter.ParseQuery(queryOptions.Filter.RawValue);
+            }
+
             PrzyjeciaMagazynoweService przyjeciaMagazynoweService = new PrzyjeciaMagazynoweService();
-            List<DamPrzyjecieMagazynowe> przyjeciaMagazynowe = przyjeciaMagazynoweService.GetPrzyjeciaMagazynowe(key);
+            List<DamPrzyjecieMagazynowe> przyjeciaMagazynowe = przyjeciaMagazynoweService.GetPrzyjeciaMagazynowe(filter);
             IQueryable result = queryOptions.ApplyTo(przyjeciaMagazynowe.AsQueryable());
             return Ok(result, result.GetType());
         }

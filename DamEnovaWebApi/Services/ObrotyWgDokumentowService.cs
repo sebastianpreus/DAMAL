@@ -1,4 +1,5 @@
 ﻿using DamEnovaWebApi.Enova;
+using DamEnovaWebApi.Helpers;
 using DamEnovaWebApi.Models;
 using Soneta.Business;
 using Soneta.Handel;
@@ -12,7 +13,7 @@ namespace DamEnovaWebApi.Services
 {
     public class ObrotyWgDokumentowService
     {
-        public List<DamObrotyWgDokumentow> GetObroty(string kierunekMagazynu, int? id = null)
+        public List<DamObrotyWgDokumentow> GetObroty(string kierunekMagazynu, Filter filter)
         {
             using (Session session = Connection.enovalogin.CreateSession(false, false))
             {
@@ -22,10 +23,9 @@ namespace DamEnovaWebApi.Services
                 View view1 = hamodule.DokHandlowe.CreateView();
 
                 //view1.Condition = new FieldCondition.Equal("Kategoria", "Zamówienie odbiorcy");
+                filter.FilterView(view1);
                 view1.Condition = new FieldCondition.Equal("KierunekMagazynu", kierunekMagazynu);
                 view1.Condition &= new FieldCondition.In("TypPartii", "Magazynowy", "Zarezerwowany", "Zamówiony");
-                if (id != null)
-                    view1.Condition &= new FieldCondition.Equal("ID", id);
 
                 // obroty wg dokumentow
                 ObrotyDokumentuWorker o = new ObrotyDokumentuWorker();

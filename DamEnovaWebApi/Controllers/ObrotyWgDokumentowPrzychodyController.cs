@@ -14,6 +14,7 @@ using DamEnovaWebApi.Enova;
 using DamEnovaWebApi.Services;
 using System.Web.Http.Results;
 using DamEnovaWebApi.Authentication;
+using DamEnovaWebApi.Helpers;
 
 namespace DamEnovaWebApi.Controllers
 {
@@ -41,8 +42,14 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ex.Message);
             }
 
+            Filter filter = new Filter();
+            if (queryOptions.Filter != null)
+            {
+                filter.ParseQuery(queryOptions.Filter.RawValue);
+            }
+
             ObrotyWgDokumentowService obrotyService = new ObrotyWgDokumentowService();
-            List<DamObrotyWgDokumentow> obroty = obrotyService.GetObroty("Przychód");
+            List<DamObrotyWgDokumentow> obroty = obrotyService.GetObroty("Przychód", filter);
             IQueryable result = queryOptions.ApplyTo(obroty.AsQueryable());
             return Ok(result, result.GetType());
         }
@@ -60,8 +67,14 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ex.Message);
             }
 
+            Filter filter = new Filter(key);
+            if (queryOptions.Filter != null)
+            {
+                filter.ParseQuery(queryOptions.Filter.RawValue);
+            }
+
             ObrotyWgDokumentowService obrotyService = new ObrotyWgDokumentowService();
-            List<DamObrotyWgDokumentow> obroty = obrotyService.GetObroty("Przychód", key);
+            List<DamObrotyWgDokumentow> obroty = obrotyService.GetObroty("Przychód", filter);
             IQueryable result = queryOptions.ApplyTo(obroty.AsQueryable());
             return Ok(result, result.GetType());
         }

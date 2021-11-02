@@ -1,5 +1,6 @@
 using DamEnovaWebApi.Authentication;
 using DamEnovaWebApi.Enova;
+using DamEnovaWebApi.Helpers;
 using DamEnovaWebApi.Models;
 using DamEnovaWebApi.Services;
 using Microsoft.AspNet.OData;
@@ -33,21 +34,12 @@ namespace DamEnovaWebApi.Controllers
         // GET: odata/Dokumenty        
         public IHttpActionResult GetDokumentyZakupowe(ODataQueryOptions<DamDokumentZakupowy> queryOptions)
         {
+            Filter filter = new Filter();
 
-            string dataOd = "";
-            string dataDo = "";
             //?$filter=Data gt 2020-01-15 and Data lt 2020-01-18
             if (queryOptions.Filter != null)
             {
-                string filter = queryOptions.Filter.RawValue.ToUpper();
-
-                if (filter.Contains("DATA"))
-                {
-                    if (filter.Contains("GT"))
-                        dataOd = filter.Substring(filter.IndexOf("GT") + 3, 10);
-                    if (filter.Contains("LT"))
-                        dataDo = filter.Substring(filter.IndexOf("LT") + 3, 10);
-                }
+                filter.ParseQuery(queryOptions.Filter.RawValue);
             }
 
 
@@ -62,13 +54,7 @@ namespace DamEnovaWebApi.Controllers
 
             DokumentyZakupoweService dokumentyService = new DokumentyZakupoweService();
 
-            //ODataUriParser oDataUriParser = new ODataUriParser(DamDokument, new Uri("name eq 'Facebook' or name eq 'Twitter' and subscribers gt 30"));
-            //var result = oDataUriParser.ParseFilter();
-            //"name eq 'Facebook' or name eq 'Twitter' and subscribers gt 30",
-            //edm,
-            //typeof(DamDokument));
-
-            List<DamDokumentZakupowy> dokumenty = dokumentyService.GetDokumenty(null, dataOd, dataDo);
+            List<DamDokumentZakupowy> dokumenty = dokumentyService.GetDokumenty(filter);
 
             IQueryable result = queryOptions.ApplyTo(dokumenty.AsQueryable());
 
@@ -88,8 +74,14 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ex.Message);
             }
 
+            Filter filter = new Filter(key);
+            if (queryOptions.Filter != null)
+            {
+                filter.ParseQuery(queryOptions.Filter.RawValue);
+            }
+
             DokumentyZakupoweService dokumentyService = new DokumentyZakupoweService();
-            List<DamDokumentZakupowy> dokumenty = dokumentyService.GetDokumenty(key);
+            List<DamDokumentZakupowy> dokumenty = dokumentyService.GetDokumenty(filter);
             IQueryable result = queryOptions.ApplyTo(dokumenty.AsQueryable());
             return Ok(result, result.GetType());
         }

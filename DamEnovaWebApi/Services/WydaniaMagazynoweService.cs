@@ -1,4 +1,5 @@
 ﻿using DamEnovaWebApi.Enova;
+using DamEnovaWebApi.Helpers;
 using DamEnovaWebApi.Models;
 using Soneta.Business;
 using Soneta.Handel;
@@ -12,7 +13,7 @@ namespace DamEnovaWebApi.Services
 {
     public class WydaniaMagazynoweService
     {
-        public List<DamWydanieMagazynowe> GetWydaniaMagazynowe(int? id = null)
+        public List<DamWydanieMagazynowe> GetWydaniaMagazynowe(Filter filter)
         {
             using (Session session = Connection.enovalogin.CreateSession(false, false))
             {
@@ -20,10 +21,8 @@ namespace DamEnovaWebApi.Services
 
                 Soneta.Handel.HandelModule hamodule = Soneta.Handel.HandelModule.GetInstance(session);
                 View view1 = hamodule.DokHandlowe.CreateView();
-
-                view1.Condition = new FieldCondition.Equal("Kategoria", "Wydanie magazynowe");
-                if (id != null)
-                    view1.Condition &= new FieldCondition.Equal("ID", id);
+                filter.FilterView(view1);
+                view1.Condition &= new FieldCondition.Equal("Kategoria", "Wydanie magazynowe");
 
                 foreach (DokumentHandlowy dok in view1)
                 {

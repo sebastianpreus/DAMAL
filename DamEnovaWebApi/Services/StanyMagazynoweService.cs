@@ -18,13 +18,6 @@ namespace DamEnovaWebApi.Services
                 List<DamStanMagazynowy> stanyMagazynowe = new List<DamStanMagazynowy>();
 
                 MagazynyModule mm = MagazynyModule.GetInstance(session);
-                Magazyny mags = mm.Magazyny;
-
-                foreach (Magazyn m in mags.WgNazwa)
-                {
-                    var magNazwa = m.Nazwa;
-                    var magSymbol = m.Symbol;
-                }
 
                 TowaryModule tm = TowaryModule.GetInstance(session);
                 Towary towary = tm.Towary;
@@ -51,21 +44,21 @@ namespace DamEnovaWebApi.Services
                     stanMagazynowy.WartoscMagazynu = stanMag.WartośćMagazynu;
                     stanMagazynowy.StanKsięgowy = stanMag.StanKsięgowyMagazynu.Value;
                     stanMagazynowy.WartoscKsiegowa = stanMag.WartośćKsięgowaMagazynu;
-                    stanMagazynowy.Hurtowa = towar.Ceny["Hurtowa"].Netto.Value;
-                    stanMagazynowy.Narzut = ((double)stanMag.WgCeny["Hurtowa"].NarzutProcent);
+                    try { stanMagazynowy.Hurtowa = towar.Ceny["Hurtowa"].Netto.Value; } catch (Exception) { }
+                    try { stanMagazynowy.Narzut = ((double)stanMag.WgCeny["Hurtowa"].NarzutProcent); } catch (Exception) { }
 
                     //pozostałe pola (w word rysunek 2) : 
                     stanMagazynowy.EAN = towar.EAN;
                     stanMagazynowy.StanRazem = stanMag.StanRazem.Value;
-                    stanMagazynowy.Podstawowa = towar.Ceny["Podstawowa"].Netto.Value;
-                    stanMagazynowy.Detaliczna = towar.Ceny["Detaliczna"].Brutto.Value;
+                    try { stanMagazynowy.Podstawowa = towar.Ceny["Podstawowa"].Netto.Value; } catch (Exception) { }
+                    try { stanMagazynowy.Detaliczna = towar.Ceny["Detaliczna"].Brutto.Value; } catch (Exception) { }
 
                     //pozostałe: 
                     stanMagazynowy.ProcentVAT = ((double)towar.ProcentVAT);
                     stanMagazynowy.StanMagazynu = stanMag.StanMagazynu.Value;
                     stanMagazynowy.WartoscKsiegowaMagazynu = stanMag.WartośćKsięgowaMagazynu;
                     stanMagazynowy.SredniaCenaZakupu = stanMag.CenaŚrednioważona;
-                    stanMagazynowy.WartoscHurtowa = stanMag.WgCeny["Hurtowa"].WartośćNetto; //DL tutaj do weryfikacji
+                    try { stanMagazynowy.WartoscHurtowa = stanMag.WgCeny["Hurtowa"].WartośćNetto; } catch (Exception) { }
 
                     stanRez.Towar = towar;
                     stanRez.Magazyn = mm.Magazyny.WgNazwa[nazwaMagazynu];
