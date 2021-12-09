@@ -84,4 +84,88 @@
     <NetworkLibrary>Default</NetworkLibrary>
     <Timeout>15</Timeout>
   </MsSqlDatabase>
+  <!--<MsSqlDatabase>
+    <Name>Bamet_to_SOP3</Name>
+    <Description>Baza do testów interfejsu SOP3</Description>
+    <Active>true</Active>
+    <DifferentSecondaryDatabase>false</DifferentSecondaryDatabase>
+    <OperatorName>?</OperatorName>
+    <WindowsAuthentication>false</WindowsAuthentication>
+    <LicencesSelection>false</LicencesSelection>
+    <IsOptimalization>true</IsOptimalization>
+    <BatchLinks>100</BatchLinks>
+    <BatchFeatures>100</BatchFeatures>
+    <BatchSubTables>40</BatchSubTables>
+    <NonCollectedRows>50000</NonCollectedRows>
+    <LockNotification>false</LockNotification>
+    <Server>BAMETSERVER\ENOVA</Server>
+    <DatabaseName>Bamet_to_SOP3</DatabaseName>
+    <User>enova_db</User>
+    <Password>=7330C0C16CA1F23C277F072CAE5E5179E9</Password>
+    <Trusted>false</Trusted>
+    <SecondaryServer />
+    <SecondaryDatabaseName />
+    <SecondaryUser />
+    <SecondaryTrusted>false</SecondaryTrusted>
+    <VirtualTeleKeySerial>00000000</VirtualTeleKeySerial>
+    <UseConnectionString>false</UseConnectionString>
+    <NetworkLibrary>Default</NetworkLibrary>
+    <Timeout>15</Timeout>
+  </MsSqlDatabase>-->
+  <MsSqlDatabase>
+    <Name>Bamet_to_SOP3</Name>
+    <Description />
+    <Active>true</Active>
+    <DifferentSecondaryDatabase>false</DifferentSecondaryDatabase>
+    <OperatorName>?</OperatorName>
+    <WindowsAuthentication>false</WindowsAuthentication>
+    <LicencesSelection>false</LicencesSelection>
+    <IsOptimalization>true</IsOptimalization>
+    <BatchLinks>100</BatchLinks>
+    <BatchFeatures>100</BatchFeatures>
+    <BatchSubTables>40</BatchSubTables>
+    <NonCollectedRows>50000</NonCollectedRows>
+    <LockNotification>false</LockNotification>
+    <Server>.\SQLEXPRESS</Server>
+    <DatabaseName>Bamet_to_SOP3</DatabaseName>
+    <User>sa</User>
+    <Password>=BFC9BDBE9397CBBA03D9F2202E5770F5DB</Password>
+    <Trusted>false</Trusted>
+    <SecondaryServer />
+    <SecondaryDatabaseName />
+    <SecondaryUser />
+    <SecondaryTrusted>false</SecondaryTrusted>
+    <VirtualTeleKeySerial>00000000</VirtualTeleKeySerial>
+    <UseConnectionString>false</UseConnectionString>
+    <NetworkLibrary>Default</NetworkLibrary>
+    <Timeout>15</Timeout>
+  </MsSqlDatabase>
+  <MsSqlDatabase>
+    <Name>Demo1</Name>
+    <Description />
+    <Active>true</Active>
+    <DifferentSecondaryDatabase>false</DifferentSecondaryDatabase>
+    <OperatorName>?</OperatorName>
+    <WindowsAuthentication>false</WindowsAuthentication>
+    <LicencesSelection>false</LicencesSelection>
+    <IsOptimalization>true</IsOptimalization>
+    <BatchLinks>100</BatchLinks>
+    <BatchFeatures>100</BatchFeatures>
+    <BatchSubTables>40</BatchSubTables>
+    <NonCollectedRows>50000</NonCollectedRows>
+    <LockNotification>false</LockNotification>
+    <Server>.\SQLEXPRESS</Server>
+    <DatabaseName>Demo1</DatabaseName>
+    <User>sa</User>
+    <Password>=BF03454FEA2526FB3F524B9016A4DCF5A6</Password>
+    <Trusted>false</Trusted>
+    <SecondaryServer />
+    <SecondaryDatabaseName />
+    <SecondaryUser />
+    <SecondaryTrusted>false</SecondaryTrusted>
+    <VirtualTeleKeySerial>00000000</VirtualTeleKeySerial>
+    <UseConnectionString>false</UseConnectionString>
+    <NetworkLibrary>Default</NetworkLibrary>
+    <Timeout>15</Timeout>
+  </MsSqlDatabase>
 </DatabaseCollection>

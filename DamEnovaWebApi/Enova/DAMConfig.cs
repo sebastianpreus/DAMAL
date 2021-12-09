@@ -26,21 +26,20 @@ namespace DamEnovaWebApi.Enova
                 //}
 
 
-                xml_global_DBName = "Demo";
-                xml_global_DBuser = "sa";
-                xml_global_DBpassword = "Symfonia1";
-                xml_global_DBserver = @"DESKTOP-2CVI6HT\SQLEXPRESS";
-                //xml_global_DBserver = @".\ENOVA";                
+                //xml_global_DBName = "Demo1";
+                //xml_global_DBuser = "sa";
+                //xml_global_DBpassword = "Symfonia1";
+                //xml_global_DBserver = @"DESKTOP-2CVI6HT\SQLEXPRESS";
 
-                xml_global_EnovaFirma = "TestDanych";
-                xml_global_EnovaUser = "Damal1";
-                xml_global_EnovaUserPwd = "Lamad1#";
+                //xml_global_EnovaFirma = "TestDanych";
+                //xml_global_EnovaUser = "Damal1";
+                //xml_global_EnovaUserPwd = "Lamad1#";
 
-                //xml_global_EnovaFirma = "BametPBabrajKH";
+                //xml_global_EnovaFirma = "Demo";//"BametPBabrajKH";
                 //xml_global_EnovaUser = "Administrator";
                 //xml_global_EnovaUserPwd = "";
 
-                //BAMET:
+                ////BAMET:
                 //xml_global_DBName = "Bamet_to_SOP3";
                 //xml_global_DBuser = "sa";
                 //xml_global_DBpassword = "Symfonia1$";
@@ -49,6 +48,28 @@ namespace DamEnovaWebApi.Enova
                 //xml_global_EnovaFirma = "Bamet_to_SOP3";
                 //xml_global_EnovaUser = "SOP3";
                 //xml_global_EnovaUserPwd = "Symfonia1#";
+
+                //BAMET KOPIA LOKALNA
+                xml_global_DBName = "Bamet_to_SOP3";
+                xml_global_DBuser = "sa";
+                xml_global_DBpassword = "Symfonia1";
+                xml_global_DBserver = @".\SQLEXPRESS";
+
+                xml_global_EnovaFirma = "Bamet_to_SOP3";
+                xml_global_EnovaUser = "SOP3";
+                xml_global_EnovaUserPwd = "Symfonia1#";
+
+                //DEMO1
+                //xml_global_DBName = "Demo1";
+                //xml_global_DBuser = "sa";
+                //xml_global_DBpassword = "Symfonia1";
+                //xml_global_DBserver = @".\SQLEXPRESS";
+
+                //xml_global_EnovaFirma = "Demo1";
+                //xml_global_EnovaUser = "Administrator";
+                //xml_global_EnovaUserPwd = "";
+
+
             }
             catch (Exception)
             {

@@ -24,7 +24,7 @@ namespace DamEnovaWebApi.Services
 
                 //view1.Condition = new FieldCondition.Equal("Kategoria", "Zamówienie odbiorcy");
                 filter.FilterView(view1);
-                view1.Condition = new FieldCondition.Equal("KierunekMagazynu", kierunekMagazynu);
+                view1.Condition &= new FieldCondition.Equal("KierunekMagazynu", kierunekMagazynu);
                 view1.Condition &= new FieldCondition.In("TypPartii", "Magazynowy", "Zarezerwowany", "Zamówiony");
 
                 // obroty wg dokumentow

@@ -1,5 +1,6 @@
 using DamEnovaWebApi.Authentication;
 using DamEnovaWebApi.Enova;
+using DamEnovaWebApi.Helpers;
 using DamEnovaWebApi.Models;
 using DamEnovaWebApi.Services;
 using Microsoft.AspNet.OData;
@@ -27,10 +28,20 @@ namespace DamEnovaWebApi.Controllers
         }
 
         // GET: odata/Dokumenty        
+        [HttpGet]
+        //[Route("odata/StanyMagazynowe/{skip}/{top}")]
+        //public IHttpActionResult GetStanyMagazynowe(int skip, int top, ODataQueryOptions<DamStanMagazynowy> queryOptions)
         public IHttpActionResult GetStanyMagazynowe(ODataQueryOptions<DamStanMagazynowy> queryOptions)
         {
-            //if (queryOptions.Filter == null || queryOptions.Filter.RawValue.Contains("Typ eq"))
-            //    return BadRequest("Brak typu dokumentu w zapytaniu");
+            Filter filter = new Filter();
+            //filter.Skip = skip;
+            //filter.Top = top;
+            if (queryOptions.Filter != null || queryOptions.Top != null || queryOptions.Skip != null)
+            {
+                filter.ParseQuery(queryOptions.Filter.RawValue, //skip, top);
+                                  queryOptions.Top?.Value, 
+                                  queryOptions.Skip?.Value);
+            }
 
             try
             {
@@ -49,7 +60,7 @@ namespace DamEnovaWebApi.Controllers
             //edm,
             //typeof(DamDokument));
 
-            List<DamStanMagazynowy> stanyMagazynowe = stanyMagazynoweService.GetStanyMagazynowe();
+            List<DamStanMagazynowy> stanyMagazynowe = stanyMagazynoweService.GetStanyMagazynowe(filter);
 
             IQueryable result = queryOptions.ApplyTo(stanyMagazynowe.AsQueryable());
 
@@ -58,6 +69,12 @@ namespace DamEnovaWebApi.Controllers
 
         public IHttpActionResult GetStanyMagazynowe(string magazyn, ODataQueryOptions<DamStanMagazynowy> queryOptions)
         {
+            Filter filter = new Filter();
+            if (queryOptions.Filter != null)
+            {
+                filter.ParseQuery(queryOptions.Filter.RawValue);
+            }
+
             // validate the query.
             try
             {
@@ -69,7 +86,7 @@ namespace DamEnovaWebApi.Controllers
             }
 
             StanyMagazynoweService stanyMagazynoweService = new StanyMagazynoweService();
-            List<DamStanMagazynowy> stanyMagazynowe = stanyMagazynoweService.GetStanyMagazynowe(magazyn);
+            List<DamStanMagazynowy> stanyMagazynowe = stanyMagazynoweService.GetStanyMagazynowe(filter, magazyn);
             IQueryable result = queryOptions.ApplyTo(stanyMagazynowe.AsQueryable());
             return Ok(result, result.GetType());
         }

@@ -17,6 +17,9 @@ namespace DamEnovaWebApi.Services
         {
             using (Session session = Connection.enovalogin.CreateSession(false, false))
             {
+                DateTime start = DateTime.Now;
+                int count = 0;
+
                 List<DamZamowienieOdbiorcy> dokumenty = new List<DamZamowienieOdbiorcy>();
 
                 HandelModule hamodule = HandelModule.GetInstance(session);
@@ -139,6 +142,8 @@ namespace DamEnovaWebApi.Services
                     }
                     dokumenty.Add(damDokument);
                 }
+                var ttttttt = DateTime.Now - start;
+                var ilosc = count;
                 return dokumenty;
             }
         }

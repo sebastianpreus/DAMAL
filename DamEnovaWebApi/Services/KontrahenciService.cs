@@ -13,9 +13,13 @@ namespace DamEnovaWebApi.Services
     {
         public List<DamKontrahent> GetKontrahenci(int? id = null)
         {
+
             //DamalEnova damalEnova = new DamalEnova();
             using (Session session = Connection.enovalogin.CreateSession(false, false))
             {
+                DateTime start = DateTime.Now;
+                int count = 0;
+
                 CRMModule cm = CRMModule.GetInstance(session);
                 Kontrahenci khlst = cm.Kontrahenci;
                 View khview = khlst.CreateView();
@@ -29,7 +33,10 @@ namespace DamEnovaWebApi.Services
                     DamKontrahent damKontrahent = new DamKontrahent();
                     damKontrahent.MapEnovaObject(kontrahent);
                     kontrahents.Add(damKontrahent);
+                    count += 1;
                 }
+                var ttttttt = DateTime.Now - start;
+                var ilosc = count;
                 return kontrahents;
             }
         }

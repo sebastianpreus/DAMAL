@@ -13,19 +13,27 @@ namespace DamEnovaWebApi.Services
     {
         public List<DamZasob> GetZasoby(int? id = null)
         {
+            int count = 0;
+
             //DamalEnova damalEnova = new DamalEnova();
             using (Session session = Connection.enovalogin.CreateSession(false, false))
             {
                 MagazynyModule mg = MagazynyModule.GetInstance(session);
-
                 Zasoby zasoby = mg.Zasoby;
-                View mgview = zasoby.CreateView();
-                if (id != null)
-                    mgview.Condition &= new FieldCondition.Equal("ID", id);
+                SubTable zasobySub = mg.Zasoby.WgMagazyn;
 
-                List<DamZasob> damZasoby = new List<DamZasob>();
-                foreach (Zasob zasob in mgview)
+                if (id != null)
                 {
+                    RowCondition condition = new FieldCondition.Equal("ID", id);
+                    zasobySub = zasobySub[condition];
+                }
+                List<DamZasob> damZasoby = new List<DamZasob>();
+                DateTime start = DateTime.Now;
+
+                foreach (Zasob zasob in zasobySub)
+                {
+                    count += 1;
+
                     DamZasob damZasob = new DamZasob();
 
                     damZasob.ID = zasob.ID;
@@ -46,6 +54,10 @@ namespace DamEnovaWebApi.Services
 
                     damZasoby.Add(damZasob);
                 }
+                var ttttttt = DateTime.Now - start;
+                var ilosc = count;
+
+
                 return damZasoby;
             }
         }

@@ -11,6 +11,8 @@ namespace DamEnovaWebApi.Models
     {
         public int Lp { get; set; }
         public string Towar { get; set; }
+        public string TowarEAN { get; set; }
+        public string TowarKod { get; set; }
         public double Ilosc { get; set; }
         public string JednostkaMiary { get; set; }
         public string Zlecenie { get; set; }

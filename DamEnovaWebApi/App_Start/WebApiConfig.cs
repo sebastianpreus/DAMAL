@@ -24,6 +24,11 @@ namespace DamEnovaWebApi
                 defaults: new { id = RouteParameter.Optional }
             );
 
+            //config.Routes.MapHttpRoute(
+            //    name: "DefaultApiSkipTop",
+            //    routeTemplate: "api/{controller}/{skip}/{top}"
+            //);
+
             ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
 
             builder.EntitySet<DamKontrahent>("Kontrahenci").EntityType.HasOptional(s => s.DamAdres);
@@ -119,6 +124,9 @@ namespace DamEnovaWebApi
 
             //Magazyny
             var damMagazyny = builder.EntitySet<DamMagazyn>("Magazyny").EntityType;
+
+            //Towary
+            var damTowary = builder.EntitySet<DamTowar>("Towary").EntityType;
 
             var odataBatchHandler = new DefaultODataBatchHandler(GlobalConfiguration.DefaultServer);
             config.MapODataServiceRoute("odata", "odata", builder.GetEdmModel(), odataBatchHandler);
