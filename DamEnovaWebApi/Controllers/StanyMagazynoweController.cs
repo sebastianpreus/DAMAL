@@ -29,6 +29,7 @@ namespace DamEnovaWebApi.Controllers
 
         // GET: odata/Dokumenty        
         [HttpGet]
+        //[DamEnableQueryAttribute]
         //[Route("odata/StanyMagazynowe/{skip}/{top}")]
         //public IHttpActionResult GetStanyMagazynowe(int skip, int top, ODataQueryOptions<DamStanMagazynowy> queryOptions)
         public IHttpActionResult GetStanyMagazynowe(ODataQueryOptions<DamStanMagazynowy> queryOptions)
@@ -54,15 +55,12 @@ namespace DamEnovaWebApi.Controllers
 
             StanyMagazynoweService stanyMagazynoweService = new StanyMagazynoweService();
 
-            //ODataUriParser oDataUriParser = new ODataUriParser(DamDokument, new Uri("name eq 'Facebook' or name eq 'Twitter' and subscribers gt 30"));
-            //var result = oDataUriParser.ParseFilter();
-            //"name eq 'Facebook' or name eq 'Twitter' and subscribers gt 30",
-            //edm,
-            //typeof(DamDokument));
-
             List<DamStanMagazynowy> stanyMagazynowe = stanyMagazynoweService.GetStanyMagazynowe(filter);
 
-            IQueryable result = queryOptions.ApplyTo(stanyMagazynowe.AsQueryable());
+            IQueryable<DamStanMagazynowy> queryable = stanyMagazynowe.AsQueryable();
+            var ignoreQueryOptions = AllowedQueryOptions.Skip | AllowedQueryOptions.Top;
+            queryOptions.ApplyTo(queryable, ignoreQueryOptions);
+            IQueryable result = queryOptions.ApplyTo(queryable);
 
             return Ok(result, result.GetType());
         }

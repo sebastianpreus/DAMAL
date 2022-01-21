@@ -56,8 +56,8 @@ namespace DamEnovaWebApi.Enova
                 xml_global_DBserver = @".\SQLEXPRESS";
 
                 xml_global_EnovaFirma = "Bamet_to_SOP3";
-                xml_global_EnovaUser = "SOP3";
-                xml_global_EnovaUserPwd = "Symfonia1#";
+                xml_global_EnovaUser = "Damal1";//"SOP3";
+                xml_global_EnovaUserPwd = "Lamad1#";//"Symfonia1#";
 
                 //DEMO1
                 //xml_global_DBName = "Demo1";

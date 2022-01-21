@@ -36,7 +36,7 @@ namespace DamEnovaWebApi.Enova
                 //
                 //enovalogin = database.Login(false, "Damian", "");
 
-                enovalogin = database.Login(false, damconf.EnovaUser, damconf.EnovaUserPwd, false);
+                enovalogin = database.Login(false, damconf.EnovaUser, damconf.EnovaUserPwd);
             }
 
             //Session session = enovalogin.CreateSession(false, false);        

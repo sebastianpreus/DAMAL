@@ -132,7 +132,7 @@ namespace DamEnovaWebApi
             config.MapODataServiceRoute("odata", "odata", builder.GetEdmModel(), odataBatchHandler);
 
             config.Count().Filter().OrderBy().Expand().Select().MaxTop(null);
-
+            
             config.EnableDependencyInjection();
 
             config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;

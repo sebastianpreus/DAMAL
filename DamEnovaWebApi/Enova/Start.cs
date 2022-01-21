@@ -13,10 +13,10 @@ namespace DamEnovaWebApi.Enova
             
             // Uruchom loader
             loader = new Soneta.Start.Loader();
-            loader.WithUI = false;
-            loader.WithExtensions = false;
-            loader.WithExtra = false;
-            loader.WithNet = false;
+            //loader.WithUI = false;
+            //loader.WithExtensions = true;
+            //loader.WithExtra = false;
+            //loader.WithNet = true;
             loader.Load();
             
             // Wymuś położenie plików konfiguracji

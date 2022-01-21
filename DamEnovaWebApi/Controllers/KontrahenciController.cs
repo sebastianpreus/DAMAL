@@ -68,6 +68,19 @@ namespace DamEnovaWebApi.Controllers
             return Ok(result, result.GetType());
         }
 
+        public IHttpActionResult Post(DamKontrahent damKontrahent)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            KontrahenciService kontrahenciService = new KontrahenciService();
+            kontrahenciService.PostKontrahent(damKontrahent);
+
+            return Created(damKontrahent);
+        }
+
         private IHttpActionResult Ok(object content, Type type)
         {
             Type resultType = typeof(OkNegotiatedContentResult<>).MakeGenericType(type);
