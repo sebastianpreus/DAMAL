@@ -134,86 +134,86 @@
     </Reference>
     <Reference Include="Soneta.BI, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
       <HintPath>packages\Soneta.BI.2012.4.9\lib\net46\Soneta.BI.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Soneta.Business, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
       <HintPath>packages\Soneta.Business.2012.4.9\lib\net46\Soneta.Business.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Soneta.Core, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
       <HintPath>packages\Soneta.Core.2012.4.9\lib\net46\Soneta.Core.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Soneta.CRM, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
       <HintPath>packages\Soneta.CRM.2012.4.9\lib\net46\Soneta.CRM.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Soneta.CzlonkowieSzkolenia, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
       <HintPath>packages\Soneta.CzlonkowieSzkolenia.2012.4.9\lib\net46\Soneta.CzlonkowieSzkolenia.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Soneta.Data, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
       <HintPath>packages\Soneta.Data.2012.4.9\lib\net46\Soneta.Data.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Soneta.Deklaracje, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
       <HintPath>packages\Soneta.Deklaracje.2012.4.9\lib\net46\Soneta.Deklaracje.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Soneta.EI, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
       <HintPath>packages\Soneta.EI.2012.4.9\lib\net46\Soneta.EI.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Soneta.Generator, Version=12.0.0.7, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
       <HintPath>packages\Soneta.Generator.12.0.0\lib\net46\Soneta.Generator.exe</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Soneta.Handel, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
       <HintPath>packages\Soneta.Handel.2012.4.9\lib\net46\Soneta.Handel.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Soneta.KadryPlace, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
       <HintPath>packages\Soneta.KadryPlace.2012.4.9\lib\net46\Soneta.KadryPlace.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Soneta.Kasa, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
       <HintPath>packages\Soneta.Kasa.2012.4.9\lib\net46\Soneta.Kasa.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Soneta.Ksiega, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
       <HintPath>packages\Soneta.Ksiega.2012.4.9\lib\net46\Soneta.Ksiega.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Soneta.Licence, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
       <HintPath>packages\Soneta.Licence.1.0.0\lib\net40\Soneta.Licence.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Soneta.Licence.Local, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
       <HintPath>packages\Soneta.Licence.Local.1.0.0\lib\net40\Soneta.Licence.Local.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Soneta.Licence.Local.Proxy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
       <HintPath>packages\Soneta.Licence.Local.Proxy.1.0.0\lib\net40\Soneta.Licence.Local.Proxy.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Soneta.Start, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
       <HintPath>packages\Soneta.Start.2012.4.9\lib\net46\Soneta.Start.dll</HintPath>
     </Reference>
     <Reference Include="Soneta.Types, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
       <HintPath>packages\Soneta.Types.2012.4.9\lib\net46\Soneta.Types.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Soneta.Web.Business, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
       <HintPath>packages\Soneta.Web.Business.2012.4.9\lib\net46\Soneta.Web.Business.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Soneta.Workflow, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
       <HintPath>packages\Soneta.Workflow.2012.4.9\lib\net46\Soneta.Workflow.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Soneta.Zadania, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
       <HintPath>packages\Soneta.Zadania.2012.4.9\lib\net46\Soneta.Zadania.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Syncfusion.Compression.Base, Version=17.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <HintPath>packages\Syncfusion.Pdf.OCR.WinForms.17.2.0.46\lib\net46\Syncfusion.Compression.Base.dll</HintPath>
@@ -355,6 +355,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Authentication\BasicAuthenticationAttribute.cs" />
     <Compile Include="Authentication\UserValidate.cs" />
+    <Compile Include="Controllers\DokumentyController.cs" />
     <Compile Include="Controllers\TowaryController.cs" />
     <Compile Include="Controllers\MagazyController.cs" />
     <Compile Include="Controllers\StanyMagazynoweController.cs" />
@@ -371,6 +372,7 @@
     <Compile Include="Controllers\ZasobyController.cs" />
     <Compile Include="Enova\Connection.cs" />
     <Compile Include="Enova\DAMConfig.cs" />
+    <Compile Include="Enova\InitLocalFolder.cs" />
     <Compile Include="Enova\Start.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -378,6 +380,7 @@
     <Compile Include="Helpers\Filter.cs" />
     <Compile Include="Models\Base\DamModelBase.cs" />
     <Compile Include="Models\DamAdres.cs" />
+    <Compile Include="Models\DamDokument.cs" />
     <Compile Include="Models\DamDokumentBase.cs" />
     <Compile Include="Models\DamTowar.cs" />
     <Compile Include="Models\DokumentZakupowy\DamDokumentZakupowy.cs" />
@@ -418,6 +421,7 @@
     <Compile Include="Models\ZamowienieOdbiorcy\DamZamowienieOdbiorcy.cs" />
     <Compile Include="Models\ZamowienieOdbiorcy\DamZamowienieOdbiorcyZasob.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DokumentyService.cs" />
     <Compile Include="Services\MagazynyService.cs" />
     <Compile Include="Services\StanyMagazynoweService.cs" />
     <Compile Include="Services\DokumentyZakupoweService.cs" />

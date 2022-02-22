@@ -14,6 +14,7 @@ using DamEnovaWebApi.Enova;
 using DamEnovaWebApi.Services;
 using System.Web.Http.Results;
 using DamEnovaWebApi.Authentication;
+using DamEnovaWebApi.Helpers;
 
 namespace DamEnovaWebApi.Controllers
 {
@@ -31,6 +32,16 @@ namespace DamEnovaWebApi.Controllers
 
         public IHttpActionResult GetObrotyWgTowarow(ODataQueryOptions<DamObrotyWgTowarow> queryOptions)
         {
+            Filter filter = new Filter();
+            //filter.Skip = skip;
+            //filter.Top = top;
+            if (queryOptions.Filter != null || queryOptions.Top != null || queryOptions.Skip != null)
+            {
+                filter.ParseQuery(queryOptions.Filter.RawValue, //skip, top);
+                                  queryOptions.Top?.Value,
+                                  queryOptions.Skip?.Value);
+            }
+
             // validate the query.
             try
             {
@@ -42,9 +53,18 @@ namespace DamEnovaWebApi.Controllers
             }
 
             ObrotyWgTowarowService obrotyService = new ObrotyWgTowarowService();
-            List<DamObrotyWgTowarow> obroty = obrotyService.GetObroty();
-            IQueryable result = queryOptions.ApplyTo(obroty.AsQueryable());
+            List<DamObrotyWgTowarow> obroty = obrotyService.GetObroty(filter);
+
+            IQueryable<DamObrotyWgTowarow> queryable = obroty.AsQueryable();
+            var ignoreQueryOptions = AllowedQueryOptions.Skip | AllowedQueryOptions.Top;
+            queryOptions.ApplyTo(queryable, ignoreQueryOptions);
+            IQueryable result = queryOptions.ApplyTo(queryable);
             return Ok(result, result.GetType());
+
+
+            //var ignoreQueryOptions = AllowedQueryOptions.Skip | AllowedQueryOptions.Top;
+            //IQueryable result = queryOptions.ApplyTo(obroty.AsQueryable());
+            //return Ok(result, result.GetType());
         }
 
         // GET: odata/PrzyjeciaMagazynowe(5)

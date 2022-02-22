@@ -45,35 +45,26 @@ namespace DamEnovaWebApi.Services
         {
             using (Session session1 = Connection.enovalogin.CreateSession(false, false))
             {
-                CRMModule cm1 = CRMModule.GetInstance(session1);
+                CRMModule cm = CRMModule.GetInstance(session1);
                 using (ITransaction trans = session1.Logout(true))
                 {
-                    Kontrahent kontrahent = (Kontrahent)cm1.Kontrahenci.WgNIP[damKontrahent.NIP].GetNext();
+                    Kontrahent kontrahent = (Kontrahent)cm.Kontrahenci.WgNIP[damKontrahent.NIP].GetNext();
                     if (kontrahent == null)
                     {
                         Kontrahent newKontrahent = new Kontrahent();
+                        cm.Kontrahenci.AddRow(newKontrahent);
 
-                        cm1.Kontrahenci.AddRow(newKontrahent);
-                         
-
-                        int nr = new Random().Next(10000);
-                        newKontrahent.Kod = "KOD" + nr;
-                        newKontrahent.Nazwa = "Nazwa " + nr;
-                        //newKontrahent.NIP = "958-068-56-91";
-                        //newKontrahent.Adres.Ulica = "Szara";
-                        //newKontrahent.Adres.NrDomu = "12";
+                        newKontrahent.Kod = damKontrahent.Kod;
+                        newKontrahent.Nazwa = damKontrahent.Nazwa;
+                        newKontrahent.NIP = damKontrahent.NIP;
+                        //newKontrahent.Adres.Ulica = damKontrahent.DamAdres.Linia1;
+                        //newKontrahent.Adres.NrDomu = damKontrahent.DamAdres.Linia2;
                         //newKontrahent.Adres.NrLokalu = "34";
-                        //newKontrahent.Adres.Miejscowosc = "Kraków";
-                        
-
-                        //newKontrahent.Kod = damKontrahent.Kod;
-                        //newKontrahent.Nazwa = damKontrahent.Nazwa;
-                        //newKontrahent.NIP = damKontrahent.NIP;
-
+                        newKontrahent.Adres.Miejscowosc = damKontrahent.DamAdres.Miejscowosc;
                     }
                     trans.Commit();
                 }
-                session1.Save(); //Błąd kompilacji algorytmów cen.
+                session1.Save();
             }
         }
     }

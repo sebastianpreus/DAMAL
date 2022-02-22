@@ -20,7 +20,7 @@ namespace DamEnovaWebApi.Enova
             loader.Load();
             
             // Wymuś położenie plików konfiguracji
-            Soneta.Tools.FileStorageProvider.InitLocalFolder(Soneta.Tools.FileStorageProvider.LocalFolderLocation.DomainDirectory);
+            //Soneta.Tools.FileStorageProvider.InitLocalFolder(Soneta.Tools.FileStorageProvider.LocalFolderLocation.DomainDirectory);
         }
     }
 }

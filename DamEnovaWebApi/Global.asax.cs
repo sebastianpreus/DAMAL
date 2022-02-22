@@ -8,6 +8,7 @@ namespace DamEnovaWebApi
         protected void Application_Start()
         {
             Start.LoadLibraries();
+            InitLocalFolder.Init();
 
             GlobalConfiguration.Configure(WebApiConfig.Register);            
         }
