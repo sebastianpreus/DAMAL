@@ -2,6 +2,7 @@
 using DamEnovaWebApi.Helpers;
 using DamEnovaWebApi.Models;
 using Soneta.Business;
+using Soneta.Core;
 using Soneta.CRM;
 using Soneta.Handel;
 using Soneta.Magazyny;
@@ -134,7 +135,7 @@ namespace DamEnovaWebApi.Services
             }
         }
 
-        public void PostPrzyjedzieMagazynowe(DamPrzyjecieMagazynowe damPrzyjecieMagazynowe)
+        public void PostPrzyjeciaMagazynowe(DamPrzyjecieMagazynowe damPrzyjecieMagazynowe)
         {
             using (Session session = Connection.enovalogin.CreateSession(false, false))
             {
@@ -142,20 +143,22 @@ namespace DamEnovaWebApi.Services
                 TowaryModule tm = TowaryModule.GetInstance(session);
                 MagazynyModule mm = MagazynyModule.GetInstance(session);
                 CRMModule cm = CRMModule.GetInstance(session);
+                CoreModule core = CoreModule.GetInstance(session);
 
                 using (ITransaction trans = session.Logout(true))
                 {
                     DokumentHandlowy dokument = new DokumentHandlowy();
 
-                    DefDokHandlowego definicja = hm.DefDokHandlowych.WgSymbolu["PZ"];
+                    DefDokHandlowego definicja = hm.DefDokHandlowych.WgSymbolu[damPrzyjecieMagazynowe.Typ];
                     if (definicja == null)
-                        throw new InvalidOperationException("Nieznaleziona definicja dokumentu PZ.");
+                        throw new InvalidOperationException("Nieznaleziona definicja dokumentu " + damPrzyjecieMagazynowe.Typ);
                     dokument.Definicja = definicja;
 
-                    dokument.Magazyn = mm.Magazyny.Firma;
+                    dokument.Magazyn = mm.Magazyny.WgNazwa[damPrzyjecieMagazynowe.Magazyn];
+                    dokument.Data = damPrzyjecieMagazynowe.Data;
                     hm.DokHandlowe.AddRow(dokument);
 
-                    Kontrahent kontrahent = cm.Kontrahenci.WgKodu[damPrzyjecieMagazynowe.Kontrahent];
+                    Kontrahent kontrahent = cm.Kontrahenci.WgKodu[damPrzyjecieMagazynowe.KontrahentKod];
                     if (kontrahent == null)
                         throw new InvalidOperationException("Nieznaleziony kontrahent o kodzie " + damPrzyjecieMagazynowe.Kontrahent);
                     dokument.Kontrahent = kontrahent;
@@ -174,7 +177,18 @@ namespace DamEnovaWebApi.Services
 
                             pozycja.Cena = new DoubleCy(damPozycja.Cena);
                         }
+
                     }
+
+                    foreach (SlownikElem sl in core.Slowniki.WgNazwa)
+                    {
+                        if (sl.Kategoria == "PriorytetZamAlg")
+                        {
+                            if (sl.Nazwa == damPrzyjecieMagazynowe.Priorytet)
+                                dokument.ParametryRezerwacjiProxy.Priorytet = sl;
+                        }
+                    }
+
                     dokument.Stan = StanDokumentuHandlowego.Zatwierdzony;
 
                     trans.Commit();

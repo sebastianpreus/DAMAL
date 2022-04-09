@@ -88,7 +88,7 @@ namespace DamEnovaWebApi.Controllers
             }
 
             PrzyjeciaMagazynoweService przyjeciaMagazynoweService = new PrzyjeciaMagazynoweService();
-            przyjeciaMagazynoweService.PostPrzyjedzieMagazynowe(damPrzyjecieMagazynowe);
+            przyjeciaMagazynoweService.PostPrzyjeciaMagazynowe(damPrzyjecieMagazynowe);
 
             // return Created(damPrzyjecieMagazynowe);
             return StatusCode(HttpStatusCode.NotImplemented);

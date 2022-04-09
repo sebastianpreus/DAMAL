@@ -7,7 +7,7 @@ using System.Web;
 namespace DamEnovaWebApi.Models
 {
     public class DamZamowienieOdbiorcy : DamModelBase
-    {
+    { 
         public string Typ { get; set; }
         public bool Zatwierdzony { get; set; }
         public bool Anulowany { get; set; }
@@ -22,6 +22,8 @@ namespace DamEnovaWebApi.Models
         public int StanPokrycia { get; set; }
         public bool ZaliczkaPokrywaCalosc { get; set; }
         public string Waluta { get; set; }
+        public string Priorytet { get; set; }
+        public string Magazyn { get; set; }
 
         public virtual ICollection<DamZamowienieOdbiorcyPozycja> PozycjeDokumentu { get; set; }
         public virtual ICollection<DamZamowienieOdbiorcyPowiazany> DokumentyPowiazane { get; set; }

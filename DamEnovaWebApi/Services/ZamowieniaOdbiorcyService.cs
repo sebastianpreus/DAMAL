@@ -2,8 +2,12 @@
 using DamEnovaWebApi.Helpers;
 using DamEnovaWebApi.Models;
 using Soneta.Business;
+using Soneta.Core;
+using Soneta.CRM;
 using Soneta.Handel;
 using Soneta.Magazyny;
+using Soneta.Towary;
+using Soneta.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,6 +53,8 @@ namespace DamEnovaWebApi.Services
                     //damDokument.StanPokrycia = Workers.StanPokryciaZamówienia.StanPokrycia
                     damDokument.ZaliczkaPokrywaCalosc = dok.Wydruk.ZaliczkaPokrywaCałość;
                     damDokument.Waluta = dok.Suma.BruttoCy.Symbol;
+
+                    damDokument.Priorytet = dok.ParametryRezerwacjiProxy.Priorytet.ToString();
 
                     foreach (PozycjaDokHandlowego poz in dok.Pozycje)
                     {
@@ -145,6 +151,71 @@ namespace DamEnovaWebApi.Services
                 var ttttttt = DateTime.Now - start;
                 var ilosc = count;
                 return dokumenty;
+            }
+        }
+
+        internal void PostZamowienieOdbiorcy(DamZamowienieOdbiorcy damZamowienieOdbiorcy)
+        {
+            using (Session session = Connection.enovalogin.CreateSession(false, false))
+            {
+                HandelModule hm = HandelModule.GetInstance(session);
+                TowaryModule tm = TowaryModule.GetInstance(session);
+                MagazynyModule mm = MagazynyModule.GetInstance(session);
+                CRMModule cm = CRMModule.GetInstance(session);
+                CoreModule core = CoreModule.GetInstance(session);
+
+                using (ITransaction trans = session.Logout(true))
+                {
+                    DokumentHandlowy dokument = new DokumentHandlowy();
+
+                    DefDokHandlowego definicja = hm.DefDokHandlowych.WgSymbolu[damZamowienieOdbiorcy.Typ];
+                    //DefDokHandlowego def2 = hm.DefDokHandlowych.ZamówienieOdbiorcy;
+                    if (definicja == null)
+                        throw new InvalidOperationException("Nieznaleziona definicja dokumentu " + damZamowienieOdbiorcy.Typ);
+                    dokument.Definicja = definicja;
+                    //dokument.Definicja = def2;
+
+                    dokument.Magazyn = mm.Magazyny.WgNazwa[damZamowienieOdbiorcy.Magazyn];
+                    dokument.Data = damZamowienieOdbiorcy.Data;
+                    hm.DokHandlowe.AddRow(dokument);
+
+                    if (damZamowienieOdbiorcy.Kontrahent != null)
+                    {
+                        Kontrahent kontrahent = cm.Kontrahenci.WgKodu[damZamowienieOdbiorcy.Kontrahent];
+                        if (kontrahent == null)
+                            throw new InvalidOperationException("Nieznaleziony kontrahent o kodzie " + damZamowienieOdbiorcy.Kontrahent);
+                        dokument.Kontrahent = kontrahent;
+                    }
+                    
+                    foreach (var damPozycja in damZamowienieOdbiorcy.PozycjeDokumentu)
+                    {
+                        Towar towar = (Towar)tm.Towary.WgKodu[damPozycja.Towar];
+                        if (towar != null)
+                        {
+                            PozycjaDokHandlowego pozycja = new PozycjaDokHandlowego(dokument);
+                            hm.PozycjeDokHan.AddRow(pozycja);
+                            pozycja.Towar = towar;
+
+                            pozycja.Ilosc = new Quantity(damPozycja.Ilosc, null);
+                            // pozycja.Ilosc = new Quantity(10, "m"); //podana jednostka miary w metrach
+
+                            pozycja.Cena = new DoubleCy(damPozycja.Cena);
+                        }
+                    }
+
+                    foreach (SlownikElem sl in core.Slowniki.WgNazwa)
+                    {
+                        if (sl.Kategoria == "PriorytetZamAlg")
+                        {
+                            if (sl.Nazwa == damZamowienieOdbiorcy.Priorytet)
+                                dokument.ParametryRezerwacjiProxy.Priorytet = sl;
+                        }
+                    }
+
+                    dokument.Stan = StanDokumentuHandlowego.Zatwierdzony;
+                    trans.Commit();
+                }
+                session.Save();
             }
         }
     }

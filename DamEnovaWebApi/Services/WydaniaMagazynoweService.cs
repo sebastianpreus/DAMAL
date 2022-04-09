@@ -2,8 +2,12 @@
 using DamEnovaWebApi.Helpers;
 using DamEnovaWebApi.Models;
 using Soneta.Business;
+using Soneta.Core;
+using Soneta.CRM;
 using Soneta.Handel;
 using Soneta.Magazyny;
+using Soneta.Towary;
+using Soneta.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,7 +55,7 @@ namespace DamEnovaWebApi.Services
                         pozycja.DamWydanieMagazynoweId = dok.ID;
 
                         pozycja.Lp = poz.Lp;
-                        pozycja.Towar = poz.Towar.Nazwa;
+                        pozycja.Towar = poz.Towar.Kod;
                         pozycja.Ilosc = poz.Ilosc.Value;
                         pozycja.JednostkaMiary = poz.Ilosc.Symbol;
                         pozycja.Cena = poz.Cena.Value;
@@ -88,7 +92,7 @@ namespace DamEnovaWebApi.Services
                         dokumentPowiazany.Numer = dokPow.Numer.NumerPelny;
                         dokumentPowiazany.Data = dokPow.Data;
                         if (dokumentPowiazany.Kontrahent != null)
-                            dokumentPowiazany.Kontrahent = dokPow.Kontrahent.Nazwa;
+                            dokumentPowiazany.Kontrahent = dokPow.Kontrahent.Kod;
                         dokumentPowiazany.Netto = dokPow.Suma.Netto;
                         dokumentPowiazany.VAT = dokPow.Suma.VAT;
                         dokumentPowiazany.Wartosc = dokPow.Suma.Brutto;
@@ -116,8 +120,73 @@ namespace DamEnovaWebApi.Services
                         damDokument.DokumentyPowiazane.Add(dokumentPowiazany);
                     }
                     dokumenty.Add(damDokument);
+                    if (dokumenty.Count == 500)
+                        break;
                 }
                 return dokumenty;
+            }
+        }
+
+        internal void PostWydaniaMagazynowe(DamWydanieMagazynowe damWydanieMagazynowe)
+        {
+            using (Session session = Connection.enovalogin.CreateSession(false, false))
+            {
+                HandelModule hm = HandelModule.GetInstance(session);
+                TowaryModule tm = TowaryModule.GetInstance(session);
+                MagazynyModule mm = MagazynyModule.GetInstance(session);
+                CRMModule cm = CRMModule.GetInstance(session);
+                CoreModule core = CoreModule.GetInstance(session);
+
+                using (ITransaction trans = session.Logout(true))
+                {
+                    DokumentHandlowy dokument = new DokumentHandlowy();
+
+                    DefDokHandlowego definicja = hm.DefDokHandlowych.WgSymbolu[damWydanieMagazynowe.Typ];
+                    if (definicja == null)
+                        throw new InvalidOperationException("Nieznaleziona definicja dokumentu " + damWydanieMagazynowe.Typ);
+                    dokument.Definicja = definicja;
+
+                    dokument.Magazyn = mm.Magazyny.WgNazwa[damWydanieMagazynowe.Magazyn];
+                    dokument.Data = damWydanieMagazynowe.Data;
+                    hm.DokHandlowe.AddRow(dokument);
+
+                    if (damWydanieMagazynowe.Kontrahent != null)
+                    {
+                        Kontrahent kontrahent = cm.Kontrahenci.WgKodu[damWydanieMagazynowe.Kontrahent];
+                        if (kontrahent == null)
+                            throw new InvalidOperationException("Nieznaleziony kontrahent o kodzie " + damWydanieMagazynowe.Kontrahent);
+                        dokument.Kontrahent = kontrahent;
+                    }
+
+                    foreach (var damPozycja in damWydanieMagazynowe.PozycjeDokumentu)
+                    {
+                        Towar towar = (Towar)tm.Towary.WgKodu[damPozycja.Towar];
+                        if (towar != null)
+                        {
+                            PozycjaDokHandlowego pozycja = new PozycjaDokHandlowego(dokument);
+                            hm.PozycjeDokHan.AddRow(pozycja);
+                            pozycja.Towar = towar;
+
+                            pozycja.Ilosc = new Quantity(damPozycja.Ilosc, null);
+                            // pozycja.Ilosc = new Quantity(10, "m"); //podana jednostka miary w metrach
+
+                            pozycja.Cena = new DoubleCy(damPozycja.Cena);
+                        }
+                    }
+                    foreach (SlownikElem sl in core.Slowniki.WgNazwa)
+                    {
+                        if (sl.Kategoria == "PriorytetZamAlg")
+                        {
+                            if (sl.Nazwa == damWydanieMagazynowe.Priorytet)
+                                dokument.ParametryRezerwacjiProxy.Priorytet = sl;
+                        }
+                    }
+
+                    dokument.Stan = StanDokumentuHandlowego.Zatwierdzony;
+
+                    trans.Commit();
+                }
+                session.Save();
             }
         }
     }

@@ -12,6 +12,7 @@ namespace DamEnovaWebApi.Models
         public bool Zatwierdzony { get; set; }
         public string Numer { get; set; }
         public DateTime Data { get; set; }
+        public string Magazyn { get; set; }
         public string Kontrahent { get; set; }
         public string KontrahentKod { get; set; }
         public decimal Netto { get; set; }

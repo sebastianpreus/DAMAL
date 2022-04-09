@@ -80,6 +80,20 @@ namespace DamEnovaWebApi.Controllers
             return Ok(result, result.GetType());
         }
 
+        public IHttpActionResult Post(DamPrzesuniecieMagazynowe damPrzesuniecieMagazynowe)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            PrzesunieciaMagazynoweService przesunieciaMagazynoweService = new PrzesunieciaMagazynoweService();
+            przesunieciaMagazynoweService.PostPrzesuniecieMagazynowe(damPrzesuniecieMagazynowe);
+
+            // return Created(damPrzyjecieMagazynowe);
+            return StatusCode(HttpStatusCode.OK);
+        }
+
         private IHttpActionResult Ok(object content, Type type)
         {
             Type resultType = typeof(OkNegotiatedContentResult<>).MakeGenericType(type);
