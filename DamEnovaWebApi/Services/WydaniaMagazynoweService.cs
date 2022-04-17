@@ -127,6 +127,11 @@ namespace DamEnovaWebApi.Services
             }
         }
 
+        internal void PostWydaniaMagazynoweNaPodstawieZO(DamWydanieMagazynoweNaPodstawieZO damWydanieMagazynoweNaPodstawieZO)
+        {
+            throw new NotImplementedException();
+        }
+
         internal void PostWydaniaMagazynowe(DamWydanieMagazynowe damWydanieMagazynowe)
         {
             using (Session session = Connection.enovalogin.CreateSession(false, false))

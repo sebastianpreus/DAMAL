@@ -128,6 +128,11 @@ namespace DamEnovaWebApi
             //Towary
             var damTowary = builder.EntitySet<DamTowar>("Towary").EntityType;
 
+            //Wydania Magazynowe Na Podstawie ZO
+            var damWydaniaMagazynoweNaPodstawieZO = builder.EntitySet<DamWydanieMagazynoweNaPodstawieZO>("WydaniaMagazynoweNaPodstawieZO").EntityType;
+
+
+
             var odataBatchHandler = new DefaultODataBatchHandler(GlobalConfiguration.DefaultServer);
             config.MapODataServiceRoute("odata", "odata", builder.GetEdmModel(), odataBatchHandler);
 

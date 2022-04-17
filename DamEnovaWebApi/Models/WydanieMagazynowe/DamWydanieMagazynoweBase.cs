@@ -9,7 +9,7 @@ namespace DamEnovaWebApi.Models
     public class DamWydanieMagazynoweBase : DamModelBase
     {
         public string Typ { get; set; }
-        public bool Zatwierdzony { get; set; }
+        public bool Zatwierdzony { get;  set; }
         public string Numer { get; set; }
         public DateTime Data { get; set; }
         public string Magazyn { get; set; }

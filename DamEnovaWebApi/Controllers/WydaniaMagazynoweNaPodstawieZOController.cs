@@ -19,19 +19,19 @@ using DamEnovaWebApi.Helpers;
 namespace DamEnovaWebApi.Controllers
 {
     [BasicAuthentication]
-    public class WydaniaMagazynoweController : ODataController
+    public class WydaniaMagazynoweNaPodstawieZOController : ODataController
     {
         private static ODataValidationSettings _validationSettings = new ODataValidationSettings();
         private Connection _connection;
-        // GET: odata/PrzyjeciaMagazynowe
 
-        public WydaniaMagazynoweController()
+
+        public WydaniaMagazynoweNaPodstawieZOController()
         {
             _connection = new Connection();
             _connection.ConnectToEnova();
         }
 
-        public IHttpActionResult GetWydaniaMagazynowe(ODataQueryOptions<DamWydanieMagazynowe> queryOptions)
+        public IHttpActionResult GetWydaniaMagazynoweNaPodstawieZO(ODataQueryOptions<DamWydanieMagazynoweNaPodstawieZO> queryOptions)
         {
             // validate the query.
             try
@@ -55,32 +55,8 @@ namespace DamEnovaWebApi.Controllers
             return Ok(result, result.GetType());
         }
 
-        // GET: odata/PrzyjeciaMagazynowe(5)
-        public IHttpActionResult GetDamWydanieMagazynowe([FromODataUri] int key, ODataQueryOptions<DamWydanieMagazynowe> queryOptions)
-        {
-            // validate the query.
-            try
-            {
-                queryOptions.Validate(_validationSettings);
-            }
-            catch (ODataException ex)
-            {
-                return BadRequest(ex.Message);
-            }
-
-            Filter filter = new Filter(key);
-            if (queryOptions.Filter != null)
-            {
-                filter.ParseQuery(queryOptions.Filter.RawValue);
-            }
-
-            WydaniaMagazynoweService wydaniaMagazynoweService = new WydaniaMagazynoweService();
-            List<DamWydanieMagazynowe> wydaniaMagazynowe = wydaniaMagazynoweService.GetWydaniaMagazynowe(filter);
-            IQueryable result = queryOptions.ApplyTo(wydaniaMagazynowe.AsQueryable());
-            return Ok(result, result.GetType());
-        }
-
-        public IHttpActionResult Post(DamWydanieMagazynowe damWydanieMagazynowe)
+        [HttpPost]
+        public IHttpActionResult Post(DamWydanieMagazynoweNaPodstawieZO damWydanieMagazynoweNaPodstawieZO)
         {
             if (!ModelState.IsValid)
             {
@@ -88,11 +64,12 @@ namespace DamEnovaWebApi.Controllers
             }
 
             WydaniaMagazynoweService wydaniaMagazynoweService = new WydaniaMagazynoweService();
-            wydaniaMagazynoweService.PostWydaniaMagazynowe(damWydanieMagazynowe);
+            wydaniaMagazynoweService.PostWydaniaMagazynoweNaPodstawieZO(damWydanieMagazynoweNaPodstawieZO);
 
             // return Created(damPrzyjecieMagazynowe);
             return StatusCode(HttpStatusCode.NotImplemented);
         }
+
 
         private IHttpActionResult Ok(object content, Type type)
         {

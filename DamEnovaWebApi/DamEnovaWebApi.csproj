@@ -366,6 +366,7 @@
     <Compile Include="Controllers\PrzesunieciaMagazynoweController.cs" />
     <Compile Include="Controllers\PrzyjeciaMagazynoweController.cs" />
     <Compile Include="Controllers\ObrotyWgDokumentowPrzychodyController.cs" />
+    <Compile Include="Controllers\WydaniaMagazynoweNaPodstawieZOController.cs" />
     <Compile Include="Controllers\ZamowieniaOdbiorcyOdPozycjiController.cs" />
     <Compile Include="Controllers\ZamowieniaOdbiorcyController.cs" />
     <Compile Include="Controllers\WydaniaMagazynoweController.cs" />
@@ -409,9 +410,11 @@
     <Compile Include="Models\StanMagazynowy\DamStanMagazynowy.cs" />
     <Compile Include="Models\WydanieMagazynowe\DamWydanieMagazynoweBase.cs" />
     <Compile Include="Models\WydanieMagazynowe\DamWydanieMagazynowe.cs" />
+    <Compile Include="Models\WydanieMagazynowe\DamWydanieMagazynoweNaPodstawieZO.cs" />
     <Compile Include="Models\WydanieMagazynowe\DamWydanieMagazynowePowiazany.cs" />
     <Compile Include="Models\WydanieMagazynowe\DamWydanieMagazynowePozycja.cs" />
     <Compile Include="Models\WydanieMagazynowe\DamWydanieMagazynoweZasob.cs" />
+    <Compile Include="Models\DamZamowienieObce.cs" />
     <Compile Include="Models\ZamowienieOdbiorcyOdPozycji\DamZamowienieOdbiorcyOdPozycji.cs" />
     <Compile Include="Models\ZamowienieOdbiorcyOdPozycji\DamZamowienieOdbiorcyOdPozycjiPowiazany.cs" />
     <Compile Include="Models\ZamowienieOdbiorcyOdPozycji\DamZamowienieOdbiorcyOdPozycjiPozycja.cs" />
