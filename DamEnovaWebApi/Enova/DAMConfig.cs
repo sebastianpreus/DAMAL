@@ -39,15 +39,15 @@ namespace DamEnovaWebApi.Enova
                 //xml_global_EnovaUser = "Administrator";
                 //xml_global_EnovaUserPwd = "";
 
-                ////BAMET:
-                xml_global_DBName = "Bamet_to_SOP3v3";
-                xml_global_DBuser = "sa";
-                xml_global_DBpassword = "sa";
-                xml_global_DBserver = @"BAMETSERVER\ENOVA";
+                //////BAMET:
+                //xml_global_DBName = "Bamet_to_SOP3v3";
+                //xml_global_DBuser = "sa";
+                //xml_global_DBpassword = "sa";
+                //xml_global_DBserver = @"BAMETSERVER\ENOVA";
 
-                xml_global_EnovaFirma = "Bamet_to_SOP3v3";
-                xml_global_EnovaUser = "SOP3";
-                xml_global_EnovaUserPwd = "Symfonia1#";
+                //xml_global_EnovaFirma = "Bamet_to_SOP3v3";
+                //xml_global_EnovaUser = "SOP3";
+                //xml_global_EnovaUserPwd = "Symfonia1#";
 
                 //BAMET KOPIA LOKALNA
                 //xml_global_DBName = "Bamet_to_SOP3";
@@ -60,14 +60,14 @@ namespace DamEnovaWebApi.Enova
                 //xml_global_EnovaUserPwd = "Lamad1#";//"Symfonia1#";
 
                 //DEMO1
-                //xml_global_DBName = "Demo1";
-                //xml_global_DBuser = "sa";
-                //xml_global_DBpassword = "Symfonia1";
-                //xml_global_DBserver = @".\SQLEXPRESS";
+                xml_global_DBName = "Demo1";
+                xml_global_DBuser = "sa";
+                xml_global_DBpassword = "Symfonia1";
+                xml_global_DBserver = @".\SQLEXPRESS";
 
-                //xml_global_EnovaFirma = "Demo1";
-                //xml_global_EnovaUser = "Administrator";
-                //xml_global_EnovaUserPwd = "";
+                xml_global_EnovaFirma = "Demo1";
+                xml_global_EnovaUser = "Administrator";
+                xml_global_EnovaUserPwd = "";
 
 
             }

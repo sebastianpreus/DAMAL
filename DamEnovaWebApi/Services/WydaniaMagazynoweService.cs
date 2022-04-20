@@ -5,6 +5,7 @@ using Soneta.Business;
 using Soneta.Core;
 using Soneta.CRM;
 using Soneta.Handel;
+using Soneta.Handel.RelacjeDokumentow.Api;
 using Soneta.Magazyny;
 using Soneta.Towary;
 using Soneta.Types;
@@ -129,7 +130,47 @@ namespace DamEnovaWebApi.Services
 
         internal void PostWydaniaMagazynoweNaPodstawieZO(DamWydanieMagazynoweNaPodstawieZO damWydanieMagazynoweNaPodstawieZO)
         {
-            throw new NotImplementedException();
+            using (Session session = Connection.enovalogin.CreateSession(false, false))
+            {
+                HandelModule hm = HandelModule.GetInstance(session);
+                TowaryModule tm = TowaryModule.GetInstance(session);
+                MagazynyModule mm = MagazynyModule.GetInstance(session);
+                CRMModule cm = CRMModule.GetInstance(session);
+
+                using (ITransaction trans = session.Logout(true))
+                {
+                    //
+                    // Wyszukujemy dokument ZO, z którego ma być utworzony nowy dokument.
+                    //
+                    List<DokumentHandlowy> listaDokumentowZO = new List<DokumentHandlowy>();
+                    foreach (string numerDokZO in damWydanieMagazynoweNaPodstawieZO.NumeryDokumentowZO)
+                    {
+                        DokumentHandlowy dokumentZO = hm.DokHandlowe.NumerWgNumeruDokumentu[numerDokZO];
+                        if (dokumentZO == null)
+                            throw new InvalidOperationException("Nie znaleziono dokumentu " + numerDokZO);
+                        listaDokumentowZO.Add(dokumentZO);
+                    }
+
+                    //Tworzenie dokumentu 
+                    var apiRelacje = (IRelacjeService)session.GetService(typeof(IRelacjeService));
+                    DokumentHandlowy dokument = new DokumentHandlowy();
+                    DefDokHandlowego definicja = hm.DefDokHandlowych.WgSymbolu[damWydanieMagazynoweNaPodstawieZO.Typ];
+                    if (definicja == null)
+                        throw new InvalidOperationException("Nieznaleziona definicja dokumentu " + damWydanieMagazynoweNaPodstawieZO.Typ);
+                    dokument.Definicja = definicja;
+
+                    foreach (DokumentHandlowy dokumentZO in listaDokumentowZO)
+                    {
+                        dokument = apiRelacje.NowyPodrzednyIndywidualny(new[] { dokumentZO }, damWydanieMagazynoweNaPodstawieZO.Typ).FirstOrDefault();
+                    }
+
+                    trans.Commit();
+                }
+                session.Save();
+            }
+            //dokument.Magazyn = mm.Magazyny.WgNazwa[damWydanieMagazynowe.Magazyn];
+            //dokument.Data = damWydanieMagazynowe.Data;
+            //hm.DokHandlowe.AddRow(dokument);
         }
 
         internal void PostWydaniaMagazynowe(DamWydanieMagazynowe damWydanieMagazynowe)

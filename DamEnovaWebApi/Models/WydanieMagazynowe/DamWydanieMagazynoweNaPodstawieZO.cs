@@ -9,5 +9,7 @@ namespace DamEnovaWebApi.Models
     public class DamWydanieMagazynoweNaPodstawieZO : DamModelBase
     {
         public List<int> IdDokumentowZO { get; set; }
+        public List<string> NumeryDokumentowZO { get; set; }
+        public string Typ { get; set; }
     }
 }

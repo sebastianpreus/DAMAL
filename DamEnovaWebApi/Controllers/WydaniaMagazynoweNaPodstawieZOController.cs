@@ -31,29 +31,6 @@ namespace DamEnovaWebApi.Controllers
             _connection.ConnectToEnova();
         }
 
-        public IHttpActionResult GetWydaniaMagazynoweNaPodstawieZO(ODataQueryOptions<DamWydanieMagazynoweNaPodstawieZO> queryOptions)
-        {
-            // validate the query.
-            try
-            {
-                queryOptions.Validate(_validationSettings);
-            }
-            catch (ODataException ex)
-            {
-                return BadRequest(ex.Message);
-            }
-
-            Filter filter = new Filter();
-            if (queryOptions.Filter != null)
-            {
-                filter.ParseQuery(queryOptions.Filter.RawValue);
-            }
-
-            WydaniaMagazynoweService wydaniaMagazynoweService = new WydaniaMagazynoweService();
-            List<DamWydanieMagazynowe> wydaniaMagazynowe = wydaniaMagazynoweService.GetWydaniaMagazynowe(filter);
-            IQueryable result = queryOptions.ApplyTo(wydaniaMagazynowe.AsQueryable());
-            return Ok(result, result.GetType());
-        }
 
         [HttpPost]
         public IHttpActionResult Post(DamWydanieMagazynoweNaPodstawieZO damWydanieMagazynoweNaPodstawieZO)
