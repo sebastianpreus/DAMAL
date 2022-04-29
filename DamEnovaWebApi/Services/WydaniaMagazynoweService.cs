@@ -121,8 +121,8 @@ namespace DamEnovaWebApi.Services
                         damDokument.DokumentyPowiazane.Add(dokumentPowiazany);
                     }
                     dokumenty.Add(damDokument);
-                    if (dokumenty.Count == 500)
-                        break;
+                    //if (dokumenty.Count == 500)
+                    //    break;
                 }
                 return dokumenty;
             }
@@ -190,11 +190,31 @@ namespace DamEnovaWebApi.Services
                     DefDokHandlowego definicja = hm.DefDokHandlowych.WgSymbolu[damWydanieMagazynowe.Typ];
                     if (definicja == null)
                         throw new InvalidOperationException("Nieznaleziona definicja dokumentu " + damWydanieMagazynowe.Typ);
-                    dokument.Definicja = definicja;
 
+                    if (damWydanieMagazynowe.ID > 0)
+                    {
+                        dokument = hm.DokHandlowe[damWydanieMagazynowe.ID];
+                        dokument.Stan = StanDokumentuHandlowego.Bufor;
+                        foreach (var poz in dokument.Pozycje)
+                        {
+                            poz.Delete();
+                        }
+
+                        //foreach (var row in hm.PozycjeDokHan.Rows)
+                        //{
+                        //    row.Delete();
+                        //}
+                        //hm.PozycjeDokHan.KillAll<PozycjeDokHan>();
+                    }
+                    else
+                        hm.DokHandlowe.AddRow(dokument);
+
+                    
+
+                    dokument.Definicja = definicja;
                     dokument.Magazyn = mm.Magazyny.WgNazwa[damWydanieMagazynowe.Magazyn];
                     dokument.Data = damWydanieMagazynowe.Data;
-                    hm.DokHandlowe.AddRow(dokument);
+                    
 
                     if (damWydanieMagazynowe.Kontrahent != null)
                     {

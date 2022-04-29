@@ -97,6 +97,20 @@ namespace DamEnovaWebApi.Controllers
             return Created(damTowar);
         }
 
+        public IHttpActionResult Patch(int key, DamTowar damTowar)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            TowaryService towaryService = new TowaryService();
+            towaryService.PutTowar(damTowar);
+
+            return Created(damTowar);
+        }
+
+
         private IHttpActionResult Ok(object content, Type type)
         {
             Type resultType = typeof(OkNegotiatedContentResult<>).MakeGenericType(type);

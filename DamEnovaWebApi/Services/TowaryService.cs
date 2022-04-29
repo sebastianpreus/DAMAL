@@ -23,7 +23,6 @@ namespace DamEnovaWebApi.Services
 
         internal void PostTowar(DamTowar damTowar)
         {
-
             using (Session session = Connection.enovalogin.CreateSession(false, false))
             {
                 TowaryModule tm = TowaryModule.GetInstance(session);
@@ -32,19 +31,39 @@ namespace DamEnovaWebApi.Services
                     Towar towar = (Towar)tm.Towary.WgEAN[damTowar.EAN].GetNext();
                     if (towar == null)
                     {
-                        Towar newTowar = new Towar();
+                        towar = new Towar();
+                        tm.Towary.AddRow(towar);
+                    }
+                    FillTowar(towar, damTowar);
+                    trans.Commit();
+                }
+                session.Save();
+            }
+        }
 
-                        tm.Towary.AddRow(newTowar);
-
-                        newTowar.Kod = damTowar.Kod;
-                        newTowar.Nazwa = damTowar.Nazwa;
-                        newTowar.EAN = damTowar.EAN;
-
+        internal void PutTowar(DamTowar damTowar)
+        {
+            using (Session session = Connection.enovalogin.CreateSession(false, false))
+            {
+                TowaryModule tm = TowaryModule.GetInstance(session);
+                using (ITransaction trans = session.Logout(true))
+                {
+                    Towar towar = (Towar)tm.Towary.WgEAN[damTowar.EAN].GetNext();
+                    if (towar != null)
+                    {
+                        FillTowar(towar, damTowar);
                     }
                     trans.Commit();
                 }
-                session.Save(); 
+                session.Save();
             }
+        }
+
+        private void FillTowar(Towar towar, DamTowar damTowar)
+        {
+            towar.Kod = damTowar.Kod;
+            towar.Nazwa = damTowar.Nazwa;
+            towar.EAN = damTowar.EAN;
         }
     }
 }
