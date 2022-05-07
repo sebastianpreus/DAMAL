@@ -94,7 +94,7 @@ namespace DamEnovaWebApi.Controllers
             return StatusCode(HttpStatusCode.NotImplemented);
         }
 
-        IHttpActionResult Delete(DamZamowienieOdbiorcy damZamowienieOdbiorcy)
+        public IHttpActionResult Delete([FromODataUri] int key)
         {
             if (!ModelState.IsValid)
             {
@@ -102,7 +102,7 @@ namespace DamEnovaWebApi.Controllers
             }
 
             ZamowieniaOdbiorcyService zamowieniaOdbiorcyService = new ZamowieniaOdbiorcyService();
-            zamowieniaOdbiorcyService.DeleteZamowienieOdbiorcy(damZamowienieOdbiorcy);
+            zamowieniaOdbiorcyService.DeleteZamowienieOdbiorcy(key);
 
             // return Created(damPrzyjecieMagazynowe);
             return StatusCode(HttpStatusCode.NotImplemented);

@@ -355,6 +355,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Authentication\BasicAuthenticationAttribute.cs" />
     <Compile Include="Authentication\UserValidate.cs" />
+    <Compile Include="Controllers\DamZamowienieOdbiorcyController.cs" />
     <Compile Include="Controllers\DokumentyController.cs" />
     <Compile Include="Controllers\TowaryController.cs" />
     <Compile Include="Controllers\MagazyController.cs" />

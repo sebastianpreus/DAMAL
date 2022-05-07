@@ -154,7 +154,7 @@ namespace DamEnovaWebApi.Services
             }
         }
 
-        internal void DeleteZamowienieOdbiorcy(DamZamowienieOdbiorcy damZamowienieOdbiorcy)
+        internal void DeleteZamowienieOdbiorcy(int id)
         {
             using (Session session = Connection.enovalogin.CreateSession(false, false))
             {
@@ -168,13 +168,15 @@ namespace DamEnovaWebApi.Services
                 {
                     DokumentHandlowy dokument = new DokumentHandlowy();
 
-                    if (damZamowienieOdbiorcy.ID > 0)
+                    if (id > 0)
                     {
-                        dokument = hm.DokHandlowe[damZamowienieOdbiorcy.ID];
+                        dokument = hm.DokHandlowe[id];
                         dokument.Stan = StanDokumentuHandlowego.Bufor;
                         dokument.Delete();
                     }
+                    trans.Commit();
                 }
+                session.Save();
             }
         }
 
