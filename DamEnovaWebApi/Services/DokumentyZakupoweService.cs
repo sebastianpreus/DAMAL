@@ -15,78 +15,21 @@ namespace DamEnovaWebApi.Services
         {
             using (Session session = Connection.enovalogin.CreateSession(false, false))
             {
-                //List<DamDokumentZakupowy> dokumenty = new List<DamDokumentZakupowy>();
-
-                ////DL dokumenty
-                //Soneta.Handel.HandelModule hamodule = Soneta.Handel.HandelModule.GetInstance(session);
-                //// Definicja dla której szukamy
-                ////string _typDokumentu = "ZK";
-                ////DefDokHandlowego def = hamodule.DefDokHandlowych.WgSymbolu[_typDokumentu];
-                //// Magazyn dla którego szukamy
-                ////Soneta.Magazyny.Magazyn mag = hamodule.Magazyny.Magazyny.WgSymbol["F"];
-                ////Mając powyższe możemy utworzyć View z założonym odpowiednim warunkiem:
-
-                //// Przykład #2
-
                 //DateTime start = DateTime.Now;
                 //int count = 0;
-
-                ////RowCondition rc = new FieldCondition.GreaterEqual("Data", "2021-01-01")
-                ////                & new FieldCondition.LessEqual("Data", "2021-10-31")
-                ////                & new FieldCondition.Equal("Kategoria", "Zakup");
-
-
-                ////SubTable view1 = hamodule.DokHandlowe.WgDaty[rc];
-
-                //// i zakładamy warunki:
-                ////view1.Condition = new FieldCondition.Equal("Definicja", def);
-                ////view1.Condition = new FieldCondition.Equal(Magazyn, mag);
-                ////view1.Condition = new FieldCondition.Equal(Stan, Soneta.Handel.StanDokumentuHandlowego.Bufor);
-
-
-                //View view1 = hamodule.DokHandlowe.CreateView();
-
-                //filter.FilterView(view1);
-                //view1.Condition &= new FieldCondition.Equal("Kategoria", "Zakup");
-
-
-                //////////////////////////////////////////
-                ///
-
-                DateTime start = DateTime.Now;
-                int count = 0;
                 List<DamDokumentZakupowy> dokumenty = new List<DamDokumentZakupowy>();
 
-                //DL dokumenty
-                Soneta.Handel.HandelModule hamodule = Soneta.Handel.HandelModule.GetInstance(session);
-                // Definicja dla której szukamy
+                HandelModule hamodule = Soneta.Handel.HandelModule.GetInstance(session);
                 string _typDokumentu = "ZK";
                 DefDokHandlowego def = hamodule.DefDokHandlowych.WgSymbolu[_typDokumentu];
-                // Magazyn dla którego szukamy
-                //Soneta.Magazyny.Magazyn mag = hamodule.Magazyny.Magazyny.WgSymbol["F"];
-                //Mając powyższe możemy utworzyć View z założonym odpowiednim warunkiem:
-
-                // Przykład #2
                 View view1 = hamodule.DokHandlowe.CreateView();
-
-                // i zakładamy warunki:
-                //view1.Condition = new FieldCondition.Equal("Definicja", def);
-                //view1.Condition = new FieldCondition.Equal(Magazyn, mag);
-                //view1.Condition = new FieldCondition.Equal(Stan, Soneta.Handel.StanDokumentuHandlowego.Bufor);
 
                 filter.FilterView(view1);
                 view1.Condition &= new FieldCondition.Equal("Kategoria", "Zakup");
-                //view1.Condition &= new FieldCondition.GreaterEqual("ID", 291914);
-
-
-                //SubTable sub = new SubTable(hamodule.DokHandlowe.WgData, DateTime.Now);
-
-                //sub.get
-
 
                 foreach (DokumentHandlowy dok in view1)
                 {
-                    count += 1;
+                    //count += 1;
                     DamDokumentZakupowy damDokument = new DamDokumentZakupowy();
                     damDokument.PozycjeDokumentu = new List<DamDokumentZakupowyPozycja>();
                     damDokument.ZasobyDokumentu = new List<DamDokumentZakupowyZasob>();
@@ -188,8 +131,8 @@ namespace DamEnovaWebApi.Services
                     dokumenty.Add(damDokument);
                 }
 
-                var ttttttt = DateTime.Now - start;
-                var ilosc = count;
+                //var ttttttt = DateTime.Now - start;
+                //var ilosc = count;
                 return dokumenty;
             }
         }

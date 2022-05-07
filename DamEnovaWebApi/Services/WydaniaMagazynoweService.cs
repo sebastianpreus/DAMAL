@@ -199,22 +199,13 @@ namespace DamEnovaWebApi.Services
                         {
                             poz.Delete();
                         }
-
-                        //foreach (var row in hm.PozycjeDokHan.Rows)
-                        //{
-                        //    row.Delete();
-                        //}
-                        //hm.PozycjeDokHan.KillAll<PozycjeDokHan>();
                     }
                     else
                         hm.DokHandlowe.AddRow(dokument);
 
-                    
-
                     dokument.Definicja = definicja;
                     dokument.Magazyn = mm.Magazyny.WgNazwa[damWydanieMagazynowe.Magazyn];
                     dokument.Data = damWydanieMagazynowe.Data;
-                    
 
                     if (damWydanieMagazynowe.Kontrahent != null)
                     {
@@ -232,10 +223,7 @@ namespace DamEnovaWebApi.Services
                             PozycjaDokHandlowego pozycja = new PozycjaDokHandlowego(dokument);
                             hm.PozycjeDokHan.AddRow(pozycja);
                             pozycja.Towar = towar;
-
                             pozycja.Ilosc = new Quantity(damPozycja.Ilosc, null);
-                            // pozycja.Ilosc = new Quantity(10, "m"); //podana jednostka miary w metrach
-
                             pozycja.Cena = new DoubleCy(damPozycja.Cena);
                         }
                     }

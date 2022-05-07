@@ -144,6 +144,19 @@ namespace DamEnovaWebApi.Services
                     DefDokHandlowego definicja = hm.DefDokHandlowych.WgSymbolu[damPrzesuniecieMagazynowe.Typ];
                     if (definicja == null)
                         throw new InvalidOperationException("Nieznaleziona definicja dokumentu " + damPrzesuniecieMagazynowe.Typ);
+
+                    if (damPrzesuniecieMagazynowe.ID > 0)
+                    {
+                        dokument = hm.DokHandlowe[damPrzesuniecieMagazynowe.ID];
+                        dokument.Stan = StanDokumentuHandlowego.Bufor;
+                        foreach (var poz in dokument.Pozycje)
+                        {
+                            poz.Delete();
+                        }
+                    }
+                    else
+                        hm.DokHandlowe.AddRow(dokument);
+
                     dokument.Definicja = definicja;
 
                     dokument.Magazyn = mm.Magazyny.WgNazwa[damPrzesuniecieMagazynowe.Magazyn];

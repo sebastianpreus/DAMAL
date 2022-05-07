@@ -54,7 +54,7 @@ namespace DamEnovaWebApi.Services
                     damDokument.ZaliczkaPokrywaCalosc = dok.Wydruk.ZaliczkaPokrywaCałość;
                     damDokument.Waluta = dok.Suma.BruttoCy.Symbol;
 
-                    damDokument.Priorytet = dok.ParametryRezerwacjiProxy.Priorytet.ToString();
+                    //damDokument.Priorytet = dok.ParametryRezerwacjiProxy.Priorytet.ToString();
 
                     foreach (PozycjaDokHandlowego poz in dok.Pozycje)
                     {
@@ -154,6 +154,30 @@ namespace DamEnovaWebApi.Services
             }
         }
 
+        internal void DeleteZamowienieOdbiorcy(DamZamowienieOdbiorcy damZamowienieOdbiorcy)
+        {
+            using (Session session = Connection.enovalogin.CreateSession(false, false))
+            {
+                HandelModule hm = HandelModule.GetInstance(session);
+                TowaryModule tm = TowaryModule.GetInstance(session);
+                MagazynyModule mm = MagazynyModule.GetInstance(session);
+                CRMModule cm = CRMModule.GetInstance(session);
+                CoreModule core = CoreModule.GetInstance(session);
+
+                using (ITransaction trans = session.Logout(true))
+                {
+                    DokumentHandlowy dokument = new DokumentHandlowy();
+
+                    if (damZamowienieOdbiorcy.ID > 0)
+                    {
+                        dokument = hm.DokHandlowe[damZamowienieOdbiorcy.ID];
+                        dokument.Stan = StanDokumentuHandlowego.Bufor;
+                        dokument.Delete();
+                    }
+                }
+            }
+        }
+
         internal void PostZamowienieOdbiorcy(DamZamowienieOdbiorcy damZamowienieOdbiorcy)
         {
             using (Session session = Connection.enovalogin.CreateSession(false, false))
@@ -169,11 +193,22 @@ namespace DamEnovaWebApi.Services
                     DokumentHandlowy dokument = new DokumentHandlowy();
 
                     DefDokHandlowego definicja = hm.DefDokHandlowych.WgSymbolu[damZamowienieOdbiorcy.Typ];
-                    //DefDokHandlowego def2 = hm.DefDokHandlowych.ZamówienieOdbiorcy;
                     if (definicja == null)
                         throw new InvalidOperationException("Nieznaleziona definicja dokumentu " + damZamowienieOdbiorcy.Typ);
+
+                    if (damZamowienieOdbiorcy.ID > 0)
+                    {
+                        dokument = hm.DokHandlowe[damZamowienieOdbiorcy.ID];
+                        dokument.Stan = StanDokumentuHandlowego.Bufor;
+                        foreach (var poz in dokument.Pozycje)
+                        {
+                            poz.Delete();
+                        }
+                    }
+                    else
+                        hm.DokHandlowe.AddRow(dokument);
+
                     dokument.Definicja = definicja;
-                    //dokument.Definicja = def2;
 
                     dokument.Magazyn = mm.Magazyny.WgNazwa[damZamowienieOdbiorcy.Magazyn];
                     dokument.Data = damZamowienieOdbiorcy.Data;

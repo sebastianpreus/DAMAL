@@ -94,6 +94,20 @@ namespace DamEnovaWebApi.Controllers
             return StatusCode(HttpStatusCode.NotImplemented);
         }
 
+        IHttpActionResult Delete(DamZamowienieOdbiorcy damZamowienieOdbiorcy)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            ZamowieniaOdbiorcyService zamowieniaOdbiorcyService = new ZamowieniaOdbiorcyService();
+            zamowieniaOdbiorcyService.DeleteZamowienieOdbiorcy(damZamowienieOdbiorcy);
+
+            // return Created(damPrzyjecieMagazynowe);
+            return StatusCode(HttpStatusCode.NotImplemented);
+        }
+
         private IHttpActionResult Ok(object content, Type type)
         {
             Type resultType = typeof(OkNegotiatedContentResult<>).MakeGenericType(type);
