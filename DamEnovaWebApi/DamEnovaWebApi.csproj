@@ -367,6 +367,7 @@
     <Compile Include="Controllers\PrzesunieciaMagazynoweController.cs" />
     <Compile Include="Controllers\PrzyjeciaMagazynoweController.cs" />
     <Compile Include="Controllers\ObrotyWgDokumentowPrzychodyController.cs" />
+    <Compile Include="Controllers\WydaniaMagazynoweKorektaController.cs" />
     <Compile Include="Controllers\WydaniaMagazynoweNaPodstawieZOController.cs" />
     <Compile Include="Controllers\ZamowieniaOdbiorcyOdPozycjiController.cs" />
     <Compile Include="Controllers\ZamowieniaOdbiorcyController.cs" />

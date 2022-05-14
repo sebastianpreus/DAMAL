@@ -243,5 +243,46 @@ namespace DamEnovaWebApi.Services
                 session.Save();
             }
         }
+
+        public void PostWydaniaMagazynoweKorekta(DamWydanieMagazynowe damWydanieMagazynowe)
+        {
+            using (Session session = Connection.enovalogin.CreateSession(false, false))
+            {
+                HandelModule hm = HandelModule.GetInstance(session);
+                TowaryModule tm = TowaryModule.GetInstance(session);
+                MagazynyModule mm = MagazynyModule.GetInstance(session);
+                CRMModule cm = CRMModule.GetInstance(session);
+
+                using (ITransaction trans = session.Logout(true))
+                {
+                    DokumentHandlowy dokument = hm.DokHandlowe[damWydanieMagazynowe.ID];
+
+                    DefRelacjiKorekta defKorekta = (DefRelacjiKorekta)dokument.Definicja.RelacjaKorektyDefinicja;
+
+                    if (defKorekta == null)
+                        throw new InvalidOperationException("Dokument " + dokument + " nie ma zdefiniowanej relacji korekty.");
+
+                    DokumentHandlowy korekta = defKorekta.KorygujDokument(dokument);
+
+                    foreach (PozycjaDokHandlowego pozycja in korekta.Pozycje)
+                    {
+                        using (var transPozycji = session.Logout(true))
+                        {
+                            var damPozycja = damWydanieMagazynowe.PozycjeDokumentu.FirstOrDefault(x => x.Lp == pozycja.Lp);
+
+                            //tutaj wszystkie zmiany w tym cena, rabat, ilosc
+                            //pozycja.Cena = new DoubleCy(20.01);
+                            pozycja.Ilosc = new Quantity(damPozycja.Ilosc, pozycja.Ilosc.Symbol);
+
+                            //tutaj musimy zatwierdzic zmodyfikowana pozycje
+                            transPozycji.CommitUI();
+                        }
+                    }
+                    korekta.Stan = StanDokumentuHandlowego.Zatwierdzony;
+                    trans.Commit();
+                }
+                session.Save();
+            }
+        }
     }
 }
