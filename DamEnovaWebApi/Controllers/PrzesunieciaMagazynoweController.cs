@@ -87,11 +87,16 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ModelState);
             }
 
-            PrzesunieciaMagazynoweService przesunieciaMagazynoweService = new PrzesunieciaMagazynoweService();
-            przesunieciaMagazynoweService.PostPrzesuniecieMagazynowe(damPrzesuniecieMagazynowe);
-
-            // return Created(damPrzyjecieMagazynowe);
-            return StatusCode(HttpStatusCode.OK);
+            try
+            {
+                PrzesunieciaMagazynoweService przesunieciaMagazynoweService = new PrzesunieciaMagazynoweService();
+                przesunieciaMagazynoweService.PostPrzesuniecieMagazynowe(damPrzesuniecieMagazynowe);
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.InternalServerError, "Przesunięcie magazynowe - błąd podczas tworzenia dokumentu: " + ex.Message);
+            }
+            return Created(damPrzesuniecieMagazynowe);
         }
 
         private IHttpActionResult Ok(object content, Type type)

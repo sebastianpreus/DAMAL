@@ -38,11 +38,16 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ModelState);
             }
 
-            WydaniaMagazynoweService wydaniaMagazynoweService = new WydaniaMagazynoweService();
-            wydaniaMagazynoweService.PostWydaniaMagazynoweKorekta(damWydanieMagazynowe);
-
-            // return Created(damPrzyjecieMagazynowe);s
-            return StatusCode(HttpStatusCode.OK);
+            try
+            {
+                WydaniaMagazynoweService wydaniaMagazynoweService = new WydaniaMagazynoweService();
+                wydaniaMagazynoweService.PostWydaniaMagazynoweKorekta(damWydanieMagazynowe);
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.InternalServerError, "Wydanie magazynowe - błąd podczas tworzenia dokumentu: " + ex.Message);
+            }
+            return Created(damWydanieMagazynowe);
         }
 
         private IHttpActionResult Ok(object content, Type type)

@@ -175,6 +175,7 @@ namespace DamEnovaWebApi.Services
 
         internal void PostWydaniaMagazynowe(DamWydanieMagazynowe damWydanieMagazynowe)
         {
+            DokumentHandlowy dokument = new DokumentHandlowy();
             using (Session session = Connection.enovalogin.CreateSession(false, false))
             {
                 HandelModule hm = HandelModule.GetInstance(session);
@@ -185,7 +186,7 @@ namespace DamEnovaWebApi.Services
 
                 using (ITransaction trans = session.Logout(true))
                 {
-                    DokumentHandlowy dokument = new DokumentHandlowy();
+                    
 
                     DefDokHandlowego definicja = hm.DefDokHandlowych.WgSymbolu[damWydanieMagazynowe.Typ];
                     if (definicja == null)
@@ -227,13 +228,21 @@ namespace DamEnovaWebApi.Services
                             pozycja.Cena = new DoubleCy(damPozycja.Cena);
                         }
                     }
-                    foreach (SlownikElem sl in core.Slowniki.WgNazwa)
+
+                    try
                     {
-                        if (sl.Kategoria == "PriorytetZamAlg")
+                        foreach (SlownikElem sl in core.Slowniki.WgNazwa)
                         {
-                            if (sl.Nazwa == damWydanieMagazynowe.Priorytet)
-                                dokument.ParametryRezerwacjiProxy.Priorytet = sl;
+                            if (sl.Kategoria == "PriorytetZamAlg")
+                            {
+                                if (sl.Nazwa == damWydanieMagazynowe.Priorytet)
+                                    dokument.ParametryRezerwacjiProxy.Priorytet = sl;
+                            }
                         }
+                    }
+                    catch (Exception)
+                    {
+                        throw new Exception("Błąd ustawiania priorytetu dokumentu");
                     }
 
                     dokument.Stan = StanDokumentuHandlowego.Zatwierdzony;
@@ -241,6 +250,7 @@ namespace DamEnovaWebApi.Services
                     trans.Commit();
                 }
                 session.Save();
+                damWydanieMagazynowe.ID = dokument.ID;
             }
         }
 

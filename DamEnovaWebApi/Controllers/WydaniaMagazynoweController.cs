@@ -42,17 +42,24 @@ namespace DamEnovaWebApi.Controllers
             {
                 return BadRequest(ex.Message);
             }
-
-            Filter filter = new Filter();
-            if (queryOptions.Filter != null)
+            try
             {
-                filter.ParseQuery(queryOptions.Filter.RawValue);
+                Filter filter = new Filter();
+                if (queryOptions.Filter != null)
+                {
+                    filter.ParseQuery(queryOptions.Filter.RawValue);
+                }
+                throw new Exception("asdfasfasdfas");
+                WydaniaMagazynoweService wydaniaMagazynoweService = new WydaniaMagazynoweService();
+                List<DamWydanieMagazynowe> wydaniaMagazynowe = wydaniaMagazynoweService.GetWydaniaMagazynowe(filter);
+                IQueryable result = queryOptions.ApplyTo(wydaniaMagazynowe.AsQueryable());
+                return Ok(result, result.GetType());
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.NotFound, "Wydania magazynowe - błąd podczas pobierania danych : " + ex.Message);
             }
 
-            WydaniaMagazynoweService wydaniaMagazynoweService = new WydaniaMagazynoweService();
-            List<DamWydanieMagazynowe> wydaniaMagazynowe = wydaniaMagazynoweService.GetWydaniaMagazynowe(filter);
-            IQueryable result = queryOptions.ApplyTo(wydaniaMagazynowe.AsQueryable());
-            return Ok(result, result.GetType());
         }
 
         // GET: odata/PrzyjeciaMagazynowe(5)
@@ -87,11 +94,16 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ModelState);
             }
 
-            WydaniaMagazynoweService wydaniaMagazynoweService = new WydaniaMagazynoweService();
-            wydaniaMagazynoweService.PostWydaniaMagazynowe(damWydanieMagazynowe);
-
-            // return Created(damPrzyjecieMagazynowe);
-            return StatusCode(HttpStatusCode.NotImplemented);
+            try
+            {
+                WydaniaMagazynoweService wydaniaMagazynoweService = new WydaniaMagazynoweService();
+                wydaniaMagazynoweService.PostWydaniaMagazynowe(damWydanieMagazynowe);
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.InternalServerError, "Wydanie magazynowe - błąd podczas tworzenia dokumentu: " + ex.Message);
+            }
+            return Created(damWydanieMagazynowe);
         }
 
         private IHttpActionResult Ok(object content, Type type)

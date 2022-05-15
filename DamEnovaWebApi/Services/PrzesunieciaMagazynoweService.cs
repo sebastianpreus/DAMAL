@@ -129,6 +129,7 @@ namespace DamEnovaWebApi.Services
 
         public void PostPrzesuniecieMagazynowe(DamPrzesuniecieMagazynowe damPrzesuniecieMagazynowe)
         {
+            DokumentHandlowy dokument = new DokumentHandlowy();
             using (Session session = Connection.enovalogin.CreateSession(false, false))
             {
                 HandelModule hm = HandelModule.GetInstance(session);
@@ -139,8 +140,6 @@ namespace DamEnovaWebApi.Services
 
                 using (ITransaction trans = session.Logout(true))
                 {
-                    DokumentHandlowy dokument = new DokumentHandlowy();
-
                     DefDokHandlowego definicja = hm.DefDokHandlowych.WgSymbolu[damPrzesuniecieMagazynowe.Typ];
                     if (definicja == null)
                         throw new InvalidOperationException("Nieznaleziona definicja dokumentu " + damPrzesuniecieMagazynowe.Typ);
@@ -183,13 +182,21 @@ namespace DamEnovaWebApi.Services
                             //pozycja.Cena = new DoubleCy(damPozycja.Cena);
                         }
                     }
-                    foreach (SlownikElem sl in core.Slowniki.WgNazwa)
+
+                    try
                     {
-                        if (sl.Kategoria == "PriorytetZamAlg")
+                        foreach (SlownikElem sl in core.Slowniki.WgNazwa)
                         {
-                            if (sl.Nazwa == damPrzesuniecieMagazynowe.Priorytet)
-                                dokument.ParametryRezerwacjiProxy.Priorytet = sl;
+                            if (sl.Kategoria == "PriorytetZamAlg")
+                            {
+                                if (sl.Nazwa == damPrzesuniecieMagazynowe.Priorytet)
+                                    dokument.ParametryRezerwacjiProxy.Priorytet = sl;
+                            }
                         }
+                    }
+                    catch (Exception)
+                    {
+                        throw new Exception("Błąd ustawiania priorytetu dokumentu");
                     }
 
                     //działa dla PW, dla RW nie chce... może trzeba zapisać i dopiero zmienić stan na zatwierdzony
@@ -198,6 +205,7 @@ namespace DamEnovaWebApi.Services
                     trans.Commit();
                 }
                 session.Save();
+                damPrzesuniecieMagazynowe.ID = dokument.ID;
             }
         }
     }

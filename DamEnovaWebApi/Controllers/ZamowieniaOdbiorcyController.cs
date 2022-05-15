@@ -87,11 +87,16 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ModelState);
             }
 
-            ZamowieniaOdbiorcyService zamowieniaOdbiorcyService = new ZamowieniaOdbiorcyService();
-            zamowieniaOdbiorcyService.PostZamowienieOdbiorcy(damZamowienieOdbiorcy);
-
-            // return Created(damPrzyjecieMagazynowe);
-            return StatusCode(HttpStatusCode.NotImplemented);
+            try
+            {
+                ZamowieniaOdbiorcyService zamowieniaOdbiorcyService = new ZamowieniaOdbiorcyService();
+                zamowieniaOdbiorcyService.PostZamowienieOdbiorcy(damZamowienieOdbiorcy);
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.InternalServerError, "Zamówienie odbiorcy - błąd podczas tworzenia dokumentu: " + ex.Message); 
+            }
+            return Created(damZamowienieOdbiorcy);
         }
 
         public IHttpActionResult Delete([FromODataUri] int key)

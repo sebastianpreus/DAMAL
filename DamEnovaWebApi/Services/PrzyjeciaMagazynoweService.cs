@@ -137,6 +137,7 @@ namespace DamEnovaWebApi.Services
 
         public void PostPrzyjeciaMagazynowe(DamPrzyjecieMagazynowe damPrzyjecieMagazynowe)
         {
+            DokumentHandlowy dokument = new DokumentHandlowy();
             using (Session session = Connection.enovalogin.CreateSession(false, false))
             {
                 HandelModule hm = HandelModule.GetInstance(session);
@@ -147,8 +148,6 @@ namespace DamEnovaWebApi.Services
 
                 using (ITransaction trans = session.Logout(true))
                 {
-                    DokumentHandlowy dokument = new DokumentHandlowy();
-
                     DefDokHandlowego definicja = hm.DefDokHandlowych.WgSymbolu[damPrzyjecieMagazynowe.Typ];
                     if (definicja == null)
                         throw new InvalidOperationException("Nieznaleziona definicja dokumentu " + damPrzyjecieMagazynowe.Typ);
@@ -193,20 +192,27 @@ namespace DamEnovaWebApi.Services
 
                     }
 
-                    foreach (SlownikElem sl in core.Slowniki.WgNazwa)
+                    try
                     {
-                        if (sl.Kategoria == "PriorytetZamAlg")
+                        foreach (SlownikElem sl in core.Slowniki.WgNazwa)
                         {
-                            if (sl.Nazwa == damPrzyjecieMagazynowe.Priorytet)
-                                dokument.ParametryRezerwacjiProxy.Priorytet = sl;
+                            if (sl.Kategoria == "PriorytetZamAlg")
+                            {
+                                if (sl.Nazwa == damPrzyjecieMagazynowe.Priorytet)
+                                    dokument.ParametryRezerwacjiProxy.Priorytet = sl;
+                            }
                         }
+                    }
+                    catch (Exception)
+                    {
+                        throw new Exception("Błąd ustawiania priorytetu dokumentu");
                     }
 
                     dokument.Stan = StanDokumentuHandlowego.Zatwierdzony;
-
                     trans.Commit();
                 }
                 session.Save();
+                damPrzyjecieMagazynowe.ID = dokument.ID;
             }
         }
     }

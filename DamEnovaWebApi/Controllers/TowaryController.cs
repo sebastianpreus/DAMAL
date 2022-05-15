@@ -57,7 +57,7 @@ namespace DamEnovaWebApi.Controllers
             IQueryable result = queryOptions.ApplyTo(towary.AsQueryable());
 
             return Ok(result, result.GetType());
-        }        
+        }
 
         // GET: odata/Dokumenty(5)
         public IHttpActionResult GetTowar([FromODataUri] int key, ODataQueryOptions<DamTowar> queryOptions)
@@ -91,9 +91,15 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ModelState);
             }
 
-            TowaryService towaryService = new TowaryService();
-            towaryService.PostTowar(damTowar);
-
+            try
+            {
+                TowaryService towaryService = new TowaryService();
+                towaryService.PostTowar(damTowar);
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.InternalServerError, "B³¹d podczas tworzenia towaru: " + ex.Message);
+            }
             return Created(damTowar);
         }
 

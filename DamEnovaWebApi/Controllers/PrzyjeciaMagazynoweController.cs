@@ -87,11 +87,16 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ModelState);
             }
 
-            PrzyjeciaMagazynoweService przyjeciaMagazynoweService = new PrzyjeciaMagazynoweService();
-            przyjeciaMagazynoweService.PostPrzyjeciaMagazynowe(damPrzyjecieMagazynowe);
-
-            // return Created(damPrzyjecieMagazynowe);
-            return StatusCode(HttpStatusCode.NotImplemented);
+            try
+            {
+                PrzyjeciaMagazynoweService przyjeciaMagazynoweService = new PrzyjeciaMagazynoweService();
+                przyjeciaMagazynoweService.PostPrzyjeciaMagazynowe(damPrzyjecieMagazynowe);
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.InternalServerError, "Przyjęcia magazynowe - błąd podczas tworzenia dokumentu: " + ex.Message);
+            }
+            return Created(damPrzyjecieMagazynowe);
         }
 
         private IHttpActionResult Ok(object content, Type type)

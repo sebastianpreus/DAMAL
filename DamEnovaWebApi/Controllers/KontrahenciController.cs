@@ -75,9 +75,15 @@ namespace DamEnovaWebApi.Controllers
                 return BadRequest(ModelState);
             }
 
-            KontrahenciService kontrahenciService = new KontrahenciService();
-            kontrahenciService.PostKontrahent(damKontrahent);
-
+            try
+            {
+                KontrahenciService kontrahenciService = new KontrahenciService();
+                kontrahenciService.PostKontrahent(damKontrahent);
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.InternalServerError, "Błąd podczas tworzenia kontrahenta: " + ex.Message);
+            }
             return Created(damKontrahent);
         }
 
