@@ -131,6 +131,17 @@ namespace DamEnovaWebApi
             //Wydania Magazynowe Na Podstawie ZO
             var damWydaniaMagazynoweNaPodstawieZO = builder.EntitySet<DamWydanieMagazynoweNaPodstawieZO>("WydaniaMagazynoweNaPodstawieZO").EntityType;
 
+            //WydaniaMagazynoweKorekta
+            var damWydaniaMagazynoweKorekta = builder.EntitySet<DamWydanieMagazynowe>("WydaniaMagazynoweKorekta").EntityType;
+            damWydaniaMagazynoweKorekta.HasMany(x => x.PozycjeDokumentu);
+            damWydaniaMagazynoweKorekta.HasMany(x => x.DokumentyPowiazane);
+            damWydaniaMagazynoweKorekta.HasMany(x => x.ZasobyDokumentu);
+
+            //builder.EntitySet<DamWydanieMagazynowePozycja>("DamWydanieMagazynowePozycja").EntityType.HasOptional(s => s.DamWydanieMagazynowe);
+            //builder.EntitySet<DamWydanieMagazynowePowiazany>("DamWydanieMagazynowePowiazany").EntityType.HasOptional(s => s.DamWydanieMagazynowe);
+            //builder.EntitySet<DamWydanieMagazynoweZasob>("DamWydanieMagazynoweZasob").EntityType.HasOptional(s => s.DamWydanieMagazynowe);
+
+
 
 
             var odataBatchHandler = new DefaultODataBatchHandler(GlobalConfiguration.DefaultServer);

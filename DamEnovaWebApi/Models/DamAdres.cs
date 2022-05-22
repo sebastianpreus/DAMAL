@@ -11,38 +11,22 @@ namespace DamEnovaWebApi.Models
     {
         public const string KodPL = "PL";
         public const string Polska = "polska";
-        public string KodPocztowy { get; set; }
-        public string KodKraju { get; set; }
+        public int KodPocztowy { get; set; }
         public string Kraj { get; set; }
         public string Miejscowosc { get; set; }
-        public string Pełny { get; set; }
-        public string Linia2 { get; set; }
-        public string Linia1 { get; set; }
+        public string Ulica { get; set; }
+        public string NrDomu { get; set; }
+        public string NrLokalu { get; set; }
         public string Faks { get; set; }
         public string Telefon { get; set; }
 
+        public string Poczta { get; set; }
+        public string Gmina { get; set; }
+        public string Powiat { get; set; }
+        public string Wojewodztwo { get; set; }
+        public string KodKraju { get; set; }
+        public string NietypowaLokalizacja { get; set; }
+
         public virtual ICollection<DamKontrahent> DamKontrahenci { get; set; }
-
-        public DamAdres(Adres adres)
-        {
-            MapEnovaObject(adres);
-        }
-
-        public void MapEnovaObject(Adres adres)
-        {
-            //PK
-            this.ID = adres.ID;
-
-            this.KodPocztowy = adres.KodPocztowyS;
-            this.KodKraju = adres.KodKraju;
-            this.Kraj = adres.Kraj;
-            this.Miejscowosc = adres.Miejscowosc;
-            this.Pełny = adres.Pełny;
-            this.Linia2 = adres.Linia2;
-            this.Linia1 = adres.Linia1;
-            this.Faks = adres.Faks;
-            this.Telefon = adres.Telefon;
-        }
-
     }
 }

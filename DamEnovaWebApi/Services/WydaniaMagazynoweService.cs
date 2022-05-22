@@ -42,12 +42,14 @@ namespace DamEnovaWebApi.Services
                     damDokument.Korekta = dok.Korekta;
                     damDokument.Numer = dok.Numer.NumerPelny;
                     damDokument.Data = dok.Data;
+                    damDokument.DataOperacji = dok.DataOperacji;
                     if (dok.Kontrahent != null)
                         damDokument.Kontrahent = dok.Kontrahent.Nazwa;
                     damDokument.Netto = dok.Suma.Netto;
                     damDokument.VAT = dok.Suma.VAT;
                     damDokument.Wartosc = dok.Suma.BruttoCy.Value;
                     damDokument.Waluta = dok.Suma.BruttoCy.Symbol;
+                    damDokument.Opis = dok.Opis;
 
                     foreach (PozycjaDokHandlowego poz in dok.Pozycje)
                     {
@@ -186,8 +188,6 @@ namespace DamEnovaWebApi.Services
 
                 using (ITransaction trans = session.Logout(true))
                 {
-                    
-
                     DefDokHandlowego definicja = hm.DefDokHandlowych.WgSymbolu[damWydanieMagazynowe.Typ];
                     if (definicja == null)
                         throw new InvalidOperationException("Nieznaleziona definicja dokumentu " + damWydanieMagazynowe.Typ);
@@ -205,9 +205,12 @@ namespace DamEnovaWebApi.Services
                         hm.DokHandlowe.AddRow(dokument);
 
                     dokument.Definicja = definicja;
+
                     dokument.Magazyn = mm.Magazyny.WgNazwa[damWydanieMagazynowe.Magazyn];
                     dokument.Data = damWydanieMagazynowe.Data;
-
+                    dokument.DataOperacji = damWydanieMagazynowe.DataOperacji;
+                    dokument.Opis = damWydanieMagazynowe.Opis;
+                    
                     if (damWydanieMagazynowe.Kontrahent != null)
                     {
                         Kontrahent kontrahent = cm.Kontrahenci.WgKodu[damWydanieMagazynowe.Kontrahent];
@@ -224,7 +227,7 @@ namespace DamEnovaWebApi.Services
                             PozycjaDokHandlowego pozycja = new PozycjaDokHandlowego(dokument);
                             hm.PozycjeDokHan.AddRow(pozycja);
                             pozycja.Towar = towar;
-                            pozycja.Ilosc = new Quantity(damPozycja.Ilosc, null);
+                            pozycja.Ilosc = new Quantity(damPozycja.Ilosc);
                             pozycja.Cena = new DoubleCy(damPozycja.Cena);
                         }
                     }

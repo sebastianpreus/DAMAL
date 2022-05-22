@@ -49,7 +49,7 @@ namespace DamEnovaWebApi.Controllers
                 {
                     filter.ParseQuery(queryOptions.Filter.RawValue);
                 }
-                throw new Exception("asdfasfasdfas");
+
                 WydaniaMagazynoweService wydaniaMagazynoweService = new WydaniaMagazynoweService();
                 List<DamWydanieMagazynowe> wydaniaMagazynowe = wydaniaMagazynoweService.GetWydaniaMagazynowe(filter);
                 IQueryable result = queryOptions.ApplyTo(wydaniaMagazynowe.AsQueryable());

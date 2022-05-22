@@ -14,6 +14,7 @@ namespace DamEnovaWebApi.Models
         public string Potwierdzenie { get; set; }
         public string Numer { get; set; }
         public DateTime Data { get; set; }
+        public DateTime DataOperacji { get; set; }
         public string Podrzedne { get; set; }
         public string Kontrahent { get; set; }
         public decimal Netto { get; set; }

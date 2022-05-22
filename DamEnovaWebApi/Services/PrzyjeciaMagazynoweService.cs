@@ -157,7 +157,7 @@ namespace DamEnovaWebApi.Services
                         dokument = hm.DokHandlowe[damPrzyjecieMagazynowe.ID];
                         dokument.Stan = StanDokumentuHandlowego.Bufor;
                         foreach (var poz in dokument.Pozycje)
-                        {
+                        {/100
                             poz.Delete();
                         }
                     }

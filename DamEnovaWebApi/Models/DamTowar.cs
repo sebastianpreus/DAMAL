@@ -11,5 +11,10 @@ namespace DamEnovaWebApi.Models
         public string Kod { get; set; }
         public string Nazwa { get; set; }
         public string EAN { get; set; }
+        public string NumerKatalogowy { get; set; }
+        public string Jednostka { get; set; }
+        public string PKWiU { get; set; }
+
+
     }
 }

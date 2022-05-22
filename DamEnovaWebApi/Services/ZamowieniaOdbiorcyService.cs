@@ -213,8 +213,9 @@ namespace DamEnovaWebApi.Services
 
                     dokument.Magazyn = mm.Magazyny.WgNazwa[damZamowienieOdbiorcy.Magazyn];
                     dokument.Data = damZamowienieOdbiorcy.Data;
-                    hm.DokHandlowe.AddRow(dokument);
-
+                    dokument.DataOperacji = damZamowienieOdbiorcy.DataOperacji;
+                    dokument.Opis = damZamowienieOdbiorcy.Opis;
+                    
                     if (damZamowienieOdbiorcy.Kontrahent != null)
                     {
                         Kontrahent kontrahent = cm.Kontrahenci.WgKodu[damZamowienieOdbiorcy.Kontrahent];
@@ -231,10 +232,7 @@ namespace DamEnovaWebApi.Services
                             PozycjaDokHandlowego pozycja = new PozycjaDokHandlowego(dokument);
                             hm.PozycjeDokHan.AddRow(pozycja);
                             pozycja.Towar = towar;
-
-                            pozycja.Ilosc = new Quantity(damPozycja.Ilosc, null);
-                            // pozycja.Ilosc = new Quantity(10, "m"); //podana jednostka miary w metrach
-
+                            pozycja.Ilosc = new Quantity(damPozycja.Ilosc);
                             pozycja.Cena = new DoubleCy(damPozycja.Cena);
                         }
                     }

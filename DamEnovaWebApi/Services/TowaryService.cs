@@ -62,8 +62,17 @@ namespace DamEnovaWebApi.Services
         private void FillTowar(Towar towar, DamTowar damTowar)
         {
             towar.Kod = damTowar.Kod;
+            //todo sprawdzić jak uzupełnić typ towaru
+            //towar.Typ = TypTowaru.Produkt 
             towar.Nazwa = damTowar.Nazwa;
             towar.EAN = damTowar.EAN;
+            towar.NumerKatalogowy = damTowar.NumerKatalogowy;
+            //todo stawka vat sprzedaży i zakupu
+            //towar.DefinicjaStawki = damTowar.DefinicjaStawkiVATSprzedazy;
+            //towar.Jednostka = damTowar.Jednostka;
+            towar.PKWiU = damTowar.PKWiU;
+
+
         }
     }
 }
