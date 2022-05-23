@@ -32,6 +32,11 @@ namespace DamEnovaWebApi.Models
         public bool Blokada { get; set; } //todo nieaktywny, na delete to pole powinno być przestawiane na true
         public StatusNumeruVAT AktualnyStatusVAT { get; set; }
 
+        //CECHY
+        public string K_NUMER_SOP3 { get; set; }
+        public int K_ID_SOP3 { get; set; }
+
+
         public DamKontrahent()
         {
             DamAdres = new DamAdres();

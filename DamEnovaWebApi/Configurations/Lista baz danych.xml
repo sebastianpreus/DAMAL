@@ -140,4 +140,32 @@
     <NetworkLibrary>Default</NetworkLibrary>
     <Timeout>15</Timeout>
   </MsSqlDatabase>
+  <MsSqlDatabase>
+    <Name>Bamet_to_SOP3_v2</Name>
+    <Description />
+    <Active>true</Active>
+    <DifferentSecondaryDatabase>false</DifferentSecondaryDatabase>
+    <OperatorName>?</OperatorName>
+    <WindowsAuthentication>false</WindowsAuthentication>
+    <LicencesSelection>false</LicencesSelection>
+    <IsOptimalization>true</IsOptimalization>
+    <BatchLinks>100</BatchLinks>
+    <BatchFeatures>100</BatchFeatures>
+    <BatchSubTables>40</BatchSubTables>
+    <NonCollectedRows>50000</NonCollectedRows>
+    <LockNotification>false</LockNotification>
+    <Server>.\SQLEXPRESS</Server>
+    <DatabaseName>Bamet_to_SOP3_v2</DatabaseName>
+    <User>sa</User>
+    <Password>=BFA1DBE893D3367D907653B1E9D44AF58F</Password>
+    <Trusted>false</Trusted>
+    <SecondaryServer />
+    <SecondaryDatabaseName />
+    <SecondaryUser />
+    <SecondaryTrusted>false</SecondaryTrusted>
+    <VirtualTeleKeySerial>00000000</VirtualTeleKeySerial>
+    <UseConnectionString>false</UseConnectionString>
+    <NetworkLibrary>Default</NetworkLibrary>
+    <Timeout>15</Timeout>
+  </MsSqlDatabase>
 </DatabaseCollection>

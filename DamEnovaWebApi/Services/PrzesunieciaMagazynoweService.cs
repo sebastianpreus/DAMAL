@@ -47,6 +47,12 @@ namespace DamEnovaWebApi.Services
                     damDokument.Wartosc = dok.BruttoCy.Value;
                     damDokument.Waluta = dok.BruttoCy.Symbol;
 
+                    //CECHY
+                    damDokument.DH_TYP_SOP3 = dok.Features["DH_TYP_SOP3"].ToString();
+                    damDokument.DH_ID_SOP3 = (int)dok.Features["DH_ID_SOP3"];
+                    damDokument.DH_NR_SOP3 = dok.Features["DH_NR_SOP3"].ToString();
+
+
                     foreach (PozycjaDokHandlowego poz in dok.Pozycje)
                     {
                         DamPrzesuniecieMagazynowePozycja pozycja = new DamPrzesuniecieMagazynowePozycja();
@@ -61,6 +67,15 @@ namespace DamEnovaWebApi.Services
                         pozycja.Cena = poz.Cena.Value;
                         pozycja.Wartosc = poz.WartoscCy.Value;
                         pozycja.Waluta = poz.WartoscCy.Symbol;
+
+                        //CECHY
+                        pozycja.PDH_TYP_SOP3 = poz.Features["PDH_TYP_SOP3"].ToString();
+                        pozycja.PDH_ID_SOP3 = (int)poz.Features["PDH_ID_SOP3"];
+                        pozycja.PDH_NR_SOP3 = poz.Features["PDH_NR_SOP3"].ToString();
+                        pozycja.PDH_ZP_NrDet_SOP3 = poz.Features["PDH_ZP_NrDet_SOP3"].ToString();
+                        pozycja.PDH_WZ_SOP3 = poz.Features["PDH_WZ_SOP3"].ToString();
+                        pozycja.PDH_ZO_SOP3 = poz.Features["PDH_ZO_SOP3"].ToString();
+                        pozycja.PDH_ZP_SOP3 = poz.Features["PDH_ZP_SOP3"].ToString();
 
                         damDokument.PozycjeDokumentu.Add(pozycja);
                     }
@@ -160,7 +175,12 @@ namespace DamEnovaWebApi.Services
 
                     dokument.Magazyn = mm.Magazyny.WgNazwa[damPrzesuniecieMagazynowe.Magazyn];
                     dokument.Data = damPrzesuniecieMagazynowe.Data;
-                    hm.DokHandlowe.AddRow(dokument);
+
+                    //CECHY
+                    dokument.Features["DH_TYP_SOP3"] = damPrzesuniecieMagazynowe.DH_TYP_SOP3;
+                    dokument.Features["DH_ID_SOP3"] = damPrzesuniecieMagazynowe.DH_ID_SOP3;
+                    dokument.Features["DH_NR_SOP3"] = damPrzesuniecieMagazynowe.DH_NR_SOP3;
+
 
                     //Kontrahent kontrahent = cm.Kontrahenci.WgKodu[damPrzesuniecieMagazynowe.KontrahentKod];
                     //if (kontrahent == null)
@@ -175,11 +195,17 @@ namespace DamEnovaWebApi.Services
                             PozycjaDokHandlowego pozycja = new PozycjaDokHandlowego(dokument);
                             hm.PozycjeDokHan.AddRow(pozycja);
                             pozycja.Towar = towar;
+                            pozycja.Ilosc = new Quantity(damPozycja.Ilosc);
+                            pozycja.Cena = new DoubleCy(damPozycja.Cena);
 
-                            pozycja.Ilosc = new Quantity(damPozycja.Ilosc, null);
-                            // pozycja.Ilosc = new Quantity(10, "m"); //podana jednostka miary w metrach
-
-                            //pozycja.Cena = new DoubleCy(damPozycja.Cena);
+                            //CECHY
+                            pozycja.Features["PDH_TYP_SOP3"] = damPozycja.PDH_TYP_SOP3;
+                            pozycja.Features["PDH_ID_SOP3"] = damPozycja.PDH_ID_SOP3;
+                            pozycja.Features["PDH_NR_SOP3"] = damPozycja.PDH_NR_SOP3;
+                            pozycja.Features["PDH_ZP_NrDet_SOP3"] = damPozycja.PDH_ZP_NrDet_SOP3;
+                            pozycja.Features["PDH_WZ_SOP3"] = damPozycja.PDH_WZ_SOP3;
+                            pozycja.Features["PDH_ZO_SOP3"] = damPozycja.PDH_ZO_SOP3;
+                            pozycja.Features["PDH_ZP_SOP3"] = damPozycja.PDH_ZP_SOP3;
                         }
                     }
 

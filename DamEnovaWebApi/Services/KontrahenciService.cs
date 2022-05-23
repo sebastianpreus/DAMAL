@@ -62,6 +62,11 @@ namespace DamEnovaWebApi.Services
                     damKontrahent.KRS = kontrahent.KRS;
                     // todo GLN/ILN
                     damKontrahent.EMAIL = kontrahent.EMAIL;
+
+                    //CECHY
+                    damKontrahent.K_NUMER_SOP3 = kontrahent.Features["K_NUMER_SOP3"].ToString();
+                    damKontrahent.K_ID_SOP3 = (int)kontrahent.Features["K_NUMER_SOP3"];
+
                     kontrahents.Add(damKontrahent);
                     count += 1;
                 }
@@ -122,8 +127,10 @@ namespace DamEnovaWebApi.Services
                         // todo GLN/ILN
 
                         newKontrahent.Kontakt.EMAIL = damKontrahent.EMAIL;
-                        
 
+                        //CECHY
+                        newKontrahent.Features["K_NUMER_SOP3"] = damKontrahent.K_NUMER_SOP3;
+                        newKontrahent.Features["K_ID_SOP3"] = damKontrahent.K_NUMER_SOP3;
                     }
                     trans.Commit();
                 }

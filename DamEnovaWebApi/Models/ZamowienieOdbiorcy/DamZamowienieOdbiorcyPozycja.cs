@@ -28,6 +28,15 @@ namespace DamEnovaWebApi.Models
         public string CzasOd { get; set; }
         public string CzasDo { get; set; }
 
+        //CECHY
+        public string PDH_TYP_SOP3 { get; set; }
+        public int PDH_ID_SOP3 { get; set; }
+        public string PDH_NR_SOP3 { get; set; }
+        public string PDH_ZP_NrDet_SOP3 { get; set; }
+        public string PDH_WZ_SOP3 { get; set; }
+        public string PDH_ZO_SOP3 { get; set; }
+        public string PDH_ZP_SOP3 { get; set; }
+
 
         [ForeignKey("DamZamowienieOdbiorcy")]
         public int DamZamowienieOdbiorcyId { get; set; }

@@ -20,5 +20,11 @@ namespace DamEnovaWebApi.Models
         public decimal Wartosc { get; set; }
         public string Waluta { get; set; }
         public string Opis { get; set; }
+
+        //CECHY
+        public string DH_TYP_SOP3 { get; set; }
+        public int DH_ID_SOP3 { get; set; }
+        public string DH_NR_SOP3 { get; set; }
+
     }
 }

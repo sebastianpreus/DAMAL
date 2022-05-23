@@ -26,6 +26,11 @@ namespace DamEnovaWebApi.Models
         public string Priorytet { get; set; }
         public string Magazyn { get; set; }
 
+        //CECHY
+        public string DH_TYP_SOP3 { get; set; }
+        public int DH_ID_SOP3 { get; set; }
+        public string DH_NR_SOP3 { get; set; }
+
         public virtual ICollection<DamZamowienieOdbiorcyPozycja> PozycjeDokumentu { get; set; }
         public virtual ICollection<DamZamowienieOdbiorcyPowiazany> DokumentyPowiazane { get; set; }
         public virtual ICollection<DamZamowienieOdbiorcyZasob> ZasobyDokumentu { get; set; }

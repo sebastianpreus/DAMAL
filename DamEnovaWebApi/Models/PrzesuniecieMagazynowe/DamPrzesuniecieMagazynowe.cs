@@ -20,6 +20,11 @@ namespace DamEnovaWebApi.Models
         public string Waluta { get; set; }
         public string Priorytet { get; set; }
 
+        //CECHY
+        public string DH_TYP_SOP3 { get; set; }
+        public int DH_ID_SOP3 { get; set; }
+        public string DH_NR_SOP3 { get; set; }
+
         public virtual ICollection<DamPrzesuniecieMagazynowePozycja> PozycjeDokumentu { get; set; }
         public virtual ICollection<DamPrzesuniecieMagazynowePowiazany> DokumentyPowiazane { get; set; }
         public virtual ICollection<DamPrzesuniecieMagazynoweZasob> ZasobyDokumentu { get; set; }

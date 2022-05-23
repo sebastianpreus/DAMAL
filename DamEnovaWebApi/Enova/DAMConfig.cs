@@ -50,12 +50,12 @@ namespace DamEnovaWebApi.Enova
                 //xml_global_EnovaUserPwd = "Symfonia1#";
 
                 //BAMET KOPIA LOKALNA
-                xml_global_DBName = "Bamet_to_SOP3";
+                xml_global_DBName = "Bamet_to_SOP3_2";
                 xml_global_DBuser = "sa";
                 xml_global_DBpassword = "Symfonia1";
                 xml_global_DBserver = @".\SQLEXPRESS";
 
-                xml_global_EnovaFirma = "Bamet_to_SOP3";
+                xml_global_EnovaFirma = "Bamet_to_SOP3_v2";
                 xml_global_EnovaUser = "Damal1";//"SOP3";
                 xml_global_EnovaUserPwd = "Lamad1#";//"Symfonia1#";
 
