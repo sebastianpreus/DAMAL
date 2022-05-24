@@ -137,10 +137,36 @@ namespace DamEnovaWebApi.Services
                         damDokument.DokumentyPowiazane.Add(dokumentPowiazany);
                     }
                     dokumenty.Add(damDokument);
-                    //if (dokumenty.Count == 500)
+                    //if (dokumenty.Count >= 500)
                     //    break;
                 }
                 return dokumenty;
+            }
+        }
+
+        internal void DeleteWydanieMagazynowe(int id)
+        {
+            using (Session session = Connection.enovalogin.CreateSession(false, false))
+            {
+                HandelModule hm = HandelModule.GetInstance(session);
+                TowaryModule tm = TowaryModule.GetInstance(session);
+                MagazynyModule mm = MagazynyModule.GetInstance(session);
+                CRMModule cm = CRMModule.GetInstance(session);
+                CoreModule core = CoreModule.GetInstance(session);
+
+                using (ITransaction trans = session.Logout(true))
+                {
+                    DokumentHandlowy dokument = new DokumentHandlowy();
+
+                    if (id > 0)
+                    {
+                        dokument = hm.DokHandlowe[id];
+                        dokument.Stan = StanDokumentuHandlowego.Bufor;
+                        dokument.Delete();
+                    }
+                    trans.Commit();
+                }
+                session.Save();
             }
         }
 
@@ -261,21 +287,21 @@ namespace DamEnovaWebApi.Services
                         }
                     }
 
-                    try
-                    {
-                        foreach (SlownikElem sl in core.Slowniki.WgNazwa)
-                        {
-                            if (sl.Kategoria == "PriorytetZamAlg")
-                            {
-                                if (sl.Nazwa == damWydanieMagazynowe.Priorytet)
-                                    dokument.ParametryRezerwacjiProxy.Priorytet = sl;
-                            }
-                        }
-                    }
-                    catch (Exception)
-                    {
-                        throw new Exception("Błąd ustawiania priorytetu dokumentu");
-                    }
+                    //try
+                    //{
+                    //    foreach (SlownikElem sl in core.Slowniki.WgNazwa)
+                    //    {
+                    //        if (sl.Kategoria == "PriorytetZamAlg")
+                    //        {
+                    //            if (sl.Nazwa == damWydanieMagazynowe.Priorytet)
+                    //                dokument.ParametryRezerwacjiProxy.Priorytet = sl;
+                    //        }
+                    //    }
+                    //}
+                    //catch (Exception)
+                    //{
+                    //    throw new Exception("Błąd ustawiania priorytetu dokumentu");
+                    //}
 
                     dokument.Stan = StanDokumentuHandlowego.Zatwierdzony;
 
@@ -283,6 +309,7 @@ namespace DamEnovaWebApi.Services
                 }
                 session.Save();
                 damWydanieMagazynowe.ID = dokument.ID;
+                damWydanieMagazynowe.Numer = dokument.Numer.NumerPelny;
             }
         }
 

@@ -1,0 +1,814 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session xmlns="http://www.soneta.pl/schema/business">
+  <DefinicjaDokumentu id="DefinicjaDokumentu_51" guid="00000000-0003-0003-0011-000000000000" class="Soneta.Kasa.WyciagBankowyEwidencja+WyciagBankowyEwidencjaDefDok,Soneta.Kasa">
+    <Symbol>DOCH1EW</Symbol>
+    <Typ>WyciągBankowyEwidencja</Typ>
+    <Nazwa>DOCHODY 1 EWIDENCJA</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataWplywu.Year:4/DataWplywu.Month:2/*:2</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_119" guid="61dd1aab-a96b-4d6c-8c5c-028471dd9694" class="Soneta.Kasa.WyciagBankowyEwidencja+WyciagBankowyEwidencjaDefDok,Soneta.Kasa">
+    <Symbol>DOCH2EW</Symbol>
+    <Typ>WyciągBankowyEwidencja</Typ>
+    <Nazwa>DOCHODY 2 EWIDENCJA</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataWplywu.Year:4/DataWplywu.Month:2/*:2</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_129" guid="4b19771e-aac3-4af3-95e1-d050fb33a66c" class="Soneta.Kasa.WyciagBankowyEwidencja+WyciagBankowyEwidencjaDefDok,Soneta.Kasa">
+    <Symbol>WIZEW</Symbol>
+    <Typ>WyciągBankowyEwidencja</Typ>
+    <Nazwa>WADIA I ZABEZPIECZENIA</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataWplywu.Year:4/DataWplywu.Month:2/*:2</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_130" guid="10ae951f-9532-44f7-af65-9e48fe10c9c2" class="Soneta.Kasa.WyciagBankowyEwidencja+WyciagBankowyEwidencjaDefDok,Soneta.Kasa">
+    <Symbol>WNEW</Symbol>
+    <Typ>WyciągBankowyEwidencja</Typ>
+    <Nazwa>WYDATKI NIEUSTAJĄCE</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataWplywu.Year:4/DataWplywu.Month:2/*:2</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_133" guid="dd549e2e-402f-4bd0-9ffd-cf2a24ba59b9" class="Soneta.Kasa.WyciagBankowyEwidencja+WyciagBankowyEwidencjaDefDok,Soneta.Kasa">
+    <Symbol>WYDEW</Symbol>
+    <Typ>WyciągBankowyEwidencja</Typ>
+    <Nazwa>WYDATKI</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataWplywu.Year:4/DataWplywu.Month:2/*:2</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_134" guid="a7584fa9-69ab-447d-90cc-cf26bf370567" class="Soneta.Kasa.WyciagBankowyEwidencja+WyciagBankowyEwidencjaDefDok,Soneta.Kasa">
+    <Symbol>ZFŚSEW</Symbol>
+    <Typ>WyciągBankowyEwidencja</Typ>
+    <Nazwa>ZFŚSEW</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataWplywu.Year:4/DataWplywu.Month:2/*:2</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_52" guid="00000000-0003-0003-0012-000000000000" class="Soneta.Kasa.RaportKasowyEwidencja+RaportKasowyEwidencjaDefDok,Soneta.Kasa">
+    <Symbol>RKEW</Symbol>
+    <Typ>RaportKasowyEwidencja</Typ>
+    <Nazwa>Raport kasowy (ewidencja)</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataWplywu.Year:4/DataWplywu.Month:2/*:2</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_126" guid="2fc53a6e-99b3-402e-a4f0-ad4850a01d82" class="Soneta.Kasa.RaportKasowyEwidencja+RaportKasowyEwidencjaDefDok,Soneta.Kasa">
+    <Symbol>RKZFŚSEW</Symbol>
+    <Typ>RaportKasowyEwidencja</Typ>
+    <Nazwa>KASA ZFŚS</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataWplywu.Year:4/DataWplywu.Month:2/*:2</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_53" guid="00000000-0003-0003-0013-000000000000" class="Soneta.Kasa.RozliczenieEwidencja+RozliczenieEwidencjaDefDok,Soneta.Kasa">
+    <Symbol>RDEW</Symbol>
+    <Typ>RozliczenieEwidencja</Typ>
+    <Nazwa>Rozlicznie dok.(ewidencja)</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/Seria/DataWplywu.Year:4/DataWplywu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_54" guid="00000000-0003-0003-0014-000000000000" class="Soneta.Kasa.NotaOdsetkowaEwidencja+NotaOdsetkowaEwidencjaDefDok,Soneta.Kasa">
+    <Symbol>NOEW</Symbol>
+    <Typ>NotaOdsetkowaEwidencja</Typ>
+    <Nazwa>Nota odsetkowa (ewidencja)</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/Seria/DataWplywu.Year:4/DataWplywu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_66" guid="00000000-0019-0003-0001-000000000000" class="Soneta.Delegacje.DelegacjaEwidencja+DelegacjaEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>PWSE</Symbol>
+    <Typ>DelegacjaPWSEwidencja</Typ>
+    <Nazwa>Delegacja PWS (ewid.)</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_63" guid="00000000-0007-0005-0002-000000000000" class="Soneta.Place.ListaPlacEwidencja+ListaPlacEwidencjaDefDok,Soneta.KadryPlace">
+    <Symbol>LPEW</Symbol>
+    <Typ>ListaPlacEwidencja</Typ>
+    <Nazwa>Lista płac - ewidencja</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/Seria/DataWplywu.Year:4/DataWplywu.Month:2/*:2</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_89" guid="00000000-0012-0003-0008-000000000000" class="Soneta.EwidencjaVat.WyplataUmowyEwidencja+WyplataUmowyEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>UE</Symbol>
+    <Typ>WyplataUmowyEwidencja</Typ>
+    <Nazwa>Umowy cywilno-prawne</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/Seria/DataDokumentu.Year:4/DataDokumentu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_121" guid="ea4d2663-e820-4bc7-aa5e-90d12ce17203" class="Soneta.Ksiega.PKEwidencja+PKEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>PKD</Symbol>
+    <Typ>PKEwidencja</Typ>
+    <Nazwa>PK dochodów</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:3</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_122" guid="ec03d044-25a6-4373-8627-c2feac692c69" class="Soneta.Ksiega.PKEwidencja+PKEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>PKPLAN</Symbol>
+    <Typ>PKEwidencja</Typ>
+    <Nazwa>PKPLAN</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:3</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_71" guid="00000000-0008-0002-0004-000000000000" class="Soneta.Ksiega.PKEwidencja+PKEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>PKW</Symbol>
+    <Typ>PKEwidencja</Typ>
+    <Nazwa>PK Wydatki</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:3</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_123" guid="7e933224-ab85-4467-bff1-f1c60e0a1c86" class="Soneta.Ksiega.PKEwidencja+PKEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>PKZFŚS</Symbol>
+    <Typ>PKEwidencja</Typ>
+    <Nazwa>PK ZFŚS</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:3</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_124" guid="70d507d8-4758-4b92-a0bb-99fffbcc242b" class="Soneta.Ksiega.PKEwidencja+PKEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>PKZiW</Symbol>
+    <Typ>PKEwidencja</Typ>
+    <Nazwa>PK ZiW</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:3</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_72" guid="00000000-0008-0002-0005-000000000000" class="Soneta.Ksiega.RozniceKursoweEwidencja+RozniceKursoweEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>RKE</Symbol>
+    <Typ>RóżniceKursoweEwidencja</Typ>
+    <Nazwa>Różnice kursowe</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_73" guid="00000000-0008-0002-0006-000000000000" class="Soneta.Ksiega.BOEwidencja+BOEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>BOE</Symbol>
+    <Typ>BOEwidencja</Typ>
+    <Nazwa>Bilans otwarcia</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_117" guid="4322ad66-4c98-46c8-bdf2-589c783bb8a1" class="Soneta.Ksiega.BOEwidencja+BOEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>BON</Symbol>
+    <Typ>BOEwidencja</Typ>
+    <Nazwa>BO należności</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/Seria/DataWplywu.Year:4/DataWplywu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_118" guid="d3415788-1ccc-4f35-ba14-f84e1243b066" class="Soneta.Ksiega.BOEwidencja+BOEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>BOZ</Symbol>
+    <Typ>BOEwidencja</Typ>
+    <Nazwa>BO Zobowiązań</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/Seria/DataWplywu.Year:4/DataWplywu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_120" guid="53fc6c1c-7c2e-4921-b6da-04605628e56e" class="Soneta.Ksiega.BOEwidencja+BOEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>P</Symbol>
+    <Typ>BOEwidencja</Typ>
+    <Nazwa>PLAN</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataWplywu.Year:4/DataWplywu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_74" guid="00000000-0008-0002-0007-000000000000" class="Soneta.Ksiega.RozniceKursoweMWEwidencja+RozniceKursoweMWEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>RKMWE</Symbol>
+    <Typ>RóżniceKursoweMWEwidencja</Typ>
+    <Nazwa>Różnice kursowe MW</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_75" guid="00000000-0008-0002-0008-000000000000" class="Soneta.Ksiega.RozniceKursoweKPiREwidencja+RozniceKursoweKPiREwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>RKRE</Symbol>
+    <Typ>RozniceKursoweKPiREwidencja</Typ>
+    <Nazwa>Różnice kursowe KPiR</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_76" guid="00000000-0011-0006-0001-000000000000" class="Soneta.Handel.MagazynEwidencja+MagazynEwidencjaDefDok,Soneta.Handel">
+    <Symbol>PWE</Symbol>
+    <Typ>MagazynEwidencja</Typ>
+    <Nazwa>Przychód wewnętrzny (ewid.)</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataWplywu.Year:4/DataWplywu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_77" guid="00000000-0011-0006-0002-000000000000" class="Soneta.Handel.MagazynEwidencja+MagazynEwidencjaDefDok,Soneta.Handel">
+    <Symbol>PZE</Symbol>
+    <Typ>MagazynEwidencja</Typ>
+    <Nazwa>Przychód zewnętrzny (ewid.)</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataWplywu.Year:4/DataWplywu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_81" guid="00000000-0011-0006-0006-000000000000" class="Soneta.Handel.MagazynEwidencja+MagazynEwidencjaDefDok,Soneta.Handel">
+    <Symbol>PZUE</Symbol>
+    <Typ>MagazynEwidencja</Typ>
+    <Nazwa>Przyjęcie zewnętrzne UE</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataWplywu.Year:4/DataWplywu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_78" guid="00000000-0011-0006-0003-000000000000" class="Soneta.Handel.MagazynEwidencja+MagazynEwidencjaDefDok,Soneta.Handel">
+    <Symbol>WWE</Symbol>
+    <Typ>MagazynEwidencja</Typ>
+    <Nazwa>Wydanie wewnętrzne (ewid.)</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataWplywu.Year:4/DataWplywu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_79" guid="00000000-0011-0006-0004-000000000000" class="Soneta.Handel.MagazynEwidencja+MagazynEwidencjaDefDok,Soneta.Handel">
+    <Symbol>WZE</Symbol>
+    <Typ>MagazynEwidencja</Typ>
+    <Nazwa>Wydanie zewnętrzne (ewid.)</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataWplywu.Year:4/DataWplywu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_80" guid="00000000-0011-0006-0005-000000000000" class="Soneta.Handel.MagazynEwidencja+MagazynEwidencjaDefDok,Soneta.Handel">
+    <Symbol>WZUE</Symbol>
+    <Typ>MagazynEwidencja</Typ>
+    <Nazwa>Wydanie zewnętrzne UE</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataWplywu.Year:4/DataWplywu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_86" guid="00000000-0012-0003-0005-000000000000" class="Soneta.EwidencjaVat.SprzedazEwidencja+SprzedazEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>SPD</Symbol>
+    <Typ>SprzedażEwidencja</Typ>
+    <Nazwa>Sprzedaż usług</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_82" guid="00000000-0012-0003-0001-000000000000" class="Soneta.EwidencjaVat.SprzedazEwidencja+SprzedazEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>SPT</Symbol>
+    <Typ>SprzedażEwidencja</Typ>
+    <Nazwa>Sprzedaż towarów</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_127" guid="9150f2b5-a53b-4373-8bc1-f68d12224289" class="Soneta.EwidencjaVat.SprzedazEwidencja+SprzedazEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>SPTFV</Symbol>
+    <Typ>SprzedażEwidencja</Typ>
+    <Nazwa>SPRZEDAŻ FV</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_93" guid="00000000-0012-0003-0012-000000000000" class="Soneta.EwidencjaVat.SprzedazEwidencja+SprzedazEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>SPTUE</Symbol>
+    <Typ>SprzedażEwidencja</Typ>
+    <Nazwa>Dostawa towarów UE</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+		<Rozszerzenie >RozszerzenieAktywne:True
+PrzeliczajOdPlatnosci:True
+Mpp:True
+DodatkowaKontrolka1:Płatności
+DodatkowaKontrolka2:EwidencjaVAT
+DodatkowaKontrolka3:DekretyZapisy
+			</Rozszerzenie>
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_92" guid="00000000-0012-0003-0011-000000000000" class="Soneta.EwidencjaVat.SprzedazEwidencja+SprzedazEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>SPZAL</Symbol>
+    <Typ>SprzedażEwidencja</Typ>
+    <Nazwa>Sprzedaż zaliczkowa</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+
+	<DefinicjaDokumentu id="DefinicjaDokumentu_1222" guid="00000000-0012-0003-0019-000000000000" class="Soneta.EwidencjaVat.SprzedazEwidencja+SprzedazEwidencjaDefDok,Soneta.Ksiega" >
+		<Symbol>SPFVP</Symbol>
+		<Typ>SprzedażEwidencja</Typ>
+		<Nazwa>Sprzedaż - faktura do paragonu</Nazwa>
+		<TypDokumentuVAT>00000000-0001-0044-0014-000000000000</TypDokumentuVAT>
+		<Domyslna>False</Domyslna>
+		<Blokada>False</Blokada>
+		<Numeracja>
+			<Wzor>Definicja.Symbol/DataDokumentu.Year:4/*:4</Wzor>
+			<PodczasEdycji>False</PodczasEdycji>
+		</Numeracja>
+		<WidoczneCechy />
+		<Rozszerzenie />
+		<DodatkowyNaglowekDefinicja />
+		<ProceduraISO />
+		<SchematPodzialowy />
+		<ZawszePrzeliczajOpisAnalityczny>False</ZawszePrzeliczajOpisAnalityczny>
+		<NumerDokumentuZeZrodla>False</NumerDokumentuZeZrodla>
+	</DefinicjaDokumentu>
+
+	<DefinicjaDokumentu id="DefinicjaDokumentu_125" guid="c39523ab-7bd9-42ab-9eb2-56fae4650f60" class="Soneta.EwidencjaVat.ZakupEwidencja+ZakupEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>PRZED</Symbol>
+    <Typ>ZakupEwidencja</Typ>
+    <Nazwa>Przedpłaty</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:3</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_128" guid="e3c6a22a-503e-4238-9d55-cac261093ae4" class="Soneta.EwidencjaVat.ZakupEwidencja+ZakupEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>UM</Symbol>
+    <Typ>ZakupEwidencja</Typ>
+    <Nazwa>Umowy</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:3</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_131" guid="711424d6-d25f-4dcd-be64-4e764a24a57e" class="Soneta.EwidencjaVat.ZakupEwidencja+ZakupEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>WNK</Symbol>
+    <Typ>ZakupEwidencja</Typ>
+    <Nazwa>Wydatki niewygasające</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:3</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_132" guid="ba8f75fd-07f4-4dd6-9b20-8b3b80c7a50a" class="Soneta.EwidencjaVat.ZakupEwidencja+ZakupEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>WNŚT</Symbol>
+    <Typ>ZakupEwidencja</Typ>
+    <Nazwa>Wydatki niewygasające ŚT</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:3</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_95" guid="00000000-0012-0003-0014-000000000000" class="Soneta.EwidencjaVat.ZakupEwidencja+ZakupEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>ZUE</Symbol>
+    <Typ>ZakupEwidencja</Typ>
+    <Nazwa>Zakupy z UE</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>True</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+		<Rozszerzenie>RozszerzenieAktywne:True
+Mpp:True
+DodatkowaKontrolka1:Płatności
+DodatkowaKontrolka2:DekretyZapisy
+		</Rozszerzenie>
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_135" guid="2d598566-6155-4c3b-992b-dd0ac99d8601" class="Soneta.EwidencjaVat.ZakupEwidencja+ZakupEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>ZG</Symbol>
+    <Typ>ZakupEwidencja</Typ>
+    <Nazwa>Zakupy gotówkowe</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:3</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_83" guid="00000000-0012-0003-0002-000000000000" class="Soneta.EwidencjaVat.ZakupEwidencja+ZakupEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>ZP</Symbol>
+    <Typ>ZakupEwidencja</Typ>
+    <Nazwa>Zakupy różne</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:3</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_85" guid="00000000-0012-0003-0004-000000000000" class="Soneta.EwidencjaVat.ZakupEwidencja+ZakupEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>ZŚT</Symbol>
+    <Typ>ZakupEwidencja</Typ>
+    <Nazwa>Zakupy ŚT i WNP</Nazwa>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:3</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_84" guid="00000000-0012-0003-0003-000000000000" class="Soneta.EwidencjaVat.RozliczeniaKasoweVATEwidencja+RozliczeniaKasoweVATEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>RKVE</Symbol>
+    <Typ>RozliczenieKasoweVATEwidencja</Typ>
+    <Nazwa>RKVE</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_87" guid="00000000-0012-0003-0006-000000000000" class="Soneta.EwidencjaVat.RozliczeniaKasoweAkcyzyEwidencja+RozliczeniaKasoweAkcyzyEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>RKVA</Symbol>
+    <Typ>RozliczenieKasoweAkcyzyEwidencja</Typ>
+    <Nazwa>RKVA</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_88" guid="00000000-0012-0003-0007-000000000000" class="Soneta.EwidencjaVat.SprzedazZbiorczaEwidencja+SprzedazZbiorczaEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>SPZE</Symbol>
+    <Typ>SprzedażZbiorczaEwidencja</Typ>
+    <Nazwa>Sprzedaż zbiorcza</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_94" guid="00000000-0012-0003-0013-000000000000" class="Soneta.EwidencjaVat.VATMarzaEwidencja+VATMarzaEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>VME</Symbol>
+    <Typ>VATMarżaEwidencja</Typ>
+    <Nazwa>VAT marża</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_101" guid="00000000-0013-0001-0006-000000000000" class="Soneta.SrodkiTrwale.SrodkiTrwaleEwidencja+SrodkiTrwaleEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>STE</Symbol>
+    <Typ>ŚrodkiTrwałeEwidencja</Typ>
+    <Nazwa>Ewid. dok. środków trwałych</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:4</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_1" guid="00000000-0033-0001-0001-000000000000" class="Soneta.CzlonkowieSzkolenia.SkladkaEwidencja+SkladkaEwidencjaDefDok,Soneta.CzlonkowieSzkolenia">
+    <Symbol>SKEW</Symbol>
+    <Typ>SkladkaEwidencja</Typ>
+    <Nazwa>Składka</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/RokMiesiac.Year/RokMiesiac.Month:2/*:2</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_114" guid="00000000-0017-0001-0002-000000000000" class="Soneta.Samochodowka.RozliczenieEPEwidencja+RozliczenieEPEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>REPE</Symbol>
+    <Typ>RozliczenieEPEwidencja</Typ>
+    <Nazwa>Rozliczenie EP (ewidencja)</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/*:2</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+  <DefinicjaDokumentu id="DefinicjaDokumentu_116" guid="00000000-0018-0001-0002-000000000000" class="Soneta.RMK.RMKEwidencja+RMKEwidencjaDefDok,Soneta.Ksiega">
+    <Symbol>RMKE</Symbol>
+    <Typ>RMKEwidencja</Typ>
+    <Nazwa>RMK ewidencja</Nazwa>
+    <Domyslna>True</Domyslna>
+    <Blokada>False</Blokada>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/DataDokumentu.Year:4/*:2</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <WidoczneCechy />
+    <Rozszerzenie />
+    <DodatkowyNaglowekDefinicja />
+    <ProceduraISO />
+  </DefinicjaDokumentu>
+</session>

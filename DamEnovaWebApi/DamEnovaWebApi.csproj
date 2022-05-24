@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Soneta.Handel.2112.5.7\build\Soneta.Handel.props" Condition="Exists('packages\Soneta.Handel.2112.5.7\build\Soneta.Handel.props')" />
   <Import Project="packages\Soneta.GoogleServiceProvider.2.0.0\build\Soneta.GoogleServiceProvider.props" Condition="Exists('packages\Soneta.GoogleServiceProvider.2.0.0\build\Soneta.GoogleServiceProvider.props')" />
   <Import Project="packages\PdfiumViewer.Native.x86_64.no_v8-no_xfa.2018.3.18.254\build\PdfiumViewer.Native.x86_64.no_v8-no_xfa.props" Condition="Exists('packages\PdfiumViewer.Native.x86_64.no_v8-no_xfa.2018.3.18.254\build\PdfiumViewer.Native.x86_64.no_v8-no_xfa.props')" />
   <Import Project="packages\PdfiumViewer.Native.x86.no_v8-no_xfa.2018.3.18.254\build\PdfiumViewer.Native.x86.no_v8-no_xfa.props" Condition="Exists('packages\PdfiumViewer.Native.x86.no_v8-no_xfa.2018.3.18.254\build\PdfiumViewer.Native.x86.no_v8-no_xfa.props')" />
@@ -47,6 +48,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CsvHelper, Version=27.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>packages\CsvHelper.27.0.1\lib\net47\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Grace, Version=7.1.1.0, Culture=neutral, PublicKeyToken=b7d24c6367970497, processorArchitecture=MSIL">
+      <HintPath>packages\Grace.7.1.1\lib\net45\Grace.dll</HintPath>
+    </Reference>
+    <Reference Include="Grace.DependencyInjection.Extensions, Version=7.1.0.0, Culture=neutral, PublicKeyToken=b7d24c6367970497, processorArchitecture=MSIL">
+      <HintPath>packages\Grace.DependencyInjection.Extensions.7.1.0\lib\netstandard2.0\Grace.DependencyInjection.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="HtmlAgilityPack, Version=1.11.39.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
       <HintPath>packages\HtmlAgilityPack.1.11.39\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
@@ -83,6 +93,9 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.HashCode.1.1.0\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -93,6 +106,15 @@
     <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.DependencyInjection.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.JsonWebTokens.6.8.0\lib\net461\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Logging.6.8.0\lib\net461\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Tokens.6.8.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.OData.Core, Version=7.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.OData.Core.7.9.1\lib\net45\Microsoft.OData.Core.dll</HintPath>
     </Reference>
@@ -101,6 +123,15 @@
     </Reference>
     <Reference Include="Microsoft.Spatial, Version=7.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Spatial.7.9.1\lib\net45\Microsoft.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Win32.Registry.4.6.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry.AccessControl, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Win32.Registry.AccessControl.4.6.0\lib\net461\Microsoft.Win32.Registry.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.SystemEvents, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Win32.SystemEvents.4.6.0\lib\net461\Microsoft.Win32.SystemEvents.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil, Version=0.11.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
       <HintPath>packages\Mono.Cecil.0.11.4\lib\net40\Mono.Cecil.dll</HintPath>
@@ -132,56 +163,60 @@
     <Reference Include="RabbitMQ.Client, Version=6.0.0.0, Culture=neutral, PublicKeyToken=89e7d7c5feba84ce, processorArchitecture=MSIL">
       <HintPath>packages\RabbitMQ.Client.6.2.2\lib\net461\RabbitMQ.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Soneta.BI, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
-      <HintPath>packages\Soneta.BI.2012.4.9\lib\net46\Soneta.BI.dll</HintPath>
+    <Reference Include="Soneta.BI, Version=2112.5.7.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
+      <HintPath>packages\Soneta.BI.2112.5.7\lib\net472\Soneta.BI.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Soneta.Business, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
-      <HintPath>packages\Soneta.Business.2012.4.9\lib\net46\Soneta.Business.dll</HintPath>
+    <Reference Include="Soneta.Business, Version=2112.5.7.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
+      <HintPath>packages\Soneta.Business.2112.5.7\lib\netstandard2.0\Soneta.Business.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Soneta.Core, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
-      <HintPath>packages\Soneta.Core.2012.4.9\lib\net46\Soneta.Core.dll</HintPath>
+    <Reference Include="Soneta.Business.Licence, Version=2112.5.7.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
+      <HintPath>packages\Soneta.Business.Licence.2112.5.7\lib\net472\Soneta.Business.Licence.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Soneta.CRM, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
-      <HintPath>packages\Soneta.CRM.2012.4.9\lib\net46\Soneta.CRM.dll</HintPath>
+    <Reference Include="Soneta.Core, Version=2112.5.7.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
+      <HintPath>packages\Soneta.Core.2112.5.7\lib\net472\Soneta.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Soneta.CzlonkowieSzkolenia, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
-      <HintPath>packages\Soneta.CzlonkowieSzkolenia.2012.4.9\lib\net46\Soneta.CzlonkowieSzkolenia.dll</HintPath>
+    <Reference Include="Soneta.CRM, Version=2112.5.7.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
+      <HintPath>packages\Soneta.CRM.2112.5.7\lib\net472\Soneta.CRM.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Soneta.Data, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
-      <HintPath>packages\Soneta.Data.2012.4.9\lib\net46\Soneta.Data.dll</HintPath>
+    <Reference Include="Soneta.CzlonkowieSzkolenia, Version=2112.5.7.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
+      <HintPath>packages\Soneta.CzlonkowieSzkolenia.2112.5.7\lib\net472\Soneta.CzlonkowieSzkolenia.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Soneta.Deklaracje, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
-      <HintPath>packages\Soneta.Deklaracje.2012.4.9\lib\net46\Soneta.Deklaracje.dll</HintPath>
+    <Reference Include="Soneta.Data, Version=2112.5.7.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
+      <HintPath>packages\Soneta.Data.2112.5.7\lib\netstandard2.0\Soneta.Data.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Soneta.EI, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
-      <HintPath>packages\Soneta.EI.2012.4.9\lib\net46\Soneta.EI.dll</HintPath>
+    <Reference Include="Soneta.Deklaracje, Version=2112.5.7.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
+      <HintPath>packages\Soneta.Deklaracje.2112.5.7\lib\net472\Soneta.Deklaracje.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Soneta.Generator, Version=12.0.0.7, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
-      <HintPath>packages\Soneta.Generator.12.0.0\lib\net46\Soneta.Generator.exe</HintPath>
+    <Reference Include="Soneta.EI, Version=2112.5.7.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
+      <HintPath>packages\Soneta.EI.2112.5.7\lib\net472\Soneta.EI.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Soneta.Handel, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
-      <HintPath>packages\Soneta.Handel.2012.4.9\lib\net46\Soneta.Handel.dll</HintPath>
+    <Reference Include="Soneta.Generator, Version=12.2.0.5, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
+      <HintPath>packages\Soneta.Generator.12.2.0\lib\net472\Soneta.Generator.exe</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Soneta.KadryPlace, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
-      <HintPath>packages\Soneta.KadryPlace.2012.4.9\lib\net46\Soneta.KadryPlace.dll</HintPath>
+    <Reference Include="Soneta.Handel, Version=2112.5.7.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
+      <HintPath>packages\Soneta.Handel.2112.5.7\lib\net472\Soneta.Handel.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Soneta.Kasa, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
-      <HintPath>packages\Soneta.Kasa.2012.4.9\lib\net46\Soneta.Kasa.dll</HintPath>
+    <Reference Include="Soneta.KadryPlace, Version=2112.5.7.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
+      <HintPath>packages\Soneta.KadryPlace.2112.5.7\lib\net472\Soneta.KadryPlace.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Soneta.Ksiega, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
-      <HintPath>packages\Soneta.Ksiega.2012.4.9\lib\net46\Soneta.Ksiega.dll</HintPath>
+    <Reference Include="Soneta.Kasa, Version=2112.5.7.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
+      <HintPath>packages\Soneta.Kasa.2112.5.7\lib\net472\Soneta.Kasa.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Soneta.Ksiega, Version=2112.5.7.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
+      <HintPath>packages\Soneta.Ksiega.2112.5.7\lib\net472\Soneta.Ksiega.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Soneta.Licence, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
@@ -196,23 +231,28 @@
       <HintPath>packages\Soneta.Licence.Local.Proxy.1.0.0\lib\net40\Soneta.Licence.Local.Proxy.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Soneta.Start, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
-      <HintPath>packages\Soneta.Start.2012.4.9\lib\net46\Soneta.Start.dll</HintPath>
+    <Reference Include="Soneta.Start, Version=2112.5.7.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
+      <HintPath>packages\Soneta.Start.2112.5.7\lib\netstandard2.0\Soneta.Start.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Soneta.Types, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
-      <HintPath>packages\Soneta.Types.2012.4.9\lib\net46\Soneta.Types.dll</HintPath>
+    <Reference Include="Soneta.Support, Version=2112.5.7.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
+      <HintPath>packages\Soneta.Support.2112.5.7\lib\net472\Soneta.Support.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Soneta.Web.Business, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
-      <HintPath>packages\Soneta.Web.Business.2012.4.9\lib\net46\Soneta.Web.Business.dll</HintPath>
+    <Reference Include="Soneta.Types, Version=2112.5.7.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
+      <HintPath>packages\Soneta.Types.2112.5.7\lib\netstandard2.0\Soneta.Types.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Soneta.Workflow, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
-      <HintPath>packages\Soneta.Workflow.2012.4.9\lib\net46\Soneta.Workflow.dll</HintPath>
+    <Reference Include="Soneta.Web.Business, Version=2112.5.7.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
+      <HintPath>packages\Soneta.Web.Business.2112.5.7\lib\net472\Soneta.Web.Business.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Soneta.Zadania, Version=2012.4.9.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
-      <HintPath>packages\Soneta.Zadania.2012.4.9\lib\net46\Soneta.Zadania.dll</HintPath>
+    <Reference Include="Soneta.Workflow, Version=2112.5.7.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
+      <HintPath>packages\Soneta.Workflow.2112.5.7\lib\net472\Soneta.Workflow.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Soneta.Zadania, Version=2112.5.7.0, Culture=neutral, PublicKeyToken=a19fc6236fd34393, processorArchitecture=MSIL">
+      <HintPath>packages\Soneta.Zadania.2112.5.7\lib\net472\Soneta.Zadania.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Syncfusion.Compression.Base, Version=17.2460.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
@@ -234,13 +274,65 @@
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
+    <Reference Include="System.CodeDom, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.CodeDom.4.6.0\lib\net461\System.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.4.6.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.Odbc, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.Odbc.4.6.0\lib\net461\System.Data.Odbc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.OleDb, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.OleDb.4.6.0\lib\net461\System.Data.OleDb.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.7.0\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
     <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.EventLog, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.EventLog.4.6.0\lib\net461\System.Diagnostics.EventLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.PerformanceCounter, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.PerformanceCounter.4.6.0\lib\net461\System.Diagnostics.PerformanceCounter.dll</HintPath>
+    </Reference>
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
     <Reference Include="System.DirectoryServices.Protocols" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Drawing.Common.4.6.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\System.IdentityModel.Tokens.Jwt.6.8.0\lib\net461\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.AccessControl, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.FileSystem.AccessControl.4.6.0\lib\net461\System.IO.FileSystem.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Packaging.4.6.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipes.AccessControl, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipes.AccessControl.4.5.1\lib\net461\System.IO.Pipes.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Ports, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Ports.4.6.0\lib\net461\System.IO.Ports.dll</HintPath>
+    </Reference>
     <Reference Include="System.Linq, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Linq.4.1.0\lib\net463\System.Linq.dll</HintPath>
       <Private>True</Private>
@@ -251,6 +343,7 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Management" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
@@ -267,6 +360,10 @@
     <Reference Include="System.Reflection.TypeExtensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Reflection.TypeExtensions.4.1.0\lib\net462\System.Reflection.TypeExtensions.dll</HintPath>
     </Reference>
+    <Reference Include="System.Resources.Extensions, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Resources.Extensions.4.7.0\lib\netstandard2.0\System.Resources.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
@@ -281,15 +378,64 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.AccessControl.4.6.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Cng, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Cng.4.6.0\lib\net47\System.Security.Cryptography.Cng.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Pkcs, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Pkcs.4.6.0\lib\net461\System.Security.Cryptography.Pkcs.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.ProtectedData, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.ProtectedData.4.6.0\lib\net461\System.Security.Cryptography.ProtectedData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Xml.4.6.0\lib\net461\System.Security.Cryptography.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Permissions.4.6.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Principal.Windows.4.6.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Duplex, Version=4.5.0.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ServiceModel.Duplex.4.5.3\lib\net461\System.ServiceModel.Duplex.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Http, Version=4.5.0.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ServiceModel.Http.4.5.3\lib\net461\System.ServiceModel.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.NetTcp, Version=4.5.0.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ServiceModel.NetTcp.4.5.3\lib\net461\System.ServiceModel.NetTcp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Primitives, Version=4.5.0.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ServiceModel.Primitives.4.5.3\lib\net461\System.ServiceModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Security, Version=4.5.0.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ServiceModel.Security.4.5.3\lib\net461\System.ServiceModel.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Syndication, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ServiceModel.Syndication.4.6.0\lib\net461\System.ServiceModel.Syndication.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.ServiceProcess.ServiceController, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ServiceProcess.ServiceController.4.6.0\lib\net461\System.ServiceProcess.ServiceController.dll</HintPath>
+    </Reference>
     <Reference Include="System.Spatial, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\System.Spatial.5.6.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encoding.CodePages.4.6.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.Encodings.Web, Version=4.0.5.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Text.Encodings.Web.4.7.2\lib\net461\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.Json, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Text.Json.4.6.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.AccessControl, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.AccessControl.4.6.0\lib\net461\System.Threading.AccessControl.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Channels, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Threading.Channels.4.7.1\lib\net461\System.Threading.Channels.dll</HintPath>
@@ -344,6 +490,7 @@
       <Private>True</Private>
       <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="WindowsBase" />
     <Reference Include="zxing, Version=0.14.0.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
       <HintPath>packages\ZXing.Net.0.14.0.1\lib\net40\zxing.dll</HintPath>
     </Reference>
@@ -455,7 +602,6 @@
     <Content Include="Demo\100.Ksiega.gold.xml" />
     <Content Include="Demo\101.BazaDemo_Listy.xml" />
     <Content Include="Demo\101.Kadry.xml" />
-    <Content Include="Demo\102.AWW_Handel.xml" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="NLog.config">
@@ -464,8 +610,188 @@
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Patterns\Budzet.Budzet\1.Podstawy.xml" />
+    <Content Include="Patterns\Budzet.Budzet\100.Listy_KiP.xml" />
+    <Content Include="Patterns\Budzet.Budzet\2.Podstawy.gold.xml" />
+    <Content Include="Patterns\Budzet.Budzet\3.cechy budzet.xml" />
+    <Content Include="Patterns\Budzet.Budzet\4.pracownicy i cechy.xml" />
+    <Content Include="Patterns\Budzet.Budzet\5.element dodhistoria.xml" />
+    <Content Include="Patterns\Budzet.Budzet\6.definicje dokumentow.xml" />
+    <Content Include="Patterns\Budzet.Budzet\7.Slowniki konta i schematy.xml" />
+    <Content Include="Patterns\Budzet.Budzet\8.Ustawienia formularzy i list.xml" />
+    <Content Include="Patterns\Budzet.Budzet\9.Widok listy pracownikow.xml" />
+    <Content Include="Patterns\Budzet.Budzet\index.html" />
+    <Content Include="Patterns\Budzet.Budzet\index_pliki\boil.css" />
+    <Content Include="Patterns\Budzet.Budzet\index_pliki\bulb.png" />
+    <Content Include="Patterns\Budzet.Budzet\index_pliki\colorschememapping.xml" />
+    <Content Include="Patterns\Budzet.Budzet\index_pliki\filelist.xml" />
+    <Content Include="Patterns\Budzet.Budzet\index_pliki\image001.jpg" />
+    <Content Include="Patterns\Budzet.Budzet\index_pliki\image002.png" />
+    <Content Include="Patterns\Budzet.Budzet\index_pliki\logo_enova365.png" />
+    <Content Include="Patterns\Budzet.Budzet\index_pliki\style.css" />
+    <Content Include="Patterns\CRM.OfertowanieKlientowi\001.Podstawy.xml" />
+    <Content Include="Patterns\CRM.OfertowanieKlientowi\100.Handel.xml" />
+    <Content Include="Patterns\CRM.OfertowanieKlientowi\100.Kadry.gold.xml" />
+    <Content Include="Patterns\CRM.OfertowanieKlientowi\100.Kadry.silver.xml" />
+    <Content Include="Patterns\CRM.OfertowanieKlientowi\100.Ksiega.gold.xml" />
+    <Content Include="Patterns\CRM.OfertowanieKlientowi\100.Listy_KiP.xml" />
+    <Content Include="Patterns\CRM.OfertowanieKlientowi\101.Kadry.xml" />
+    <Content Include="Patterns\CRM.OfertowanieKlientowi\Cechy.xml" />
+    <Content Include="Patterns\CRM.OfertowanieKlientowi\Definicje aktywnosci.xml" />
+    <Content Include="Patterns\CRM.OfertowanieKlientowi\Foldery.xml" />
+    <Content Include="Patterns\CRM.OfertowanieKlientowi\index.html" />
+    <Content Include="Patterns\CRM.OfertowanieKlientowi\Ofertowanie_pliki\boil.css" />
+    <Content Include="Patterns\CRM.OfertowanieKlientowi\Ofertowanie_pliki\bulb.png" />
+    <Content Include="Patterns\CRM.OfertowanieKlientowi\Ofertowanie_pliki\image004.png" />
+    <Content Include="Patterns\CRM.OfertowanieKlientowi\Ofertowanie_pliki\image005.jpg" />
+    <Content Include="Patterns\CRM.OfertowanieKlientowi\Ofertowanie_pliki\logo_enova365.png" />
+    <Content Include="Patterns\CRM.OfertowanieKlientowi\Ofertowanie_pliki\style.css" />
+    <Content Include="Patterns\CRM.OfertowanieKlientowi\Task.xml" />
+    <Content Include="Patterns\CRM.PozyskanieKlienta\001.Podstawy.xml" />
+    <Content Include="Patterns\CRM.PozyskanieKlienta\010.Kontrahenci.xml" />
+    <Content Include="Patterns\CRM.PozyskanieKlienta\100.Handel.xml" />
+    <Content Include="Patterns\CRM.PozyskanieKlienta\100.Kadry.gold.xml" />
+    <Content Include="Patterns\CRM.PozyskanieKlienta\100.Kadry.silver.xml" />
+    <Content Include="Patterns\CRM.PozyskanieKlienta\100.Ksiega.gold.xml" />
+    <Content Include="Patterns\CRM.PozyskanieKlienta\200.CRM.xml" />
+    <Content Include="Patterns\CRM.PozyskanieKlienta\index.html" />
+    <Content Include="Patterns\CRM.PozyskanieKlienta\index_pliki\boil.css" />
+    <Content Include="Patterns\CRM.PozyskanieKlienta\index_pliki\bulb.png" />
+    <Content Include="Patterns\CRM.PozyskanieKlienta\index_pliki\image004.png" />
+    <Content Include="Patterns\CRM.PozyskanieKlienta\index_pliki\image005.jpg" />
+    <Content Include="Patterns\CRM.PozyskanieKlienta\index_pliki\logo_enova365.png" />
+    <Content Include="Patterns\CRM.PozyskanieKlienta\index_pliki\style.css" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\001.Podstawy.xml" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\002.Podstawy.gold.xml" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\002.Podstawy.silver.xml" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\100.Kadry.gold.xml" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\100.Kadry.silver.xml" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\100.Ksiega.gold.TylkoCzworki.xml" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\101.BazaMoto.xml" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\101.BazaMoto_Dokumenty.xml" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\101.BazaMoto_Listy.xml" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\101.Kadry.xml" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\index.html" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\index_pliki\boil.css" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\index_pliki\bulb.png" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\index_pliki\colorschememapping.xml" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\index_pliki\filelist.xml" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\index_pliki\header.html" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\index_pliki\image001.jpg" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\index_pliki\image002.png" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\index_pliki\image003.png" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\index_pliki\item0001.xml" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\index_pliki\logo_enova365.png" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\index_pliki\props002.xml" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\index_pliki\style.css" />
+    <Content Include="Patterns\KADRY.Pulpity HR\001.Podstawy.xml" />
+    <Content Include="Patterns\KADRY.Pulpity HR\002.Podstawy.gold.xml" />
+    <Content Include="Patterns\KADRY.Pulpity HR\003.Kadry.gold.xml" />
+    <Content Include="Patterns\KADRY.Pulpity HR\004.WebUser.xml" />
+    <Content Include="Patterns\KADRY.Pulpity HR\005.WebProfile.xml" />
+    <Content Include="Patterns\KADRY.Pulpity HR\006.StrukturaOrganizacyjna.xml" />
+    <Content Include="Patterns\KADRY.Pulpity HR\007.Umowa.xml" />
+    <Content Include="Patterns\KADRY.Pulpity HR\008.TaskDefinition.xml" />
+    <Content Include="Patterns\KADRY.Pulpity HR\009.Kadry.xml" />
+    <Content Include="Patterns\KADRY.Pulpity HR\010.KadryNet.xml" />
+    <Content Include="Patterns\KADRY.Pulpity HR\011.Listy_KiP.xml" />
+    <Content Include="Patterns\KADRY.Pulpity HR\012.BazaPulpity_Listy.xml" />
+    <Content Include="Patterns\KADRY.Pulpity HR\013.Zestawienia_Czasu_Pracy.xml" />
+    <Content Include="Patterns\KADRY.Pulpity HR\background1.png" />
+    <Content Include="Patterns\KADRY.Pulpity HR\index.html" />
+    <Content Include="Patterns\KADRY.Pulpity HR\index_pliki\boil.css" />
+    <Content Include="Patterns\KADRY.Pulpity HR\index_pliki\bulb.png" />
+    <Content Include="Patterns\KADRY.Pulpity HR\index_pliki\colorschememapping.xml" />
+    <Content Include="Patterns\KADRY.Pulpity HR\index_pliki\filelist.xml" />
+    <Content Include="Patterns\KADRY.Pulpity HR\index_pliki\image001.jpg" />
+    <Content Include="Patterns\KADRY.Pulpity HR\index_pliki\image002.png" />
+    <Content Include="Patterns\KADRY.Pulpity HR\index_pliki\logo_enova365.png" />
+    <Content Include="Patterns\KADRY.Pulpity HR\index_pliki\style.css" />
+    <Content Include="Patterns\KADRY.Pulpity HR\index_pliki\Ulotka.png" />
+    <Content Include="Patterns\KADRY.Pulpity HR\kredka.png" />
+    <Content Include="Patterns\KADRY.Pulpity HR\respond.min.js" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\001.Podstawy.gold.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\001.Podstawy.silver.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\100.Handel.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\100.Kadry.gold.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\100.Kadry.silver.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\101.BazaDemo_Listy.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\101.Kadry.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\201.Cechy.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\202.CentraKosztow.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\203.DefinicjeDokumentow.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\204.SlownikOpisow.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\205.KontaSchematyZestawieniaKs.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\206.TaskDefinition.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\207.SchematyPodzialowe.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\208.UstawieniaListFormularzy.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\211.ZestawPodzielnikow.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\212.Pojazdy.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\212.Trasy.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\213.Kontrahenci.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\214.MatryceDokumentow.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\215.MatryceZaplat.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\216.EwidencjeSP.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\217.KosztRMK.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\218.SrodkiTrwale.xml" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\index.html" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\index_pliki\boil.css" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\index_pliki\bulb.png" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\index_pliki\logo_enova365.png" />
+    <Content Include="Patterns\KSIEGOWOSC.Rozbudowana konfiguracja ksiegowa\index_pliki\style.css" />
+    <Content Include="Patterns\PRODUKCJA.ProdukcjaNamiotow\001.Podstawy.xml" />
+    <Content Include="Patterns\PRODUKCJA.ProdukcjaNamiotow\002.Podstawy.gold.xml" />
+    <Content Include="Patterns\PRODUKCJA.ProdukcjaNamiotow\002.Podstawy.silver.xml" />
+    <Content Include="Patterns\PRODUKCJA.ProdukcjaNamiotow\100.Kadry.gold.xml" />
+    <Content Include="Patterns\PRODUKCJA.ProdukcjaNamiotow\100.Kadry.silver.xml" />
+    <Content Include="Patterns\PRODUKCJA.ProdukcjaNamiotow\101.BazaProd.xml" />
+    <Content Include="Patterns\PRODUKCJA.ProdukcjaNamiotow\101.BazaProd_Dokumenty.xml" />
+    <Content Include="Patterns\PRODUKCJA.ProdukcjaNamiotow\101.BazaProd_Listy.xml" />
+    <Content Include="Patterns\PRODUKCJA.ProdukcjaNamiotow\101.Kadry.xml" />
+    <Content Include="Patterns\PRODUKCJA.ProdukcjaNamiotow\102.BazaProd.Ksiega.xml" />
+    <Content Include="Patterns\PRODUKCJA.ProdukcjaNamiotow\index.html" />
+    <Content Include="Patterns\PRODUKCJA.ProdukcjaNamiotow\index_pliki\boil.css" />
+    <Content Include="Patterns\PRODUKCJA.ProdukcjaNamiotow\index_pliki\bulb.png" />
+    <Content Include="Patterns\PRODUKCJA.ProdukcjaNamiotow\index_pliki\image001.jpg" />
+    <Content Include="Patterns\PRODUKCJA.ProdukcjaNamiotow\index_pliki\image002.png" />
+    <Content Include="Patterns\PRODUKCJA.ProdukcjaNamiotow\index_pliki\logo_enova365.png" />
+    <Content Include="Patterns\PRODUKCJA.ProdukcjaNamiotow\index_pliki\style.css" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\001.Podstawy.xml" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\001.WfWorkflow_Dokument_kosztowy.xml" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\002.WfWorkflow_Weryfikacja_Faktury.xml" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\003.WfWorkflow_Wniosek_Urlopowy.xml" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\004.Features_Defs.xml" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\005.pracownicy i cechy.xml" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\006.StrukturaOrganizacyjna.xml" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\007.WfWorkflow_Zatrudnianie_pracownika.xml" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\100.Handel.xml" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\background1.png" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\index.html" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\index_pliki\boil.css" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\index_pliki\broszura_ikona_m.png" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\index_pliki\bulb.png" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\index_pliki\colorschememapping.xml" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\index_pliki\dalej.png" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\index_pliki\filelist.xml" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\index_pliki\gotowe.png" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\index_pliki\image001.jpg" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\index_pliki\image002.png" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\index_pliki\logo_enova365.png" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\index_pliki\moje_zadania.png" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\index_pliki\panel_workflow.png" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\index_pliki\panel_workflow_procesy.png" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\index_pliki\style.css" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\index_pliki\themedata.thmx" />
+    <Content Include="Patterns\KADRY.Pulpity HR\index_pliki\themedata.thmx" />
+    <Content Include="Patterns\HANDEL.HurtowniaMotoryzacyjna\index_pliki\themedata.thmx" />
+    <Content Include="Patterns\Budzet.Budzet\index_pliki\themedata.thmx" />
     <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
     <None Include="Properties\PublishProfiles\IISProfile1.pubxml" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\index_pliki\uruchom.png" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\index_pliki\wstecz.png" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\kredka.png" />
+    <Content Include="Patterns\Workflow.Procesy Workflow\respond.min.js" />
+    <Content Include="pdfium.dll" />
     <Content Include="Soneta.files.xml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -517,8 +843,13 @@
     <Error Condition="!Exists('packages\PdfiumViewer.Native.x86_64.no_v8-no_xfa.2018.3.18.254\build\PdfiumViewer.Native.x86_64.no_v8-no_xfa.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\PdfiumViewer.Native.x86_64.no_v8-no_xfa.2018.3.18.254\build\PdfiumViewer.Native.x86_64.no_v8-no_xfa.props'))" />
     <Error Condition="!Exists('packages\Soneta.GoogleServiceProvider.2.0.0\build\Soneta.GoogleServiceProvider.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Soneta.GoogleServiceProvider.2.0.0\build\Soneta.GoogleServiceProvider.props'))" />
     <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+    <Error Condition="!Exists('packages\System.Runtime.WindowsRuntime.4.6.0\build\net461\System.Runtime.WindowsRuntime.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\System.Runtime.WindowsRuntime.4.6.0\build\net461\System.Runtime.WindowsRuntime.targets'))" />
+    <Error Condition="!Exists('packages\System.Runtime.WindowsRuntime.UI.Xaml.4.6.0\build\net461\System.Runtime.WindowsRuntime.UI.Xaml.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\System.Runtime.WindowsRuntime.UI.Xaml.4.6.0\build\net461\System.Runtime.WindowsRuntime.UI.Xaml.targets'))" />
+    <Error Condition="!Exists('packages\Soneta.Handel.2112.5.7\build\Soneta.Handel.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Soneta.Handel.2112.5.7\build\Soneta.Handel.props'))" />
   </Target>
   <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <Import Project="packages\System.Runtime.WindowsRuntime.4.6.0\build\net461\System.Runtime.WindowsRuntime.targets" Condition="Exists('packages\System.Runtime.WindowsRuntime.4.6.0\build\net461\System.Runtime.WindowsRuntime.targets')" />
+  <Import Project="packages\System.Runtime.WindowsRuntime.UI.Xaml.4.6.0\build\net461\System.Runtime.WindowsRuntime.UI.Xaml.targets" Condition="Exists('packages\System.Runtime.WindowsRuntime.UI.Xaml.4.6.0\build\net461\System.Runtime.WindowsRuntime.UI.Xaml.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

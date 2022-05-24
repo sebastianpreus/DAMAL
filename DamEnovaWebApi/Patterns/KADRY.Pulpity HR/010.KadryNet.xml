@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session xmlns="http://www.soneta.pl/schema/business">
+	<CfgNode id="CfgNode_230" guid="00000000-9005-0010-0002-000000000000">
+		<Name>Pracownicy</Name>
+		<Parent>00000000-9005-0010-0000-000000000000</Parent>
+		<Type>Node</Type>
+		<Attributes />
+	</CfgNode>
+	<CfgNode id="CfgNode_232" guid="00000000-9005-0010-0002-000000000002">
+		<Parent>00000000-9005-0010-0002-000000000000</Parent>
+		<Name>Dane pracownika</Name>
+		<Type>Leaf</Type>
+		<Attributes>
+			<CfgAttribute id="CfgAttribute_732">
+				<Node>CfgNode_232</Node>
+				<Name>Adresy</Name>
+				<Type>_boolean</Type>
+				<StrValue>True</StrValue>
+				<MemoValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_737">
+				<Node>CfgNode_232</Node>
+				<Name>EdycjaKalendarza</Name>
+				<Type>_boolean</Type>
+				<StrValue>false</StrValue>
+				<MemoValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_731">
+				<Node>CfgNode_232</Node>
+				<Name>Ogolne</Name>
+				<Type>_boolean</Type>
+				<StrValue>true</StrValue>
+				<MemoValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_733">
+				<Node>CfgNode_232</Node>
+				<Name>Rodzina</Name>
+				<Type>_boolean</Type>
+				<StrValue>True</StrValue>
+				<MemoValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_736">
+				<Node>CfgNode_232</Node>
+				<Name>Uwagi</Name>
+				<Type>_boolean</Type>
+				<StrValue>True</StrValue>
+				<MemoValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_735">
+				<Node>CfgNode_232</Node>
+				<Name>Wykształcenie</Name>
+				<Type>_boolean</Type>
+				<StrValue>True</StrValue>
+				<MemoValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_734">
+				<Node>CfgNode_232</Node>
+				<Name>Zatrudnienie</Name>
+				<Type>_boolean</Type>
+				<StrValue>True</StrValue>
+				<MemoValue />
+			</CfgAttribute>
+		</Attributes>
+	</CfgNode>
+	<CfgNode id="CfgNode_231" guid="00000000-9005-0010-0002-000000000001">
+		<Name>Lista pracowników</Name>
+		<Parent>CfgNode_230</Parent>
+		<Type>Leaf</Type>
+		<Attributes>
+			<CfgAttribute id="CfgAttribute_730">
+				<Name>DaneKierownika</Name>
+				<Node>CfgNode_231</Node>
+				<Type>_boolean</Type>
+				<StrValue>true</StrValue>
+				<MemoValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_727">
+				<Name>WidokNiezatrudnieni</Name>
+				<Node>CfgNode_231</Node>
+				<Type>_boolean</Type>
+				<StrValue>True</StrValue>
+				<MemoValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_725">
+				<Name>WidokPracownicy</Name>
+				<Node>CfgNode_231</Node>
+				<Type>_boolean</Type>
+				<StrValue>true</StrValue>
+				<MemoValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_728">
+				<Name>WidokWłaściciele</Name>
+				<Node>CfgNode_231</Node>
+				<Type>_boolean</Type>
+				<StrValue>True</StrValue>
+				<MemoValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_729">
+				<Name>WidokWspółpracujący</Name>
+				<Node>CfgNode_231</Node>
+				<Type>_boolean</Type>
+				<StrValue>True</StrValue>
+				<MemoValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_726">
+				<Name>WidokZleceniobiorcy</Name>
+				<Node>CfgNode_231</Node>
+				<Type>_boolean</Type>
+				<StrValue>True</StrValue>
+				<MemoValue />
+			</CfgAttribute>
+		</Attributes>
+	</CfgNode>
+	<CfgNode id="CfgNode_233" guid="00000000-9005-0010-0003-000000000000">
+		<Parent>00000000-9005-0010-0000-000000000000</Parent>
+		<Name>Czas pracy</Name>
+		<Type>Node</Type>
+		<Attributes />
+	</CfgNode>
+	<CfgNode id="CfgNode_235" guid="00000000-9005-0010-0003-000000000002">
+		<Parent>00000000-9005-0010-0003-000000000000</Parent>
+		<Name>Wnioski urlopowe</Name>
+		<Type>Leaf</Type>
+		<Attributes>
+			<CfgAttribute id="CfgAttribute_748">
+				<Node>CfgNode_235</Node>
+				<Name>UrlopNaŻądanie</Name>
+				<Type>_boolean</Type>
+				<StrValue>False</StrValue>
+				<MemoValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_747">
+				<Node>CfgNode_235</Node>
+				<Name>WeryfikacjaLimitu</Name>
+				<Type>_boolean</Type>
+				<StrValue>True</StrValue>
+				<MemoValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_745">
+				<Node>CfgNode_235</Node>
+				<Name>WnioskiPracownikow</Name>
+				<Type>_boolean</Type>
+				<StrValue>True</StrValue>
+				<MemoValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_746">
+				<Node>CfgNode_235</Node>
+				<Name>WymiarUrlopuWDniach</Name>
+				<Type>_boolean</Type>
+				<StrValue>false</StrValue>
+				<MemoValue />
+			</CfgAttribute>
+		</Attributes>
+	</CfgNode>
+	<CfgNode id="CfgNode_228" guid="00000000-9005-0010-0000-000000000000">
+		<Name>Kadry NET</Name>
+		<Parent>00000000-9005-0000-0000-000000000000</Parent>
+		<Type>Node</Type>
+		<Attributes />
+	</CfgNode>
+	<CfgNode id="CfgNode_229" guid="00000000-9005-0010-0001-000000000000">
+		<Parent>00000000-9005-0010-0000-000000000000</Parent>
+		<Name>Ogólne</Name>
+		<Type>Leaf</Type>
+		<Attributes>
+			<CfgAttribute id="CfgAttribute_1880">
+				<Node>CfgNode_229</Node>
+				<Name>DomyślnyWidok</Name>
+				<Type>_int</Type>
+				<StrValue />
+				<MemoValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_1881">
+				<Node>CfgNode_229</Node>
+				<Name>DomyślnyWydział</Name>
+				<Type>_string</Type>
+				<StrValue />
+				<MemoValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_1882">
+				<Node>CfgNode_229</Node>
+				<Name>StrukturaPodległości</Name>
+				<Type>_string</Type>
+				<StrValue>Pulpity HR</StrValue>
+				<MemoValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_2289">
+				<Node>CfgNode_229</Node>
+				<Name>Uproszczone procesy kadrowe</Name>
+				<Type>_boolean</Type>
+				<StrValue>True</StrValue>
+				<MemoValue />
+			</CfgAttribute>
+		</Attributes>
+	</CfgNode>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0005-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0006-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0007-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0008-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0009-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0010-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0011-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0012-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0013-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0014-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0015-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0118-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0130-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0131-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0132-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0133-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0134-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0005-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0006-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0007-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0008-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0009-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0010-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0011-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0012-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0013-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0014-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0015-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0118-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0130-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0131-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0132-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0133-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0134-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0005-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0006-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0007-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0008-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0009-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0010-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0011-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0012-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0013-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0014-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0015-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0118-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0130-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0131-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0132-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0133-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+		<Source>DbTupleDefinition:00000000-0005-0013-0134-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+		<Source>StrukturyOrg:00000000-0001-0006-0010-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+		<Source>StrukturyOrg:00000000-0001-0006-0010-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+		<Source>StrukturyOrg:00000000-0001-0006-0010-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+		<Source>WFDefinition:00000000-0005-0031-0001-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+		<Source>WFDefinition:00000000-0005-0031-0001-000000000000</Source>
+	</Right>
+	<Right>
+		<Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+		<Source>WFDefinition:00000000-0005-0031-0001-000000000000</Source>
+	</Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0150-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0150-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0150-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0151-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0151-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0151-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0152-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0152-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0152-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0153-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0153-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0153-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0154-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0154-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0154-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0155-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0155-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0155-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0156-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0156-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0156-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0157-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0157-000000000000</Source>
+  </Right>
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+    <Source>DbTupleDefinition:00000000-0005-0013-0157-000000000000</Source>
+  </Right>
+</session>

@@ -23,56 +23,73 @@ namespace DamEnovaWebApi.Services
 
         internal void PostTowar(DamTowar damTowar)
         {
+            Towar towar = new Towar();
             using (Session session = Connection.enovalogin.CreateSession(false, false))
             {
                 TowaryModule tm = TowaryModule.GetInstance(session);
                 using (ITransaction trans = session.Logout(true))
                 {
-                    Towar towar = (Towar)tm.Towary.WgEAN[damTowar.EAN].GetNext();
-                    if (towar == null)
+                    if (damTowar.ID > 0)
                     {
-                        towar = new Towar();
+                        towar = tm.Towary[damTowar.ID];
+                    }
+                    else
                         tm.Towary.AddRow(towar);
-                    }
-                    FillTowar(towar, damTowar);
+
+
+                    towar.Kod = damTowar.Kod;
+                    //todo sprawdzić jak uzupełnić typ towaru
+                    //towar.Typ = TypTowaru.Produkt 
+                    towar.Nazwa = damTowar.Nazwa;
+                    towar.EAN = damTowar.EAN;
+                    towar.NumerKatalogowy = damTowar.NumerKatalogowy;
+                    //todo stawka vat sprzedaży i zakupu
+                    //towar.DefinicjaStawki = damTowar.DefinicjaStawkiVATSprzedazy;
+                    //towar.Jednostka = damTowar.Jednostka;
+                    towar.PKWiU = damTowar.PKWiU;
+
+                    towar.Features["T_TYP_SOP3"] = damTowar.T_TYP_SOP3;
+                    towar.Features["T_ID_SOP3"] = damTowar.T_ID_SOP3;
+                    towar.Features["T_NR_SOP3"] = damTowar.T_NR_SOP3;
+                    towar.Features["T_Nr_rys"] = damTowar.T_Nr_rys;
+                    towar.Features["T_Material_wyjsc"] = damTowar.T_Material_wyjsc;
+                    towar.Features["T_SAP"] = damTowar.T_SAP;
+                    towar.Features["T_Poz_kat_Bamet"] = damTowar.T_Poz_kat_Bamet;
+                    towar.Features["T_Uwagi"] = damTowar.T_Uwagi;
+                    towar.Features["T_Uwagi_wew"] = damTowar.T_Uwagi_wew;
+                    towar.Features["T_Kontrolka"] = damTowar.T_Kontrolka;
+                    towar.Features["T_Cecha"] = damTowar.T_Cecha;
+                    towar.Features["T_Rodzaj_Kategoria"] = damTowar.T_Rodzaj_Kategoria;
+                    towar.Features["T_Gatunek_Prod"] = damTowar.T_Gatunek_Prod;
+                    towar.Features["T_Grupa"] = damTowar.T_Grupa;
+                    //towar.Features["T_Rodzina"] = damTowar.T_Rodzina; //todo pojawia się błąd że nie może przyjmować wartości "1515" (jako string)
+
                     trans.Commit();
                 }
                 session.Save();
+                damTowar.ID = towar.ID;
             }
         }
 
-        internal void PutTowar(DamTowar damTowar)
+        internal void DeleteBlokadaTowaru(int id)
         {
             using (Session session = Connection.enovalogin.CreateSession(false, false))
             {
                 TowaryModule tm = TowaryModule.GetInstance(session);
+
                 using (ITransaction trans = session.Logout(true))
                 {
-                    Towar towar = (Towar)tm.Towary.WgEAN[damTowar.EAN].GetNext();
-                    if (towar != null)
+                    Towar towar = new Towar();
+
+                    if (id > 0)
                     {
-                        FillTowar(towar, damTowar);
+                        towar = tm.Towary[id];
+                        towar.Blokada = true;
                     }
                     trans.Commit();
                 }
                 session.Save();
             }
-        }
-
-        private void FillTowar(Towar towar, DamTowar damTowar)
-        {
-            towar.Kod = damTowar.Kod;
-            //todo sprawdzić jak uzupełnić typ towaru
-            //towar.Typ = TypTowaru.Produkt 
-            towar.Nazwa = damTowar.Nazwa;
-            towar.EAN = damTowar.EAN;
-            towar.NumerKatalogowy = damTowar.NumerKatalogowy;
-            //todo stawka vat sprzedaży i zakupu
-            //towar.DefinicjaStawki = damTowar.DefinicjaStawkiVATSprzedazy;
-            //towar.Jednostka = damTowar.Jednostka;
-            towar.PKWiU = damTowar.PKWiU;
-
-
         }
     }
 }

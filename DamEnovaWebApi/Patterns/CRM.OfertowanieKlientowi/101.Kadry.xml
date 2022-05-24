@@ -1,0 +1,1683 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session fromto="(wszystko)">
+  <Dodatek id="Dodatek_2" guid="173f570d-14b0-403a-83df-02cf2fb827ff">
+    <Pracownik>fa6e98aa-d7bf-4266-aec9-0e7214fb4fbf</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_2">
+        <Dodatek>Dodatek_2</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_5" guid="30b6dc19-9186-4a7d-aadb-204b66fa7c76">
+    <Pracownik>47fb21dc-a45d-455d-a7be-2c68241975fd</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_5">
+        <Dodatek>Dodatek_5</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_8" guid="fc7d0670-1efd-4028-9924-34b9bd2ac331">
+    <Pracownik>071bbcab-50b8-4d01-9042-97446c280b8a</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_8">
+        <Dodatek>Dodatek_8</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_11" guid="78b68dcd-4457-461f-a98d-29e2e8c39f2b">
+    <Pracownik>ddaac635-a1fe-4662-9dd9-ef29d269fce0</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_11">
+        <Dodatek>Dodatek_11</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_14" guid="efb2e9d2-9f4b-4f8b-851b-aee4197d55ea">
+    <Pracownik>92ee52c3-3171-4c24-bd00-884ebd11d6a9</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_14">
+        <Dodatek>Dodatek_14</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_17" guid="fe909057-10bb-465e-b0d6-237798dda96c">
+    <Pracownik>b73a41c7-6149-47ce-960c-f7d959c51e51</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_17">
+        <Dodatek>Dodatek_17</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_20" guid="5fbbf0ff-9957-46ec-af4e-9668d35a426b">
+    <Pracownik>c82d45a1-477b-4427-912c-2e5d70cc23de</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_20">
+        <Dodatek>Dodatek_20</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_23" guid="26bd2802-a60b-4f4c-a0e5-b3b65e643574">
+    <Pracownik>0ca4d845-f771-40db-a0d6-cf466bbe7d67</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_23">
+        <Dodatek>Dodatek_23</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_26" guid="11263e13-5b1b-4155-b063-0cf393a9ba09">
+    <Pracownik>5e762f01-8956-404b-b493-6904d136a69e</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_26">
+        <Dodatek>Dodatek_26</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_29" guid="11caf687-0c76-4676-a0b4-7234a342843b">
+    <Pracownik>c2af312a-d40c-41fc-921f-b3029506cdd7</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_29">
+        <Dodatek>Dodatek_29</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_32" guid="e9efab44-29a5-4f89-a75c-a171beb27349">
+    <Pracownik>552e3251-21ee-4b28-935a-360488b24835</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_32">
+        <Dodatek>Dodatek_32</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_35" guid="103502fa-3479-42a9-b33b-a926b569d285">
+    <Pracownik>98096b65-7d50-421b-ab43-efb3af3efaa1</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_35">
+        <Dodatek>Dodatek_35</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_38" guid="f7da8697-8cd7-4c65-905a-b0e3af90dd74">
+    <Pracownik>ed545be8-65ed-4ef7-863c-96d12551ee86</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_38">
+        <Dodatek>Dodatek_38</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_41" guid="3acd8a4f-2be9-4aed-8365-31255c539a10">
+    <Pracownik>c2dc7f29-d427-4960-b5ea-e381d96bf4e3</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_41">
+        <Dodatek>Dodatek_41</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_44" guid="d30dbd34-c3fe-4e7c-aec1-44b0e00a9b02">
+    <Pracownik>43b8b29f-55fa-4710-a3c3-f21e325c0114</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_44">
+        <Dodatek>Dodatek_44</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_47" guid="4847917e-97ac-43e1-b4b7-c1b1c9bec37f">
+    <Pracownik>f2816459-8799-44cf-a455-b221c0aef222</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_47">
+        <Dodatek>Dodatek_47</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_50" guid="a8801c55-1169-4db5-8645-a0c6e4bb5e01">
+    <Pracownik>21d17cd9-c5fd-41bd-9314-78f1a5ca410e</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_50">
+        <Dodatek>Dodatek_50</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_53" guid="08ea6167-6c51-4ff5-b36b-6d671a01e8c1">
+    <Pracownik>096ddb93-56ed-4f91-b26b-49bc4518a5e5</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_53">
+        <Dodatek>Dodatek_53</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_56" guid="46a5984b-a6f5-4264-87b1-4e5b7cff4dd1">
+    <Pracownik>101d01ee-b422-47c7-8a59-34b66063e211</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_56">
+        <Dodatek>Dodatek_56</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_59" guid="109300b2-9d5a-4b5d-80bd-687d2935f80a">
+    <Pracownik>b5af7068-7e0d-4c4e-8633-382a124dd6c0</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_59">
+        <Dodatek>Dodatek_59</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_62" guid="72203152-bf11-408f-ab1f-decdbf051af2">
+    <Pracownik>76e06a80-699d-429d-a8d8-4e82d820ecb0</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_62">
+        <Dodatek>Dodatek_62</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_65" guid="5560bca4-06db-4a2b-baf8-d18fb90a69ba">
+    <Pracownik>6777f712-01fd-42f7-bfd0-7298549ebcb7</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_65">
+        <Dodatek>Dodatek_65</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_68" guid="d7c45a58-0623-4902-9b0a-851c12c0e467">
+    <Pracownik>732aa7f0-ef5c-4175-a2fa-98345eaa90ff</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_68">
+        <Dodatek>Dodatek_68</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_71" guid="d7b69120-31ef-49fd-b628-632285a1a8bd">
+    <Pracownik>f642b4ca-bb76-42c1-be8b-59d65b82b680</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_71">
+        <Dodatek>Dodatek_71</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_74" guid="0b0608db-987b-439c-8a90-9a2c8b86fa5c">
+    <Pracownik>e74d9609-e8fa-44bf-8924-d1146e8303b4</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_74">
+        <Dodatek>Dodatek_74</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_77" guid="bb738e1d-6b74-4382-bea6-92dbe597bed1">
+    <Pracownik>bbc01b84-182c-4401-ad1a-9a012fd7122c</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_77">
+        <Dodatek>Dodatek_77</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_80" guid="1676b798-1d90-4644-b0c4-95dad674cb7f">
+    <Pracownik>38dc08cf-d169-4b52-93e5-f2905da337b1</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_80">
+        <Dodatek>Dodatek_80</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_83" guid="33bc88f6-e3fa-4d34-8f1c-ddccefbd9f0d">
+    <Pracownik>d6e99852-5b79-4d4a-809f-4af7aee47839</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_83">
+        <Dodatek>Dodatek_83</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_86" guid="9eb9a1cb-4c54-4c9d-9b30-bc02a271c8ea">
+    <Pracownik>0aa5c857-9fb4-44a5-81c8-5d8638ccfe9b</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_86">
+        <Dodatek>Dodatek_86</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_89" guid="579b6e2a-f8c2-483e-916c-bf452f69f7fb">
+    <Pracownik>246f39e1-8404-4431-a477-e26286e99802</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_89">
+        <Dodatek>Dodatek_89</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_92" guid="e1c711fb-6e92-44df-add5-5df521529d9f">
+    <Pracownik>7750cdf5-5c2a-449a-a922-0dfb179b0947</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_92">
+        <Dodatek>Dodatek_92</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_95" guid="25f0dfd0-4952-4947-a495-1e9899de1721">
+    <Pracownik>f052f208-117a-4fa1-9faf-eabe16f2f359</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_95">
+        <Dodatek>Dodatek_95</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_98" guid="086ab003-c207-4b08-93b1-3ac46d57e9bd">
+    <Pracownik>e114b48e-8eee-48d5-8012-fda6b6866581</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_98">
+        <Dodatek>Dodatek_98</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_101" guid="f424f9f4-9f9c-483e-a1a6-bc8a60f8c795">
+    <Pracownik>27420ee1-72a7-4006-9f7c-7a8339665a50</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_101">
+        <Dodatek>Dodatek_101</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_104" guid="d3ee655b-6855-4920-aafa-4853f3021fc7">
+    <Pracownik>f763a49c-61f0-4a17-9473-e51f0f761862</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_104">
+        <Dodatek>Dodatek_104</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_107" guid="11bb68e0-3a72-4374-bd6f-6f9cf49705e1">
+    <Pracownik>3d9d0283-c572-4833-bf80-302050e5cc17</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_107">
+        <Dodatek>Dodatek_107</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_110" guid="e5ea2a5e-73aa-4032-99f0-f7758471c59b">
+    <Pracownik>ac1a9b03-f1ca-4faf-a1c1-f2b76c3cbcac</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_110">
+        <Dodatek>Dodatek_110</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_113" guid="b93edd75-7c24-4a16-8f5d-a853034aa876">
+    <Pracownik>4d4848c1-5721-4fdd-ae63-5854efde52cb</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_113">
+        <Dodatek>Dodatek_113</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_116" guid="bc7fb149-b0a2-47ca-84b2-d60b8d8d708f">
+    <Pracownik>6a531f15-7db8-4a83-99d6-ea295c5d65b9</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_116">
+        <Dodatek>Dodatek_116</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_119" guid="4826ea2c-5f44-4a85-b968-56d79b1e3915">
+    <Pracownik>0ee5b685-9329-4c98-91ba-b5fd3dc04049</Pracownik>
+    <Powiazanie />
+    <Nazwa>Premia</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_119">
+        <Dodatek>Dodatek_119</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>c9c3dc52-be71-4b8f-b89b-728d83cd4a9a</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>100.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_1" guid="c5c1c34b-316b-4ea2-a21e-7a8c7b7579c6">
+    <Pracownik>fa6e98aa-d7bf-4266-aec9-0e7214fb4fbf</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_1">
+        <Dodatek>Dodatek_1</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_4" guid="e95b73c6-9fe8-43ed-9d9b-851868f0ef58">
+    <Pracownik>47fb21dc-a45d-455d-a7be-2c68241975fd</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_4">
+        <Dodatek>Dodatek_4</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_7" guid="50bf78b4-75bc-4675-abc7-3c8bd8d272b3">
+    <Pracownik>071bbcab-50b8-4d01-9042-97446c280b8a</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_7">
+        <Dodatek>Dodatek_7</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_10" guid="8b4f6267-47a7-49df-964c-43dd5726db18">
+    <Pracownik>ddaac635-a1fe-4662-9dd9-ef29d269fce0</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_10">
+        <Dodatek>Dodatek_10</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_13" guid="d452058a-11df-4b4e-9fa5-b5c46e8c40cb">
+    <Pracownik>92ee52c3-3171-4c24-bd00-884ebd11d6a9</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_13">
+        <Dodatek>Dodatek_13</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_16" guid="43d00331-dc21-4d7f-8d7e-b5c671b2528c">
+    <Pracownik>b73a41c7-6149-47ce-960c-f7d959c51e51</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_16">
+        <Dodatek>Dodatek_16</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_19" guid="2a5252f4-296a-47f6-b15e-7ebd3886a15e">
+    <Pracownik>c82d45a1-477b-4427-912c-2e5d70cc23de</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_19">
+        <Dodatek>Dodatek_19</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_22" guid="a2e0d657-d495-4dc8-aded-cd588be4dbdf">
+    <Pracownik>0ca4d845-f771-40db-a0d6-cf466bbe7d67</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_22">
+        <Dodatek>Dodatek_22</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_25" guid="9677bdcc-e970-4f5e-afe7-ac62ef43e391">
+    <Pracownik>5e762f01-8956-404b-b493-6904d136a69e</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_25">
+        <Dodatek>Dodatek_25</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_28" guid="1d6232a9-0122-4de0-aa5b-745492772e5a">
+    <Pracownik>c2af312a-d40c-41fc-921f-b3029506cdd7</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_28">
+        <Dodatek>Dodatek_28</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_31" guid="283195df-d1a0-4dbc-862c-ee42d1e89d47">
+    <Pracownik>552e3251-21ee-4b28-935a-360488b24835</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_31">
+        <Dodatek>Dodatek_31</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_34" guid="38349939-e707-4943-8a66-89a4b7aaeb63">
+    <Pracownik>98096b65-7d50-421b-ab43-efb3af3efaa1</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_34">
+        <Dodatek>Dodatek_34</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_37" guid="9f8de9cd-5f55-4341-aa09-b30b1c6e7f0e">
+    <Pracownik>ed545be8-65ed-4ef7-863c-96d12551ee86</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_37">
+        <Dodatek>Dodatek_37</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_40" guid="d97b7b77-39e6-4a63-929d-161e0810f97b">
+    <Pracownik>c2dc7f29-d427-4960-b5ea-e381d96bf4e3</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_40">
+        <Dodatek>Dodatek_40</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_43" guid="fc9b1f06-4d70-431b-8479-b8fa0971df73">
+    <Pracownik>43b8b29f-55fa-4710-a3c3-f21e325c0114</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_43">
+        <Dodatek>Dodatek_43</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_46" guid="a3202c5e-a590-4849-a0a0-675326861607">
+    <Pracownik>f2816459-8799-44cf-a455-b221c0aef222</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_46">
+        <Dodatek>Dodatek_46</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_49" guid="6c57921c-0761-4df3-aff4-f777652c7373">
+    <Pracownik>21d17cd9-c5fd-41bd-9314-78f1a5ca410e</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_49">
+        <Dodatek>Dodatek_49</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_52" guid="d62768f4-e071-499c-9b29-04e0b273458e">
+    <Pracownik>096ddb93-56ed-4f91-b26b-49bc4518a5e5</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_52">
+        <Dodatek>Dodatek_52</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_55" guid="1daedcc4-c085-4149-93a1-f07a7c751949">
+    <Pracownik>101d01ee-b422-47c7-8a59-34b66063e211</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_55">
+        <Dodatek>Dodatek_55</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_58" guid="0a0b0aa9-e5df-4eaa-a535-f379f2933083">
+    <Pracownik>b5af7068-7e0d-4c4e-8633-382a124dd6c0</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_58">
+        <Dodatek>Dodatek_58</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_61" guid="4591b0e2-6052-4a2f-9fd2-96c576442830">
+    <Pracownik>76e06a80-699d-429d-a8d8-4e82d820ecb0</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_61">
+        <Dodatek>Dodatek_61</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_64" guid="6e53bce2-e3b6-4c65-840a-a49a84333a6c">
+    <Pracownik>6777f712-01fd-42f7-bfd0-7298549ebcb7</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_64">
+        <Dodatek>Dodatek_64</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_67" guid="2757d5a6-ab4b-473b-b1bf-374f11170d09">
+    <Pracownik>732aa7f0-ef5c-4175-a2fa-98345eaa90ff</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_67">
+        <Dodatek>Dodatek_67</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_70" guid="302968e0-b6fc-405b-9c61-1c0a3a74059f">
+    <Pracownik>f642b4ca-bb76-42c1-be8b-59d65b82b680</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_70">
+        <Dodatek>Dodatek_70</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_73" guid="90742669-e93d-41ba-b76d-c0e8900fbad1">
+    <Pracownik>e74d9609-e8fa-44bf-8924-d1146e8303b4</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_73">
+        <Dodatek>Dodatek_73</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_76" guid="666910c2-c395-406c-987c-1705833f1e0a">
+    <Pracownik>bbc01b84-182c-4401-ad1a-9a012fd7122c</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_76">
+        <Dodatek>Dodatek_76</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_79" guid="1065a5b2-f320-43b6-b331-ff881a58981a">
+    <Pracownik>38dc08cf-d169-4b52-93e5-f2905da337b1</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_79">
+        <Dodatek>Dodatek_79</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_82" guid="d238613c-bec7-44aa-ae5a-4d11154f518b">
+    <Pracownik>d6e99852-5b79-4d4a-809f-4af7aee47839</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_82">
+        <Dodatek>Dodatek_82</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_85" guid="be688f91-f9be-4434-9e08-6de168dc4593">
+    <Pracownik>0aa5c857-9fb4-44a5-81c8-5d8638ccfe9b</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_85">
+        <Dodatek>Dodatek_85</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_88" guid="476aeefd-6176-42b4-894d-da889021a781">
+    <Pracownik>246f39e1-8404-4431-a477-e26286e99802</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_88">
+        <Dodatek>Dodatek_88</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_91" guid="7d2eb64b-9d75-423e-9b94-a2c7833027ab">
+    <Pracownik>7750cdf5-5c2a-449a-a922-0dfb179b0947</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_91">
+        <Dodatek>Dodatek_91</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_94" guid="75fdd9f0-625d-4334-99d9-c8d328efce83">
+    <Pracownik>f052f208-117a-4fa1-9faf-eabe16f2f359</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_94">
+        <Dodatek>Dodatek_94</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_97" guid="27ee8432-5a4a-4fe0-a049-db9f4690f26d">
+    <Pracownik>e114b48e-8eee-48d5-8012-fda6b6866581</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_97">
+        <Dodatek>Dodatek_97</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_100" guid="40465148-df67-4319-b0bf-4ed03a5a8d89">
+    <Pracownik>27420ee1-72a7-4006-9f7c-7a8339665a50</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_100">
+        <Dodatek>Dodatek_100</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_103" guid="52ec1b8f-8170-47ea-81e6-073e837c0299">
+    <Pracownik>f763a49c-61f0-4a17-9473-e51f0f761862</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_103">
+        <Dodatek>Dodatek_103</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_106" guid="b758990c-2aae-4526-ad20-721716c8d8af">
+    <Pracownik>3d9d0283-c572-4833-bf80-302050e5cc17</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_106">
+        <Dodatek>Dodatek_106</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_109" guid="a9a18dac-3350-40da-8630-03cdf1e96a34">
+    <Pracownik>ac1a9b03-f1ca-4faf-a1c1-f2b76c3cbcac</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_109">
+        <Dodatek>Dodatek_109</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_112" guid="512d8911-d85a-4343-bd42-1effe6388c1d">
+    <Pracownik>4d4848c1-5721-4fdd-ae63-5854efde52cb</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_112">
+        <Dodatek>Dodatek_112</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_115" guid="ce08bf0f-8ff1-4edb-845b-c42b654b5324">
+    <Pracownik>6a531f15-7db8-4a83-99d6-ea295c5d65b9</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_115">
+        <Dodatek>Dodatek_115</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_118" guid="d19ef0b2-bf94-41da-ae8c-807e8a3bcb7b">
+    <Pracownik>0ee5b685-9329-4c98-91ba-b5fd3dc04049</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <Historia>
+      <DodHistoria id="DodHistoria_118">
+        <Dodatek>Dodatek_118</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+</session>

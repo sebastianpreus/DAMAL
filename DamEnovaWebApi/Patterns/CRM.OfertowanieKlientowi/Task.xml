@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session xmlns="http://www.soneta.pl/schema/business">
+  <TaskDefinition id="TaskDefinition_17" guid="e536e15f-b027-4de8-ba84-b116de886f74">
+    <TableName>Zadania</TableName>
+    <Name>ProcesPotencjalnyKlient</Name>
+    <FormatedName>ProcesPotencjalnyKlient</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>None</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>True</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_ProcesPotencjalnyKlient : TaskCalculatorZadania {
+
+public Task_ProcesPotencjalnyKlient() { }
+public Task_ProcesPotencjalnyKlient(Task t)
+{
+task = t;
+row = (GuidedRow)t.Parent;
+definition = t.Definition;
+}
+//** begin enable condition **
+public override bool IsEnable() { 
+	
+	
+	return Row.Features.GetDate("Data Kolejnego Kroku")!=null; 
+}
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() { 
+	return true; 
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() { 
+
+if(Row.Definicja.Symbol!="PKL")
+return true;
+
+
+	if(Row.Definicja.Symbol=="PKL" &amp;&amp; Row.Uwagi!="")
+	{
+	Row.Opis= "=========="+Row.Wykonujacy.FullName+";  " +Date.Today +"; "+ Row.StanZadania.Nazwa +"========== &lt;br/&gt;"+  Row.Uwagi + " &lt;br /&gt;&lt;br/&gt;"+ Row.Opis; 
+		Row.Uwagi="";
+	Row.Features["Generuj zdarzenie"]=false;
+		
+	}
+	return !Row.Aktywny ;
+	
+} 
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin action **
+public override void Action()
+{
+Task.Name="Potencjalny klient " + Row.Kontrahent.Kod; 
+Task.StartDate= Row.Features.GetDate("Data Kolejnego Kroku");
+Task.EndDate=Row.Features.GetDate("Data Kolejnego Kroku");
+Task.StartTime=Row.Features.GetTime("Godzina Kolejnego Kroku") ;      
+Task.EndTime=Row.Features.GetTime("Godzina Kolejnego Kroku")       ;
+
+Task.Operator=Row.Wykonujacy;  
+Task.NotificationDate=    Row.Features.GetDate("Data Kolejnego Kroku");
+Task.NotificationTime = Row.Features.GetTime("Godzina Kolejnego Kroku");        
+
+
+}
+
+//** end action **
+
+//** begin other methods **
+
+//** end other methods **
+
+}
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>Auto</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_18">
+        <TaskDefinition>TaskDefinition_17</TaskDefinition>
+        <TableName>Zadania</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { Zadanie };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// Zadanie : Zadanie - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu Zadanie,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+</session>

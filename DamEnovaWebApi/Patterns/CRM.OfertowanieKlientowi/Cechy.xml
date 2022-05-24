@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session xmlns="http://www.soneta.pl/schema/business">
+  <FeatureDefinition id="FeatureDefinition_8" guid="d9c6fc2d-a9c4-4306-88e7-ab531727d446">
+    <TableName>Zadania</TableName>
+    <Name>Bufor inicjowania opisu</Name>
+    <Category />
+    <Description />
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DBSet</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code>public string Feature_Bufor_inicjowania_opisu(string value) {
+  if(Row.Definicja.Symbol=="KONPKL")
+  Row.Opis=value;
+  
+  
+      return value;
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// Row: Zadanie - Wiersz przeliczanej cechy
+// Table: Zadania - Tabela wiersza przeliczanej cechy
+// Module: ZadaniaModule - Moduł, w którym znajduje się tabela
+// Session: Session - Obiekt sesji dający dostęp do wszystkich danych programu
+</Code>
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_9" guid="016a0219-ca88-4229-8890-2a9e1e5f150f">
+    <TableName>Zadania</TableName>
+    <Name>Data Kolejnego Kroku</Name>
+    <Category />
+    <Description />
+    <TypeNumber>Date</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DBSet</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code>public Date Feature_Data_Kolejnego_Kroku(Date value) {
+    // Tutaj umieść kod wywoływany przed ustawieniem wartości cechy
+    // Wartość value można zmieniać
+           Row.DataOd=Soneta.Types.Date.Empty;
+           Row.DataDo=Soneta.Types.Date.Empty;
+           Row.CzasOd=Row.CzasDo;
+           Row.DataOd=value;
+	Row.DataDo=value;
+    return value;
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// Row: Zadanie - Wiersz przeliczanej cechy
+// Table: Zadania - Tabela wiersza przeliczanej cechy
+// Module: ZadaniaModule - Moduł, w którym znajduje się tabela
+// Session: Session - Obiekt sesji dający dostęp do wszystkich danych programu
+</Code>
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_10" guid="bd3acf35-547f-4dbe-9952-be10728d8286">
+    <TableName>Zadania</TableName>
+    <Name>Generuj zdarzenie</Name>
+    <Category />
+    <Description />
+    <TypeNumber>Bool</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_11" guid="0e6a2b57-e12d-41e7-8a20-93d71ba36acd">
+    <TableName>Zadania</TableName>
+    <Name>Godzina Kolejnego Kroku</Name>
+    <Category />
+    <Description />
+    <TypeNumber>Time</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_12" guid="f427dc39-b1fc-4e17-948f-bc3e131b46c2">
+    <TableName>Zadania</TableName>
+    <Name>Mozliwa Data Zakonczenia</Name>
+    <Category />
+    <Description />
+    <TypeNumber>Date</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_14" guid="1c0ee14f-ff86-4926-98fa-f518bced3c0d">
+    <TableName>Zadania</TableName>
+    <Name>Prawdopodobienstwo Sukcesu</Name>
+    <Category />
+    <Description />
+    <TypeNumber>Percent</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_15" guid="456e1002-9af5-4ab9-bf20-f8d8ceec6a48">
+    <TableName>Zadania</TableName>
+    <Name>Zamknij</Name>
+    <Category />
+    <Description />
+    <TypeNumber>Bool</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>GetSet</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code>public bool Feature_Zamknij {
+    get {
+        // Tutaj umieść kod wyliczajacy wartość cechy
+        return !Row.Aktywny;
+    }
+    set {
+    
+           Row.DataOd=Soneta.Types.Date.Empty;
+           Row.DataDo=Soneta.Types.Date.Empty;
+           Row.CzasOd=Row.CzasDo;
+           Row.DataOd=Soneta.Types.Date.Today;
+    Row.DataDo=Soneta.Types.Date.Today;
+
+     foreach(Soneta.Zadania.StanZadania stanz in Row.Definicja.Stany)
+        {
+        if(stanz.Lp == Row.StanZadania.Lp+1)
+            Row.StanZadania=stanz; 
+
+    }   
+        // Tutaj umieść kod wywoływany na ustawienie wartości cechy
+        // W zmiennej value znajduje się ustawiana wartość cechy
+    }
+}
+
+bool IsReadOnlyZamknij()
+{
+return !Row.Aktywny;
+
+}
+
+
+
+// W kodzie możesz używać następujacych zmiennych:
+// Row: Zadanie - Wiersz przeliczanej cechy
+// Table: Zadania - Tabela wiersza przeliczanej cechy
+// Module: ZadaniaModule - Moduł, w którym znajduje się tabela
+// Session: Session - Obiekt sesji dający dostęp do wszystkich danych programu
+</Code>
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_16" guid="64051204-8e3b-4e01-8425-a427da7b33c8">
+    <TableName>Zadania</TableName>
+    <Name>ZrodloDanychOPKL</Name>
+    <Category />
+    <Description />
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>ZrodloDanychOP</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_17" guid="af75eed7-4a59-4eb6-a47e-8d9d0db51150">
+    <TableName>StanyZadania</TableName>
+    <Name>Kolejny krok</Name>
+    <Category />
+    <Description />
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <Info />
+  </FeatureDefinition>
+</session>

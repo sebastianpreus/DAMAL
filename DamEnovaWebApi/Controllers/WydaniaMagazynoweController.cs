@@ -31,7 +31,7 @@ namespace DamEnovaWebApi.Controllers
             _connection.ConnectToEnova();
         }
 
-        public IHttpActionResult GetWydaniaMagazynowe(ODataQueryOptions<DamWydanieMagazynowe> queryOptions)
+        public IHttpActionResult GetWydaniaMagazynowe(ODataQueryOptions<DamWydanieMagazynowe> queryOptions) 
         {
             // validate the query.
             try
@@ -104,6 +104,19 @@ namespace DamEnovaWebApi.Controllers
                 return Content(HttpStatusCode.InternalServerError, "Wydanie magazynowe - błąd podczas tworzenia dokumentu: " + ex.Message);
             }
             return Created(damWydanieMagazynowe);
+        }
+
+        public IHttpActionResult Delete([FromODataUri] int key)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            WydaniaMagazynoweService wydaniaMagazynoweService = new WydaniaMagazynoweService();
+            wydaniaMagazynoweService.DeleteWydanieMagazynowe(key);
+
+            return Ok();
         }
 
         private IHttpActionResult Ok(object content, Type type)

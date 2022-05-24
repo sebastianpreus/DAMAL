@@ -1,0 +1,3873 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session xmlns="http://www.soneta.pl/schema/business">
+  <FeatureDefinition id="FeatureDefinition_1" guid="243b2587-485c-4339-a4d3-605970da2db0">
+    <TableName>DefElementow</TableName>
+    <Name>Nagroda roczna</Name>
+    <Category />
+    <Description />
+    <TypeNumber>Bool</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr>0</InitValueStr>
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <Info />
+  </FeatureDefinition>
+<DefinicjaElementu id="DefinicjaElementu_1836" guid="bb33b38a-5d8d-4c7e-8129-ee20face0ec4">
+    <Podstawowa />
+    <Wydzial />
+    <RodzajZrodla>Dodatek</RodzajZrodla>
+    <Nazwa>Nagroda jubileuszowa</Nazwa>
+    <NazwaPomocnicza />
+    <Skrot>Nagr.jubi</Skrot>
+    <Kod />
+    <Blokada>False</Blokada>
+    <Kolejnosc>150</Kolejnosc>
+    <Zatrudnienie>Etat</Zatrudnienie>
+    <DefinicjaListyPlac />
+    <Zakres />
+    <OkresNaliczania>
+      <Naliczanie>PłatnaZDołu</Naliczanie>
+      <Opoznienie>0</Opoznienie>
+      <Typ>CoNMiesięcy</Typ>
+      <Ilosc>1</Ilosc>
+    </OkresNaliczania>
+    <Algorytm>
+      <Priorytet>0</Priorytet>
+      <Potracenie>False</Potracenie>
+      <Typ>KreatorAlgorytmu</Typ>
+      <KreatorAlgorytmu>
+        <PodstawaTyp>ZasadniczeNominalne</PodstawaTyp>
+        <PodstawaNazwa />
+        <Proporcjonalnie>False</Proporcjonalnie>
+        <SposobProporcjonalnosci>NiePomniejszany</SposobProporcjonalnosci>
+        <PodstawaZa>NieZależyOdCzasu</PodstawaZa>
+        <Wspolczynnik>
+          <Typ>ZależnyOdStażuPracy</Typ>
+          <Wskaznik>False</Wskaznik>
+          <NazwaWskaznika />
+          <PracaWFirmie>True</PracaWFirmie>
+          <PracaNaDzien>OstatniDzieńOkresu</PracaNaDzien>
+          <PodstawaStazu />
+        </Wspolczynnik>
+        <Czas>
+          <Typ>NieUwzględniaj</Typ>
+          <Strefa />
+        </Czas>
+        <Korekta>
+          <Odchylki>False</Odchylki>
+          <Nieusprawiedliwione>NiePomniejsza</Nieusprawiedliwione>
+          <Usprawiedliwione>NiePomniejsza</Usprawiedliwione>
+          <Platne>NiePomniejsza</Platne>
+          <Macierzynske>NiePomniejsza</Macierzynske>
+          <Rehabilitacyjne>NiePomniejsza</Rehabilitacyjne>
+          <Opiekuncze>NiePomniejsza</Opiekuncze>
+          <Chorobowe>NiePomniejsza</Chorobowe>
+          <Wychowawcze>NiePomniejsza</Wychowawcze>
+          <OgraniczeniePomniejszen>False</OgraniczeniePomniejszen>
+        </Korekta>
+      </KreatorAlgorytmu>
+      <JakUrlopWypoczynkowy />
+      <JakUrlopOkolicznosciowy />
+      <JakEkwiwalentZaUrlop>
+        <WgWymiaruEtatu>False</WgWymiaruEtatu>
+        <DefinicjaLimitu />
+      </JakEkwiwalentZaUrlop>
+      <Edytor />
+      <JakChorobowe>
+        <Zatrudnienie>0</Zatrudnienie>
+      </JakChorobowe>
+      <Klasa>
+        <Nazwa />
+      </Klasa>
+      <ZaNieobecnosc>
+        <Macierzynskiego>False</Macierzynskiego>
+        <Rehabilitacyjnego>False</Rehabilitacyjnego>
+        <Opiekunczego>False</Opiekunczego>
+        <Chorobowego>False</Chorobowego>
+      </ZaNieobecnosc>
+      <PomniejszeniaIOdchylki />
+      <Liczba>0</Liczba>
+      <Podstawa>0.00 PLN</Podstawa>
+      <Ulamek>0/1</Ulamek>
+      <Czas>0:00</Czas>
+      <Dni>0</Dni>
+      <DodPodstawa />
+      <DodUlamek />
+      <DodProcent />
+      <DodWspolczynnik />
+      <DodCzas />
+      <DodDni />
+      <ElPodglad>False</ElPodglad>
+      <ElPodstawa1 />
+      <ElPodstawa2 />
+      <ElPodstawa3 />
+      <ElUlamek />
+      <ElProcent />
+      <ElWspolczynnik />
+      <ElCzas />
+      <ElDni />
+      <ElIlosc />
+      <Umowa>
+        <TypWartosci>Dowolny</TypWartosci>
+        <RodzajRozliczenia>Dowolny</RodzajRozliczenia>
+      </Umowa>
+    </Algorytm>
+    <Deklaracje>
+      <PozycjaPIT>00000000-0007-0004-0001-000000000000</PozycjaPIT>
+      <OpisNaPIT8C />
+      <Priorytet>0</Priorytet>
+      <Koszty>
+        <Typ>NieNaliczać</Typ>
+        <Procent>0.00%</Procent>
+      </Koszty>
+      <Zaliczka>
+        <Typ>NaliczaćWgSkaliPodatkowej</Typ>
+        <Procent>0.00%</Procent>
+        <PomniejszonaZUS>True</PomniejszonaZUS>
+      </Zaliczka>
+      <Ulga>
+        <Typ>NieNaliczać</Typ>
+      </Ulga>
+      <KodRSA />
+      <PozycjaRCA>NieDotyczy</PozycjaRCA>
+      <KodRNA>NieDotyczy</KodRNA>
+      <PozycjaRP7>NieDotyczy</PozycjaRP7>
+      <Spoleczne>
+        <Typ>NieNaliczać</Typ>
+      </Spoleczne>
+      <Zdrowotne>
+        <Typ>NieNaliczać</Typ>
+        <PomniejszaFIS>NiePomniejsza</PomniejszaFIS>
+        <PomniejszoneZUS>False</PomniejszoneZUS>
+      </Zdrowotne>
+      <Narzuty>
+        <SkladkaFP>Domyślna</SkladkaFP>
+        <SkladkaFGSP>Domyślna</SkladkaFGSP>
+      </Narzuty>
+      <Umowa>NieDotyczy</Umowa>
+      <UmowaTyUb />
+      <UmowaJakEtat>False</UmowaJakEtat>
+      <NieWliczajSOD>False</NieWliczajSOD>
+      <NieRozrzucaj>False</NieRozrzucaj>
+    </Deklaracje>
+    <Nieobecnosci>
+      <WahaniaWysokosci>False</WahaniaWysokosci>
+      <Urlop>
+        <Typ>NieWliczać</Typ>
+        <Dopelnienie>False</Dopelnienie>
+        <WspolczynnikTyp>0</WspolczynnikTyp>
+        <WspolczynnikNazwa />
+      </Urlop>
+      <Ekwiwalent>
+        <Typ>NieWliczać</Typ>
+        <Dopelnienie>False</Dopelnienie>
+        <WspolczynnikTyp>0</WspolczynnikTyp>
+        <WspolczynnikNazwa />
+      </Ekwiwalent>
+      <ZasilkiPracownicy>
+        <Typ>NieWliczać</Typ>
+        <Chorobowych>False</Chorobowych>
+        <Macierzynskich>False</Macierzynskich>
+        <Rehabilitacyjnych>False</Rehabilitacyjnych>
+        <Opiekunczych>False</Opiekunczych>
+      </ZasilkiPracownicy>
+      <ZasilkiInni>
+        <Typ>NieWliczać</Typ>
+        <Chorobowych>False</Chorobowych>
+        <Macierzynskich>False</Macierzynskich>
+        <Rehabilitacyjnych>False</Rehabilitacyjnych>
+        <Opiekunczych>False</Opiekunczych>
+      </ZasilkiInni>
+      <DefinicjaLimitu />
+      <WliczanieDoPodstawyChorobowego>Domyślnie</WliczanieDoPodstawyChorobowego>
+    </Nieobecnosci>
+    <Zaokraglenie>
+      <Precyzja>DoPełnegoGrosza</Precyzja>
+      <Sposob>Standardowe</Sposob>
+      <Podstawa>False</Podstawa>
+    </Zaokraglenie>
+    <GUS>
+      <Kategoria>WgDefinicjiElementu</Kategoria>
+    </GUS>
+    <Rozliczenie>
+      <Ewidencja />
+      <ZmianaOdbiorcy>False</ZmianaOdbiorcy>
+      <WspolnaPlatnosc>False</WspolnaPlatnosc>
+    </Rozliczenie>
+    <Zajecie>
+      <Komornik>Domyślnie</Komornik>
+      <Alimenty>Domyślnie</Alimenty>
+    </Zajecie>
+    <Korygowany>False</Korygowany>
+    <MinimalneWynagrodzenie>False</MinimalneWynagrodzenie>
+    <DoWyplaty>True</DoWyplaty>
+    <ZawszeGotowka>False</ZawszeGotowka>
+    <GenerujZerowy>False</GenerujZerowy>
+    <Aktualizacja>False</Aktualizacja>
+    <Zerowanie>False</Zerowanie>
+    <Dodatkowe>
+      <DodatekDoEtatu>False</DodatekDoEtatu>
+    </Dodatkowe>
+    <Tekst />
+    <WidoczneCechy />
+    <RodzajNaliczania>Wszystkie</RodzajNaliczania>
+    <Definicja_relacji_odbiorcy_elementu />
+    <Progi>
+      <ProgStazuPracy id="ProgStazuPracy_34">
+        <Definicja>DefinicjaElementu_1836</Definicja>
+        <Prog>5</Prog>
+        <Wartosc>5.00%</Wartosc>
+      </ProgStazuPracy>
+      <ProgStazuPracy id="ProgStazuPracy_35">
+        <Definicja>DefinicjaElementu_1836</Definicja>
+        <Prog>10</Prog>
+        <Wartosc>10.00%</Wartosc>
+      </ProgStazuPracy>
+      <ProgStazuPracy id="ProgStazuPracy_36">
+        <Definicja>DefinicjaElementu_1836</Definicja>
+        <Prog>15</Prog>
+        <Wartosc>15.00%</Wartosc>
+      </ProgStazuPracy>
+      <ProgStazuPracy id="ProgStazuPracy_37">
+        <Definicja>DefinicjaElementu_1836</Definicja>
+        <Prog>20</Prog>
+        <Wartosc>20.00%</Wartosc>
+      </ProgStazuPracy>
+      <ProgStazuPracy id="ProgStazuPracy_38">
+        <Definicja>DefinicjaElementu_1836</Definicja>
+        <Prog>25</Prog>
+        <Wartosc>25.00%</Wartosc>
+      </ProgStazuPracy>
+      <ProgStazuPracy id="ProgStazuPracy_39">
+        <Definicja>DefinicjaElementu_1836</Definicja>
+        <Prog>30</Prog>
+        <Wartosc>30.00%</Wartosc>
+      </ProgStazuPracy>
+      <ProgStazuPracy id="ProgStazuPracy_40">
+        <Definicja>DefinicjaElementu_1836</Definicja>
+        <Prog>35</Prog>
+        <Wartosc>35.00%</Wartosc>
+      </ProgStazuPracy>
+      <ProgStazuPracy id="ProgStazuPracy_41">
+        <Definicja>DefinicjaElementu_1836</Definicja>
+        <Prog>40</Prog>
+        <Wartosc>40.00%</Wartosc>
+      </ProgStazuPracy>
+    </Progi>
+  </DefinicjaElementu>
+  <DefinicjaElementu id="DefinicjaElementu_51" guid="df97dc0b-2cb9-47b3-b8f0-81ce39934a06">
+    <Podstawowa />
+    <Wydzial />
+    <RodzajZrodla>Dodatek</RodzajZrodla>
+    <Nazwa>Dodatek funkcyjny</Nazwa>
+    <NazwaPomocnicza />
+    <Skrot>Dod.funk.</Skrot>
+    <Kod />
+    <Blokada>False</Blokada>
+    <Kolejnosc>50</Kolejnosc>
+    <Zatrudnienie>Etat</Zatrudnienie>
+    <DefinicjaListyPlac>00000000-0007-0001-0001-000000000000</DefinicjaListyPlac>
+    <Zakres />
+    <OkresNaliczania>
+      <Naliczanie>PłatnaZDołu</Naliczanie>
+      <Opoznienie>0</Opoznienie>
+      <Typ>CoNMiesięcy</Typ>
+      <Ilosc>1</Ilosc>
+    </OkresNaliczania>
+    <Algorytm>
+      <Priorytet>0</Priorytet>
+      <Potracenie>False</Potracenie>
+      <Typ>KreatorAlgorytmu</Typ>
+      <KreatorAlgorytmu>
+        <PodstawaTyp>Kwota</PodstawaTyp>
+        <PodstawaNazwa />
+        <Proporcjonalnie>False</Proporcjonalnie>
+        <SposobProporcjonalnosci>NiePomniejszany</SposobProporcjonalnosci>
+        <PodstawaZa>Miesięcznie</PodstawaZa>
+        <Wspolczynnik>
+          <Typ>BezWspółczynnika</Typ>
+          <Wskaznik>False</Wskaznik>
+          <NazwaWskaznika />
+          <PracaWFirmie>False</PracaWFirmie>
+          <PracaNaDzien>OstatniDzieńOkresu</PracaNaDzien>
+          <PodstawaStazu />
+        </Wspolczynnik>
+        <Czas>
+          <Typ>NieUwzględniaj</Typ>
+          <Strefa />
+        </Czas>
+        <Korekta>
+          <Odchylki>True</Odchylki>
+          <Nieusprawiedliwione>Proporcjonalnie</Nieusprawiedliwione>
+          <Usprawiedliwione>Proporcjonalnie</Usprawiedliwione>
+          <Platne>NiePomniejsza</Platne>
+          <Macierzynske>Proporcjonalnie</Macierzynske>
+          <Rehabilitacyjne>Proporcjonalnie</Rehabilitacyjne>
+          <Opiekuncze>Proporcjonalnie</Opiekuncze>
+          <Chorobowe>Proporcjonalnie</Chorobowe>
+          <Wychowawcze>Proporcjonalnie</Wychowawcze>
+          <OgraniczeniePomniejszen>False</OgraniczeniePomniejszen>
+        </Korekta>
+      </KreatorAlgorytmu>
+      <JakUrlopWypoczynkowy />
+      <JakUrlopOkolicznosciowy />
+      <JakEkwiwalentZaUrlop>
+        <WgWymiaruEtatu>False</WgWymiaruEtatu>
+        <DefinicjaLimitu />
+      </JakEkwiwalentZaUrlop>
+      <Edytor />
+      <JakChorobowe>
+        <Zatrudnienie>0</Zatrudnienie>
+      </JakChorobowe>
+      <Klasa>
+        <Nazwa />
+      </Klasa>
+      <ZaNieobecnosc>
+        <Macierzynskiego>False</Macierzynskiego>
+        <Rehabilitacyjnego>False</Rehabilitacyjnego>
+        <Opiekunczego>False</Opiekunczego>
+        <Chorobowego>False</Chorobowego>
+      </ZaNieobecnosc>
+      <PomniejszeniaIOdchylki />
+      <Liczba>0</Liczba>
+      <Podstawa>0.00 PLN</Podstawa>
+      <Ulamek>0/1</Ulamek>
+      <Czas>0:00</Czas>
+      <Dni>0</Dni>
+      <DodPodstawa>Dodatek funkcyjny</DodPodstawa>
+      <DodUlamek />
+      <DodProcent />
+      <DodWspolczynnik />
+      <DodCzas />
+      <DodDni />
+      <ElPodglad>False</ElPodglad>
+      <ElPodstawa1>Dodatek funkcyjny nominalnie:</ElPodstawa1>
+      <ElPodstawa2 />
+      <ElPodstawa3 />
+      <ElUlamek />
+      <ElProcent />
+      <ElWspolczynnik />
+      <ElCzas />
+      <ElDni />
+      <ElIlosc />
+      <Umowa>
+        <TypWartosci>Dowolny</TypWartosci>
+        <RodzajRozliczenia>Dowolny</RodzajRozliczenia>
+      </Umowa>
+    </Algorytm>
+    <Deklaracje>
+      <PozycjaPIT>00000000-0007-0004-0001-000000000000</PozycjaPIT>
+      <OpisNaPIT8C />
+      <Priorytet>0</Priorytet>
+      <Koszty>
+        <Typ>ZeStosunkuPracy</Typ>
+        <Procent>0.00%</Procent>
+      </Koszty>
+      <Zaliczka>
+        <Typ>NaliczaćWgSkaliPodatkowej</Typ>
+        <Procent>0.00%</Procent>
+        <PomniejszonaZUS>True</PomniejszonaZUS>
+      </Zaliczka>
+      <Ulga>
+        <Typ>Naliczać</Typ>
+      </Ulga>
+      <KodRSA />
+      <PozycjaRCA>NieDotyczy</PozycjaRCA>
+      <KodRNA>PremiaMiesięczna</KodRNA>
+      <PozycjaRP7>SkładnikiStałe</PozycjaRP7>
+      <Spoleczne>
+        <Typ>Naliczać</Typ>
+      </Spoleczne>
+      <Zdrowotne>
+        <Typ>Naliczać</Typ>
+        <PomniejszaFIS>PomniejszaDoFIS</PomniejszaFIS>
+        <PomniejszoneZUS>True</PomniejszoneZUS>
+      </Zdrowotne>
+      <Narzuty>
+        <SkladkaFP>Domyślna</SkladkaFP>
+        <SkladkaFGSP>Domyślna</SkladkaFGSP>
+      </Narzuty>
+      <Umowa>NieDotyczy</Umowa>
+      <UmowaTyUb />
+      <UmowaJakEtat>False</UmowaJakEtat>
+      <NieWliczajSOD>False</NieWliczajSOD>
+      <NieRozrzucaj>False</NieRozrzucaj>
+    </Deklaracje>
+    <Nieobecnosci>
+      <WahaniaWysokosci>False</WahaniaWysokosci>
+      <Urlop>
+        <Typ>NieWliczać</Typ>
+        <Dopelnienie>False</Dopelnienie>
+        <WspolczynnikTyp>0</WspolczynnikTyp>
+        <WspolczynnikNazwa />
+      </Urlop>
+      <Ekwiwalent>
+        <Typ>NieWliczać</Typ>
+        <Dopelnienie>False</Dopelnienie>
+        <WspolczynnikTyp>0</WspolczynnikTyp>
+        <WspolczynnikNazwa />
+      </Ekwiwalent>
+      <ZasilkiPracownicy>
+        <Typ>WliczaćDla</Typ>
+        <Chorobowych>True</Chorobowych>
+        <Macierzynskich>True</Macierzynskich>
+        <Rehabilitacyjnych>True</Rehabilitacyjnych>
+        <Opiekunczych>True</Opiekunczych>
+      </ZasilkiPracownicy>
+      <ZasilkiInni>
+        <Typ>WliczaćDla</Typ>
+        <Chorobowych>True</Chorobowych>
+        <Macierzynskich>True</Macierzynskich>
+        <Rehabilitacyjnych>True</Rehabilitacyjnych>
+        <Opiekunczych>True</Opiekunczych>
+      </ZasilkiInni>
+      <DefinicjaLimitu />
+      <WliczanieDoPodstawyChorobowego>Domyślnie</WliczanieDoPodstawyChorobowego>
+    </Nieobecnosci>
+    <Zaokraglenie>
+      <Precyzja>DoPełnegoGrosza</Precyzja>
+      <Sposob>Standardowe</Sposob>
+      <Podstawa>False</Podstawa>
+    </Zaokraglenie>
+    <GUS>
+      <Kategoria>WgDefinicjiElementu</Kategoria>
+    </GUS>
+    <Rozliczenie>
+      <Ewidencja />
+      <ZmianaOdbiorcy>False</ZmianaOdbiorcy>
+      <WspolnaPlatnosc>False</WspolnaPlatnosc>
+    </Rozliczenie>
+    <Zajecie>
+      <Komornik>Domyślnie</Komornik>
+      <Alimenty>Domyślnie</Alimenty>
+    </Zajecie>
+    <Korygowany>True</Korygowany>
+    <MinimalneWynagrodzenie>True</MinimalneWynagrodzenie>
+    <DoWyplaty>True</DoWyplaty>
+    <ZawszeGotowka>False</ZawszeGotowka>
+    <GenerujZerowy>False</GenerujZerowy>
+    <Aktualizacja>False</Aktualizacja>
+    <Zerowanie>False</Zerowanie>
+    <Dodatkowe>
+      <DodatekDoEtatu>True</DodatekDoEtatu>
+    </Dodatkowe>
+    <Tekst />
+    <WidoczneCechy />
+    <Definicja_relacji_odbiorcy_elementu />
+    <Progi />
+    <features>
+      <feature name="Nagroda roczna">True</feature>
+    </features>
+  </DefinicjaElementu>
+  <DefinicjaElementu id="DefinicjaElementu_184" guid="0ee7d6fc-9afa-45e3-9b96-4dea96968996">
+    <Podstawowa />
+    <Wydzial />
+    <RodzajZrodla>Dodatek</RodzajZrodla>
+    <Nazwa>Dodatek zadaniowy</Nazwa>
+    <NazwaPomocnicza />
+    <Skrot>Dod. zadani</Skrot>
+    <Kod />
+    <Blokada>False</Blokada>
+    <Kolejnosc>50</Kolejnosc>
+    <Zatrudnienie>Etat</Zatrudnienie>
+    <DefinicjaListyPlac>00000000-0007-0001-0001-000000000000</DefinicjaListyPlac>
+    <Zakres />
+    <OkresNaliczania>
+      <Naliczanie>PłatnaZDołu</Naliczanie>
+      <Opoznienie>0</Opoznienie>
+      <Typ>CoNMiesięcy</Typ>
+      <Ilosc>1</Ilosc>
+    </OkresNaliczania>
+    <Algorytm>
+      <Priorytet>0</Priorytet>
+      <Potracenie>False</Potracenie>
+      <Typ>KreatorAlgorytmu</Typ>
+      <KreatorAlgorytmu>
+        <PodstawaTyp>Kwota</PodstawaTyp>
+        <PodstawaNazwa />
+        <Proporcjonalnie>True</Proporcjonalnie>
+        <SposobProporcjonalnosci>Proporcjonalnie</SposobProporcjonalnosci>
+        <PodstawaZa>NieZależyOdCzasu</PodstawaZa>
+        <Wspolczynnik>
+          <Typ>BezWspółczynnika</Typ>
+          <Wskaznik>False</Wskaznik>
+          <NazwaWskaznika />
+          <PracaWFirmie>False</PracaWFirmie>
+          <PracaNaDzien>OstatniDzieńOkresu</PracaNaDzien>
+          <PodstawaStazu />
+        </Wspolczynnik>
+        <Czas>
+          <Typ>NieUwzględniaj</Typ>
+          <Strefa />
+        </Czas>
+        <Korekta>
+          <Odchylki>False</Odchylki>
+          <Nieusprawiedliwione>NiePomniejsza</Nieusprawiedliwione>
+          <Usprawiedliwione>NiePomniejsza</Usprawiedliwione>
+          <Platne>NiePomniejsza</Platne>
+          <Macierzynske>NiePomniejsza</Macierzynske>
+          <Rehabilitacyjne>NiePomniejsza</Rehabilitacyjne>
+          <Opiekuncze>NiePomniejsza</Opiekuncze>
+          <Chorobowe>NiePomniejsza</Chorobowe>
+          <Wychowawcze>NiePomniejsza</Wychowawcze>
+          <OgraniczeniePomniejszen>False</OgraniczeniePomniejszen>
+        </Korekta>
+      </KreatorAlgorytmu>
+      <JakUrlopWypoczynkowy />
+      <JakUrlopOkolicznosciowy />
+      <JakEkwiwalentZaUrlop>
+        <WgWymiaruEtatu>False</WgWymiaruEtatu>
+        <DefinicjaLimitu />
+      </JakEkwiwalentZaUrlop>
+      <Edytor />
+      <JakChorobowe>
+        <Zatrudnienie>0</Zatrudnienie>
+      </JakChorobowe>
+      <Klasa>
+        <Nazwa />
+      </Klasa>
+      <ZaNieobecnosc>
+        <Macierzynskiego>False</Macierzynskiego>
+        <Rehabilitacyjnego>False</Rehabilitacyjnego>
+        <Opiekunczego>False</Opiekunczego>
+        <Chorobowego>False</Chorobowego>
+      </ZaNieobecnosc>
+      <PomniejszeniaIOdchylki />
+      <Liczba>0</Liczba>
+      <Podstawa>0.00 PLN</Podstawa>
+      <Ulamek>0/1</Ulamek>
+      <Czas>0:00</Czas>
+      <Dni>0</Dni>
+      <DodPodstawa>Kwota:</DodPodstawa>
+      <DodUlamek />
+      <DodProcent />
+      <DodWspolczynnik />
+      <DodCzas />
+      <DodDni />
+      <ElPodglad>False</ElPodglad>
+      <ElPodstawa1>Kwota:</ElPodstawa1>
+      <ElPodstawa2 />
+      <ElPodstawa3 />
+      <ElUlamek />
+      <ElProcent />
+      <ElWspolczynnik />
+      <ElCzas />
+      <ElDni />
+      <ElIlosc />
+      <Umowa>
+        <TypWartosci>Dowolny</TypWartosci>
+        <RodzajRozliczenia>Dowolny</RodzajRozliczenia>
+      </Umowa>
+    </Algorytm>
+    <Deklaracje>
+      <PozycjaPIT>00000000-0007-0004-0001-000000000000</PozycjaPIT>
+      <OpisNaPIT8C />
+      <Priorytet>0</Priorytet>
+      <Koszty>
+        <Typ>ZeStosunkuPracy</Typ>
+        <Procent>0.00%</Procent>
+      </Koszty>
+      <Zaliczka>
+        <Typ>NaliczaćWgSkaliPodatkowej</Typ>
+        <Procent>0.00%</Procent>
+        <PomniejszonaZUS>True</PomniejszonaZUS>
+      </Zaliczka>
+      <Ulga>
+        <Typ>Naliczać</Typ>
+      </Ulga>
+      <KodRSA />
+      <PozycjaRCA>NieDotyczy</PozycjaRCA>
+      <KodRNA>PremiaMiesięczna</KodRNA>
+      <PozycjaRP7>SkładnikiZmienne</PozycjaRP7>
+      <Spoleczne>
+        <Typ>Naliczać</Typ>
+      </Spoleczne>
+      <Zdrowotne>
+        <Typ>Naliczać</Typ>
+        <PomniejszaFIS>PomniejszaDoFIS</PomniejszaFIS>
+        <PomniejszoneZUS>True</PomniejszoneZUS>
+      </Zdrowotne>
+      <Narzuty>
+        <SkladkaFP>Domyślna</SkladkaFP>
+        <SkladkaFGSP>Domyślna</SkladkaFGSP>
+      </Narzuty>
+      <Umowa>NieDotyczy</Umowa>
+      <UmowaTyUb />
+      <UmowaJakEtat>False</UmowaJakEtat>
+      <NieWliczajSOD>False</NieWliczajSOD>
+      <NieRozrzucaj>False</NieRozrzucaj>
+    </Deklaracje>
+    <Nieobecnosci>
+      <WahaniaWysokosci>False</WahaniaWysokosci>
+      <Urlop>
+        <Typ>Wliczać</Typ>
+        <Dopelnienie>False</Dopelnienie>
+        <WspolczynnikTyp>0</WspolczynnikTyp>
+        <WspolczynnikNazwa />
+      </Urlop>
+      <Ekwiwalent>
+        <Typ>Wliczać</Typ>
+        <Dopelnienie>False</Dopelnienie>
+        <WspolczynnikTyp>0</WspolczynnikTyp>
+        <WspolczynnikNazwa />
+      </Ekwiwalent>
+      <ZasilkiPracownicy>
+        <Typ>WliczaćDla</Typ>
+        <Chorobowych>True</Chorobowych>
+        <Macierzynskich>True</Macierzynskich>
+        <Rehabilitacyjnych>True</Rehabilitacyjnych>
+        <Opiekunczych>True</Opiekunczych>
+      </ZasilkiPracownicy>
+      <ZasilkiInni>
+        <Typ>WliczaćDla</Typ>
+        <Chorobowych>True</Chorobowych>
+        <Macierzynskich>True</Macierzynskich>
+        <Rehabilitacyjnych>True</Rehabilitacyjnych>
+        <Opiekunczych>True</Opiekunczych>
+      </ZasilkiInni>
+      <DefinicjaLimitu />
+      <WliczanieDoPodstawyChorobowego>Domyślnie</WliczanieDoPodstawyChorobowego>
+    </Nieobecnosci>
+    <Zaokraglenie>
+      <Precyzja>DoPełnegoGrosza</Precyzja>
+      <Sposob>Standardowe</Sposob>
+      <Podstawa>False</Podstawa>
+    </Zaokraglenie>
+    <GUS>
+      <Kategoria>WgDefinicjiElementu</Kategoria>
+    </GUS>
+    <Rozliczenie>
+      <Ewidencja />
+      <ZmianaOdbiorcy>False</ZmianaOdbiorcy>
+      <WspolnaPlatnosc>False</WspolnaPlatnosc>
+    </Rozliczenie>
+    <Zajecie>
+      <Komornik>Domyślnie</Komornik>
+      <Alimenty>Domyślnie</Alimenty>
+    </Zajecie>
+    <Korygowany>False</Korygowany>
+    <MinimalneWynagrodzenie>True</MinimalneWynagrodzenie>
+    <DoWyplaty>True</DoWyplaty>
+    <ZawszeGotowka>False</ZawszeGotowka>
+    <GenerujZerowy>False</GenerujZerowy>
+    <Aktualizacja>False</Aktualizacja>
+    <Zerowanie>False</Zerowanie>
+    <Dodatkowe>
+      <DodatekDoEtatu>True</DodatekDoEtatu>
+    </Dodatkowe>
+    <Tekst />
+    <WidoczneCechy />
+    <Definicja_relacji_odbiorcy_elementu />
+    <Progi />
+    <features>
+      <feature name="Nagroda roczna">True</feature>
+    </features>
+  </DefinicjaElementu>
+  <DefinicjaElementu id="DefinicjaElementu_60" guid="c9c3dc52-be71-4b8f-b89b-728d83cd4a9a">
+    <Podstawowa />
+    <Wydzial />
+    <RodzajZrodla>Dodatek</RodzajZrodla>
+    <Nazwa>Premia</Nazwa>
+    <NazwaPomocnicza />
+    <Skrot>Premia</Skrot>
+    <Kod />
+    <Blokada>False</Blokada>
+    <Kolejnosc>50</Kolejnosc>
+    <Zatrudnienie>Etat</Zatrudnienie>
+    <DefinicjaListyPlac>00000000-0007-0001-0001-000000000000</DefinicjaListyPlac>
+    <Zakres />
+    <OkresNaliczania>
+      <Naliczanie>PłatnaZDołu</Naliczanie>
+      <Opoznienie>0</Opoznienie>
+      <Typ>CoNMiesięcy</Typ>
+      <Ilosc>1</Ilosc>
+    </OkresNaliczania>
+    <Algorytm>
+      <Priorytet>0</Priorytet>
+      <Potracenie>False</Potracenie>
+      <Typ>KreatorAlgorytmu</Typ>
+      <KreatorAlgorytmu>
+        <PodstawaTyp>Kwota</PodstawaTyp>
+        <PodstawaNazwa />
+        <Proporcjonalnie>True</Proporcjonalnie>
+        <SposobProporcjonalnosci>Proporcjonalnie</SposobProporcjonalnosci>
+        <PodstawaZa>NieZależyOdCzasu</PodstawaZa>
+        <Wspolczynnik>
+          <Typ>BezWspółczynnika</Typ>
+          <Wskaznik>False</Wskaznik>
+          <NazwaWskaznika />
+          <PracaWFirmie>False</PracaWFirmie>
+          <PracaNaDzien>OstatniDzieńOkresu</PracaNaDzien>
+          <PodstawaStazu />
+        </Wspolczynnik>
+        <Czas>
+          <Typ>NieUwzględniaj</Typ>
+          <Strefa />
+        </Czas>
+        <Korekta>
+          <Odchylki>False</Odchylki>
+          <Nieusprawiedliwione>NiePomniejsza</Nieusprawiedliwione>
+          <Usprawiedliwione>NiePomniejsza</Usprawiedliwione>
+          <Platne>NiePomniejsza</Platne>
+          <Macierzynske>NiePomniejsza</Macierzynske>
+          <Rehabilitacyjne>NiePomniejsza</Rehabilitacyjne>
+          <Opiekuncze>NiePomniejsza</Opiekuncze>
+          <Chorobowe>NiePomniejsza</Chorobowe>
+          <Wychowawcze>NiePomniejsza</Wychowawcze>
+          <OgraniczeniePomniejszen>False</OgraniczeniePomniejszen>
+        </Korekta>
+      </KreatorAlgorytmu>
+      <JakUrlopWypoczynkowy />
+      <JakUrlopOkolicznosciowy />
+      <JakEkwiwalentZaUrlop>
+        <WgWymiaruEtatu>False</WgWymiaruEtatu>
+        <DefinicjaLimitu />
+      </JakEkwiwalentZaUrlop>
+      <Edytor />
+      <JakChorobowe>
+        <Zatrudnienie>0</Zatrudnienie>
+      </JakChorobowe>
+      <Klasa>
+        <Nazwa />
+      </Klasa>
+      <ZaNieobecnosc>
+        <Macierzynskiego>False</Macierzynskiego>
+        <Rehabilitacyjnego>False</Rehabilitacyjnego>
+        <Opiekunczego>False</Opiekunczego>
+        <Chorobowego>False</Chorobowego>
+      </ZaNieobecnosc>
+      <PomniejszeniaIOdchylki />
+      <Liczba>0</Liczba>
+      <Podstawa>0.00 PLN</Podstawa>
+      <Ulamek>0/1</Ulamek>
+      <Czas>0:00</Czas>
+      <Dni>0</Dni>
+      <DodPodstawa>Kwota premii</DodPodstawa>
+      <DodUlamek />
+      <DodProcent />
+      <DodWspolczynnik />
+      <DodCzas />
+      <DodDni />
+      <ElPodglad>False</ElPodglad>
+      <ElPodstawa1>Wartość premii:</ElPodstawa1>
+      <ElPodstawa2 />
+      <ElPodstawa3 />
+      <ElUlamek />
+      <ElProcent />
+      <ElWspolczynnik />
+      <ElCzas />
+      <ElDni />
+      <ElIlosc />
+      <Umowa>
+        <TypWartosci>Dowolny</TypWartosci>
+        <RodzajRozliczenia>Dowolny</RodzajRozliczenia>
+      </Umowa>
+    </Algorytm>
+    <Deklaracje>
+      <PozycjaPIT>00000000-0007-0004-0001-000000000000</PozycjaPIT>
+      <OpisNaPIT8C />
+      <Priorytet>0</Priorytet>
+      <Koszty>
+        <Typ>ZeStosunkuPracy</Typ>
+        <Procent>0.00%</Procent>
+      </Koszty>
+      <Zaliczka>
+        <Typ>NaliczaćWgSkaliPodatkowej</Typ>
+        <Procent>0.00%</Procent>
+        <PomniejszonaZUS>True</PomniejszonaZUS>
+      </Zaliczka>
+      <Ulga>
+        <Typ>Naliczać</Typ>
+      </Ulga>
+      <KodRSA />
+      <PozycjaRCA>NieDotyczy</PozycjaRCA>
+      <KodRNA>PremiaMiesięczna</KodRNA>
+      <PozycjaRP7>SkładnikiZmienne</PozycjaRP7>
+      <Spoleczne>
+        <Typ>Naliczać</Typ>
+      </Spoleczne>
+      <Zdrowotne>
+        <Typ>Naliczać</Typ>
+        <PomniejszaFIS>PomniejszaDoFIS</PomniejszaFIS>
+        <PomniejszoneZUS>True</PomniejszoneZUS>
+      </Zdrowotne>
+      <Narzuty>
+        <SkladkaFP>Domyślna</SkladkaFP>
+        <SkladkaFGSP>Domyślna</SkladkaFGSP>
+      </Narzuty>
+      <Umowa>NieDotyczy</Umowa>
+      <UmowaTyUb />
+      <UmowaJakEtat>False</UmowaJakEtat>
+      <NieWliczajSOD>False</NieWliczajSOD>
+      <NieRozrzucaj>False</NieRozrzucaj>
+    </Deklaracje>
+    <Nieobecnosci>
+      <WahaniaWysokosci>False</WahaniaWysokosci>
+      <Urlop>
+        <Typ>Wliczać</Typ>
+        <Dopelnienie>False</Dopelnienie>
+        <WspolczynnikTyp>0</WspolczynnikTyp>
+        <WspolczynnikNazwa />
+      </Urlop>
+      <Ekwiwalent>
+        <Typ>Wliczać</Typ>
+        <Dopelnienie>False</Dopelnienie>
+        <WspolczynnikTyp>0</WspolczynnikTyp>
+        <WspolczynnikNazwa />
+      </Ekwiwalent>
+      <ZasilkiPracownicy>
+        <Typ>WliczaćDla</Typ>
+        <Chorobowych>True</Chorobowych>
+        <Macierzynskich>True</Macierzynskich>
+        <Rehabilitacyjnych>True</Rehabilitacyjnych>
+        <Opiekunczych>True</Opiekunczych>
+      </ZasilkiPracownicy>
+      <ZasilkiInni>
+        <Typ>WliczaćDla</Typ>
+        <Chorobowych>True</Chorobowych>
+        <Macierzynskich>True</Macierzynskich>
+        <Rehabilitacyjnych>True</Rehabilitacyjnych>
+        <Opiekunczych>True</Opiekunczych>
+      </ZasilkiInni>
+      <DefinicjaLimitu />
+      <WliczanieDoPodstawyChorobowego>Domyślnie</WliczanieDoPodstawyChorobowego>
+    </Nieobecnosci>
+    <Zaokraglenie>
+      <Precyzja>DoPełnegoGrosza</Precyzja>
+      <Sposob>Standardowe</Sposob>
+      <Podstawa>False</Podstawa>
+    </Zaokraglenie>
+    <GUS>
+      <Kategoria>WgDefinicjiElementu</Kategoria>
+    </GUS>
+    <Rozliczenie>
+      <Ewidencja />
+      <ZmianaOdbiorcy>False</ZmianaOdbiorcy>
+      <WspolnaPlatnosc>False</WspolnaPlatnosc>
+    </Rozliczenie>
+    <Zajecie>
+      <Komornik>Domyślnie</Komornik>
+      <Alimenty>Domyślnie</Alimenty>
+    </Zajecie>
+    <Korygowany>False</Korygowany>
+    <MinimalneWynagrodzenie>True</MinimalneWynagrodzenie>
+    <DoWyplaty>True</DoWyplaty>
+    <ZawszeGotowka>False</ZawszeGotowka>
+    <GenerujZerowy>False</GenerujZerowy>
+    <Aktualizacja>False</Aktualizacja>
+    <Zerowanie>False</Zerowanie>
+    <Dodatkowe>
+      <DodatekDoEtatu>True</DodatekDoEtatu>
+    </Dodatkowe>
+    <Tekst />
+    <WidoczneCechy />
+    <Definicja_relacji_odbiorcy_elementu />
+    <Progi />
+    <features>
+      <feature name="Nagroda roczna">True</feature>
+    </features>
+  </DefinicjaElementu>
+  <DefinicjaElementu id="DefinicjaElementu_61" guid="35c29464-e2c4-4182-8944-1ddf87dff9ab">
+    <features>
+      <feature name="Nagroda roczna">True</feature>
+    </features>
+  </DefinicjaElementu>
+  <DefinicjaElementu id="DefinicjaElementu_180" guid="cc9b1530-c72e-4f0e-988a-481f37365690">
+    <Podstawowa />
+    <Wydzial />
+    <RodzajZrodla>Dodatek</RodzajZrodla>
+    <Nazwa>Trzynastka</Nazwa>
+    <NazwaPomocnicza />
+    <Skrot>Trzynastka</Skrot>
+    <Kod />
+    <Blokada>False</Blokada>
+    <Kolejnosc>50</Kolejnosc>
+    <Zatrudnienie>Etat</Zatrudnienie>
+    <DefinicjaListyPlac />
+    <Zakres />
+    <OkresNaliczania>
+      <Naliczanie>PłatnaZDołu</Naliczanie>
+      <Opoznienie>0</Opoznienie>
+      <Typ>CoNMiesięcy</Typ>
+      <Ilosc>12</Ilosc>
+    </OkresNaliczania>
+    <Algorytm>
+      <Priorytet>110</Priorytet>
+      <Potracenie>False</Potracenie>
+      <Typ>EdytorAlgorytmu</Typ>
+      <KreatorAlgorytmu>
+        <PodstawaTyp>0</PodstawaTyp>
+        <PodstawaNazwa />
+        <Proporcjonalnie>False</Proporcjonalnie>
+        <SposobProporcjonalnosci>NiePomniejszany</SposobProporcjonalnosci>
+        <PodstawaZa>NieZależyOdCzasu</PodstawaZa>
+        <Wspolczynnik>
+          <Typ>BezWspółczynnika</Typ>
+          <Wskaznik>False</Wskaznik>
+          <NazwaWskaznika />
+          <PracaWFirmie>False</PracaWFirmie>
+          <PracaNaDzien>OstatniDzieńOkresu</PracaNaDzien>
+          <PodstawaStazu />
+        </Wspolczynnik>
+        <Czas>
+          <Typ>NieUwzględniaj</Typ>
+          <Strefa />
+        </Czas>
+        <Korekta>
+          <Odchylki>False</Odchylki>
+          <Nieusprawiedliwione>NiePomniejsza</Nieusprawiedliwione>
+          <Usprawiedliwione>NiePomniejsza</Usprawiedliwione>
+          <Platne>NiePomniejsza</Platne>
+          <Macierzynske>NiePomniejsza</Macierzynske>
+          <Rehabilitacyjne>NiePomniejsza</Rehabilitacyjne>
+          <Opiekuncze>NiePomniejsza</Opiekuncze>
+          <Chorobowe>NiePomniejsza</Chorobowe>
+          <Wychowawcze>NiePomniejsza</Wychowawcze>
+          <OgraniczeniePomniejszen>False</OgraniczeniePomniejszen>
+        </Korekta>
+      </KreatorAlgorytmu>
+      <JakUrlopWypoczynkowy />
+      <JakUrlopOkolicznosciowy />
+      <JakEkwiwalentZaUrlop>
+        <WgWymiaruEtatu>False</WgWymiaruEtatu>
+        <DefinicjaLimitu />
+      </JakEkwiwalentZaUrlop>
+      <Edytor />
+      <JakChorobowe>
+        <Zatrudnienie>0</Zatrudnienie>
+      </JakChorobowe>
+      <Klasa>
+        <Nazwa />
+      </Klasa>
+      <ZaNieobecnosc>
+        <Macierzynskiego>False</Macierzynskiego>
+        <Rehabilitacyjnego>False</Rehabilitacyjnego>
+        <Opiekunczego>False</Opiekunczego>
+        <Chorobowego>False</Chorobowego>
+      </ZaNieobecnosc>
+      <PomniejszeniaIOdchylki />
+      <Liczba>0</Liczba>
+      <Podstawa>0.00 PLN</Podstawa>
+      <Ulamek>0/1</Ulamek>
+      <Czas>0:00</Czas>
+      <Dni>0</Dni>
+      <DodPodstawa />
+      <DodUlamek />
+      <DodProcent>Procent nagrody rocznej:</DodProcent>
+      <DodWspolczynnik />
+      <DodCzas />
+      <DodDni />
+      <ElPodglad>False</ElPodglad>
+      <ElPodstawa1>Suma wynag.zasadniczego:</ElPodstawa1>
+      <ElPodstawa2>Suma dodatków:</ElPodstawa2>
+      <ElPodstawa3 />
+      <ElUlamek />
+      <ElProcent>Procent nagrody rocznej:</ElProcent>
+      <ElWspolczynnik />
+      <ElCzas />
+      <ElDni />
+      <ElIlosc />
+      <Umowa>
+        <TypWartosci>Dowolny</TypWartosci>
+        <RodzajRozliczenia>Dowolny</RodzajRozliczenia>
+      </Umowa>
+    </Algorytm>
+    <Deklaracje>
+      <PozycjaPIT>00000000-0007-0004-0001-000000000000</PozycjaPIT>
+      <OpisNaPIT8C />
+      <Priorytet>0</Priorytet>
+      <Koszty>
+        <Typ>NieNaliczać</Typ>
+        <Procent>0.00%</Procent>
+      </Koszty>
+      <Zaliczka>
+        <Typ>NaliczaćWgSkaliPodatkowej</Typ>
+        <Procent>0.00%</Procent>
+        <PomniejszonaZUS>True</PomniejszonaZUS>
+      </Zaliczka>
+      <Ulga>
+        <Typ>NieNaliczać</Typ>
+      </Ulga>
+      <KodRSA />
+      <PozycjaRCA>NieDotyczy</PozycjaRCA>
+      <KodRNA>NieDotyczy</KodRNA>
+      <PozycjaRP7>NieDotyczy</PozycjaRP7>
+      <Spoleczne>
+        <Typ>Naliczać</Typ>
+      </Spoleczne>
+      <Zdrowotne>
+        <Typ>Naliczać</Typ>
+        <PomniejszaFIS>PomniejszaDoFIS</PomniejszaFIS>
+        <PomniejszoneZUS>True</PomniejszoneZUS>
+      </Zdrowotne>
+      <Narzuty>
+        <SkladkaFP>Domyślna</SkladkaFP>
+        <SkladkaFGSP>Domyślna</SkladkaFGSP>
+      </Narzuty>
+      <Umowa>NieDotyczy</Umowa>
+      <UmowaTyUb />
+      <UmowaJakEtat>False</UmowaJakEtat>
+      <NieWliczajSOD>False</NieWliczajSOD>
+      <NieRozrzucaj>False</NieRozrzucaj>
+    </Deklaracje>
+    <Nieobecnosci>
+      <WahaniaWysokosci>False</WahaniaWysokosci>
+      <Urlop>
+        <Typ>NieWliczać</Typ>
+        <Dopelnienie>False</Dopelnienie>
+        <WspolczynnikTyp>0</WspolczynnikTyp>
+        <WspolczynnikNazwa />
+      </Urlop>
+      <Ekwiwalent>
+        <Typ>NieWliczać</Typ>
+        <Dopelnienie>False</Dopelnienie>
+        <WspolczynnikTyp>0</WspolczynnikTyp>
+        <WspolczynnikNazwa />
+      </Ekwiwalent>
+      <ZasilkiPracownicy>
+        <Typ>NieWliczać</Typ>
+        <Chorobowych>False</Chorobowych>
+        <Macierzynskich>False</Macierzynskich>
+        <Rehabilitacyjnych>False</Rehabilitacyjnych>
+        <Opiekunczych>False</Opiekunczych>
+      </ZasilkiPracownicy>
+      <ZasilkiInni>
+        <Typ>NieWliczać</Typ>
+        <Chorobowych>False</Chorobowych>
+        <Macierzynskich>False</Macierzynskich>
+        <Rehabilitacyjnych>False</Rehabilitacyjnych>
+        <Opiekunczych>False</Opiekunczych>
+      </ZasilkiInni>
+      <DefinicjaLimitu />
+      <WliczanieDoPodstawyChorobowego>Domyślnie</WliczanieDoPodstawyChorobowego>
+    </Nieobecnosci>
+    <Zaokraglenie>
+      <Precyzja>DoPełnegoGrosza</Precyzja>
+      <Sposob>Standardowe</Sposob>
+      <Podstawa>False</Podstawa>
+    </Zaokraglenie>
+    <GUS>
+      <Kategoria>WgDefinicjiElementu</Kategoria>
+    </GUS>
+    <Rozliczenie>
+      <Ewidencja />
+      <ZmianaOdbiorcy>False</ZmianaOdbiorcy>
+      <WspolnaPlatnosc>False</WspolnaPlatnosc>
+    </Rozliczenie>
+    <Zajecie>
+      <Komornik>Domyślnie</Komornik>
+      <Alimenty>Domyślnie</Alimenty>
+    </Zajecie>
+    <Korygowany>False</Korygowany>
+    <MinimalneWynagrodzenie>False</MinimalneWynagrodzenie>
+    <DoWyplaty>True</DoWyplaty>
+    <ZawszeGotowka>False</ZawszeGotowka>
+    <GenerujZerowy>False</GenerujZerowy>
+    <Aktualizacja>False</Aktualizacja>
+    <Zerowanie>False</Zerowanie>
+    <Dodatkowe>
+      <DodatekDoEtatu>False</DodatekDoEtatu>
+    </Dodatkowe>
+    <Tekst>public void %NAZWA%_Param(%TYP% Element, WypSkladnik Składnik) {
+    Składnik.Podstawa1 = 0m;
+//  Składnik.Procent = new Percent(0.0834m); 
+    Składnik.Procent = Element.DodHistoria.Procent;
+ 
+    FromTo okres = new Okres(Element.Okres).Rok(0);
+//  FromTo okres = new Okres(Element.Okres).Rok(1);
+////Msg("Okres={0}", okres);
+ 
+// Suma wynagrodzenia zasadniczego
+    foreach (WypElement e in Element.Elementy[okres, WypElement.Zasadnicze])
+        Składnik.Podstawa1 += e.Wartosc;
+////Msg("Zasadnicze={0}", Składnik.Podstawa1);
+ 
+// Suma innych niż zasadnicze elementów wynagrodzenia
+    Składnik.Podstawa2 = 0m;
+    foreach (WypElement e in Element.Elementy[okres, WypElement.CechaDef("Nagroda roczna"),
+        Bool.AND, Bool.NOT,
+        WypElement.Zasadnicze]) {
+        Składnik.Podstawa2 += e.Wartosc;
+///Msg("Dodatek={0}", e.Wartosc);
+    }
+}
+ 
+public Currency %NAZWA%_Wylicz(%TYP% Element, WypSkladnik Składnik) {
+    return (Składnik.Podstawa1+Składnik.Podstawa2)*Składnik.Procent;
+}
+</Tekst>
+    <WidoczneCechy />
+    <Definicja_relacji_odbiorcy_elementu />
+    <Progi />
+  </DefinicjaElementu>
+  <DefinicjaElementu id="DefinicjaElementu_29" guid="00000000-0007-0002-0002-000000000000">
+    <Podstawowa />
+    <Wydzial />
+    <RodzajZrodla>Etat</RodzajZrodla>
+    <Nazwa>Wynagrodzenie zasadnicze mies.</Nazwa>
+    <NazwaPomocnicza />
+    <Skrot>W.zasad./m</Skrot>
+    <Kod />
+    <Blokada>False</Blokada>
+    <Kolejnosc>0</Kolejnosc>
+    <Zatrudnienie>Etat</Zatrudnienie>
+    <DefinicjaListyPlac>00000000-0007-0001-0001-000000000000</DefinicjaListyPlac>
+    <Zakres />
+    <OkresNaliczania>
+      <Naliczanie>PłatnaZGóry</Naliczanie>
+      <Opoznienie>0</Opoznienie>
+      <Typ>Każda</Typ>
+      <Ilosc>0</Ilosc>
+    </OkresNaliczania>
+    <Algorytm>
+      <Priorytet>0</Priorytet>
+      <Potracenie>False</Potracenie>
+      <Typ>KreatorAlgorytmu</Typ>
+      <KreatorAlgorytmu>
+        <PodstawaTyp>Wyrażenie</PodstawaTyp>
+        <PodstawaNazwa>StawkaZaszeregowania1h(Element.Okres.To)*Pracownik.Czasy.Norma(Składnik.Okres).Czas</PodstawaNazwa>
+        <Proporcjonalnie>False</Proporcjonalnie>
+        <SposobProporcjonalnosci>NiePomniejszany</SposobProporcjonalnosci>
+        <PodstawaZa>Miesięcznie</PodstawaZa>
+        <Wspolczynnik>
+          <Typ>BezWspółczynnika</Typ>
+          <Wskaznik>False</Wskaznik>
+          <NazwaWskaznika />
+          <PracaWFirmie>False</PracaWFirmie>
+          <PracaNaDzien>OstatniDzieńOkresu</PracaNaDzien>
+          <PodstawaStazu />
+        </Wspolczynnik>
+        <Czas>
+          <Typ>NieUwzględniaj</Typ>
+          <Strefa />
+        </Czas>
+        <Korekta>
+          <Odchylki>True</Odchylki>
+          <Nieusprawiedliwione>Proporcjonalnie</Nieusprawiedliwione>
+          <Usprawiedliwione>Proporcjonalnie</Usprawiedliwione>
+          <Platne>ProporcjonalnieZero</Platne>
+          <Macierzynske>JednaTrzydziesta</Macierzynske>
+          <Rehabilitacyjne>JednaTrzydziesta</Rehabilitacyjne>
+          <Opiekuncze>JednaTrzydziesta</Opiekuncze>
+          <Chorobowe>JednaTrzydziesta</Chorobowe>
+          <Wychowawcze>Proporcjonalnie</Wychowawcze>
+          <OgraniczeniePomniejszen>False</OgraniczeniePomniejszen>
+        </Korekta>
+      </KreatorAlgorytmu>
+      <JakUrlopWypoczynkowy />
+      <JakUrlopOkolicznosciowy />
+      <JakEkwiwalentZaUrlop>
+        <WgWymiaruEtatu>False</WgWymiaruEtatu>
+        <DefinicjaLimitu />
+      </JakEkwiwalentZaUrlop>
+      <Edytor />
+      <JakChorobowe>
+        <Zatrudnienie>0</Zatrudnienie>
+      </JakChorobowe>
+      <Klasa>
+        <Nazwa />
+      </Klasa>
+      <ZaNieobecnosc>
+        <Macierzynskiego>False</Macierzynskiego>
+        <Rehabilitacyjnego>False</Rehabilitacyjnego>
+        <Opiekunczego>False</Opiekunczego>
+        <Chorobowego>False</Chorobowego>
+      </ZaNieobecnosc>
+      <PomniejszeniaIOdchylki />
+      <Liczba>0</Liczba>
+      <Podstawa>0.00 PLN</Podstawa>
+      <Ulamek>0/1</Ulamek>
+      <Czas>0:00</Czas>
+      <Dni>0</Dni>
+      <DodPodstawa />
+      <DodUlamek />
+      <DodProcent />
+      <DodWspolczynnik />
+      <DodCzas />
+      <DodDni />
+      <ElPodglad>False</ElPodglad>
+      <ElPodstawa1>Wynagrodzenie zasadnicze:</ElPodstawa1>
+      <ElPodstawa2 />
+      <ElPodstawa3 />
+      <ElUlamek />
+      <ElProcent />
+      <ElWspolczynnik />
+      <ElCzas />
+      <ElDni />
+      <ElIlosc />
+      <Umowa>
+        <TypWartosci>Dowolny</TypWartosci>
+        <RodzajRozliczenia>Dowolny</RodzajRozliczenia>
+      </Umowa>
+    </Algorytm>
+    <Deklaracje>
+      <PozycjaPIT>00000000-0007-0004-0001-000000000000</PozycjaPIT>
+      <OpisNaPIT8C />
+      <Priorytet>0</Priorytet>
+      <Koszty>
+        <Typ>ZeStosunkuPracy50</Typ>
+        <Procent>0.00%</Procent>
+      </Koszty>
+      <Zaliczka>
+        <Typ>NaliczaćWgSkaliPodatkowej</Typ>
+        <Procent>0.00%</Procent>
+        <PomniejszonaZUS>True</PomniejszonaZUS>
+      </Zaliczka>
+      <Ulga>
+        <Typ>Naliczać</Typ>
+      </Ulga>
+      <KodRSA />
+      <PozycjaRCA>NieDotyczy</PozycjaRCA>
+      <KodRNA>WynagrodzenieZasadnicze</KodRNA>
+      <PozycjaRP7>SkładnikiStałe</PozycjaRP7>
+      <Spoleczne>
+        <Typ>Naliczać</Typ>
+      </Spoleczne>
+      <Zdrowotne>
+        <Typ>Naliczać</Typ>
+        <PomniejszaFIS>PomniejszaDoFIS</PomniejszaFIS>
+        <PomniejszoneZUS>True</PomniejszoneZUS>
+      </Zdrowotne>
+      <Narzuty>
+        <SkladkaFP>Domyślna</SkladkaFP>
+        <SkladkaFGSP>Domyślna</SkladkaFGSP>
+      </Narzuty>
+      <Umowa>NieDotyczy</Umowa>
+      <UmowaTyUb />
+      <UmowaJakEtat>False</UmowaJakEtat>
+      <NieWliczajSOD>False</NieWliczajSOD>
+      <NieRozrzucaj>False</NieRozrzucaj>
+    </Deklaracje>
+    <Nieobecnosci>
+      <WahaniaWysokosci>False</WahaniaWysokosci>
+      <Urlop>
+        <Typ>WliczaćPoPrzeliczeniu</Typ>
+        <Dopelnienie>False</Dopelnienie>
+        <WspolczynnikTyp>WZerowejWartości</WspolczynnikTyp>
+        <WspolczynnikNazwa />
+      </Urlop>
+      <Ekwiwalent>
+        <Typ>WliczaćAktualnąWartość</Typ>
+        <Dopelnienie>False</Dopelnienie>
+        <WspolczynnikTyp>0</WspolczynnikTyp>
+        <WspolczynnikNazwa />
+      </Ekwiwalent>
+      <ZasilkiPracownicy>
+        <Typ>DopełniaćJakZasadniczeDla</Typ>
+        <Chorobowych>True</Chorobowych>
+        <Macierzynskich>True</Macierzynskich>
+        <Rehabilitacyjnych>True</Rehabilitacyjnych>
+        <Opiekunczych>True</Opiekunczych>
+      </ZasilkiPracownicy>
+      <ZasilkiInni>
+        <Typ>DopełniaćJakZasadniczeDla</Typ>
+        <Chorobowych>True</Chorobowych>
+        <Macierzynskich>True</Macierzynskich>
+        <Rehabilitacyjnych>True</Rehabilitacyjnych>
+        <Opiekunczych>True</Opiekunczych>
+      </ZasilkiInni>
+      <DefinicjaLimitu />
+      <WliczanieDoPodstawyChorobowego>Domyślnie</WliczanieDoPodstawyChorobowego>
+    </Nieobecnosci>
+    <Zaokraglenie>
+      <Precyzja>DoPełnegoGrosza</Precyzja>
+      <Sposob>Standardowe</Sposob>
+      <Podstawa>False</Podstawa>
+    </Zaokraglenie>
+    <GUS>
+      <Kategoria>WgDefinicjiElementu</Kategoria>
+    </GUS>
+    <Rozliczenie>
+      <Ewidencja />
+      <ZmianaOdbiorcy>False</ZmianaOdbiorcy>
+      <WspolnaPlatnosc>False</WspolnaPlatnosc>
+    </Rozliczenie>
+    <Zajecie>
+      <Komornik>Domyślnie</Komornik>
+      <Alimenty>Domyślnie</Alimenty>
+    </Zajecie>
+    <Korygowany>True</Korygowany>
+    <MinimalneWynagrodzenie>True</MinimalneWynagrodzenie>
+    <DoWyplaty>True</DoWyplaty>
+    <ZawszeGotowka>False</ZawszeGotowka>
+    <GenerujZerowy>True</GenerujZerowy>
+    <Aktualizacja>False</Aktualizacja>
+    <Zerowanie>False</Zerowanie>
+    <Dodatkowe>
+      <DodatekDoEtatu>False</DodatekDoEtatu>
+    </Dodatkowe>
+    <Tekst />
+    <WidoczneCechy />
+    <Definicja_relacji_odbiorcy_elementu />
+    <Progi />
+  </DefinicjaElementu>
+<DefinicjaElementu id="DefinicjaElementu_182" guid="a9cd58e1-4b74-4194-989d-dc9b0df310f2">
+    <Podstawowa />
+    <Wydzial />
+    <RodzajZrodla>DodatekAutomatyczny</RodzajZrodla>
+    <Nazwa>Wysługa oskładkowana</Nazwa>
+    <NazwaPomocnicza />
+    <Skrot>Wysł.oskł</Skrot>
+    <Kod />
+    <Blokada>False</Blokada>
+    <Kolejnosc>150</Kolejnosc>
+    <Zatrudnienie>Etat</Zatrudnienie>
+    <DefinicjaListyPlac />
+    <Zakres />
+    <OkresNaliczania>
+      <Naliczanie>PłatnaZDołu</Naliczanie>
+      <Opoznienie>0</Opoznienie>
+      <Typ>Każda</Typ>
+      <Ilosc>0</Ilosc>
+    </OkresNaliczania>
+    <Algorytm>
+      <Priorytet>0</Priorytet>
+      <Potracenie>False</Potracenie>
+      <Typ>KreatorAlgorytmu</Typ>
+      <KreatorAlgorytmu>
+        <PodstawaTyp>Wyrażenie</PodstawaTyp>
+        <PodstawaNazwa>StawkaZaszeregowania1h(Element.Okres.To)*Pracownik.Czasy.Norma(Składnik.Okres).Czas</PodstawaNazwa>
+        <Proporcjonalnie>False</Proporcjonalnie>
+        <SposobProporcjonalnosci>NiePomniejszany</SposobProporcjonalnosci>
+        <PodstawaZa>Miesięcznie</PodstawaZa>
+        <Wspolczynnik>
+          <Typ>ZależnyOdStażuPracy</Typ>
+          <Wskaznik>False</Wskaznik>
+          <NazwaWskaznika />
+          <PracaWFirmie>True</PracaWFirmie>
+          <PracaNaDzien>PierwszyDzieńOkresu</PracaNaDzien>
+          <PodstawaStazu>00000000-0005-0003-0001-000000000000</PodstawaStazu>
+        </Wspolczynnik>
+        <Czas>
+          <Typ>NieUwzględniaj</Typ>
+          <Strefa />
+        </Czas>
+        <Korekta>
+          <Odchylki>True</Odchylki>
+          <Nieusprawiedliwione>Proporcjonalnie</Nieusprawiedliwione>
+          <Usprawiedliwione>Proporcjonalnie</Usprawiedliwione>
+          <Platne>ProporcjonalnieZero</Platne>
+          <Macierzynske>JednaTrzydziesta</Macierzynske>
+          <Rehabilitacyjne>JednaTrzydziesta</Rehabilitacyjne>
+          <Opiekuncze>JednaTrzydziesta</Opiekuncze>
+          <Chorobowe>JednaTrzydziesta</Chorobowe>
+          <Wychowawcze>Proporcjonalnie</Wychowawcze>
+          <OgraniczeniePomniejszen>False</OgraniczeniePomniejszen>
+        </Korekta>
+      </KreatorAlgorytmu>
+      <JakUrlopWypoczynkowy />
+      <JakUrlopOkolicznosciowy />
+      <JakEkwiwalentZaUrlop>
+        <WgWymiaruEtatu>False</WgWymiaruEtatu>
+        <DefinicjaLimitu />
+      </JakEkwiwalentZaUrlop>
+      <Edytor />
+      <JakChorobowe>
+        <Zatrudnienie>0</Zatrudnienie>
+      </JakChorobowe>
+      <Klasa>
+        <Nazwa />
+      </Klasa>
+      <ZaNieobecnosc>
+        <Macierzynskiego>False</Macierzynskiego>
+        <Rehabilitacyjnego>False</Rehabilitacyjnego>
+        <Opiekunczego>False</Opiekunczego>
+        <Chorobowego>False</Chorobowego>
+      </ZaNieobecnosc>
+      <PomniejszeniaIOdchylki />
+      <Liczba>0</Liczba>
+      <Podstawa>0.00 PLN</Podstawa>
+      <Ulamek>0/1</Ulamek>
+      <Czas>0:00</Czas>
+      <Dni>0</Dni>
+      <DodPodstawa />
+      <DodUlamek />
+      <DodProcent />
+      <DodWspolczynnik />
+      <DodCzas />
+      <DodDni />
+      <ElPodglad>True</ElPodglad>
+      <ElPodstawa1>Podstawa:</ElPodstawa1>
+      <ElPodstawa2 />
+      <ElPodstawa3 />
+      <ElUlamek />
+      <ElProcent>Procent:</ElProcent>
+      <ElWspolczynnik />
+      <ElCzas />
+      <ElDni />
+      <ElIlosc />
+      <Umowa>
+        <TypWartosci>Dowolny</TypWartosci>
+        <RodzajRozliczenia>Dowolny</RodzajRozliczenia>
+      </Umowa>
+    </Algorytm>
+    <Deklaracje>
+      <PozycjaPIT>00000000-0007-0004-0001-000000000000</PozycjaPIT>
+      <OpisNaPIT8C />
+      <Priorytet>0</Priorytet>
+      <Koszty>
+        <Typ>ZeStosunkuPracy</Typ>
+        <Procent>0.00%</Procent>
+      </Koszty>
+      <Zaliczka>
+        <Typ>NaliczaćWgSkaliPodatkowej</Typ>
+        <Procent>0.00%</Procent>
+        <PomniejszonaZUS>True</PomniejszonaZUS>
+      </Zaliczka>
+      <Ulga>
+        <Typ>Naliczać</Typ>
+      </Ulga>
+      <KodRSA />
+      <PozycjaRCA>NieDotyczy</PozycjaRCA>
+      <KodRNA>NieDotyczy</KodRNA>
+      <PozycjaRP7>SkładnikiStałe</PozycjaRP7>
+      <Spoleczne>
+        <Typ>Naliczać</Typ>
+      </Spoleczne>
+      <Zdrowotne>
+        <Typ>Naliczać</Typ>
+        <PomniejszaFIS>PomniejszaDoFIS</PomniejszaFIS>
+        <PomniejszoneZUS>True</PomniejszoneZUS>
+      </Zdrowotne>
+      <Narzuty>
+        <SkladkaFP>Domyślna</SkladkaFP>
+        <SkladkaFGSP>Domyślna</SkladkaFGSP>
+      </Narzuty>
+      <Umowa>NieDotyczy</Umowa>
+      <UmowaTyUb />
+      <UmowaJakEtat>False</UmowaJakEtat>
+      <NieWliczajSOD>False</NieWliczajSOD>
+      <NieRozrzucaj>False</NieRozrzucaj>
+    </Deklaracje>
+    <Nieobecnosci>
+      <WahaniaWysokosci>False</WahaniaWysokosci>
+      <Urlop>
+        <Typ>NieWliczać</Typ>
+        <Dopelnienie>False</Dopelnienie>
+        <WspolczynnikTyp>0</WspolczynnikTyp>
+        <WspolczynnikNazwa />
+      </Urlop>
+      <Ekwiwalent>
+        <Typ>Wliczać</Typ>
+        <Dopelnienie>True</Dopelnienie>
+        <WspolczynnikTyp>0</WspolczynnikTyp>
+        <WspolczynnikNazwa />
+      </Ekwiwalent>
+      <ZasilkiPracownicy>
+        <Typ>WliczaćWNominalnejWysokościDla</Typ>
+        <Chorobowych>False</Chorobowych>
+        <Macierzynskich>True</Macierzynskich>
+        <Rehabilitacyjnych>False</Rehabilitacyjnych>
+        <Opiekunczych>False</Opiekunczych>
+      </ZasilkiPracownicy>
+      <ZasilkiInni>
+        <Typ>WliczaćWNominalnejWysokościDla</Typ>
+        <Chorobowych>False</Chorobowych>
+        <Macierzynskich>True</Macierzynskich>
+        <Rehabilitacyjnych>False</Rehabilitacyjnych>
+        <Opiekunczych>False</Opiekunczych>
+      </ZasilkiInni>
+      <DefinicjaLimitu />
+      <WliczanieDoPodstawyChorobowego>Domyślnie</WliczanieDoPodstawyChorobowego>
+    </Nieobecnosci>
+    <Zaokraglenie>
+      <Precyzja>DoPełnegoGrosza</Precyzja>
+      <Sposob>Standardowe</Sposob>
+      <Podstawa>False</Podstawa>
+    </Zaokraglenie>
+    <GUS>
+      <Kategoria>WgDefinicjiElementu</Kategoria>
+    </GUS>
+    <Rozliczenie>
+      <Ewidencja />
+      <ZmianaOdbiorcy>False</ZmianaOdbiorcy>
+      <WspolnaPlatnosc>False</WspolnaPlatnosc>
+    </Rozliczenie>
+    <Zajecie>
+      <Komornik>Domyślnie</Komornik>
+      <Alimenty>Domyślnie</Alimenty>
+    </Zajecie>
+    <Korygowany>True</Korygowany>
+    <MinimalneWynagrodzenie>True</MinimalneWynagrodzenie>
+    <DoWyplaty>True</DoWyplaty>
+    <ZawszeGotowka>False</ZawszeGotowka>
+    <GenerujZerowy>False</GenerujZerowy>
+    <Aktualizacja>False</Aktualizacja>
+    <Zerowanie>False</Zerowanie>
+    <Dodatkowe>
+      <DodatekDoEtatu>False</DodatekDoEtatu>
+    </Dodatkowe>
+    <Tekst />
+    <WidoczneCechy />
+    <Definicja_relacji_odbiorcy_elementu />
+    <Progi>
+      <ProgStazuPracy id="ProgStazuPracy_18">
+        <Definicja>DefinicjaElementu_182</Definicja>
+        <Prog>5</Prog>
+        <Wartosc>5.00%</Wartosc>
+      </ProgStazuPracy>
+      <ProgStazuPracy id="ProgStazuPracy_19">
+        <Definicja>DefinicjaElementu_182</Definicja>
+        <Prog>6</Prog>
+        <Wartosc>6.00%</Wartosc>
+      </ProgStazuPracy>
+      <ProgStazuPracy id="ProgStazuPracy_20">
+        <Definicja>DefinicjaElementu_182</Definicja>
+        <Prog>7</Prog>
+        <Wartosc>7.00%</Wartosc>
+      </ProgStazuPracy>
+      <ProgStazuPracy id="ProgStazuPracy_21">
+        <Definicja>DefinicjaElementu_182</Definicja>
+        <Prog>8</Prog>
+        <Wartosc>8.00%</Wartosc>
+      </ProgStazuPracy>
+      <ProgStazuPracy id="ProgStazuPracy_22">
+        <Definicja>DefinicjaElementu_182</Definicja>
+        <Prog>9</Prog>
+        <Wartosc>9.00%</Wartosc>
+      </ProgStazuPracy>
+      <ProgStazuPracy id="ProgStazuPracy_23">
+        <Definicja>DefinicjaElementu_182</Definicja>
+        <Prog>10</Prog>
+        <Wartosc>10.00%</Wartosc>
+      </ProgStazuPracy>
+      <ProgStazuPracy id="ProgStazuPracy_24">
+        <Definicja>DefinicjaElementu_182</Definicja>
+        <Prog>11</Prog>
+        <Wartosc>11.00%</Wartosc>
+      </ProgStazuPracy>
+      <ProgStazuPracy id="ProgStazuPracy_25">
+        <Definicja>DefinicjaElementu_182</Definicja>
+        <Prog>12</Prog>
+        <Wartosc>12.00%</Wartosc>
+      </ProgStazuPracy>
+      <ProgStazuPracy id="ProgStazuPracy_26">
+        <Definicja>DefinicjaElementu_182</Definicja>
+        <Prog>13</Prog>
+        <Wartosc>13.00%</Wartosc>
+      </ProgStazuPracy>
+      <ProgStazuPracy id="ProgStazuPracy_27">
+        <Definicja>DefinicjaElementu_182</Definicja>
+        <Prog>14</Prog>
+        <Wartosc>14.00%</Wartosc>
+      </ProgStazuPracy>
+      <ProgStazuPracy id="ProgStazuPracy_28">
+        <Definicja>DefinicjaElementu_182</Definicja>
+        <Prog>15</Prog>
+        <Wartosc>15.00%</Wartosc>
+      </ProgStazuPracy>
+      <ProgStazuPracy id="ProgStazuPracy_29">
+        <Definicja>DefinicjaElementu_182</Definicja>
+        <Prog>16</Prog>
+        <Wartosc>16.00%</Wartosc>
+      </ProgStazuPracy>
+      <ProgStazuPracy id="ProgStazuPracy_30">
+        <Definicja>DefinicjaElementu_182</Definicja>
+        <Prog>17</Prog>
+        <Wartosc>17.00%</Wartosc>
+      </ProgStazuPracy>
+      <ProgStazuPracy id="ProgStazuPracy_31">
+        <Definicja>DefinicjaElementu_182</Definicja>
+        <Prog>18</Prog>
+        <Wartosc>18.00%</Wartosc>
+      </ProgStazuPracy>
+      <ProgStazuPracy id="ProgStazuPracy_32">
+        <Definicja>DefinicjaElementu_182</Definicja>
+        <Prog>19</Prog>
+        <Wartosc>19.00%</Wartosc>
+      </ProgStazuPracy>
+      <ProgStazuPracy id="ProgStazuPracy_33">
+        <Definicja>DefinicjaElementu_182</Definicja>
+        <Prog>20</Prog>
+        <Wartosc>20.00%</Wartosc>
+      </ProgStazuPracy>
+    </Progi>
+    <features>
+      <feature name="Nagroda roczna">True</feature>
+    </features>
+  </DefinicjaElementu>
+  <DefinicjaElementu id="DefinicjaElementu_183" guid="c4020013-29f5-4c4e-bdf9-92a1a6ff5acc">
+    <Podstawowa>a9cd58e1-4b74-4194-989d-dc9b0df310f2</Podstawowa>
+    <Wydzial />
+    <RodzajZrodla>DodatekAutomatyczny</RodzajZrodla>
+    <Nazwa>Wysługa nieoskładkowana</Nazwa>
+    <NazwaPomocnicza />
+    <Skrot>Wysł.nieo</Skrot>
+    <Kod />
+    <Blokada>False</Blokada>
+    <Kolejnosc>50</Kolejnosc>
+    <Zatrudnienie>Etat</Zatrudnienie>
+    <DefinicjaListyPlac />
+    <Zakres />
+    <OkresNaliczania>
+      <Naliczanie>PłatnaZDołu</Naliczanie>
+      <Opoznienie>0</Opoznienie>
+      <Typ>Każda</Typ>
+      <Ilosc>0</Ilosc>
+    </OkresNaliczania>
+    <Algorytm>
+      <Priorytet>1</Priorytet>
+      <Potracenie>False</Potracenie>
+      <Typ>ZaOkresNieobecności</Typ>
+      <KreatorAlgorytmu>
+        <PodstawaTyp>0</PodstawaTyp>
+        <PodstawaNazwa />
+        <Proporcjonalnie>False</Proporcjonalnie>
+        <SposobProporcjonalnosci>NiePomniejszany</SposobProporcjonalnosci>
+        <PodstawaZa>NieZależyOdCzasu</PodstawaZa>
+        <Wspolczynnik>
+          <Typ>BezWspółczynnika</Typ>
+          <Wskaznik>False</Wskaznik>
+          <NazwaWskaznika />
+          <PracaWFirmie>False</PracaWFirmie>
+          <PracaNaDzien>OstatniDzieńOkresu</PracaNaDzien>
+          <PodstawaStazu />
+        </Wspolczynnik>
+        <Czas>
+          <Typ>NieUwzględniaj</Typ>
+          <Strefa />
+        </Czas>
+        <Korekta>
+          <Odchylki>False</Odchylki>
+          <Nieusprawiedliwione>NiePomniejsza</Nieusprawiedliwione>
+          <Usprawiedliwione>NiePomniejsza</Usprawiedliwione>
+          <Platne>NiePomniejsza</Platne>
+          <Macierzynske>NiePomniejsza</Macierzynske>
+          <Rehabilitacyjne>NiePomniejsza</Rehabilitacyjne>
+          <Opiekuncze>NiePomniejsza</Opiekuncze>
+          <Chorobowe>NiePomniejsza</Chorobowe>
+          <Wychowawcze>NiePomniejsza</Wychowawcze>
+          <OgraniczeniePomniejszen>False</OgraniczeniePomniejszen>
+        </Korekta>
+      </KreatorAlgorytmu>
+      <JakUrlopWypoczynkowy />
+      <JakUrlopOkolicznosciowy />
+      <JakEkwiwalentZaUrlop>
+        <WgWymiaruEtatu>False</WgWymiaruEtatu>
+        <DefinicjaLimitu />
+      </JakEkwiwalentZaUrlop>
+      <Edytor />
+      <JakChorobowe>
+        <Zatrudnienie>0</Zatrudnienie>
+      </JakChorobowe>
+      <Klasa>
+        <Nazwa />
+      </Klasa>
+      <ZaNieobecnosc>
+        <Macierzynskiego>True</Macierzynskiego>
+        <Rehabilitacyjnego>True</Rehabilitacyjnego>
+        <Opiekunczego>True</Opiekunczego>
+        <Chorobowego>True</Chorobowego>
+	<Wychowawczego>True</Wychowawczego>
+      </ZaNieobecnosc>
+      <PomniejszeniaIOdchylki />
+      <Liczba>0</Liczba>
+      <Podstawa>0.00 PLN</Podstawa>
+      <Ulamek>0/1</Ulamek>
+      <Czas>0:00</Czas>
+      <Dni>0</Dni>
+      <DodPodstawa />
+      <DodUlamek />
+      <DodProcent />
+      <DodWspolczynnik />
+      <DodCzas />
+      <DodDni />
+      <ElPodglad>False</ElPodglad>
+      <ElPodstawa1>Podstawa:</ElPodstawa1>
+      <ElPodstawa2 />
+      <ElPodstawa3 />
+      <ElUlamek />
+      <ElProcent />
+      <ElWspolczynnik />
+      <ElCzas />
+      <ElDni />
+      <ElIlosc />
+      <Umowa>
+        <TypWartosci>Dowolny</TypWartosci>
+        <RodzajRozliczenia>Dowolny</RodzajRozliczenia>
+      </Umowa>
+    </Algorytm>
+    <Deklaracje>
+      <PozycjaPIT>00000000-0007-0004-0001-000000000000</PozycjaPIT>
+      <OpisNaPIT8C />
+      <Priorytet>0</Priorytet>
+      <Koszty>
+        <Typ>ZeStosunkuPracy</Typ>
+        <Procent>0.00%</Procent>
+      </Koszty>
+      <Zaliczka>
+        <Typ>NaliczaćWgSkaliPodatkowej</Typ>
+        <Procent>0.00%</Procent>
+        <PomniejszonaZUS>True</PomniejszonaZUS>
+      </Zaliczka>
+      <Ulga>
+        <Typ>Naliczać</Typ>
+      </Ulga>
+      <KodRSA />
+      <PozycjaRCA>NieDotyczy</PozycjaRCA>
+      <KodRNA>NieDotyczy</KodRNA>
+      <PozycjaRP7>SkładnikiStałe</PozycjaRP7>
+      <Spoleczne>
+        <Typ>NieNaliczać</Typ>
+      </Spoleczne>
+      <Zdrowotne>
+        <Typ>NieNaliczać</Typ>
+        <PomniejszaFIS>NiePomniejsza</PomniejszaFIS>
+        <PomniejszoneZUS>False</PomniejszoneZUS>
+      </Zdrowotne>
+      <Narzuty>
+        <SkladkaFP>Domyślna</SkladkaFP>
+        <SkladkaFGSP>Domyślna</SkladkaFGSP>
+      </Narzuty>
+      <Umowa>NieDotyczy</Umowa>
+      <UmowaTyUb />
+      <UmowaJakEtat>False</UmowaJakEtat>
+      <NieWliczajSOD>False</NieWliczajSOD>
+      <NieRozrzucaj>False</NieRozrzucaj>
+    </Deklaracje>
+    <Nieobecnosci>
+      <WahaniaWysokosci>False</WahaniaWysokosci>
+      <Urlop>
+        <Typ>NieWliczać</Typ>
+        <Dopelnienie>False</Dopelnienie>
+        <WspolczynnikTyp>0</WspolczynnikTyp>
+        <WspolczynnikNazwa />
+      </Urlop>
+      <Ekwiwalent>
+        <Typ>NieWliczać</Typ>
+        <Dopelnienie>False</Dopelnienie>
+        <WspolczynnikTyp>0</WspolczynnikTyp>
+        <WspolczynnikNazwa />
+      </Ekwiwalent>
+      <ZasilkiPracownicy>
+        <Typ>NieWliczać</Typ>
+        <Chorobowych>False</Chorobowych>
+        <Macierzynskich>False</Macierzynskich>
+        <Rehabilitacyjnych>False</Rehabilitacyjnych>
+        <Opiekunczych>False</Opiekunczych>
+      </ZasilkiPracownicy>
+      <ZasilkiInni>
+        <Typ>NieWliczać</Typ>
+        <Chorobowych>False</Chorobowych>
+        <Macierzynskich>False</Macierzynskich>
+        <Rehabilitacyjnych>False</Rehabilitacyjnych>
+        <Opiekunczych>False</Opiekunczych>
+      </ZasilkiInni>
+      <DefinicjaLimitu />
+      <WliczanieDoPodstawyChorobowego>Domyślnie</WliczanieDoPodstawyChorobowego>
+    </Nieobecnosci>
+    <Zaokraglenie>
+      <Precyzja>DoPełnegoGrosza</Precyzja>
+      <Sposob>Standardowe</Sposob>
+      <Podstawa>False</Podstawa>
+    </Zaokraglenie>
+    <GUS>
+      <Kategoria>WgDefinicjiElementu</Kategoria>
+    </GUS>
+    <Rozliczenie>
+      <Ewidencja />
+      <ZmianaOdbiorcy>False</ZmianaOdbiorcy>
+      <WspolnaPlatnosc>False</WspolnaPlatnosc>
+    </Rozliczenie>
+    <Zajecie>
+      <Komornik>Domyślnie</Komornik>
+      <Alimenty>Domyślnie</Alimenty>
+    </Zajecie>
+    <Korygowany>True</Korygowany>
+    <MinimalneWynagrodzenie>True</MinimalneWynagrodzenie>
+    <DoWyplaty>True</DoWyplaty>
+    <ZawszeGotowka>False</ZawszeGotowka>
+    <GenerujZerowy>False</GenerujZerowy>
+    <Aktualizacja>False</Aktualizacja>
+    <Zerowanie>False</Zerowanie>
+    <Dodatkowe>
+      <DodatekDoEtatu>False</DodatekDoEtatu>
+    </Dodatkowe>
+    <Tekst />
+    <WidoczneCechy />
+    <Definicja_relacji_odbiorcy_elementu />
+    <Progi />
+    <features>
+      <feature name="Nagroda roczna">True</feature>
+    </features>
+  </DefinicjaElementu>
+ <Dodatek id="Dodatek_41" guid="c5c1c34b-316b-4ea2-a21e-7a8c7b7579c6">
+    <Pracownik>fa6e98aa-d7bf-4266-aec9-0e7214fb4fbf</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_41">
+        <Dodatek>Dodatek_41</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_81" guid="a7122964-9851-4803-9e6a-31ebd9ba8512">
+    <Pracownik>fa6e98aa-d7bf-4266-aec9-0e7214fb4fbf</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_81">
+        <Dodatek>Dodatek_81</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_42" guid="e95b73c6-9fe8-43ed-9d9b-851868f0ef58">
+    <Pracownik>47fb21dc-a45d-455d-a7be-2c68241975fd</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_42">
+        <Dodatek>Dodatek_42</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_82" guid="5096888f-b42a-468e-872e-d6f9f7046fda">
+    <Pracownik>47fb21dc-a45d-455d-a7be-2c68241975fd</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_82">
+        <Dodatek>Dodatek_82</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_43" guid="50bf78b4-75bc-4675-abc7-3c8bd8d272b3">
+    <Pracownik>071bbcab-50b8-4d01-9042-97446c280b8a</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_43">
+        <Dodatek>Dodatek_43</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_85" guid="6e90aef5-2c18-4e00-8b97-634a14ae1926">
+    <Pracownik>071bbcab-50b8-4d01-9042-97446c280b8a</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_85">
+        <Dodatek>Dodatek_85</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_132" guid="ab77cf5a-f4d0-492a-b8a4-225f25a9621e">
+    <Pracownik>071bbcab-50b8-4d01-9042-97446c280b8a</Pracownik>
+    <Powiazanie />
+    <Nazwa>Dodatek funkcyjny</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_132">
+        <Dodatek>Dodatek_132</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>df97dc0b-2cb9-47b3-b8f0-81ce39934a06</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>500.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_44" guid="8b4f6267-47a7-49df-964c-43dd5726db18">
+    <Pracownik>ddaac635-a1fe-4662-9dd9-ef29d269fce0</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_44">
+        <Dodatek>Dodatek_44</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_120" guid="58dfed9e-cc2c-4ce0-a96b-3577aa0453d4">
+    <Pracownik>ddaac635-a1fe-4662-9dd9-ef29d269fce0</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_120">
+        <Dodatek>Dodatek_120</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_94" guid="11de797a-4c77-482b-82bd-8bea40d37e2e">
+    <Pracownik>15795088-a50f-4509-b0c9-782f34d0d4ec</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_94">
+        <Dodatek>Dodatek_94</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_45" guid="d452058a-11df-4b4e-9fa5-b5c46e8c40cb">
+    <Pracownik>92ee52c3-3171-4c24-bd00-884ebd11d6a9</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_45">
+        <Dodatek>Dodatek_45</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_113" guid="219447ca-1cb3-4c9d-811e-cdb253f61150">
+    <Pracownik>92ee52c3-3171-4c24-bd00-884ebd11d6a9</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_113">
+        <Dodatek>Dodatek_113</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_126" guid="9bcc1629-9587-425f-b3c2-7e0781439123">
+    <Pracownik>f97b4503-ba21-43c2-8fa8-e8f9d633f6cc</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_126">
+        <Dodatek>Dodatek_126</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_112" guid="342ddb3f-57b4-4727-b25c-2c56715802ae">
+    <Pracownik>2623268e-3357-4894-9e36-82a75f7ae5eb</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_112">
+        <Dodatek>Dodatek_112</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_46" guid="43d00331-dc21-4d7f-8d7e-b5c671b2528c">
+    <Pracownik>b73a41c7-6149-47ce-960c-f7d959c51e51</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_46">
+        <Dodatek>Dodatek_46</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_83" guid="ef4ec177-7286-4de8-92ac-46c32926e61f">
+    <Pracownik>b73a41c7-6149-47ce-960c-f7d959c51e51</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_83">
+        <Dodatek>Dodatek_83</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_47" guid="2a5252f4-296a-47f6-b15e-7ebd3886a15e">
+    <Pracownik>c82d45a1-477b-4427-912c-2e5d70cc23de</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_47">
+        <Dodatek>Dodatek_47</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_104" guid="83f2e618-2f92-460c-8c7e-bb48bdc7b1dd">
+    <Pracownik>c82d45a1-477b-4427-912c-2e5d70cc23de</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_104">
+        <Dodatek>Dodatek_104</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_128" guid="7d0edbe0-ca24-4d2d-82f4-dee1a63b44de">
+    <Pracownik>baf9feb0-ef5b-45b7-81d9-d30ca4f63f90</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_128">
+        <Dodatek>Dodatek_128</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_48" guid="a2e0d657-d495-4dc8-aded-cd588be4dbdf">
+    <Pracownik>0ca4d845-f771-40db-a0d6-cf466bbe7d67</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_48">
+        <Dodatek>Dodatek_48</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_127" guid="4772780b-2571-4df4-bc7f-b5129163824f">
+    <Pracownik>0ca4d845-f771-40db-a0d6-cf466bbe7d67</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_127">
+        <Dodatek>Dodatek_127</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_49" guid="9677bdcc-e970-4f5e-afe7-ac62ef43e391">
+    <Pracownik>5e762f01-8956-404b-b493-6904d136a69e</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_49">
+        <Dodatek>Dodatek_49</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_84" guid="a6031f30-f032-4e04-b6f2-0462a50f8952">
+    <Pracownik>5e762f01-8956-404b-b493-6904d136a69e</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_84">
+        <Dodatek>Dodatek_84</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_87" guid="c55e6333-419f-46ad-9450-13c11162a6a4">
+    <Pracownik>e18972e7-d0ff-4e5b-842f-d2dd1ca1a03f</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_87">
+        <Dodatek>Dodatek_87</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_92" guid="1ec046b2-1667-4e96-b12f-be7b1664b28e">
+    <Pracownik>3e003de8-e81a-4f69-99fb-9db2cb359810</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_92">
+        <Dodatek>Dodatek_92</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_50" guid="1d6232a9-0122-4de0-aa5b-745492772e5a">
+    <Pracownik>c2af312a-d40c-41fc-921f-b3029506cdd7</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_50">
+        <Dodatek>Dodatek_50</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_90" guid="17234301-e187-46f9-9f9a-e3e930701fb2">
+    <Pracownik>c2af312a-d40c-41fc-921f-b3029506cdd7</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_90">
+        <Dodatek>Dodatek_90</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_51" guid="283195df-d1a0-4dbc-862c-ee42d1e89d47">
+    <Pracownik>552e3251-21ee-4b28-935a-360488b24835</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_51">
+        <Dodatek>Dodatek_51</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_89" guid="1aa84319-eeef-47e1-a5f1-7c608a71555f">
+    <Pracownik>552e3251-21ee-4b28-935a-360488b24835</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_89">
+        <Dodatek>Dodatek_89</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_52" guid="38349939-e707-4943-8a66-89a4b7aaeb63">
+    <Pracownik>98096b65-7d50-421b-ab43-efb3af3efaa1</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_52">
+        <Dodatek>Dodatek_52</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_88" guid="7d7642ff-2ff5-4bc7-81a4-64e9abbb49fc">
+    <Pracownik>98096b65-7d50-421b-ab43-efb3af3efaa1</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_88">
+        <Dodatek>Dodatek_88</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_53" guid="9f8de9cd-5f55-4341-aa09-b30b1c6e7f0e">
+    <Pracownik>ed545be8-65ed-4ef7-863c-96d12551ee86</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_53">
+        <Dodatek>Dodatek_53</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_96" guid="93fafdeb-f0fa-424a-b9c2-de054de4c1b6">
+    <Pracownik>ed545be8-65ed-4ef7-863c-96d12551ee86</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_96">
+        <Dodatek>Dodatek_96</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_54" guid="d97b7b77-39e6-4a63-929d-161e0810f97b">
+    <Pracownik>c2dc7f29-d427-4960-b5ea-e381d96bf4e3</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_54">
+        <Dodatek>Dodatek_54</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_95" guid="d070bbe1-5e66-4548-8615-816698d8633a">
+    <Pracownik>c2dc7f29-d427-4960-b5ea-e381d96bf4e3</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_95">
+        <Dodatek>Dodatek_95</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_105" guid="8b6b888f-2b10-4cac-a928-4a4aa30dc57a">
+    <Pracownik>f337c981-f397-48d1-bcfc-e0cf6e001e8b</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_105">
+        <Dodatek>Dodatek_105</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_130" guid="aa2e2075-e1fc-4a9f-9ccc-c6b9b07b5ddf">
+    <Pracownik>f337c981-f397-48d1-bcfc-e0cf6e001e8b</Pracownik>
+    <Powiazanie />
+    <Nazwa>Dodatek funkcyjny</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_130">
+        <Dodatek>Dodatek_130</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>df97dc0b-2cb9-47b3-b8f0-81ce39934a06</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>2,500.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_55" guid="fc9b1f06-4d70-431b-8479-b8fa0971df73">
+    <Pracownik>43b8b29f-55fa-4710-a3c3-f21e325c0114</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_55">
+        <Dodatek>Dodatek_55</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_93" guid="a6e5638f-51b3-4e7e-a202-bb9cdf8bb122">
+    <Pracownik>43b8b29f-55fa-4710-a3c3-f21e325c0114</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_93">
+        <Dodatek>Dodatek_93</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_56" guid="a3202c5e-a590-4849-a0a0-675326861607">
+    <Pracownik>f2816459-8799-44cf-a455-b221c0aef222</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_56">
+        <Dodatek>Dodatek_56</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_91" guid="1e8a9fa2-d085-410e-951c-a911741847ec">
+    <Pracownik>f2816459-8799-44cf-a455-b221c0aef222</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_91">
+        <Dodatek>Dodatek_91</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_57" guid="6c57921c-0761-4df3-aff4-f777652c7373">
+    <Pracownik>21d17cd9-c5fd-41bd-9314-78f1a5ca410e</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_57">
+        <Dodatek>Dodatek_57</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_107" guid="bbcee771-87f1-4e5b-ba0f-7576d5aec0b1">
+    <Pracownik>21d17cd9-c5fd-41bd-9314-78f1a5ca410e</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_107">
+        <Dodatek>Dodatek_107</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_133" guid="85aef73e-15c7-4f15-b6e9-3c498ad3bf14">
+    <Pracownik>21d17cd9-c5fd-41bd-9314-78f1a5ca410e</Pracownik>
+    <Powiazanie />
+    <Nazwa>Dodatek funkcyjny</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_133">
+        <Dodatek>Dodatek_133</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>df97dc0b-2cb9-47b3-b8f0-81ce39934a06</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>500.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_58" guid="d62768f4-e071-499c-9b29-04e0b273458e">
+    <Pracownik>096ddb93-56ed-4f91-b26b-49bc4518a5e5</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_58">
+        <Dodatek>Dodatek_58</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_106" guid="3f3d7986-405e-40be-9287-c33a4a08a044">
+    <Pracownik>096ddb93-56ed-4f91-b26b-49bc4518a5e5</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_106">
+        <Dodatek>Dodatek_106</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_59" guid="1daedcc4-c085-4149-93a1-f07a7c751949">
+    <Pracownik>101d01ee-b422-47c7-8a59-34b66063e211</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_59">
+        <Dodatek>Dodatek_59</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_129" guid="6cedb276-0546-4855-b862-fc0497e692cf">
+    <Pracownik>101d01ee-b422-47c7-8a59-34b66063e211</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_129">
+        <Dodatek>Dodatek_129</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_60" guid="0a0b0aa9-e5df-4eaa-a535-f379f2933083">
+    <Pracownik>b5af7068-7e0d-4c4e-8633-382a124dd6c0</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_60">
+        <Dodatek>Dodatek_60</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_102" guid="50c7464b-1638-4993-865f-16411537887e">
+    <Pracownik>b5af7068-7e0d-4c4e-8633-382a124dd6c0</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_102">
+        <Dodatek>Dodatek_102</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_131" guid="9a3687c2-5477-48b8-b322-0ca8d7e797e9">
+    <Pracownik>b5af7068-7e0d-4c4e-8633-382a124dd6c0</Pracownik>
+    <Powiazanie />
+    <Nazwa>Dodatek funkcyjny</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_131">
+        <Dodatek>Dodatek_131</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>df97dc0b-2cb9-47b3-b8f0-81ce39934a06</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>1,000.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_61" guid="4591b0e2-6052-4a2f-9fd2-96c576442830">
+    <Pracownik>76e06a80-699d-429d-a8d8-4e82d820ecb0</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_61">
+        <Dodatek>Dodatek_61</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_121" guid="1e70a451-9ea4-454c-8f19-3fc13a69f272">
+    <Pracownik>76e06a80-699d-429d-a8d8-4e82d820ecb0</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_121">
+        <Dodatek>Dodatek_121</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_62" guid="6e53bce2-e3b6-4c65-840a-a49a84333a6c">
+    <Pracownik>6777f712-01fd-42f7-bfd0-7298549ebcb7</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_62">
+        <Dodatek>Dodatek_62</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_101" guid="28c5917d-4942-4910-8944-ce6c525fc12f">
+    <Pracownik>6777f712-01fd-42f7-bfd0-7298549ebcb7</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_101">
+        <Dodatek>Dodatek_101</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_63" guid="2757d5a6-ab4b-473b-b1bf-374f11170d09">
+    <Pracownik>732aa7f0-ef5c-4175-a2fa-98345eaa90ff</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_63">
+        <Dodatek>Dodatek_63</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_100" guid="163d4495-e202-4801-80d2-0bdd30aa1dd0">
+    <Pracownik>732aa7f0-ef5c-4175-a2fa-98345eaa90ff</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_100">
+        <Dodatek>Dodatek_100</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_64" guid="302968e0-b6fc-405b-9c61-1c0a3a74059f">
+    <Pracownik>f642b4ca-bb76-42c1-be8b-59d65b82b680</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_64">
+        <Dodatek>Dodatek_64</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_99" guid="35efde2c-efdb-4102-9797-e172dc3248b4">
+    <Pracownik>f642b4ca-bb76-42c1-be8b-59d65b82b680</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_99">
+        <Dodatek>Dodatek_99</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_65" guid="90742669-e93d-41ba-b76d-c0e8900fbad1">
+    <Pracownik>e74d9609-e8fa-44bf-8924-d1146e8303b4</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_65">
+        <Dodatek>Dodatek_65</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_98" guid="cb7c17a7-8e0c-4fb3-8605-f5e7c3f9410b">
+    <Pracownik>e74d9609-e8fa-44bf-8924-d1146e8303b4</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_98">
+        <Dodatek>Dodatek_98</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_66" guid="666910c2-c395-406c-987c-1705833f1e0a">
+    <Pracownik>bbc01b84-182c-4401-ad1a-9a012fd7122c</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_66">
+        <Dodatek>Dodatek_66</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_97" guid="7a7d7710-4d19-437f-8cc6-9942daf369c5">
+    <Pracownik>bbc01b84-182c-4401-ad1a-9a012fd7122c</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_97">
+        <Dodatek>Dodatek_97</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_67" guid="1065a5b2-f320-43b6-b331-ff881a58981a">
+    <Pracownik>38dc08cf-d169-4b52-93e5-f2905da337b1</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_67">
+        <Dodatek>Dodatek_67</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_116" guid="cab7def5-198f-4725-9bf6-8613f3f98f2a">
+    <Pracownik>38dc08cf-d169-4b52-93e5-f2905da337b1</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_116">
+        <Dodatek>Dodatek_116</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_114" guid="87e24285-f0c8-4661-897d-8c17ddef2068">
+    <Pracownik>2e008763-6356-4e5d-88ad-e52b462e850f</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_114">
+        <Dodatek>Dodatek_114</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_68" guid="d238613c-bec7-44aa-ae5a-4d11154f518b">
+    <Pracownik>d6e99852-5b79-4d4a-809f-4af7aee47839</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_68">
+        <Dodatek>Dodatek_68</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_111" guid="e372c770-0ac8-4013-8411-9fc2b02252f6">
+    <Pracownik>d6e99852-5b79-4d4a-809f-4af7aee47839</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_111">
+        <Dodatek>Dodatek_111</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_69" guid="be688f91-f9be-4434-9e08-6de168dc4593">
+    <Pracownik>0aa5c857-9fb4-44a5-81c8-5d8638ccfe9b</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_69">
+        <Dodatek>Dodatek_69</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_110" guid="6e069ee8-5c81-4dd5-b1f5-c23e6a2fac35">
+    <Pracownik>0aa5c857-9fb4-44a5-81c8-5d8638ccfe9b</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_110">
+        <Dodatek>Dodatek_110</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_70" guid="476aeefd-6176-42b4-894d-da889021a781">
+    <Pracownik>246f39e1-8404-4431-a477-e26286e99802</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_70">
+        <Dodatek>Dodatek_70</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_109" guid="2720a7b1-aca9-4564-9d3c-d625f9c2814c">
+    <Pracownik>246f39e1-8404-4431-a477-e26286e99802</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_109">
+        <Dodatek>Dodatek_109</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_71" guid="7d2eb64b-9d75-423e-9b94-a2c7833027ab">
+    <Pracownik>7750cdf5-5c2a-449a-a922-0dfb179b0947</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_71">
+        <Dodatek>Dodatek_71</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_108" guid="73173d88-58dc-467e-a9dd-f9e7188fe6b4">
+    <Pracownik>7750cdf5-5c2a-449a-a922-0dfb179b0947</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_108">
+        <Dodatek>Dodatek_108</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_72" guid="75fdd9f0-625d-4334-99d9-c8d328efce83">
+    <Pracownik>f052f208-117a-4fa1-9faf-eabe16f2f359</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_72">
+        <Dodatek>Dodatek_72</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_125" guid="95b81e79-3ab3-4c1a-83f3-69e935ebcc12">
+    <Pracownik>f052f208-117a-4fa1-9faf-eabe16f2f359</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_125">
+        <Dodatek>Dodatek_125</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_73" guid="27ee8432-5a4a-4fe0-a049-db9f4690f26d">
+    <Pracownik>e114b48e-8eee-48d5-8012-fda6b6866581</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_73">
+        <Dodatek>Dodatek_73</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_124" guid="f59f0319-6f70-494d-97b3-65cd8a01a1ec">
+    <Pracownik>e114b48e-8eee-48d5-8012-fda6b6866581</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_124">
+        <Dodatek>Dodatek_124</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_74" guid="40465148-df67-4319-b0bf-4ed03a5a8d89">
+    <Pracownik>27420ee1-72a7-4006-9f7c-7a8339665a50</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_74">
+        <Dodatek>Dodatek_74</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_123" guid="8b4c01f8-061e-4d71-a0ef-9e7feb05f9de">
+    <Pracownik>27420ee1-72a7-4006-9f7c-7a8339665a50</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_123">
+        <Dodatek>Dodatek_123</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_75" guid="52ec1b8f-8170-47ea-81e6-073e837c0299">
+    <Pracownik>f763a49c-61f0-4a17-9473-e51f0f761862</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_75">
+        <Dodatek>Dodatek_75</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_122" guid="748f1519-ebd9-4660-86a1-c9c58f82e3e6">
+    <Pracownik>f763a49c-61f0-4a17-9473-e51f0f761862</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_122">
+        <Dodatek>Dodatek_122</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_76" guid="b758990c-2aae-4526-ad20-721716c8d8af">
+    <Pracownik>3d9d0283-c572-4833-bf80-302050e5cc17</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_76">
+        <Dodatek>Dodatek_76</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_119" guid="ad294ef4-9a03-4dc9-8630-883da1c3651e">
+    <Pracownik>3d9d0283-c572-4833-bf80-302050e5cc17</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_119">
+        <Dodatek>Dodatek_119</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_77" guid="a9a18dac-3350-40da-8630-03cdf1e96a34">
+    <Pracownik>ac1a9b03-f1ca-4faf-a1c1-f2b76c3cbcac</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_77">
+        <Dodatek>Dodatek_77</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_118" guid="5c391cd4-2da9-4aa1-9809-01bb1b72743c">
+    <Pracownik>ac1a9b03-f1ca-4faf-a1c1-f2b76c3cbcac</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_118">
+        <Dodatek>Dodatek_118</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_78" guid="512d8911-d85a-4343-bd42-1effe6388c1d">
+    <Pracownik>4d4848c1-5721-4fdd-ae63-5854efde52cb</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_78">
+        <Dodatek>Dodatek_78</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_117" guid="c38125e9-2e63-49b2-9e74-415113849a43">
+    <Pracownik>4d4848c1-5721-4fdd-ae63-5854efde52cb</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_117">
+        <Dodatek>Dodatek_117</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_134" guid="5db8fcec-c1b5-44bd-8cca-3f5f62458a23">
+    <Pracownik>4d4848c1-5721-4fdd-ae63-5854efde52cb</Pracownik>
+    <Powiazanie />
+    <Nazwa>Dodatek funkcyjny</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_134">
+        <Dodatek>Dodatek_134</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>df97dc0b-2cb9-47b3-b8f0-81ce39934a06</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>500.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_79" guid="ce08bf0f-8ff1-4edb-845b-c42b654b5324">
+    <Pracownik>6a531f15-7db8-4a83-99d6-ea295c5d65b9</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_79">
+        <Dodatek>Dodatek_79</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_115" guid="81fab164-22fc-42c0-a1d8-623f7afb784a">
+    <Pracownik>6a531f15-7db8-4a83-99d6-ea295c5d65b9</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_115">
+        <Dodatek>Dodatek_115</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_80" guid="d19ef0b2-bf94-41da-ae8c-807e8a3bcb7b">
+    <Pracownik>0ee5b685-9329-4c98-91ba-b5fd3dc04049</Pracownik>
+    <Powiazanie />
+    <Nazwa>Składka PZU</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_80">
+        <Dodatek>Dodatek_80</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>2b04aaba-22ec-4613-8fbc-a80e544c7245</Element>
+        <Okres>2006-01-01...</Okres>
+        <Podstawa>32.00 PLN</Podstawa>
+        <Ulamek>0/1</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_86" guid="b403bd4c-88c9-4992-9f02-8abf64040dee">
+    <Pracownik>0ee5b685-9329-4c98-91ba-b5fd3dc04049</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_86">
+        <Dodatek>Dodatek_86</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+  <Dodatek id="Dodatek_103" guid="dc67543f-fb93-41cf-9a69-5a2ffdb2d403">
+    <Pracownik>41226e2a-88ed-4654-b38b-792fff139bfa</Pracownik>
+    <Powiazanie />
+    <Nazwa>Trzynastka</Nazwa>
+    <DataZakonczeniaWyplaty>(max)</DataZakonczeniaWyplaty>
+    <Historia>
+      <DodHistoria id="DodHistoria_103">
+        <Dodatek>Dodatek_103</Dodatek>
+        <Aktualnosc>(wszystko)</Aktualnosc>
+        <Element>cc9b1530-c72e-4f0e-988a-481f37365690</Element>
+        <Okres>2011-01-01...</Okres>
+        <Podstawa>0.00 PLN</Podstawa>
+        <Ulamek>17/200</Ulamek>
+        <Czas>0:00</Czas>
+        <Dni>0</Dni>
+        <Rozliczenie>
+          <Odbiorca />
+          <RachunekOdbiorcy />
+        </Rozliczenie>
+      </DodHistoria>
+    </Historia>
+  </Dodatek>
+</session>

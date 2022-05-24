@@ -1,0 +1,1222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session xmlns="http://www.soneta.pl/schema/business">
+  <TaskDefinition id="TaskDefinition_36" guid="00000000-0020-0001-0001-000000000000">
+    <TableName>WebUsers</TableName>
+		<Name>Potwierdzenie założenia konta użytkownika w aplikacji enova365</Name>
+		<FormatedName>Potwierdzenie założenia konta użytkownika w aplikacji enova365</FormatedName>
+		<Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>None</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>True</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+		<Code>
+			public class Task_Potwierdzenie_założenia_konta_użytkownika_w_aplikacji_enova365 : TaskCalculatorWebUsers {
+
+			public Task_Potwierdzenie_założenia_konta_użytkownika_w_aplikacji_enova365() { }
+			public Task_Potwierdzenie_założenia_konta_użytkownika_w_aplikacji_enova365(Task t)
+			{
+			task = t;
+			row = (GuidedRow)t.Parent;
+			definition = t.Definition;
+			}
+
+			//** begin enable condition **
+			public override bool IsEnable()
+			{
+			return ((Row.Host.HostType == typeof(Pracownik) || Row.Host.HostType == typeof(KontaktOsoba)) &amp;&amp; Row.State == RowState.Added);
+			}
+
+			//** end enable condition **
+
+			//** begin active condition **
+			public override bool IsActive() {
+			return true;
+			}
+
+			//** end active condition **
+
+			//** begin realised condition **
+			public override bool IsVisibleInMenu() {
+			return false;
+			}
+			public override bool IsRealised() {
+			return false;
+			}
+			//** end realised condition **
+
+			//** begin start condition **
+
+			//** end start condition **
+
+			//** begin overdue time condition **
+
+			//** end overdue time condition **
+
+			//** begin action **
+			void smtpClient_SendCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
+			{
+			if (e.Error != null)
+			{
+			MailMessage mm = e.UserState as MailMessage;
+			string info = "Mail do [{0}] nie został wysłany\n\n".TranslateFormat(mm.To);
+			info += e.Error.ToString();
+			//IMessageBoxService imb = (IMessageBoxService)Row.Session.GetService(typeof(IMessageBoxService));
+			//imb.Show(info, "enova365");
+			var log = new Log("Tworzenie kont w module enovaNet".Translate(), true);
+			log.WriteLine(info);
+			}
+			}
+
+			public override void Action()
+			{
+			System.Globalization.CultureInfo cultureInfo = ((IWebUser)Row).GetCultureInfo();
+
+			bool err = false;
+			string errinfo = "";
+
+			// Sprawdzenie, czy spełnione są warunki do wysłania maila
+			bool CzyWyslacKiedy = false;
+			if (Row.State == RowState.Added)
+			CzyWyslacKiedy = true;
+
+			// Sprawdzenie, czy wysyłać do nowego WebUsera i czy jest określony poprawny adres e-mail kontrahenta
+			bool CzyWyslacDoK = false;
+			string emailK = "", userK = "";
+			if (Row.Host.HostType == typeof(Pracownik))
+			{
+			Pracownik prac = Row.Host as Pracownik;
+			if(prac.Last!= null &amp;&amp; prac.Last.Kontakt != null &amp;&amp; !String.IsNullOrEmpty(prac.Last.Kontakt.EMAIL.Trim()))
+			emailK = prac.Last.Kontakt.EMAIL.Trim();
+			userK = prac.ToString();
+			}
+			if (Row.Host.HostType == typeof(KontaktOsoba))
+			{
+			KontaktOsoba kontakt = Row.Host as KontaktOsoba;
+			if(kontakt!=null)
+			emailK = kontakt.EMAIL.Trim();
+			userK = kontakt.ToString();
+			}
+
+			if (EnovaMail.TestMail(emailK))
+			CzyWyslacDoK = true;
+			else
+			{
+			err = true;
+			errinfo += "Niepoprawny adres e-mail użytkownika: {0}.\n".TranslateFormat(userK);
+			}
+
+			BusinessModule bm = BusinessModule.GetInstance(Row);
+			WebAuthorizationModule wam = WebAuthorizationModule.GetInstance(Row);
+			string sUrl = wam.Config.Ogólne.enovaNetUrl.Replace(@"\", "/");
+
+			// Sprawdzenie, czy określono parametry serwera smtp
+			bool CzyPoprawne = false;
+			if (bm.Config.Mail.SMTPServer != String.Empty)
+			CzyPoprawne = true;
+			else
+			{
+			err = true;
+			errinfo += "Nie określono parametrów serwera SMTP.\n".Translate();
+			}
+
+			//IMessageBoxService imb = (IMessageBoxService)Row.Session.GetService(typeof(IMessageBoxService));
+			var log = new Log("Tworzenie kont w module enovaNet".Translate(), true);
+
+			string str1 = "Założono konto dostępu w aplikacji".Translate(null, cultureInfo);
+			string str2 = "enova365".TranslateIgnore();
+			string str3 = "Nazwa konta".Translate(null, cultureInfo);
+			string str4 = "Hasło pierwszego logowania".Translate(null, cultureInfo);
+			string str5 = "UWAGA".Translate(null, cultureInfo);
+			string str6 = "Założone hasło wygasa po pierwszym logowaniu. Po zalogowaniu do aplikacji proszę zmienić hasło".Translate(null, cultureInfo);
+			string subject = "Potwierdzenie założenia konta użytkownika w aplikacji enova365.".Translate(null, cultureInfo);
+			string body = @"&lt;html&gt;&lt;body style='margin:5px;font-size: 9pt;'&gt;"+
+			"	&lt;table cellpadding='5' cellspacing='0' style='background-color: #f2f2f2;border: 1px solid #f6f6f6; border-bottom: 1px solid #D3D3D3; border-right: 1px solid #D3D3D3;color:#006600;' &gt;&lt;tbody&gt;"+
+			"	&lt;tr&gt;";
+			body += "	&lt;td style='vertical-align:middle;text-align:center;width:30px;'&gt;&lt;img src='@@IMAGE@@' width='28' height='28' alt='' align='middle' style='border-width:0px;'/&gt;&lt;/td&gt;";
+
+			if(String.IsNullOrEmpty(sUrl))
+			body += "	&lt;td style='font-family: Tahoma, Arial;vertical-align:middle;text-align:left;padding-left:5px;font-size:11pt;'&gt;" + str1 + " &lt;b&gt;&lt;i&gt;" + str2 + "&lt;/i&gt;&lt;/b&gt;&lt;/td&gt;";
+			else
+			body += "	&lt;td style='font-family: Tahoma, Arial;vertical-align:middle;text-align:left;padding-left:5px;font-size:11pt;'&gt;" + str1 + " &lt;i&gt;&lt;a style='text-decoration:none;font-weight:bold;color:#006600;' href='" +
+			sUrl.Trim() + "' target='_blank'&gt;»" + str2 + "&lt;/a&gt;&lt;/i&gt;&lt;/td&gt;";
+			body = body +
+			"	&lt;/tr&gt;"+
+			"	&lt;tr&gt;"+
+			"		&lt;td colspan='2' style='vertical-align:top;text-align:left;padding:5px;padding-top:15px;padding-bottom:15px;'&gt;"+
+			"			&lt;table cellpadding='0' cellspacing='0' style='color:#006600;font-size: 9pt;' &gt;&lt;tbody&gt;" +
+			"			&lt;tr&gt;"+
+			"				&lt;td style='font-family: Tahoma, Arial;width:180px;'&gt;" + str3 + ":&lt;/td&gt;"+
+			"				&lt;td style='font-family: Tahoma, Arial;width:250px;font-weight:bold;'&gt;" + Row.Name + "&lt;/td&gt;"+
+			"			&lt;/tr&gt;"+
+			"			&lt;tr&gt;"+
+			"				&lt;td style='font-family: Tahoma, Arial;width:180px;'&gt;" + str4 + ":&lt;/td&gt;"+
+			"				&lt;td style='font-family: Tahoma, Arial;width:250px;font-weight:bold;'&gt;" + Row.FirstPassword + "&lt;/td&gt;"+
+			"			&lt;/tr&gt;"+
+			"			&lt;/tbody&gt;&lt;/table&gt;"+
+			"		&lt;/td&gt;"+
+			"	&lt;/tr&gt;"+
+			"	&lt;tr&gt;"+
+			"		&lt;td colspan='2' style='padding-left:5px;color:#ff0000;font-family: Tahoma, Arial;'&gt;"+
+			"			&lt;span style='font-size:9pt;font-weight:bold;'&gt;&lt;i&gt;" + str5 + "&lt;/i&gt;&lt;br /&gt;&lt;/span&gt;"+
+			"			&lt;span style='font-size:7pt;'&gt;" + str6 + ".&lt;/span&gt;"+
+			"		&lt;/td&gt;"+
+			"	&lt;/tr&gt;"+
+			"	&lt;/tbody&gt;&lt;/table&gt;"+
+			"&lt;/body&gt;&lt;/html&gt;";
+
+			// Ustawienie danych dla zapisanego taska
+			if (Task != null)
+			{
+			Task.Name = subject.Length &gt; 80 ? subject.Substring(0, 80) : subject;
+			Task.Start = Soneta.Types.Date.Now;
+			Task.End = Soneta.Types.Date.Now;
+			Task.Description = body.Length &gt; 255 ? body.Substring(0, 255) : body;
+			}
+
+			// Wysłanie maila
+			if (CzyWyslacDoK &amp;&amp; CzyWyslacKiedy &amp;&amp; CzyPoprawne)
+			{
+			EnovaMail email = new EnovaMail(Row.Session);
+			email.IsHtmlMail(true);
+
+			// Przygotowanie załącznika w postaci logo enova zapisanego w resource'ach
+			System.Reflection.Assembly assembly = System.Reflection.Assembly.GetAssembly(typeof(Soneta.Web.Business.App.WebUser));
+			System.IO.Stream stream = assembly.GetManifestResourceStream("Soneta.Web.Business.Resources.enova.png");
+			System.Net.Mime.ContentType contentType = new System.Net.Mime.ContentType(Soneta.Core.EnovaMail.MimePng);
+			System.Net.Mail.Attachment attachment = email.AddAttachment(stream, contentType, true);
+			body = body.Replace("@@IMAGE@@", "cid:" + attachment.ContentId);
+
+			email.AddTo(emailK);
+			email.AddBody(body);
+			email.AddSubject(subject);
+			email.AddSendCompletedHandler(smtpClient_SendCompleted);
+			try
+			{
+			email.SendMailAsync();
+			}
+			catch (Exception exc)
+			{
+			//imb.Show(exc.Message, "enova365");
+			log.WriteLine(exc.Message);
+			}
+			}
+			else
+			{
+			if (Task != null)
+			Task.Description = "Nie zostały spełnione warunki wysłania e-maila".Translate(null, cultureInfo);
+			if (err)
+			{
+			//imb.Show(new Exception("Wysyłka e-maila nie powiodła się:\n\n" + errinfo).Message, "enova365");
+			log.WriteLine("Wysyłka e-maila nie powiodła się:\n\n".Translate() + errinfo);
+			if (Task != null)
+			Task.Description = errinfo.Length &gt; 255 ? errinfo.Substring(0, 255) : errinfo;
+			}
+			}
+			}
+
+
+			//** end action **
+
+			//** begin other methods **
+
+			//** end other methods **
+
+			//** begin init task properties **
+			public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+			if(task != null) {
+			base.InitTaskProperties(task);
+
+			// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+			}
+			}
+			//** end init task properties **
+
+			//** begin get parent **
+			public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+			return base.GetParent(task, workflow, row, ref context);
+			}
+
+
+			// base.GetParent działa w następujący sposób:
+			// 1. Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+			// 2. Jeżeli pkt. 1 nie ustawi wartości to:
+			//   - jeżeli definicja zadania jest powiązana z tabelą WFWorkflow to zwracany jest parametr workflow metody
+			//   - jeżeli definicja zadania nie jest startową zwracana jest wartość wywołania metody workflow.SearchParents(...), która wyszukuje obiekt o określonym w definicji zadania typie powiązany z poprzednim zadaniem
+			//   - jeżeli definicja zadania jest powiązana z tabelą zgodną z przekazanym wierszem (row) to zwracany jest parametr workflow metody
+			// W innym przypadku zwracana jest wartość null
+			// Jeżeli metoda wywoływana jest dla akcji automatycznej nie powiązanej z workflow parametry task, workflow i row mają wartość null natomiast context jest pusty (kalkulator ma ustawioną tylko właściwość Definition)
+			//** end get parent **
+
+			//** begin dependent on workflow condition **
+
+			//** end dependent on workflow condition **
+
+			//** begin get task users **
+
+			//** end get task users **
+
+			}
+		</Code>
+		<OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>Auto</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition />
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition />
+    <WFDefItem />
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML />
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_47">
+        <TaskDefinition>TaskDefinition_36</TaskDefinition>
+        <TableName>WebUsers</TableName>
+        <Code>
+				  public override GuidedRow GetGuidedRow() {
+				  return WebUser;
+				  }
+
+				  // W kodzie możesz używać następujacych zmiennych:
+				  // WebUser : WebUser - Wiersz którego zmiana inicjalizuje przeliczenie taska
+				  // Należy zwrócić obiekt typu WebUser,
+				  // dla którego ma zostać wykonany task
+			  </Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_1" guid="05ef3b84-9b6c-4f1f-b501-5e89111ae501">
+    <TableName>WnioskiUrlopowe</TableName>
+    <Name>Wniosek urlopowy - kierownik</Name>
+    <FormatedName>zaakceptuj wniosek</FormatedName>
+    <Description />
+    <Locked>True</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>True</Algorithm>
+    <MultiTaskType>ByGetTaskUsers</MultiTaskType>
+    <Code>
+      public class Task_Wniosek_urlopowy__kierownik2123023363 : TaskCalculatorWnioskiUrlopowe {
+
+      public Task_Wniosek_urlopowy__kierownik2123023363() { }
+      public Task_Wniosek_urlopowy__kierownik2123023363(Task t)
+      {
+      task = t;
+      row = (GuidedRow)t.Parent;
+      definition = t.Definition;
+      }
+
+      //** begin enable condition **
+      public override bool IsEnable()
+      {
+      bool naŻądanie = Row.Module.Config.KadryNET.CzasPracy.WnioskiUrlopowe.UrlopNaŻądanie;
+      if (Row.Stan == Soneta.Kadry.StanWnioskuUrlopowego.Oczekujący &amp;&amp; (naŻądanie || Row.PrzyczynaUrlopu != PrzyczynaUrlopu.NaŻądanie))
+      {
+      if (Row.Definicja.Limit != null &amp;&amp; Row.Module.Config.KadryNET.CzasPracy.WnioskiUrlopowe.WeryfikacjaLimitu) {
+      Soneta.Kadry.WniosekUrlopowy.PodsumowanieWorker pw = new Soneta.Kadry.WniosekUrlopowy.PodsumowanieWorker();
+      pw.WniosekUrlopowy = Row;
+      bool naGodz = Row.Definicja.Limit.NaliczanieNaGodziny;
+      if ((naGodz &amp;&amp; pw.PozostajeGodz &lt; Time.Zero) || (!naGodz &amp;&amp; pw.PozostajeDni &lt; 0))
+      throw new Exception("Przekroczono dopuszczalny limit lub brak przydzielonego limitu");
+      if (Row.PrzyczynaUrlopu == PrzyczynaUrlopu.NaŻądanie)
+      {
+      KalkulatorPracownika kp = new KalkulatorPracownika(Row.Pracownik);
+      FromTo okres = FromTo.Year(Row.Okres.To.Year);
+      int dni = Row.IlośćDni;
+      PracHistoria ph = Row.Pracownik[Row.Okres.To];
+      if (okres.Contains(ph.WypoczynkowyBO.Data)) {
+      dni += ph.WypoczynkowyBO.NaZadanie;
+      okres = new FromTo(ph.WypoczynkowyBO.Data, okres.To);
+      }
+      int limit = KalendModule.GetInstance(Row).Config.Nieobecności.UrlopWypoczynkowy.LimitUrlopuNaŻądanie;
+      foreach (OkresNieobecności on in kp.Nieobecnosci(okres, true))
+      if (on.Definicja.Przyczyna == PrzyczynaNieobecnosci.UrlopWypoczynkowy &amp;&amp; on.Urlop.Przyczyna == PrzyczynaUrlopu.NaŻądanie &amp;&amp; ((Row)on).State != RowState.Added)
+      dni += kp.Norma(on.Okres).Dni;
+      if (dni &gt; limit)
+      throw new Exception("Przekroczono dopuszczalny limit lub brak przydzielonego limitu urlopu wypoczynkowego 'na żądanie'");
+      }
+      }
+      if (Row.Pracownik.Net.AutoZatwWniosku &amp;&amp; Row.State == RowState.Added)
+      {
+      Row.Stan = Soneta.Kadry.StanWnioskuUrlopowego.Zaakceptowany;
+      return false;
+      }
+      Name = String.Format("Wniosek {0} - {1}", Row.Definicja.Nazwa, Row.Pracownik.ImięNazwisko);
+      if(Row.PrzyczynaUrlopu != PrzyczynaUrlopu.NieDotyczy)
+      Description = String.Format("{0}: {1}\nPrzyczyna: {2}\n\n{3}", Row.Definicja.Nazwa, Row.Okres.ToString(), Row.PrzyczynaUrlopu, Row.Opis);
+      else
+      Description = String.Format("{0}: {1}\n{2}", Row.Definicja.Nazwa, Row.Okres.ToString(), Row.PrzyczynaUrlopu, Row.Opis);
+
+      Start = Row.Okres.From;
+      End = Row.Okres.To;
+      Notification = Row.Data;
+      return true;
+      }
+      else
+      return false;
+      }
+
+      //** end enable condition **
+
+      //** begin active condition **
+      public override bool IsActive() {
+      if (Row.Stan == Soneta.Kadry.StanWnioskuUrlopowego.Zaakceptowany)
+      return false;
+      return true;
+      }
+      // Row - obiekt typu Soneta.Kadry.WniosekUrlopowy, dla którego tworzone jest zadanie
+      // Table - tabela Soneta.Kadry.WnioskiUrlopowe, w której znajdują się obiekty
+      // Module - moduł Soneta.Kadry.KadryModule, w którym znajduje się tabela
+      // Task - tworzony lub sprawdzany obiekt zadania, może być null
+      //** end active condition **
+
+      //** begin realised condition **
+      public override bool IsRealised()
+      {
+      return (Row.Stan == Soneta.Kadry.StanWnioskuUrlopowego.Zaakceptowany || Row.Stan == Soneta.Kadry.StanWnioskuUrlopowego.Odrzucony);
+      }
+      //** end realised condition **
+
+      //** begin start condition **
+
+      //** end start condition **
+
+      //** begin overdue time condition **
+
+      //** end overdue time condition **
+
+      //** begin action **
+      // Row - obiekt typu Soneta.Kadry.WniosekUrlopowy, dla którego tworzone jest zadanie
+      // Table - tabela Soneta.Kadry.WnioskiUrlopowe, w której znajdują się obiekty
+      // Module - moduł Soneta.Kadry.KadryModule, w którym znajduje się tabela
+      // Task - tworzony lub sprawdzany obiekt zadania, może być null
+      [Soneta.Business.Action("Zatwierdź", Priority=10)]
+      public void Zatwierdź() {
+      using (ITransaction t = Session.Logout(true)) {
+      Row.Stan = Soneta.Kadry.StanWnioskuUrlopowego.Zaakceptowany;
+      t.Commit();
+      }
+      }
+
+      public bool IsEnabledZatwierdź() {
+      return Row.Stan == Soneta.Kadry.StanWnioskuUrlopowego.Oczekujący;
+      }
+
+      [Soneta.Business.Action("Odrzuć", Priority=20)]
+      public void Odrzuć() {
+      using (ITransaction t = Session.Logout(true)) {
+      Row.Stan = Soneta.Kadry.StanWnioskuUrlopowego.Odrzucony;
+      t.Commit();
+      }
+      }
+
+      public bool IsEnabledOdrzuć() {
+      return Row.Stan == Soneta.Kadry.StanWnioskuUrlopowego.Oczekujący;
+      }
+
+
+      public override void Action() {
+
+      BusinessModule bm = BusinessModule.GetInstance(Row);
+
+      // Sprawdzenie, czy wysyłać czy jest określony poprawny adres e-mail pracownika
+      bool CzyWyslacDoK = false;
+      string emailK = "";
+
+      //Pracownik prac = Row.Pracownik;
+      Pracownik prac = (Pracownik)Task.TaskUser;
+      if (prac == null)
+      return;
+
+      if(prac.Last!= null &amp;&amp; prac.Last.Kontakt != null &amp;&amp; !String.IsNullOrEmpty(prac.Last.Kontakt.EMAIL.Trim()))
+      emailK = prac.Last.Kontakt.EMAIL.Trim();
+
+      if (EnovaMail.TestMail(emailK))
+      CzyWyslacDoK = true;
+
+      // Sprawdzenie, czy określono parametry serwera smtp
+      bool CzyPoprawne = false;
+      if (bm.Config.Mail.SMTPServer != String.Empty)
+      CzyPoprawne = true;
+
+      string subject = Task.Name;
+      string body = Task.Description;
+
+      // Wysłanie maila
+      if (CzyWyslacDoK &amp;&amp; CzyPoprawne)
+      {
+      EnovaMail email = new EnovaMail(Row.Session);
+      // Przygotowanie załącznika w postaci logo enova365 zapisanego w resource'ach
+
+      email.AddTo(emailK);
+      email.AddBody(body);
+      email.AddSubject(subject);
+      try
+      {
+      email.SendMail();
+      }
+      catch (Exception exc) {}
+      }
+
+      }
+
+
+      //** end action **
+
+      //** begin other methods **
+      public override IEnumerable&lt;ITaskUser&gt; GetTaskUsers() {
+      Soneta.Web.Business.Kadry.PodwladniKalkulator kalkulator = new Soneta.Web.Business.Kadry.PodwladniKalkulator(Row.Session, Row.Pracownik);
+      foreach (Pracownik p in kalkulator.Przełożeni)
+      yield return p;
+      }
+      //** end other methods **
+
+      //** begin init task properties **
+
+      //** end init task properties **
+
+      //** begin get parent **
+
+      //** end get parent **
+
+      }
+    </Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>RunWorker</ActionType>
+    <ActionRunAt>Auto</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition />
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition />
+    <WFDefItem />
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML />
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_1">
+        <TaskDefinition>TaskDefinition_1</TaskDefinition>
+        <TableName>WnioskiUrlopowe</TableName>
+        <Code>
+          public override GuidedRow GetGuidedRow() {
+          return WniosekUrlopowy;
+          }
+          // W kodzie możesz używać następujacych zmiennych:
+          // WniosekUrlopowy : WniosekUrlopowy - Wiersz którego zmiana inicjalizuje przeliczenie taska
+          // Należy zwrócić obiekt typu WniosekUrlopowy,
+          // dla którego ma zostać wykonany task
+        </Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_5" guid="ac572975-f54d-42c7-be90-2f461c217a9f">
+    <TableName>WnioskiUrlopowe</TableName>
+    <Name>Wniosek urlopowy - na żądanie</Name>
+    <FormatedName>Wniosek urlopowy - na żądanie</FormatedName>
+    <Description />
+    <Locked>True</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>None</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>True</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>True</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>
+      public class Task_Wniosek_urlopowy__na_żądanie2133371790 : TaskCalculatorWnioskiUrlopowe {
+
+      public Task_Wniosek_urlopowy__na_żądanie2133371790() { }
+      public Task_Wniosek_urlopowy__na_żądanie2133371790(Task t)
+      {
+      task = t;
+      row = (GuidedRow)t.Parent;
+      definition = t.Definition;
+      }
+
+      //** begin enable condition **
+      public override bool IsEnable() {
+      if (Row.IsAdded) {
+      if (Row.Definicja == null || Row.Definicja.Przyczyna != PrzyczynaNieobecnosci.UrlopWypoczynkowy ||
+      Row.PrzyczynaUrlopu != PrzyczynaUrlopu.NaŻądanie || Row.Okres == FromTo.Empty)
+      return false;
+
+      KalkulatorPracownika kp = new KalkulatorPracownika(Row.Pracownik);
+      FromTo okres = FromTo.Year(Row.Okres.To.Year);
+      int dni = Row.IlośćDni;
+
+      PracHistoria ph = Row.Pracownik[Row.Okres.To];
+      if (okres.Contains(ph.WypoczynkowyBO.Data)) {
+      dni += ph.WypoczynkowyBO.NaZadanie;
+      okres = new FromTo(ph.WypoczynkowyBO.Data, okres.To);
+      }
+
+      int limit = KalendModule.GetInstance(Row).Config.Nieobecności.UrlopWypoczynkowy.LimitUrlopuNaŻądanie;
+      foreach (OkresNieobecności on in kp.Nieobecnosci(okres, true))
+      if (on.Definicja.Przyczyna == PrzyczynaNieobecnosci.UrlopWypoczynkowy &amp;&amp; on.Urlop.Przyczyna == PrzyczynaUrlopu.NaŻądanie &amp;&amp; ((Row)on).State != RowState.Added)
+      dni += kp.Norma(on.Okres).Dni;
+      if (dni &gt; limit)
+      throw new Exception("Przekroczono dopuszczalny roczny limit urlopu wypoczynkowego 'na żądanie'");
+
+      if (Task == null) {
+      Row.Stan = StanWnioskuUrlopowego.Zaakceptowany;
+      Name = String.Format("Wniosek {0} {1} (automatyczna akceptacja) - {2}", Row.Definicja.Nazwa, Row.PrzyczynaUrlopu, Row.Pracownik.ImięNazwisko);
+      Description = String.Format("{0}: {1}\nPrzyczyna: {2}\n\n{3}", Row.Definicja.Nazwa, Row.Okres.ToString(), Row.PrzyczynaUrlopu, Row.Opis);
+      Start = Row.Okres.From;
+      End = Row.Okres.To;
+      Notification = Row.Data;
+      }
+      if (Task!=null &amp;&amp; Task.TaskUser==null)
+      {
+      Task.OperatorRoleType = Soneta.Business.Db.OperatorRoleType.Other;
+      Task.TaskUser = Row.Kierownik;
+      }
+      return true;
+      }
+      else
+      if (Task!=null &amp;&amp; Task.TaskUser!=null &amp;&amp; Task.IsNotification)
+      return true;
+      return false;
+      }
+      //** end enable condition **
+
+      //** begin active condition **
+      public override bool IsActive() {
+      return true;
+      }
+      //** end active condition **
+
+      //** begin realised condition **
+      public override bool IsRealised() {
+      return (Task != null &amp;&amp; !Task.IsNotification);
+      }
+      //** end realised condition **
+
+      //** begin start condition **
+
+      //** end start condition **
+
+      //** begin overdue time condition **
+
+      //** end overdue time condition **
+
+      //** begin action **
+      public override void Action() {
+      if (Task.Modified) return;
+
+      BusinessModule bm = BusinessModule.GetInstance(Row);
+
+      List&lt;Pracownik&gt; lista = new List&lt;Pracownik&gt;();
+      if (Row.Kierownik != null) lista.Add(Row.Kierownik);
+      lista.Add(Row.Pracownik);
+      foreach (Pracownik prac in lista)
+      {
+      // Sprawdzenie, czy wysyłać czy jest określony poprawny adres e-mail pracownika
+      bool CzyWyslacDoK = false;
+      string emailK = "";
+
+      if(prac.Last!= null &amp;&amp; prac.Last.Kontakt != null &amp;&amp; !String.IsNullOrEmpty(prac.Last.Kontakt.EMAIL.Trim()))
+      emailK = prac.Last.Kontakt.EMAIL.Trim();
+
+      if (EnovaMail.TestMail(emailK))
+      CzyWyslacDoK = true;
+
+      // Sprawdzenie, czy określono parametry serwera smtp
+      bool CzyPoprawne = false;
+      if (bm.Config.Mail.SMTPServer != String.Empty)
+      CzyPoprawne = true;
+
+      string subject;
+      if (prac.Guid == Row.Pracownik.Guid)
+      subject = String.Format("Zaakceptowany wniosek {0} (automatyczna akceptacja) {1}", Row.Definicja.Nazwa, Row.Okres);
+      else
+      subject = String.Format("Wniosek {0} (automatyczna akceptacja) - {1}", Row.Definicja.Nazwa, Row.Pracownik.ImięNazwisko);
+      string body = Task.Description;
+
+      // Wysłanie maila
+      if (CzyWyslacDoK &amp;&amp; CzyPoprawne)
+      {
+      EnovaMail email = new EnovaMail(Row.Session);
+      // Przygotowanie załącznika w postaci logo enova365 zapisanego w resource'ach
+
+      email.AddTo(emailK);
+      email.AddBody(body);
+      email.AddSubject(subject);
+      try
+      {
+      email.SendMail();
+      Task.Modified = true;
+      }
+      catch (Exception exc) {}
+      }
+      }
+      }
+
+      //** end action **
+
+      //** begin other methods **
+
+      //** end other methods **
+
+      //** begin init task properties **
+      public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+      if(task != null) {
+      base.InitTaskProperties(task);
+
+      // Tutaj wprowadź kod inicjujący właściwości zadania...
+
+      }
+      }
+      //** end init task properties **
+
+      //** begin get parent **
+      public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+      return base.GetParent(task, workflow, row, ref context);
+      }
+
+
+      // base.GetParent działa w następujący sposób:
+      // 1. Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+      // 2. Jeżeli pkt. 1 nie ustawi wartości to:
+      //   - jeżeli definicja zadania jest powiązana z tabelą WFWorkflow to zwracany jest parametr workflow metody
+      //   - jeżeli definicja zadania nie jest startową zwracana jest wartość wywołania metody workflow.SearchParents(...), która wyszukuje obiekt o określonym w definicji zadania typie powiązany z poprzednim zadaniem
+      //   - jeżeli definicja zadania jest powiązana z tabelą zgodną z przekazanym wierszem (row) to zwracany jest parametr workflow metody
+      // W innym przypadku zwracana jest wartość null
+      // Jeżeli metoda wywoływana jest dla akcji automatycznej nie powiązanej z workflow parametry task, workflow i row mają wartość null natomiast context jest pusty (kalkulator ma ustawioną tylko właściwość Definition)
+      //** end get parent **
+
+      }
+    </Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>Auto</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition />
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition />
+    <WFDefItem />
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML />
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_5">
+        <TaskDefinition>TaskDefinition_5</TaskDefinition>
+        <TableName>WnioskiUrlopowe</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { WniosekUrlopowy };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// WniosekUrlopowy : WniosekUrlopowy - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu WniosekUrlopowy,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+      <TaskTrigger id="TaskTrigger_7">
+        <TaskDefinition>TaskDefinition_5</TaskDefinition>
+        <TableName>Tasks</TableName>
+        <Code>
+      public override GuidedRow[] GetGuidedRows() {
+      var wu = (Task != null ? Task.Parent : null) as WniosekUrlopowy;
+      return wu != null ? new GuidedRow[] { wu } : null;
+      }
+
+      // W kodzie możesz używać następujacych zmiennych:
+      // Task : Task - Wiersz którego zmiana inicjalizuje przeliczenie taska
+      // Należy zwrócić obiekt typu WniosekUrlopowy,
+      // dla którego ma zostać wykonany task
+    </Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_2" guid="5ca848d6-c990-4f42-8956-12d65e22fc71">
+    <TableName>WnioskiUrlopowe</TableName>
+    <Name>Wniosek urlopowy - pracownik</Name>
+    <FormatedName>Wniosek urlopowy - pracownik</FormatedName>
+    <Description />
+    <Locked>True</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>None</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>True</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>True</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>
+      public class Task_Wniosek_urlopowy__pracownik983362173 : TaskCalculatorWnioskiUrlopowe {
+
+      public Task_Wniosek_urlopowy__pracownik983362173() { }
+      public Task_Wniosek_urlopowy__pracownik983362173(Task t)
+      {
+      task = t;
+      row = (GuidedRow)t.Parent;
+      definition = t.Definition;
+      }
+
+      //** begin enable condition **
+      public override bool IsEnable()
+      {
+      if (Row.IsModified) {
+      if ((Row.Stan == Soneta.Kadry.StanWnioskuUrlopowego.Zaakceptowany || Row.Stan == Soneta.Kadry.StanWnioskuUrlopowego.Odrzucony) &amp;&amp; Row.PrzyczynaUrlopu != PrzyczynaUrlopu.NaŻądanie)
+      {
+      if (Row.Pracownik.Net.AutoZatwWniosku &amp;&amp; Row.State == RowState.Added) {
+      return false;
+      }
+      if (Task == null) {
+      Name = (Row.Stan==Soneta.Kadry.StanWnioskuUrlopowego.Zaakceptowany ? "Zaakceptowany" : "Odrzucony") + String.Format(" wniosek {0} ", Row.Definicja.Nazwa) + Row.Okres.ToString();
+      if(Row.PrzyczynaUrlopu != PrzyczynaUrlopu.NieDotyczy)
+      Description = String.Format("{0}: {1}\nPrzyczyna: {2}\n\n{3}", Row.Definicja.Nazwa, Row.Okres.ToString(), Row.PrzyczynaUrlopu, Row.Opis);
+      else
+      Description = String.Format("{0}: {1}\n{2}", Row.Definicja.Nazwa, Row.Okres.ToString(), Row.PrzyczynaUrlopu, Row.Opis);
+      Start = Row.Okres.From;
+      End = Row.Okres.To;
+      Notification = Row.DataDecyzji;
+      }
+      // Tu docelowo będzie ustawianie TaskUser = ..., ale na razie obchodzę brak funkcjonalny w TaskCalculator
+      if (Task!=null &amp;&amp; Task.TaskUser==null)
+      {
+      Task.OperatorRoleType = Soneta.Business.Db.OperatorRoleType.Other;
+      Task.TaskUser = Row.Pracownik;
+      }
+      return true;
+      }
+      else {
+      if(Row.Pracownik.Net.AutoZatwWniosku &amp;&amp; Row.State == RowState.Added &amp;&amp; Row.PrzyczynaUrlopu != PrzyczynaUrlopu.NaŻądanie) {
+      Row.Stan = Soneta.Kadry.StanWnioskuUrlopowego.Zaakceptowany;
+      }
+      return false;
+      }
+      }
+      else
+      if (Task!=null &amp;&amp; Task.TaskUser!=null &amp;&amp; Task.IsNotification)
+      return true;
+      return false;
+      }
+      //** end enable condition **
+
+      //** begin active condition **
+      public override bool IsActive() {
+      return true;
+      }
+
+      // Row - obiekt typu Soneta.Kadry.WniosekUrlopowy, dla którego tworzone jest zadanie
+      // Table - tabela Soneta.Kadry.WnioskiUrlopowe, w której znajdują się obiekty
+      // Module - moduł Soneta.Kadry.KadryModule, w którym znajduje się tabela
+      // Task - tworzony lub sprawdzany obiekt zadania, może być null
+      //** end active condition **
+
+      //** begin realised condition **
+      public override bool IsRealised() {
+      return (Task != null &amp;&amp; !Task.IsNotification);
+      }
+
+      // Row - obiekt typu Soneta.Kadry.WniosekUrlopowy, dla którego tworzone jest zadanie
+      // Table - tabela Soneta.Kadry.WnioskiUrlopowe, w której znajdują się obiekty
+      // Module - moduł Soneta.Kadry.KadryModule, w którym znajduje się tabela
+      // Task - tworzony lub sprawdzany obiekt zadania, może być null
+      //** end realised condition **
+
+      //** begin start condition **
+
+      //** end start condition **
+
+      //** begin action **
+      // Row - obiekt typu Soneta.Kadry.WniosekUrlopowy, dla którego tworzone jest zadanie
+      // Table - tabela Soneta.Kadry.WnioskiUrlopowe, w której znajdują się obiekty
+      // Module - moduł Soneta.Kadry.KadryModule, w którym znajduje się tabela
+      // Task - tworzony lub sprawdzany obiekt zadania, może być null
+
+      [Soneta.Business.Action("Zatwierdź", Priority=10)]
+      public void Zatwierdź() {
+      using (ITransaction t = Session.Logout(true)) {
+      Task.Progress=TaskProgress.Realized;
+      t.Commit();
+      }
+      }
+
+      public bool IsEnabledZatwierdź() {
+      return Task.Progress!=TaskProgress.Realized;
+      }
+
+
+      public override void Action() {
+      if (Task.Modified) return;
+
+      BusinessModule bm = BusinessModule.GetInstance(Row);
+
+      // Sprawdzenie, czy wysyłać czy jest określony poprawny adres e-mail pracownika
+      bool CzyWyslacDoK = false;
+      string emailK = "";
+
+      //Pracownik prac = Row.Pracownik;
+      Pracownik prac = (Pracownik)Task.TaskUser;
+      if (prac == null)
+      return;
+
+      if(prac.Last!= null &amp;&amp; prac.Last.Kontakt != null &amp;&amp; !String.IsNullOrEmpty(prac.Last.Kontakt.EMAIL.Trim()))
+      emailK = prac.Last.Kontakt.EMAIL.Trim();
+
+      if (EnovaMail.TestMail(emailK))
+      CzyWyslacDoK = true;
+
+      // Sprawdzenie, czy określono parametry serwera smtp
+      bool CzyPoprawne = false;
+      if (bm.Config.Mail.SMTPServer != String.Empty)
+      CzyPoprawne = true;
+
+      string subject = Task.Name;
+      string body = Task.Description;
+
+      // Wysłanie maila
+      if (CzyWyslacDoK &amp;&amp; CzyPoprawne)
+      {
+      EnovaMail email = new EnovaMail(Row.Session);
+      // Przygotowanie załącznika w postaci logo enova365 zapisanego w resource'ach
+
+      email.AddTo(emailK);
+      email.AddBody(body);
+      email.AddSubject(subject);
+      try
+      {
+      email.SendMail();
+      Task.Modified = true;
+      }
+      catch (Exception exc) {}
+      }
+
+      }
+
+
+      //** end action **
+
+      //** begin other methods **
+
+      //** end other methods **
+
+      //** begin init task properties **
+
+      //** end init task properties **
+
+      //** begin get parent **
+
+      //** end get parent **
+
+      //** begin calc node description (editor) **
+
+      //** end calc node description (editor) **
+
+      //** begin calc node description (viewer) **
+
+      //** end calc node description (viewer) **
+
+
+
+      }
+    </Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>RunWorker</ActionType>
+    <ActionRunAt>Auto</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition />
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition />
+    <WFDefItem />
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML />
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_2">
+        <TaskDefinition>TaskDefinition_2</TaskDefinition>
+        <TableName>WnioskiUrlopowe</TableName>
+        <Code>
+          public override GuidedRow GetGuidedRow() {
+          return WniosekUrlopowy;
+          }
+
+          // W kodzie możesz używać następujacych zmiennych:
+          // WniosekUrlopowy : WniosekUrlopowy - Wiersz którego zmiana inicjalizuje przeliczenie taska
+          // Należy zwrócić obiekt typu WniosekUrlopowy,
+          // dla którego ma zostać wykonany task
+        </Code>
+      </TaskTrigger>
+      <TaskTrigger id="TaskTrigger_8">
+        <TaskDefinition>TaskDefinition_2</TaskDefinition>
+        <TableName>Tasks</TableName>
+        <Code>
+      public override GuidedRow[] GetGuidedRows() {
+      var wu = (Task != null ? Task.Parent : null) as WniosekUrlopowy;
+      return wu != null ? new GuidedRow[] { wu } : null;
+      }
+
+      // W kodzie możesz używać następujacych zmiennych:
+      // Task : Task - Wiersz którego zmiana inicjalizuje przeliczenie taska
+      // Należy zwrócić obiekt typu WniosekUrlopowy,
+      // dla którego ma zostać wykonany task
+    </Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_3" guid="b5405571-6746-4ec6-acc0-46e740007881">
+    <TableName>WnioskiUrlopowe</TableName>
+    <Name>Wniosek urlopowy - zastępca</Name>
+    <FormatedName>Wniosek urlopowy - zastępca</FormatedName>
+    <Description />
+    <Locked>True</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>None</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>True</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>True</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>
+      public class Task_Wniosek_urlopowy__zastępca1110973784 : TaskCalculatorWnioskiUrlopowe {
+
+      public Task_Wniosek_urlopowy__zastępca1110973784() { }
+      public Task_Wniosek_urlopowy__zastępca1110973784(Task t)
+      {
+      task = t;
+      row = (GuidedRow)t.Parent;
+      definition = t.Definition;
+      }
+
+      //** begin enable condition **
+      public override bool IsEnable()
+      {
+      if (Row.IsModified || Row.IsAdded) {
+      if (Row.Stan == Soneta.Kadry.StanWnioskuUrlopowego.Zaakceptowany &amp;&amp; Row.Zastepca!=null)
+      {
+      if (Row.Pracownik.Net.AutoZatwWniosku &amp;&amp; Row.State == RowState.Added)
+      return false;
+      if (Task == null) {
+      Name = "Zastępstwo za " + Row.Pracownik.ImięNazwisko;
+      Description = String.Format("Zastępstwo podczas nieobecności [{0}] w okresie {1}", Row.Definicja.Nazwa, Row.Okres.ToString());
+      Start = Row.Okres.From;
+      End = Row.Okres.To;
+      Notification = Row.DataDecyzji;
+      }
+      // Tu docelowo będzie ustawianie TaskUser = ..., ale na razie obchodzę brak funkcjonalny w TaskCalculator
+      if (Task!=null &amp;&amp; Task.TaskUser==null)
+      {
+      Task.OperatorRoleType = Soneta.Business.Db.OperatorRoleType.Other;
+      Task.TaskUser = Row.Zastepca;
+      }
+      return true;
+      }
+      else
+      return false;
+      }
+      else
+      if (Task!=null &amp;&amp; Task.TaskUser!=null &amp;&amp; Task.IsNotification)
+      return true;
+      return false;
+      }
+      //** end enable condition **
+
+      //** begin active condition **
+      public override bool IsActive() {
+      return true;
+      }
+
+      // Row - obiekt typu Soneta.Kadry.WniosekUrlopowy, dla którego tworzone jest zadanie
+      // Table - tabela Soneta.Kadry.WnioskiUrlopowe, w której znajdują się obiekty
+      // Module - moduł Soneta.Kadry.KadryModule, w którym znajduje się tabela
+      // Task - tworzony lub sprawdzany obiekt zadania, może być null
+
+      [Soneta.Business.Action("Zatwierdź", Priority=10)]
+      public void Zatwierdź() {
+      using (ITransaction t = Session.Logout(true)) {
+      Task.Progress=TaskProgress.Realized;
+      t.Commit();
+      }
+      }
+
+      public bool IsEnabledZatwierdź() {
+      return Task.Progress!=TaskProgress.Realized;
+      }
+
+
+      //** end active condition **
+
+      //** begin realised condition **
+      public override bool IsRealised() {
+      return (Task != null &amp;&amp; !Task.IsNotification);
+      }
+
+      // Row - obiekt typu Soneta.Kadry.WniosekUrlopowy, dla którego tworzone jest zadanie
+      // Table - tabela Soneta.Kadry.WnioskiUrlopowe, w której znajdują się obiekty
+      // Module - moduł Soneta.Kadry.KadryModule, w którym znajduje się tabela
+      // Task - tworzony lub sprawdzany obiekt zadania, może być null
+      //** end realised condition **
+
+      //** begin start condition **
+
+      //** end start condition **
+
+      //** begin overdue time condition **
+
+      //** end overdue time condition **
+
+      //** begin action **
+      public override void Action() {
+      if (Task.Modified) return;
+
+      BusinessModule bm = BusinessModule.GetInstance(Row);
+
+      // Sprawdzenie, czy wysyłać czy jest określony poprawny adres e-mail pracownika
+      bool CzyWyslacDoK = false;
+      string emailK = "";
+
+      //Pracownik prac = Row.Pracownik;
+      Pracownik prac = (Pracownik)Task.TaskUser;
+      if (prac == null)
+      return;
+
+      if(prac.Last!= null &amp;&amp; prac.Last.Kontakt != null &amp;&amp; !String.IsNullOrEmpty(prac.Last.Kontakt.EMAIL.Trim()))
+      emailK = prac.Last.Kontakt.EMAIL.Trim();
+
+      if (EnovaMail.TestMail(emailK))
+      CzyWyslacDoK = true;
+
+      // Sprawdzenie, czy określono parametry serwera smtp
+      bool CzyPoprawne = false;
+      if (bm.Config.Mail.SMTPServer != String.Empty)
+      CzyPoprawne = true;
+
+      string subject = Task.Name;
+      string body = Task.Description;
+
+      // Wysłanie maila
+      if (CzyWyslacDoK &amp;&amp; CzyPoprawne)
+      {
+      EnovaMail email = new EnovaMail(Row.Session);
+      // Przygotowanie załącznika w postaci logo enova365 zapisanego w resource'ach
+
+      email.AddTo(emailK);
+      email.AddBody(body);
+      email.AddSubject(subject);
+      try
+      {
+      email.SendMail();
+      Task.Modified = true;
+      }
+      catch (Exception exc) {}
+      }
+
+      }
+
+
+      // Row - obiekt typu Soneta.Kadry.WniosekUrlopowy, dla którego tworzone jest zadanie
+      // Table - tabela Soneta.Kadry.WnioskiUrlopowe, w której znajdują się obiekty
+      // Module - moduł Soneta.Kadry.KadryModule, w którym znajduje się tabela
+      // Task - tworzony lub sprawdzany obiekt zadania, może być null
+      //** end action **
+
+      //** begin other methods **
+
+      //** end other methods **
+
+      //** begin init task properties **
+
+      //** end init task properties **
+
+      //** begin get parent **
+
+      //** end get parent **
+
+      }
+    </Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>RunWorker</ActionType>
+    <ActionRunAt>Auto</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition />
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition />
+    <WFDefItem />
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML />
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_3">
+        <TaskDefinition>TaskDefinition_3</TaskDefinition>
+        <TableName>WnioskiUrlopowe</TableName>
+        <Code>
+          public override GuidedRow GetGuidedRow() {
+          return WniosekUrlopowy;
+          }
+
+          // W kodzie możesz używać następujacych zmiennych:
+          // WniosekUrlopowy : WniosekUrlopowy - Wiersz którego zmiana inicjalizuje przeliczenie taska
+          // Należy zwrócić obiekt typu WniosekUrlopowy,
+          // dla którego ma zostać wykonany task
+        </Code>
+      </TaskTrigger>
+      <TaskTrigger id="TaskTrigger_6">
+        <TaskDefinition>TaskDefinition_3</TaskDefinition>
+        <TableName>Tasks</TableName>
+        <Code>
+      public override GuidedRow[] GetGuidedRows() {
+      var wu = (Task != null ? Task.Parent : null) as WniosekUrlopowy;
+      return wu != null ? new GuidedRow[] { wu } : null;
+      }
+
+      // W kodzie możesz używać następujacych zmiennych:
+      // Task : Task - Wiersz którego zmiana inicjalizuje przeliczenie taska
+      // Należy zwrócić obiekt typu WniosekUrlopowy,
+      // dla którego ma zostać wykonany task
+    </Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+</session>

@@ -87,6 +87,26 @@ namespace DamEnovaWebApi.Controllers
             return Created(damKontrahent);
         }
 
+        public IHttpActionResult Delete([FromODataUri] int key)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                KontrahenciService kontrahenciService = new KontrahenciService();
+                kontrahenciService.DeleteBlokadaKontrahenta(key);
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.InternalServerError, "Błąd podczas tworzenia kontrahenta: " + ex.Message);
+            }
+            return Ok();
+        }
+
+
         private IHttpActionResult Ok(object content, Type type)
         {
             Type resultType = typeof(OkNegotiatedContentResult<>).MakeGenericType(type);

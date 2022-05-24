@@ -99,6 +99,19 @@ namespace DamEnovaWebApi.Controllers
             return Created(damPrzyjecieMagazynowe);
         }
 
+        public IHttpActionResult Delete([FromODataUri] int key)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            PrzyjeciaMagazynoweService przyjeciaMagazynoweService = new PrzyjeciaMagazynoweService();
+            przyjeciaMagazynoweService.DeletePrzyjecieMagazynowe(key);
+
+            return Ok();
+        }
+
         private IHttpActionResult Ok(object content, Type type)
         {
             Type resultType = typeof(OkNegotiatedContentResult<>).MakeGenericType(type);

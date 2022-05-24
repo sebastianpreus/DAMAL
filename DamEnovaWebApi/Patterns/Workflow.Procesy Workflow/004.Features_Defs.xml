@@ -1,0 +1,1243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session xmlns="http://www.soneta.pl/schema/business">
+<CfgNode id="CfgNode_876" guid="00000000-9008-0001-0000-000000000000">
+    <Parent>00000000-9008-0000-0000-000000000000</Parent>
+    <Name>Ogólne</Name>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1396">
+        <Node>CfgNode_876</Node>
+        <Name>Budżetowanie</Name>
+        <Type>_boolean</Type>
+        <StrValue>True</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1402">
+        <Node>CfgNode_876</Node>
+        <Name>Cechy symbolu opisu</Name>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1403">
+        <Node>CfgNode_876</Node>
+        <Name>Cechy wymiaru opisu</Name>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1400">
+        <Node>CfgNode_876</Node>
+        <Name>Dodatkowe płatności do LP na osobnym PK</Name>
+        <Type>_boolean</Type>
+        <StrValue>true</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1389">
+        <Node>CfgNode_876</Node>
+        <Name>Domyślny symbol opisu</Name>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1390">
+        <Node>CfgNode_876</Node>
+        <Name>Domyślny wymiar opisu</Name>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1385">
+        <Node>CfgNode_876</Node>
+        <Name>ElementyKsiegowalneVerifier ostrzeżenie</Name>
+        <Type>_boolean</Type>
+        <StrValue>false</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1387">
+        <Node>CfgNode_876</Node>
+        <Name>Ignoruj nieistniejące konta w ZK</Name>
+        <Type>_boolean</Type>
+        <StrValue>false</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1384">
+        <Node>CfgNode_876</Node>
+        <Name>KPiR</Name>
+        <Type>_boolean</Type>
+        <StrValue>false</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1405">
+        <Node>CfgNode_876</Node>
+        <Name>Kwota dodatkowa opisu</Name>
+        <Type>_boolean</Type>
+        <StrValue>false</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1408">
+        <Node>CfgNode_876</Node>
+        <Name>Kwota dodatkowa opisu kod</Name>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1393">
+        <Node>CfgNode_876</Node>
+        <Name>Maski podstawy wymiaru opisu</Name>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1409">
+        <Node>CfgNode_876</Node>
+        <Name>Pokaż wynik predekretacji</Name>
+        <Type>_int</Type>
+        <StrValue>2</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1401">
+        <Node>CfgNode_876</Node>
+        <Name>Rozszerzenie sybmolu wymiaru opisu</Name>
+        <Type>_boolean</Type>
+        <StrValue>false</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1404">
+        <Node>CfgNode_876</Node>
+        <Name>Rozszerzenie sybmolu wymiaru opisu kod</Name>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1397">
+        <Node>CfgNode_876</Node>
+        <Name>Segmenty budżetowe</Name>
+        <Type>_string</Type>
+        <StrValue>Syntetyka,Rozdział,Paragraf</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1399">
+        <Node>CfgNode_876</Node>
+        <Name>Segmenty budżetowe listy płac</Name>
+        <Type>_boolean</Type>
+        <StrValue>True</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1398">
+        <Node>CfgNode_876</Node>
+        <Name>Segmenty budżetowe zadan</Name>
+        <Type>_string</Type>
+        <StrValue>SyntetykaZ,Funkcja,Zadanie,Podzadanie,Działanie</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1406">
+        <Node>CfgNode_876</Node>
+        <Name>Tabela kursowa opisu</Name>
+        <Type>_guid</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1395">
+        <Node>CfgNode_876</Node>
+        <Name>Typ weryfikacji kwotowej opisu</Name>
+        <Type>_int</Type>
+        <StrValue>0</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1407">
+        <Node>CfgNode_876</Node>
+        <Name>Waluta opisu</Name>
+        <Type>_guid</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1391">
+        <Node>CfgNode_876</Node>
+        <Name>Weryfikacja symbolu opisu</Name>
+        <Type>_boolean</Type>
+        <StrValue>false</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1392">
+        <Node>CfgNode_876</Node>
+        <Name>Weryfikacja wymiaru opisu</Name>
+        <Type>_boolean</Type>
+        <StrValue>false</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1386">
+        <Node>CfgNode_876</Node>
+        <Name>Wymagalność elem księg ostrzeżenie</Name>
+        <Type>_boolean</Type>
+        <StrValue>false</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1394">
+        <Node>CfgNode_876</Node>
+        <Name>Wymiary podlegające weryfikacji kwotowej</Name>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+<FeatureDefinition id="FeatureDefinition_51" guid="243b2587-485c-4339-a4d3-605970da2db0">
+    <TableName>DefElementow</TableName>
+    <Name>Nagroda roczna</Name>
+    <Category>Budżetowość</Category>
+    <Description />
+    <TypeNumber>Bool</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr>0</InitValueStr>
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_52" guid="b90d9d18-0680-4611-856b-6ee9f2739984">
+    <TableName>DokEwidencja</TableName>
+    <Name>NrUmowy</Name>
+    <Category>Budżetowość</Category>
+    <Description>'NrUmowy' budżetowej</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>NrUmowy</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_53" guid="8e6006a1-f7c4-426d-bddb-6e2c9acc9388">
+    <TableName>DokEwidencja</TableName>
+    <Name>Zaangażowanie</Name>
+    <Category>Budżetowość</Category>
+    <Description>'Zaangażowanie' budżetowe</Description>
+    <TypeNumber>Bool</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_64" guid="9c69119c-ec0c-4ab1-81e8-1bc7b47cd9da">
+    <TableName>OpisAnalityczny</TableName>
+    <Name>Działanie</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'Działanie'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Działanie</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_65" guid="d3a0c2fd-020e-409c-b060-943ba1b10e1c">
+    <TableName>OpisAnalityczny</TableName>
+    <Name>Funkcja</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'Funkcja'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Funkcja</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_66" guid="8359197e-ac21-4087-9b5c-c49ee9f9fa3f">
+    <TableName>OpisAnalityczny</TableName>
+    <Name>Paragraf</Name>
+    <Category>Segment budżetowy</Category>
+    <Description>Segment budżetowy 'Paragraf'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Paragraf</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_67" guid="f95b0552-7a2d-478b-ba8e-0796b0f1da8a">
+    <TableName>OpisAnalityczny</TableName>
+    <Name>Podzadanie</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'Podzadanie'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Podzadanie</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_68" guid="4c5f3329-e54e-4d81-8b14-a1e280cc8fb9">
+    <TableName>OpisAnalityczny</TableName>
+    <Name>Rozdział</Name>
+    <Category>Segment budżetowy</Category>
+    <Description>Segment budżetowy 'Rozdział'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Rozdział</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_69" guid="9d73fc5c-9b7b-4e1c-a71f-ad4c0390985c">
+    <TableName>OpisAnalityczny</TableName>
+    <Name>Syntetyka</Name>
+    <Category>Segment budżetowy</Category>
+    <Description>Segment budżetowy 'Syntetyka'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Syntetyka</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_70" guid="2a04a90e-0f35-4c0f-ac1b-418e85384d3c">
+    <TableName>OpisAnalityczny</TableName>
+    <Name>SyntetykaZ</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'SyntetykaZ'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>SyntetykaZ</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_71" guid="a9c072c2-63b6-45a5-9779-620e60e91244">
+    <TableName>OpisAnalityczny</TableName>
+    <Name>VAT</Name>
+    <Category>Segment budżetowy</Category>
+    <Description>Segment budżetowy 'VAT'</Description>
+    <TypeNumber>Currency</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>ReadOnly</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_72" guid="4b1e470f-d0c2-4570-94df-e3171dc27b9b">
+    <TableName>OpisAnalityczny</TableName>
+    <Name>Zadanie</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy 'Zadanie'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Zadanie</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_73" guid="54feaa29-7a84-409a-b839-b4cfd1dc892e">
+    <TableName>Platnosci</TableName>
+    <Name>Działanie</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'Działanie'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Działanie</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_74" guid="4ca67d75-f4d3-490e-b31a-c0db7da39fcd">
+    <TableName>Platnosci</TableName>
+    <Name>Funkcja</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'Funkcja'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Funkcja</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_76" guid="a5de34f3-2612-48d1-80b0-867db4e8a53a">
+    <TableName>Platnosci</TableName>
+    <Name>Paragraf</Name>
+    <Category>Segment budżetowy</Category>
+    <Description>Segment budżetowy 'Paragraf'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>SpecialEdit</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Paragraf</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_77" guid="19d58ce7-9b09-4507-bc83-178baf3b62de">
+    <TableName>Platnosci</TableName>
+    <Name>Podzadanie</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'Podzadanie'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Podzadanie</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_78" guid="0a55e834-6a6a-44dc-ad54-65f0936c5001">
+    <TableName>Platnosci</TableName>
+    <Name>Rozdział</Name>
+    <Category>Segment budżetowy</Category>
+    <Description>Segment budżetowy 'Rozdział'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>SpecialEdit</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Rozdział</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_79" guid="d39785de-9754-4d82-843a-bc416e9b13ff">
+    <TableName>Platnosci</TableName>
+    <Name>Syntetyka</Name>
+    <Category>Segment budżetowy</Category>
+    <Description>Segment budżetowy 'Syntetyka'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>SpecialEdit</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Syntetyka</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_80" guid="9d10e6f3-3bac-43d7-a33a-976f937fa404">
+    <TableName>Platnosci</TableName>
+    <Name>SyntetykaZ</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'SyntetykaZ'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>SyntetykaZ</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_81" guid="30821c22-709d-4eb1-a686-4549447d0edd">
+    <TableName>Platnosci</TableName>
+    <Name>Zadanie</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy 'Zadanie'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>SpecialEdit</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Zadanie</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_85" guid="d280fdb2-b44b-49ca-b232-81760c2e044f">
+    <TableName>Pracownicy</TableName>
+    <Name>Działanie</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'Działanie'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Działanie</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_86" guid="f6354712-b700-4afa-baee-ab0ca1873165">
+    <TableName>Pracownicy</TableName>
+    <Name>Funkcja</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'Funkcja'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Funkcja</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_87" guid="b088b922-019f-4343-99de-f598ee777ec4">
+    <TableName>Pracownicy</TableName>
+    <Name>Podzadanie</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'Podzadanie'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Podzadanie</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_88" guid="6e77edc7-ed0c-4952-ba8a-cd09059bb311">
+    <TableName>Pracownicy</TableName>
+    <Name>SyntetykaZ</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'SyntetykaZ'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>SyntetykaZ</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_89" guid="a27037db-cccd-4504-a016-d28d2d5e243a">
+    <TableName>Pracownicy</TableName>
+    <Name>Zadanie</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'Zadanie'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Zadanie</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_90" guid="02c06043-32be-4366-b89c-c84d7fbe32df">
+    <TableName>Przelewy</TableName>
+    <Name>Działanie</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'Działanie'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Działanie</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_91" guid="f05c195c-fa95-493c-8cd3-9696b293cb24">
+    <TableName>Przelewy</TableName>
+    <Name>Funkcja</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'Funkcja'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Funkcja</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_92" guid="de7ec004-5604-4425-9b4e-f9cf10fef9f1">
+    <TableName>Przelewy</TableName>
+    <Name>Paragraf</Name>
+    <Category>Segment budżetowy</Category>
+    <Description>Segment budżetowy 'Paragraf'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Paragraf</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_93" guid="742b718f-c2a3-442e-9b4f-017782b606db">
+    <TableName>Przelewy</TableName>
+    <Name>Podzadanie</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'Podzadanie'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Podzadanie</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_94" guid="c9f28345-2a83-467a-93d1-762985bdf11b">
+    <TableName>Przelewy</TableName>
+    <Name>Rozdział</Name>
+    <Category>Segment budżetowy</Category>
+    <Description>Segment budżetowy 'Rozdział'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Rozdział</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_95" guid="a37a9f95-de41-487a-8a5e-53bd42fabf32">
+    <TableName>Przelewy</TableName>
+    <Name>Syntetyka</Name>
+    <Category>Segment budżetowy</Category>
+    <Description>Segment budżetowy 'Syntetyka'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Syntetyka</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_96" guid="6c745de9-9ac0-41e0-8628-51fcd744a72a">
+    <TableName>Przelewy</TableName>
+    <Name>SyntetykaZ</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'SyntetykaZ'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>SyntetykaZ</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_97" guid="67a9e4c2-002c-43d6-b8ce-70785c149de1">
+    <TableName>Przelewy</TableName>
+    <Name>Zadanie</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'Zadanie'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Zadanie</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_100" guid="5368512b-e11a-421c-8094-8f8c698c273b">
+    <TableName>Wydzialy</TableName>
+    <Name>Paragraf</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'Paragraf'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Paragraf</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_101" guid="a83a3d8d-ef8f-4451-9cb4-f298cb730f71">
+    <TableName>Wydzialy</TableName>
+    <Name>Rozdział</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'Rozdział'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Rozdział</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_102" guid="ad9e7fa5-9853-48b8-963a-bead01371f06">
+    <TableName>Wydzialy</TableName>
+    <Name>Syntetyka</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'Syntetyka'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Syntetyka</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_103" guid="17bea055-b9f4-44d0-a8c4-4e71c3d7b54f">
+    <TableName>Zaplaty</TableName>
+    <Name>Działanie</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'Działanie'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Działanie</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_104" guid="8928db2f-4fa4-4043-acad-97d433cbc34d">
+    <TableName>Zaplaty</TableName>
+    <Name>Funkcja</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'Funkcja'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Funkcja</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_105" guid="cb592726-7598-427c-b379-5fca3f7b0a77">
+    <TableName>Zaplaty</TableName>
+    <Name>Paragraf</Name>
+    <Category>Segment budżetowy</Category>
+    <Description>Segment budżetowy 'Paragraf'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Paragraf</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_106" guid="3ff81d95-cdb4-441b-9a7a-58f811e2d9e9">
+    <TableName>Zaplaty</TableName>
+    <Name>Podzadanie</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'Podzadanie'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Podzadanie</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_107" guid="cea1cde5-ed78-49d1-8010-200d7af05016">
+    <TableName>Zaplaty</TableName>
+    <Name>Rozdział</Name>
+    <Category>Segment budżetowy</Category>
+    <Description>Segment budżetowy 'Rozdział'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Rozdział</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_109" guid="6dbc3f80-b5f2-4394-824f-bd11f1641db5">
+    <TableName>Zaplaty</TableName>
+    <Name>Syntetyka</Name>
+    <Category>Segment budżetowy</Category>
+    <Description>Segment budżetowy 'Syntetyka'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Syntetyka</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_110" guid="d3db2d8d-bf35-44c7-9e1f-8cdb78d06b4b">
+    <TableName>Zaplaty</TableName>
+    <Name>SyntetykaZ</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy zadań 'SyntetykaZ'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>SyntetykaZ</Dictionary>
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_111" guid="3a2c74c8-c63e-44c0-8eaf-babd54597557">
+    <TableName>Zaplaty</TableName>
+    <Name>Zaangażowanie</Name>
+    <Category>Budżetowość</Category>
+    <Description />
+    <TypeNumber>Bool</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>SpecialEdit</ReadOnlyMode>
+    <InitValueStr>1</InitValueStr>
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_112" guid="7ab9d5af-7a31-4d9a-a92a-64303d13c1a6">
+    <TableName>Zaplaty</TableName>
+    <Name>Zaangażowanie Ma</Name>
+    <Category>Budżetowość</Category>
+    <Description />
+    <TypeNumber>Bool</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>SpecialEdit</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_113" guid="36133985-2b66-4403-8890-3afd1e09cd5f">
+    <TableName>Zaplaty</TableName>
+    <Name>Zadanie</Name>
+    <Category>Segment budżetowy zadań</Category>
+    <Description>Segment budżetowy 'Zadanie'</Description>
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Zadanie</Dictionary>
+    <Info />
+  </FeatureDefinition> 
+</session>

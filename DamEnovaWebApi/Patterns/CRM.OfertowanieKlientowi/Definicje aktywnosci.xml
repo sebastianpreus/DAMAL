@@ -1,0 +1,647 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session xmlns="http://www.soneta.pl/schema/business">
+<DefZadania id="DefZadania_1" guid="bd084848-6666-35a6-8575-8f37b1522c5d">
+    <Symbol>KONPKL</Symbol>
+    <DrugiSymbol />
+    <Rodzaj>Zdarzenie</Rodzaj>
+    <Grupowe />
+    <Nazwa>Kontakt z potencjalnym kliente</Nazwa>
+    <Blokada>False</Blokada>
+    <Domyslna>True</Domyslna>
+    <Formularz>Użytkownika</Formularz>
+    <Powiazane />
+    <DefinicjaDokHandlowego />
+    <DefDokHanUslugi />
+    <Numeracja>
+      <Wzor>Definicja.Symbol/Data.Year:4/Data.Month:2/*</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <Historia>False</Historia>
+    <Xml>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfPropertyItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;2&lt;/Index&gt;
+    &lt;Title&gt;Zamknij&lt;/Title&gt;
+    &lt;Name&gt;Features.Zamknij&lt;/Name&gt;
+    &lt;PromptWidth&gt;0&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;0&lt;/Index&gt;
+    &lt;Title&gt;Nazwa&lt;/Title&gt;
+    &lt;Name&gt;Nazwa&lt;/Name&gt;
+    &lt;PromptWidth&gt;0&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;6&lt;/Index&gt;
+    &lt;Title&gt;Numer&lt;/Title&gt;
+    &lt;Name&gt;Numer&lt;/Name&gt;
+    &lt;PromptWidth&gt;100&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;190&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;true&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;1&lt;/Index&gt;
+    &lt;Title&gt;Stan&lt;/Title&gt;
+    &lt;Name&gt;StanZadania&lt;/Name&gt;
+    &lt;PromptWidth&gt;0&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;3&lt;/Index&gt;
+    &lt;Title&gt;Kontrahent&lt;/Title&gt;
+    &lt;Name&gt;Kontrahent&lt;/Name&gt;
+    &lt;PromptWidth&gt;0&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;4&lt;/Index&gt;
+    &lt;Title&gt;Wykonujacy&lt;/Title&gt;
+    &lt;Name&gt;Wykonujacy&lt;/Name&gt;
+    &lt;PromptWidth&gt;0&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;5&lt;/Index&gt;
+    &lt;Title&gt;Opis&lt;/Title&gt;
+    &lt;Name&gt;Opis&lt;/Name&gt;
+    &lt;PromptWidth&gt;50&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;600&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;100&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+&lt;/ArrayOfPropertyItem&gt;</Xml>
+    <MailDoKontrahenta>Brak</MailDoKontrahenta>
+    <MailDoWykonujacego>Brak</MailDoWykonujacego>
+    <MailDoProwadzacego>Brak</MailDoProwadzacego>
+    <MailPrzyUtworzeniu>False</MailPrzyUtworzeniu>
+    <MailPrzyZmianie>False</MailPrzyZmianie>
+    <MailPrzyZamknieciu>False</MailPrzyZamknieciu>
+    <OpisHTML>False</OpisHTML>
+    <OknoPotwierdzenia>False</OknoPotwierdzenia>
+    <Calodzienne>False</Calodzienne>
+    <InicjujNazwe>False</InicjujNazwe>
+    <DefDlaOutlook>False</DefDlaOutlook>
+    <NetDostep>Brak</NetDostep>
+    <NetDodawanie>False</NetDodawanie>
+    <XmlNET />
+    <FiltrZasobu />
+    <WartoscDokCRM>Brutto</WartoscDokCRM>
+    <Magazyn />
+    <NieWymagajCech>False</NieWymagajCech>
+    <CechyWymagane />
+    <CechyKopiowane>Bufor inicjowania opisu</CechyKopiowane>
+    <NetModul>0</NetModul>
+    <PowiazCzasWykonania>False</PowiazCzasWykonania>
+    <StoperDostepny>False</StoperDostepny>
+    <StoperAuto>False</StoperAuto>
+    <Code>public class KON_ZadanieKalkulator : ZadanieKalkulatorBase {
+	public KON_ZadanieKalkulator(Zadanie zadanie)
+		: base(zadanie) {
+	}
+
+
+	public Zadanie Zadanie {
+		get {
+			return zadanie;
+		}
+	}
+
+/*
+	public DefZadania ZadaniePowiazane () {
+		      
+	//	if(Zadanie.Aktywny)
+	  //	throw new Exception("Pamiętaj by zamknąć zadanie!!");
+		return null;
+	}
+*/
+
+/*
+	public void StanZadania_Changed(StanZadania Poprzedni) {
+	}
+*/
+
+/*
+	public object GetListKontrahent() {
+		return null;
+	}
+*/
+
+}
+
+
+</Code>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <Algorytm>True</Algorytm>
+    <KontrolaDostUrz>Brak</KontrolaDostUrz>
+    <Stany>
+      <StanZadania id="StanZadania_30">
+        <Definicja>DefZadania_1</Definicja>
+        <Lp>1</Lp>
+        <Ident>1</Ident>
+        <Nazwa>Bufor</Nazwa>
+        <Aktywny>True</Aktywny>
+        <Blokada>False</Blokada>
+      </StanZadania>
+      <StanZadania id="StanZadania_31">
+        <Definicja>DefZadania_1</Definicja>
+        <Lp>2</Lp>
+        <Ident>2</Ident>
+        <Nazwa>Zamknięte</Nazwa>
+        <Aktywny>False</Aktywny>
+        <Blokada>False</Blokada>
+      </StanZadania>
+    </Stany>
+    <Priorytety>
+      <PriorytetZadania id="PriorytetZadania_22">
+        <Definicja>DefZadania_1</Definicja>
+        <Lp>1</Lp>
+        <Ident>1</Ident>
+        <Nazwa>Niski</Nazwa>
+        <Blokada>False</Blokada>
+      </PriorytetZadania>
+      <PriorytetZadania id="PriorytetZadania_23">
+        <Definicja>DefZadania_1</Definicja>
+        <Lp>2</Lp>
+        <Ident>2</Ident>
+        <Nazwa>Średni</Nazwa>
+        <Blokada>False</Blokada>
+      </PriorytetZadania>
+      <PriorytetZadania id="PriorytetZadania_24">
+        <Definicja>DefZadania_1</Definicja>
+        <Lp>3</Lp>
+        <Ident>3</Ident>
+        <Nazwa>Wysoki</Nazwa>
+        <Blokada>False</Blokada>
+      </PriorytetZadania>
+    </Priorytety>
+
+
+  </DefZadania>
+     
+
+<DefZadania id="DefZadania_10" guid="bd084848-6666-45a6-8575-8f37b1522c5d">
+    <Symbol>PKL</Symbol>
+    <DrugiSymbol />
+    <Rodzaj>Zadanie</Rodzaj>
+    <Grupowe />
+    <Nazwa>Potencjalny klient</Nazwa>
+    <Blokada>False</Blokada>
+    <Domyslna>True</Domyslna>
+    <Formularz>Użytkownika</Formularz>
+    <Powiazane>bd084848-6666-35a6-8575-8f37b1522c5d</Powiazane>
+    <DefinicjaDokHandlowego />
+    <DefDokHanUslugi />
+    <Numeracja>
+      <Wzor>Definicja.Symbol/Data.Year:4/Data.Month:2/*</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <Historia>False</Historia>
+    <Xml>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfPropertyItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;0&lt;/Index&gt;
+    &lt;Title&gt;Nazwa&lt;/Title&gt;
+    &lt;Name&gt;Nazwa&lt;/Name&gt;
+    &lt;PromptWidth&gt;100&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;true&lt;/ReadOnly&gt;
+    &lt;TextDivider&gt;Ogólne&lt;/TextDivider&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;8&lt;/Index&gt;
+    &lt;Title&gt;Numer&lt;/Title&gt;
+    &lt;Name&gt;Numer&lt;/Name&gt;
+    &lt;PromptWidth&gt;100&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;true&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;true&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;13&lt;/Index&gt;
+    &lt;Title&gt;Aktywny&lt;/Title&gt;
+    &lt;Name&gt;Aktywny&lt;/Name&gt;
+    &lt;PromptWidth&gt;100&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;100&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;true&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;true&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;4&lt;/Index&gt;
+    &lt;Title&gt;Kontrahent&lt;/Title&gt;
+    &lt;Name&gt;Kontrahent&lt;/Name&gt;
+    &lt;PromptWidth&gt;100&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;13&lt;/Index&gt;
+    &lt;Title&gt;Przedstawiciel&lt;/Title&gt;
+    &lt;Name&gt;Przedstawiciel&lt;/Name&gt;
+    &lt;PromptWidth&gt;100&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;true&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;6&lt;/Index&gt;
+    &lt;Title&gt;Kontrahent e-mail&lt;/Title&gt;
+    &lt;Name&gt;Kontrahent.Kontakt.EMAIL&lt;/Name&gt;
+    &lt;PromptWidth&gt;100&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;7&lt;/Index&gt;
+    &lt;Title&gt;Kontrahent telefon&lt;/Title&gt;
+    &lt;Name&gt;Kontrahent.Kontakt.TelefonKomorkowy&lt;/Name&gt;
+    &lt;PromptWidth&gt;100&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;true&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;19&lt;/Index&gt;
+    &lt;Title&gt;Kontakt e-mail&lt;/Title&gt;
+    &lt;Name&gt;Przedstawiciel.Kontakt.EMAIL&lt;/Name&gt;
+    &lt;PromptWidth&gt;100&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;20&lt;/Index&gt;
+    &lt;Title&gt;Kontakt telefon&lt;/Title&gt;
+    &lt;Name&gt;Przedstawiciel.Kontakt.TelefonKomorkowy&lt;/Name&gt;
+    &lt;PromptWidth&gt;100&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;true&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;16&lt;/Index&gt;
+    &lt;Title&gt;Wykonujacy&lt;/Title&gt;
+    &lt;Name&gt;Wykonujacy&lt;/Name&gt;
+    &lt;PromptWidth&gt;100&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;15&lt;/Index&gt;
+    &lt;Title&gt;Źródło danych&lt;/Title&gt;
+    &lt;Name&gt;Features.ZrodloDanychOPKL&lt;/Name&gt;
+    &lt;PromptWidth&gt;100&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;true&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;11&lt;/Index&gt;
+    &lt;Title&gt;Etap&lt;/Title&gt;
+    &lt;Name&gt;StanZadania&lt;/Name&gt;
+    &lt;PromptWidth&gt;100&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider&gt;Proces obsługi&lt;/TextDivider&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;18&lt;/Index&gt;
+    &lt;Title&gt;.&lt;/Title&gt;
+    &lt;Name&gt;StanZadania.Features.Kolejny krok&lt;/Name&gt;
+    &lt;PromptWidth&gt;15&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;true&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;true&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;1&lt;/Index&gt;
+    &lt;Title&gt;.&lt;/Title&gt;
+    &lt;Name&gt;Features.Data Kolejnego Kroku&lt;/Name&gt;
+    &lt;PromptWidth&gt;50&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;120&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;true&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;17&lt;/Index&gt;
+    &lt;Title&gt;:&lt;/Title&gt;
+    &lt;Name&gt;Features.Godzina Kolejnego Kroku&lt;/Name&gt;
+    &lt;PromptWidth&gt;20&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;60&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;true&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;13&lt;/Index&gt;
+    &lt;Title&gt;Generuj zdarzenie&lt;/Title&gt;
+    &lt;Name&gt;Features.Generuj zdarzenie&lt;/Name&gt;
+    &lt;PromptWidth&gt;100&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;10&lt;/Index&gt;
+    &lt;Title&gt;Bieżąca aktywność&lt;/Title&gt;
+    &lt;Name&gt;Uwagi&lt;/Name&gt;
+    &lt;PromptWidth&gt;100&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;700&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;70&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;2&lt;/Index&gt;
+    &lt;Title&gt;Mozliwy sukces&lt;/Title&gt;
+    &lt;Name&gt;Features.Mozliwa Data Zakonczenia&lt;/Name&gt;
+    &lt;PromptWidth&gt;100&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider&gt;Możliwość sukcesu&lt;/TextDivider&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;3&lt;/Index&gt;
+    &lt;Title&gt;Prawdopodobienstwo&lt;/Title&gt;
+    &lt;Name&gt;Features.Prawdopodobienstwo Sukcesu&lt;/Name&gt;
+    &lt;PromptWidth&gt;120&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;true&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;12&lt;/Index&gt;
+    &lt;Title&gt;Nastawienie&lt;/Title&gt;
+    &lt;Name&gt;PriorytetZadania&lt;/Name&gt;
+    &lt;PromptWidth&gt;100&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;100&lt;/ControlWidth&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;true&lt;/WithPrev&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+&lt;/ArrayOfPropertyItem&gt;</Xml>
+    <MailDoKontrahenta>DO</MailDoKontrahenta>
+    <MailDoWykonujacego>Brak</MailDoWykonujacego>
+    <MailDoProwadzacego>Brak</MailDoProwadzacego>
+    <MailPrzyUtworzeniu>False</MailPrzyUtworzeniu>
+    <MailPrzyZmianie>False</MailPrzyZmianie>
+    <MailPrzyZamknieciu>False</MailPrzyZamknieciu>
+    <OpisHTML>True</OpisHTML>
+    <OknoPotwierdzenia>True</OknoPotwierdzenia>
+    <Calodzienne>False</Calodzienne>
+    <InicjujNazwe>True</InicjujNazwe>
+    <DefDlaOutlook>False</DefDlaOutlook>
+    <NetDostep>Brak</NetDostep>
+    <NetDodawanie>False</NetDodawanie>
+    <XmlNET />
+    <FiltrZasobu />
+    <WartoscDokCRM>Brutto</WartoscDokCRM>
+    <Magazyn />
+    <NieWymagajCech>False</NieWymagajCech>
+    <CechyWymagane />
+    <CechyKopiowane />
+    <NetModul>CRM</NetModul>
+    <PowiazCzasWykonania>False</PowiazCzasWykonania>
+    <StoperDostepny>False</StoperDostepny>
+    <StoperAuto>False</StoperAuto>
+    <Code>public class PKL_ZadanieKalkulator : ZadanieKalkulatorBase {
+	public PKL_ZadanieKalkulator(Zadanie zadanie)
+		: base(zadanie) {
+	}
+
+
+	public Zadanie Zadanie {
+		get {
+			return zadanie;
+		}
+	}
+
+
+	public DefZadania ZadaniePowiazane () {
+		if(Zadanie.Features.GetBool("Generuj zdarzenie"))
+		{
+		
+		using (ITransaction IT=Zadanie.Session.Logout(true))
+                     {
+
+		Zadanie.Features["Bufor inicjowania opisu"]=Zadanie.Uwagi.ToString()  ;
+	            
+ 
+	                     IT.Commit();
+                 
+		 }
+
+
+		return Zadanie.Definicja.Powiazane ;
+		}
+		return Zadanie.CzyZamykane ? Zadanie.Definicja.Powiazane : null;
+	}
+
+
+/*
+	public void StanZadania_Changed(StanZadania Poprzedni) {
+	}
+*/
+
+/*
+	public object GetListKontrahent() {
+		return null;
+	}
+*/
+
+}
+
+
+</Code>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <Algorytm>True</Algorytm>
+    <KontrolaDostUrz>Brak</KontrolaDostUrz>
+    <Kategoria />
+    <Stany>
+      <StanZadania id="StanZadania_42">
+        <Definicja>DefZadania_10</Definicja>
+        <Lp>1</Lp>
+        <Ident>1</Ident>
+        <Nazwa>Pierwszy kontakt</Nazwa>
+        <Aktywny>True</Aktywny>
+        <Blokada>False</Blokada>
+        <features>
+          <feature name="Kolejny krok">Wykonać kontakt ofertowy w dniu</feature>
+        </features>
+      </StanZadania>
+      <StanZadania id="StanZadania_43">
+        <Definicja>DefZadania_10</Definicja>
+        <Lp>2</Lp>
+        <Ident>3</Ident>
+        <Nazwa>Oferta</Nazwa>
+        <Aktywny>True</Aktywny>
+        <Blokada>False</Blokada>
+        <features>
+          <feature name="Kolejny krok">Przygotować ofertę na</feature>
+        </features>
+      </StanZadania>
+      <StanZadania id="StanZadania_44">
+        <Definicja>DefZadania_10</Definicja>
+        <Lp>3</Lp>
+        <Ident>2</Ident>
+        <Nazwa>Przekazana oferta</Nazwa>
+        <Aktywny>True</Aktywny>
+        <Blokada>False</Blokada>
+        <features>
+          <feature name="Kolejny krok">Kontakt poofertowy w dniu</feature>
+        </features>
+      </StanZadania>
+      <StanZadania id="StanZadania_45">
+        <Definicja>DefZadania_10</Definicja>
+        <Lp>4</Lp>
+        <Ident>4</Ident>
+        <Nazwa>Zainteresowany spotkaniem</Nazwa>
+        <Aktywny>True</Aktywny>
+        <Blokada>False</Blokada>
+        <features>
+          <feature name="Kolejny krok">Kontakt w sprawie ustalenia terminu spotkania</feature>
+        </features>
+      </StanZadania>
+      <StanZadania id="StanZadania_47">
+        <Definicja>DefZadania_10</Definicja>
+        <Lp>5</Lp>
+        <Ident>6</Ident>
+        <Nazwa>Prezentacja</Nazwa>
+        <Aktywny>True</Aktywny>
+        <Blokada>False</Blokada>
+        <features>
+          <feature name="Kolejny krok">Kontakt po prezentacji </feature>
+        </features>
+      </StanZadania>
+      <StanZadania id="StanZadania_48">
+        <Definicja>DefZadania_10</Definicja>
+        <Lp>6</Lp>
+        <Ident>8</Ident>
+        <Nazwa>Klient</Nazwa>
+        <Aktywny>False</Aktywny>
+        <Blokada>False</Blokada>
+      </StanZadania>
+      <StanZadania id="StanZadania_49">
+        <Definicja>DefZadania_10</Definicja>
+        <Lp>7</Lp>
+        <Ident>10</Ident>
+        <Nazwa>Niepowodzenie po telefonie</Nazwa>
+        <Aktywny>False</Aktywny>
+        <Blokada>False</Blokada>
+      </StanZadania>
+      <StanZadania id="StanZadania_50">
+        <Definicja>DefZadania_10</Definicja>
+        <Lp>8</Lp>
+        <Ident>11</Ident>
+        <Nazwa>Niepowodzenie po ofercie</Nazwa>
+        <Aktywny>False</Aktywny>
+        <Blokada>False</Blokada>
+      </StanZadania>
+      <StanZadania id="StanZadania_51">
+        <Definicja>DefZadania_10</Definicja>
+        <Lp>9</Lp>
+        <Ident>12</Ident>
+        <Nazwa>Niepowodzenie po prezentacji</Nazwa>
+        <Aktywny>False</Aktywny>
+        <Blokada>False</Blokada>
+      </StanZadania>
+    </Stany>
+    <Priorytety>
+      <PriorytetZadania id="PriorytetZadania_28">
+        <Definicja>DefZadania_10</Definicja>
+        <Lp>1</Lp>
+        <Ident>1</Ident>
+        <Nazwa>Zimny</Nazwa>
+        <Blokada>False</Blokada>
+      </PriorytetZadania>
+      <PriorytetZadania id="PriorytetZadania_29">
+        <Definicja>DefZadania_10</Definicja>
+        <Lp>2</Lp>
+        <Ident>2</Ident>
+        <Nazwa>Ciepły</Nazwa>
+        <Blokada>False</Blokada>
+      </PriorytetZadania>
+      <PriorytetZadania id="PriorytetZadania_30">
+        <Definicja>DefZadania_10</Definicja>
+        <Lp>3</Lp>
+        <Ident>3</Ident>
+        <Nazwa>Gorący</Nazwa>
+        <Blokada>False</Blokada>
+      </PriorytetZadania>
+    </Priorytety>
+  </DefZadania>
+<Right>
+  <Entitle>Entitle:00000000-0015-0001-0001-000000000000</Entitle>
+  <Source>DefZadania:bd084848-6666-35a6-8575-8f37b1522c5d</Source>
+ </Right> 
+<Right>
+  <Entitle>Entitle:00000000-0015-0001-0001-000000000000</Entitle>
+  <Source>DefZadania:bd084848-6666-45a6-8575-8f37b1522c5d</Source>
+ </Right>	
+</session>

@@ -109,8 +109,7 @@ namespace DamEnovaWebApi.Controllers
             ZamowieniaOdbiorcyService zamowieniaOdbiorcyService = new ZamowieniaOdbiorcyService();
             zamowieniaOdbiorcyService.DeleteZamowienieOdbiorcy(key);
 
-            // return Created(damPrzyjecieMagazynowe);
-            return StatusCode(HttpStatusCode.NotImplemented);
+            return Ok();
         }
 
         private IHttpActionResult Ok(object content, Type type)

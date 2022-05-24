@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session xmlns="http://www.soneta.pl/schema/business">
+
+  <StrukturaOrganizacyjna id="StrukturaOrganizacyjna_2" guid="f0a2b085-fbc3-4a06-9fd2-14aa0467c0f3">
+    <Nazwa>Pulpity HR</Nazwa>
+    <Blokada>False</Blokada>
+    <Xml />
+    <Algorytm>// public REZULTAT Pulpity_HR_METODA(PARAMETRY)</Algorytm>
+    <PublikujWDrzewie>True</PublikujWDrzewie>
+    <Historycznosc>False</Historycznosc>
+    <Ekskluzywnosc>False</Ekskluzywnosc>
+    <DefinicjeElementów>
+      <DefinicjaElementuStrukturyOrganizacyjnej id="DefinicjaElementuStrukturyOrganizacyjnej_3" guid="21814cc7-a517-4911-91e9-da33533df523">
+        <Struktura>StrukturaOrganizacyjna_2</Struktura>
+        <Nazwa>Dyrektorzy</Nazwa>
+        <DozwolonePowiazania>True</DozwolonePowiazania>
+        <Warunek1>False</Warunek1>
+        <Warunek2>False</Warunek2>
+        <Warunek3>False</Warunek3>
+        <Warunek4>False</Warunek4>
+        <Warunek5>False</Warunek5>
+        <TypZrodlaPowiazania>(Wszystkie)</TypZrodlaPowiazania>
+      </DefinicjaElementuStrukturyOrganizacyjnej>
+      <DefinicjaElementuStrukturyOrganizacyjnej id="DefinicjaElementuStrukturyOrganizacyjnej_4" guid="feb63b5d-c37c-49dc-b051-6e843fd200de">
+        <Struktura>StrukturaOrganizacyjna_2</Struktura>
+        <Nazwa>Kierownicy</Nazwa>
+        <DozwolonePowiazania>True</DozwolonePowiazania>
+        <Warunek1>False</Warunek1>
+        <Warunek2>False</Warunek2>
+        <Warunek3>False</Warunek3>
+        <Warunek4>False</Warunek4>
+        <Warunek5>False</Warunek5>
+        <TypZrodlaPowiazania>(Wszystkie)</TypZrodlaPowiazania>
+      </DefinicjaElementuStrukturyOrganizacyjnej>
+      <DefinicjaElementuStrukturyOrganizacyjnej id="DefinicjaElementuStrukturyOrganizacyjnej_5" guid="34737139-8edd-45f0-9bf4-2132226c1e9d">
+        <Struktura>StrukturaOrganizacyjna_2</Struktura>
+        <Nazwa>Pracownicy</Nazwa>
+        <DozwolonePowiazania>True</DozwolonePowiazania>
+        <Warunek1>False</Warunek1>
+        <Warunek2>False</Warunek2>
+        <Warunek3>False</Warunek3>
+        <Warunek4>False</Warunek4>
+        <Warunek5>False</Warunek5>
+        <TypZrodlaPowiazania>(Wszystkie)</TypZrodlaPowiazania>
+      </DefinicjaElementuStrukturyOrganizacyjnej>
+      <DefinicjaElementuStrukturyOrganizacyjnej id="DefinicjaElementuStrukturyOrganizacyjnej_2" guid="23dd20be-2bc3-4592-859a-f43af32e8c19">
+        <Struktura>StrukturaOrganizacyjna_2</Struktura>
+        <Nazwa>Prezes</Nazwa>
+        <DozwolonePowiazania>True</DozwolonePowiazania>
+        <Warunek1>False</Warunek1>
+        <Warunek2>False</Warunek2>
+        <Warunek3>False</Warunek3>
+        <Warunek4>False</Warunek4>
+        <Warunek5>False</Warunek5>
+        <TypZrodlaPowiazania>(Wszystkie)</TypZrodlaPowiazania>
+      </DefinicjaElementuStrukturyOrganizacyjnej>
+    </DefinicjeElementów>
+    <Elementy>
+  <ElementStrukturyOrganizacyjnej id="ElementStrukturyOrganizacyjnej_2" guid="942da33a-1b1c-474e-bdab-f0477280d78c">
+    <Struktura>StrukturaOrganizacyjna_2</Struktura>
+    <Nadrzedny />
+    <Definicja>DefinicjaElementuStrukturyOrganizacyjnej_2</Definicja>
+    <Kod>Prezes</Kod>
+    <Nazwa>Prezes</Nazwa>
+    <NazwaPomocnicza />
+    <Okres>(wszystko)</Okres>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_2</Element>
+            <Zrodlo>Pracownik:ddaac635-a1fe-4662-9dd9-ef29d269fce0</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+  </ElementStrukturyOrganizacyjnej>
+      <ElementStrukturyOrganizacyjnej id="ElementStrukturyOrganizacyjnej_6" guid="acc4d614-29b0-42a7-a641-6a915659f26d">
+        <Struktura>StrukturaOrganizacyjna_2</Struktura>
+        <Nadrzedny>942da33a-1b1c-474e-bdab-f0477280d78c</Nadrzedny>
+        <Definicja>DefinicjaElementuStrukturyOrganizacyjnej_3</Definicja>
+        <Kod>Dyrektor PŁD</Kod>
+        <Nazwa>Dyrektor Rejonu Południe</Nazwa>
+        <NazwaPomocnicza />
+        <Okres>(wszystko)</Okres>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_6</Element>
+            <Zrodlo>Pracownik:0ee5b685-9329-4c98-91ba-b5fd3dc04049</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+      </ElementStrukturyOrganizacyjnej>
+      <ElementStrukturyOrganizacyjnej id="ElementStrukturyOrganizacyjnej_3" guid="7d342c4e-7c53-4a63-95bb-2b2798ec37e2">
+        <Struktura>StrukturaOrganizacyjna_2</Struktura>
+        <Nadrzedny>ElementStrukturyOrganizacyjnej_2</Nadrzedny>
+        <Definicja>DefinicjaElementuStrukturyOrganizacyjnej_3</Definicja>
+        <Kod>Dyrektor PN</Kod>
+        <Nazwa>Dyrektor Rejonu Północ</Nazwa>
+        <NazwaPomocnicza />
+        <Okres>(wszystko)</Okres>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_3</Element>
+            <Zrodlo>Pracownik:76e06a80-699d-429d-a8d8-4e82d820ecb0</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+      </ElementStrukturyOrganizacyjnej>
+      <ElementStrukturyOrganizacyjnej id="ElementStrukturyOrganizacyjnej_9" guid="5dcfe130-9b92-48f2-a963-0edc52a9fff3">
+        <Struktura>StrukturaOrganizacyjna_2</Struktura>
+        <Nadrzedny>ElementStrukturyOrganizacyjnej_2</Nadrzedny>
+        <Definicja>DefinicjaElementuStrukturyOrganizacyjnej_3</Definicja>
+        <Kod>DyrektorWSC</Kod>
+        <Nazwa>Dyrektor Rejonu Wschód</Nazwa>
+        <NazwaPomocnicza />
+        <Okres>(wszystko)</Okres>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_9</Element>
+            <Zrodlo>Pracownik:246f39e1-8404-4431-a477-e26286e99802</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+      </ElementStrukturyOrganizacyjnej>
+      <ElementStrukturyOrganizacyjnej id="ElementStrukturyOrganizacyjnej_12" guid="8e461d92-f843-4a5e-9715-980b10448637">
+        <Struktura>StrukturaOrganizacyjna_2</Struktura>
+        <Nadrzedny>ElementStrukturyOrganizacyjnej_2</Nadrzedny>
+        <Definicja>DefinicjaElementuStrukturyOrganizacyjnej_3</Definicja>
+        <Kod>DyrektorZAC</Kod>
+        <Nazwa>Dyrektor Rejonu Zachód</Nazwa>
+        <NazwaPomocnicza />
+        <Okres>(wszystko)</Okres>
+      </ElementStrukturyOrganizacyjnej>
+      <ElementStrukturyOrganizacyjnej id="ElementStrukturyOrganizacyjnej_7" guid="fcb9dfa8-c371-4e48-b3c8-3a40ab2af197">
+        <Struktura>StrukturaOrganizacyjna_2</Struktura>
+        <Nadrzedny>ElementStrukturyOrganizacyjnej_6</Nadrzedny>
+        <Definicja>DefinicjaElementuStrukturyOrganizacyjnej_4</Definicja>
+        <Kod>KierownikPŁD</Kod>
+        <Nazwa>Kierownik Rejonu Południe</Nazwa>
+        <NazwaPomocnicza />
+        <Okres>(wszystko)</Okres>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_7</Element>
+            <Zrodlo>Pracownik:732aa7f0-ef5c-4175-a2fa-98345eaa90ff</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+      </ElementStrukturyOrganizacyjnej>
+      <ElementStrukturyOrganizacyjnej id="ElementStrukturyOrganizacyjnej_4" guid="04a3426a-f5b2-4ff2-83cb-701796710a5a">
+        <Struktura>StrukturaOrganizacyjna_2</Struktura>
+        <Nadrzedny>ElementStrukturyOrganizacyjnej_3</Nadrzedny>
+        <Definicja>DefinicjaElementuStrukturyOrganizacyjnej_4</Definicja>
+        <Kod>Kierownik PN</Kod>
+        <Nazwa>Kierownik Rejonu Północ</Nazwa>
+        <NazwaPomocnicza />
+        <Okres>(wszystko)</Okres>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_4</Element>
+            <Zrodlo>Pracownik:096ddb93-56ed-4f91-b26b-49bc4518a5e5</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+      </ElementStrukturyOrganizacyjnej>
+      <ElementStrukturyOrganizacyjnej id="ElementStrukturyOrganizacyjnej_10" guid="8dc38db3-8a6e-4e56-b693-11b384f8601c">
+        <Struktura>StrukturaOrganizacyjna_2</Struktura>
+        <Nadrzedny>ElementStrukturyOrganizacyjnej_9</Nadrzedny>
+        <Definicja>DefinicjaElementuStrukturyOrganizacyjnej_4</Definicja>
+        <Kod>KierownikWSC</Kod>
+        <Nazwa>Kierownik Rejonu Wschód</Nazwa>
+        <NazwaPomocnicza />
+        <Okres>(wszystko)</Okres>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_10</Element>
+            <Zrodlo>Pracownik:d6e99852-5b79-4d4a-809f-4af7aee47839</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+      </ElementStrukturyOrganizacyjnej>
+      <ElementStrukturyOrganizacyjnej id="ElementStrukturyOrganizacyjnej_13" guid="e0c1f0b0-e57c-4ac3-a965-7c1be73bb4d9">
+        <Struktura>StrukturaOrganizacyjna_2</Struktura>
+        <Nadrzedny>ElementStrukturyOrganizacyjnej_12</Nadrzedny>
+        <Definicja>DefinicjaElementuStrukturyOrganizacyjnej_4</Definicja>
+        <Kod>KierownikZAC</Kod>
+        <Nazwa>Kierownik Rejonu Zachód</Nazwa>
+        <NazwaPomocnicza />
+        <Okres>(wszystko)</Okres>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_13</Element>
+            <Zrodlo>Pracownik:f052f208-117a-4fa1-9faf-eabe16f2f359</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+      </ElementStrukturyOrganizacyjnej>
+      <ElementStrukturyOrganizacyjnej id="ElementStrukturyOrganizacyjnej_8" guid="11947fd3-1d10-4f6e-bc4a-c6a2e6da5562">
+        <Struktura>StrukturaOrganizacyjna_2</Struktura>
+        <Nadrzedny>ElementStrukturyOrganizacyjnej_7</Nadrzedny>
+        <Definicja>DefinicjaElementuStrukturyOrganizacyjnej_5</Definicja>
+        <Kod>PracownikPŁD</Kod>
+        <Nazwa>Pracownik Rejonu Południe</Nazwa>
+        <NazwaPomocnicza />
+        <Okres>(wszystko)</Okres>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_8</Element>
+            <Zrodlo>Pracownik:fa6e98aa-d7bf-4266-aec9-0e7214fb4fbf</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_8</Element>
+            <Zrodlo>Pracownik:47fb21dc-a45d-455d-a7be-2c68241975fd</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_8</Element>
+            <Zrodlo>Pracownik:b73a41c7-6149-47ce-960c-f7d959c51e51</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_8</Element>
+            <Zrodlo>Pracownik:5e762f01-8956-404b-b493-6904d136a69e</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_8</Element>
+            <Zrodlo>Pracownik:071bbcab-50b8-4d01-9042-97446c280b8a</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_8</Element>
+            <Zrodlo>Pracownik:0197fc04-4f60-4982-b69b-452d592c0ba2</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_8</Element>
+            <Zrodlo>Pracownik:98096b65-7d50-421b-ab43-efb3af3efaa1</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_8</Element>
+            <Zrodlo>Pracownik:552e3251-21ee-4b28-935a-360488b24835</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_8</Element>
+            <Zrodlo>Pracownik:c2af312a-d40c-41fc-921f-b3029506cdd7</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+      </ElementStrukturyOrganizacyjnej>
+      <ElementStrukturyOrganizacyjnej id="ElementStrukturyOrganizacyjnej_5" guid="851eb47d-11fa-484f-a287-fa003ca05d2f">
+        <Struktura>StrukturaOrganizacyjna_2</Struktura>
+        <Nadrzedny>ElementStrukturyOrganizacyjnej_4</Nadrzedny>
+        <Definicja>DefinicjaElementuStrukturyOrganizacyjnej_5</Definicja>
+        <Kod>Pracownik PN</Kod>
+        <Nazwa>Pracownik Rejonu Północ</Nazwa>
+        <NazwaPomocnicza />
+        <Okres>(wszystko)</Okres>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_5</Element>
+            <Zrodlo>Pracownik:ed545be8-65ed-4ef7-863c-96d12551ee86</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_5</Element>
+            <Zrodlo>Pracownik:c2dc7f29-d427-4960-b5ea-e381d96bf4e3</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_5</Element>
+            <Zrodlo>Pracownik:43b8b29f-55fa-4710-a3c3-f21e325c0114</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_5</Element>
+            <Zrodlo>Pracownik:f2816459-8799-44cf-a455-b221c0aef222</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_5</Element>
+            <Zrodlo>Pracownik:6777f712-01fd-42f7-bfd0-7298549ebcb7</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_5</Element>
+            <Zrodlo>Pracownik:f642b4ca-bb76-42c1-be8b-59d65b82b680</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_5</Element>
+            <Zrodlo>Pracownik:e74d9609-e8fa-44bf-8924-d1146e8303b4</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_5</Element>
+            <Zrodlo>Pracownik:bbc01b84-182c-4401-ad1a-9a012fd7122c</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+      </ElementStrukturyOrganizacyjnej>
+      <ElementStrukturyOrganizacyjnej id="ElementStrukturyOrganizacyjnej_11" guid="063a26f2-1d90-4a0f-a026-3622c4a8a38e">
+        <Struktura>StrukturaOrganizacyjna_2</Struktura>
+        <Nadrzedny>ElementStrukturyOrganizacyjnej_10</Nadrzedny>
+        <Definicja>DefinicjaElementuStrukturyOrganizacyjnej_5</Definicja>
+        <Kod>PracownikWSC</Kod>
+        <Nazwa>Pracownik Rejonu Wschód</Nazwa>
+        <NazwaPomocnicza />
+        <Okres>(wszystko)</Okres>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_11</Element>
+            <Zrodlo>Pracownik:92ee52c3-3171-4c24-bd00-884ebd11d6a9</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_11</Element>
+            <Zrodlo>Pracownik:c82d45a1-477b-4427-912c-2e5d70cc23de</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_11</Element>
+            <Zrodlo>Pracownik:21d17cd9-c5fd-41bd-9314-78f1a5ca410e</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_11</Element>
+            <Zrodlo>Pracownik:b5af7068-7e0d-4c4e-8633-382a124dd6c0</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_11</Element>
+            <Zrodlo>Pracownik:38dc08cf-d169-4b52-93e5-f2905da337b1</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_11</Element>
+            <Zrodlo>Pracownik:0aa5c857-9fb4-44a5-81c8-5d8638ccfe9b</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_11</Element>
+            <Zrodlo>Pracownik:7750cdf5-5c2a-449a-a922-0dfb179b0947</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_11</Element>
+            <Zrodlo>Pracownik:6a531f15-7db8-4a83-99d6-ea295c5d65b9</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+      </ElementStrukturyOrganizacyjnej>
+      <ElementStrukturyOrganizacyjnej id="ElementStrukturyOrganizacyjnej_14" guid="63d7c652-e152-440a-a0ca-dd9604700acd">
+        <Struktura>StrukturaOrganizacyjna_2</Struktura>
+        <Nadrzedny>ElementStrukturyOrganizacyjnej_13</Nadrzedny>
+        <Definicja>DefinicjaElementuStrukturyOrganizacyjnej_5</Definicja>
+        <Kod>PracownikZAC</Kod>
+        <Nazwa>Pracownik Rejonu Zachód</Nazwa>
+        <NazwaPomocnicza />
+        <Okres>(wszystko)</Okres>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_14</Element>
+            <Zrodlo>Pracownik:0ca4d845-f771-40db-a0d6-cf466bbe7d67</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_14</Element>
+            <Zrodlo>Pracownik:101d01ee-b422-47c7-8a59-34b66063e211</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_14</Element>
+            <Zrodlo>Pracownik:e114b48e-8eee-48d5-8012-fda6b6866581</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_14</Element>
+            <Zrodlo>Pracownik:27420ee1-72a7-4006-9f7c-7a8339665a50</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_14</Element>
+            <Zrodlo>Pracownik:f763a49c-61f0-4a17-9473-e51f0f761862</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_14</Element>
+            <Zrodlo>Pracownik:3d9d0283-c572-4833-bf80-302050e5cc17</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_14</Element>
+            <Zrodlo>Pracownik:ac1a9b03-f1ca-4faf-a1c1-f2b76c3cbcac</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+    <Powiązania>
+        <PowiązanieStrukturyOrganizacyjnej>
+            <Element>ElementStrukturyOrganizacyjnej_14</Element>
+            <Zrodlo>Pracownik:4d4848c1-5721-4fdd-ae63-5854efde52cb</Zrodlo>
+        </PowiązanieStrukturyOrganizacyjnej>
+    </Powiązania>
+      </ElementStrukturyOrganizacyjnej>
+    </Elementy>
+  </StrukturaOrganizacyjna>
+  <Right>
+       <Entitle>Entitle:00000000-0015-0001-0001-000000000000</Entitle>
+       <Source>StrukturyOrg:f0a2b085-fbc3-4a06-9fd2-14aa0467c0f3</Source>
+  </Right>
+  <Right>
+       <Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+       <Source>StrukturyOrg:f0a2b085-fbc3-4a06-9fd2-14aa0467c0f3</Source>
+  </Right>
+  <Right>
+       <Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+       <Source>StrukturyOrg:f0a2b085-fbc3-4a06-9fd2-14aa0467c0f3</Source>
+  </Right>
+  <Right>
+       <Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+       <Source>StrukturyOrg:f0a2b085-fbc3-4a06-9fd2-14aa0467c0f3</Source>
+  </Right>
+</session>

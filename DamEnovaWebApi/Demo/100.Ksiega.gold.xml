@@ -1869,6 +1869,12 @@ TytulDokumentu:00000000-0013-0002-0009-000000000000</Rozszerzenie>
       <Wzor>Definicja.Symbol/DataDokumentu.Year:4/DataDokumentu.Month:2/*:4</Wzor>
     </Numeracja>
     <Rozszerzenie>RozszerzenieAktywne:True
+AutomatycznePlatnosci:False
+PrzeliczajOdPlatnosci:True
+Mpp:True
+DodatkowaKontrolka1:Płatności
+DodatkowaKontrolka2:EwidencjaVAT
+DodatkowaKontrolka3:DekretyZapisy
 DefinicjaPowstaniaObowiazkuVAT:00000000-0012-0002-0022-000000000000
 DomyslnaStawkaVAT:00000000-0001-0003-0007-000000000000</Rozszerzenie>
   </DefinicjaDokumentu>
@@ -2325,7 +2331,11 @@ DomyslnaStawkaVAT:00000000-0001-0003-0007-000000000000</Rozszerzenie>
       <PodczasEdycji>False</PodczasEdycji>
     </Numeracja>
     <WidoczneCechy />
-    <Rozszerzenie />
+    <Rozszerzenie>RozszerzenieAktywne:True
+Mpp:True
+DodatkowaKontrolka1:Płatności
+DodatkowaKontrolka2:DekretyZapisy
+    </Rozszerzenie>
     <DodatkowyNaglowekDefinicja />
     <ProceduraISO />
   </DefinicjaDokumentu>
@@ -2730,11 +2740,11 @@ TytulDokumentu:00000000-0013-0002-0010-000000000000</Rozszerzenie>
   </DefinicjaSlownika>
   <OkresObrachunkowy id="OkresObrachunkowy_1" guid="5b40a8fe-f187-40be-932d-601afb23505a" class="Soneta.Ksiega.OkresObrachunkowyKS,Soneta.Ksiega">
     <Typ>KS</Typ>
-    <Symbol>2021</Symbol>
-    <Okres>2021-01-01...2021-12-31</Okres>
+    <Symbol>2022</Symbol>
+    <Okres>2022-01-01...2022-12-31</Okres>
     <DataZamkniecia />
-    <Opis>ROK OBRACHUNKOWY 2021</Opis>
-    <DozwolonyOkres>2021-01-01...2021-12-31</DozwolonyOkres>
+    <Opis>ROK OBRACHUNKOWY 2022</Opis>
+    <DozwolonyOkres>2022-01-01...2022-12-31</DozwolonyOkres>
     <ReakcjaKsiegowa>Error</ReakcjaKsiegowa>
     <ReakcjaPodatkowa>Error</ReakcjaPodatkowa>
     <Nieaktywny>False</Nieaktywny>

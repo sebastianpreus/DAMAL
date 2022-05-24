@@ -1,0 +1,3229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session xmlns="http://www.soneta.pl/schema/business">
+
+	<!--KONTRAHENCI-->
+	<Kontrahent id="Kontrahent_2" guid="ba66f540-1660-11d7-9ab0-000795c951c8">
+		<Kod>Abc</Kod>
+		<Nazwa>ABC Sp. z o.o</Nazwa>
+		<NIP>111-11-11-128</NIP>
+		<EuVAT>1111111128</EuVAT>
+		<KRS />
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0002-000000000000</SposobZaplaty>
+		<Termin>7</Termin>
+		<TerminPlanowany>0</TerminPlanowany>
+		<LimitKredytu>1,000.00 PLN</LimitKredytu>
+		<KontrolaDni>7</KontrolaDni>
+		<KontrolaKwota>1,500.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+		<RodzajPodmiotuZakup>Krajowy</RodzajPodmiotuZakup>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<FormaPrawna>00000000-0009-0013-0001-000000000000</FormaPrawna>
+		<Uwagi />
+		<VATLiczonyOd>OdNetto</VATLiczonyOd>
+		<Rabat>0.00%</Rabat>
+		<RabatTowaru>10.00%</RabatTowaru>
+		<CenaTowaru />
+		<EFaktura>Brak</EFaktura>
+		<EFakturaOkres>(pusty)</EFakturaOkres>
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<CenaOdbiorcy>False</CenaOdbiorcy>
+		<Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+		<WyjatkiDlaPO>Brak</WyjatkiDlaPO>
+		<Komunikat />
+		<KomunikatCRM />
+		<RodzajDokumentuKaucji>Docelowy</RodzajDokumentuKaucji>
+		<RodzajPlatnosciKaucji>Naliczaj</RodzajPlatnosciKaucji>
+		<TerminRozliczeniaKaucji>60</TerminRozliczeniaKaucji>
+		<TypLimituKredytowego>Kwota</TypLimituKredytowego>
+		<TypPrzeterminowania>Kwota</TypPrzeterminowania>
+		<OddzialFirmy />
+		<KorespondencjaOpis />
+		<KorespondencjaNazwaFirmy />
+		<AktualizacjaPrzyImporcie>False</AktualizacjaPrzyImporcie>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>31</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist />
+		</OdsKarne>
+		<REGON />
+		<PESEL />
+		<NieWindykowac>False</NieWindykowac>
+		<DefinicjaSprawyWindykacyjnej />
+		<Kategorie />
+		<Branze />
+		<Adresy>
+			<AdresExt id="AdresExt_65">
+				<Host>Kontrahent_2</Host>
+				<Typ>Główny</Typ>
+				<Adres>
+					<KodPocztowy>30140</KodPocztowy>
+					<ZagranicznyKodPocztowy />
+					<Poczta>Kraków</Poczta>
+					<Miejscowosc>Kraków</Miejscowosc>
+					<Gmina>Kraków</Gmina>
+					<Powiat>Kraków</Powiat>
+					<Wojewodztwo>małopolskie</Wojewodztwo>
+					<Kraj />
+					<KodKraju />
+					<Ulica>Nowa</Ulica>
+					<NrDomu>1</NrDomu>
+					<NrLokalu />
+					<NietypowaLokalizacja />
+					<Telefon>2680980</Telefon>
+					<Faks>2680980</Faks>
+				</Adres>
+				<IdentyfikacjaAdresu>
+					<GLN />
+				</IdentyfikacjaAdresu>
+			</AdresExt>
+		</Adresy>
+		<AdresyWWW />
+		<Kontakty>
+			<DaneKontaktowe id="DaneKontaktowe_18">
+				<Rodzaj>00000000-0001-0011-0001-000000000000</Rodzaj>
+				<Kontakt>2680980</Kontakt>
+				<Opis />
+				<Domyslny>True</Domyslny>
+				<Host>Kontrahent_2</Host>
+				<AdresExt>AdresExt_65</AdresExt>
+			</DaneKontaktowe>
+			<DaneKontaktowe id="DaneKontaktowe_19">
+				<Rodzaj>00000000-0001-0011-0004-000000000000</Rodzaj>
+				<Kontakt>2680980</Kontakt>
+				<Opis />
+				<Domyslny>True</Domyslny>
+				<Host>Kontrahent_2</Host>
+				<AdresExt>AdresExt_65</AdresExt>
+			</DaneKontaktowe>
+		</Kontakty>
+		<PotwierdzeniaGIODO />
+		<KodyKreskowe />
+		<Lokalizacje />
+		<TowaryUlubione />
+	</Kontrahent>
+	<Kontrahent id="Kontrahent_3" guid="ba66f548-1660-11d7-9ab0-000795c951c8">
+		<Kod>Zefir</Kod>
+		<Nazwa>ZEFIR J.Nowak i E.Nowak</Nazwa>
+		<NIP>222-22-22-222</NIP>
+		<EuVAT>2222222222</EuVAT>
+		<KRS />
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0002-000000000000</SposobZaplaty>
+		<Termin>7</Termin>
+		<TerminPlanowany>0</TerminPlanowany>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+		<RodzajPodmiotuZakup>Krajowy</RodzajPodmiotuZakup>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<FormaPrawna>00000000-0009-0013-0001-000000000000</FormaPrawna>
+		<Uwagi />
+		<VATLiczonyOd>OdNetto</VATLiczonyOd>
+		<Rabat>0.00%</Rabat>
+		<RabatTowaru>0.00%</RabatTowaru>
+		<CenaTowaru />
+		<EFaktura>Brak</EFaktura>
+		<EFakturaOkres>(pusty)</EFakturaOkres>
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<CenaOdbiorcy>False</CenaOdbiorcy>
+		<Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+		<WyjatkiDlaPO>Brak</WyjatkiDlaPO>
+		<Komunikat />
+		<KomunikatCRM />
+		<RodzajDokumentuKaucji>Docelowy</RodzajDokumentuKaucji>
+		<RodzajPlatnosciKaucji>Naliczaj</RodzajPlatnosciKaucji>
+		<TerminRozliczeniaKaucji>60</TerminRozliczeniaKaucji>
+		<TypLimituKredytowego>Kwota</TypLimituKredytowego>
+		<TypPrzeterminowania>Kwota</TypPrzeterminowania>
+		<OddzialFirmy />
+		<KorespondencjaOpis />
+		<KorespondencjaNazwaFirmy />
+		<AktualizacjaPrzyImporcie>False</AktualizacjaPrzyImporcie>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>31</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist />
+		</OdsKarne>
+		<REGON />
+		<PESEL />
+		<NieWindykowac>False</NieWindykowac>
+		<DefinicjaSprawyWindykacyjnej />
+		<Kategorie />
+		<Branze />
+		<Adresy>
+			<AdresExt id="AdresExt_103">
+				<Host>Kontrahent_3</Host>
+				<Typ>Główny</Typ>
+				<Adres>
+					<KodPocztowy>30696</KodPocztowy>
+					<ZagranicznyKodPocztowy />
+					<Poczta>Kraków</Poczta>
+					<Miejscowosc>Kraków</Miejscowosc>
+					<Gmina>Kraków</Gmina>
+					<Powiat>Kraków</Powiat>
+					<Wojewodztwo>małopolskie</Wojewodztwo>
+					<Kraj>Polska</Kraj>
+					<KodKraju />
+					<Ulica>Podzamcze</Ulica>
+					<NrDomu>29</NrDomu>
+					<NrLokalu>59</NrLokalu>
+					<NietypowaLokalizacja />
+					<Telefon>2690033</Telefon>
+					<Faks>2690033</Faks>
+				</Adres>
+				<IdentyfikacjaAdresu>
+					<GLN />
+				</IdentyfikacjaAdresu>
+			</AdresExt>
+		</Adresy>
+		<AdresyWWW />
+		<Kontakty>
+			<DaneKontaktowe id="DaneKontaktowe_22">
+				<Rodzaj>00000000-0001-0011-0001-000000000000</Rodzaj>
+				<Kontakt>2690033</Kontakt>
+				<Opis />
+				<Domyslny>True</Domyslny>
+				<Host>Kontrahent_3</Host>
+				<AdresExt>AdresExt_103</AdresExt>
+			</DaneKontaktowe>
+			<DaneKontaktowe id="DaneKontaktowe_23">
+				<Rodzaj>00000000-0001-0011-0004-000000000000</Rodzaj>
+				<Kontakt>2690033</Kontakt>
+				<Opis />
+				<Domyslny>True</Domyslny>
+				<Host>Kontrahent_3</Host>
+				<AdresExt>AdresExt_103</AdresExt>
+			</DaneKontaktowe>
+		</Kontakty>
+		<PotwierdzeniaGIODO />
+		<KodyKreskowe />
+		<Lokalizacje />
+		<TowaryUlubione />
+	</Kontrahent>
+	<Kontrahent id="Kontrahent_4" guid="ba66f54b-1660-11d7-9ab0-000795c951c8">
+		<Kod>Rolmap</Kod>
+		<Nazwa>ROLMAP S.A</Nazwa>
+		<NIP>333-33-33-333</NIP>
+		<EuVAT>3333333333</EuVAT>
+		<KRS />
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0001-000000000000</SposobZaplaty>
+		<Termin>0</Termin>
+		<TerminPlanowany>0</TerminPlanowany>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+		<RodzajPodmiotuZakup>Krajowy</RodzajPodmiotuZakup>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<FormaPrawna>00000000-0009-0013-0001-000000000000</FormaPrawna>
+		<Uwagi />
+		<VATLiczonyOd>OdNetto</VATLiczonyOd>
+		<Rabat>0.00%</Rabat>
+		<RabatTowaru>12.00%</RabatTowaru>
+		<CenaTowaru />
+		<EFaktura>Brak</EFaktura>
+		<EFakturaOkres>(pusty)</EFakturaOkres>
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<CenaOdbiorcy>False</CenaOdbiorcy>
+		<Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+		<WyjatkiDlaPO>Brak</WyjatkiDlaPO>
+		<Komunikat />
+		<KomunikatCRM />
+		<RodzajDokumentuKaucji>Docelowy</RodzajDokumentuKaucji>
+		<RodzajPlatnosciKaucji>Naliczaj</RodzajPlatnosciKaucji>
+		<TerminRozliczeniaKaucji>60</TerminRozliczeniaKaucji>
+		<TypLimituKredytowego>Kwota</TypLimituKredytowego>
+		<TypPrzeterminowania>Kwota</TypPrzeterminowania>
+		<OddzialFirmy />
+		<KorespondencjaOpis />
+		<KorespondencjaNazwaFirmy />
+		<AktualizacjaPrzyImporcie>False</AktualizacjaPrzyImporcie>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>31</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist />
+		</OdsKarne>
+		<REGON />
+		<PESEL />
+		<NieWindykowac>False</NieWindykowac>
+		<DefinicjaSprawyWindykacyjnej />
+		<Kategorie />
+		<Branze />
+		<Adresy>
+			<AdresExt id="AdresExt_9">
+				<Host>Kontrahent_4</Host>
+				<Typ>Główny</Typ>
+				<Adres>
+					<KodPocztowy>4509</KodPocztowy>
+					<ZagranicznyKodPocztowy />
+					<Poczta>Tarnobrzeg</Poczta>
+					<Miejscowosc>Tarnobrzeg</Miejscowosc>
+					<Gmina>Tarnobrzeg</Gmina>
+					<Powiat>Tarnów</Powiat>
+					<Wojewodztwo>małopolskie</Wojewodztwo>
+					<Kraj>Polska</Kraj>
+					<KodKraju />
+					<Ulica>Toruńska</Ulica>
+					<NrDomu>45</NrDomu>
+					<NrLokalu />
+					<NietypowaLokalizacja />
+					<Telefon>7654354</Telefon>
+					<Faks>7654354</Faks>
+				</Adres>
+				<IdentyfikacjaAdresu>
+					<GLN />
+				</IdentyfikacjaAdresu>
+			</AdresExt>
+		</Adresy>
+		<AdresyWWW />
+		<Kontakty>
+			<DaneKontaktowe id="DaneKontaktowe_20">
+				<Rodzaj>00000000-0001-0011-0001-000000000000</Rodzaj>
+				<Kontakt>7654354</Kontakt>
+				<Opis />
+				<Domyslny>True</Domyslny>
+				<Host>Kontrahent_4</Host>
+				<AdresExt>AdresExt_9</AdresExt>
+			</DaneKontaktowe>
+		</Kontakty>
+		<PotwierdzeniaGIODO />
+		<KodyKreskowe />
+		<Lokalizacje />
+		<TowaryUlubione />
+	</Kontrahent>
+	<Kontrahent id="Kontrahent_5" guid="c339eb98-bb5f-4085-8546-68338de747e9">
+		<Kod>Aspen</Kod>
+		<Nazwa>ASPEN GmbH</Nazwa>
+		<NIP />
+		<EuVAT>DE3334455666</EuVAT>
+		<KRS />
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0002-000000000000</SposobZaplaty>
+		<Termin>7</Termin>
+		<TerminPlanowany>0</TerminPlanowany>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Unijny</RodzajPodmiotu>
+		<RodzajPodmiotuZakup>Unijny</RodzajPodmiotuZakup>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<FormaPrawna>00000000-0009-0013-0001-000000000000</FormaPrawna>
+		<Uwagi />
+		<VATLiczonyOd>OdNetto</VATLiczonyOd>
+		<Rabat>0.00%</Rabat>
+		<RabatTowaru>0.00%</RabatTowaru>
+		<CenaTowaru />
+		<EFaktura>Brak</EFaktura>
+		<EFakturaOkres>(pusty)</EFakturaOkres>
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<CenaOdbiorcy>False</CenaOdbiorcy>
+		<Waluta>00000000-0004-0001-0002-000000000000</Waluta>
+		<WyjatkiDlaPO>Brak</WyjatkiDlaPO>
+		<Komunikat />
+		<KomunikatCRM />
+		<RodzajDokumentuKaucji>Docelowy</RodzajDokumentuKaucji>
+		<RodzajPlatnosciKaucji>Naliczaj</RodzajPlatnosciKaucji>
+		<TerminRozliczeniaKaucji>60</TerminRozliczeniaKaucji>
+		<TypLimituKredytowego>Kwota</TypLimituKredytowego>
+		<TypPrzeterminowania>Kwota</TypPrzeterminowania>
+		<OddzialFirmy />
+		<KorespondencjaOpis />
+		<KorespondencjaNazwaFirmy />
+		<AktualizacjaPrzyImporcie>False</AktualizacjaPrzyImporcie>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>31</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist />
+		</OdsKarne>
+		<REGON />
+		<PESEL />
+		<NieWindykowac>False</NieWindykowac>
+		<DefinicjaSprawyWindykacyjnej />
+		<Kategorie />
+		<Branze />
+		<Adresy>
+			<AdresExt id="AdresExt_67">
+				<Host>Kontrahent_5</Host>
+				<Typ>Główny</Typ>
+				<Adres>
+					<KodPocztowy>0</KodPocztowy>
+					<ZagranicznyKodPocztowy />
+					<Poczta>45127 Essen</Poczta>
+					<Miejscowosc>45127 Essen</Miejscowosc>
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj>Niemcy</Kraj>
+					<KodKraju>DE</KodKraju>
+					<Ulica>Berliner Strasse</Ulica>
+					<NrDomu>3</NrDomu>
+					<NrLokalu />
+					<NietypowaLokalizacja />
+					<Telefon />
+					<Faks />
+				</Adres>
+				<IdentyfikacjaAdresu>
+					<GLN />
+				</IdentyfikacjaAdresu>
+			</AdresExt>
+		</Adresy>
+		<AdresyWWW />
+		<Kontakty />
+		<PotwierdzeniaGIODO />
+		<KodyKreskowe />
+		<Lokalizacje />
+		<TowaryUlubione />
+	</Kontrahent>
+	<Kontrahent id="Kontrahent_6" guid="548a6c62-9f37-46f7-856f-78b5297b3cc4">
+		<Kod>Drynda</Kod>
+		<Nazwa>Warsztat Samochodowy DRYNDA
+Wiesław Goluch</Nazwa>
+		<NIP>234-23-44-548</NIP>
+		<EuVAT>2342344548</EuVAT>
+		<KRS />
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0001-000000000000</SposobZaplaty>
+		<Termin>0</Termin>
+		<TerminPlanowany>0</TerminPlanowany>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+		<RodzajPodmiotuZakup>Krajowy</RodzajPodmiotuZakup>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<FormaPrawna>00000000-0009-0013-0001-000000000000</FormaPrawna>
+		<Uwagi />
+		<VATLiczonyOd>OdNetto</VATLiczonyOd>
+		<Rabat>0.00%</Rabat>
+		<RabatTowaru>0.00%</RabatTowaru>
+		<CenaTowaru />
+		<EFaktura>Brak</EFaktura>
+		<EFakturaOkres>(pusty)</EFakturaOkres>
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<CenaOdbiorcy>False</CenaOdbiorcy>
+		<Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+		<WyjatkiDlaPO>Brak</WyjatkiDlaPO>
+		<Komunikat />
+		<KomunikatCRM />
+		<RodzajDokumentuKaucji>Docelowy</RodzajDokumentuKaucji>
+		<RodzajPlatnosciKaucji>Naliczaj</RodzajPlatnosciKaucji>
+		<TerminRozliczeniaKaucji>60</TerminRozliczeniaKaucji>
+		<TypLimituKredytowego>Kwota</TypLimituKredytowego>
+		<TypPrzeterminowania>Kwota</TypPrzeterminowania>
+		<OddzialFirmy />
+		<KorespondencjaOpis />
+		<KorespondencjaNazwaFirmy />
+		<AktualizacjaPrzyImporcie>False</AktualizacjaPrzyImporcie>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>31</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist />
+		</OdsKarne>
+		<REGON />
+		<PESEL />
+		<NieWindykowac>False</NieWindykowac>
+		<DefinicjaSprawyWindykacyjnej />
+		<Kategorie />
+		<Branze />
+		<Adresy>
+			<AdresExt id="AdresExt_69">
+				<Host>Kontrahent_6</Host>
+				<Typ>Główny</Typ>
+				<Adres>
+					<KodPocztowy>34962</KodPocztowy>
+					<ZagranicznyKodPocztowy />
+					<Poczta>Jarocin</Poczta>
+					<Miejscowosc>Jarocin</Miejscowosc>
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<KodKraju />
+					<Ulica>Krakowska</Ulica>
+					<NrDomu>54</NrDomu>
+					<NrLokalu />
+					<NietypowaLokalizacja />
+					<Telefon />
+					<Faks />
+				</Adres>
+				<IdentyfikacjaAdresu>
+					<GLN />
+				</IdentyfikacjaAdresu>
+			</AdresExt>
+		</Adresy>
+		<AdresyWWW />
+		<Kontakty />
+		<PotwierdzeniaGIODO />
+		<KodyKreskowe />
+		<Lokalizacje />
+		<TowaryUlubione />
+	</Kontrahent>
+	<Kontrahent id="Kontrahent_7" guid="acb28c22-e360-438b-8d7e-c69ebabe8a22">
+		<Kod>EnergoEko</Kod>
+		<Nazwa>EnergoEko - Fabryka Energii Ekologicznej</Nazwa>
+		<NIP>765-42-92-350</NIP>
+		<EuVAT>7654292350</EuVAT>
+		<KRS />
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0001-000000000000</SposobZaplaty>
+		<Termin>0</Termin>
+		<TerminPlanowany>0</TerminPlanowany>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+		<RodzajPodmiotuZakup>Krajowy</RodzajPodmiotuZakup>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<FormaPrawna>00000000-0009-0013-0001-000000000000</FormaPrawna>
+		<Uwagi />
+		<VATLiczonyOd>OdNetto</VATLiczonyOd>
+		<Rabat>0.00%</Rabat>
+		<RabatTowaru>0.00%</RabatTowaru>
+		<CenaTowaru />
+		<EFaktura>Brak</EFaktura>
+		<EFakturaOkres>(pusty)</EFakturaOkres>
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<CenaOdbiorcy>False</CenaOdbiorcy>
+		<Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+		<WyjatkiDlaPO>Brak</WyjatkiDlaPO>
+		<Komunikat />
+		<KomunikatCRM />
+		<RodzajDokumentuKaucji>Docelowy</RodzajDokumentuKaucji>
+		<RodzajPlatnosciKaucji>Naliczaj</RodzajPlatnosciKaucji>
+		<TerminRozliczeniaKaucji>60</TerminRozliczeniaKaucji>
+		<TypLimituKredytowego>Kwota</TypLimituKredytowego>
+		<TypPrzeterminowania>Kwota</TypPrzeterminowania>
+		<OddzialFirmy />
+		<KorespondencjaOpis />
+		<KorespondencjaNazwaFirmy />
+		<AktualizacjaPrzyImporcie>False</AktualizacjaPrzyImporcie>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>31</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist />
+		</OdsKarne>
+		<REGON />
+		<PESEL />
+		<NieWindykowac>False</NieWindykowac>
+		<DefinicjaSprawyWindykacyjnej />
+		<Kategorie />
+		<Branze />
+		<Adresy>
+			<AdresExt id="AdresExt_71">
+				<Host>Kontrahent_7</Host>
+				<Typ>Główny</Typ>
+				<Adres>
+					<KodPocztowy>31528</KodPocztowy>
+					<ZagranicznyKodPocztowy />
+					<Poczta>Dzierżoniów</Poczta>
+					<Miejscowosc>Dzierżoniów</Miejscowosc>
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<KodKraju />
+					<Ulica>Przemysłowa</Ulica>
+					<NrDomu>3</NrDomu>
+					<NrLokalu />
+					<NietypowaLokalizacja />
+					<Telefon />
+					<Faks />
+				</Adres>
+				<IdentyfikacjaAdresu>
+					<GLN />
+				</IdentyfikacjaAdresu>
+			</AdresExt>
+		</Adresy>
+		<AdresyWWW />
+		<Kontakty />
+		<PotwierdzeniaGIODO />
+		<KodyKreskowe />
+		<Lokalizacje />
+		<TowaryUlubione />
+	</Kontrahent>
+	<Kontrahent id="Kontrahent_8" guid="440e57df-c21b-46ec-b6c9-943852211019">
+		<Kod>Fiszbin</Kod>
+		<Nazwa>FISZBIN - Sklep zoologiczny
+Joanna Mazowiecka</Nazwa>
+		<NIP>654-78-76-860</NIP>
+		<EuVAT>6547876860</EuVAT>
+		<KRS />
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0001-000000000000</SposobZaplaty>
+		<Termin>0</Termin>
+		<TerminPlanowany>0</TerminPlanowany>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+		<RodzajPodmiotuZakup>Krajowy</RodzajPodmiotuZakup>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<FormaPrawna>00000000-0009-0013-0001-000000000000</FormaPrawna>
+		<Uwagi />
+		<VATLiczonyOd>OdNetto</VATLiczonyOd>
+		<Rabat>0.00%</Rabat>
+		<RabatTowaru>0.00%</RabatTowaru>
+		<CenaTowaru />
+		<EFaktura>Brak</EFaktura>
+		<EFakturaOkres>(pusty)</EFakturaOkres>
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<CenaOdbiorcy>False</CenaOdbiorcy>
+		<Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+		<WyjatkiDlaPO>Brak</WyjatkiDlaPO>
+		<Komunikat />
+		<KomunikatCRM />
+		<RodzajDokumentuKaucji>Docelowy</RodzajDokumentuKaucji>
+		<RodzajPlatnosciKaucji>Naliczaj</RodzajPlatnosciKaucji>
+		<TerminRozliczeniaKaucji>60</TerminRozliczeniaKaucji>
+		<TypLimituKredytowego>Kwota</TypLimituKredytowego>
+		<TypPrzeterminowania>Kwota</TypPrzeterminowania>
+		<OddzialFirmy />
+		<KorespondencjaOpis />
+		<KorespondencjaNazwaFirmy />
+		<AktualizacjaPrzyImporcie>False</AktualizacjaPrzyImporcie>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>31</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist />
+		</OdsKarne>
+		<REGON />
+		<PESEL />
+		<NieWindykowac>False</NieWindykowac>
+		<DefinicjaSprawyWindykacyjnej />
+		<Kategorie />
+		<Branze />
+		<Adresy>
+			<AdresExt id="AdresExt_73">
+				<Host>Kontrahent_8</Host>
+				<Typ>Główny</Typ>
+				<Adres>
+					<KodPocztowy>76987</KodPocztowy>
+					<ZagranicznyKodPocztowy />
+					<Poczta>Szczecin</Poczta>
+					<Miejscowosc>Szczecin</Miejscowosc>
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<KodKraju />
+					<Ulica>Legionów Polskich</Ulica>
+					<NrDomu>67/32</NrDomu>
+					<NrLokalu />
+					<NietypowaLokalizacja />
+					<Telefon />
+					<Faks />
+				</Adres>
+				<IdentyfikacjaAdresu>
+					<GLN />
+				</IdentyfikacjaAdresu>
+			</AdresExt>
+		</Adresy>
+		<AdresyWWW />
+		<Kontakty />
+		<PotwierdzeniaGIODO />
+		<KodyKreskowe />
+		<Lokalizacje />
+		<TowaryUlubione />
+	</Kontrahent>
+	<Kontrahent id="Kontrahent_9" guid="2054c907-d643-4d95-8f8a-28f6b1cb11b4">
+		<Kod>Full Garden</Kod>
+		<Nazwa>Full Garden - Wszystko do ogrodu
+Jacek Cłapek, Witold Generalny</Nazwa>
+		<NIP>456-23-46-591</NIP>
+		<EuVAT>4562346591</EuVAT>
+		<KRS />
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0001-000000000000</SposobZaplaty>
+		<Termin>0</Termin>
+		<TerminPlanowany>0</TerminPlanowany>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+		<RodzajPodmiotuZakup>Krajowy</RodzajPodmiotuZakup>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<FormaPrawna>00000000-0009-0013-0001-000000000000</FormaPrawna>
+		<Uwagi />
+		<VATLiczonyOd>OdNetto</VATLiczonyOd>
+		<Rabat>0.00%</Rabat>
+		<RabatTowaru>0.00%</RabatTowaru>
+		<CenaTowaru />
+		<EFaktura>Brak</EFaktura>
+		<EFakturaOkres>(pusty)</EFakturaOkres>
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<CenaOdbiorcy>False</CenaOdbiorcy>
+		<Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+		<WyjatkiDlaPO>Brak</WyjatkiDlaPO>
+		<Komunikat />
+		<KomunikatCRM />
+		<RodzajDokumentuKaucji>Docelowy</RodzajDokumentuKaucji>
+		<RodzajPlatnosciKaucji>Naliczaj</RodzajPlatnosciKaucji>
+		<TerminRozliczeniaKaucji>60</TerminRozliczeniaKaucji>
+		<TypLimituKredytowego>Kwota</TypLimituKredytowego>
+		<TypPrzeterminowania>Kwota</TypPrzeterminowania>
+		<OddzialFirmy />
+		<KorespondencjaOpis />
+		<KorespondencjaNazwaFirmy />
+		<AktualizacjaPrzyImporcie>False</AktualizacjaPrzyImporcie>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>31</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist />
+		</OdsKarne>
+		<REGON />
+		<PESEL />
+		<NieWindykowac>False</NieWindykowac>
+		<DefinicjaSprawyWindykacyjnej />
+		<Kategorie />
+		<Branze />
+		<Adresy>
+			<AdresExt id="AdresExt_75">
+				<Host>Kontrahent_9</Host>
+				<Typ>Główny</Typ>
+				<Adres>
+					<KodPocztowy>41865</KodPocztowy>
+					<ZagranicznyKodPocztowy />
+					<Poczta>Bydgoszcz</Poczta>
+					<Miejscowosc>Bydgoszcz</Miejscowosc>
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<KodKraju />
+					<Ulica>Mostowa</Ulica>
+					<NrDomu>7</NrDomu>
+					<NrLokalu />
+					<NietypowaLokalizacja />
+					<Telefon />
+					<Faks />
+				</Adres>
+				<IdentyfikacjaAdresu>
+					<GLN />
+				</IdentyfikacjaAdresu>
+			</AdresExt>
+		</Adresy>
+		<AdresyWWW />
+		<Kontakty />
+		<PotwierdzeniaGIODO />
+		<KodyKreskowe />
+		<Lokalizacje />
+		<TowaryUlubione />
+	</Kontrahent>
+	<Kontrahent id="Kontrahent_10" guid="ae655abe-4a7d-408e-baa4-44990dcadde9">
+		<Kod>Gawron</Kod>
+		<Nazwa>Sklep spożywczy - Łukasz Gawron</Nazwa>
+		<NIP>876-09-45-064</NIP>
+		<EuVAT>8760945064</EuVAT>
+		<KRS />
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0001-000000000000</SposobZaplaty>
+		<Termin>0</Termin>
+		<TerminPlanowany>0</TerminPlanowany>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+		<RodzajPodmiotuZakup>Krajowy</RodzajPodmiotuZakup>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<FormaPrawna>00000000-0009-0013-0001-000000000000</FormaPrawna>
+		<Uwagi />
+		<VATLiczonyOd>OdNetto</VATLiczonyOd>
+		<Rabat>0.00%</Rabat>
+		<RabatTowaru>0.00%</RabatTowaru>
+		<CenaTowaru />
+		<EFaktura>Brak</EFaktura>
+		<EFakturaOkres>(pusty)</EFakturaOkres>
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<CenaOdbiorcy>False</CenaOdbiorcy>
+		<Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+		<WyjatkiDlaPO>Brak</WyjatkiDlaPO>
+		<Komunikat />
+		<KomunikatCRM />
+		<RodzajDokumentuKaucji>Docelowy</RodzajDokumentuKaucji>
+		<RodzajPlatnosciKaucji>Naliczaj</RodzajPlatnosciKaucji>
+		<TerminRozliczeniaKaucji>60</TerminRozliczeniaKaucji>
+		<TypLimituKredytowego>Kwota</TypLimituKredytowego>
+		<TypPrzeterminowania>Kwota</TypPrzeterminowania>
+		<OddzialFirmy />
+		<KorespondencjaOpis />
+		<KorespondencjaNazwaFirmy />
+		<AktualizacjaPrzyImporcie>False</AktualizacjaPrzyImporcie>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>31</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist />
+		</OdsKarne>
+		<REGON />
+		<PESEL />
+		<NieWindykowac>False</NieWindykowac>
+		<DefinicjaSprawyWindykacyjnej />
+		<Kategorie />
+		<Branze />
+		<Adresy>
+			<AdresExt id="AdresExt_77">
+				<Host>Kontrahent_10</Host>
+				<Typ>Główny</Typ>
+				<Adres>
+					<KodPocztowy>0</KodPocztowy>
+					<ZagranicznyKodPocztowy />
+					<Poczta>Przybynów</Poczta>
+					<Miejscowosc>Przybynów</Miejscowosc>
+					<Gmina>Sokolniki</Gmina>
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<KodKraju />
+					<Ulica>Przybynów</Ulica>
+					<NrDomu>123</NrDomu>
+					<NrLokalu />
+					<NietypowaLokalizacja />
+					<Telefon />
+					<Faks />
+				</Adres>
+				<IdentyfikacjaAdresu>
+					<GLN />
+				</IdentyfikacjaAdresu>
+			</AdresExt>
+		</Adresy>
+		<AdresyWWW />
+		<Kontakty />
+		<PotwierdzeniaGIODO />
+		<KodyKreskowe />
+		<Lokalizacje />
+		<TowaryUlubione />
+	</Kontrahent>
+	<Kontrahent id="Kontrahent_11" guid="34482cd4-bf76-4bbb-a406-edae4132d733">
+		<Kod>Hiacynt</Kod>
+		<Nazwa>Kwiaciarnia HIACYNT
+Teresa Smuga</Nazwa>
+		<NIP>298-09-76-514</NIP>
+		<EuVAT>2980976514</EuVAT>
+		<KRS />
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0001-000000000000</SposobZaplaty>
+		<Termin>0</Termin>
+		<TerminPlanowany>0</TerminPlanowany>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+		<RodzajPodmiotuZakup>Krajowy</RodzajPodmiotuZakup>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<FormaPrawna>00000000-0009-0013-0001-000000000000</FormaPrawna>
+		<Uwagi />
+		<VATLiczonyOd>OdNetto</VATLiczonyOd>
+		<Rabat>0.00%</Rabat>
+		<RabatTowaru>0.00%</RabatTowaru>
+		<CenaTowaru />
+		<EFaktura>Brak</EFaktura>
+		<EFakturaOkres>(pusty)</EFakturaOkres>
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<CenaOdbiorcy>False</CenaOdbiorcy>
+		<Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+		<WyjatkiDlaPO>Brak</WyjatkiDlaPO>
+		<Komunikat />
+		<KomunikatCRM />
+		<RodzajDokumentuKaucji>Docelowy</RodzajDokumentuKaucji>
+		<RodzajPlatnosciKaucji>Naliczaj</RodzajPlatnosciKaucji>
+		<TerminRozliczeniaKaucji>60</TerminRozliczeniaKaucji>
+		<TypLimituKredytowego>Kwota</TypLimituKredytowego>
+		<TypPrzeterminowania>Kwota</TypPrzeterminowania>
+		<OddzialFirmy />
+		<KorespondencjaOpis />
+		<KorespondencjaNazwaFirmy />
+		<AktualizacjaPrzyImporcie>False</AktualizacjaPrzyImporcie>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>31</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist />
+		</OdsKarne>
+		<REGON />
+		<PESEL />
+		<NieWindykowac>False</NieWindykowac>
+		<DefinicjaSprawyWindykacyjnej />
+		<Kategorie />
+		<Branze />
+		<Adresy>
+			<AdresExt id="AdresExt_11">
+				<Host>Kontrahent_11</Host>
+				<Typ>Główny</Typ>
+				<Adres>
+					<KodPocztowy>13543</KodPocztowy>
+					<ZagranicznyKodPocztowy />
+					<Poczta>Łódź</Poczta>
+					<Miejscowosc>Łódź</Miejscowosc>
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<KodKraju />
+					<Ulica>Jesienna</Ulica>
+					<NrDomu>34</NrDomu>
+					<NrLokalu>2</NrLokalu>
+					<NietypowaLokalizacja />
+					<Telefon />
+					<Faks />
+				</Adres>
+				<IdentyfikacjaAdresu>
+					<GLN />
+				</IdentyfikacjaAdresu>
+			</AdresExt>
+		</Adresy>
+		<AdresyWWW />
+		<Kontakty />
+		<PotwierdzeniaGIODO />
+		<KodyKreskowe />
+		<Lokalizacje />
+		<TowaryUlubione />
+	</Kontrahent>
+	<Kontrahent id="Kontrahent_12" guid="55cf7c70-1ecd-4f7d-8219-fa0c0d615841">
+		<Kod>Klon</Kod>
+		<Nazwa>Firma poligraficzna KLON - usługi kserograficzne
+Jerzy Sklonowany</Nazwa>
+		<NIP>123-45-55-236</NIP>
+		<EuVAT>1234565236</EuVAT>
+		<KRS />
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0001-000000000000</SposobZaplaty>
+		<Termin>0</Termin>
+		<TerminPlanowany>0</TerminPlanowany>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+		<RodzajPodmiotuZakup>Krajowy</RodzajPodmiotuZakup>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<FormaPrawna>00000000-0009-0013-0001-000000000000</FormaPrawna>
+		<Uwagi />
+		<VATLiczonyOd>OdNetto</VATLiczonyOd>
+		<Rabat>0.00%</Rabat>
+		<RabatTowaru>0.00%</RabatTowaru>
+		<CenaTowaru />
+		<EFaktura>Brak</EFaktura>
+		<EFakturaOkres>(pusty)</EFakturaOkres>
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<CenaOdbiorcy>False</CenaOdbiorcy>
+		<Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+		<WyjatkiDlaPO>Brak</WyjatkiDlaPO>
+		<Komunikat />
+		<KomunikatCRM />
+		<RodzajDokumentuKaucji>Docelowy</RodzajDokumentuKaucji>
+		<RodzajPlatnosciKaucji>Naliczaj</RodzajPlatnosciKaucji>
+		<TerminRozliczeniaKaucji>60</TerminRozliczeniaKaucji>
+		<TypLimituKredytowego>Kwota</TypLimituKredytowego>
+		<TypPrzeterminowania>Kwota</TypPrzeterminowania>
+		<OddzialFirmy />
+		<KorespondencjaOpis />
+		<KorespondencjaNazwaFirmy />
+		<AktualizacjaPrzyImporcie>False</AktualizacjaPrzyImporcie>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>31</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist />
+		</OdsKarne>
+		<REGON />
+		<PESEL />
+		<NieWindykowac>False</NieWindykowac>
+		<DefinicjaSprawyWindykacyjnej />
+		<Kategorie />
+		<Branze />
+		<Adresy>
+			<AdresExt id="AdresExt_81">
+				<Host>Kontrahent_12</Host>
+				<Typ>Główny</Typ>
+				<Adres>
+					<KodPocztowy>56209</KodPocztowy>
+					<ZagranicznyKodPocztowy />
+					<Poczta>Radom</Poczta>
+					<Miejscowosc>Radom</Miejscowosc>
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<KodKraju />
+					<Ulica>3-go Maja</Ulica>
+					<NrDomu>96</NrDomu>
+					<NrLokalu>2</NrLokalu>
+					<NietypowaLokalizacja />
+					<Telefon />
+					<Faks />
+				</Adres>
+				<IdentyfikacjaAdresu>
+					<GLN />
+				</IdentyfikacjaAdresu>
+			</AdresExt>
+		</Adresy>
+		<AdresyWWW />
+		<Kontakty />
+		<PotwierdzeniaGIODO />
+		<KodyKreskowe />
+		<Lokalizacje />
+		<TowaryUlubione />
+	</Kontrahent>
+	<Kontrahent id="Kontrahent_13" guid="331f52c6-7918-40c2-8e0d-0cc238a1a12c">
+		<Kod>Kobra</Kod>
+		<Nazwa>Agencja reklamowa KOBRA
+Hektor Janiak i wspólnicy</Nazwa>
+		<NIP>345-34-67-125</NIP>
+		<EuVAT>3453467125</EuVAT>
+		<KRS />
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0001-000000000000</SposobZaplaty>
+		<Termin>0</Termin>
+		<TerminPlanowany>0</TerminPlanowany>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+		<RodzajPodmiotuZakup>Krajowy</RodzajPodmiotuZakup>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<FormaPrawna>00000000-0009-0013-0001-000000000000</FormaPrawna>
+		<Uwagi />
+		<VATLiczonyOd>OdNetto</VATLiczonyOd>
+		<Rabat>0.00%</Rabat>
+		<RabatTowaru>0.00%</RabatTowaru>
+		<CenaTowaru />
+		<EFaktura>Brak</EFaktura>
+		<EFakturaOkres>(pusty)</EFakturaOkres>
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<CenaOdbiorcy>False</CenaOdbiorcy>
+		<Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+		<WyjatkiDlaPO>Brak</WyjatkiDlaPO>
+		<Komunikat />
+		<KomunikatCRM />
+		<RodzajDokumentuKaucji>Docelowy</RodzajDokumentuKaucji>
+		<RodzajPlatnosciKaucji>Naliczaj</RodzajPlatnosciKaucji>
+		<TerminRozliczeniaKaucji>60</TerminRozliczeniaKaucji>
+		<TypLimituKredytowego>Kwota</TypLimituKredytowego>
+		<TypPrzeterminowania>Kwota</TypPrzeterminowania>
+		<OddzialFirmy />
+		<KorespondencjaOpis />
+		<KorespondencjaNazwaFirmy />
+		<AktualizacjaPrzyImporcie>False</AktualizacjaPrzyImporcie>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>31</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist />
+		</OdsKarne>
+		<REGON />
+		<PESEL />
+		<NieWindykowac>False</NieWindykowac>
+		<DefinicjaSprawyWindykacyjnej />
+		<Kategorie />
+		<Branze />
+		<Adresy>
+			<AdresExt id="AdresExt_83">
+				<Host>Kontrahent_13</Host>
+				<Typ>Główny</Typ>
+				<Adres>
+					<KodPocztowy>37652</KodPocztowy>
+					<ZagranicznyKodPocztowy />
+					<Poczta>Poznań</Poczta>
+					<Miejscowosc>Poznań</Miejscowosc>
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<KodKraju />
+					<Ulica>ul. Główna</Ulica>
+					<NrDomu>73</NrDomu>
+					<NrLokalu />
+					<NietypowaLokalizacja />
+					<Telefon />
+					<Faks />
+				</Adres>
+				<IdentyfikacjaAdresu>
+					<GLN />
+				</IdentyfikacjaAdresu>
+			</AdresExt>
+		</Adresy>
+		<AdresyWWW />
+		<Kontakty />
+		<PotwierdzeniaGIODO />
+		<KodyKreskowe />
+		<Lokalizacje />
+		<TowaryUlubione />
+	</Kontrahent>
+	<Kontrahent id="Kontrahent_14" guid="98317d8a-4516-47f6-876c-af9877d02bc9">
+		<Kod>Kurort</Kod>
+		<Nazwa>Biuro turystyczne KURORT
+Stanisław Mielecki</Nazwa>
+		<NIP>949-02-33-442</NIP>
+		<EuVAT>9490233442</EuVAT>
+		<KRS />
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0001-000000000000</SposobZaplaty>
+		<Termin>0</Termin>
+		<TerminPlanowany>0</TerminPlanowany>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+		<RodzajPodmiotuZakup>Krajowy</RodzajPodmiotuZakup>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<FormaPrawna>00000000-0009-0013-0001-000000000000</FormaPrawna>
+		<Uwagi />
+		<VATLiczonyOd>OdNetto</VATLiczonyOd>
+		<Rabat>0.00%</Rabat>
+		<RabatTowaru>0.00%</RabatTowaru>
+		<CenaTowaru />
+		<EFaktura>Brak</EFaktura>
+		<EFakturaOkres>(pusty)</EFakturaOkres>
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<CenaOdbiorcy>False</CenaOdbiorcy>
+		<Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+		<WyjatkiDlaPO>Brak</WyjatkiDlaPO>
+		<Komunikat />
+		<KomunikatCRM />
+		<RodzajDokumentuKaucji>Docelowy</RodzajDokumentuKaucji>
+		<RodzajPlatnosciKaucji>Naliczaj</RodzajPlatnosciKaucji>
+		<TerminRozliczeniaKaucji>60</TerminRozliczeniaKaucji>
+		<TypLimituKredytowego>Kwota</TypLimituKredytowego>
+		<TypPrzeterminowania>Kwota</TypPrzeterminowania>
+		<OddzialFirmy />
+		<KorespondencjaOpis />
+		<KorespondencjaNazwaFirmy />
+		<AktualizacjaPrzyImporcie>False</AktualizacjaPrzyImporcie>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>31</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist />
+		</OdsKarne>
+		<REGON />
+		<PESEL />
+		<NieWindykowac>False</NieWindykowac>
+		<DefinicjaSprawyWindykacyjnej />
+		<Kategorie />
+		<Branze />
+		<Adresy>
+			<AdresExt id="AdresExt_85">
+				<Host>Kontrahent_14</Host>
+				<Typ>Główny</Typ>
+				<Adres>
+					<KodPocztowy>90987</KodPocztowy>
+					<ZagranicznyKodPocztowy />
+					<Poczta>Mielec</Poczta>
+					<Miejscowosc>Mielec</Miejscowosc>
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<KodKraju />
+					<Ulica>Rzeszowska</Ulica>
+					<NrDomu>56</NrDomu>
+					<NrLokalu>1</NrLokalu>
+					<NietypowaLokalizacja />
+					<Telefon />
+					<Faks />
+				</Adres>
+				<IdentyfikacjaAdresu>
+					<GLN />
+				</IdentyfikacjaAdresu>
+			</AdresExt>
+		</Adresy>
+		<AdresyWWW />
+		<Kontakty />
+		<PotwierdzeniaGIODO />
+		<KodyKreskowe />
+		<Lokalizacje />
+		<TowaryUlubione />
+	</Kontrahent>
+	<Kontrahent id="Kontrahent_15" guid="6e4b2529-3be5-480d-bb97-e31b270190d5">
+		<Kod>Media-Soft</Kod>
+		<Nazwa>MEDIA-SOFT S.A.
+Centrala Warszawa</Nazwa>
+		<NIP>957-09-81-264</NIP>
+		<EuVAT>9570981264</EuVAT>
+		<KRS />
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0001-000000000000</SposobZaplaty>
+		<Termin>0</Termin>
+		<TerminPlanowany>0</TerminPlanowany>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+		<RodzajPodmiotuZakup>Krajowy</RodzajPodmiotuZakup>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<FormaPrawna>00000000-0009-0013-0001-000000000000</FormaPrawna>
+		<Uwagi />
+		<VATLiczonyOd>OdNetto</VATLiczonyOd>
+		<Rabat>0.00%</Rabat>
+		<RabatTowaru>0.00%</RabatTowaru>
+		<CenaTowaru />
+		<EFaktura>Brak</EFaktura>
+		<EFakturaOkres>(pusty)</EFakturaOkres>
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<CenaOdbiorcy>False</CenaOdbiorcy>
+		<Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+		<WyjatkiDlaPO>Brak</WyjatkiDlaPO>
+		<Komunikat />
+		<KomunikatCRM />
+		<RodzajDokumentuKaucji>Docelowy</RodzajDokumentuKaucji>
+		<RodzajPlatnosciKaucji>Naliczaj</RodzajPlatnosciKaucji>
+		<TerminRozliczeniaKaucji>60</TerminRozliczeniaKaucji>
+		<TypLimituKredytowego>Kwota</TypLimituKredytowego>
+		<TypPrzeterminowania>Kwota</TypPrzeterminowania>
+		<OddzialFirmy />
+		<KorespondencjaOpis />
+		<KorespondencjaNazwaFirmy />
+		<AktualizacjaPrzyImporcie>False</AktualizacjaPrzyImporcie>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>31</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist />
+		</OdsKarne>
+		<REGON />
+		<PESEL />
+		<NieWindykowac>False</NieWindykowac>
+		<DefinicjaSprawyWindykacyjnej />
+		<Kategorie />
+		<Branze />
+		<Adresy>
+			<AdresExt id="AdresExt_87">
+				<Host>Kontrahent_15</Host>
+				<Typ>Główny</Typ>
+				<Adres>
+					<KodPocztowy>20099</KodPocztowy>
+					<ZagranicznyKodPocztowy />
+					<Poczta>Warszawa</Poczta>
+					<Miejscowosc>Warszawa</Miejscowosc>
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<KodKraju />
+					<Ulica>Al. Jerozolimskie</Ulica>
+					<NrDomu>204</NrDomu>
+					<NrLokalu />
+					<NietypowaLokalizacja />
+					<Telefon />
+					<Faks />
+				</Adres>
+				<IdentyfikacjaAdresu>
+					<GLN />
+				</IdentyfikacjaAdresu>
+			</AdresExt>
+		</Adresy>
+		<AdresyWWW />
+		<Kontakty />
+		<PotwierdzeniaGIODO />
+		<KodyKreskowe />
+		<Lokalizacje />
+		<TowaryUlubione />
+	</Kontrahent>
+	<Kontrahent id="Kontrahent_16" guid="a45023aa-389c-4194-931b-b2963dcff575">
+		<Kod>Medycon</Kod>
+		<Nazwa>MEDYCON - Spółka Komandytowa
+Jadwiga Olszewska, Jan Gembula</Nazwa>
+		<NIP>543-12-32-309</NIP>
+		<EuVAT>5431232309</EuVAT>
+		<KRS />
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0001-000000000000</SposobZaplaty>
+		<Termin>0</Termin>
+		<TerminPlanowany>0</TerminPlanowany>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+		<RodzajPodmiotuZakup>Krajowy</RodzajPodmiotuZakup>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<FormaPrawna>00000000-0009-0013-0001-000000000000</FormaPrawna>
+		<Uwagi />
+		<VATLiczonyOd>OdNetto</VATLiczonyOd>
+		<Rabat>0.00%</Rabat>
+		<RabatTowaru>0.00%</RabatTowaru>
+		<CenaTowaru />
+		<EFaktura>Brak</EFaktura>
+		<EFakturaOkres>(pusty)</EFakturaOkres>
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<CenaOdbiorcy>False</CenaOdbiorcy>
+		<Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+		<WyjatkiDlaPO>Brak</WyjatkiDlaPO>
+		<Komunikat />
+		<KomunikatCRM />
+		<RodzajDokumentuKaucji>Docelowy</RodzajDokumentuKaucji>
+		<RodzajPlatnosciKaucji>Naliczaj</RodzajPlatnosciKaucji>
+		<TerminRozliczeniaKaucji>60</TerminRozliczeniaKaucji>
+		<TypLimituKredytowego>Kwota</TypLimituKredytowego>
+		<TypPrzeterminowania>Kwota</TypPrzeterminowania>
+		<OddzialFirmy />
+		<KorespondencjaOpis />
+		<KorespondencjaNazwaFirmy />
+		<AktualizacjaPrzyImporcie>False</AktualizacjaPrzyImporcie>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>31</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist />
+		</OdsKarne>
+		<REGON />
+		<PESEL />
+		<NieWindykowac>False</NieWindykowac>
+		<DefinicjaSprawyWindykacyjnej />
+		<Kategorie />
+		<Branze />
+		<Adresy>
+			<AdresExt id="AdresExt_89">
+				<Host>Kontrahent_16</Host>
+				<Typ>Główny</Typ>
+				<Adres>
+					<KodPocztowy>92076</KodPocztowy>
+					<ZagranicznyKodPocztowy />
+					<Poczta>Namysłów</Poczta>
+					<Miejscowosc>Namysłów</Miejscowosc>
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<KodKraju />
+					<Ulica>Sądowa</Ulica>
+					<NrDomu>40</NrDomu>
+					<NrLokalu />
+					<NietypowaLokalizacja />
+					<Telefon />
+					<Faks />
+				</Adres>
+				<IdentyfikacjaAdresu>
+					<GLN />
+				</IdentyfikacjaAdresu>
+			</AdresExt>
+		</Adresy>
+		<AdresyWWW />
+		<Kontakty />
+		<PotwierdzeniaGIODO />
+		<KodyKreskowe />
+		<Lokalizacje />
+		<TowaryUlubione />
+	</Kontrahent>
+	<Kontrahent id="Kontrahent_17" guid="b9031514-afbf-43f7-85b1-8b579f51be4c">
+		<Kod>MetkoPol</Kod>
+		<Nazwa>MetkoPol Spółka Jawna
+Karmelicki Krzysztof i Syn</Nazwa>
+		<NIP>976-09-89-234</NIP>
+		<EuVAT>9760989234</EuVAT>
+		<KRS />
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0001-000000000000</SposobZaplaty>
+		<Termin>0</Termin>
+		<TerminPlanowany>0</TerminPlanowany>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+		<RodzajPodmiotuZakup>Krajowy</RodzajPodmiotuZakup>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<FormaPrawna>00000000-0009-0013-0001-000000000000</FormaPrawna>
+		<Uwagi />
+		<VATLiczonyOd>OdNetto</VATLiczonyOd>
+		<Rabat>0.00%</Rabat>
+		<RabatTowaru>0.00%</RabatTowaru>
+		<CenaTowaru />
+		<EFaktura>Brak</EFaktura>
+		<EFakturaOkres>(pusty)</EFakturaOkres>
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<CenaOdbiorcy>False</CenaOdbiorcy>
+		<Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+		<WyjatkiDlaPO>Brak</WyjatkiDlaPO>
+		<Komunikat />
+		<KomunikatCRM />
+		<RodzajDokumentuKaucji>Docelowy</RodzajDokumentuKaucji>
+		<RodzajPlatnosciKaucji>Naliczaj</RodzajPlatnosciKaucji>
+		<TerminRozliczeniaKaucji>60</TerminRozliczeniaKaucji>
+		<TypLimituKredytowego>Kwota</TypLimituKredytowego>
+		<TypPrzeterminowania>Kwota</TypPrzeterminowania>
+		<OddzialFirmy />
+		<KorespondencjaOpis />
+		<KorespondencjaNazwaFirmy />
+		<AktualizacjaPrzyImporcie>False</AktualizacjaPrzyImporcie>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>31</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist />
+		</OdsKarne>
+		<REGON />
+		<PESEL />
+		<NieWindykowac>False</NieWindykowac>
+		<DefinicjaSprawyWindykacyjnej />
+		<Kategorie />
+		<Branze />
+		<Adresy>
+			<AdresExt id="AdresExt_91">
+				<Host>Kontrahent_17</Host>
+				<Typ>Główny</Typ>
+				<Adres>
+					<KodPocztowy>42456</KodPocztowy>
+					<ZagranicznyKodPocztowy />
+					<Poczta>Lubliniec</Poczta>
+					<Miejscowosc>Lubliniec</Miejscowosc>
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<KodKraju />
+					<Ulica>Boronowska</Ulica>
+					<NrDomu>2</NrDomu>
+					<NrLokalu>4</NrLokalu>
+					<NietypowaLokalizacja />
+					<Telefon />
+					<Faks />
+				</Adres>
+				<IdentyfikacjaAdresu>
+					<GLN />
+				</IdentyfikacjaAdresu>
+			</AdresExt>
+		</Adresy>
+		<AdresyWWW />
+		<Kontakty />
+		<PotwierdzeniaGIODO />
+		<KodyKreskowe />
+		<Lokalizacje />
+		<TowaryUlubione />
+	</Kontrahent>
+	<Kontrahent id="Kontrahent_18" guid="21e98385-0fc6-4f5a-894d-39d2d0ed3be9">
+		<Kod>Papilot</Kod>
+		<Nazwa>Salon fryzjerski - PAPILOT
+Ewa Grzebień</Nazwa>
+		<NIP>295-38-19-839</NIP>
+		<EuVAT>2953819839</EuVAT>
+		<KRS />
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0001-000000000000</SposobZaplaty>
+		<Termin>0</Termin>
+		<TerminPlanowany>0</TerminPlanowany>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+		<RodzajPodmiotuZakup>Krajowy</RodzajPodmiotuZakup>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<FormaPrawna>00000000-0009-0013-0001-000000000000</FormaPrawna>
+		<Uwagi />
+		<VATLiczonyOd>OdNetto</VATLiczonyOd>
+		<Rabat>0.00%</Rabat>
+		<RabatTowaru>0.00%</RabatTowaru>
+		<CenaTowaru />
+		<EFaktura>Brak</EFaktura>
+		<EFakturaOkres>(pusty)</EFakturaOkres>
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<CenaOdbiorcy>False</CenaOdbiorcy>
+		<Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+		<WyjatkiDlaPO>Brak</WyjatkiDlaPO>
+		<Komunikat />
+		<KomunikatCRM />
+		<RodzajDokumentuKaucji>Docelowy</RodzajDokumentuKaucji>
+		<RodzajPlatnosciKaucji>Naliczaj</RodzajPlatnosciKaucji>
+		<TerminRozliczeniaKaucji>60</TerminRozliczeniaKaucji>
+		<TypLimituKredytowego>Kwota</TypLimituKredytowego>
+		<TypPrzeterminowania>Kwota</TypPrzeterminowania>
+		<OddzialFirmy />
+		<KorespondencjaOpis />
+		<KorespondencjaNazwaFirmy />
+		<AktualizacjaPrzyImporcie>False</AktualizacjaPrzyImporcie>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>31</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist />
+		</OdsKarne>
+		<REGON />
+		<PESEL />
+		<NieWindykowac>False</NieWindykowac>
+		<DefinicjaSprawyWindykacyjnej />
+		<Kategorie />
+		<Branze />
+		<Adresy>
+			<AdresExt id="AdresExt_93">
+				<Host>Kontrahent_18</Host>
+				<Typ>Główny</Typ>
+				<Adres>
+					<KodPocztowy>98340</KodPocztowy>
+					<ZagranicznyKodPocztowy />
+					<Poczta>Ostrów Wielkopolski</Poczta>
+					<Miejscowosc>Ostrów Wielkopolski</Miejscowosc>
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<KodKraju />
+					<Ulica>Podgórna</Ulica>
+					<NrDomu>45</NrDomu>
+					<NrLokalu />
+					<NietypowaLokalizacja />
+					<Telefon />
+					<Faks />
+				</Adres>
+				<IdentyfikacjaAdresu>
+					<GLN />
+				</IdentyfikacjaAdresu>
+			</AdresExt>
+		</Adresy>
+		<AdresyWWW />
+		<Kontakty />
+		<PotwierdzeniaGIODO />
+		<KodyKreskowe />
+		<Lokalizacje />
+		<TowaryUlubione />
+	</Kontrahent>
+	<Kontrahent id="Kontrahent_19" guid="a872060f-6cc7-4b42-91e1-567f88fe9c98">
+		<Kod>Seno</Kod>
+		<Nazwa>Firma SENO
+Marta Masły, Wioletta Krupa</Nazwa>
+		<NIP>765-78-01-220</NIP>
+		<EuVAT>7657801220</EuVAT>
+		<KRS />
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0001-000000000000</SposobZaplaty>
+		<Termin>0</Termin>
+		<TerminPlanowany>0</TerminPlanowany>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+		<RodzajPodmiotuZakup>Krajowy</RodzajPodmiotuZakup>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<FormaPrawna>00000000-0009-0013-0001-000000000000</FormaPrawna>
+		<Uwagi />
+		<VATLiczonyOd>OdNetto</VATLiczonyOd>
+		<Rabat>0.00%</Rabat>
+		<RabatTowaru>0.00%</RabatTowaru>
+		<CenaTowaru />
+		<EFaktura>Brak</EFaktura>
+		<EFakturaOkres>(pusty)</EFakturaOkres>
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<CenaOdbiorcy>False</CenaOdbiorcy>
+		<Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+		<WyjatkiDlaPO>Brak</WyjatkiDlaPO>
+		<Komunikat />
+		<KomunikatCRM />
+		<RodzajDokumentuKaucji>Docelowy</RodzajDokumentuKaucji>
+		<RodzajPlatnosciKaucji>Naliczaj</RodzajPlatnosciKaucji>
+		<TerminRozliczeniaKaucji>60</TerminRozliczeniaKaucji>
+		<TypLimituKredytowego>Kwota</TypLimituKredytowego>
+		<TypPrzeterminowania>Kwota</TypPrzeterminowania>
+		<OddzialFirmy />
+		<KorespondencjaOpis />
+		<KorespondencjaNazwaFirmy />
+		<AktualizacjaPrzyImporcie>False</AktualizacjaPrzyImporcie>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>31</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist />
+		</OdsKarne>
+		<REGON />
+		<PESEL />
+		<NieWindykowac>False</NieWindykowac>
+		<DefinicjaSprawyWindykacyjnej />
+		<Kategorie />
+		<Branze />
+		<Adresy>
+			<AdresExt id="AdresExt_97">
+				<Host>Kontrahent_19</Host>
+				<Typ>Główny</Typ>
+				<Adres>
+					<KodPocztowy>82038</KodPocztowy>
+					<ZagranicznyKodPocztowy />
+					<Poczta>Kielce</Poczta>
+					<Miejscowosc>Kielce</Miejscowosc>
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<KodKraju />
+					<Ulica>Siedlecka</Ulica>
+					<NrDomu>32</NrDomu>
+					<NrLokalu />
+					<NietypowaLokalizacja />
+					<Telefon />
+					<Faks />
+				</Adres>
+				<IdentyfikacjaAdresu>
+					<GLN />
+				</IdentyfikacjaAdresu>
+			</AdresExt>
+		</Adresy>
+		<AdresyWWW />
+		<Kontakty />
+		<PotwierdzeniaGIODO />
+		<KodyKreskowe />
+		<Lokalizacje />
+		<TowaryUlubione />
+	</Kontrahent>
+	<Kontrahent id="Kontrahent_20" guid="86033669-c85d-438d-89d7-b7c339d4d4af">
+		<Kod>Setka</Kod>
+		<Nazwa>SETKA - Sieć Sklepów Spożywczych Sp. z o.o.</Nazwa>
+		<NIP>123-23-45-670</NIP>
+		<EuVAT>1232345670</EuVAT>
+		<KRS />
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0001-000000000000</SposobZaplaty>
+		<Termin>0</Termin>
+		<TerminPlanowany>0</TerminPlanowany>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+		<RodzajPodmiotuZakup>Krajowy</RodzajPodmiotuZakup>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<FormaPrawna>00000000-0009-0013-0001-000000000000</FormaPrawna>
+		<Uwagi />
+		<VATLiczonyOd>OdNetto</VATLiczonyOd>
+		<Rabat>0.00%</Rabat>
+		<RabatTowaru>0.00%</RabatTowaru>
+		<CenaTowaru />
+		<EFaktura>Brak</EFaktura>
+		<EFakturaOkres>(pusty)</EFakturaOkres>
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<CenaOdbiorcy>False</CenaOdbiorcy>
+		<Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+		<WyjatkiDlaPO>Brak</WyjatkiDlaPO>
+		<Komunikat />
+		<KomunikatCRM />
+		<RodzajDokumentuKaucji>Docelowy</RodzajDokumentuKaucji>
+		<RodzajPlatnosciKaucji>Naliczaj</RodzajPlatnosciKaucji>
+		<TerminRozliczeniaKaucji>60</TerminRozliczeniaKaucji>
+		<TypLimituKredytowego>Kwota</TypLimituKredytowego>
+		<TypPrzeterminowania>Kwota</TypPrzeterminowania>
+		<OddzialFirmy />
+		<KorespondencjaOpis />
+		<KorespondencjaNazwaFirmy />
+		<AktualizacjaPrzyImporcie>False</AktualizacjaPrzyImporcie>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>31</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist />
+		</OdsKarne>
+		<REGON />
+		<PESEL />
+		<NieWindykowac>False</NieWindykowac>
+		<DefinicjaSprawyWindykacyjnej />
+		<Kategorie />
+		<Branze />
+		<Adresy>
+			<AdresExt id="AdresExt_99">
+				<Host>Kontrahent_20</Host>
+				<Typ>Główny</Typ>
+				<Adres>
+					<KodPocztowy>42200</KodPocztowy>
+					<ZagranicznyKodPocztowy />
+					<Poczta>Częstochowa</Poczta>
+					<Miejscowosc>Częstochowa</Miejscowosc>
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<KodKraju />
+					<Ulica>Konopnickiej</Ulica>
+					<NrDomu>12</NrDomu>
+					<NrLokalu />
+					<NietypowaLokalizacja />
+					<Telefon />
+					<Faks />
+				</Adres>
+				<IdentyfikacjaAdresu>
+					<GLN />
+				</IdentyfikacjaAdresu>
+			</AdresExt>
+		</Adresy>
+		<AdresyWWW />
+		<Kontakty />
+		<PotwierdzeniaGIODO />
+		<KodyKreskowe />
+		<Lokalizacje />
+		<TowaryUlubione />
+	</Kontrahent>
+	<Kontrahent id="Kontrahent_21" guid="8ec37b6d-70b7-48c1-9cf7-407c7e262cae">
+		<Kod>Szkiełko</Kod>
+		<Nazwa>Huta szkła artystycznego "Szkiełko i Oko" S.A.</Nazwa>
+		<NIP>123-34-78-893</NIP>
+		<EuVAT>1233478893</EuVAT>
+		<KRS />
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0001-000000000000</SposobZaplaty>
+		<Termin>0</Termin>
+		<TerminPlanowany>0</TerminPlanowany>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+		<RodzajPodmiotuZakup>Krajowy</RodzajPodmiotuZakup>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<FormaPrawna>00000000-0009-0013-0001-000000000000</FormaPrawna>
+		<Uwagi />
+		<VATLiczonyOd>OdNetto</VATLiczonyOd>
+		<Rabat>0.00%</Rabat>
+		<RabatTowaru>0.00%</RabatTowaru>
+		<CenaTowaru />
+		<EFaktura>Brak</EFaktura>
+		<EFakturaOkres>(pusty)</EFakturaOkres>
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<CenaOdbiorcy>False</CenaOdbiorcy>
+		<Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+		<WyjatkiDlaPO>Brak</WyjatkiDlaPO>
+		<Komunikat />
+		<KomunikatCRM />
+		<RodzajDokumentuKaucji>Docelowy</RodzajDokumentuKaucji>
+		<RodzajPlatnosciKaucji>Naliczaj</RodzajPlatnosciKaucji>
+		<TerminRozliczeniaKaucji>60</TerminRozliczeniaKaucji>
+		<TypLimituKredytowego>Kwota</TypLimituKredytowego>
+		<TypPrzeterminowania>Kwota</TypPrzeterminowania>
+		<OddzialFirmy />
+		<KorespondencjaOpis />
+		<KorespondencjaNazwaFirmy />
+		<AktualizacjaPrzyImporcie>False</AktualizacjaPrzyImporcie>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>31</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist />
+		</OdsKarne>
+		<REGON />
+		<PESEL />
+		<NieWindykowac>False</NieWindykowac>
+		<DefinicjaSprawyWindykacyjnej />
+		<Kategorie />
+		<Branze />
+		<Adresy>
+			<AdresExt id="AdresExt_101">
+				<Host>Kontrahent_21</Host>
+				<Typ>Główny</Typ>
+				<Adres>
+					<KodPocztowy>52095</KodPocztowy>
+					<ZagranicznyKodPocztowy />
+					<Poczta>Zielona Góra</Poczta>
+					<Miejscowosc>Zielona Góra</Miejscowosc>
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<KodKraju />
+					<Ulica>Fabryczna</Ulica>
+					<NrDomu>1</NrDomu>
+					<NrLokalu />
+					<NietypowaLokalizacja />
+					<Telefon />
+					<Faks />
+				</Adres>
+				<IdentyfikacjaAdresu>
+					<GLN />
+				</IdentyfikacjaAdresu>
+			</AdresExt>
+		</Adresy>
+		<AdresyWWW />
+		<Kontakty />
+		<PotwierdzeniaGIODO />
+		<KodyKreskowe />
+		<Lokalizacje />
+		<TowaryUlubione />
+	</Kontrahent>
+
+		<!--OSOBY-->
+  <KontaktOsoba id="KontaktOsoba_1" guid="a7dd3e4b-d01e-48ac-b087-bba59b2d2659">
+    <Kontrahent>Kontrahent_2</Kontrahent>
+    <Nazwisko>Walczewski</Nazwisko>
+    <Imie>Jacek</Imie>
+    <Stanowisko />
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy>201 000 999</TelefonKomorkowy>
+      <EMAIL>jwalcz@ccc.pl</EMAIL>
+      <WWW />
+    </Kontakt>
+    <Nieaktualny>False</Nieaktualny>
+    <Uwagi />
+    <Wizytowka>False</Wizytowka>
+    <Adresy>
+      <AdresExt id="AdresExt_106">
+        <Host>KontaktOsoba_1</Host>
+        <Typ>Główny</Typ>
+        <Adres>
+          <KodPocztowy>30140</KodPocztowy>
+          <ZagranicznyKodPocztowy />
+          <Poczta>Kraków</Poczta>
+          <Miejscowosc>Kraków</Miejscowosc>
+          <Gmina />
+          <Powiat />
+          <Wojewodztwo>nieokreślone</Wojewodztwo>
+          <Kraj />
+          <KodKraju />
+          <Ulica>Nowa</Ulica>
+          <NrDomu>1</NrDomu>
+          <NrLokalu />
+          <NietypowaLokalizacja />
+          <Telefon />
+          <Faks />
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+    </Adresy>
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe>
+      <KodKreskowy id="KodKreskowy_2">
+        <Zapis>KontaktOsoba_1</Zapis>
+        <Kod>jacwal@aaa.pl</Kod>
+        <Jednostka />
+        <TypKodu>EMail</TypKodu>
+        <PodTypKodu>None</PodTypKodu>
+        <Obcy>False</Obcy>
+      </KodKreskowy>
+      <KodKreskowy id="KodKreskowy_3">
+        <Zapis>KontaktOsoba_1</Zapis>
+        <Kod>jwalcz@ccc.pl</Kod>
+        <Jednostka />
+        <TypKodu>EMail</TypKodu>
+        <PodTypKodu>None</PodTypKodu>
+        <Obcy>False</Obcy>
+      </KodKreskowy>
+    </KodyKreskowe>
+    <PowiązaniaStrOrg />
+    <TowaryUlubione />
+  </KontaktOsoba>
+	<KontaktOsoba id="KontaktOsoba_2" guid="acdf9baf-34bd-4d84-b8d0-3209fa1d4393">
+    <Kontrahent>Kontrahent_2</Kontrahent>
+    <Nazwisko>Paszyński</Nazwisko>
+    <Imie>Arkadiusz</Imie>
+    <Stanowisko />
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy />
+      <EMAIL>apa@aaa.pl</EMAIL>
+      <WWW />
+    </Kontakt>
+    <Nieaktualny>False</Nieaktualny>
+    <Uwagi />
+    <Wizytowka>False</Wizytowka>
+    <Adresy>
+      <AdresExt id="AdresExt_105">
+        <Host>KontaktOsoba_2</Host>
+        <Typ>Główny</Typ>
+        <Adres>
+          <KodPocztowy>30140</KodPocztowy>
+          <ZagranicznyKodPocztowy />
+          <Poczta>Kraków</Poczta>
+          <Miejscowosc>Kraków</Miejscowosc>
+          <Gmina />
+          <Powiat />
+          <Wojewodztwo>nieokreślone</Wojewodztwo>
+          <Kraj />
+          <KodKraju />
+          <Ulica>Nowa</Ulica>
+          <NrDomu>1</NrDomu>
+          <NrLokalu />
+          <NietypowaLokalizacja />
+          <Telefon />
+          <Faks />
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+    </Adresy>
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe>
+      <KodKreskowy id="KodKreskowy_1">
+        <Zapis>KontaktOsoba_2</Zapis>
+        <Kod>apa@aaa.pl</Kod>
+        <Jednostka />
+        <TypKodu>EMail</TypKodu>
+        <PodTypKodu>None</PodTypKodu>
+        <Obcy>False</Obcy>
+      </KodKreskowy>
+    </KodyKreskowe>
+    <PowiązaniaStrOrg />
+    <TowaryUlubione />
+  </KontaktOsoba>
+  <KontaktOsoba id="KontaktOsoba_3" guid="2d3a3cb7-95a4-47a0-9b41-a6f1d92bc88c">
+    <Kontrahent>Kontrahent_4</Kontrahent>
+    <Nazwisko>Antczak</Nazwisko>
+    <Imie>Jan</Imie>
+    <Stanowisko />
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy>201 666 888</TelefonKomorkowy>
+      <EMAIL />
+      <WWW />
+    </Kontakt>
+    <Nieaktualny>False</Nieaktualny>
+    <Uwagi />
+    <Wizytowka>False</Wizytowka>
+    <Adresy>
+      <AdresExt id="AdresExt_107">
+        <Host>KontaktOsoba_3</Host>
+        <Typ>Główny</Typ>
+        <Adres>
+          <KodPocztowy>30696</KodPocztowy>
+          <ZagranicznyKodPocztowy />
+          <Poczta>Kraków</Poczta>
+          <Miejscowosc>Kraków</Miejscowosc>
+          <Gmina />
+          <Powiat />
+          <Wojewodztwo>nieokreślone</Wojewodztwo>
+          <Kraj />
+          <KodKraju />
+          <Ulica>Podzamcze</Ulica>
+          <NrDomu>29</NrDomu>
+          <NrLokalu>59</NrLokalu>
+          <NietypowaLokalizacja />
+          <Telefon />
+          <Faks />
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+    </Adresy>
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe />
+    <PowiązaniaStrOrg />
+    <TowaryUlubione />
+  </KontaktOsoba>
+	<KontaktOsoba id="KontaktOsoba_4" guid="b4cfa428-ab8a-4ff6-bf33-7ce9a7bc8c64">
+    <Kontrahent>Kontrahent_5</Kontrahent>
+    <Nazwisko>Schmidt</Nazwisko>
+    <Imie>Klaus</Imie>
+    <Stanowisko />
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy />
+      <EMAIL>klasch@abc.de</EMAIL>
+      <WWW />
+    </Kontakt>
+    <Nieaktualny>False</Nieaktualny>
+    <Uwagi />
+    <Wizytowka>False</Wizytowka>
+    <Adresy>
+      <AdresExt id="AdresExt_108">
+        <Host>KontaktOsoba_4</Host>
+        <Typ>Główny</Typ>
+        <Adres>
+          <KodPocztowy>0</KodPocztowy>
+          <ZagranicznyKodPocztowy />
+          <Poczta>45127 Essen</Poczta>
+          <Miejscowosc>45127 Essen</Miejscowosc>
+          <Gmina />
+          <Powiat />
+          <Wojewodztwo>nieokreślone</Wojewodztwo>
+          <Kraj />
+          <KodKraju />
+          <Ulica>Berliner Strasse</Ulica>
+          <NrDomu>3</NrDomu>
+          <NrLokalu />
+          <NietypowaLokalizacja />
+          <Telefon />
+          <Faks />
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+    </Adresy>
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe>
+      <KodKreskowy id="KodKreskowy_4">
+        <Zapis>KontaktOsoba_4</Zapis>
+        <Kod>klasch@abc.de</Kod>
+        <Jednostka />
+        <TypKodu>EMail</TypKodu>
+        <PodTypKodu>None</PodTypKodu>
+        <Obcy>False</Obcy>
+      </KodKreskowy>
+    </KodyKreskowe>
+    <PowiązaniaStrOrg />
+    <TowaryUlubione />
+  </KontaktOsoba>
+  <KontaktOsoba id="KontaktOsoba_5" guid="85d96ec2-3fc9-4247-a20e-d3215e067a23">
+    <Kontrahent>Kontrahent_10</Kontrahent>
+    <Nazwisko>Kaczkowski</Nazwisko>
+    <Imie>Józef</Imie>
+    <Stanowisko />
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy>302 777 888</TelefonKomorkowy>
+      <EMAIL />
+      <WWW />
+    </Kontakt>
+    <Nieaktualny>False</Nieaktualny>
+    <Uwagi />
+    <Wizytowka>False</Wizytowka>
+    <Adresy>
+      <AdresExt id="AdresExt_109">
+        <Host>KontaktOsoba_5</Host>
+        <Typ>Główny</Typ>
+        <Adres>
+          <KodPocztowy>52095</KodPocztowy>
+          <ZagranicznyKodPocztowy />
+          <Poczta>Zielona Góra</Poczta>
+          <Miejscowosc>Zielona Góra</Miejscowosc>
+          <Gmina />
+          <Powiat />
+          <Wojewodztwo>nieokreślone</Wojewodztwo>
+          <Kraj />
+          <KodKraju />
+          <Ulica>Fabryczna</Ulica>
+          <NrDomu>1</NrDomu>
+          <NrLokalu />
+          <NietypowaLokalizacja />
+          <Telefon />
+          <Faks />
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+    </Adresy>
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe />
+    <PowiązaniaStrOrg />
+    <TowaryUlubione />
+  </KontaktOsoba>
+  <KontaktOsoba id="KontaktOsoba_6" guid="1b6ccbd5-584b-455e-bd5a-9b7b1fa001ee">
+    <Kontrahent>Kontrahent_10</Kontrahent>
+    <Nazwisko>Kurska</Nazwisko>
+    <Imie>Elżbieta</Imie>
+    <Stanowisko />
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy />
+      <EMAIL>elakur@ccc.pl</EMAIL>
+      <WWW />
+    </Kontakt>
+    <Nieaktualny>False</Nieaktualny>
+    <Uwagi />
+    <Wizytowka>False</Wizytowka>
+    <Adresy>
+      <AdresExt id="AdresExt_110">
+        <Host>KontaktOsoba_6</Host>
+        <Typ>Główny</Typ>
+        <Adres>
+          <KodPocztowy>52095</KodPocztowy>
+          <ZagranicznyKodPocztowy />
+          <Poczta>Zielona Góra</Poczta>
+          <Miejscowosc>Zielona Góra</Miejscowosc>
+          <Gmina />
+          <Powiat />
+          <Wojewodztwo>nieokreślone</Wojewodztwo>
+          <Kraj />
+          <KodKraju />
+          <Ulica>Fabryczna</Ulica>
+          <NrDomu>1</NrDomu>
+          <NrLokalu />
+          <NietypowaLokalizacja />
+          <Telefon />
+          <Faks />
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+    </Adresy>
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe>
+      <KodKreskowy id="KodKreskowy_5">
+        <Zapis>KontaktOsoba_6</Zapis>
+        <Kod>elakur@ccc.pl</Kod>
+        <Jednostka />
+        <TypKodu>EMail</TypKodu>
+        <PodTypKodu>None</PodTypKodu>
+        <Obcy>False</Obcy>
+      </KodKreskowy>
+    </KodyKreskowe>
+    <PowiązaniaStrOrg />
+    <TowaryUlubione />
+  </KontaktOsoba>
+  <KontaktOsoba id="KontaktOsoba_7" guid="52581aa8-6eea-4605-a491-006ba1df4628">
+    <Kontrahent>Kontrahent_6</Kontrahent>
+    <Nazwisko>Wodny</Nazwisko>
+    <Imie>Michał</Imie>
+    <Stanowisko />
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy />
+      <EMAIL />
+      <WWW />
+    </Kontakt>
+    <Nieaktualny>False</Nieaktualny>
+    <Uwagi />
+    <Wizytowka>False</Wizytowka>
+    <Adresy>
+      <AdresExt id="AdresExt_355">
+        <Host>KontaktOsoba_7</Host>
+        <Typ>Główny</Typ>
+        <Adres>
+          <KodPocztowy>34962</KodPocztowy>
+          <ZagranicznyKodPocztowy />
+          <Poczta>Jarocin</Poczta>
+          <Miejscowosc>Jarocin</Miejscowosc>
+          <Gmina />
+          <Powiat />
+          <Wojewodztwo>nieokreślone</Wojewodztwo>
+          <Kraj />
+          <KodKraju />
+          <Ulica>Krakowska</Ulica>
+          <NrDomu>54</NrDomu>
+          <NrLokalu />
+          <NietypowaLokalizacja />
+          <Telefon />
+          <Faks />
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+    </Adresy>
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe />
+    <PowiązaniaStrOrg />
+    <TowaryUlubione />
+  </KontaktOsoba>
+  <KontaktOsoba id="KontaktOsoba_8" guid="6180c652-685b-4cdf-83ca-9a458b875147">
+    <Kontrahent>Kontrahent_11</Kontrahent>
+    <Nazwisko>Kowalska</Nazwisko>
+    <Imie>Janina</Imie>
+    <Stanowisko />
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy />
+      <EMAIL />
+      <WWW />
+    </Kontakt>
+    <Nieaktualny>False</Nieaktualny>
+    <Uwagi />
+    <Wizytowka>False</Wizytowka>
+    <Adresy>
+      <AdresExt id="AdresExt_356">
+        <Host>KontaktOsoba_8</Host>
+        <Typ>Główny</Typ>
+        <Adres>
+          <KodPocztowy>13543</KodPocztowy>
+          <ZagranicznyKodPocztowy />
+          <Poczta>Łódź</Poczta>
+          <Miejscowosc>Łódź</Miejscowosc>
+          <Gmina />
+          <Powiat />
+          <Wojewodztwo>nieokreślone</Wojewodztwo>
+          <Kraj />
+          <KodKraju />
+          <Ulica>Jesienna</Ulica>
+          <NrDomu>34</NrDomu>
+          <NrLokalu>2</NrLokalu>
+          <NietypowaLokalizacja />
+          <Telefon />
+          <Faks />
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+    </Adresy>
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe />
+    <PowiązaniaStrOrg />
+    <TowaryUlubione />
+  </KontaktOsoba>
+  <KontaktOsoba id="KontaktOsoba_9" guid="ff8fe9e1-beab-4ca7-aa42-99b4dc716aa7">
+    <Kontrahent>Kontrahent_3</Kontrahent>
+    <Nazwisko>Duński</Nazwisko>
+    <Imie>Paweł</Imie>
+    <Stanowisko />
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy />
+      <EMAIL />
+      <WWW />
+    </Kontakt>
+    <Nieaktualny>False</Nieaktualny>
+    <Uwagi />
+    <Wizytowka>False</Wizytowka>
+    <Adresy>
+      <AdresExt id="AdresExt_357">
+        <Host>KontaktOsoba_9</Host>
+        <Typ>Główny</Typ>
+        <Adres>
+          <KodPocztowy>30696</KodPocztowy>
+          <ZagranicznyKodPocztowy />
+          <Poczta>Kraków</Poczta>
+          <Miejscowosc>Kraków</Miejscowosc>
+          <Gmina>Kraków</Gmina>
+          <Powiat>Kraków</Powiat>
+          <Wojewodztwo>małopolskie</Wojewodztwo>
+          <Kraj>Polska</Kraj>
+          <KodKraju />
+          <Ulica>Podzamcze</Ulica>
+          <NrDomu>29</NrDomu>
+          <NrLokalu>59</NrLokalu>
+          <NietypowaLokalizacja />
+          <Telefon>2690033</Telefon>
+          <Faks>2690033</Faks>
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+    </Adresy>
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe />
+    <PowiązaniaStrOrg />
+    <TowaryUlubione />
+  </KontaktOsoba>
+  <KontaktOsoba id="KontaktOsoba_10" guid="7f5e3dc4-efdf-4d38-845c-ee16f9bac8fa">
+    <Kontrahent>Kontrahent_21</Kontrahent>
+    <Nazwisko>Miśkiewicz</Nazwisko>
+    <Imie>Przemysław</Imie>
+    <Stanowisko />
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy />
+      <EMAIL />
+      <WWW />
+    </Kontakt>
+    <Nieaktualny>False</Nieaktualny>
+    <Uwagi />
+    <Wizytowka>False</Wizytowka>
+    <Adresy>
+      <AdresExt id="AdresExt_358">
+        <Host>KontaktOsoba_10</Host>
+        <Typ>Główny</Typ>
+        <Adres>
+          <KodPocztowy>52095</KodPocztowy>
+          <ZagranicznyKodPocztowy />
+          <Poczta>Zielona Góra</Poczta>
+          <Miejscowosc>Zielona Góra</Miejscowosc>
+          <Gmina />
+          <Powiat />
+          <Wojewodztwo>nieokreślone</Wojewodztwo>
+          <Kraj />
+          <KodKraju />
+          <Ulica>Fabryczna</Ulica>
+          <NrDomu>1</NrDomu>
+          <NrLokalu />
+          <NietypowaLokalizacja />
+          <Telefon />
+          <Faks />
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+    </Adresy>
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe />
+    <PowiązaniaStrOrg />
+    <TowaryUlubione />
+  </KontaktOsoba>
+  <KontaktOsoba id="KontaktOsoba_11" guid="b5783aa9-0b66-4c30-97c5-8680a3067931">
+    <Kontrahent>Kontrahent_20</Kontrahent>
+    <Nazwisko>Adamowicz</Nazwisko>
+    <Imie>Piotr</Imie>
+    <Stanowisko />
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy />
+      <EMAIL />
+      <WWW />
+    </Kontakt>
+    <Nieaktualny>False</Nieaktualny>
+    <Uwagi />
+    <Wizytowka>False</Wizytowka>
+    <Adresy>
+      <AdresExt id="AdresExt_359">
+        <Host>KontaktOsoba_11</Host>
+        <Typ>Główny</Typ>
+        <Adres>
+          <KodPocztowy>42200</KodPocztowy>
+          <ZagranicznyKodPocztowy />
+          <Poczta>Częstochowa</Poczta>
+          <Miejscowosc>Częstochowa</Miejscowosc>
+          <Gmina />
+          <Powiat />
+          <Wojewodztwo>nieokreślone</Wojewodztwo>
+          <Kraj />
+          <KodKraju />
+          <Ulica>Konopnickiej</Ulica>
+          <NrDomu>12</NrDomu>
+          <NrLokalu />
+          <NietypowaLokalizacja />
+          <Telefon />
+          <Faks />
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+    </Adresy>
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe />
+    <PowiązaniaStrOrg />
+    <TowaryUlubione />
+  </KontaktOsoba>
+  <KontaktOsoba id="KontaktOsoba_12" guid="04cfd0e9-c14c-4aa3-9bf6-1bac259f47d5">
+    <Kontrahent>Kontrahent_8</Kontrahent>
+    <Nazwisko>Beskidzki</Nazwisko>
+    <Imie>Adam</Imie>
+    <Stanowisko />
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy />
+      <EMAIL />
+      <WWW />
+    </Kontakt>
+    <Nieaktualny>False</Nieaktualny>
+    <Uwagi />
+    <Wizytowka>False</Wizytowka>
+    <Adresy>
+      <AdresExt id="AdresExt_360">
+        <Host>KontaktOsoba_12</Host>
+        <Typ>Główny</Typ>
+        <Adres>
+          <KodPocztowy>76987</KodPocztowy>
+          <ZagranicznyKodPocztowy />
+          <Poczta>Szczecin</Poczta>
+          <Miejscowosc>Szczecin</Miejscowosc>
+          <Gmina />
+          <Powiat />
+          <Wojewodztwo>nieokreślone</Wojewodztwo>
+          <Kraj />
+          <KodKraju />
+          <Ulica>Legionów Polskich</Ulica>
+          <NrDomu>67/32</NrDomu>
+          <NrLokalu />
+          <NietypowaLokalizacja />
+          <Telefon />
+          <Faks />
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+    </Adresy>
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe />
+    <PowiązaniaStrOrg />
+    <TowaryUlubione />
+  </KontaktOsoba>
+  <KontaktOsoba id="KontaktOsoba_13" guid="76029406-c9bb-4b84-83ee-750e751ebc77">
+    <Kontrahent>Kontrahent_12</Kontrahent>
+    <Nazwisko>Maliniak</Nazwisko>
+    <Imie>Joanna</Imie>
+    <Stanowisko />
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy />
+      <EMAIL />
+      <WWW />
+    </Kontakt>
+    <Nieaktualny>False</Nieaktualny>
+    <Uwagi />
+    <Wizytowka>False</Wizytowka>
+    <Adresy>
+      <AdresExt id="AdresExt_361">
+        <Host>KontaktOsoba_13</Host>
+        <Typ>Główny</Typ>
+        <Adres>
+          <KodPocztowy>56209</KodPocztowy>
+          <ZagranicznyKodPocztowy />
+          <Poczta>Radom</Poczta>
+          <Miejscowosc>Radom</Miejscowosc>
+          <Gmina />
+          <Powiat />
+          <Wojewodztwo>nieokreślone</Wojewodztwo>
+          <Kraj />
+          <KodKraju />
+          <Ulica>3-go Maja</Ulica>
+          <NrDomu>96</NrDomu>
+          <NrLokalu>2</NrLokalu>
+          <NietypowaLokalizacja />
+          <Telefon />
+          <Faks />
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+    </Adresy>
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe />
+    <PowiązaniaStrOrg />
+    <TowaryUlubione />
+  </KontaktOsoba>
+  <KontaktOsoba id="KontaktOsoba_14" guid="b8a08378-a1c7-4565-bccc-f5319722ae3b">
+    <Kontrahent>Kontrahent_13</Kontrahent>
+    <Nazwisko>Wawrzyniak</Nazwisko>
+    <Imie>Wojciech</Imie>
+    <Stanowisko />
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy />
+      <EMAIL />
+      <WWW />
+    </Kontakt>
+    <Nieaktualny>False</Nieaktualny>
+    <Uwagi />
+    <Wizytowka>False</Wizytowka>
+    <Adresy>
+      <AdresExt id="AdresExt_362">
+        <Host>KontaktOsoba_14</Host>
+        <Typ>Główny</Typ>
+        <Adres>
+          <KodPocztowy>37652</KodPocztowy>
+          <ZagranicznyKodPocztowy />
+          <Poczta>Poznań</Poczta>
+          <Miejscowosc>Poznań</Miejscowosc>
+          <Gmina />
+          <Powiat />
+          <Wojewodztwo>nieokreślone</Wojewodztwo>
+          <Kraj />
+          <KodKraju />
+          <Ulica>ul. Główna</Ulica>
+          <NrDomu>73</NrDomu>
+          <NrLokalu />
+          <NietypowaLokalizacja />
+          <Telefon />
+          <Faks />
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+    </Adresy>
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe />
+    <PowiązaniaStrOrg />
+    <TowaryUlubione />
+  </KontaktOsoba>
+  <KontaktOsoba id="KontaktOsoba_15" guid="426022fd-149e-472b-9c6d-316a08545521">
+    <Kontrahent>Kontrahent_4</Kontrahent>
+    <Nazwisko>Drzymała</Nazwisko>
+    <Imie>Zbigniew</Imie>
+    <Stanowisko />
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy />
+      <EMAIL />
+      <WWW />
+    </Kontakt>
+    <Nieaktualny>False</Nieaktualny>
+    <Uwagi />
+    <Wizytowka>False</Wizytowka>
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe />
+    <PowiązaniaStrOrg />
+    <TowaryUlubione />
+  </KontaktOsoba>
+  <KontaktOsoba id="KontaktOsoba_16" guid="b1942c06-fe73-4c0b-bdef-d06c21fbaa94">
+    <Kontrahent>Kontrahent_18</Kontrahent>
+    <Nazwisko>Niepsuj</Nazwisko>
+    <Imie>Teofil</Imie>
+    <Stanowisko />
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy />
+      <EMAIL />
+      <WWW />
+    </Kontakt>
+    <Nieaktualny>False</Nieaktualny>
+    <Uwagi />
+    <Wizytowka>False</Wizytowka>
+    <Adresy>
+      <AdresExt id="AdresExt_364">
+        <Host>KontaktOsoba_16</Host>
+        <Typ>Główny</Typ>
+        <Adres>
+          <KodPocztowy>98340</KodPocztowy>
+          <ZagranicznyKodPocztowy />
+          <Poczta>Ostrów Wielkopolski</Poczta>
+          <Miejscowosc>Ostrów Wielkopolski</Miejscowosc>
+          <Gmina />
+          <Powiat />
+          <Wojewodztwo>nieokreślone</Wojewodztwo>
+          <Kraj />
+          <KodKraju />
+          <Ulica>Podgórna</Ulica>
+          <NrDomu>45</NrDomu>
+          <NrLokalu />
+          <NietypowaLokalizacja />
+          <Telefon />
+          <Faks />
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+    </Adresy>
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe />
+    <PowiązaniaStrOrg />
+    <TowaryUlubione />
+  </KontaktOsoba>
+  <KontaktOsoba id="KontaktOsoba_17" guid="a9ec4010-2a6f-4b90-bca4-b60555006db7">
+    <Kontrahent>Kontrahent_4</Kontrahent>
+    <Nazwisko>Mrzygłód</Nazwisko>
+    <Imie>Barbara</Imie>
+    <Stanowisko />
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy />
+      <EMAIL />
+      <WWW />
+    </Kontakt>
+    <Nieaktualny>False</Nieaktualny>
+    <Uwagi />
+    <Wizytowka>False</Wizytowka>
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe />
+    <PowiązaniaStrOrg />
+    <TowaryUlubione />
+  </KontaktOsoba>
+  <KontaktOsoba id="KontaktOsoba_18" guid="6af8d2e0-7d2e-4061-8909-b73e8371eb63">
+    <Kontrahent>Kontrahent_16</Kontrahent>
+    <Nazwisko>Hawranek</Nazwisko>
+    <Imie>Marian</Imie>
+    <Stanowisko />
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy />
+      <EMAIL />
+      <WWW />
+    </Kontakt>
+    <Nieaktualny>False</Nieaktualny>
+    <Uwagi />
+    <Wizytowka>False</Wizytowka>
+    <Adresy>
+      <AdresExt id="AdresExt_366">
+        <Host>KontaktOsoba_18</Host>
+        <Typ>Główny</Typ>
+        <Adres>
+          <KodPocztowy>92076</KodPocztowy>
+          <ZagranicznyKodPocztowy />
+          <Poczta>Namysłów</Poczta>
+          <Miejscowosc>Namysłów</Miejscowosc>
+          <Gmina />
+          <Powiat />
+          <Wojewodztwo>nieokreślone</Wojewodztwo>
+          <Kraj />
+          <KodKraju />
+          <Ulica>Sądowa</Ulica>
+          <NrDomu>40</NrDomu>
+          <NrLokalu />
+          <NietypowaLokalizacja />
+          <Telefon />
+          <Faks />
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+    </Adresy>
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe />
+    <PowiązaniaStrOrg />
+    <TowaryUlubione />
+  </KontaktOsoba>
+  <KontaktOsoba id="KontaktOsoba_19" guid="9a00f3c3-59e0-4b84-ba16-4bdbd0ca94df">
+    <Kontrahent>Kontrahent_19</Kontrahent>
+    <Nazwisko>Kobylski</Nazwisko>
+    <Imie>Jarosław</Imie>
+    <Stanowisko />
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy />
+      <EMAIL />
+      <WWW />
+    </Kontakt>
+    <Nieaktualny>False</Nieaktualny>
+    <Uwagi />
+    <Wizytowka>False</Wizytowka>
+    <Adresy>
+      <AdresExt id="AdresExt_367">
+        <Host>KontaktOsoba_19</Host>
+        <Typ>Główny</Typ>
+        <Adres>
+          <KodPocztowy>82038</KodPocztowy>
+          <ZagranicznyKodPocztowy />
+          <Poczta>Kielce</Poczta>
+          <Miejscowosc>Kielce</Miejscowosc>
+          <Gmina />
+          <Powiat />
+          <Wojewodztwo>nieokreślone</Wojewodztwo>
+          <Kraj />
+          <KodKraju />
+          <Ulica>Siedlecka</Ulica>
+          <NrDomu>32</NrDomu>
+          <NrLokalu />
+          <NietypowaLokalizacja />
+          <Telefon />
+          <Faks />
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+    </Adresy>
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe />
+    <PowiązaniaStrOrg />
+    <TowaryUlubione />
+  </KontaktOsoba>
+  <KontaktOsoba id="KontaktOsoba_20" guid="fe15f702-e88b-4635-a6b2-140a3853855d">
+    <Kontrahent>Kontrahent_15</Kontrahent>
+    <Nazwisko>Kosmyk</Nazwisko>
+    <Imie>Bogumiła</Imie>
+    <Stanowisko />
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy />
+      <EMAIL />
+      <WWW />
+    </Kontakt>
+    <Nieaktualny>False</Nieaktualny>
+    <Uwagi />
+    <Wizytowka>False</Wizytowka>
+    <Adresy>
+      <AdresExt id="AdresExt_368">
+        <Host>KontaktOsoba_20</Host>
+        <Typ>Główny</Typ>
+        <Adres>
+          <KodPocztowy>20099</KodPocztowy>
+          <ZagranicznyKodPocztowy />
+          <Poczta>Warszawa</Poczta>
+          <Miejscowosc>Warszawa</Miejscowosc>
+          <Gmina />
+          <Powiat />
+          <Wojewodztwo>nieokreślone</Wojewodztwo>
+          <Kraj />
+          <KodKraju />
+          <Ulica>Al. Jerozolimskie</Ulica>
+          <NrDomu>204</NrDomu>
+          <NrLokalu />
+          <NietypowaLokalizacja />
+          <Telefon />
+          <Faks />
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+    </Adresy>
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe />
+    <PowiązaniaStrOrg />
+    <TowaryUlubione />
+  </KontaktOsoba>
+  <KontaktOsoba id="KontaktOsoba_21" guid="0165f0b6-3518-4751-b2bc-e6ee6f456cfa">
+    <Kontrahent>Kontrahent_14</Kontrahent>
+    <Nazwisko>Bukowski</Nazwisko>
+    <Imie>Krzysztof</Imie>
+    <Stanowisko />
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy />
+      <EMAIL />
+      <WWW />
+    </Kontakt>
+    <Nieaktualny>False</Nieaktualny>
+    <Uwagi />
+    <Wizytowka>False</Wizytowka>
+    <Adresy>
+      <AdresExt id="AdresExt_369">
+        <Host>KontaktOsoba_21</Host>
+        <Typ>Główny</Typ>
+        <Adres>
+          <KodPocztowy>90987</KodPocztowy>
+          <ZagranicznyKodPocztowy />
+          <Poczta>Mielec</Poczta>
+          <Miejscowosc>Mielec</Miejscowosc>
+          <Gmina />
+          <Powiat />
+          <Wojewodztwo>nieokreślone</Wojewodztwo>
+          <Kraj />
+          <KodKraju />
+          <Ulica>Rzeszowska</Ulica>
+          <NrDomu>56</NrDomu>
+          <NrLokalu>1</NrLokalu>
+          <NietypowaLokalizacja />
+          <Telefon />
+          <Faks />
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+    </Adresy>
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe />
+    <PowiązaniaStrOrg />
+    <TowaryUlubione />
+  </KontaktOsoba>
+	
+	<!--OSOBY KONTAKTOWE-->
+	<OsobaKontrahent id="OsobaKontrahent_1" guid="993f84a7-a4e7-454c-ac18-7e22c3b508f3">
+    <OsobaKontaktowa>KontaktOsoba_1</OsobaKontaktowa>
+    <Kontrahent>Kontrahent_2</Kontrahent>
+    <Glowny>False</Glowny>
+    <Stanowisko />
+    <Nieaktualny>False</Nieaktualny>
+  </OsobaKontrahent>
+  <OsobaKontrahent id="OsobaKontrahent_2" guid="6ad53e46-0395-44dd-b323-91c86e93eb1d">
+    <OsobaKontaktowa>KontaktOsoba_2</OsobaKontaktowa>
+    <Kontrahent>Kontrahent_2</Kontrahent>
+    <Glowny>False</Glowny>
+    <Stanowisko />
+    <Nieaktualny>False</Nieaktualny>
+  </OsobaKontrahent>
+  <OsobaKontrahent id="OsobaKontrahent_3" guid="eba359e3-9ac3-4630-b163-d9914349a4e8">
+    <OsobaKontaktowa>KontaktOsoba_3</OsobaKontaktowa>
+    <Kontrahent>Kontrahent_4</Kontrahent>
+    <Glowny>False</Glowny>
+    <Stanowisko />
+    <Nieaktualny>False</Nieaktualny>
+  </OsobaKontrahent>
+  <OsobaKontrahent id="OsobaKontrahent_4" guid="9596f70d-1ec9-4681-90b1-768546c5c3cb">
+    <OsobaKontaktowa>KontaktOsoba_4</OsobaKontaktowa>
+    <Kontrahent>Kontrahent_5</Kontrahent>
+    <Glowny>False</Glowny>
+    <Stanowisko />
+    <Nieaktualny>False</Nieaktualny>
+  </OsobaKontrahent>
+  <OsobaKontrahent id="OsobaKontrahent_5" guid="175a0bdc-78d4-425c-b674-19b3692c4218">
+    <OsobaKontaktowa>KontaktOsoba_5</OsobaKontaktowa>
+    <Kontrahent>Kontrahent_10</Kontrahent>
+    <Glowny>False</Glowny>
+    <Stanowisko />
+    <Nieaktualny>False</Nieaktualny>
+  </OsobaKontrahent>
+  <OsobaKontrahent id="OsobaKontrahent_6" guid="1bc7f555-7d06-4d2e-aabf-bf57e94c7e08">
+    <OsobaKontaktowa>KontaktOsoba_6</OsobaKontaktowa>
+    <Kontrahent>Kontrahent_10</Kontrahent>
+    <Glowny>False</Glowny>
+    <Stanowisko />
+    <Nieaktualny>False</Nieaktualny>
+  </OsobaKontrahent>
+  <OsobaKontrahent id="OsobaKontrahent_7" guid="02189881-3198-4e7e-a889-23ee28965cd2">
+    <OsobaKontaktowa>KontaktOsoba_7</OsobaKontaktowa>
+    <Kontrahent>Kontrahent_6</Kontrahent>
+    <Glowny>True</Glowny>
+    <Stanowisko />
+    <Nieaktualny>False</Nieaktualny>
+  </OsobaKontrahent>
+  <OsobaKontrahent id="OsobaKontrahent_8" guid="be479c16-4ce5-4bfe-9479-54ec5eae9385">
+    <OsobaKontaktowa>KontaktOsoba_8</OsobaKontaktowa>
+    <Kontrahent>Kontrahent_11</Kontrahent>
+    <Glowny>True</Glowny>
+    <Stanowisko />
+    <Nieaktualny>False</Nieaktualny>
+  </OsobaKontrahent>
+  <OsobaKontrahent id="OsobaKontrahent_9" guid="58b7651b-312c-4cfd-a9c9-16da3e6477d6">
+    <OsobaKontaktowa>KontaktOsoba_9</OsobaKontaktowa>
+    <Kontrahent>Kontrahent_3</Kontrahent>
+    <Glowny>True</Glowny>
+    <Stanowisko />
+    <Nieaktualny>False</Nieaktualny>
+  </OsobaKontrahent>
+  <OsobaKontrahent id="OsobaKontrahent_10" guid="b1ea695b-74b7-4a52-8d67-5a850a02117c">
+    <OsobaKontaktowa>KontaktOsoba_10</OsobaKontaktowa>
+    <Kontrahent>Kontrahent_21</Kontrahent>
+    <Glowny>True</Glowny>
+    <Stanowisko />
+    <Nieaktualny>False</Nieaktualny>
+  </OsobaKontrahent>
+  <OsobaKontrahent id="OsobaKontrahent_11" guid="391b996a-97b1-481c-83c4-8bfaed71c32c">
+    <OsobaKontaktowa>KontaktOsoba_11</OsobaKontaktowa>
+    <Kontrahent>Kontrahent_20</Kontrahent>
+    <Glowny>True</Glowny>
+    <Stanowisko />
+    <Nieaktualny>False</Nieaktualny>
+  </OsobaKontrahent>
+  <OsobaKontrahent id="OsobaKontrahent_12" guid="c0977380-dbee-4302-8470-525b1ad88807">
+    <OsobaKontaktowa>KontaktOsoba_12</OsobaKontaktowa>
+    <Kontrahent>Kontrahent_8</Kontrahent>
+    <Glowny>True</Glowny>
+    <Stanowisko />
+    <Nieaktualny>False</Nieaktualny>
+  </OsobaKontrahent>
+  <OsobaKontrahent id="OsobaKontrahent_13" guid="0b6a041a-d3ad-46d9-b15a-ba72dc0f4b43">
+    <OsobaKontaktowa>KontaktOsoba_13</OsobaKontaktowa>
+    <Kontrahent>Kontrahent_12</Kontrahent>
+    <Glowny>True</Glowny>
+    <Stanowisko />
+    <Nieaktualny>False</Nieaktualny>
+  </OsobaKontrahent>
+  <OsobaKontrahent id="OsobaKontrahent_14" guid="d8348835-fcf4-4f84-9549-f3b9cb985eca">
+    <OsobaKontaktowa>KontaktOsoba_14</OsobaKontaktowa>
+    <Kontrahent>Kontrahent_13</Kontrahent>
+    <Glowny>True</Glowny>
+    <Stanowisko />
+    <Nieaktualny>False</Nieaktualny>
+  </OsobaKontrahent>
+  <OsobaKontrahent id="OsobaKontrahent_15" guid="af1e8155-8a03-45ea-9f7c-5727b982357d">
+    <OsobaKontaktowa>KontaktOsoba_15</OsobaKontaktowa>
+    <Kontrahent>Kontrahent_4</Kontrahent>
+    <Glowny>True</Glowny>
+    <Stanowisko />
+    <Nieaktualny>False</Nieaktualny>
+  </OsobaKontrahent>
+  <OsobaKontrahent id="OsobaKontrahent_16" guid="ff62658f-4e70-441d-8b3b-aded531f76b6">
+    <OsobaKontaktowa>KontaktOsoba_16</OsobaKontaktowa>
+    <Kontrahent>Kontrahent_18</Kontrahent>
+    <Glowny>True</Glowny>
+    <Stanowisko />
+    <Nieaktualny>False</Nieaktualny>
+  </OsobaKontrahent>
+  <OsobaKontrahent id="OsobaKontrahent_17" guid="a52d5240-75ce-4ab9-9c4e-3ef3a4357963">
+    <OsobaKontaktowa>KontaktOsoba_17</OsobaKontaktowa>
+    <Kontrahent>Kontrahent_4</Kontrahent>
+    <Glowny>True</Glowny>
+    <Stanowisko />
+    <Nieaktualny>False</Nieaktualny>
+  </OsobaKontrahent>
+  <OsobaKontrahent id="OsobaKontrahent_18" guid="b51132b4-e365-4bc5-b762-ad4cb9a2cc55">
+    <OsobaKontaktowa>KontaktOsoba_18</OsobaKontaktowa>
+    <Kontrahent>Kontrahent_16</Kontrahent>
+    <Glowny>True</Glowny>
+    <Stanowisko />
+    <Nieaktualny>False</Nieaktualny>
+  </OsobaKontrahent>
+  <OsobaKontrahent id="OsobaKontrahent_19" guid="9f24b9f0-0f64-46ce-a686-aa5c3029ee18">
+    <OsobaKontaktowa>KontaktOsoba_19</OsobaKontaktowa>
+    <Kontrahent>Kontrahent_19</Kontrahent>
+    <Glowny>True</Glowny>
+    <Stanowisko />
+    <Nieaktualny>False</Nieaktualny>
+  </OsobaKontrahent>
+  <OsobaKontrahent id="OsobaKontrahent_20" guid="e4f5a58c-fbd3-4344-a2e6-54d8757aca45">
+    <OsobaKontaktowa>KontaktOsoba_20</OsobaKontaktowa>
+    <Kontrahent>Kontrahent_15</Kontrahent>
+    <Glowny>True</Glowny>
+    <Stanowisko />
+    <Nieaktualny>False</Nieaktualny>
+  </OsobaKontrahent>
+  <OsobaKontrahent id="OsobaKontrahent_21" guid="fe81ce16-ca4e-4a9c-84f9-cbb0afb2e672">
+    <OsobaKontaktowa>KontaktOsoba_21</OsobaKontaktowa>
+    <Kontrahent>Kontrahent_14</Kontrahent>
+    <Glowny>True</Glowny>
+    <Stanowisko />
+    <Nieaktualny>False</Nieaktualny>
+  </OsobaKontrahent>
+
+	<!--DANE KONTAKTOWE-->
+	<!-- Abc -->
+	<DaneKontaktowe id="DaneKtn_01">
+		<Rodzaj>00000000-0001-0011-0001-000000000000</Rodzaj>
+		<Host>Kontrahent_2</Host>
+		<Kontakt>2680980</Kontakt>
+		<AdresExt>AdresExt_65</AdresExt>
+		<Domyslny>true</Domyslny>
+	</DaneKontaktowe>
+	<DaneKontaktowe id="DaneKtn_02">
+		<Rodzaj>00000000-0001-0011-0004-000000000000</Rodzaj>
+		<Host>Kontrahent_2</Host>
+		<Kontakt>2680980</Kontakt>
+		<AdresExt>AdresExt_65</AdresExt>
+		<Domyslny>true</Domyslny>
+	</DaneKontaktowe>
+	<!-- Rolmap -->
+	<DaneKontaktowe id="DaneKtn_03">
+		<Rodzaj>00000000-0001-0011-0001-000000000000</Rodzaj>
+		<Host>Kontrahent_4</Host>
+		<Kontakt>7654354</Kontakt>
+		<AdresExt>AdresExt_9</AdresExt>
+		<Domyslny>true</Domyslny>
+	</DaneKontaktowe>
+	<DaneKontaktowe id="DaneKtn_04">
+		<Rodzaj>00000000-0001-0011-0004-000000000000</Rodzaj>
+		<Host>Kontrahent_4</Host>
+		<Kontakt>7654354</Kontakt>
+		<AdresExt>AdresExt_9</AdresExt>
+		<Domyslny>true</Domyslny>
+	</DaneKontaktowe>
+	<!-- Zefir -->
+	<DaneKontaktowe id="DaneKtn_05">
+		<Rodzaj>00000000-0001-0011-0001-000000000000</Rodzaj>
+		<Host>Kontrahent_3</Host>
+		<Kontakt>2690033</Kontakt>
+		<AdresExt>AdresExt_103</AdresExt>
+		<Domyslny>true</Domyslny>
+	</DaneKontaktowe>
+	<DaneKontaktowe id="DaneKtn_06">
+		<Rodzaj>00000000-0001-0011-0004-000000000000</Rodzaj>
+		<Host>Kontrahent_3</Host>
+		<Kontakt>2690033</Kontakt>
+		<AdresExt>AdresExt_103</AdresExt>
+		<Domyslny>true</Domyslny>
+	</DaneKontaktowe>
+
+	<!-- Web users -->
+	<WebUser id="WebUser_1" guid="acdf9baf-34bd-4d84-b8d0-3209fa1d4393">
+		<Name>dostawca</Name>
+		<Password>B7D9D647D3F4856E</Password>
+		<FirstPassword />
+		<Type>Kontakt</Type>
+		<Locked>False</Locked>
+		<FullName>Jan Antczak</FullName>
+		<HasLicenceCRN>True</HasLicenceCRN>
+		<HasLicenceZMN>False</HasLicenceZMN>
+		<HasLicencePLN>False</HasLicencePLN>
+		<HasLicencePKN>False</HasLicencePKN>
+		<HasLicencePMN>False</HasLicencePMN>
+		<HasLicenceKBN>False</HasLicenceKBN>
+		<Host>KontaktOsoba:2d3a3cb7-95a4-47a0-9b41-a6f1d92bc88c</Host>
+		<Operator>00000000-0015-0001-0100-000000000010</Operator>
+		<HasLicenceWFN>False</HasLicenceWFN>
+		<Użytkownik_podpięty_do_profilu. />
+	</WebUser>
+	<WebUser id="WebUser_2" guid="2d3a3cb7-95a4-47a0-9b41-a6f1d92bc88c">
+		<Name>odbiorca</Name>
+		<Password>6F081AFE64626ACA</Password>
+		<FirstPassword />
+		<Type>Kontakt</Type>
+		<Locked>False</Locked>
+		<FullName>Akradiusz Paszyński</FullName>
+		<HasLicenceCRN>True</HasLicenceCRN>
+		<HasLicenceZMN>False</HasLicenceZMN>
+		<HasLicencePLN>False</HasLicencePLN>
+		<HasLicencePKN>False</HasLicencePKN>
+		<HasLicencePMN>False</HasLicencePMN>
+		<HasLicenceKBN>False</HasLicenceKBN>
+		<Host>KontaktOsoba:acdf9baf-34bd-4d84-b8d0-3209fa1d4393</Host>
+		<Operator>00000000-0015-0001-0100-000000000005</Operator>
+		<HasLicenceWFN>False</HasLicenceWFN>
+		<Użytkownik_podpięty_do_profilu. />
+	</WebUser>
+	<WebProfile id="WebProfile_1" guid="2d4ef7c0-1652-4555-b0ec-8e0270e3b2c8">
+		<Theme>eaNormal</Theme>
+		<UICulture>pl-PL</UICulture>
+		<LastActivityDate>01/01/0001 00:00:00</LastActivityDate>
+		<PreviousActivityDate>01/01/0001 00:00:00</PreviousActivityDate>
+		<LastActivityIP />
+		<PreviousActivityIP />
+		<User>acdf9baf-34bd-4d84-b8d0-3209fa1d4393</User>
+		<NumberOfVisits>0</NumberOfVisits>
+		<PasswordHistory>B7D9D647D3F4856E</PasswordHistory>
+		<RecentPasswordChange>12/03/2014 10:42:39</RecentPasswordChange>
+		<InvalidLoginCounter>0</InvalidLoginCounter>
+		<RecentInvalidLogin>01/01/0001 00:00:00</RecentInvalidLogin>
+		<AllowExternalProviders>False</AllowExternalProviders>
+		<ExternalProvider />
+		<ExternalProviderUserId />
+	</WebProfile>
+	<WebProfile id="WebProfile_2" guid="4f0a1b07-3e70-4e14-8dfe-09ec3c620dc4">
+		<Theme>eaNormal</Theme>
+		<UICulture>pl-PL</UICulture>
+		<LastActivityDate>01/01/0001 00:00:00</LastActivityDate>
+		<PreviousActivityDate>01/01/0001 00:00:00</PreviousActivityDate>
+		<LastActivityIP />
+		<PreviousActivityIP />
+		<User>2d3a3cb7-95a4-47a0-9b41-a6f1d92bc88c</User>
+		<NumberOfVisits>0</NumberOfVisits>
+		<PasswordHistory>6F081AFE64626ACA</PasswordHistory>
+		<RecentPasswordChange>12/03/2014 10:42:18</RecentPasswordChange>
+		<InvalidLoginCounter>0</InvalidLoginCounter>
+		<RecentInvalidLogin>01/01/0001 00:00:00</RecentInvalidLogin>
+		<AllowExternalProviders>False</AllowExternalProviders>
+		<ExternalProvider />
+		<ExternalProviderUserId />
+	</WebProfile>
+
+</session>

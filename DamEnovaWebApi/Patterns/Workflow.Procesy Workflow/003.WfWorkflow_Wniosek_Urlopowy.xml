@@ -1,0 +1,1684 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session xmlns="http://www.soneta.pl/schema/business">
+ 
+ <WFDefinition id="WFDefinition_3" guid="00000000-0016-0004-0003-00000000000d">
+    <Symbol>WnURL</Symbol>
+    <Name>Wniosek Urlopowy</Name>
+    <Numerator>
+      <Wzor>WorkflowDefinition.Symbol/DateFrom.Year:4/DateFrom.Month:2/*</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numerator>
+    <Description />
+    <SingleWorkflowInstance>True</SingleWorkflowInstance>
+    <EditType>Advanced</EditType>
+    <Locked>False</Locked>
+    <IsDeployed>True</IsDeployed>
+  </WFDefinition>
+  
+ 
+  <WizardDefinition id="WizardDefinition_20" guid="00000000-0015-0004-0020-00000000000d">
+    <Name>WU - Tworzony wniosek</Name>
+    <Description />
+    <Locked>False</Locked>
+    <ParentType>WnioskiUrlopowe</ParentType>
+    <Algorithm>True</Algorithm>
+    <Code>#region CreateSteps
+
+public override WizardStepDefinition[] CreateSteps() {
+	return Definition.Steps.ToArray&lt;WizardStepDefinition&gt;();
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsEnable
+
+public override bool IsEnable() {
+	return true;
+}
+
+#endregion
+
+#region BeforeSaveAndFinish
+
+public override void BeforeSaveAndFinish() {
+}
+
+#endregion
+
+#region AfterSaveAndFinish
+
+public override void AfterSaveAndFinish() {
+	using (Session session = Login.CreateSession(false, false, "WizardDefinitionCalculator"))
+	{
+		Context context = Context.Clone(session);
+		using (ITransaction tran = session.Logout(true))
+		{
+			// TODO Dodaj kod wykonywany po zapisie danych w kreatorze
+
+			tran.Commit();
+		}
+		session.Save();
+	}
+}
+
+#endregion
+
+#region ForceUnloockParent
+
+public override bool ForceUnloockParent(Soneta.Business.Db.Task task) {
+	return true;
+}
+
+#endregion</Code>
+    <Lp>20</Lp>
+    <Steps>
+      <WizardStepDefinition id="WizardStepDefinition_83" guid="f82832f2-4d54-44f0-bbaf-e8fc2da07258">
+        <Name>Tworzony wniosek o delegację (Wnioski o urlopy, delegacje)</Name>
+        <Lp>1</Lp>
+        <Description />
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_20</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>WniosekUrlopowy.Net.pageform.xml</Page>
+        <PageDesc>Ogólne</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+	return null;
+}
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+	return true;
+}
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+	return null;
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Business.Db.Wizard.WizardStepDefinition,Soneta.Business' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+    </Steps>
+  </WizardDefinition>
+  
+  <WizardDefinition id="WizardDefinition_21" guid="00000000-0015-0004-0021-00000000000d">
+    <Name>WU - Odrzucony wniosek</Name>
+    <Description />
+    <Locked>False</Locked>
+    <ParentType>WnioskiUrlopowe</ParentType>
+    <Algorithm>False</Algorithm>
+    <Code>#region CreateSteps
+
+public override WizardStepDefinition[] CreateSteps() {
+	return Definition.Steps.ToArray&lt;WizardStepDefinition&gt;();
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsEnable
+
+public override bool IsEnable() {
+	return true;
+}
+
+#endregion
+
+#region BeforeSaveAndFinish
+
+public override void BeforeSaveAndFinish() {
+}
+
+#endregion
+
+#region AfterSaveAndFinish
+
+public override void AfterSaveAndFinish() {
+	using (Session session = Login.CreateSession(false, false, "WizardDefinitionCalculator"))
+	{
+		Context context = Context.Clone(session);
+		using (ITransaction tran = session.Logout(true))
+		{
+			// TODO Dodaj kod wykonywany po zapisie danych w kreatorze
+
+			tran.Commit();
+		}
+		session.Save();
+	}
+}
+
+#endregion
+
+#region ForceUnloockParent
+
+public override bool ForceUnloockParent(Soneta.Business.Db.Task task) {
+	return false;
+}
+
+#endregion</Code>
+    <Lp>21</Lp>
+    <Steps>
+      <WizardStepDefinition id="WizardStepDefinition_84" guid="8f51c880-d62c-47f1-af91-17b3e10de4e5">
+        <Name>Odrzucony wniosek o delegację</Name>
+        <Lp>1</Lp>
+        <Description />
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_21</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>WniosekUrlopowy.WniosekUrlopowy.pageform.xml</Page>
+        <PageDesc>Ogólne</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+	return null;
+}
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+	return true;
+}
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+	return null;
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>True</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Business.Db.Wizard.WizardStepDefinition,Soneta.Business' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+    </Steps>
+  </WizardDefinition>
+  <WizardDefinition id="WizardDefinition_22" guid="00000000-0015-0004-0022-00000000000d">
+    <Name>WU - Wniosek pracownika</Name>
+    <Description />
+    <Locked>False</Locked>
+    <ParentType>WnioskiUrlopowe</ParentType>
+    <Algorithm>True</Algorithm>
+    <Code>#region CreateSteps
+
+public override WizardStepDefinition[] CreateSteps() {
+	return Definition.Steps.ToArray&lt;WizardStepDefinition&gt;();
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsEnable
+
+public override bool IsEnable() {
+	return true;
+}
+
+#endregion
+
+#region BeforeSaveAndFinish
+
+public override void BeforeSaveAndFinish() {
+}
+
+#endregion
+
+#region AfterSaveAndFinish
+
+public override void AfterSaveAndFinish() {
+	using (Session session = Login.CreateSession(false, false, "WizardDefinitionCalculator"))
+	{
+		Context context = Context.Clone(session);
+		using (ITransaction tran = session.Logout(true))
+		{
+			// TODO Dodaj kod wykonywany po zapisie danych w kreatorze
+
+			tran.Commit();
+		}
+		session.Save();
+	}
+}
+
+#endregion
+
+#region ForceUnloockParent
+
+public override bool ForceUnloockParent(Soneta.Business.Db.Task task) {
+	return true;
+}
+
+#endregion</Code>
+    <Lp>22</Lp>
+    <Steps>
+      <WizardStepDefinition id="WizardStepDefinition_88" guid="1d7a0fa2-a101-4de1-8764-db72c3aa3987">
+    <Name>Ogólne</Name>
+    <Lp>1</Lp>
+    <Description />
+    <Locked>False</Locked>
+    <DescriptionText />
+    <WizardDefinition>00000000-0015-0004-0022-00000000000d</WizardDefinition>
+    <StepType>Page</StepType>
+    <Page>WniosekUrlopowy.WniosekUrlopowy.pageform.xml</Page>
+    <PageDesc>Ogólne</PageDesc>
+    <DefinedPageXML />
+    <Report />
+    <Collection />
+    <Code>#region Accepted
+
+public override Exception Accepted() {
+	return null;
+}
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+	return true;
+}
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+	return null;
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+    <Save>False</Save>
+    <ParentType />
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <IsReadOnlyStep>False</IsReadOnlyStep>
+    <WorkersTypes>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfActionAttributeListViewItem xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ActionAttributeListViewItem&gt;
+    &lt;WorkerType&gt;Soneta.Kadry.UI.KadryNet.Workers.PracownikNetWnioskiUrlopowe, Soneta.KadryPlace.UI&lt;/WorkerType&gt;
+    &lt;MethodName&gt;Zatwierdz&lt;/MethodName&gt;
+  &lt;/ActionAttributeListViewItem&gt;
+  &lt;ActionAttributeListViewItem&gt;
+    &lt;WorkerType&gt;Soneta.Kadry.UI.KadryNet.Workers.PracownikNetWnioskiUrlopowe, Soneta.KadryPlace.UI&lt;/WorkerType&gt;
+    &lt;MethodName&gt;Odrzuc&lt;/MethodName&gt;
+  &lt;/ActionAttributeListViewItem&gt;
+&lt;/ArrayOfActionAttributeListViewItem&gt;</WorkersTypes>
+    <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.WniosekUrlopowy,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+    <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+    </Steps>
+  </WizardDefinition>
+  <WizardDefinition id="WizardDefinition_23" guid="00000000-0015-0004-0023-00000000000d">
+    <Name>WU - Składanie wniosku</Name>
+    <Description />
+    <Locked>False</Locked>
+    <ParentType>WFWorkflows</ParentType>
+    <Algorithm>True</Algorithm>
+    <Code>#region CreateSteps
+
+public override WizardStepDefinition[] CreateSteps() {
+	return Definition.Steps.ToArray&lt;WizardStepDefinition&gt;();
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsEnable
+
+public override bool IsEnable() {
+	return true;
+}
+
+#endregion
+
+#region BeforeSaveAndFinish
+
+public override void BeforeSaveAndFinish() {
+}
+
+#endregion
+
+#region AfterSaveAndFinish
+
+public override void AfterSaveAndFinish() {
+	using (Session session = Login.CreateSession(false, false, "WizardDefinitionCalculator"))
+	{
+		Context context = Context.Clone(session);
+		using (ITransaction tran = session.Logout(true))
+		{
+			// TODO Dodaj kod wykonywany po zapisie danych w kreatorze
+
+			tran.Commit();
+		}
+		session.Save();
+	}
+}
+
+#endregion
+
+#region ForceUnloockParent
+
+public override bool ForceUnloockParent(Soneta.Business.Db.Task task) {
+	return false;
+}
+
+#endregion</Code>
+    <Lp>23</Lp>
+    <Steps>
+      <WizardStepDefinition id="WizardStepDefinition_99" guid="6406faa9-a036-4372-86df-3d7ee6f00de1">
+        <Name>Prac &amp; Wniosek</Name>
+        <Lp>1</Lp>
+        <Description />
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_23</WizardDefinition>
+        <StepType>Defined</StepType>
+        <Page />
+        <PageDesc />
+        <DefinedPageXML>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfPropertyItem xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;-1&lt;/Index&gt;
+    &lt;Title&gt;Pracownik&lt;/Title&gt;
+    &lt;Name&gt;Features.Prac&lt;/Name&gt;
+    &lt;PromptWidth&gt;0&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;PostBack&gt;false&lt;/PostBack&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;1&lt;/Index&gt;
+    &lt;Title&gt;Data&lt;/Title&gt;
+    &lt;Name&gt;Features.WnData&lt;/Name&gt;
+    &lt;PromptWidth&gt;0&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;PostBack&gt;false&lt;/PostBack&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;2&lt;/Index&gt;
+    &lt;Title&gt;Okres&lt;/Title&gt;
+    &lt;Name&gt;Features.WnOkres&lt;/Name&gt;
+    &lt;PromptWidth&gt;0&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;PostBack&gt;false&lt;/PostBack&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;2&lt;/Index&gt;
+    &lt;Title&gt;Wniosek urlopowy&lt;/Title&gt;
+    &lt;Name&gt;Features.WnUrl&lt;/Name&gt;
+    &lt;PromptWidth&gt;0&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;PostBack&gt;false&lt;/PostBack&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+&lt;/ArrayOfPropertyItem&gt;</DefinedPageXML>
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+	
+  	using (ITransaction tran = Session.Logout(true))
+    {
+      var row = WorkflowTools.Generate(DefinitionRow, (Soneta.Workflow.Config.OGSchema)Session[WorkflowModule.GetInstance(Session).OGSchemas.ByName["WnUrl"]], Context);
+			tran.Commit();
+     }
+		
+
+return null;
+}
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+	return true;
+}
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+	return null;
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Workflow.WFWorkflow,Soneta.Workflow' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_100" guid="55482047-2ad5-4dd3-b5ad-04e1a1f0032b">
+        <Name>Wniosek</Name>
+        <Lp>2</Lp>
+        <Description />
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_23</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>WniosekUrlopowy.WniosekUrlopowy.pageform.xml</Page>
+        <PageDesc>Ogólne</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+	return null;
+}
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+	return true;
+}
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+	return null;
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType>WnioskiUrlopowe</ParentType>
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Workflow.WFWorkflow,Soneta.Workflow' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+    </Steps>
+  </WizardDefinition>
+  <TaskDefinition id="TaskDefinition_38" guid="2647f590-6e46-422b-8423-461057d4018e">
+    <TableName>WnioskiUrlopowe</TableName>
+    <Name>DEL - Delegacja służbowa_Zadanie_1</Name>
+    <FormatedName>Akceptacja wniosku urlopowego</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_DEL__Delegacja_służbowa_Zadanie_1937462240 : TaskCalculatorWnioskiUrlopowe {
+
+public Task_DEL__Delegacja_służbowa_Zadanie_1937462240() { }
+public Task_DEL__Delegacja_służbowa_Zadanie_1937462240(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin overdue time condition **
+
+//** end overdue time condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+public override bool IsVisibleInMenu(GuidedRow guidedRow) {
+	Soneta.Kadry.WniosekUrlopowy row = (Soneta.Kadry.WniosekUrlopowy)guidedRow;
+	return true;
+}
+
+public override bool IsVisibleInMenu() {
+	return base.IsVisibleInMenu();
+}
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	
+	Soneta.Kadry.KadryModule km = Soneta.Kadry.KadryModule.GetInstance(Session);
+	Soneta.Business.View widok = km.WnioskiUrlopowe.CreateView();
+	widok.Condition = new FieldCondition.Equal("Features.WnProces",workflow);
+		
+	return (Soneta.Kadry.WniosekUrlopowy)widok.GetNext(null); //base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// 1. Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// 2. Jeżeli pkt. 1 nie ustawi wartości to:
+//   - jeżeli definicja zadania jest powiązana z tabelą WFWorkflow to zwracany jest parametr workflow metody
+//   - jeżeli definicja zadania nie jest startową zwracana jest wartość wywołania metody workflow.SearchParents(...), która wyszukuje obiekt o określonym w definicji zadania typie powiązany z poprzednim zadaniem
+//   - jeżeli definicja zadania jest powiązana z tabelą zgodną z przekazanym wierszem (row) to zwracany jest parametr workflow metody
+// W innym przypadku zwracana jest wartość null
+// Jeżeli metoda wywoływana jest dla akcji automatycznej nie powiązanej z workflow parametry task, workflow i row mają wartość null natomiast context jest pusty (kalkulator ma ustawioną tylko właściwość Definition)
+//** end get parent **
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>InMenu</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition>WizardDefinition_22</WizardDefinition>
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_3</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0006-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="173,8769" Y="273,2498" /&gt;&lt;Size Width="240,0285" Height="84,59529" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_59">
+        <TaskDefinition>TaskDefinition_38</TaskDefinition>
+        <TableName>WnioskiUrlopowe</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { WniosekUrlopowy };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// WniosekUrlopowy : WniosekUrlopowy - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu WniosekUrlopowy,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_39" guid="1909cce9-3f0c-4e2f-8957-841781f3bc39">
+    <TableName>WnioskiUrlopowe</TableName>
+    <Name>DEL - Odrzucono wniosek</Name>
+    <FormatedName>Odrzucony wniosek o urlop</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>True</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_DEL__Odrzucono_wniosek397244554 : TaskCalculatorWnioskiUrlopowe {
+
+public Task_DEL__Odrzucono_wniosek397244554() { }
+public Task_DEL__Odrzucono_wniosek397244554(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		//OperatorRoleType = OperatorRoleType.Other;
+		//Task.TaskUser = (Soneta.Business.ITaskUser)Row.Pracownik;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin overdue time condition **
+
+//** end overdue time condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+public override bool IsVisibleInMenu(GuidedRow guidedRow) {
+	Soneta.Kadry.WniosekUrlopowy row = (Soneta.Kadry.WniosekUrlopowy)guidedRow;
+	return true;
+}
+
+public override bool IsVisibleInMenu() {
+	return base.IsVisibleInMenu();
+}
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// 1. Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// 2. Jeżeli pkt. 1 nie ustawi wartości to:
+//   - jeżeli definicja zadania jest powiązana z tabelą WFWorkflow to zwracany jest parametr workflow metody
+//   - jeżeli definicja zadania nie jest startową zwracana jest wartość wywołania metody workflow.SearchParents(...), która wyszukuje obiekt o określonym w definicji zadania typie powiązany z poprzednim zadaniem
+//   - jeżeli definicja zadania jest powiązana z tabelą zgodną z przekazanym wierszem (row) to zwracany jest parametr workflow metody
+// W innym przypadku zwracana jest wartość null
+// Jeżeli metoda wywoływana jest dla akcji automatycznej nie powiązanej z workflow parametry task, workflow i row mają wartość null natomiast context jest pusty (kalkulator ma ustawioną tylko właściwość Definition)
+//** end get parent **
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>InMenu</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition>WizardDefinition_21</WizardDefinition>
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>True</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_3</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0006-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="584,835" Y="365,2272" /&gt;&lt;Size Width="224,5663" Height="84,07507" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_60">
+        <TaskDefinition>TaskDefinition_39</TaskDefinition>
+        <TableName>WnioskiUrlopowe</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { WniosekUrlopowy };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// WniosekUrlopowy : WniosekUrlopowy - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu WniosekUrlopowy,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_40" guid="65e79548-438f-48d1-b285-41588e5b453d">
+    <TableName>WnioskiUrlopowe</TableName>
+    <Name>DEL - Delegacja służbowa_Koniec_1</Name>
+    <FormatedName>Koniec</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_DEL__Delegacja_służbowa_Koniec_137959822 : TaskCalculatorWnioskiUrlopowe {
+
+public Task_DEL__Delegacja_służbowa_Koniec_137959822() { }
+public Task_DEL__Delegacja_służbowa_Koniec_137959822(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin overdue time condition **
+
+//** end overdue time condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// 1. Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// 2. Jeżeli pkt. 1 nie ustawi wartości to:
+//   - jeżeli definicja zadania jest powiązana z tabelą WFWorkflow to zwracany jest parametr workflow metody
+//   - jeżeli definicja zadania nie jest startową zwracana jest wartość wywołania metody workflow.SearchParents(...), która wyszukuje obiekt o określonym w definicji zadania typie powiązany z poprzednim zadaniem
+//   - jeżeli definicja zadania jest powiązana z tabelą zgodną z przekazanym wierszem (row) to zwracany jest parametr workflow metody
+// W innym przypadku zwracana jest wartość null
+// Jeżeli metoda wywoływana jest dla akcji automatycznej nie powiązanej z workflow parametry task, workflow i row mają wartość null natomiast context jest pusty (kalkulator ma ustawioną tylko właściwość Definition)
+//** end get parent **
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>Auto</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition>WizardDefinition_20</WizardDefinition>
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_3</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0003-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="558,0018" Y="540,8743" /&gt;&lt;Size Width="283,9602" Height="84,04264" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_61">
+        <TaskDefinition>TaskDefinition_40</TaskDefinition>
+        <TableName>WnioskiUrlopowe</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { WniosekUrlopowy };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// WniosekUrlopowy : WniosekUrlopowy - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu WniosekUrlopowy,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_50" guid="5fb393d6-10a3-42cd-83f3-84670aeada91">
+    <TableName>WFWorkflows</TableName>
+    <Name>DEL - Delegacja służbowa_Start_1</Name>
+    <FormatedName>Wniosek urlopowy</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_DEL__Delegacja_służbowa_Start_11497156908 : TaskCalculatorWFWorkflows {
+
+public Task_DEL__Delegacja_służbowa_Start_11497156908() { }
+public Task_DEL__Delegacja_służbowa_Start_11497156908(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin overdue time condition **
+
+//** end overdue time condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+public override bool IsVisibleInMenu(GuidedRow guidedRow) {
+	Soneta.Workflow.WFWorkflow row = (Soneta.Workflow.WFWorkflow)guidedRow;
+	return true;
+}
+
+public override bool IsVisibleInMenu() {
+	return base.IsVisibleInMenu();
+}
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// 1. Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// 2. Jeżeli pkt. 1 nie ustawi wartości to:
+//   - jeżeli definicja zadania jest powiązana z tabelą WFWorkflow to zwracany jest parametr workflow metody
+//   - jeżeli definicja zadania nie jest startową zwracana jest wartość wywołania metody workflow.SearchParents(...), która wyszukuje obiekt o określonym w definicji zadania typie powiązany z poprzednim zadaniem
+//   - jeżeli definicja zadania jest powiązana z tabelą zgodną z przekazanym wierszem (row) to zwracany jest parametr workflow metody
+// W innym przypadku zwracana jest wartość null
+// Jeżeli metoda wywoływana jest dla akcji automatycznej nie powiązanej z workflow parametry task, workflow i row mają wartość null natomiast context jest pusty (kalkulator ma ustawioną tylko właściwość Definition)
+//** end get parent **
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>InMenu</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition>WizardDefinition_23</WizardDefinition>
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>True</IsStart>
+    <WFDefinition>WFDefinition_3</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0005-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="168" Y="85,99976" /&gt;&lt;Size Width="240" Height="84,00001" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_68">
+        <TaskDefinition>TaskDefinition_50</TaskDefinition>
+        <TableName>WFWorkflows</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { WFWorkflow };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// WFWorkflow : WFWorkflow - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu WFWorkflow,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_51" guid="c3360d51-853a-4394-90c8-b2382d776e49">
+    <TableName>WnioskiUrlopowe</TableName>
+    <Name>DEL - Delegacja służbowa_Powiadomienie_1</Name>
+    <FormatedName>Udzielenie urlopu</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_DEL__Delegacja_służbowa_Powiadomienie_1919382032 : TaskCalculatorWnioskiUrlopowe {
+
+public Task_DEL__Delegacja_służbowa_Powiadomienie_1919382032() { }
+public Task_DEL__Delegacja_służbowa_Powiadomienie_1919382032(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		OperatorRoleType = OperatorRoleType.Operator;
+		Operator = Row.FirstChangeInfo.Operator;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin overdue time condition **
+
+//** end overdue time condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+public override bool IsVisibleInMenu(GuidedRow guidedRow) {
+	Soneta.Kadry.WniosekUrlopowy row = (Soneta.Kadry.WniosekUrlopowy)guidedRow;
+	return true;
+}
+
+public override bool IsVisibleInMenu() {
+	return base.IsVisibleInMenu();
+}
+
+
+/*[Action("Akceptuj", Target = ActionTarget.Toolbar)]
+public void Akceptacja(){
+	using (Session session = Task.Session.Login.CreateSession(false, false))
+	{
+		using (ITransaction tran = session.Logout(true)){
+			if (session != Task.Session) {   
+	    	Task = Session[Task] as Soneta.Business.Db.Task;
+	    	}
+			Task.WFTransition = (IWFTransition)Task.Definition.WFTransitions.GetNext(null);
+	  	tran.Commit();
+	  	}
+	   session.Save();
+	}
+}*/
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// 1. Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// 2. Jeżeli pkt. 1 nie ustawi wartości to:
+//   - jeżeli definicja zadania jest powiązana z tabelą WFWorkflow to zwracany jest parametr workflow metody
+//   - jeżeli definicja zadania nie jest startową zwracana jest wartość wywołania metody workflow.SearchParents(...), która wyszukuje obiekt o określonym w definicji zadania typie powiązany z poprzednim zadaniem
+//   - jeżeli definicja zadania jest powiązana z tabelą zgodną z przekazanym wierszem (row) to zwracany jest parametr workflow metody
+// W innym przypadku zwracana jest wartość null
+// Jeżeli metoda wywoływana jest dla akcji automatycznej nie powiązanej z workflow parametry task, workflow i row mają wartość null natomiast context jest pusty (kalkulator ma ustawioną tylko właściwość Definition)
+//** end get parent **
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Created</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>InMenu</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition>00000000-0015-0004-0011-000000000000</WizardDefinition>
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_3</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0004-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="174" Y="543" /&gt;&lt;Size Width="240" Height="84,00001" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_69">
+        <TaskDefinition>TaskDefinition_51</TaskDefinition>
+        <TableName>WnioskiUrlopowe</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { WniosekUrlopowy };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// WniosekUrlopowy : WniosekUrlopowy - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu WniosekUrlopowy,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <WFTransition id="WFTransition_1" guid="7739043e-0f85-45a6-9e86-8a771e94f90e">
+    <Name>Odrzucam</Name>
+    <Source>TaskDefinition_38</Source>
+    <Target>TaskDefinition_39</Target>
+    <WFTransitionDefinition />
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+  Soneta.Kadry.WniosekUrlopowy wu= (Soneta.Kadry.WniosekUrlopowy) task.Parent;
+	return wu.Stan==Soneta.Kadry.StanWnioskuUrlopowego.Odrzucony;
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="322,7144" Y="341,0897" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;Point X="0" Y="48,27505" /&gt;&lt;Point X="297,675" Y="48,27505" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>False</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_2" guid="9f58b2bb-2cd0-4e46-8871-6ad87e0853d8">
+    <Name>Zakończ</Name>
+    <Source>TaskDefinition_39</Source>
+    <Target>TaskDefinition_40</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0002-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+	return task.WFTransition!=null &amp;&amp; task.WFTransition==Transition;
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="584,835" Y="453,0214" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;Point X="0" Y="89,6633" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>True</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_3" guid="dccf7204-1486-4eed-b16a-4a196dc102d6">
+    <Name>Akceptuję</Name>
+    <Source>TaskDefinition_38</Source>
+    <Target>TaskDefinition_51</Target>
+    <WFTransitionDefinition />
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+  Soneta.Kadry.WniosekUrlopowy wu= (Soneta.Kadry.WniosekUrlopowy) task.Parent;
+	return wu.Stan==Soneta.Kadry.StanWnioskuUrlopowego.Zaakceptowany;
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="174" Y="408,4761" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;Point X="0" Y="183,0479" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>False</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_16" guid="02b9562a-1f3a-4825-857d-f47fbf1b4b94">
+    <Name>Przekaż</Name>
+    <Source>TaskDefinition_50</Source>
+    <Target>TaskDefinition_38</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0002-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+	return task.WFTransition!=null &amp;&amp; task.WFTransition==Transition;
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="168" Y="179,4759" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;Point X="0" Y="100,9524" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>True</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_17" guid="66e252a1-aff5-4c18-ae68-9edade1bb914">
+    <Name>Potwierdzam</Name>
+    <Source>TaskDefinition_51</Source>
+    <Target>TaskDefinition_40</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0002-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+	return task.WFTransition!=null &amp;&amp; task.WFTransition==Transition;
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="355,0108" Y="540,8743" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;Point X="120,0217" Y="0" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>True</IsUserDecision>
+  </WFTransition>
+  <FeatureDefinition id="FeatureDefinition_6" guid="2d1b238f-019a-4dcd-bc53-e7c6c4a2067e">
+    <TableName>WFWorkflows</TableName>
+    <Name>Prac</Name>
+    <Category />
+    <Description />
+    <TypeNumber>Reference</TypeNumber>
+    <TypeInformation>Pracownicy</TypeInformation>
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_8" guid="fca1e980-44ee-4d9f-8995-9184caaf0f2c">
+    <TableName>WFWorkflows</TableName>
+    <Name>WnData</Name>
+    <Category />
+    <Description />
+    <TypeNumber>Date</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_9" guid="6057840e-70db-4330-b83f-2d8c9299492e">
+    <TableName>WFWorkflows</TableName>
+    <Name>WnOkres</Name>
+    <Category />
+    <Description />
+    <TypeNumber>FromTo</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_7" guid="384d10d3-4c38-40f5-bac0-3dc2006ca0a6">
+    <TableName>WFWorkflows</TableName>
+    <Name>WnUrl</Name>
+    <Category />
+    <Description />
+    <TypeNumber>Reference</TypeNumber>
+    <TypeInformation>DefNieobecnosci</TypeInformation>
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DBSet</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code>public DefinicjaNieobecnosci Feature_WnUrl(DefinicjaNieobecnosci value) {
+    return value;
+}
+public Soneta.Business.View GetListWnUrl(){
+	Soneta.Kadry.KadryModule km = Soneta.Kadry.KadryModule.GetInstance(Session);
+	Soneta.Business.View widok = km.Kalend.DefNieobecnosci.CreateView();
+	widok.Condition &amp;= new FieldCondition.Equal("ID",26);
+		//Lista wniosków:
+			//widok.Condition &amp;= new FieldCondition.GreaterEqual("ID",9)&amp;new FieldCondition.LessEqual("ID",32);
+	return widok;
+	
+}
+// W kodzie możesz używać następujacych zmiennych:
+// Row: WFWorkflow - Wiersz przeliczanej cechy
+// Table: WFWorkflows - Tabela wiersza przeliczanej cechy
+// Module: WorkflowModule - Moduł, w którym znajduje się tabela
+// Session: Session - Obiekt sesji dający dostęp do wszystkich danych programu
+</Code>
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_5" guid="1502a17d-8371-4b9b-8419-bced0b643891">
+    <TableName>WnioskiUrlopowe</TableName>
+    <Name>WniosekUrlopowy</Name>
+    <Category />
+    <Description />
+    <TypeNumber>Reference</TypeNumber>
+    <TypeInformation>WnioskiUrlopowe</TypeInformation>
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_10" guid="d4303ce3-4bd7-4da6-a573-21be0d0bbcad">
+    <TableName>WnioskiUrlopowe</TableName>
+    <Name>WnProces</Name>
+    <Category />
+    <Description />
+    <TypeNumber>Reference</TypeNumber>
+    <TypeInformation>WFWorkflows</TypeInformation>
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <Info />
+  </FeatureDefinition>
+  <OGSchema id="OGSchema_5" guid="00000000-0016-0005-0005-00000000000d">
+    <Name>WnUrl</Name>
+    <Description />
+    <SourceType>WFWorkflows</SourceType>
+    <TargetType>WnioskiUrlopowe</TargetType>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;PropertyMappings xmlns="http://www.enova.pl/schemas/OGPropertyMapping"&gt;&lt;PropertyMapping&gt;&lt;sourceproperty&gt;SourceRow.Features["WnData"]&lt;/sourceproperty&gt;&lt;targetproperty&gt;Data&lt;/targetproperty&gt;&lt;isrequired&gt;1&lt;/isrequired&gt;&lt;iscontextrequired&gt;0&lt;/iscontextrequired&gt;&lt;/PropertyMapping&gt;&lt;PropertyMapping&gt;&lt;sourceproperty&gt;SourceRow.Features["WnOkres"]&lt;/sourceproperty&gt;&lt;targetproperty&gt;Okres&lt;/targetproperty&gt;&lt;isrequired&gt;1&lt;/isrequired&gt;&lt;iscontextrequired&gt;0&lt;/iscontextrequired&gt;&lt;/PropertyMapping&gt;&lt;PropertyMapping&gt;&lt;targetproperty&gt;Stan&lt;/targetproperty&gt;&lt;isrequired&gt;1&lt;/isrequired&gt;&lt;iscontextrequired&gt;0&lt;/iscontextrequired&gt;&lt;/PropertyMapping&gt;&lt;/PropertyMappings&gt;</XML>
+    <Statement>#region InitTargetRow
+
+public override void InitTargetRow(object targetRow) {
+	base.InitTargetRow(targetRow);
+
+	Soneta.Kadry.WniosekUrlopowy castedRow = targetRow as Soneta.Kadry.WniosekUrlopowy;
+	if (castedRow != null) {
+	//	Context.Set(castedRow);
+		castedRow.Features["WnProces"] = SourceRow;
+		// Tutaj można inicjować właściwości instancji obiektu
+
+	}
+}
+
+#endregion
+
+#region InvokeConstructor
+
+public override object InvokeConstructor(System.Reflection.ConstructorInfo ci) {
+	object[] param = new object[2];
+	Soneta.Kadry.KadryModule modul = Soneta.Kadry.KadryModule.GetInstance(Session);
+	param[0] = SourceRow.Features["Prac"]; //modul.Pracownicy.WgKodu["006"];
+	// Soneta.Kalend.DefinicjaNieobecnosci SourceRow.Features["WnUrl"]; //
+	param[1] = SourceRow.Features["WnUrl"];//modul.Kalend.DefNieobecnosci[26];
+	var cos = ci.Invoke(param);
+	
+	return cos;
+}
+
+#endregion</Statement>
+    <CtorDesc>Soneta.Kadry.WniosekUrlopowy, Soneta.KadryPlace|Soneta.Kadry.Pracownik, Soneta.KadryPlace|pracownik|Soneta.Kalend.DefinicjaNieobecnosci, Soneta.KadryPlace|definicja</CtorDesc>
+  </OGSchema>
+  </session>

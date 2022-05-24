@@ -1,0 +1,1193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session xmlns="http://www.soneta.pl/schema/business">
+  <CfgNode id="CfgNode_20" guid="00000000-9014-0013-0000-000000000000">
+    <Name>Licencje</Name>
+    <Parent>00000000-9014-0000-0000-000000000000</Parent>
+    <Type>Node</Type>
+    <Attributes />
+  </CfgNode>
+  <CfgNode id="CfgNode_21" guid="00000000-9014-0014-0000-000000000000">
+    <Parent>00000000-9014-0013-0000-000000000000</Parent>
+    <Name>Ogólne</Name>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_35">
+        <Node>CfgNode_21</Node>
+        <Name>LicencjaKsięgowa</Name>
+        <Type>_int</Type>
+        <StrValue>2</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_4" guid="00000000-9014-0002-0000-000000000000">
+    <Name>Storages</Name>
+    <Parent>00000000-9014-0000-0000-000000000000</Parent>
+    <Type>Node</Type>
+    <Attributes />
+  </CfgNode>
+
+  <CfgNode id="CfgNode_936" guid="5f03153f-207a-483e-aca5-e8b87ed9efc4">
+    <Name>ustawienia formularzy prywatne</Name>
+    <Parent>00000000-9014-0002-0000-000000000000</Parent>
+    <Type>Node</Type>
+    <Attributes />
+  </CfgNode>
+  <CfgNode id="CfgNode_24" guid="00000000-2001-0001-0001-000000000000">
+    <Name>Firma</Name>
+    <Parent>00000000-2001-0000-0000-000000000000</Parent>
+    <Type>Node</Type>
+    <Attributes />
+  </CfgNode>
+  <CfgNode id="CfgNode_940" guid="3f6cace0-e6f4-404b-bcba-bcfe6ac9c7bd">
+    <Name>Dane ewidencyjne</Name>
+    <Parent>00000000-2001-0001-0001-000000000000</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1538">
+        <Name>Dane osoby</Name>
+        <Node>CfgNode_940</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1539">
+        <Name>Data rozpoczęcia działalności</Name>
+        <Node>CfgNode_940</Node>
+        <Type>_date</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1540">
+        <Name>Osoba fizyczna</Name>
+        <Node>CfgNode_940</Node>
+        <Type>_boolean</Type>
+        <StrValue>true</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1541">
+        <Name>PESEL</Name>
+        <Node>CfgNode_940</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1542">
+        <Name>Rodzaj działalności</Name>
+        <Node>CfgNode_940</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_942" guid="ddd7a889-1e4a-4423-b3ae-f6167b0cc42b">
+    <Name>Rejestracja</Name>
+    <Parent>CfgNode_24</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1547">
+        <Name>Data</Name>
+        <Node>CfgNode_942</Node>
+        <Type>_date</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1548">
+        <Name>Nazwa rejestru</Name>
+        <Node>CfgNode_942</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1549">
+        <Name>Numer</Name>
+        <Node>CfgNode_942</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1550">
+        <Name>Organ rejestrowy</Name>
+        <Node>CfgNode_942</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_43" guid="00000000-2001-0005-0000-000000000000">
+    <Name>Operatorzy</Name>
+    <Parent>00000000-2001-0000-0000-000000000000</Parent>
+    <Type>Node</Type>
+    <Attributes />
+  </CfgNode>
+    <CfgNode id="CfgNode_25" guid="00000000-2001-0001-0002-000000000000">
+    <Name>Pieczątka</Name>
+    <Parent>CfgNode_24</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1502">
+        <Name>EKD</Name>
+        <Node>CfgNode_25</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1506">
+        <Name>EuVAT</Name>
+        <Node>CfgNode_25</Node>
+        <Type>_string</Type>
+        <StrValue>PL692-21-85-175</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1508">
+        <Name>EuVAT2</Name>
+        <Node>CfgNode_25</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1503">
+        <Name>Nazwa</Name>
+        <Node>CfgNode_25</Node>
+        <Type>_string</Type>
+        <StrValue>DEMO sp z o.o.</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1504">
+        <Name>Nazwa skrócona</Name>
+        <Node>CfgNode_25</Node>
+        <Type>_string</Type>
+        <StrValue>DEMO</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1505">
+        <Name>NIP</Name>
+        <Node>CfgNode_25</Node>
+        <Type>_string</Type>
+        <StrValue>692-21-85-175</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1507">
+        <Name>NIP2</Name>
+        <Node>CfgNode_25</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1509">
+        <Name>NKPEtat</Name>
+        <Node>CfgNode_25</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1510">
+        <Name>NKPUmowa</Name>
+        <Node>CfgNode_25</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1511">
+        <Name>NUSP</Name>
+        <Node>CfgNode_25</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1512">
+        <Name>PFRON</Name>
+        <Node>CfgNode_25</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1513">
+        <Name>REGON</Name>
+        <Node>CfgNode_25</Node>
+        <Type>_string</Type>
+        <StrValue>123456785</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_941" guid="111d2206-b802-4d9d-a955-ae0228c71853">
+    <Name>Kontakt</Name>
+    <Parent>CfgNode_24</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1543">
+        <Name>EMAIL</Name>
+        <Node>CfgNode_941</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1544">
+        <Name>Skrytka pocztowa</Name>
+        <Node>CfgNode_941</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1545">
+        <Name>Telefon komórkowy</Name>
+        <Node>CfgNode_941</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1546">
+        <Name>WWW</Name>
+        <Node>CfgNode_941</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_943" guid="8f1ae505-c4a8-42f7-8b72-ba912b8014be">
+    <Name>Status ZPChr</Name>
+    <Parent>CfgNode_24</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1551">
+        <Name>Okres</Name>
+        <Node>CfgNode_943</Node>
+        <Type>_FromTo</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1552">
+        <Name>Posiada</Name>
+        <Node>CfgNode_943</Node>
+        <Type>_boolean</Type>
+        <StrValue>false</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_939" guid="2b8b5410-34d7-475e-907a-59b0c86d0cdb">
+    <Name>Adres siedziby</Name>
+    <Parent>CfgNode_24</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1526">
+        <Name>Faks</Name>
+        <Node>CfgNode_939</Node>
+        <Type>_string</Type>
+        <StrValue>3459089</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1527">
+        <Name>Gmina</Name>
+        <Node>CfgNode_939</Node>
+        <Type>_string</Type>
+        <StrValue>Kraków</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1528">
+        <Name>Kod pocztowy</Name>
+        <Node>CfgNode_939</Node>
+        <Type>_int</Type>
+        <StrValue>30610</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1529">
+        <Name>Kraj</Name>
+        <Node>CfgNode_939</Node>
+        <Type>_string</Type>
+        <StrValue>Polska</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1530">
+        <Name>Miejscowosc</Name>
+        <Node>CfgNode_939</Node>
+        <Type>_string</Type>
+        <StrValue>Kraków</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1531">
+        <Name>NrDomu</Name>
+        <Node>CfgNode_939</Node>
+        <Type>_string</Type>
+        <StrValue>23A</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1532">
+        <Name>NrLokalu</Name>
+        <Node>CfgNode_939</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1533">
+        <Name>Poczta</Name>
+        <Node>CfgNode_939</Node>
+        <Type>_string</Type>
+        <StrValue>Kraków</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1534">
+        <Name>Powiat</Name>
+        <Node>CfgNode_939</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1535">
+        <Name>Telefon</Name>
+        <Node>CfgNode_939</Node>
+        <Type>_string</Type>
+        <StrValue>3459087</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1536">
+        <Name>Ulica</Name>
+        <Node>CfgNode_939</Node>
+        <Type>_string</Type>
+        <StrValue>Zielna</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1537">
+        <Name>Wojewodztwo</Name>
+        <Node>CfgNode_939</Node>
+        <Type>_string</Type>
+        <StrValue>małopolskie</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_938" guid="5fa3517f-3816-4c7d-be2f-ae2ff751934c">
+    <Name>Adres do korespondencji</Name>
+    <Parent>CfgNode_24</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1514">
+        <Name>Faks</Name>
+        <Node>CfgNode_938</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1515">
+        <Name>Gmina</Name>
+        <Node>CfgNode_938</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1516">
+        <Name>Kod pocztowy</Name>
+        <Node>CfgNode_938</Node>
+        <Type>_int</Type>
+        <StrValue>0</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1517">
+        <Name>Kraj</Name>
+        <Node>CfgNode_938</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1518">
+        <Name>Miejscowosc</Name>
+        <Node>CfgNode_938</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1519">
+        <Name>NrDomu</Name>
+        <Node>CfgNode_938</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1520">
+        <Name>NrLokalu</Name>
+        <Node>CfgNode_938</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1521">
+        <Name>Poczta</Name>
+        <Node>CfgNode_938</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1522">
+        <Name>Powiat</Name>
+        <Node>CfgNode_938</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1523">
+        <Name>Telefon</Name>
+        <Node>CfgNode_938</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1524">
+        <Name>Ulica</Name>
+        <Node>CfgNode_938</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1525">
+        <Name>Wojewodztwo</Name>
+        <Node>CfgNode_938</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_876" guid="00000000-9008-0000-0000-000000000000">
+    <Name>Ksiega</Name>
+    <Parent>00000000-0002-0001-0001-000000000000</Parent>
+    <Type>Node</Type>
+    <Attributes />
+  </CfgNode>
+  <CfgNode id="CfgNode_877" guid="00000000-9008-0001-0000-000000000000">
+    <Name>Ogólne</Name>
+    <Parent>00000000-9008-0000-0000-000000000000</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1553">
+        <Name>Budżetowanie</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_boolean</Type>
+        <StrValue>True</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1554">
+        <Name>Cechy symbolu opisu</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1555">
+        <Name>Cechy wymiaru opisu</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1556">
+        <Name>Dodatkowe płatności do LP na osobnym PK</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_boolean</Type>
+        <StrValue>true</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1557">
+        <Name>Domyślny symbol opisu</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1558">
+        <Name>Domyślny wymiar opisu</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1559">
+        <Name>ElementyKsiegowalneVerifier ostrzeżenie</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_boolean</Type>
+        <StrValue>false</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1560">
+        <Name>Ignoruj nieistniejące konta w ZK</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_boolean</Type>
+        <StrValue>false</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1561">
+        <Name>KPiR</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_boolean</Type>
+        <StrValue>false</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1562">
+        <Name>Kwota dodatkowa opisu</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_boolean</Type>
+        <StrValue>false</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1563">
+        <Name>Kwota dodatkowa opisu kod</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1565">
+        <Name>Maski podstawy wymiaru opisu</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1566">
+        <Name>Pokaż wynik predekretacji</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_int</Type>
+        <StrValue>2</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1567">
+        <Name>Rozszerzenie sybmolu wymiaru opisu</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_boolean</Type>
+        <StrValue>false</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1568">
+        <Name>Rozszerzenie sybmolu wymiaru opisu kod</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1569">
+        <Name>Segmenty budżetowe</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_string</Type>
+        <StrValue>Syntetyka,Rozdział,Paragraf</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1570">
+        <Name>Segmenty budżetowe listy płac</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_boolean</Type>
+        <StrValue>True</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1571">
+        <Name>Segmenty budżetowe zadan</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_string</Type>
+        <StrValue>SyntetykaZ,Funkcja,Zadanie,Podzadanie,Działanie</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1572">
+        <Name>Tabela kursowa opisu</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_guid</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1573">
+        <Name>Typ weryfikacji kwotowej opisu</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_int</Type>
+        <StrValue>0</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1574">
+        <Name>Waluta opisu</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_guid</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1575">
+        <Name>Weryfikacja symbolu opisu</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_boolean</Type>
+        <StrValue>false</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1576">
+        <Name>Weryfikacja wymiaru opisu</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_boolean</Type>
+        <StrValue>false</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1577">
+        <Name>Wymagalność elem księg ostrzeżenie</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_boolean</Type>
+        <StrValue>false</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1578">
+        <Name>Wymiary podlegające weryfikacji kwotowej</Name>
+        <Node>CfgNode_877</Node>
+        <Type>_string</Type>
+        <StrValue />
+        <MemoValue />
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_945" guid="805517dc-985c-436e-ae2f-264616127c67">
+    <Name>konto.xml</Name>
+    <Parent>CfgNode_936</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1579">
+        <Name>00000000-0015-0001-0001-000000000000</Name>
+        <Node>CfgNode_945</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a654c6f63616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c466f726d3e0d0a202020203c4c6f636174696f6e3e0d0a2020202020203c583e3135303c2f583e0d0a2020202020203c593e3131333c2f593e0d0a202020203c2f4c6f636174696f6e3e0d0a202020203c53697a653e0d0a2020202020203c57696474683e3632343c2f57696474683e0d0a2020202020203c4865696768743e3635353c2f4865696768743e0d0a202020203c2f53697a653e0d0a202020203c4d6178696d697a65643e66616c73653c2f4d6178696d697a65643e0d0a20203c2f466f726d3e0d0a3c2f53657269616c697a654c6f63616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_768" guid="00000000-9003-0000-0000-000000000000">
+    <Name>Kasa</Name>
+    <Parent>00000000-0002-0001-0001-000000000000</Parent>
+    <Type>Node</Type>
+    <Attributes />
+  </CfgNode>
+  <CfgNode id="CfgNode_870" guid="00000000-9003-0000-0015-000000000000">
+    <Name>Księgowość budżetowa</Name>
+    <Parent>00000000-9003-0000-0000-000000000000</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1370">
+        <Name>Cechy do kopiowania</Name>
+        <Node>CfgNode_870</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>Działanie
+Funkcja
+Paragraf
+Podzadanie
+Rozdział
+Syntetyka
+SyntetykaZ
+Zadanie</MemoValue>
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1371">
+        <Name>CechyPlatnosc2Przelew</Name>
+        <Node>CfgNode_870</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>Działanie
+Funkcja
+Paragraf
+Podzadanie
+Rozdział
+Syntetyka
+SyntetykaZ
+Zadanie</MemoValue>
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1369">
+        <Name>Przygotuj wyciągi dla pozycji</Name>
+        <Node>CfgNode_870</Node>
+        <Type>_boolean</Type>
+        <StrValue>True</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_946" guid="00646b61-feae-4254-a582-81fc1d37b802">
+    <Name>elementopisuewidencji.xml</Name>
+    <Parent>CfgNode_936</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1580">
+        <Name>00000000-0015-0001-0001-000000000000</Name>
+        <Node>CfgNode_946</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a654c6f63616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c466f726d3e0d0a202020203c4c6f636174696f6e3e0d0a2020202020203c583e3132363c2f583e0d0a2020202020203c593e37313c2f593e0d0a202020203c2f4c6f636174696f6e3e0d0a202020203c53697a653e0d0a2020202020203c57696474683e3433383c2f57696474683e0d0a2020202020203c4865696768743e3435373c2f4865696768743e0d0a202020203c2f53697a653e0d0a202020203c4d6178696d697a65643e66616c73653c2f4d6178696d697a65643e0d0a20203c2f466f726d3e0d0a3c2f53657269616c697a654c6f63616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_947" guid="76a7eec8-943b-41fd-95fb-9e2bf7f08aad">
+    <Name>handlowybudzetewidencjapage.grid.xml</Name>
+    <Parent>CfgNode_4</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1581">
+        <Name />
+        <Node>CfgNode_947</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>fffe3c003f0078006d006c002000760065007200730069006f006e003d00220031002e0030002200200065006e0063006f00640069006e0067003d0022007500740066002d003100360022003f003e003c0067007200690064006c00610079006f00750074002000760065007200730069006f006e003d00220031002200200078006d006c006e0073003d00220068007400740070003a002f002f007700770077002e0065006e006f00760061002e0070006c002f0073006300680065006d00610073002f0067007200690064006c00610079006f007500740022003e003c006c00610079006f007500740020006e0061006d0065003d00220052006f006f00740022003e003c005800740072006100530065007200690061006c0069007a00650072002000760065007200730069006f006e003d00220031002e003000220020006100700070006c00690063006100740069006f006e003d00220056006900650077002200200078006d006c006e0073003d00220022003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d00220023004c00610079006f0075007400560065007200730069006f006e00220020002f003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d002200470072006f007500700046006f0072006d006100740022003e007b0030007d003a0020005b00230069006d006100670065005d007b0031007d0020007b0032007d003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d002200440065007400610069006c0048006500690067006800740022003e003300350030003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d002200470072006f007500700052006f00770048006500690067006800740022003e002d0031003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004300680069006c00640047007200690064004c006500760065006c004e0061006d006500220020002f003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d002200410063007400690076006500460069006c0074006500720053007400720069006e006700220020002f003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d00220050007200650076006900650077004600690065006c0064004e0061006d006500220020002f003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d00220056006500720074005300630072006f006c006c005400690070004600690065006c0064004e0061006d006500220020002f003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d00220052006f00770053006500700061007200610074006f00720048006500690067006800740022003e0030003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d00220043006f006c0075006d006e00500061006e0065006c0052006f00770048006500690067006800740022003e002d0031003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d00220049006e00640069006300610074006f0072005700690064007400680022003e002d0031003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d00220046006f006f00740065007200500061006e0065006c0048006500690067006800740022003e002d0031003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d00220052006f00770048006500690067006800740022003e002d0031003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d00220056006500720074005300630072006f006c006c005600690073006900620069006c0069007400790022003e004100750074006f003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d00220048006f0072007a005300630072006f006c006c005600690073006900620069006c0069007400790022003e004100750074006f003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d002200470072006f0075007000500061006e0065006c005400650078007400220020002f003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d0022005600690065007700430061007000740069006f006e00220020002f003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d00220042006f0072006400650072005300740079006c00650022003e00440065006600610075006c0074003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d00220042006500730074004600690074004d006100780052006f00770043006f0075006e00740022003e002d0031003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d00220043007500730074006f006d0069007a006100740069006f006e0046006f0072006d0042006f0075006e006400730022003e00400031002c0058003d003000400031002c0059003d003000400031002c00570069006400740068003d003000400031002c004800650069006700680074003d0030003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d0022005300630072006f006c006c005300740079006c00650022003e004c0069007600650056006500720074005300630072006f006c006c002c0020004c0069007600650048006f0072007a005300630072006f006c006c003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d00220046006f0063007500730052006500630074005300740079006c00650022003e00430065006c006c0046006f006300750073003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d00220048006f0072007a005300630072006f006c006c00530074006500700022003e0033003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d002200500072006500760069006500770049006e00640065006e00740022003e002d0031003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004c006500760065006c0049006e00640065006e00740022003e002d0031003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004e00650077004900740065006d0052006f0077005400650078007400220020002f003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d00220050007200650076006900650077004c0069006e00650043006f0075006e00740022003e002d0031003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d002200530079006e006300680072006f006e0069007a00650043006c006f006e006500730022003e0074007200750065003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d002200440065007400610069006c005400610062004800650061006400650072004c006f0063006100740069006f006e0022003e0054006f0070003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004e0061006d00650022003e00470072006900640056006900650077003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d002200460069007800650064004c0069006e0065005700690064007400680022003e0032003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d002200410063007400690076006500460069006c0074006500720045006e00610062006c006500640022003e0074007200750065003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004f007000740069006f006e0073004c00610079006f007500740022002000690073006e0075006c006c003d002200740072007500650022002000690073006b00650079003d002200740072007500650022003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220043006f006c0075006d006e00730022002000690073006e0075006c006c003d002200740072007500650022002000690073006b00650079003d002200740072007500650022003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d002200530074006f007200650041006c006c004f007000740069006f006e00730022003e0074007200750065003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d002200530074006f007200650041006c006c004f007000740069006f006e00730022003e0074007200750065003c002f00700072006f00700065007200740079003e000d000a00200020003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d00220043006f006c0075006d006e00730022002000690073006b00650079003d002200740072007500650022002000760061006c00750065003d002200360022003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004900740065006d00310022002000690073006e0075006c006c003d002200740072007500650022002000690073006b00650079003d002200740072007500650022003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220043006f006c0075006d006e0045006400690074004e0061006d006500220020002f003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d002200560069007300690062006c00650049006e0064006500780022003e0030003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d002200560069007300690062006c00650022003e0074007200750065003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022005700690064007400680022003e00360033003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220054006f006f006c0054006900700022003e00570079006d006900610072003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d002200430061007000740069006f006e0022003e00570079006d006900610072003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004f007000740069006f006e00730043006f006c0075006d006e0022002000690073006e0075006c006c003d002200740072007500650022002000690073006b00650079003d002200740072007500650022003e000d000a00200020002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220041006c006c006f00770053006f007200740022003e0054007200750065003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004600690065006c0064004e0061006d00650022003e00570079006d006900610072003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004e0061006d00650022003e0063006f006c00570079006d006900610072003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004900740065006d00320022002000690073006e0075006c006c003d002200740072007500650022002000690073006b00650079003d002200740072007500650022003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220043006f006c0075006d006e0045006400690074004e0061006d006500220020002f003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d002200560069007300690062006c00650049006e0064006500780022003e0033003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d002200560069007300690062006c00650022003e0074007200750065003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022005700690064007400680022003e00390035003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220054006f006f006c0054006900700022003e004b0077006f00740061003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d002200430061007000740069006f006e0022003e004b0077006f00740061003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004f007000740069006f006e00730043006f006c0075006d006e0022002000690073006e0075006c006c003d002200740072007500650022002000690073006b00650079003d002200740072007500650022003e000d000a00200020002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220041006c006c006f00770053006f007200740022003e0054007200750065003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004600690065006c0064004e0061006d00650022003e004b0077006f00740061003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004e0061006d00650022003e0063006f006c004b0077006f00740061003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004900740065006d00330022002000690073006e0075006c006c003d002200740072007500650022002000690073006b00650079003d002200740072007500650022003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220043006f006c0075006d006e0045006400690074004e0061006d006500220020002f003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d002200560069007300690062006c00650049006e0064006500780022003e0035003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d002200560069007300690062006c00650022003e0074007200750065003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022005700690064007400680022003e00370031003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220054006f006f006c0054006900700022003e0044006100740061003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d002200430061007000740069006f006e0022003e0044006100740061003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004f007000740069006f006e00730043006f006c0075006d006e0022002000690073006e0075006c006c003d002200740072007500650022002000690073006b00650079003d002200740072007500650022003e000d000a00200020002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220041006c006c006f00770053006f007200740022003e0054007200750065003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004600690065006c0064004e0061006d00650022003e0044006100740061003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004e0061006d00650022003e0063006f006c0044006100740061003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004900740065006d00340022002000690073006e0075006c006c003d002200740072007500650022002000690073006b00650079003d002200740072007500650022003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220043006f006c0075006d006e0045006400690074004e0061006d006500220020002f003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d002200560069007300690062006c00650049006e0064006500780022003e0034003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d002200560069007300690062006c00650022003e0074007200750065003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022005700690064007400680022003e003100300035003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220054006f006f006c0054006900700022003e004f007000690073003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d002200430061007000740069006f006e0022003e004f007000690073003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004f007000740069006f006e00730043006f006c0075006d006e0022002000690073006e0075006c006c003d002200740072007500650022002000690073006b00650079003d002200740072007500650022003e000d000a00200020002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220041006c006c006f00770053006f007200740022003e0054007200750065003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004600690065006c0064004e0061006d00650022003e004f007000690073003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004e0061006d00650022003e0063006f006c004f007000690073003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004900740065006d00350022002000690073006e0075006c006c003d002200740072007500650022002000690073006b00650079003d002200740072007500650022003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220043006f006c0075006d006e0045006400690074004e0061006d006500220020002f003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d002200560069007300690062006c00650049006e0064006500780022003e0031003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d002200560069007300690062006c00650022003e0074007200750065003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022005700690064007400680022003e003100370034003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220054006f006f006c0054006900700022003e004b006f006e0074006f003a0020005b0057006f0072006b006500720073002e004b006f006e0074006f004200750064007a00650074006f00770065004f0070006900730075002e004b006f006e0074006f005d000a004b006f006e0074006f0020006f006b00720065005b016c0061006a000501630065002000730079006d0062006f006c0020006f0070006900730075002c00200064006f006400610074006b006f0077006f0020007500730074006100770069006100200077006100720074006f005b016300690020007300650067006d0065006e007400f300770020006200750064007c01650074006f0077007900630068003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d002200430061007000740069006f006e0022003e004b006f006e0074006f003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004f007000740069006f006e00730043006f006c0075006d006e0022002000690073006e0075006c006c003d002200740072007500650022002000690073006b00650079003d002200740072007500650022003e000d000a00200020002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220041006c006c006f00770053006f007200740022003e0054007200750065003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004600690065006c0064004e0061006d00650022003e0057006f0072006b006500720073002e004b006f006e0074006f004200750064007a00650074006f00770065004f0070006900730075002e004b006f006e0074006f003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004e0061006d00650022003e0063006f006c0057006f0072006b006500720073002e004b006f006e0074006f004200750064007a00650074006f00770065004f0070006900730075002e004b006f006e0074006f003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004900740065006d00360022002000690073006e0075006c006c003d002200740072007500650022002000690073006b00650079003d002200740072007500650022003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220043006f006c0075006d006e0045006400690074004e0061006d006500220020002f003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d002200560069007300690062006c00650049006e0064006500780022003e0032003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d002200560069007300690062006c00650022003e0074007200750065003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022005700690064007400680022003e003100370034003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220054006f006f006c0054006900700022003e004b006f006e0074006f0020007a006100640061006e0069006f00770065003a0020005b0057006f0072006b006500720073002e004b006f006e0074006f004200750064007a00650074006f00770065004f0070006900730075002e004b006f006e0074006f005a006100640061006e0069006f00770065005d003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d002200430061007000740069006f006e0022003e004b006f006e0074006f0020007a006100640061006e0069006f00770065003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004f007000740069006f006e00730043006f006c0075006d006e0022002000690073006e0075006c006c003d002200740072007500650022002000690073006b00650079003d002200740072007500650022003e000d000a00200020002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220041006c006c006f00770053006f007200740022003e0054007200750065003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004600690065006c0064004e0061006d00650022003e0057006f0072006b006500720073002e004b006f006e0074006f004200750064007a00650074006f00770065004f0070006900730075002e004b006f006e0074006f005a006100640061006e0069006f00770065003c002f00700072006f00700065007200740079003e000d000a002000200020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004e0061006d00650022003e0063006f006c0057006f0072006b006500720073002e004b006f006e0074006f004200750064007a00650074006f00770065004f0070006900730075002e004b006f006e0074006f005a006100640061006e0069006f00770065003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c002f00700072006f00700065007200740079003e000d000a00200020003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d002200470072006f007500700046006f006f00740065007200530068006f0077004d006f006400650022003e00480069006400640065006e003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004f007000740069006f006e007300460069006c0074006500720022002000690073006e0075006c006c003d002200740072007500650022002000690073006b00650079003d002200740072007500650022003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220041006c006c006f007700460069006c0074006500720045006400690074006f00720022003e00660061006c00730065003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022005500730065004e006500770043007500730074006f006d00460069006c007400650072004400690061006c006f00670022003e0074007200750065003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004d0052005500460069006c007400650072004c0069007300740043006f0075006e00740022003e0031003000300030003c002f00700072006f00700065007200740079003e000d000a00200020003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d002200530068006f00770042007500740074006f006e004d006f006400650022003e00530068006f00770046006f00720046006f0063007500730065006400430065006c006c003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004f007000740069006f006e0073004e0061007600690067006100740069006f006e0022002000690073006e0075006c006c003d002200740072007500650022002000690073006b00650079003d002200740072007500650022003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022005500730065005400610062004b006500790022003e00660061006c00730065003c002f00700072006f00700065007200740079003e000d000a00200020003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004f007000740069006f006e007300560069006500770022002000690073006e0075006c006c003d002200740072007500650022002000690073006b00650079003d002200740072007500650022003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d002200530068006f007700470072006f0075007000500061006e0065006c0022003e00660061006c00730065003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220045006e00610062006c00650041007000700065006100720061006e00630065004500760065006e0052006f00770022003e0074007200750065003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220045006e00610062006c00650041007000700065006100720061006e00630065004f006400640052006f00770022003e0074007200750065003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004100750074006f00430061006c00630050007200650076006900650077004c0069006e00650043006f0075006e00740022003e0074007200750065003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220043006f006c0075006d006e004100750074006f005700690064007400680022003e00660061006c00730065003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004e00650077004900740065006d0052006f00770050006f0073006900740069006f006e0022003e0042006f00740074006f006d003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d002200530068006f0077004300680069006c006400720065006e0049006e00470072006f0075007000500061006e0065006c0022003e0074007200750065003c002f00700072006f00700065007200740079003e000d000a00200020003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004f007000740069006f006e007300530065006c0065006300740069006f006e0022002000690073006e0075006c006c003d002200740072007500650022002000690073006b00650079003d002200740072007500650022003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004d0075006c0074006900530065006c0065006300740022003e0074007200750065003c002f00700072006f00700065007200740079003e000d000a00200020003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004f007000740069006f006e0073005000720069006e00740022002000690073006e0075006c006c003d002200740072007500650022002000690073006b00650079003d002200740072007500650022003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220045007800700061006e00640041006c006c00470072006f0075007000730022003e00660061006c00730065003c002f00700072006f00700065007200740079003e000d000a00200020003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004f007000740069006f006e0073004200650068006100760069006f00720022002000690073006e0075006c006c003d002200740072007500650022002000690073006b00650079003d002200740072007500650022003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004100750074006f0050006f00700075006c0061007400650043006f006c0075006d006e00730022003e00660061006c00730065003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004100750074006f0045007800700061006e00640041006c006c00470072006f0075007000730022003e0074007200750065003c002f00700072006f00700065007200740079003e000d000a00200020003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d0022004f007000740069006f006e007300440065007400610069006c0022002000690073006e0075006c006c003d002200740072007500650022002000690073006b00650079003d002200740072007500650022003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220045006e00610062006c006500440065007400610069006c0054006f006f006c0054006900700022003e0074007200750065003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220053006d00610072007400440065007400610069006c0045007800700061006e00640042007500740074006f006e004d006f006400650022003e0041006c00770061007900730045006e00610062006c00650064003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220041006c006c006f0077004f006e006c0079004f006e0065004d006100730074006500720052006f00770045007800700061006e0064006500640022003e0074007200750065003c002f00700072006f00700065007200740079003e000d000a0020002000200020003c00700072006f007000650072007400790020006e0061006d0065003d00220041006c006c006f00770045007800700061006e00640045006d00700074007900440065007400610069006c00730022003e0074007200750065003c002f00700072006f00700065007200740079003e000d000a00200020003c002f00700072006f00700065007200740079003e000d000a00200020003c00700072006f007000650072007400790020006e0061006d0065003d002200470072006f0075007000530075006d006d0061007200790022002000690073006b00650079003d002200740072007500650022002000760061006c00750065003d0022003000220020002f003e000d000a003c002f005800740072006100530065007200690061006c0069007a00650072003e003c00730075006d0054007900700065003e004e006f006e0065003c002f00730075006d0054007900700065003e003c0061006c006c006f007700450064006900740049006e00500061006c00630065003e0031003c002f0061006c006c006f007700450064006900740049006e00500061006c00630065003e003c00730074006f007200650041007000700065006100720061006e00630065003e0030003c002f00730074006f007200650041007000700065006100720061006e00630065003e003c00750073006500440065006600610075006c00740041007000700065006100720061006e00630065003e0031003c002f00750073006500440065006600610075006c00740041007000700065006100720061006e00630065003e003c00660069006c0074006500720069006e00670052006f0077003e0030003c002f00660069006c0074006500720069006e00670052006f0077003e003c0074007200650065004e006f006400650073004600690065006c0064003e003c002f0074007200650065004e006f006400650073004600690065006c0064003e003c00740072006500650052006f006f007400460069006c007400650072003e003c002f00740072006500650052006f006f007400460069006c007400650072003e003c00660069006c00740065007200730020002f003e003c002f006c00610079006f00750074003e003c00660065006100740075007200650073004d0075006c0074006900470072006f00750070003e0030003c002f00660065006100740075007200650073004d0075006c0074006900470072006f00750070003e003c00660065006100740075007200650073005300750062005400720065006500470072006f00750070003e0031003c002f00660065006100740075007200650073005300750062005400720065006500470072006f00750070003e003c00660065006100740075007200650073005400720065006500570069006400740068003e003c002f00660065006100740075007200650073005400720065006500570069006400740068003e003c006c006f006300610074006f007200460069006c007400650072003e003c002f006c006f006300610074006f007200460069006c007400650072003e003c002f0067007200690064006c00610079006f00750074003e00</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_949" guid="49f32f34-bed4-4637-a206-016e76607477">
+    <Name>ustawienia formularzy</Name>
+    <Parent>CfgNode_4</Parent>
+    <Type>Node</Type>
+    <Attributes />
+  </CfgNode>
+  <CfgNode id="CfgNode_951" guid="d95dc537-124f-47bd-966f-54c225e6eb5d">
+    <Name>wplata.xml</Name>
+    <Parent>CfgNode_936</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1584">
+        <Name>00000000-0015-0001-0001-000000000000</Name>
+        <Node>CfgNode_951</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a654c6f63616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c466f726d3e0d0a202020203c4c6f636174696f6e3e0d0a2020202020203c583e3130303c2f583e0d0a2020202020203c593e3130303c2f593e0d0a202020203c2f4c6f636174696f6e3e0d0a202020203c53697a653e0d0a2020202020203c57696474683e3538343c2f57696474683e0d0a2020202020203c4865696768743e3632353c2f4865696768743e0d0a202020203c2f53697a653e0d0a202020203c4d6178696d697a65643e66616c73653c2f4d6178696d697a65643e0d0a20203c2f466f726d3e0d0a3c2f53657269616c697a654c6f63616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_952" guid="fb63cf3c-e658-409c-a3e0-6d3032db1748">
+    <Name>wyplata.xml</Name>
+    <Parent>CfgNode_949</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1585">
+        <Name />
+        <Node>CfgNode_952</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a65476c6f62616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c446566696e654974656d5061676556697369626c653e747275653c2f446566696e654974656d5061676556697369626c653e0d0a20203c50696374757265735061676556697369626c653e66616c73653c2f50696374757265735061676556697369626c653e0d0a20203c56697369626c6544617461733e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e576f726b6572732e4b6f6e746f4275647a65746f77655a61706c6174792e4b6f6e746f3c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e53796e746574796b613c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e526f7a647a6961c5823c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e50617261677261663c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e5a61616e6761c5bc6f77616e69653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e5a61616e6761c5bc6f77616e6965204d613c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e576f726b6572732e4b6f6e746f4275647a65746f77655a61706c6174792e4b6f6e746f5a6164616e696f77653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e53796e746574796b615a3c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e46756e6b636a613c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e5a6164616e69653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e506f647a6164616e69653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e447a6961c582616e69653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a20203c2f56697369626c6544617461733e0d0a20203c417373697374616e7457696474683e3235303c2f417373697374616e7457696474683e0d0a20203c417373697374616e7456697369626c653e66616c73653c2f417373697374616e7456697369626c653e0d0a3c2f53657269616c697a65476c6f62616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_953" guid="1c66aa16-8d69-4e1b-9254-330888d8a1a4">
+    <Name>wyplata.xml</Name>
+    <Parent>CfgNode_936</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1586">
+        <Name>00000000-0015-0001-0001-000000000000</Name>
+        <Node>CfgNode_953</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a654c6f63616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c466f726d3e0d0a202020203c4c6f636174696f6e3e0d0a2020202020203c583e35303c2f583e0d0a2020202020203c593e35303c2f593e0d0a202020203c2f4c6f636174696f6e3e0d0a202020203c53697a653e0d0a2020202020203c57696474683e3538343c2f57696474683e0d0a2020202020203c4865696768743e3632353c2f4865696768743e0d0a202020203c2f53697a653e0d0a202020203c4d6178696d697a65643e66616c73653c2f4d6178696d697a65643e0d0a20203c2f466f726d3e0d0a3c2f53657269616c697a654c6f63616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_950" guid="16669a6b-506f-4682-8b05-d73f04488100">
+    <Name>wplata.xml</Name>
+    <Parent>CfgNode_949</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1583">
+        <Name />
+        <Node>CfgNode_950</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a65476c6f62616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c446566696e654974656d5061676556697369626c653e747275653c2f446566696e654974656d5061676556697369626c653e0d0a20203c50696374757265735061676556697369626c653e66616c73653c2f50696374757265735061676556697369626c653e0d0a20203c56697369626c6544617461733e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e576f726b6572732e4b6f6e746f4275647a65746f77655a61706c6174792e4b6f6e746f3c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e53796e746574796b613c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e526f7a647a6961c5823c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e50617261677261663c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e5a61616e6761c5bc6f77616e69653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e5a61616e6761c5bc6f77616e6965204d613c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e576f726b6572732e4b6f6e746f4275647a65746f77655a61706c6174792e4b6f6e746f5a6164616e696f77653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e53796e746574796b615a3c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e46756e6b636a613c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e5a6164616e69653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e506f647a6164616e69653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e447a6961c582616e69653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a20203c2f56697369626c6544617461733e0d0a20203c417373697374616e7457696474683e3235303c2f417373697374616e7457696474683e0d0a20203c417373697374616e7456697369626c653e66616c73653c2f417373697374616e7456697369626c653e0d0a3c2f53657269616c697a65476c6f62616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_954" guid="b7d39367-b232-4d55-8f56-27f9b87280c4">
+    <Name>raportesp.xml</Name>
+    <Parent>CfgNode_936</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1587">
+        <Name>00000000-0015-0001-0001-000000000000</Name>
+        <Node>CfgNode_954</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a654c6f63616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c466f726d3e0d0a202020203c4c6f636174696f6e3e0d0a2020202020203c583e37353c2f583e0d0a2020202020203c593e37353c2f593e0d0a202020203c2f4c6f636174696f6e3e0d0a202020203c53697a653e0d0a2020202020203c57696474683e3634383c2f57696474683e0d0a2020202020203c4865696768743e3432313c2f4865696768743e0d0a202020203c2f53697a653e0d0a202020203c4d6178696d697a65643e66616c73653c2f4d6178696d697a65643e0d0a20203c2f466f726d3e0d0a3c2f53657269616c697a654c6f63616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_955" guid="3a44efe4-e5e4-4a81-be3d-dbd4cff32d39">
+    <Name>dokumentwplata.xml</Name>
+    <Parent>CfgNode_949</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1588">
+        <Name />
+        <Node>CfgNode_955</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a65476c6f62616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c446566696e654974656d5061676556697369626c653e747275653c2f446566696e654974656d5061676556697369626c653e0d0a20203c50696374757265735061676556697369626c653e66616c73653c2f50696374757265735061676556697369626c653e0d0a20203c56697369626c6544617461733e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e576f726b6572732e4b6f6e746f4275647a65746f77655a61706c6174792e4b6f6e746f3c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e46656174757265732e53796e746574796b613c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e46656174757265732e526f7a647a6961c5823c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e46656174757265732e50617261677261663c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e46656174757265732e5a61616e6761c5bc6f77616e69653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e46656174757265732e5a61616e6761c5bc6f77616e6965204d613c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e576f726b6572732e4b6f6e746f4275647a65746f77655a61706c6174792e4b6f6e746f5a6164616e696f77653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e46656174757265732e53796e746574796b615a3c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e46656174757265732e46756e6b636a613c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e46656174757265732e5a6164616e69653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e46656174757265732e506f647a6164616e69653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e46656174757265732e447a6961c582616e69653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a20203c2f56697369626c6544617461733e0d0a20203c417373697374616e7457696474683e3235303c2f417373697374616e7457696474683e0d0a20203c417373697374616e7456697369626c653e66616c73653c2f417373697374616e7456697369626c653e0d0a3c2f53657269616c697a65476c6f62616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_956" guid="d17e1829-6639-4cd8-9d8f-4f1eccccccc3">
+    <Name>parametry.xml</Name>
+    <Parent>CfgNode_936</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1589">
+        <Name>00000000-0015-0001-0001-000000000000</Name>
+        <Node>CfgNode_956</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a654c6f63616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c466f726d3e0d0a202020203c4c6f636174696f6e3e0d0a2020202020203c583e3132353c2f583e0d0a2020202020203c593e3132353c2f593e0d0a202020203c2f4c6f636174696f6e3e0d0a202020203c53697a653e0d0a2020202020203c57696474683e3334383c2f57696474683e0d0a2020202020203c4865696768743e3336353c2f4865696768743e0d0a202020203c2f53697a653e0d0a202020203c4d6178696d697a65643e66616c73653c2f4d6178696d697a65643e0d0a20203c2f466f726d3e0d0a3c2f53657269616c697a654c6f63616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_957" guid="5540ec55-2f49-4c21-8db1-ed040562e831">
+    <Name>dokumentwplata.xml</Name>
+    <Parent>CfgNode_936</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1590">
+        <Name>00000000-0015-0001-0001-000000000000</Name>
+        <Node>CfgNode_957</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a654c6f63616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c466f726d3e0d0a202020203c4c6f636174696f6e3e0d0a2020202020203c583e32353c2f583e0d0a2020202020203c593e32353c2f593e0d0a202020203c2f4c6f636174696f6e3e0d0a202020203c53697a653e0d0a2020202020203c57696474683e3538343c2f57696474683e0d0a2020202020203c4865696768743e3536393c2f4865696768743e0d0a202020203c2f53697a653e0d0a202020203c4d6178696d697a65643e66616c73653c2f4d6178696d697a65643e0d0a20203c2f466f726d3e0d0a3c2f53657269616c697a654c6f63616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_958" guid="d8402dc5-92ca-4fe5-82af-356706544cf5">
+    <Name>dokumentwyplata.xml</Name>
+    <Parent>CfgNode_949</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1591">
+        <Name />
+        <Node>CfgNode_958</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a65476c6f62616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c446566696e654974656d5061676556697369626c653e747275653c2f446566696e654974656d5061676556697369626c653e0d0a20203c50696374757265735061676556697369626c653e66616c73653c2f50696374757265735061676556697369626c653e0d0a20203c56697369626c6544617461733e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e576f726b6572732e4b6f6e746f4275647a65746f77655a61706c6174792e4b6f6e746f3c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e46656174757265732e53796e746574796b613c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e46656174757265732e526f7a647a6961c5823c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e46656174757265732e50617261677261663c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e46656174757265732e5a61616e6761c5bc6f77616e69653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e46656174757265732e5a61616e6761c5bc6f77616e6965204d613c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e576f726b6572732e4b6f6e746f4275647a65746f77655a61706c6174792e4b6f6e746f5a6164616e696f77653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e46656174757265732e53796e746574796b615a3c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e46656174757265732e46756e6b636a613c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e46656174757265732e5a6164616e69653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e46656174757265732e506f647a6164616e69653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e5a61706c6174612e46656174757265732e447a6961c582616e69653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a20203c2f56697369626c6544617461733e0d0a20203c417373697374616e7457696474683e3235303c2f417373697374616e7457696474683e0d0a20203c417373697374616e7456697369626c653e66616c73653c2f417373697374616e7456697369626c653e0d0a3c2f53657269616c697a65476c6f62616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_959" guid="fb5de6c4-12f8-4bee-856a-c302b2582d8d">
+    <Name>dokumentwyplata.xml</Name>
+    <Parent>CfgNode_936</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1592">
+        <Name>00000000-0015-0001-0001-000000000000</Name>
+        <Node>CfgNode_959</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a654c6f63616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c466f726d3e0d0a202020203c4c6f636174696f6e3e0d0a2020202020203c583e3137353c2f583e0d0a2020202020203c593e3137353c2f593e0d0a202020203c2f4c6f636174696f6e3e0d0a202020203c53697a653e0d0a2020202020203c57696474683e3538343c2f57696474683e0d0a2020202020203c4865696768743e3536393c2f4865696768743e0d0a202020203c2f53697a653e0d0a202020203c4d6178696d697a65643e66616c73653c2f4d6178696d697a65643e0d0a20203c2f466f726d3e0d0a3c2f53657269616c697a654c6f63616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_960" guid="38cf2d3c-99f9-4449-a273-ba4b87b50917">
+    <Name>prachistoria.xml</Name>
+    <Parent>CfgNode_949</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1593">
+        <Name />
+        <Node>CfgNode_960</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a65476c6f62616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c446566696e654974656d5061676556697369626c653e747275653c2f446566696e654974656d5061676556697369626c653e0d0a20203c50696374757265735061676556697369626c653e66616c73653c2f50696374757265735061676556697369626c653e0d0a20203c56697369626c6544617461733e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e53796e746574796b615a3c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e46756e6b636a613c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e5a6164616e69653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e506f647a6164616e69653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e447a6961c582616e69653c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a20203c2f56697369626c6544617461733e0d0a20203c417373697374616e7457696474683e3235303c2f417373697374616e7457696474683e0d0a20203c417373697374616e7456697369626c653e66616c73653c2f417373697374616e7456697369626c653e0d0a3c2f53657269616c697a65476c6f62616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_962" guid="225523d8-bbf2-4f6d-a613-514055db9200">
+    <Name>wydzial.xml</Name>
+    <Parent>CfgNode_949</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1595">
+        <Name />
+        <Node>CfgNode_962</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a65476c6f62616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c446566696e654974656d5061676556697369626c653e747275653c2f446566696e654974656d5061676556697369626c653e0d0a20203c50696374757265735061676556697369626c653e66616c73653c2f50696374757265735061676556697369626c653e0d0a20203c56697369626c6544617461733e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e53796e746574796b613c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e526f7a647a6961c5823c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a202020203c446566696e654974656d3e0d0a2020202020203c506174683e46656174757265732e50617261677261663c2f506174683e0d0a202020203c2f446566696e654974656d3e0d0a20203c2f56697369626c6544617461733e0d0a20203c417373697374616e7457696474683e3235303c2f417373697374616e7457696474683e0d0a20203c417373697374616e7456697369626c653e66616c73653c2f417373697374616e7456697369626c653e0d0a3c2f53657269616c697a65476c6f62616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_963" guid="f64382ec-36da-4812-b317-df28bddd680d">
+    <Name>wydzial.xml</Name>
+    <Parent>CfgNode_936</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1596">
+        <Name>00000000-0015-0001-0001-000000000000</Name>
+        <Node>CfgNode_963</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a654c6f63616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c466f726d3e0d0a202020203c4c6f636174696f6e3e0d0a2020202020203c583e3137353c2f583e0d0a2020202020203c593e3137353c2f593e0d0a202020203c2f4c6f636174696f6e3e0d0a202020203c53697a653e0d0a2020202020203c57696474683e3439383c2f57696474683e0d0a2020202020203c4865696768743e3439333c2f4865696768743e0d0a202020203c2f53697a653e0d0a202020203c4d6178696d697a65643e66616c73653c2f4d6178696d697a65643e0d0a20203c2f466f726d3e0d0a3c2f53657269616c697a654c6f63616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_961" guid="ad2771ee-f88f-490c-9135-a7e7b30261b2">
+    <Name>prachistoria.xml</Name>
+    <Parent>CfgNode_936</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1594">
+        <Name>00000000-0015-0001-0001-000000000000</Name>
+        <Node>CfgNode_961</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a654c6f63616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c466f726d3e0d0a202020203c4c6f636174696f6e3e0d0a2020202020203c583e3330323c2f583e0d0a2020202020203c593e36313c2f593e0d0a202020203c2f4c6f636174696f6e3e0d0a202020203c53697a653e0d0a2020202020203c57696474683e3833303c2f57696474683e0d0a2020202020203c4865696768743e3539323c2f4865696768743e0d0a202020203c2f53697a653e0d0a202020203c4d6178696d697a65643e66616c73653c2f4d6178696d697a65643e0d0a20203c2f466f726d3e0d0a3c2f53657269616c697a654c6f63616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_964" guid="a71b25c9-d01c-4f94-9387-a5aa973838db">
+    <Name>kontrahent.xml</Name>
+    <Parent>CfgNode_936</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1597">
+        <Name>00000000-0015-0001-0001-000000000000</Name>
+        <Node>CfgNode_964</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a654c6f63616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c466f726d3e0d0a202020203c4c6f636174696f6e3e0d0a2020202020203c583e37353c2f583e0d0a2020202020203c593e37353c2f593e0d0a202020203c2f4c6f636174696f6e3e0d0a202020203c53697a653e0d0a2020202020203c57696474683e3739313c2f57696474683e0d0a2020202020203c4865696768743e3536353c2f4865696768743e0d0a202020203c2f53697a653e0d0a202020203c4d6178696d697a65643e66616c73653c2f4d6178696d697a65643e0d0a20203c2f466f726d3e0d0a3c2f53657269616c697a654c6f63616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_965" guid="0e8616a9-a48d-405c-87c4-09ecc402f646">
+    <Name>schematlistyplac.xml</Name>
+    <Parent>CfgNode_936</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1598">
+        <Name>00000000-0015-0001-0001-000000000000</Name>
+        <Node>CfgNode_965</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a654c6f63616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c466f726d3e0d0a202020203c4c6f636174696f6e3e0d0a2020202020203c583e3130303c2f583e0d0a2020202020203c593e3130303c2f593e0d0a202020203c2f4c6f636174696f6e3e0d0a202020203c53697a653e0d0a2020202020203c57696474683e3632343c2f57696474683e0d0a2020202020203c4865696768743e3538393c2f4865696768743e0d0a202020203c2f53697a653e0d0a202020203c4d6178696d697a65643e66616c73653c2f4d6178696d697a65643e0d0a20203c2f466f726d3e0d0a3c2f53657269616c697a654c6f63616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_966" guid="ddfddc88-3a4f-4719-99e9-61fd4caad56a">
+    <Name>schematraportowkasowych.xml</Name>
+    <Parent>CfgNode_936</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1599">
+        <Name>00000000-0015-0001-0001-000000000000</Name>
+        <Node>CfgNode_966</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a654c6f63616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c466f726d3e0d0a202020203c4c6f636174696f6e3e0d0a2020202020203c583e3132353c2f583e0d0a2020202020203c593e3132353c2f593e0d0a202020203c2f4c6f636174696f6e3e0d0a202020203c53697a653e0d0a2020202020203c57696474683e3632343c2f57696474683e0d0a2020202020203c4865696768743e3538393c2f4865696768743e0d0a202020203c2f53697a653e0d0a202020203c4d6178696d697a65643e66616c73653c2f4d6178696d697a65643e0d0a20203c2f466f726d3e0d0a3c2f53657269616c697a654c6f63616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_937" guid="449b3507-dee9-4a4d-b6a1-6acd2e4aa423">
+    <Name>session.xml</Name>
+    <Parent>CfgNode_936</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1501">
+        <Name>00000000-0015-0001-0001-000000000000</Name>
+        <Node>CfgNode_937</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a654c6f63616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c466f726d3e0d0a202020203c4c6f636174696f6e3e0d0a2020202020203c583e32353c2f583e0d0a2020202020203c593e32353c2f593e0d0a202020203c2f4c6f636174696f6e3e0d0a202020203c53697a653e0d0a2020202020203c57696474683e3739313c2f57696474683e0d0a2020202020203c4865696768743e3631313c2f4865696768743e0d0a202020203c2f53697a653e0d0a202020203c4d6178696d697a65643e66616c73653c2f4d6178696d697a65643e0d0a20203c2f466f726d3e0d0a3c2f53657269616c697a654c6f63616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_967" guid="a2d38409-f125-483f-ad7a-8341849f5524">
+    <Name>dekret.xml</Name>
+    <Parent>CfgNode_936</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1600">
+        <Name>00000000-0015-0001-0001-000000000000</Name>
+        <Node>CfgNode_967</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a654c6f63616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c466f726d3e0d0a202020203c4c6f636174696f6e3e0d0a2020202020203c583e32353c2f583e0d0a2020202020203c593e32353c2f593e0d0a202020203c2f4c6f636174696f6e3e0d0a202020203c53697a653e0d0a2020202020203c57696474683e3630383c2f57696474683e0d0a2020202020203c4865696768743e3535313c2f4865696768743e0d0a202020203c2f53697a653e0d0a202020203c4d6178696d697a65643e66616c73653c2f4d6178696d697a65643e0d0a20203c2f466f726d3e0d0a3c2f53657269616c697a654c6f63616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_968" guid="538a55dc-c61c-4c85-be7b-dd2891df569a">
+    <Name>rezultat.xml</Name>
+    <Parent>CfgNode_936</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1601">
+        <Name>00000000-0015-0001-0001-000000000000</Name>
+        <Node>CfgNode_968</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a654c6f63616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c466f726d3e0d0a202020203c4c6f636174696f6e3e0d0a2020202020203c583e32353c2f583e0d0a2020202020203c593e32353c2f593e0d0a202020203c2f4c6f636174696f6e3e0d0a202020203c53697a653e0d0a2020202020203c57696474683e3630383c2f57696474683e0d0a2020202020203c4865696768743e3535313c2f4865696768743e0d0a202020203c2f53697a653e0d0a202020203c4d6178696d697a65643e66616c73653c2f4d6178696d697a65643e0d0a20203c2f466f726d3e0d0a3c2f53657269616c697a654c6f63616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_948" guid="27da19fd-8fc7-48e0-96d0-9d924cfd245f">
+    <Name>zakupewidencja.xml</Name>
+    <Parent>CfgNode_936</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1582">
+        <Name>00000000-0015-0001-0001-000000000000</Name>
+        <Node>CfgNode_948</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a654c6f63616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c466f726d3e0d0a202020203c4c6f636174696f6e3e0d0a2020202020203c583e3137353c2f583e0d0a2020202020203c593e3137353c2f593e0d0a202020203c2f4c6f636174696f6e3e0d0a202020203c53697a653e0d0a2020202020203c57696474683e3933333c2f57696474683e0d0a2020202020203c4865696768743e3536353c2f4865696768743e0d0a202020203c2f53697a653e0d0a202020203c4d6178696d697a65643e66616c73653c2f4d6178696d697a65643e0d0a20203c2f466f726d3e0d0a3c2f53657269616c697a654c6f63616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_969" guid="a151951b-ba6a-421e-aeaa-70cbf2054d01">
+    <Name>naliczaniewypłat.xml</Name>
+    <Parent>CfgNode_936</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1602">
+        <Name>00000000-0015-0001-0001-000000000000</Name>
+        <Node>CfgNode_969</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c53657269616c697a654c6f63616c20786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c466f726d3e0d0a202020203c4c6f636174696f6e3e0d0a2020202020203c583e3135303c2f583e0d0a2020202020203c593e3135303c2f593e0d0a202020203c2f4c6f636174696f6e3e0d0a202020203c53697a653e0d0a2020202020203c57696474683e3533323c2f57696474683e0d0a2020202020203c4865696768743e3430393c2f4865696768743e0d0a202020203c2f53697a653e0d0a202020203c4d6178696d697a65643e66616c73653c2f4d6178696d697a65643e0d0a20203c2f466f726d3e0d0a3c2f53657269616c697a654c6f63616c3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_970" guid="19a9fb2d-1aec-4a43-a1a5-c3a094bc9e9e">
+    <Name>aspx</Name>
+    <Parent>CfgNode_4</Parent>
+    <Type>Node</Type>
+    <Attributes />
+  </CfgNode>
+  <CfgNode id="CfgNode_971" guid="c9fbbcc6-d07e-4cbc-b4a7-51ce010d26b7">
+    <Name>ienie planow wydatkow zaangazowania.aspx</Name>
+    <Parent>CfgNode_970</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1603">
+        <Name />
+        <Node>CfgNode_971</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>fffe3c00250040002000500061006700650020004c0061006e00670075006100670065003d002200630023002200200043006f006400650050006100670065003d0022003100320030003000220020004100750074006f004500760065006e0074005700690072006500750070003d002200660061006c00730065002200200025003e000d000a000d000a003c002500400020005200650067006900730074006500720020005400610067005000720065006600690078003d002200630063003100220020004e0061006d006500730070006100630065003d00220053006f006e006500740061002e0043006f00720065002e005700650062002200200041007300730065006d0062006c0079003d00220053006f006e006500740061002e0043006f00720065002e005700650062002200200025003e000d000a003c002500400020005200650067006900730074006500720020005400610067005000720065006600690078003d00220065006100220020004e0061006d006500730070006100630065003d00220053006f006e006500740061002e005700650062002200200041007300730065006d0062006c0079003d00220053006f006e006500740061002e005700650062002200200025003e000d000a003c0025004000200049006d0070006f007200740020004e0061006d006500730070006100630065003d002200530079007300740065006d002e0043006f006c006c0065006300740069006f006e0073002e00470065006e0065007200690063002200200025003e000d000a003c0025004000200049006d0070006f007200740020004e0061006d006500730070006100630065003d00220053006f006e006500740061002e0054006f006f006c0073002200200025003e000d000a003c0025004000200049006d0070006f007200740020004e0061006d006500730070006100630065003d00220053006f006e006500740061002e00540079007000650073002200200025003e000d000a003c0025004000200049006d0070006f007200740020004e0061006d006500730070006100630065003d00220053006f006e006500740061002e004b00730069006500670061002200200025003e000d000a003c0025004000200049006d0070006f007200740020004e0061006d006500730070006100630065003d00220053006f006e006500740061002e0042007500730069006e006500730073002200200025003e000d000a003c0025004000200049006d0070006f007200740020004e0061006d006500730070006100630065003d00220053006f006e006500740061002e005700650062002200200025003e000d000a003c00210044004f00430054005900500045002000480054004d004c0020005000550042004c0049004300200022002d002f002f005700330043002f002f004400540044002000480054004d004c00200034002e00300020005400720061006e0073006900740069006f006e0061006c002f002f0045004e00220020003e000d000a003c00680074006d006c003e000d000a003c0068006500610064003e000d000a0009003c007400690074006c0065003e005a0065007300740061007700690065006e0069006500200070006c0061006e00f30077002c002000770079006400610074006b00f30077002000690020007a00610061006e00670061007c016f00770061006e00690061003c002f007400690074006c0065003e000d000a0009003c006d00650074006100200068007400740070002d00650071007500690076003d00220043006f006e00740065006e0074002d0054007900700065002200200063006f006e00740065006e0074003d00220074006500780074002f00680074006d006c003b00200063006800610072007300650074003d0075006e00690063006f006400650022003e000d000a0009003c007300630072006900700074002000720075006e00610074003d00220073006500720076006500720022003e000d000a00090009000d000a0020000d000a00090009007000720069007600610074006500200050006100720061006d007300200070006100720061006d0020003d0020006e0075006c006c003b000d000a000d000a00090009005b0043006f006e0074006500780074005d000d000a00090009007000750062006c0069006300200050006100720061006d007300200050006100720061006d000d000a00090009007b000d000a0009000900090067006500740020007b002000720065007400750072006e00200070006100720061006d003b0020007d000d000a0009000900090073006500740020007b00200070006100720061006d0020003d002000760061006c00750065003b0020007d000d000a00090009007d000d000a000d000a000d000a00090009007000750062006c0069006300200065006e0075006d0020005400790070004b006f006e00740061000d000a00090009007b000d000a0009000900090050006c0061006e002c000d000a00090009000900570079006b006f006e0061006e00690065002c000d000a000900090009005a00610061006e00670061007a006f00770061006e00690065002c000d000a00090009007d000d000a000d000a000d000a00090009007000720069007600610074006500200076006f00690064002000470072006900640031005f004f006e004200650066006f007200650052006f00770028006f0062006a006500630074002000730065006e006400650072002c00200052006f0077004500760065006e00740041007200670073002000610072006700730029000d000a00090009007b000d000a000900090009004900740065006d0020006900740065006d0020003d00200028004900740065006d00290061007200670073002e0052006f0077003b000d000a000d000a0009000900090063006f006c005300650067006d0065006e00740031002e004500640069007400560061006c007500650020003d0020006900740065006d002e005300650067006d0065006e00740031003b000d000a0009000900090063006f006c005300650067006d0065006e00740032002e004500640069007400560061006c007500650020003d0020006900740065006d002e005300650067006d0065006e00740032003b000d000a0009000900090063006f006c005300650067006d0065006e00740033002e004500640069007400560061006c007500650020003d0020006900740065006d002e005300650067006d0065006e00740033003b000d000a0009000900090063006f006c005300650067006d0065006e00740034002e004500640069007400560061006c007500650020003d0020006900740065006d002e005300650067006d0065006e00740034003b000d000a0009000900090063006f006c005300650067006d0065006e00740035002e004500640069007400560061006c007500650020003d0020006900740065006d002e005300650067006d0065006e00740035003b000d000a0009000900090063006f006c0050006c0061006e002e004500640069007400560061006c007500650020003d0020006900740065006d002e0050006c0061006e003b000d000a0009000900090063006f006c00570079006b006f006e0061006e00690065002e004500640069007400560061006c007500650020003d0020006900740065006d002e00570079006b006f006e0061006e00690065003b000d000a0009000900090063006f006c0050006f007a006f007300740061006c006f002e004500640069007400560061006c007500650020003d0020006900740065006d002e0050006f007a006f007300740061006c006f003b000d000a0009000900090063006f006c00500072006f00630065006e0074002e004500640069007400560061006c007500650020003d0020006900740065006d002e00500072006f00630065006e0074003b000d000a0009000900090063006f006c005a00610061006e00670061007a006f00770061006e00690065002e004500640069007400560061006c007500650020003d0020006900740065006d002e005a00610061006e00670061007a006f00770061006e00690065003b000d000a0009000900090063006f006c005a00610061006e00670061007a006f00770061006e0069006500500072006f00630065006e0074002e004500640069007400560061006c007500650020003d0020006900740065006d002e00500072006f00630065006e0074005a00610061006e00670061007a006f00770061006e00690061003b000d000a000d000a00090009000900470072006900640031002e00470072006f00750070004c0069006e00650020003d0020006900740065006d002e005300650067006d0065006e00740031003b000d000a00090009007d000d000a000d000a000d000a00090009007000720069007600610074006500200076006f006900640020004f006e0043006f006e0074006500780074004c006f006100640028004f0062006a006500630074002000730065006e006400650072002c0020004500760065006e00740041007200670073002000610072006700730029000d000a00090009007b000d000a000900090009002f002f000d000a000900090009002f002f002000500072007a00790067006f0074006f00770061006e006900650020006f00700069007300750020006e00610067004201f30077006b0061002000690020007a0061006b00720065007300750020006b006f006c0075006d006e002000770079006400720075006b0075000d000a000900090009002f002f000d000a000d000a000900090009005200650070006f007200740048006500610064006500720031002e005400690074006c00650020003d00200073007400720069006e0067002e0046006f0072006d006100740028005200650070006f007200740048006500610064006500720031002e005400690074006c0065002c00200050006100720061006d002e004d006900650073006900610063002e0054006f0053007400720069006e006700280029002c002000280050006100720061006d002e004200750066006f007200290020003f0020002200540061006b00220020003a00200022004e0069006500220029003b000d000a000d000a000900090009006900660020002800210050006100720061006d002e004900730052006500610064004f006e006c0079005300650067006d0065006e00740031002800290029000d000a0009000900090009005200650070006f007200740048006500610064006500720031002e005400690074006c00650020002b003d00200073007400720069006e0067002e0046006f0072006d0061007400280022007b0030007d003a0020007b0031007d0022002c00200050006100720061006d002e005300650067006d0065006e00740079005b0031005d002c00200050006100720061006d002e005300650067006d0065006e007400310029003b000d000a000900090009006900660020002800210050006100720061006d002e004900730052006500610064004f006e006c0079005300650067006d0065006e00740032002800290029000d000a0009000900090009005200650070006f007200740048006500610064006500720031002e005400690074006c00650020002b003d00200073007400720069006e0067002e0046006f0072006d0061007400280022003b0020007b0030007d003a0020007b0031007d0022002c00200050006100720061006d002e005300650067006d0065006e00740079005b0032005d002c00200050006100720061006d002e005300650067006d0065006e007400320029003b000d000a000900090009006900660020002800210050006100720061006d002e004900730052006500610064004f006e006c0079005300650067006d0065006e00740033002800290029000d000a0009000900090009005200650070006f007200740048006500610064006500720031002e005400690074006c00650020002b003d00200073007400720069006e0067002e0046006f0072006d0061007400280022003b0020007b0030007d003a0020007b0031007d0022002c00200050006100720061006d002e005300650067006d0065006e00740079005b0033005d002c00200050006100720061006d002e005300650067006d0065006e007400330029003b000d000a000900090009006900660020002800210050006100720061006d002e004900730052006500610064004f006e006c0079005300650067006d0065006e00740034002800290029000d000a0009000900090009005200650070006f007200740048006500610064006500720031002e005400690074006c00650020002b003d00200073007400720069006e0067002e0046006f0072006d00610074002800220020007c0020007b0030007d003a0020007b0031007d0022002c00200050006100720061006d002e005300650067006d0065006e00740079005b0034005d002c00200050006100720061006d002e005300650067006d0065006e007400340029003b000d000a000900090009006900660020002800210050006100720061006d002e004900730052006500610064004f006e006c0079005300650067006d0065006e00740035002800290029000d000a0009000900090009005200650070006f007200740048006500610064006500720031002e005400690074006c00650020002b003d00200073007400720069006e0067002e0046006f0072006d0061007400280022003b0020007b0030007d003a0020007b0031007d0022002c00200050006100720061006d002e005300650067006d0065006e00740079005b0035005d002c00200050006100720061006d002e005300650067006d0065006e007400350029003b000d000a000d000a000d000a00090009000900690066002000280050006100720061006d002e004900730052006500610064004f006e006c0079005300650067006d0065006e00740031002800290029000d000a000900090009000900470072006900640031002e0043006f006c0075006d006e0073002e00520065006d006f0076006500280063006f006c005300650067006d0065006e007400310029003b000d000a0009000900090065006c00730065000d000a00090009000900090063006f006c005300650067006d0065006e00740031002e00430061007000740069006f006e0020003d00200050006100720061006d002e005300650067006d0065006e00740079005b0031005d003b000d000a000d000a00090009000900690066002000280050006100720061006d002e004900730052006500610064004f006e006c0079005300650067006d0065006e00740032002800290029000d000a000900090009000900470072006900640031002e0043006f006c0075006d006e0073002e00520065006d006f0076006500280063006f006c005300650067006d0065006e007400320029003b000d000a0009000900090065006c00730065000d000a00090009000900090063006f006c005300650067006d0065006e00740032002e00430061007000740069006f006e0020003d00200050006100720061006d002e005300650067006d0065006e00740079005b0032005d003b000d000a000d000a00090009000900690066002000280050006100720061006d002e004900730052006500610064004f006e006c0079005300650067006d0065006e00740033002800290029000d000a000900090009000900470072006900640031002e0043006f006c0075006d006e0073002e00520065006d006f0076006500280063006f006c005300650067006d0065006e007400330029003b000d000a0009000900090065006c00730065000d000a00090009000900090063006f006c005300650067006d0065006e00740033002e00430061007000740069006f006e0020003d00200050006100720061006d002e005300650067006d0065006e00740079005b0033005d003b000d000a000d000a00090009000900690066002000280050006100720061006d002e004900730052006500610064004f006e006c0079005300650067006d0065006e00740034002800290029000d000a000900090009000900470072006900640031002e0043006f006c0075006d006e0073002e00520065006d006f0076006500280063006f006c005300650067006d0065006e007400340029003b000d000a0009000900090065006c00730065000d000a00090009000900090063006f006c005300650067006d0065006e00740034002e00430061007000740069006f006e0020003d00200050006100720061006d002e005300650067006d0065006e00740079005b0034005d003b000d000a000d000a00090009000900690066002000280050006100720061006d002e004900730052006500610064004f006e006c0079005300650067006d0065006e00740035002800290029000d000a000900090009000900470072006900640031002e0043006f006c0075006d006e0073002e00520065006d006f0076006500280063006f006c005300650067006d0065006e007400350029003b000d000a0009000900090065006c00730065000d000a00090009000900090063006f006c005300650067006d0065006e00740035002e00430061007000740069006f006e0020003d00200050006100720061006d002e005300650067006d0065006e00740079005b0035005d003b000d000a000d000a000900090009002f002f000d000a000900090009002f002f002000500072007a00790067006f0074006f00770061006e0069006500200077006f0072006b0065007200610020007a006c00690063007a0061006a0005016300650067006f0020006f00620072006f00740079000d000a000900090009002f002f000d000a000d000a000900090009004f00620072006f00740079004b006f006e007400610057006f0072006b006500720020006f006b00770020003d0020006e006500770020004f00620072006f00740079004b006f006e007400610057006f0072006b0065007200280029003b000d000a000900090009004f00620072006f00740079004b006f006e007400610057006f0072006b00650072002e0050006100720061006d007300200070006100720020003d0020006e006500770020004f00620072006f00740079004b006f006e007400610057006f0072006b00650072002e0050006100720061006d00730028006e0075006c006c0029003b000d000a000d000a000900090009007000610072002e004200750066006f00720020003d00200050006100720061006d002e004200750066006f0072003b000d000a000900090009007000610072002e0054007900700020003d0020005400790070004f00620072006f00740075002e004b0073006900190167006f00770079003b000d000a000900090009007000610072002e004f006b0072006500730020003d0020006e00650077002000460072006f006d0054006f00280050006100720061006d002e004f006b007200650073002e004f006b007200650073002e00460072006f006d002c00200050006100720061006d002e004d006900650073006900610063002e0054006f00460072006f006d0054006f00280029002e0054006f0029003b000d000a000900090009006f006b0077002e0050006100720061006d0020003d0020007000610072003b000d000a000d000a000900090009002f002f000d000a000900090009002f002f002000500072007a00790067006f0074006f00770061006e006900650020006c00690073007400790020006b006f006e0074002f00720065006b006f0072006400f30077000d000a000900090009002f002f000d000a000d000a000900090009004c006900730074003c004900740065006d003e00200061007200720020003d0020006e006500770020004c006900730074003c004900740065006d003e00280029003b000d000a000d000a0009000900090044006f00640061006a004b006f006e0074006f0028005400790070004b006f006e00740061002e0050006c0061006e002c00200050006100720061006d002e004b006f006e0074006f0050006c0061006e0075002c0020006f006b0077002c00200061007200720029003b000d000a000d000a00090009000900690066002000280050006100720061006d002e004b006f006e0074006100570079006b006f006e0061006e0069006100200021003d0020006e0075006c006c00200026002600200050006100720061006d002e004b006f006e0074006100570079006b006f006e0061006e00690061002e004c0065006e0067007400680020003e002000300029000d000a00090009000900090066006f0072006500610063006800200028004b006f006e0074006f00420061007300650020006b00200069006e00200050006100720061006d002e004b006f006e0074006100570079006b006f006e0061006e006900610029000d000a000900090009000900090044006f00640061006a004b006f006e0074006f0028005400790070004b006f006e00740061002e00570079006b006f006e0061006e00690065002c0020006b002c0020006f006b0077002c00200061007200720029003b000d000a000d000a00090009000900690066002000280050006100720061006d002e004b006f006e00740061005a00610061006e00670061007a006f00770061006e0069006100200021003d0020006e0075006c006c00200026002600200050006100720061006d002e004b006f006e00740061005a00610061006e00670061007a006f00770061006e00690061002e004c0065006e0067007400680020003e002000300029000d000a00090009000900090066006f0072006500610063006800200028004b006f006e0074006f00420061007300650020006b00200069006e00200050006100720061006d002e004b006f006e00740061005a00610061006e00670061007a006f00770061006e006900610029000d000a000900090009000900090044006f00640061006a004b006f006e0074006f0028005400790070004b006f006e00740061002e005a00610061006e00670061007a006f00770061006e00690065002c0020006b002c0020006f006b0077002c00200061007200720029003b000d000a000d000a000900090009006100720072002e0053006f0072007400280043006f006d0070006100720065004900740065006d00730029003b000d000a00090009000900470072006900640031002e00440061007400610053006f00750072006300650020003d0020006100720072003b000d000a00090009007d000d000a000d000a000d000a00090009007000720069007600610074006500200069006e007400200043006f006d0070006100720065004900740065006d00730028004900740065006d0020006f00700031002c0020004900740065006d0020006f007000320029000d000a00090009007b000d000a0009000900090069006e007400200063006f006d00700020003d00200030003b000d000a000d000a000900090009006900660020002800280063006f006d00700020003d0020006f00700031002e005300650067006d0065006e00740031002e0043006f006d00700061007200650054006f0028006f00700032002e005300650067006d0065006e007400310029002900200021003d002000300029000d000a000900090009000900720065007400750072006e00200063006f006d0070003b000d000a000900090009006900660020002800280063006f006d00700020003d0020006f00700031002e005300650067006d0065006e00740032002e0043006f006d00700061007200650054006f0028006f00700032002e005300650067006d0065006e007400320029002900200021003d002000300029000d000a000900090009000900720065007400750072006e00200063006f006d0070003b000d000a000900090009006900660020002800280063006f006d00700020003d0020006f00700031002e005300650067006d0065006e00740033002e0043006f006d00700061007200650054006f0028006f00700032002e005300650067006d0065006e007400330029002900200021003d002000300029000d000a000900090009000900720065007400750072006e00200063006f006d0070003b000d000a000900090009006900660020002800280063006f006d00700020003d0020006f00700031002e005300650067006d0065006e00740034002e0043006f006d00700061007200650054006f0028006f00700032002e005300650067006d0065006e007400340029002900200021003d002000300029000d000a000900090009000900720065007400750072006e00200063006f006d0070003b000d000a000900090009006900660020002800280063006f006d00700020003d0020006f00700031002e005300650067006d0065006e00740035002e0043006f006d00700061007200650054006f0028006f00700032002e005300650067006d0065006e007400350029002900200021003d002000300029000d000a000900090009000900720065007400750072006e00200063006f006d0070003b0020000d000a000900090009000d000a00090009000900720065007400750072006e00200063006f006d0070003b000d000a00090009007d000d000a000d000a000d000a00090009007000720069007600610074006500200076006f0069006400200044006f00640061006a004b006f006e0074006f0028005400790070004b006f006e007400610020007400790070004b006f006e00740061002c0020004b006f006e0074006f00420061007300650020006b006f006e0074006f002c0020004f00620072006f00740079004b006f006e007400610057006f0072006b006500720020006f006b0077002c0020004c006900730074003c004900740065006d003e00200061007200720029000d000a00090009007b000d000a0009000900090053006f006e006500740061002e0042007500730069006e006500730073002e005600690065007700200076006900650077004b006f006e007400610020003d0020006b006f006e0074006f002e005400610062006c0065002e00570067004f006b007200650073005b0050006100720061006d002e004f006b007200650073005d002e004300720065006100740065005600690065007700280029003b000d000a000d000a0009000900090076006900650077004b006f006e00740061002e0043006f006e0064006900740069006f006e00200026003d0020006e006500770020004600690065006c00640043006f006e0064006900740069006f006e002e0045007100750061006c002800220050006f007a0069006f006d0022002c0020006b006f006e0074006f002e0050006f007a0069006f006d0020002b00200050006100720061006d002e004c00690063007a00620061005300650067006d0065006e0074006f00770029003b000d000a0009000900090076006900650077004b006f006e00740061002e0043006f006e0064006900740069006f006e00200026003d0020006e006500770020004600690065006c00640043006f006e0064006900740069006f006e002e004c0069006b00650028002200530079006d0062006f006c0022002c00200050006100720061006d002e00460069006c00740072004b006f006e007400610028006b006f006e0074006f00290029003b000d000a000d000a0009000900090066006f0072006500610063006800200028004b006f006e0074006f00420061007300650020006b00200069006e00200076006900650077004b006f006e007400610029000d000a000900090009007b000d000a0009000900090009004900740065006d002000700072006f0070006f007300650064004900740065006d0020003d0020006e006500770020004900740065006d00280050006100720061006d002c0020006b0029003b000d000a0009000900090009004900740065006d0020006f007000650072006100740069006f006e0061006c004900740065006d0020003d0020006e0075006c006c003b000d000a000d000a00090009000900090066006f0072006500610063006800200028004900740065006d002000690074007800200069006e00200061007200720029000d000a000900090009000900090069006600200028004900740065006d002e004900730045007100750061006c0028006900740078002c002000700072006f0070006f007300650064004900740065006d00290029000d000a00090009000900090009007b000d000a000900090009000900090009006f007000650072006100740069006f006e0061006c004900740065006d0020003d0020006900740078003b000d000a0009000900090009000900090062007200650061006b003b000d000a00090009000900090009007d000d000a000d000a00090009000900090069006600200028006f007000650072006100740069006f006e0061006c004900740065006d0020003d003d0020006e0075006c006c0029000d000a0009000900090009007b000d000a00090009000900090009006100720072002e004100640064002800700072006f0070006f007300650064004900740065006d0029003b000d000a00090009000900090009006f007000650072006100740069006f006e0061006c004900740065006d0020003d002000700072006f0070006f007300650064004900740065006d003b000d000a0009000900090009007d000d000a000d000a0009000900090009006f006b0077002e004b006f006e0074006f0020003d0020006b003b000d000a0009000900090009006f007000650072006100740069006f006e0061006c004900740065006d002e00410064006400560061006c007500650028007400790070004b006f006e00740061002c0020006f006b00770029003b000d000a000900090009007d000d000a00090009007d000d000a000d000a000d000a00090009007000750062006c0069006300200063006c0061007300730020004900740065006d000d000a00090009007b000d000a000900090009007000720069007600610074006500200072006500610064006f006e006c007900200053007400720069006e00670020007300650067006d0065006e007400310020003d00200053007400720069006e0067002e0045006d007000740079003b000d000a000900090009007000720069007600610074006500200072006500610064006f006e006c007900200053007400720069006e00670020007300650067006d0065006e007400320020003d00200053007400720069006e0067002e0045006d007000740079003b000d000a000900090009007000720069007600610074006500200072006500610064006f006e006c007900200053007400720069006e00670020007300650067006d0065006e007400330020003d00200053007400720069006e0067002e0045006d007000740079003b000d000a000900090009007000720069007600610074006500200072006500610064006f006e006c007900200053007400720069006e00670020007300650067006d0065006e007400340020003d00200053007400720069006e0067002e0045006d007000740079003b000d000a000900090009007000720069007600610074006500200072006500610064006f006e006c007900200053007400720069006e00670020007300650067006d0065006e007400350020003d00200053007400720069006e0067002e0045006d007000740079003b000d000a000900090009007000720069007600610074006500200072006500610064006f006e006c007900200053007400720069006e0067002000730079006d0062006f006c0041006e0061006c006900740079006b00690020003d00200053007400720069006e0067002e0045006d007000740079003b000d000a000d000a000900090009007000720069007600610074006500200064006500630069006d0061006c00200070006c0061006e0020003d00200030006d003b000d000a000900090009007000720069007600610074006500200064006500630069006d0061006c002000770079006b006f006e0061006e006900650020003d00200030006d003b000d000a000900090009007000720069007600610074006500200064006500630069006d0061006c0020007a00610061006e00670061007a006f00770061006e006900650020003d00200030006d003b000d000a000d000a000d000a000900090009007000750062006c006900630020004900740065006d00280050006100720061006d007300200070006100720061006d002c0020004b006f006e0074006f00420061007300650020006b006f006e0074006f0050006c0061006e00750029000d000a000900090009007b000d000a00090009000900090069006e00740020006c00690063007a00620061005300650067006d0065006e0074006f00770020003d00200070006100720061006d002e004c00690063007a00620061005300650067006d0065006e0074006f0077003b000d000a000d000a00090009000900090069006600200028006c00690063007a00620061005300650067006d0065006e0074006f00770020003e003d002000350029000d000a0009000900090009007b000d000a00090009000900090009007300650067006d0065006e007400350020003d0020006b006f006e0074006f0050006c0061006e0075002e005300650067006d0065006e0074003b000d000a00090009000900090009007300650067006d0065006e007400340020003d0020006b006f006e0074006f0050006c0061006e0075002e004e006100640072007a00650064006e0065002e005300650067006d0065006e0074003b000d000a00090009000900090009007300650067006d0065006e007400330020003d0020006b006f006e0074006f0050006c0061006e0075002e004e006100640072007a00650064006e0065002e004e006100640072007a00650064006e0065002e005300650067006d0065006e0074003b000d000a00090009000900090009007300650067006d0065006e007400320020003d0020006b006f006e0074006f0050006c0061006e0075002e004e006100640072007a00650064006e0065002e004e006100640072007a00650064006e0065002e004e006100640072007a00650064006e0065002e005300650067006d0065006e0074003b000d000a00090009000900090009007300650067006d0065006e007400310020003d0020006b006f006e0074006f0050006c0061006e0075002e004e006100640072007a00650064006e0065002e004e006100640072007a00650064006e0065002e004e006100640072007a00650064006e0065002e004e006100640072007a00650064006e0065002e005300650067006d0065006e0074003b000d000a0009000900090009007d000d000a00090009000900090065006c0073006500200069006600200028006c00690063007a00620061005300650067006d0065006e0074006f00770020003e003d002000340029000d000a0009000900090009007b000d000a00090009000900090009007300650067006d0065006e007400340020003d0020006b006f006e0074006f0050006c0061006e0075002e005300650067006d0065006e0074003b000d000a00090009000900090009007300650067006d0065006e007400330020003d0020006b006f006e0074006f0050006c0061006e0075002e004e006100640072007a00650064006e0065002e005300650067006d0065006e0074003b000d000a00090009000900090009007300650067006d0065006e007400320020003d0020006b006f006e0074006f0050006c0061006e0075002e004e006100640072007a00650064006e0065002e004e006100640072007a00650064006e0065002e005300650067006d0065006e0074003b000d000a00090009000900090009007300650067006d0065006e007400310020003d0020006b006f006e0074006f0050006c0061006e0075002e004e006100640072007a00650064006e0065002e004e006100640072007a00650064006e0065002e004e006100640072007a00650064006e0065002e005300650067006d0065006e0074003b000d000a0009000900090009007d000d000a00090009000900090065006c0073006500200069006600200028006c00690063007a00620061005300650067006d0065006e0074006f00770020003e003d002000330029000d000a0009000900090009007b000d000a00090009000900090009007300650067006d0065006e007400330020003d0020006b006f006e0074006f0050006c0061006e0075002e005300650067006d0065006e0074003b000d000a00090009000900090009007300650067006d0065006e007400320020003d0020006b006f006e0074006f0050006c0061006e0075002e004e006100640072007a00650064006e0065002e005300650067006d0065006e0074003b000d000a00090009000900090009007300650067006d0065006e007400310020003d0020006b006f006e0074006f0050006c0061006e0075002e004e006100640072007a00650064006e0065002e004e006100640072007a00650064006e0065002e005300650067006d0065006e0074003b000d000a0009000900090009007d000d000a00090009000900090065006c0073006500200069006600200028006c00690063007a00620061005300650067006d0065006e0074006f00770020003e003d002000320029000d000a0009000900090009007b000d000a00090009000900090009007300650067006d0065006e007400320020003d0020006b006f006e0074006f0050006c0061006e0075002e005300650067006d0065006e0074003b000d000a00090009000900090009007300650067006d0065006e007400310020003d0020006b006f006e0074006f0050006c0061006e0075002e004e006100640072007a00650064006e0065002e005300650067006d0065006e0074003b000d000a0009000900090009007d000d000a00090009000900090065006c0073006500200069006600200028006c00690063007a00620061005300650067006d0065006e0074006f00770020003e003d002000310029000d000a0009000900090009007b000d000a00090009000900090009007300650067006d0065006e007400310020003d0020006b006f006e0074006f0050006c0061006e0075002e005300650067006d0065006e0074003b000d000a0009000900090009007d000d000a000d000a000900090009000900730079006d0062006f006c0041006e0061006c006900740079006b00690020003d0020007300650067006d0065006e00740031003b000d000a000d000a00090009000900090069006600200028007300650067006d0065006e0074003200200021003d0020002200220029000d000a0009000900090009000900730079006d0062006f006c0041006e0061006c006900740079006b00690020002b003d00200022002d00220020002b0020007300650067006d0065006e00740032003b000d000a00090009000900090069006600200028007300650067006d0065006e0074003300200021003d0020002200220029000d000a0009000900090009000900730079006d0062006f006c0041006e0061006c006900740079006b00690020002b003d00200022002d00220020002b0020007300650067006d0065006e00740033003b000d000a00090009000900090069006600200028007300650067006d0065006e0074003400200021003d0020002200220029000d000a0009000900090009000900730079006d0062006f006c0041006e0061006c006900740079006b00690020002b003d00200022002d00220020002b0020007300650067006d0065006e00740034003b000d000a00090009000900090069006600200028007300650067006d0065006e0074003500200021003d0020002200220029000d000a0009000900090009000900730079006d0062006f006c0041006e0061006c006900740079006b00690020002b003d00200022002d00220020002b0020007300650067006d0065006e00740035003b000d000a000900090009007d000d000a000d000a000d000a000900090009007000750062006c0069006300200073007400720069006e00670020005300650067006d0065006e00740031000d000a000900090009007b00200067006500740020007b002000720065007400750072006e0020007300650067006d0065006e00740031003b0020007d0020007d000d000a000d000a000900090009007000750062006c0069006300200073007400720069006e00670020005300650067006d0065006e00740032000d000a000900090009007b00200067006500740020007b002000720065007400750072006e0020007300650067006d0065006e00740032003b0020007d0020007d000d000a000d000a000900090009007000750062006c0069006300200073007400720069006e00670020005300650067006d0065006e00740033000d000a000900090009007b00200067006500740020007b002000720065007400750072006e0020007300650067006d0065006e00740033003b0020007d0020007d000d000a000d000a000900090009007000750062006c0069006300200073007400720069006e00670020005300650067006d0065006e00740034000d000a000900090009007b00200067006500740020007b002000720065007400750072006e0020007300650067006d0065006e00740034003b0020007d0020007d000d000a000d000a000900090009007000750062006c0069006300200073007400720069006e00670020005300650067006d0065006e00740035000d000a000900090009007b00200067006500740020007b002000720065007400750072006e0020007300650067006d0065006e00740035003b0020007d0020007d000d000a000d000a000900090009007000750062006c0069006300200064006500630069006d0061006c00200050006c0061006e000d000a000900090009007b00200067006500740020007b002000720065007400750072006e00200070006c0061006e003b0020007d0020007d000d000a000d000a000900090009007000750062006c0069006300200064006500630069006d0061006c002000570079006b006f006e0061006e00690065000d000a000900090009007b00200067006500740020007b002000720065007400750072006e002000770079006b006f006e0061006e00690065003b0020007d0020007d000d000a000d000a000900090009007000750062006c0069006300200064006500630069006d0061006c00200050006f007a006f007300740061006c006f000d000a000900090009007b00200067006500740020007b002000720065007400750072006e00200070006c0061006e0020002d002000770079006b006f006e0061006e00690065003b0020007d0020007d000d000a000d000a000900090009007000750062006c0069006300200064006500630069006d0061006c002000500072006f00630065006e0074000d000a000900090009007b00200067006500740020007b002000720065007400750072006e002000280070006c0061006e00200021003d0020003000290020003f0020002800770079006b006f006e0061006e006900650020002f00200070006c0061006e00290020002a00200031003000300020003a00200030006d003b0020007d0020007d000d000a000d000a000900090009007000750062006c0069006300200064006500630069006d0061006c0020005a00610061006e00670061007a006f00770061006e00690065000d000a000900090009007b00200067006500740020007b002000720065007400750072006e0020007a00610061006e00670061007a006f00770061006e00690065003b0020007d0020007d000d000a000d000a000900090009007000750062006c0069006300200064006500630069006d0061006c002000500072006f00630065006e0074005a00610061006e00670061007a006f00770061006e00690061000d000a000900090009007b00200067006500740020007b002000720065007400750072006e002000280070006c0061006e00200021003d0020003000290020003f00200028007a00610061006e00670061007a006f00770061006e006900650020002f00200070006c0061006e00290020002a00200031003000300020003a00200030006d003b0020007d0020007d000d000a000d000a000d000a000900090009007000750062006c00690063002000730074006100740069006300200042006f006f006c00650061006e0020004900730045007100750061006c0028004900740065006d0020006f00700031002c0020004900740065006d0020006f007000320029000d000a000900090009007b000d000a000900090009000900720065007400750072006e000d000a00090009000900090009006f00700031002e007300650067006d0065006e007400310020003d003d0020006f00700032002e007300650067006d0065006e00740031002000260026000d000a00090009000900090009006f00700031002e007300650067006d0065006e007400320020003d003d0020006f00700032002e007300650067006d0065006e00740032002000260026000d000a00090009000900090009006f00700031002e007300650067006d0065006e007400330020003d003d0020006f00700032002e007300650067006d0065006e00740033002000260026000d000a00090009000900090009006f00700031002e007300650067006d0065006e007400340020003d003d0020006f00700032002e007300650067006d0065006e00740034002000260026000d000a00090009000900090009006f00700031002e007300650067006d0065006e007400350020003d003d0020006f00700032002e007300650067006d0065006e00740035003b000d000a000900090009007d000d000a000d000a000d000a000900090009007000750062006c0069006300200076006f00690064002000410064006400560061006c007500650028005400790070004b006f006e007400610020007400790070004b006f006e00740061002c0020004f00620072006f00740079004b006f006e007400610057006f0072006b006500720020006f006b00770029000d000a000900090009007b000d000a000900090009000900730077006900740063006800200028007400790070004b006f006e007400610029000d000a0009000900090009007b000d000a0009000900090009000900630061007300650020005400790070004b006f006e00740061002e0050006c0061006e003a000d000a0009000900090009000900090070006c0061006e0020002b003d0020006f006b0077002e004f00620072006f00740079004e0057006e0020002b0020006f006b0077002e0042004f0057006e003b000d000a0009000900090009000900090062007200650061006b003b000d000a000900090009000900090009000d000a0009000900090009000900630061007300650020005400790070004b006f006e00740061002e00570079006b006f006e0061006e00690065003a000d000a00090009000900090009000900770079006b006f006e0061006e006900650020002d003d0020006f006b0077002e00500065007200530061006c0064006f003b000d000a0009000900090009000900090062007200650061006b003b000d000a000900090009000900090009000d000a0009000900090009000900630061007300650020005400790070004b006f006e00740061002e005a00610061006e00670061007a006f00770061006e00690065003a000d000a000900090009000900090020007a00610061006e00670061007a006f00770061006e006900650020002b003d002000530079007300740065006d002e004d006100740068002e0041006200730028006f006b0077002e004f00620072006f00740079004e004d006100290020002b002000530079007300740065006d002e004d006100740068002e0041006200730028006f006b0077002e0042004f004d00610029003b000d000a0009000900090009000900200062007200650061006b003b000d000a0009000900090009007d000d000a000900090009007d000d000a00090009007d000d000a000d000a000d000a00090009007000750062006c0069006300200063006c00610073007300200050006100720061006d00730020003a00200043006f006e00740065007800740042006100730065000d000a00090009007b000d000a000900090009007000750062006c0069006300200053007400720069006e0067005b005d0020005300650067006d0065006e00740079003b000d000a000d000a00090009000900700072006900760061007400650020004f006b007200650073004f006200720061006300680075006e006b006f007700790020006f006b0072006500730020003d0020006e0075006c006c003b000d000a000900090009007000720069007600610074006500200059006500610072004d006f006e007400680020006d006900650073006900610063003b000d000a000900090009007000720069007600610074006500200042006f006f006c00650061006e0020006200750066006f00720020003d00200074007200750065003b000d000a000d000a00090009000900700072006900760061007400650020004b006f006e0074006f00420061007300650020006b006f006e0074006f0050006c0061006e0075003b000d000a00090009000900700072006900760061007400650020004b006f006e0074006f0042006100730065005b005d0020006b006f006e0074006100570079006b006f006e0061006e006900610020003d0020006e0075006c006c003b000d000a00090009000900700072006900760061007400650020004b006f006e0074006f0042006100730065005b005d0020006b006f006e00740061005a00610061006e00670061007a006f00770061006e006900610020003d0020006e0075006c006c003b000d000a000d000a000900090009007000720069007600610074006500200069006e00740020006c00690063007a00620061005300650067006d0065006e0074006f00770020003d00200030003b000d000a000900090009007000720069007600610074006500200053007400720069006e00670020007300650067006d0065006e007400310020003d00200022002a0022003b000d000a000900090009007000720069007600610074006500200053007400720069006e00670020007300650067006d0065006e007400320020003d00200022002a0022003b000d000a000900090009007000720069007600610074006500200053007400720069006e00670020007300650067006d0065006e007400330020003d00200022002a0022003b000d000a000900090009007000720069007600610074006500200053007400720069006e00670020007300650067006d0065006e007400340020003d00200022002a0022003b000d000a000900090009007000720069007600610074006500200053007400720069006e00670020007300650067006d0065006e007400350020003d00200022002a0022003b000d000a000d000a000d000a000900090009007000750062006c0069006300200050006100720061006d007300280043006f006e00740065007800740020006300780029000d000a0009000900090009003a002000620061007300650028006300780029000d000a000900090009007b000d000a0009000900090009006f006b0072006500730020003d00200028004f006b007200650073004f006200720061006300680075006e006b006f00770079002900630078005b0074007900700065006f00660028004f006b007200650073004f006200720061006300680075006e006b006f007700790029005d003b000d000a0009000900090009005300650067006d0065006e007400790020003d00200045006c0065006d004f00700069007300750041006e0061006c0069007400790063007a006e00650067006f002e005300650067006d0065006e00740079004200750064007a00650074006f007700650043006f006c006c0065006300740069006f006e002e004700650074005300650067006d0065006e00740079002800630078002e00530065007300730069006f006e002c00660061006c007300650029003b000d000a000d000a0009000900090009006c00690063007a00620061005300650067006d0065006e0074006f00770020003d002000530079007300740065006d002e004d006100740068002e004d006100780028005300650067006d0065006e00740079002e004c0065006e0067007400680020002d00200031002c002000300029003b000d000a000d000a00090009000900090074006800690073002e004d0069006500730069006100630020003d0020006f006b007200650073002e004f006b007200650073002e00460072006f006d0020003c003d00200059006500610072004d006f006e00740068002e0054006f006400610079002e004600690072007300740044006100790020003f00200059006500610072004d006f006e00740068002e0054006f0064006100790020003a0020006e0065007700200059006500610072004d006f006e007400680028006f006b007200650073002e004f006b007200650073002e0054006f0029003b000d000a00090009000900090074006800690073002e004b006f006e0074006f0050006c0061006e00750020003d0020006e0075006c006c003b000d000a000900090009007d000d000a000d000a000d000a000900090009005b005000720069006f00720069007400790028003100300029005d000d000a000900090009005b00430061007000740069006f006e00280022004f006b00720065007300220029005d000d000a000900090009005b00440065006600610075006c0074005700690064007400680028003200300029005d000d000a000900090009007000750062006c006900630020004f006b007200650073004f006200720061006300680075006e006b006f007700790020004f006b007200650073000d000a000900090009007b00200067006500740020007b002000720065007400750072006e0020006f006b007200650073003b0020007d0020007d000d000a000d000a000d000a000900090009005b005000720069006f00720069007400790028003200300029005d000d000a000900090009005b00430061007000740069006f006e00280022004d00690065007300690005016300220029005d000d000a000900090009007000750062006c0069006300200059006500610072004d006f006e007400680020004d006900650073006900610063000d000a000900090009007b000d000a00090009000900090067006500740020007b002000720065007400750072006e0020006d006900650073006900610063003b0020007d000d000a0009000900090009007300650074000d000a0009000900090009007b000d000a00090009000900090009006d0069006500730069006100630020003d002000760061006c00750065003b000d000a000900090009000900090043006f006e0074006500780074002e00530065007300730069006f006e002e005600650072006900660069006500720073002e0041006400640028006e006500770020004d006f006e00740068005600650072006900660069006500720028007400680069007300290029003b000d000a0009000900090009007d000d000a000900090009007d000d000a000d000a000d000a000900090009005b005000720069006f00720069007400790028003300300029005d000d000a000900090009005b00430061007000740069006f006e0028002200550077007a0067006c00190164006e00690061006a0020006200750066006f007200220029005d000d000a000900090009007000750062006c0069006300200062006f006f006c0020004200750066006f0072000d000a000900090009007b000d000a00090009000900090067006500740020007b002000720065007400750072006e0020006200750066006f0072003b0020007d000d000a00090009000900090073006500740020007b0020006200750066006f00720020003d002000760061006c00750065003b0020007d000d000a000900090009007d000d000a000d000a000d000a000900090009005b005000720069006f00720069007400790028003400300029005d000d000a000900090009005b00440065006600610075006c0074005700690064007400680028003200300029005d000d000a000900090009005b00430061007000740069006f006e00280022004b006f006e0074006f00200070006c0061006e007500220029005d000d000a000900090009007000750062006c006900630020004b006f006e0074006f00420061007300650020004b006f006e0074006f0050006c0061006e0075000d000a000900090009007b000d000a00090009000900090067006500740020007b002000720065007400750072006e0020006b006f006e0074006f0050006c0061006e0075003b0020007d000d000a0009000900090009007300650074000d000a0009000900090009007b000d000a00090009000900090009006b006f006e0074006f0050006c0061006e00750020003d002000760061006c00750065003b000d000a000900090009000900090043006f006e0074006500780074002e00530065007300730069006f006e002e005600650072006900660069006500720073002e0041006400640028006e006500770020004b006f006e0074006f0050006c0061006e0075005600650072006900660069006500720028007400680069007300290029003b000d000a0009000900090009007d000d000a000900090009007d000d000a000d000a000d000a000900090009005b005000720069006f00720069007400790028003500300029005d000d000a000900090009005b00440065006600610075006c0074005700690064007400680028003200300029005d000d000a000900090009005b00430061007000740069006f006e00280022004b006f006e00740061002000770079006b006f006e0061006e0069006100220029005d000d000a000900090009007000750062006c006900630020004b006f006e0074006f0042006100730065005b005d0020004b006f006e0074006100570079006b006f006e0061006e00690061000d000a000900090009007b000d000a00090009000900090067006500740020007b002000720065007400750072006e0020006b006f006e0074006100570079006b006f006e0061006e00690061003b0020007d000d000a00090009000900090073006500740020007b0020006b006f006e0074006100570079006b006f006e0061006e006900610020003d002000760061006c00750065003b0020007d000d000a000900090009007d000d000a000d000a000d000a000900090009005b005000720069006f00720069007400790028003600300029005d000d000a000900090009005b00440065006600610075006c0074005700690064007400680028003200300029005d000d000a000900090009005b00430061007000740069006f006e00280022004b006f006e007400610020007a00610061006e00670061007c016f00770061006e0069006100220029005d000d000a000900090009007000750062006c006900630020004b006f006e0074006f0042006100730065005b005d0020004b006f006e00740061005a00610061006e00670061007a006f00770061006e00690061000d000a000900090009007b000d000a00090009000900090067006500740020007b002000720065007400750072006e0020006b006f006e00740061005a00610061006e00670061007a006f00770061006e00690061003b0020007d000d000a00090009000900090073006500740020007b0020006b006f006e00740061005a00610061006e00670061007a006f00770061006e006900610020003d002000760061006c00750065003b0020007d000d000a000900090009007d000d000a000d000a000d000a000900090009005b005000720069006f00720069007400790028003700300029005d000d000a000900090009005b00430061007000740069006f006e00280022004c00690063007a006200610020007300650067006d0065006e007400f3007700220029005d000d000a000900090009007000750062006c0069006300200069006e00740020004c00690063007a00620061005300650067006d0065006e0074006f0077000d000a000900090009007b000d000a00090009000900090067006500740020007b002000720065007400750072006e0020006c00690063007a00620061005300650067006d0065006e0074006f0077003b0020007d000d000a0009000900090009007300650074000d000a0009000900090009007b000d000a00090009000900090009006900660020002800760061006c007500650020003c002000300029000d000a000900090009000900090009006c00690063007a00620061005300650067006d0065006e0074006f00770020003d00200030003b000d000a000900090009000900090065006c007300650020006900660020002800760061006c007500650020003c003d0020005300650067006d0065006e00740079002e004c0065006e0067007400680020002d002000310029000d000a000900090009000900090009006c00690063007a00620061005300650067006d0065006e0074006f00770020003d002000760061006c00750065003b000d000a000d000a00090009000900090009004f006e004300680061006e0067006500640028004500760065006e00740041007200670073002e0045006d0070007400790029003b000d000a0009000900090009007d000d000a000900090009007d000d000a000d000a000d000a000900090009005b005000720069006f007200690074007900280031003000300029005d000d000a000900090009005b00430061007000740069006f006e00280022005300650067006d0065006e00740020003100220029005d000d000a000900090009007000750062006c0069006300200053007400720069006e00670020005300650067006d0065006e00740031000d000a000900090009007b000d000a00090009000900090067006500740020007b002000720065007400750072006e0020007300650067006d0065006e00740031003b0020007d000d000a00090009000900090073006500740020007b0020007300650067006d0065006e007400310020003d002000760061006c00750065003b0020007d000d000a000900090009007d000d000a000d000a000d000a000900090009005b005000720069006f007200690074007900280031003100300029005d000d000a000900090009005b00430061007000740069006f006e00280022005300650067006d0065006e00740020003200220029005d000d000a000900090009007000750062006c0069006300200053007400720069006e00670020005300650067006d0065006e00740032000d000a000900090009007b000d000a00090009000900090067006500740020007b002000720065007400750072006e0020007300650067006d0065006e00740032003b0020007d000d000a00090009000900090073006500740020007b0020007300650067006d0065006e007400320020003d002000760061006c00750065003b0020007d000d000a000900090009007d000d000a000d000a000d000a000900090009005b005000720069006f007200690074007900280031003200300029005d000d000a000900090009005b00430061007000740069006f006e00280022005300650067006d0065006e00740020003300220029005d000d000a000900090009007000750062006c0069006300200053007400720069006e00670020005300650067006d0065006e00740033000d000a000900090009007b000d000a00090009000900090067006500740020007b002000720065007400750072006e0020007300650067006d0065006e00740033003b0020007d000d000a00090009000900090073006500740020007b0020007300650067006d0065006e007400330020003d002000760061006c00750065003b0020007d000d000a000900090009007d000d000a000d000a000d000a000900090009005b005000720069006f007200690074007900280031003300300029005d000d000a000900090009005b00430061007000740069006f006e00280022005300650067006d0065006e00740020003400220029005d000d000a000900090009007000750062006c0069006300200053007400720069006e00670020005300650067006d0065006e00740034000d000a000900090009007b000d000a00090009000900090067006500740020007b002000720065007400750072006e0020007300650067006d0065006e00740034003b0020007d000d000a00090009000900090073006500740020007b0020007300650067006d0065006e007400340020003d002000760061006c00750065003b0020007d000d000a000900090009007d000d000a000d000a000d000a000900090009005b005000720069006f007200690074007900280031003400300029005d000d000a000900090009005b00430061007000740069006f006e00280022005300650067006d0065006e00740020003500220029005d000d000a000900090009007000750062006c0069006300200053007400720069006e00670020005300650067006d0065006e00740035000d000a000900090009007b000d000a00090009000900090067006500740020007b002000720065007400750072006e0020007300650067006d0065006e00740035003b0020007d000d000a00090009000900090073006500740020007b0020007300650067006d0065006e007400350020003d002000760061006c00750065003b0020007d000d000a000900090009007d000d000a000d000a000d000a000900090009007000750062006c006900630020004c006f006f006b007500700049006e0066006f0020004700650074004c006900730074004b006f006e0074006f0050006c0061006e007500280029000d000a000900090009007b002000720065007400750072006e0020006e006500770020004c006f006f006b007500700049006e0066006f0028004b00730069006500670061004d006f00640075006c0065002e0047006500740049006e007300740061006e00630065002800530065007300730069006f006e0029002e004b006f006e00740061002e00570067004f006b007200650073005b004f006b007200650073005d0029003b0020007d000d000a000d000a000900090009007000750062006c006900630020004c006f006f006b007500700049006e0066006f0020004700650074004c006900730074004b006f006e0074006100570079006b006f006e0061006e0069006100280029000d000a000900090009007b002000720065007400750072006e0020006e006500770020004c006f006f006b007500700049006e0066006f0028004b00730069006500670061004d006f00640075006c0065002e0047006500740049006e007300740061006e00630065002800530065007300730069006f006e0029002e004b006f006e00740061002e00570067004f006b007200650073005b004f006b007200650073005d0029003b0020007d000d000a000d000a000900090009007000750062006c006900630020004c006f006f006b007500700049006e0066006f0020004700650074004c006900730074004b006f006e00740061005a00610061006e00670061007a006f00770061006e0069006100280029000d000a000900090009007b002000720065007400750072006e0020006e006500770020004c006f006f006b007500700049006e0066006f0028004b00730069006500670061004d006f00640075006c0065002e0047006500740049006e007300740061006e00630065002800530065007300730069006f006e0029002e004b006f006e00740061002e00570067004f006b007200650073005b004f006b007200650073005d0029003b0020007d000d000a000d000a000d000a000900090009007000750062006c0069006300200062006f006f006c0020004900730052006500610064004f006e006c0079004c00690063007a00620061005300650067006d0065006e0074006f007700280029000d000a000900090009007b002000720065007400750072006e0020005300650067006d0065006e00740079002e004c0065006e0067007400680020003c003d00200031003b0020007d000d000a000d000a000900090009007000750062006c0069006300200062006f006f006c0020004900730052006500610064004f006e006c0079005300650067006d0065006e0074003100280029000d000a000900090009007b002000720065007400750072006e0020004c00690063007a00620061005300650067006d0065006e0074006f00770020003c00200031003b0020007d000d000a000d000a000900090009007000750062006c0069006300200062006f006f006c0020004900730052006500610064004f006e006c0079005300650067006d0065006e0074003200280029000d000a000900090009007b002000720065007400750072006e0020004c00690063007a00620061005300650067006d0065006e0074006f00770020003c00200032003b0020007d000d000a000d000a000900090009007000750062006c0069006300200062006f006f006c0020004900730052006500610064004f006e006c0079005300650067006d0065006e0074003300280029000d000a000900090009007b002000720065007400750072006e0020004c00690063007a00620061005300650067006d0065006e0074006f00770020003c00200033003b0020007d000d000a000d000a000900090009007000750062006c0069006300200062006f006f006c0020004900730052006500610064004f006e006c0079005300650067006d0065006e0074003400280029000d000a000900090009007b002000720065007400750072006e0020004c00690063007a00620061005300650067006d0065006e0074006f00770020003c00200034003b0020007d000d000a000d000a000900090009007000750062006c0069006300200062006f006f006c0020004900730052006500610064004f006e006c0079005300650067006d0065006e0074003500280029000d000a000900090009007b002000720065007400750072006e0020004c00690063007a00620061005300650067006d0065006e0074006f00770020003c00200035003b0020007d000d000a000d000a000d000a000900090009007000720069007600610074006500200063006c0061007300730020004d006f006e00740068005600650072006900660069006500720020003a002000560065007200690066006900650072000d000a000900090009007b000d000a0009000900090009007000720069007600610074006500200050006100720061006d007300200068006f00730074003b000d000a0009000900090009007000720069007600610074006500200053007400720069006e00670020006500720072006f00720044006500730063003b000d000a000d000a00090009000900090069006e007400650072006e0061006c0020004d006f006e007400680056006500720069006600690065007200280050006100720061006d007300200068006f007300740029000d000a0009000900090009007b00200074006800690073002e0068006f007300740020003d00200068006f00730074003b0020007d000d000a000d000a0009000900090009007000750062006c006900630020006f007600650072007200690064006500200053007400720069006e00670020004400650073006300720069007000740069006f006e000d000a0009000900090009007b00200067006500740020007b002000720065007400750072006e0020006500720072006f00720044006500730063003b0020007d0020007d000d000a000d000a0009000900090009007000750062006c006900630020006f00760065007200720069006400650020004f0062006a00650063007400200053006f0075007200630065000d000a0009000900090009007b00200067006500740020007b002000720065007400750072006e00200074006800690073002e0068006f00730074003b0020007d0020007d000d000a000d000a0009000900090009007000750062006c006900630020006f007600650072007200690064006500200069006e0074002000470065007400480061007300680043006f0064006500280029000d000a0009000900090009007b002000720065007400750072006e0020003100330020002a00200068006f00730074002e00470065007400480061007300680043006f0064006500280029003b0020007d000d000a000d000a000900090009000900700072006f0074006500630074006500640020006f007600650072007200690064006500200042006f006f006c00650061006e0020004900730041006300630065007000740028004f0062006a00650063007400200064006100740061002c00200053007400720069006e0067002000700072006f00700065007200740079002c0020005600650072006900660069006500720041006300740069006f006e00200061006300740069006f006e0029000d000a0009000900090009007b002000720065007400750072006e00200061006300740069006f006e0020003d003d0020005600650072006900660069006500720041006300740069006f006e002e0041006300630065007000740052006f0077002000260026002000640061007400610020003d003d00200074006800690073002e0068006f00730074002000260026002000700072006f007000650072007400790020003d003d00200022004d0069006500730069006100630022003b0020007d000d000a000d000a000d000a000900090009000900700072006f0074006500630074006500640020006f007600650072007200690064006500200042006f006f006c00650061006e00200049007300560061006c0069006400280029000d000a0009000900090009007b000d000a0009000900090009000900690066002000280068006f00730074002e006d0069006500730069006100630020003d003d00200059006500610072004d006f006e00740068002e0045006d0070007400790029000d000a00090009000900090009007b000d000a000900090009000900090009006500720072006f007200440065007300630020003d002000220050006f00640061006e006900650020006d00690065007300690005016300610020006a006500730074002000770079006d006100670061006e0065002e0022003b000d000a00090009000900090009000900720065007400750072006e002000660061006c00730065003b000d000a00090009000900090009007d000d000a0009000900090009000900690066002000280068006f00730074002e004d006900650073006900610063002e0054006f00460072006f006d0054006f00280029002e00460072006f006d0020003c00200068006f00730074002e004f006b007200650073002e004f006b007200650073002e00460072006f006d0029000d000a00090009000900090009007b000d000a000900090009000900090009006500720072006f007200440065007300630020003d00200053007400720069006e0067002e0046006f0072006d0061007400280022004d00690065007300690005016300200027007b0030007d00270020006a006500730074002000770063007a0065005b016e00690065006a0073007a00790020006f0020006400610074007900200072006f0070006f0063007a00190163006900610020006f006b007200650073007500200027007b0031007d0027002e0022002c00200068006f00730074002e006d006900650073006900610063002c00200068006f00730074002e006f006b0072006500730029003b000d000a00090009000900090009000900720065007400750072006e002000660061006c00730065003b000d000a00090009000900090009007d000d000a000d000a0009000900090009000900720065007400750072006e00200074007200750065003b000d000a0009000900090009007d000d000a000d000a000d000a0009000900090009007000750062006c006900630020006f007600650072007200690064006500200042006f006f006c00650061006e00200045007100750061006c00730028004f0062006a0065006300740020006f0029000d000a0009000900090009007b000d000a00090009000900090009004d006f006e007400680056006500720069006600690065007200200076006500720020003d0020006f00200021003d0020006e0075006c006c0020003f00200028006f002e0047006500740054007900700065002800290020003d003d00200074007900700065006f00660028004d006f006e007400680056006500720069006600690065007200290020003f00200028004d006f006e00740068005600650072006900660069006500720029006f0020003a0020006e0075006c006c00290020003a0020006e0075006c006c003b000d000a0009000900090009000900720065007400750072006e002000760065007200200021003d0020006e0075006c006c0020002600260020007600650072002e0068006f007300740020003d003d00200074006800690073002e0068006f00730074003b000d000a0009000900090009007d000d000a000900090009007d000d000a000d000a000d000a000900090009007000720069007600610074006500200063006c0061007300730020004b006f006e0074006f0050006c0061006e0075005600650072006900660069006500720020003a002000560065007200690066006900650072000d000a000900090009007b000d000a0009000900090009007000720069007600610074006500200050006100720061006d007300200068006f00730074003b000d000a0009000900090009007000720069007600610074006500200053007400720069006e00670020006500720072006f00720044006500730063003b000d000a000d000a00090009000900090069006e007400650072006e0061006c0020004b006f006e0074006f0050006c0061006e00750056006500720069006600690065007200280050006100720061006d007300200068006f007300740029000d000a0009000900090009007b00200074006800690073002e0068006f007300740020003d00200068006f00730074003b0020007d000d000a000d000a0009000900090009007000750062006c006900630020006f007600650072007200690064006500200053007400720069006e00670020004400650073006300720069007000740069006f006e000d000a0009000900090009007b00200067006500740020007b002000720065007400750072006e0020006500720072006f00720044006500730063003b0020007d0020007d000d000a000d000a0009000900090009007000750062006c006900630020006f00760065007200720069006400650020004f0062006a00650063007400200053006f0075007200630065000d000a0009000900090009007b00200067006500740020007b002000720065007400750072006e00200074006800690073002e0068006f00730074003b0020007d0020007d000d000a000d000a0009000900090009007000750062006c006900630020006f007600650072007200690064006500200069006e0074002000470065007400480061007300680043006f0064006500280029000d000a0009000900090009007b002000720065007400750072006e0020003100370020002a00200068006f00730074002e00470065007400480061007300680043006f0064006500280029003b0020007d000d000a000d000a000900090009000900700072006f0074006500630074006500640020006f007600650072007200690064006500200042006f006f006c00650061006e0020004900730041006300630065007000740028004f0062006a00650063007400200064006100740061002c00200053007400720069006e0067002000700072006f00700065007200740079002c0020005600650072006900660069006500720041006300740069006f006e00200061006300740069006f006e0029000d000a0009000900090009007b002000720065007400750072006e00200061006300740069006f006e0020003d003d0020005600650072006900660069006500720041006300740069006f006e002e0041006300630065007000740052006f0077002000260026002000640061007400610020003d003d00200074006800690073002e0068006f00730074002000260026002000700072006f007000650072007400790020003d003d00200022004b006f006e0074006f0050006c0061006e00750022003b0020007d000d000a000d000a000d000a000900090009000900700072006f0074006500630074006500640020006f007600650072007200690064006500200042006f006f006c00650061006e00200049007300560061006c0069006400280029000d000a0009000900090009007b000d000a0009000900090009000900690066002000280068006f00730074002e006b006f006e0074006f0050006c0061006e00750020003d003d0020006e0075006c006c0029000d000a00090009000900090009007b000d000a000900090009000900090009006500720072006f007200440065007300630020003d002000220050006f00640061006e006900650020006b006f006e0074006100200070006c0061006e00750020006a006500730074002000770079006d006100670061006e0065002e0022003b000d000a00090009000900090009000900720065007400750072006e002000660061006c00730065003b000d000a00090009000900090009007d000d000a0009000900090009000900690066002000280068006f00730074002e006b006f006e0074006f0050006c0061006e0075002e004f006b00720065007300200021003d00200068006f00730074002e006f006b0072006500730029000d000a00090009000900090009007b000d000a000900090009000900090009006500720072006f007200440065007300630020003d00200053007400720069006e0067002e0046006f0072006d006100740028002200570079006200720061006e00650020006b006f006e0074006f00200027007b0030007d002700200070006f00630068006f0064007a00690020007a0020006f006b007200650073007500200027007b0031007d00270020007a0061006d00690061007300740020007a0020006f006b007200650073007500200061006e0061006c0069007a006f00770061006e00650067006f00200027007b0032007d0027002e0022002c00200068006f00730074002e006b006f006e0074006f0050006c0061006e0075002c00200068006f00730074002e006b006f006e0074006f0050006c0061006e0075002e004f006b007200650073002c00200068006f00730074002e006f006b0072006500730029003b000d000a00090009000900090009000900720065007400750072006e002000660061006c00730065003b000d000a00090009000900090009007d000d000a000d000a0009000900090009000900720065007400750072006e00200074007200750065003b000d000a0009000900090009007d000d000a000d000a000d000a0009000900090009007000750062006c006900630020006f007600650072007200690064006500200042006f006f006c00650061006e00200045007100750061006c00730028004f0062006a0065006300740020006f0029000d000a0009000900090009007b000d000a00090009000900090009004b006f006e0074006f0050006c0061006e00750056006500720069006600690065007200200076006500720020003d0020006f00200021003d0020006e0075006c006c0020003f00200028006f002e0047006500740054007900700065002800290020003d003d00200074007900700065006f00660028004b006f006e0074006f0050006c0061006e00750056006500720069006600690065007200290020003f00200028004b006f006e0074006f0050006c0061006e0075005600650072006900660069006500720029006f0020003a0020006e0075006c006c00290020003a0020006e0075006c006c003b000d000a0009000900090009000900720065007400750072006e002000760065007200200021003d0020006e0075006c006c0020002600260020007600650072002e0068006f007300740020003d003d00200074006800690073002e0068006f00730074003b000d000a0009000900090009007d000d000a000900090009007d000d000a000d000a000d000a0009000900090069006e007400650072006e0061006c00200053007400720069006e0067002000460069006c00740072004b006f006e007400610028004b006f006e0074006f00420061007300650020006b006f006e0074006f0029000d000a000900090009007b000d000a00090009000900090053007400720069006e0067002000660069006c007400720020003d0020006b006f006e0074006f002e00530079006d0062006f006c003b000d000a000d000a00090009000900090069006600200028004c00690063007a00620061005300650067006d0065006e0074006f00770020003e003d002000310029000d000a0009000900090009000900660069006c007400720020002b003d00200022002d00220020002b0020005300650067006d0065006e00740031003b000d000a00090009000900090069006600200028004c00690063007a00620061005300650067006d0065006e0074006f00770020003e003d002000320029000d000a0009000900090009000900660069006c007400720020002b003d00200022002d00220020002b0020005300650067006d0065006e00740032003b000d000a00090009000900090069006600200028004c00690063007a00620061005300650067006d0065006e0074006f00770020003e003d002000330029000d000a0009000900090009000900660069006c007400720020002b003d00200022002d00220020002b0020005300650067006d0065006e00740033003b000d000a00090009000900090069006600200028004c00690063007a00620061005300650067006d0065006e0074006f00770020003e003d002000340029000d000a0009000900090009000900660069006c007400720020002b003d00200022002d00220020002b0020005300650067006d0065006e00740034003b000d000a00090009000900090069006600200028004c00690063007a00620061005300650067006d0065006e0074006f00770020003e003d002000350029000d000a0009000900090009000900660069006c007400720020002b003d00200022002d00220020002b0020005300650067006d0065006e00740035003b000d000a000d000a000900090009000900720065007400750072006e002000660069006c00740072003b000d000a000900090009007d000d000a00090009007d000d000a00090009000d000a00090009000d000a0009003c002f007300630072006900700074003e000d000a0009003c006d00650074006100200063006f006e00740065006e0074003d0022004d006900630072006f0073006f00660074002000560069007300750061006c002000530074007500640069006f00200037002e003000220020006e0061006d0065003d002200470045004e0045005200410054004f00520022003e000d000a0009003c006d00650074006100200063006f006e00740065006e0074003d00220043002300220020006e0061006d0065003d00220043004f00440045005f004c0041004e004700550041004700450022003e000d000a0009003c006d00650074006100200063006f006e00740065006e0074003d0022004a00610076006100530063007200690070007400220020006e0061006d0065003d002200760073005f00640065006600610075006c00740043006c00690065006e00740053006300720069007000740022003e000d000a0009003c006d00650074006100200063006f006e00740065006e0074003d00220068007400740070003a002f002f0073006300680065006d00610073002e006d006900630072006f0073006f00660074002e0063006f006d002f0069006e00740065006c006c006900730065006e00730065002f00690065003500220020006e0061006d0065003d002200760073005f0074006100720067006500740053006300680065006d00610022003e000d000a003c002f0068006500610064003e000d000a003c0062006f00640079003e000d000a0009003c0066006f0072006d002000690064003d00220044007a00690065006e006e0069006b00220020006d006500740068006f0064003d00220070006f007300740022002000720075006e00610074003d00220073006500720076006500720022003e000d000a0009003c00650061003a00440061007400610043006f006e0074006500780074002000490044003d002200440061007400610043006f006e007400650078007400310022002000720075006e00610074003d002200730065007200760065007200220020004f006e0043006f006e0074006500780074004c006f00610064003d0022004f006e0043006f006e0074006500780074004c006f0061006400220020004c0061006e006400730063006100700065003d002200460061006c0073006500220020002f003e000d000a0009003c006300630031003a005200650070006f00720074004800650061006400650072002000490044003d0022005200650070006f00720074004800650061006400650072003100220020005400690074006c0065003d0022005a0065007300740061007700690065006e006900650020007a00620069006f00720063007a006500200070006c0061006e00f30077002c002000770079006400610074006b00f30077002000690020007a00610061006e00670061007c016f00770061006e006900610020007c0020004e006100720061007300740061006a00050163006f00200064006f0020006d0069006500730069000501630061003a0020007b0030007d003b0020005a00610070006900730079002000770020006200750066006f0072007a0065003a0020007b0031007d0020007c00200022002000720075006e00610074003d002200730065007200760065007200220020002f003e000d000a0009003c0070003e000d000a00090009003c00650061003a0047007200690064002000490044003d0022004700720069006400310022002000720075006e00610074003d002200730065007200760065007200220020004f006e004200650066006f007200650052006f0077003d002200470072006900640031005f004f006e004200650066006f007200650052006f0077002200200052006f00770054007900700065004e0061006d0065003d0022004900740065006d0022002000530068006f007700410067007200530075006d003d002200540072007500650022002000530068006f0077005000610067006500530075006d003d002200540072007500650022002000530068006f0077005000720065007600410067007200530075006d003d00220049006e0046006f006f0074006500720022002000530068006f00770054006f00740061006c00530075006d003d002200540072007500650022002000530068006f007700470072006f0075007000530075006d003d002200540072007500650022003e000d000a000900090009003c0043006f006c0075006d006e0073003e000d000a0009000900090009003c00650061003a00470072006900640043006f006c0075006d006e00200041006c00690067006e003d002200430065006e007400650072002200200054006f00740061006c003d00220049006e0066006f0022002000430061007000740069006f006e003d0022005300650067006d0065006e007400310022002000490044003d00220063006f006c005300650067006d0065006e007400310022003e000d000a0009000900090009003c002f00650061003a00470072006900640043006f006c0075006d006e003e000d000a0009000900090009003c00650061003a00470072006900640043006f006c0075006d006e00200041006c00690067006e003d002200430065006e0074006500720022002000430061007000740069006f006e003d0022005300650067006d0065006e007400320022002000490044003d00220063006f006c005300650067006d0065006e007400320022003e000d000a0009000900090009003c002f00650061003a00470072006900640043006f006c0075006d006e003e000d000a0009000900090009003c00650061003a00470072006900640043006f006c0075006d006e00200041006c00690067006e003d002200430065006e0074006500720022002000430061007000740069006f006e003d0022005300650067006d0065006e007400330022002000490044003d00220063006f006c005300650067006d0065006e007400330022003e000d000a0009000900090009003c002f00650061003a00470072006900640043006f006c0075006d006e003e000d000a0009000900090009003c00650061003a00470072006900640043006f006c0075006d006e00200041006c00690067006e003d002200430065006e0074006500720022002000430061007000740069006f006e003d0022005300650067006d0065006e007400340022002000490044003d00220063006f006c005300650067006d0065006e007400340022003e000d000a0009000900090009003c002f00650061003a00470072006900640043006f006c0075006d006e003e000d000a0009000900090009003c00650061003a00470072006900640043006f006c0075006d006e00200041006c00690067006e003d002200430065006e0074006500720022002000430061007000740069006f006e003d0022005300650067006d0065006e007400350022002000490044003d00220063006f006c005300650067006d0065006e007400350022003e000d000a0009000900090009003c002f00650061003a00470072006900640043006f006c0075006d006e003e000d000a0009000900090009003c00650061003a00470072006900640043006f006c0075006d006e002000570069006400740068003d002200310035002200200041006c00690067006e003d002200520069006700680074002200200054006f00740061006c003d002200530075006d0022002000430061007000740069006f006e003d00220050006c0061006e002200200046006f0072006d00610074003d0022007b0030003a006e007d0022002000490044003d00220063006f006c0050006c0061006e0022003e000d000a0009000900090009003c002f00650061003a00470072006900640043006f006c0075006d006e003e000d000a0009000900090009003c00650061003a00470072006900640043006f006c0075006d006e002000570069006400740068003d002200310035002200200041006c00690067006e003d002200520069006700680074002200200054006f00740061006c003d002200530075006d0022002000430061007000740069006f006e003d002200570079006b006f006e0061006e00690065002200200046006f0072006d00610074003d0022007b0030003a006e007d0022002000490044003d00220063006f006c00570079006b006f006e0061006e006900650022003e000d000a0009000900090009003c002f00650061003a00470072006900640043006f006c0075006d006e003e000d000a0009000900090009003c00650061003a00470072006900640043006f006c0075006d006e002000570069006400740068003d002200310035002200200041006c00690067006e003d002200520069006700680074002200200054006f00740061006c003d002200530075006d0022002000430061007000740069006f006e003d00220050006f007a006f0073007400610042016f002200200046006f0072006d00610074003d0022007b0030003a006e007d0022002000490044003d00220063006f006c0050006f007a006f007300740061006c006f0022003e000d000a0009000900090009003c002f00650061003a00470072006900640043006f006c0075006d006e003e000d000a0009000900090009003c00650061003a00470072006900640043006f006c0075006d006e002000570069006400740068003d002200310030002200200041006c00690067006e003d002200430065006e0074006500720022002000430061007000740069006f006e003d002200570079006b006f006e0061006e00690065002800250029002200200046006f0072006d00610074003d0022007b0030003a006e007d0022002000490044003d00220063006f006c00500072006f00630065006e00740022003e000d000a0009000900090009003c002f00650061003a00470072006900640043006f006c0075006d006e003e000d000a0009000900090009003c00650061003a00470072006900640043006f006c0075006d006e002000570069006400740068003d002200310035002200200041006c00690067006e003d002200520069006700680074002200200054006f00740061006c003d002200530075006d0022002000430061007000740069006f006e003d0022005a00610061006e00670061007c016f00770061006e00690065002200200046006f0072006d00610074003d0022007b0030003a006e007d0022002000490044003d00220063006f006c005a00610061006e00670061007a006f00770061006e006900650022003e000d000a0009000900090009003c002f00650061003a00470072006900640043006f006c0075006d006e003e000d000a0009000900090009003c00650061003a00470072006900640043006f006c0075006d006e002000570069006400740068003d002200310030002200200041006c00690067006e003d002200430065006e0074006500720022002000430061007000740069006f006e003d0022005a00610061006e00670061007c012e002800250029002200200046006f0072006d00610074003d0022007b0030003a006e007d0022002000490044003d00220063006f006c005a00610061006e00670061007a006f00770061006e0069006500500072006f00630065006e00740022003e000d000a0009000900090009003c002f00650061003a00470072006900640043006f006c0075006d006e003e000d000a000900090009003c002f0043006f006c0075006d006e0073003e000d000a00090009003c002f00650061003a0047007200690064003e000d000a0009003c002f0070003e000d000a0009003c006300630031003a005200650070006f007200740046006f006f007400650072002000490044003d0022005200650070006f007200740046006f006f00740065007200310022002000720075006e00610074003d00220073006500720076006500720022003e000d000a00090009003c005300750062007400690074006c00650073003e000d000a000900090009003c006300630031003a0046006f006f007400650072005300750062007400690074006c00650020005300750062007400690074006c00650054007900700065003d0022004f00700065007200610074006f00720022003e000d000a000900090009003c002f006300630031003a0046006f006f007400650072005300750062007400690074006c0065003e000d000a00090009003c002f005300750062007400690074006c00650073003e000d000a0009003c002f006300630031003a005200650070006f007200740046006f006f007400650072003e000d000a0009003c002f0066006f0072006d003e000d000a003c002f0062006f00640079003e000d000a003c002f00680074006d006c003e000d000a00</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_972" guid="6f7cddf5-80c4-46b4-b951-45c1b9954f89">
+    <Name>Reports</Name>
+    <Parent>CfgNode_4</Parent>
+    <Type>Node</Type>
+    <Attributes />
+  </CfgNode>
+  <CfgNode id="CfgNode_973" guid="21077e19-f7f3-4d09-b8f2-168a0a501456">
+    <Name>KontoBaseObroty</Name>
+    <Parent>CfgNode_972</Parent>
+    <Type>Node</Type>
+    <Attributes />
+  </CfgNode>
+  <CfgNode id="CfgNode_974" guid="c41982f2-a7c3-4855-828e-1ad79aa044db">
+    <Name>zestawienie budżetowe.xml</Name>
+    <Parent>21077e19-f7f3-4d09-b8f2-168a0a501456</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1606">
+        <Name />
+        <Node>CfgNode_974</Node>
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c41737047656e657261746f7220786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c4e616d653e5a657374617769656e696520627564c5bc65746f77653c2f4e616d653e0d0a20203c456e61626c65643e747275653c2f456e61626c65643e0d0a20203c50726f6d70743e747275653c2f50726f6d70743e0d0a20203c49735374616e646172645265706f72743e66616c73653c2f49735374616e646172645265706f72743e0d0a20203c436f6e7465787457697468526f77733e747275653c2f436f6e7465787457697468526f77733e0d0a20203c44657374696e6174696f6e3e44656661756c743c2f44657374696e6174696f6e3e0d0a20203c536570657261746550616765733e747275653c2f536570657261746550616765733e0d0a20203c5365706572617465446f63733e66616c73653c2f5365706572617465446f63733e0d0a20203c4368616e6765496e666f3e44656661756c743c2f4368616e6765496e666f3e0d0a20203c54656d706c61746546696c654e616d65202f3e0d0a20203c54656d706c617465506174683e69656e696520706c616e6f772077796461746b6f77207a61616e67617a6f77616e69612e617370783c2f54656d706c617465506174683e0d0a20203c54656d706c617465477569643e30303030303030302d303030302d303030302d303030302d3030303030303030303030303c2f54656d706c617465477569643e0d0a20203c4f757470757446696c654e616d65202f3e0d0a20203c4170706c69636174696f6e46696c654e616d65202f3e0d0a20203c496e646976696475616c53657474696e673e66616c73653c2f496e646976696475616c53657474696e673e0d0a20203c49534f43617465676f7279202f3e0d0a20203c5369676e3e66616c73653c2f5369676e3e0d0a20203c56697369626c655369676e61747572653e66616c73653c2f56697369626c655369676e61747572653e0d0a20203c4c6566744d617267696e3e303c2f4c6566744d617267696e3e0d0a20203c52696768744d617267696e3e303c2f52696768744d617267696e3e0d0a20203c546f704d617267696e3e303c2f546f704d617267696e3e0d0a20203c426f74746f6d4d617267696e3e303c2f426f74746f6d4d617267696e3e0d0a20203c5a6f6f6d3e3130303c2f5a6f6f6d3e0d0a20203c4c616e6473636170653e66616c73653c2f4c616e6473636170653e0d0a20203c546578745072696e7465723e66616c73653c2f546578745072696e7465723e0d0a20203c54657874506167654c696e65733e303c2f54657874506167654c696e65733e0d0a20203c43616e4f7665725072696e743e66616c73653c2f43616e4f7665725072696e743e0d0a20203c4f7574707574436f646550616765202f3e0d0a20203c5461736b446566696e6974696f6e477569643e30303030303030302d303030302d303030302d303030302d3030303030303030303030303c2f5461736b446566696e6974696f6e477569643e0d0a20203c4f7269656e746174696f6e3e4e6f745365743c2f4f7269656e746174696f6e3e0d0a20203c53696e676c65526f773e66616c73653c2f53696e676c65526f773e0d0a20203c4f7665725072696e743e66616c73653c2f4f7665725072696e743e0d0a3c2f41737047656e657261746f723e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_975" guid="dd075756-b362-4926-8ea3-c24bad998166">
+    <Name>@zestawienie budżetowe.xml</Name>
+    <Parent>CfgNode_973</Parent>
+    <Type>Node</Type>
+    <Attributes />
+  </CfgNode>
+  <CfgNode id="CfgNode_976" guid="4b383c03-4246-4147-9f4a-3740affcecde">
+    <Name>GLOBAL</Name>
+    <Parent>dd075756-b362-4926-8ea3-c24bad998166</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1605">
+        <Name>GenType</Name>
+        <Node>CfgNode_976</Node>
+        <Type>_string</Type>
+        <StrValue>Soneta.Printer.AspGenerator,Soneta.Printer</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1604">
+        <Name>Index</Name>
+        <Node>CfgNode_976</Node>
+        <Type>_string</Type>
+        <StrValue>0</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+ <CfgNode id="CfgNode_981" guid="1294a56c-9e53-4722-9110-e2a465a895b4">
+    <Parent>6f7cddf5-80c4-46b4-b951-45c1b9954f89</Parent>
+    <Name>Pracownik</Name>
+    <Type>Node</Type>
+    <Attributes />
+  </CfgNode>
+  <CfgNode id="CfgNode_982" guid="8dc286ef-9b78-4f9e-9e2b-58b79a1a0201">
+    <Parent>1294a56c-9e53-4722-9110-e2a465a895b4</Parent>
+    <Name>zmiana procentu dodatku stażow0097.xml</Name>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1701">
+        <Node>CfgNode_982</Node>
+        <Name />
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>3c3f786d6c2076657273696f6e3d22312e30223f3e0d0a3c41737047656e657261746f7220786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61223e0d0a20203c4e616d653e5a6d69616e612070726f63656e747520646f6461746b7520737461c5bc6f7765676f3c2f4e616d653e0d0a20203c456e61626c65643e747275653c2f456e61626c65643e0d0a20203c50726f6d70743e747275653c2f50726f6d70743e0d0a20203c49735374616e646172645265706f72743e66616c73653c2f49735374616e646172645265706f72743e0d0a20203c436f6e7465787457697468526f77733e747275653c2f436f6e7465787457697468526f77733e0d0a20203c44657374696e6174696f6e3e44656661756c743c2f44657374696e6174696f6e3e0d0a20203c536570657261746550616765733e747275653c2f536570657261746550616765733e0d0a20203c5365706572617465446f63733e66616c73653c2f5365706572617465446f63733e0d0a20203c4368616e6765496e666f3e44656661756c743c2f4368616e6765496e666f3e0d0a20203c54656d706c61746546696c654e616d65202f3e0d0a20203c54656d706c617465506174683e64617461207a6d69616e7920646f6461746b7520737461c5bc6f7765676f2e617370783c2f54656d706c617465506174683e0d0a20203c54656d706c617465477569643e30303030303030302d303030302d303030302d303030302d3030303030303030303030303c2f54656d706c617465477569643e0d0a20203c4f757470757446696c654e616d65202f3e0d0a20203c4170706c69636174696f6e46696c654e616d65202f3e0d0a20203c496e646976696475616c53657474696e673e66616c73653c2f496e646976696475616c53657474696e673e0d0a20203c49534f43617465676f7279202f3e0d0a20203c5369676e3e66616c73653c2f5369676e3e0d0a20203c56697369626c655369676e61747572653e66616c73653c2f56697369626c655369676e61747572653e0d0a20203c4c6566744d617267696e3e303c2f4c6566744d617267696e3e0d0a20203c52696768744d617267696e3e303c2f52696768744d617267696e3e0d0a20203c546f704d617267696e3e303c2f546f704d617267696e3e0d0a20203c426f74746f6d4d617267696e3e303c2f426f74746f6d4d617267696e3e0d0a20203c5a6f6f6d3e3130303c2f5a6f6f6d3e0d0a20203c4c616e6473636170653e66616c73653c2f4c616e6473636170653e0d0a20203c546578745072696e7465723e66616c73653c2f546578745072696e7465723e0d0a20203c54657874506167654c696e65733e303c2f54657874506167654c696e65733e0d0a20203c43616e4f7665725072696e743e66616c73653c2f43616e4f7665725072696e743e0d0a20203c4f7574707574436f646550616765202f3e0d0a20203c5461736b446566696e6974696f6e477569643e30303030303030302d303030302d303030302d303030302d3030303030303030303030303c2f5461736b446566696e6974696f6e477569643e0d0a20203c4f7269656e746174696f6e3e4e6f745365743c2f4f7269656e746174696f6e3e0d0a20203c53696e676c65526f773e66616c73653c2f53696e676c65526f773e0d0a20203c4f7665725072696e743e66616c73653c2f4f7665725072696e743e0d0a3c2f41737047656e657261746f723e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_983" guid="af370d8c-990d-4e7b-aead-0f858aa8a32a">
+    <Parent>CfgNode_981</Parent>
+    <Name>@zmiana procentu dodatku stażow0097.xml</Name>
+    <Type>Node</Type>
+    <Attributes />
+  </CfgNode>
+  <CfgNode id="CfgNode_984" guid="f3e08609-123f-42f5-b2d7-21afc1aec186">
+    <Parent>CfgNode_983</Parent>
+    <Name>GLOBAL</Name>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1700">
+        <Node>CfgNode_984</Node>
+        <Name>GenType</Name>
+        <Type>_string</Type>
+        <StrValue>Soneta.Printer.AspGenerator,Soneta.Printer</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1698">
+        <Node>CfgNode_984</Node>
+        <Name>Index</Name>
+        <Type>_string</Type>
+        <StrValue>0</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+      <CfgAttribute id="CfgAttribute_1699">
+        <Node>CfgNode_984</Node>
+        <Name>Name</Name>
+        <Type>_string</Type>
+        <StrValue>Zmiana procentu dodatku stażowego</StrValue>
+        <MemoValue />
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_985" guid="19a9fb2d-1aec-4a43-a1a5-c3a094bc9e9e">
+    <Parent>00000000-9014-0002-0000-000000000000</Parent>
+    <Name>aspx</Name>
+    <Type>Node</Type>
+    <Attributes />
+  </CfgNode>
+  <CfgNode id="CfgNode_986" guid="68a589e5-af2a-4e8b-9a5e-e5070c5001c7">
+    <Parent>19a9fb2d-1aec-4a43-a1a5-c3a094bc9e9e</Parent>
+    <Name>data zmiany dodatku stażowego.aspx</Name>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1697">
+        <Node>CfgNode_986</Node>
+        <Name />
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>fffe3c0025004000200069006d0070006f007200740020004e0061006d006500730070006100630065003d00220053006f006e006500740061002e004b0061006400720079002200200025003e000d000a003c0025004000200069006d0070006f007200740020004e0061006d006500730070006100630065003d00220053006f006e006500740061002e0050006c006100630065002200200025003e000d000a003c0025004000200069006d0070006f007200740020004e0061006d006500730070006100630065003d00220053006f006e006500740061002e0042007500730069006e006500730073002200200025003e000d000a003c0025004000200069006d0070006f007200740020004e0061006d006500730070006100630065003d00220053006f006e006500740061002e00540079007000650073002200200025003e000d000a003c0025004000200069006d0070006f007200740020004e0061006d006500730070006100630065003d00220053006f006e006500740061002e0054006f006f006c0073002200200025003e000d000a003c002500400020005200650067006900730074006500720020005400610067005000720065006600690078003d00220065006100220020004e0061006d006500730070006100630065003d00220053006f006e006500740061002e005700650062002200200041007300730065006d0062006c0079003d00220053006f006e006500740061002e005700650062002200200025003e000d000a003c002500400020005200650067006900730074006500720020005400610067005000720065006600690078003d00220065006200220020004e0061006d006500730070006100630065003d00220053006f006e006500740061002e0043006f00720065002e005700650062002200200041007300730065006d0062006c0079003d00220053006f006e006500740061002e0043006f00720065002e005700650062002200200025003e000d000a003c00250040002000500061006700650020006c0061006e00670075006100670065003d00220063002300220020004100750074006f004500760065006e0074005700690072006500750070003d002200660061006c00730065002200200063006f006400650050006100670065003d00220031003200300030002200200025003e000d000a003c00210044004f00430054005900500045002000480054004d004c0020005000550042004c0049004300200022002d002f002f005700330043002f002f004400540044002000480054004d004c00200034002e00300020005400720061006e0073006900740069006f006e0061006c002f002f0045004e00220020003e000d000a000d000a003c007300630072006900700074002000720075006e00610074003d00220073006500720076006500720022003e000d000a000d000a000d000a002000200020002000460072006f006d0054006f0020006f006b007200650073003b000d000a0020002000200020005b0043006f006e007400650078007400280074007900700065006f00660028004f006b0072006500730043006f006e00740065007800740029002c00200022004f006b00720065007300220029005d000d000a0020002000200020007000750062006c00690063002000460072006f006d0054006f0020004f006b0072006500730020007b000d000a002000200020002000200020002000200073006500740020007b0020006f006b0072006500730020003d002000760061006c00750065003b0020007d000d000a0020002000200020007d000d000a000d000a00200020002000200044006500660050006f006400730074006100770079005300740061007a00750020007a00610074007200750064006e00690065006e00690065003b000d000a00200020002000200062006f006f006c0020007000720061006300610057004600690072006d00690065003b000d000a002000200020002000500065007200630065006e0074005b005d002000700072006f006700690020003d0020006e00650077002000500065007200630065006e0074005b003100300030005d003b000d000a000d000a002000200020002000700072006f00740065006300740065006400200076006f00690064002000640063005f0043006f006e0074006500780074004c006f006100640028006f0062006a006500630074002000730065006e006400650072002c0020004500760065006e007400410072006700730020006500290020007b000d000a002000200020002000200020002000200044006500660069006e00690063006a00610045006c0065006d0065006e0074007500200064006500660069006e00690063006a00610020003d00200050006c006100630065004d006f00640075006c0065002e0047006500740049006e007300740061006e006300650028006400630029002e0044006500660045006c0065006d0065006e0074006f0077005b006e006500770020004700750069006400280022007b00370031006100320066006100630030002d0034006600360036002d0034003300610035002d0039006500320035002d003100330063003900370066003800650034006100300030007d00220029005d003b000d000a00200020002000200020002000200020007a00610074007200750064006e00690065006e006900650020003d00200064006500660069006e00690063006a0061002e0041006c0067006f007200790074006d002e004b0072006500610074006f00720041006c0067006f007200790074006d0075002e005700730070006f006c0063007a0079006e006e0069006b002e0050006f006400730074006100770061005300740061007a0075003b000d000a00200020002000200020002000200020007000720061006300610057004600690072006d006900650020003d00200064006500660069006e00690063006a0061002e0041006c0067006f007200790074006d002e004b0072006500610074006f00720041006c0067006f007200790074006d0075002e005700730070006f006c0063007a0079006e006e0069006b002e005000720061006300610057004600690072006d00690065003b000d000a002000200020002000200020002000200066006f007200650061006300680020002800500072006f0067005300740061007a007500500072006100630079002000700072006f006700200069006e00200064006500660069006e00690063006a0061002e0041006c0067006f007200790074006d002e004b0072006500610074006f00720041006c0067006f007200790074006d0075002e005700730070006f006c0063007a0079006e006e0069006b002e00500072006f0067006900290020007b000d000a0020002000200020002000200020002000200020002000200069006e00740020006c0061007400610020003d002000700072006f0067002e00500072006f0067003b000d000a0020002000200020002000200020002000200020002000200069006600200028006c0061007400610020003c002000700072006f00670069002e004c0065006e0067007400680029000d000a002000200020002000200020002000200020002000200020002000200020002000700072006f00670069005b006c006100740061005d0020003d002000700072006f0067002e0057006100720074006f00730063003b000d000a00200020002000200020002000200020007d000d000a0020002000200020002000200020002000500065007200630065006e0074002000700072006500760020003d002000500065007200630065006e0074002e005a00650072006f003b000d000a002000200020002000200020002000200066006f0072002000280069006e0074002000690020003d00200030003b002000690020003c002000700072006f00670069002e004c0065006e006700740068003b00200069002b002b0029000d000a002000200020002000200020002000200020002000200020006900660020002800700072006f00670069005b0069005d0020003d003d002000500065007200630065006e0074002e005a00650072006f0029000d000a002000200020002000200020002000200020002000200020002000200020002000700072006f00670069005b0069005d0020003d00200070007200650076003b000d000a0020002000200020002000200020002000200020002000200065006c00730065000d000a002000200020002000200020002000200020002000200020002000200020002000700072006500760020003d002000700072006f00670069005b0069005d003b000d000a0020002000200020007d000d000a000d000a002000200020002000700072006f00740065006300740065006400200076006f0069006400200047007200690064005f004200650066006f007200650052006f00770028006f0062006a006500630074002000730065006e006400650072002c00200052006f0077004500760065006e007400410072006700730020006100720067007300290020007b000d000a002000200020002000200020002000200050007200610063006f0077006e0069006b00490064007800200069006400780020003d002000280050007200610063006f0077006e0069006b00490064007800290061007200670073002e0052006f0077003b000d000a002000200020002000200020002000200050007200610063006f0077006e0069006b002000700072006100630020003d0020006900640078002e0050007200610063006f0077006e0069006b003b000d000a002000200020002000200020002000200069006e007400200070006f0063007a000501740065006b0020003d0020005300740061007c0150007200610063007900280070007200610063002c0020006f006b007200650073002e00460072006f006d0020002d002000310029003b000d000a002000200020002000200020002000200069006e00740020006b006f006e0069006500630020003d0020005300740061007c0150007200610063007900280070007200610063002c0020006f006b007200650073002e0054006f0029003b000d000a0020002000200020002000200020002000690066002000280070006f0063007a000501740065006b0020003d003d0020006b006f006e0069006500630029000d000a0020002000200020002000200020002000200020002000200061007200670073002e00560069007300690062006c00650052006f00770020003d002000660061006c00730065003b000d000a002000200020002000200020002000200065006c007300650020007b000d000a00200020002000200020002000200020002000200020002000500065007200630065006e0074002000700072006f00630065006e007400500020003d002000500072006f00630065006e00740044006f006400610074006b007500280070006f0063007a000501740065006b0029003b000d000a00200020002000200020002000200020002000200020002000500065007200630065006e0074002000700072006f00630065006e0074004b0020003d002000500072006f00630065006e00740044006f006400610074006b00750028006b006f006e0069006500630029003b000d000a000d000a002000200020002000200020002000200020002000200020006900660020002800700072006f00630065006e007400500020003d003d002000700072006f00630065006e0074004b0029000d000a00200020002000200020002000200020002000200020002000200020002000200061007200670073002e00560069007300690062006c00650052006f00770020003d002000660061006c00730065003b000d000a0020002000200020002000200020002000200020002000200065006c007300650020007b000d000a000d000a00200020002000200020002000200020002000200020002000200020002000200044006100740065002000640020003d0020006f006b007200650073002e00460072006f006d003b000d000a0020002000200020002000200020002000200020002000200020002000200020007700680069006c0065002000280070007200610063002e005300740061007c0150007200610063007900280064002c0020007a00610074007200750064006e00690065006e006900650029002e004e006f0072006d0061006c0069007a0075006a00280029002e004c0061007400610020003c0020006b006f006e0069006500630029000d000a002000200020002000200020002000200020002000200020002000200020002000200020002000200064002b002b003b000d000a00200020002000200020002000200020002000200020002000200020002000200063006f006c005300740061007c012e004500640069007400560061006c007500650020003d0020006b006f006e006900650063003b000d000a00200020002000200020002000200020002000200020002000200020002000200063006f006c0044006100740061002e004500640069007400560061006c007500650020003d00200064003b000d000a00200020002000200020002000200020002000200020002000200020002000200063006f006c00500072006f00630065006e0074002e004500640069007400560061006c007500650020003d002000700072006f00630065006e0074004b003b000d000a002000200020002000200020002000200020002000200020007d000d000a00200020002000200020002000200020007d000d000a0020002000200020007d000d000a000d000a00200020002000200069006e00740020005300740061007c0150007200610063007900280050007200610063006f0077006e0069006b00200070007200610063002c002000440061007400650020006400610074006100290020007b000d000a002000200020002000200020002000200069006600200028007a00610074007200750064006e00690065006e0069006500200021003d0020006e0075006c006c0020002600260020007000720061006300610057004600690072006d006900650029000d000a00200020002000200020002000200020002000200020002000720065007400750072006e00200070007200610063002e005300740061007c0150007200610063007900280064006100740061002c0020007a00610074007200750064006e00690065006e006900650029002e004e006f0072006d0061006c0069007a0075006a00280029002e004c006100740061003b000d000a002000200020002000200020002000200069006600200028007a00610074007200750064006e00690065006e0069006500200021003d0020006e0075006c006c0029000d000a00200020002000200020002000200020002000200020002000720065007400750072006e00200070007200610063002e005300740061007c015000720061006300790028007a00610074007200750064006e00690065006e006900650029002e004e006f0072006d0061006c0069007a0075006a00280029002e004c006100740061003b000d000a002000200020002000200020002000200069006600200028007000720061006300610057004600690072006d006900650029000d000a00200020002000200020002000200020002000200020002000720065007400750072006e00200070007200610063002e005300740061007c01500072006100630079002800640061007400610029002e004e006f0072006d0061006c0069007a0075006a00280029002e004c006100740061003b000d000a0020002000200020002000200020002000720065007400750072006e00200030003b000d000a0020002000200020007d000d000a0020002000200020000d000a002000200020002000500065007200630065006e0074002000500072006f00630065006e00740044006f006400610074006b007500280069006e00740020006c00610074006100290020007b000d000a002000200020002000200020002000200069006600200028006c0061007400610020003e003d002000700072006f00670069002e004c0065006e0067007400680029000d000a002000200020002000200020002000200020002000200020006c0061007400610020003d002000700072006f00670069002e004c0065006e0067007400680020002d00200031003b000d000a0020002000200020002000200020002000720065007400750072006e002000700072006f00670069005b006c006100740061005d003b000d000a0020002000200020007d000d000a000d000a003c002f007300630072006900700074003e000d000a000d000a003c00480054004d004c003e000d000a0009003c0048004500410044003e000d000a00090009003c005400490054004c0045003e00440061007400610020007a006d00690061006e007900200064006f006400610074006b00750020007300740061007c016f007700650067006f003c002f005400490054004c0045003e000d000a00090009003c004d00450054004100200063006f006e00740065006e0074003d00220043002300220020006e0061006d0065003d00220043004f00440045005f004c0041004e004700550041004700450022003e000d000a00090009003c004d00450054004100200063006f006e00740065006e0074003d0022004a00610076006100530063007200690070007400220020006e0061006d0065003d002200760073005f00640065006600610075006c00740043006c00690065006e00740053006300720069007000740022003e000d000a00090009003c004d00450054004100200063006f006e00740065006e0074003d00220068007400740070003a002f002f0073006300680065006d00610073002e006d006900630072006f0073006f00660074002e0063006f006d002f0069006e00740065006c006c006900730065006e00730065002f00690065003500220020006e0061006d0065003d002200760073005f0074006100720067006500740053006300680065006d00610022003e000d000a0009003c002f0048004500410044003e000d000a0009003c0042004f00440059003e000d000a00090009003c0046004f0052004d0020006d006500740068006f0064003d00220070006f007300740022002000720075006e00610074003d00220073006500720076006500720022003e000d000a000900090009003c00650061003a00440061007400610043006f006e0074006500780074002000690064003d0022006400630022002000720075006e00610074003d002200730065007200760065007200220020006f006e0063006f006e0074006500780074006c006f00610064003d002200640063005f0043006f006e0074006500780074004c006f006100640022003e003c002f00650061003a00440061007400610043006f006e0074006500780074003e000d000a000900090009003c00650062003a005200650070006f00720074004800650061006400650072002000690064003d0022005200650070006f007200740048006500610064006500720022002000720075006e00610074003d002200730065007200760065007200220020000d000a0020002000200020002000200020002000200020002000200020002000200020007400690074006c0065003d002200440061007400610020007a006d00690061006e007900200064006f006400610074006b00750020007300740061007c016f007700650067006f007c0026006c0074003b002f007300740072006f006e0067002600670074003b005700790064007a006900610042013a00200026006c0074003b007300740072006f006e0067002600670074003b007b0030007d007c0026006c0074003b002f007300740072006f006e0067002600670074003b0050006f005b017200650064006e0069006f003a00200026006c0074003b007300740072006f006e0067002600670074003b007b0031007d007c0026006c0074003b002f007300740072006f006e0067002600670074003b004f006b007200650073003a00200026006c0074003b007300740072006f006e0067002600670074003b007b0032007d007c0026006c0074003b002f007300740072006f006e0067002600670074003b0041006b007400750061006c006e0079003a00200026006c0074003b007300740072006f006e0067002600670074003b007b0033007d00220020000d000a00200020002000200020002000200020002000200020002000200020002000200044006100740061004d0065006d0062006500720030003d0022004b00610064007200790050007200610063006f0077006e00690063007900560069006500770049006e0066006f002b005000720050006100720061006d0073002e005700790064007a00690061004201220020000d000a00200020002000200020002000200020002000200020002000200020002000200044006100740061004d0065006d0062006500720031003d0022004b00610064007200790050007200610063006f0077006e00690063007900560069006500770049006e0066006f002b005000720050006100720061006d0073002e0050006f005b017200650064006e0069006f00220020000d000a00200020002000200020002000200020002000200020002000200020002000200044006100740061004d0065006d0062006500720032003d0022004b00610064007200790050007200610063006f0077006e00690063007900560069006500770049006e0066006f002b005000720050006100720061006d0073002e004f006b00720065007300220020000d000a00200020002000200020002000200020002000200020002000200020002000200044006100740061004d0065006d0062006500720033003d0022004b00610064007200790050007200610063006f0077006e00690063007900560069006500770049006e0066006f002b005000720050006100720061006d0073002e0041006b007400750061006c006e00790022003e003c002f00650062003a005200650070006f00720074004800650061006400650072003e000d000a000900090009003c00650061003a0047007200690064002000690064003d002200470072006900640022002000720075006e00610074003d002200730065007200760065007200220020000d000a00200020002000200020002000200020002000200020002000200020002000200052006f00770054007900700065004e0061006d0065003d00220053006f006e006500740061002e004b0061006400720079002e0050007200610063006f0077006e0069006b004900640078002c0053006f006e006500740061002e004b00610064007200790050006c00610063006500220020000d000a0020002000200020002000200020002000200020002000200020002000200020006f006e006200650066006f007200650072006f0077003d00220047007200690064005f004200650066006f007200650052006f00770022003e000d000a0009000900090009003c0043006f006c0075006d006e0073003e000d000a00090009000900090009003c00650061003a00470072006900640043006f006c0075006d006e002000570069006400740068003d00220034002200200041006c00690067006e003d002200520069006700680074002200200044006100740061004d0065006d006200650072003d002200230022002000430061007000740069006f006e003d0022004c0050002e0022003e003c002f00650061003a00470072006900640043006f006c0075006d006e003e000d000a00090009000900090009003c00650061003a00470072006900640043006f006c0075006d006e002000720075006e00610074003d0022007300650072007600650072002200200041006c00690067006e003d0022004c006500660074002200200044006100740061004d0065006d006200650072003d00220050007200610063006f0077006e0069006b00220020000d000a00200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000430061007000740069006f006e003d00220050007200610063006f0077006e0069006b0022003e003c002f00650061003a00470072006900640043006f006c0075006d006e003e000d000a00090009000900090009003c00650061003a00470072006900640043006f006c0075006d006e002000720075006e00610074003d0022007300650072007600650072002200200041006c00690067006e003d002200430065006e00740065007200220020000d000a0020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200044006100740061004d0065006d006200650072003d00220057006f0072006b006500720073002e0049006e0066006f002e0048006900730074006f007200690061002e0045007400610074002e005700790064007a00690061006c002e004b006f00640022002000430061007000740069006f006e003d0022005700790064007a00690061004201220020000d000a00200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000570069006400740068003d0022003100320022003e003c002f00650061003a00470072006900640043006f006c0075006d006e003e000d000a00090009000900090009003c00650061003a00470072006900640043006f006c0075006d006e002000490044003d00220063006f006c005300740061007c0122002000720075006e00610074003d00220073006500720076006500720022002000430061007000740069006f006e003d0022005300740061007c012000700072006100630079007e006c0061007400610022002000570069006400740068003d00220031003200220020000d000a0020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200041006c00690067006e003d002200430065006e0074006500720022003e000d000a00200020002000200020002000200020002000200020002000200020002000200020002000200020003c002f00650061003a00470072006900640043006f006c0075006d006e003e000d000a00200020002000200020002000200020002000200020002000200020002000200020002000200020003c00650061003a00470072006900640043006f006c0075006d006e002000490044003d00220063006f006c00440061007400610022002000720075006e00610074003d00220073006500720076006500720022002000430061007000740069006f006e003d0022005300740061007c012000700072006100630079007e00640061007400610020007a006d00690061006e007900220020000d000a00200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000570069006400740068003d002200310032002200200041006c00690067006e003d002200430065006e0074006500720022003e000d000a00200020002000200020002000200020002000200020002000200020002000200020002000200020003c002f00650061003a00470072006900640043006f006c0075006d006e003e000d000a00090009000900090009003c00650061003a00470072006900640043006f006c0075006d006e002000720075006e00610074003d00220073006500720076006500720022002000430061007000740069006f006e003d0022005300740061007c012000700072006100630079007e002500200064006f006400610074006b00750022002000490044003d00220063006f006c00500072006f00630065006e007400220020000d000a00200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000570069006400740068003d002200310032002200200041006c00690067006e003d002200430065006e0074006500720022003e003c002f00650061003a00470072006900640043006f006c0075006d006e003e000d000a0009000900090009003c002f0043006f006c0075006d006e0073003e000d000a000900090009003c002f00650061003a0047007200690064003e000d000a000900090009003c00650062003a005200650070006f007200740046006f006f007400650072002000690064003d0022005200650070006f007200740046006f006f0074006500720022002000720075006e00610074003d00220073006500720076006500720022003e003c002f00650062003a005200650070006f007200740046006f006f007400650072003e000d000a00090009003c002f0046004f0052004d003e000d000a0009003c002f0042004f00440059003e000d000a003c002f00480054004d004c003e000d000a00</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+</session>

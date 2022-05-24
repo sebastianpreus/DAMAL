@@ -149,6 +149,32 @@ namespace DamEnovaWebApi.Services
             }
         }
 
+        internal void DeletePrzyjecieMagazynowe(int id)
+        {
+            using (Session session = Connection.enovalogin.CreateSession(false, false))
+            {
+                HandelModule hm = HandelModule.GetInstance(session);
+                TowaryModule tm = TowaryModule.GetInstance(session);
+                MagazynyModule mm = MagazynyModule.GetInstance(session);
+                CRMModule cm = CRMModule.GetInstance(session);
+                CoreModule core = CoreModule.GetInstance(session);
+
+                using (ITransaction trans = session.Logout(true))
+                {
+                    DokumentHandlowy dokument = new DokumentHandlowy();
+
+                    if (id > 0)
+                    {
+                        dokument = hm.DokHandlowe[id];
+                        dokument.Stan = StanDokumentuHandlowego.Bufor;
+                        dokument.Delete();
+                    }
+                    trans.Commit();
+                }
+                session.Save();
+            }
+        }
+
         public void PostPrzyjeciaMagazynowe(DamPrzyjecieMagazynowe damPrzyjecieMagazynowe)
         {
             DokumentHandlowy dokument = new DokumentHandlowy();
@@ -239,6 +265,32 @@ namespace DamEnovaWebApi.Services
                 }
                 session.Save();
                 damPrzyjecieMagazynowe.ID = dokument.ID;
+            }
+        }
+
+        internal void DeletePrzyjeciaMagazynowe(int id)
+        {
+            using (Session session = Connection.enovalogin.CreateSession(false, false))
+            {
+                HandelModule hm = HandelModule.GetInstance(session);
+                TowaryModule tm = TowaryModule.GetInstance(session);
+                MagazynyModule mm = MagazynyModule.GetInstance(session);
+                CRMModule cm = CRMModule.GetInstance(session);
+                CoreModule core = CoreModule.GetInstance(session);
+
+                using (ITransaction trans = session.Logout(true))
+                {
+                    DokumentHandlowy dokument = new DokumentHandlowy();
+
+                    if (id > 0)
+                    {
+                        dokument = hm.DokHandlowe[id];
+                        dokument.Stan = StanDokumentuHandlowego.Bufor;
+                        dokument.Delete();
+                    }
+                    trans.Commit();
+                }
+                session.Save();
             }
         }
     }

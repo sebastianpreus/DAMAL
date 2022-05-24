@@ -103,19 +103,24 @@ namespace DamEnovaWebApi.Controllers
             return Created(damTowar);
         }
 
-        public IHttpActionResult Patch(int key, DamTowar damTowar)
+        public IHttpActionResult Delete([FromODataUri] int key)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            TowaryService towaryService = new TowaryService();
-            towaryService.PutTowar(damTowar);
-
-            return Created(damTowar);
+            try
+            {
+                TowaryService towaryService = new TowaryService();
+                towaryService.DeleteBlokadaTowaru(key);
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.InternalServerError, "B³¹d podczas tworzenia kontrahenta: " + ex.Message);
+            }
+            return Ok();
         }
-
 
         private IHttpActionResult Ok(object content, Type type)
         {

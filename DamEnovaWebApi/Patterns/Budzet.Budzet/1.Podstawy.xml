@@ -1,0 +1,1103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<session fromto="(wszystko)">
+	<CfgNode id="CfgNode_4" guid="00000000-2001-0001-0002-000000000000">
+		<Name>Pieczątka</Name>
+		<Type>Leaf</Type>
+		<Parent>00000000-2001-0001-0001-000000000000</Parent>
+		<Subkeys />
+		<Attributes>
+			<CfgAttribute id="CfgAttribute_8">
+				<Name>EKD</Name>
+				<Type>_string</Type>
+				<StrValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_1">
+				<Name>Nazwa</Name>
+				<Type>_string</Type>
+				<StrValue>DEMO sp z o.o.</StrValue>
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_2">
+				<Name>Nazwa skrócona</Name>
+				<Type>_string</Type>
+				<StrValue>DEMO</StrValue>
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_3">
+				<Name>NIP</Name>
+				<Type>_string</Type>
+				<StrValue>692-21-85-175</StrValue>
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_3_1">
+				<Name>EuVAT</Name>
+				<Type>_string</Type>
+				<StrValue>PL692-21-85-175</StrValue>
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_7">
+				<Name>NIP2</Name>
+				<Type>_string</Type>
+				<StrValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_7_2">
+				<Name>EuVAT2</Name>
+				<Type>_string</Type>
+				<StrValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_9">
+				<Name>NKPEtat</Name>
+				<Type>_string</Type>
+				<StrValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_10">
+				<Name>NKPUmowa</Name>
+				<Type>_string</Type>
+				<StrValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_6">
+				<Name>NUSP</Name>
+				<Type>_string</Type>
+				<StrValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_5">
+				<Name>PFRON</Name>
+				<Type>_string</Type>
+				<StrValue />
+			</CfgAttribute>
+			<CfgAttribute id="CfgAttribute_4">
+				<Name>REGON</Name>
+				<Type>_string</Type>
+				<StrValue>123456785</StrValue>
+			</CfgAttribute>
+		</Attributes>
+	</CfgNode>
+	<CfgNode id="CfgNode_3" guid="00000000-2001-0001-0001-000000000000">
+		<Parent>00000000-2001-0000-0000-000000000000</Parent>
+		<Name>Firma</Name>
+		<Type>Node</Type>
+		<Subkeys>
+			<CfgNode id="CfgNode_6" guid="5fa3517f-3816-4c7d-be2f-ae2ff751934c">
+				<Name>Adres do korespondencji</Name>
+				<Type>Leaf</Type>
+				<Subkeys />
+				<Attributes>
+					<CfgAttribute id="CfgAttribute_34">
+						<Name>Faks</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_26">
+						<Name>Gmina</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_23">
+						<Name>Kod pocztowy</Name>
+						<Type>_int</Type>
+						<StrValue>0</StrValue>
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_29">
+						<Name>Kraj</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_25">
+						<Name>Miejscowosc</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_31">
+						<Name>NrDomu</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_32">
+						<Name>NrLokalu</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_24">
+						<Name>Poczta</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_27">
+						<Name>Powiat</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_33">
+						<Name>Telefon</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_30">
+						<Name>Ulica</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_28">
+						<Name>Wojewodztwo</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+				</Attributes>
+			</CfgNode>
+			<CfgNode id="CfgNode_5" guid="2b8b5410-34d7-475e-907a-59b0c86d0cdb">
+				<Name>Adres siedziby</Name>
+				<Type>Leaf</Type>
+				<Subkeys />
+				<Attributes>
+					<CfgAttribute id="CfgAttribute_22">
+						<Name>Faks</Name>
+						<Type>_string</Type>
+						<StrValue>3459089</StrValue>
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_14">
+						<Name>Gmina</Name>
+						<Type>_string</Type>
+						<StrValue>Kraków</StrValue>
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_11">
+						<Name>Kod pocztowy</Name>
+						<Type>_int</Type>
+						<StrValue>30610</StrValue>
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_17">
+						<Name>Kraj</Name>
+						<Type>_string</Type>
+						<StrValue>Polska</StrValue>
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_13">
+						<Name>Miejscowosc</Name>
+						<Type>_string</Type>
+						<StrValue>Kraków</StrValue>
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_19">
+						<Name>NrDomu</Name>
+						<Type>_string</Type>
+						<StrValue>23A</StrValue>
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_20">
+						<Name>NrLokalu</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_12">
+						<Name>Poczta</Name>
+						<Type>_string</Type>
+						<StrValue>Kraków</StrValue>
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_15">
+						<Name>Powiat</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_21">
+						<Name>Telefon</Name>
+						<Type>_string</Type>
+						<StrValue>3459087</StrValue>
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_18">
+						<Name>Ulica</Name>
+						<Type>_string</Type>
+						<StrValue>Zielna</StrValue>
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_16">
+						<Name>Wojewodztwo</Name>
+						<Type>_string</Type>
+						<StrValue>małopolskie</StrValue>
+					</CfgAttribute>
+				</Attributes>
+			</CfgNode>
+			<CfgNode id="CfgNode_8" guid="3f6cace0-e6f4-404b-bcba-bcfe6ac9c7bd">
+				<Name>Dane ewidencyjne</Name>
+				<Type>Leaf</Type>
+				<Subkeys />
+				<Attributes>
+					<CfgAttribute id="CfgAttribute_42">
+						<Name>Dane osoby</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_39">
+						<Name>Data rozpoczęcia działalności</Name>
+						<Type>_date</Type>
+						<StrValue />
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_41">
+						<Name>Osoba fizyczna</Name>
+						<Type>_boolean</Type>
+						<StrValue>true</StrValue>
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_43">
+						<Name>PESEL</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_40">
+						<Name>Rodzaj działalności</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+				</Attributes>
+			</CfgNode>
+			<CfgNode id="CfgNode_7" guid="111d2206-b802-4d9d-a955-ae0228c71853">
+				<Name>Kontakt</Name>
+				<Type>Leaf</Type>
+				<Subkeys />
+				<Attributes>
+					<CfgAttribute id="CfgAttribute_37">
+						<Name>EMAIL</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_35">
+						<Name>Skrytka pocztowa</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_36">
+						<Name>Telefon komórkowy</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_38">
+						<Name>WWW</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+				</Attributes>
+			</CfgNode>
+			<CfgNode id="CfgNode_9" guid="ddd7a889-1e4a-4423-b3ae-f6167b0cc42b">
+				<Name>Rejestracja</Name>
+				<Type>Leaf</Type>
+				<Subkeys />
+				<Attributes>
+					<CfgAttribute id="CfgAttribute_46">
+						<Name>Data</Name>
+						<Type>_date</Type>
+						<StrValue />
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_45">
+						<Name>Nazwa rejestru</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_47">
+						<Name>Numer</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_44">
+						<Name>Organ rejestrowy</Name>
+						<Type>_string</Type>
+						<StrValue />
+					</CfgAttribute>
+				</Attributes>
+			</CfgNode>
+			<CfgNode id="CfgNode_10" guid="8f1ae505-c4a8-42f7-8b72-ba912b8014be">
+				<Name>Status ZPChr</Name>
+				<Type>Leaf</Type>
+				<Subkeys />
+				<Attributes>
+					<CfgAttribute id="CfgAttribute_49">
+						<Name>Okres</Name>
+						<Type>_FromTo</Type>
+						<StrValue />
+					</CfgAttribute>
+					<CfgAttribute id="CfgAttribute_48">
+						<Name>Posiada</Name>
+						<Type>_boolean</Type>
+						<StrValue>false</StrValue>
+					</CfgAttribute>
+				</Attributes>
+			</CfgNode>
+		</Subkeys>
+		<Attributes />
+	</CfgNode>
+	<Bank id="Bank_5168" guid="ba66f545-1660-11d7-9ab0-000795c951c8">
+		<Kod>PKOSA</Kod>
+		<Nazwa>PKOSA II/OKraków</Nazwa>
+		<NIP />
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0001-000000000000</SposobZaplaty>
+		<Termin>0</Termin>
+		<Kierunek />
+		<Rachunki />
+		<Adresy>
+			<AdresExt id="AdresExt_5170">
+				<Typ>1</Typ>
+				<Adres>
+					<KodPocztowy>30650</KodPocztowy>
+					<Poczta>Kraków</Poczta>
+					<Miejscowosc>Kraków</Miejscowosc>
+					<Gmina>Kraków</Gmina>
+					<Powiat>Kraków</Powiat>
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj>Polska</Kraj>
+					<Ulica>Kapelanka</Ulica>
+					<NrDomu>25</NrDomu>
+					<NrLokalu />
+					<Telefon>269080</Telefon>
+					<Faks>269080</Faks>
+				</Adres>
+			</AdresExt>
+		</Adresy>
+	</Bank>
+	<DictionaryItem id="DictionaryItem_5166" guid="ba66f543-1660-11d7-9ab0-000795c951c8">
+		<Category>Gmina</Category>
+		<Lp>0</Lp>
+		<Value>Kraków</Value>
+	</DictionaryItem>
+	<DictionaryItem id="DictionaryItem_5192" guid="ba66f54e-1660-11d7-9ab0-000795c951c8">
+		<Category>Gmina</Category>
+		<Lp>0</Lp>
+		<Value>Tarnobrzeg</Value>
+	</DictionaryItem>
+	<DictionaryItem id="DictionaryItem_5172" guid="ba66f547-1660-11d7-9ab0-000795c951c8">
+		<Category>Kraj</Category>
+		<Lp>0</Lp>
+		<Value>Polska</Value>
+	</DictionaryItem>
+	<DictionaryItem id="DictionaryItem_5165" guid="ba66f542-1660-11d7-9ab0-000795c951c8">
+		<Category>Miejscowość</Category>
+		<Lp>0</Lp>
+		<Value>Kraków</Value>
+	</DictionaryItem>
+	<DictionaryItem id="DictionaryItem_5191" guid="ba66f54d-1660-11d7-9ab0-000795c951c8">
+		<Category>Miejscowość</Category>
+		<Lp>0</Lp>
+		<Value>Tarnobrzeg</Value>
+	</DictionaryItem>
+	<DictionaryItem id="DictionaryItem_5167" guid="ba66f544-1660-11d7-9ab0-000795c951c8">
+		<Category>Powiat</Category>
+		<Lp>0</Lp>
+		<Value>Kraków</Value>
+	</DictionaryItem>
+	<DictionaryItem id="DictionaryItem_5193" guid="ba66f54f-1660-11d7-9ab0-000795c951c8">
+		<Category>Powiat</Category>
+		<Lp>0</Lp>
+		<Value>Tarnów</Value>
+	</DictionaryItem>
+	<DictionaryItem id="DictionaryItem_5164" guid="ba66f541-1660-11d7-9ab0-000795c951c8">
+		<Category>Ulica</Category>
+		<Lp>0</Lp>
+		<Value>Nowa</Value>
+	</DictionaryItem>
+	<DictionaryItem id="DictionaryItem_5171" guid="ba66f546-1660-11d7-9ab0-000795c951c8">
+		<Category>Ulica</Category>
+		<Lp>0</Lp>
+		<Value>Kapelanka</Value>
+	</DictionaryItem>
+	<DictionaryItem id="DictionaryItem_5183" guid="ba66f549-1660-11d7-9ab0-000795c951c8">
+		<Category>Ulica</Category>
+		<Lp>0</Lp>
+		<Value>Pozam</Value>
+	</DictionaryItem>
+	<DictionaryItem id="DictionaryItem_5184" guid="ba66f54a-1660-11d7-9ab0-000795c951c8">
+		<Category>Ulica</Category>
+		<Lp>0</Lp>
+		<Value>Podzamcze</Value>
+	</DictionaryItem>
+	<DictionaryItem id="DictionaryItem_5190" guid="ba66f54c-1660-11d7-9ab0-000795c951c8">
+		<Category>Ulica</Category>
+		<Lp>0</Lp>
+		<Value>Torunska</Value>
+	</DictionaryItem>
+	<DictionaryItem id="DictionaryItem_5307" guid="5d109ac9-166b-11d7-9ab0-000795c951c8">
+		<Category>Wymiar opisu</Category>
+		<Lp>0</Lp>
+		<Value>1</Value>
+	</DictionaryItem>
+
+	<Kontrahent id="Kontrahent_2" guid="ba66f540-1660-11d7-9ab0-000795c951c8">
+		<Kod>ABC</Kod>
+		<Nazwa>ABC Sp. z o.o</Nazwa>
+		<NIP>111-11-11-128</NIP>
+		<EuVAT>1111111128</EuVAT>
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0002-000000000000</SposobZaplaty>
+		<Termin>7</Termin>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<Uwagi />
+		
+		<Rabat>10.00%</Rabat>
+		<RabatTowaru>0.00%</RabatTowaru>
+		<CenaTowaru />
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>0</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist/>
+		</OdsKarne>
+		<Adresy>
+			<AdresExt id="AdresExt_8">
+				<Host>Kontrahent_2</Host>
+				<Typ>1</Typ>
+				<Adres>
+					<KodPocztowy>30140</KodPocztowy>
+					<Poczta>Kraków</Poczta>
+					<Miejscowosc>Kraków</Miejscowosc>
+					<Gmina>Kraków</Gmina>
+					<Powiat>Kraków</Powiat>
+					<Wojewodztwo>małopolskie</Wojewodztwo>
+					<Kraj />
+					<Ulica>Nowa</Ulica>
+					<NrDomu>1</NrDomu>
+					<NrLokalu />
+					<Telefon>2680980</Telefon>
+					<Faks>2680980</Faks>
+				</Adres>
+			</AdresExt>
+			<AdresExt id="AdresExt_14">
+				<Host>Kontrahent_2</Host>
+				<Typ>2</Typ>
+				<Adres>
+					<KodPocztowy>0</KodPocztowy>
+					<Poczta />
+					<Miejscowosc />
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<Ulica />
+					<NrDomu />
+					<NrLokalu />
+					<Telefon />
+					<Faks />
+				</Adres>
+			</AdresExt>
+		</Adresy>
+		<KodyKreskowe />
+		<!-- TASK: 2690. [4.5] -->
+		<Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+	</Kontrahent>
+
+	<Kontrahent id="Kontrahent_3" guid="ba66f548-1660-11d7-9ab0-000795c951c8">
+		<Kod>ZEFIR</Kod>
+		<Nazwa>Zefir J.Nowak i E.Nowak</Nazwa>
+		<NIP>222-22-22-222</NIP>
+		<EuVAT>2222222222</EuVAT>
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0002-000000000000</SposobZaplaty>
+		<Termin>7</Termin>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<Uwagi />
+		
+		<Rabat>0.00%</Rabat>
+		<RabatTowaru>0.00%</RabatTowaru>
+		<CenaTowaru />
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>0</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist/>
+		</OdsKarne>
+		<Adresy>
+			<AdresExt id="AdresExt_9">
+				<Host>Kontrahent_3</Host>
+				<Typ>1</Typ>
+				<Adres>
+					<KodPocztowy>30696</KodPocztowy>
+					<Poczta>Kraków</Poczta>
+					<Miejscowosc>Kraków</Miejscowosc>
+					<Gmina>Kraków</Gmina>
+					<Powiat>Kraków</Powiat>
+					<Wojewodztwo>małopolskie</Wojewodztwo>
+					<Kraj>Polska</Kraj>
+					<Ulica>Podzamcze</Ulica>
+					<NrDomu>29</NrDomu>
+					<NrLokalu>59</NrLokalu>
+					<Telefon>2690033</Telefon>
+					<Faks>2690033</Faks>
+				</Adres>
+			</AdresExt>
+			<AdresExt id="AdresExt_15">
+				<Host>Kontrahent_3</Host>
+				<Typ>2</Typ>
+				<Adres>
+					<KodPocztowy>0</KodPocztowy>
+					<Poczta />
+					<Miejscowosc />
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<Ulica />
+					<NrDomu />
+					<NrLokalu />
+					<Telefon />
+					<Faks />
+				</Adres>
+			</AdresExt>
+		</Adresy>
+		<KodyKreskowe />
+		<!-- TASK: 2690. [4.5] -->
+		<Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+	</Kontrahent>
+
+	<Kontrahent id="Kontrahent_4" guid="ba66f54b-1660-11d7-9ab0-000795c951c8">
+		<Kod>ROLMAP</Kod>
+		<Nazwa>Rolmap S.A</Nazwa>
+		<NIP>333-33-33-333</NIP>
+		<EuVAT>3333333333</EuVAT>
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0001-000000000000</SposobZaplaty>
+		<Termin>0</Termin>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<Uwagi />
+		
+		<Rabat>12.00%</Rabat>
+		<RabatTowaru>12.00%</RabatTowaru>
+		<CenaTowaru />
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>0</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist/>
+		</OdsKarne>
+		<Adresy>
+			<AdresExt id="AdresExt_10">
+				<Host>Kontrahent_4</Host>
+				<Typ>1</Typ>
+				<Adres>
+					<KodPocztowy>4509</KodPocztowy>
+					<Poczta>Tarnobrzeg</Poczta>
+					<Miejscowosc>Tarnobrzeg</Miejscowosc>
+					<Gmina>Tarnobrzeg</Gmina>
+					<Powiat>Tarnów</Powiat>
+					<Wojewodztwo>małopolskie</Wojewodztwo>
+					<Kraj>Polska</Kraj>
+					<Ulica>Torunska</Ulica>
+					<NrDomu>45</NrDomu>
+					<NrLokalu />
+					<Telefon>7654354</Telefon>
+					<Faks>7654354</Faks>
+				</Adres>
+			</AdresExt>
+			<AdresExt id="AdresExt_16">
+				<Host>Kontrahent_4</Host>
+				<Typ>2</Typ>
+				<Adres>
+					<KodPocztowy>0</KodPocztowy>
+					<Poczta />
+					<Miejscowosc />
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<Ulica />
+					<NrDomu />
+					<NrLokalu />
+					<Telefon />
+					<Faks />
+				</Adres>
+			</AdresExt>
+		</Adresy>
+		<KodyKreskowe />
+		<!-- TASK: 2690. [4.5] -->
+		<Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+	</Kontrahent>
+
+	<Kontrahent id="Kontrahent_5" guid="c339eb98-bb5f-4085-8546-68338de747e9">
+		<Kod>Aspen</Kod>
+		<Nazwa>Aspen GmbH</Nazwa>
+		<NIP />
+		<EuVAT>DE3334455666</EuVAT>
+		<Blokada>False</Blokada>
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0002-000000000000</SposobZaplaty>
+		<Termin>7</Termin>
+		<LimitKredytu>0.00 PLN</LimitKredytu>
+		<KontrolaDni>0</KontrolaDni>
+		<KontrolaKwota>0.00 PLN</KontrolaKwota>
+		<RodzajPodmiotu>Unijny</RodzajPodmiotu>
+    <RodzajPodmiotuZakup>Unijny</RodzajPodmiotuZakup>
+		<StatusPodmiotu>PodmiotGospodarczy</StatusPodmiotu>
+		<Uwagi />
+		
+		<Rabat>0.00%</Rabat>
+		<RabatTowaru>0.00%</RabatTowaru>
+		<CenaTowaru />
+		<BlokadaSprzedazy>False</BlokadaSprzedazy>
+		<OdsKarne>
+			<Indywidualne>False</Indywidualne>
+			<RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+			<RozpoczecieDni>0</RozpoczecieDni>
+			<Zwloka>0</Zwloka>
+			<Stopa>Handlowe</Stopa>
+			<OdsIndHist/>
+		</OdsKarne>
+		<Adresy>
+			<AdresExt id="AdresExt_258">
+				<Host>Kontrahent_5</Host>
+				<Typ>1</Typ>
+				<Adres>
+					<KodPocztowy>0</KodPocztowy>
+					<Poczta>45127 Essen</Poczta>
+					<Miejscowosc>45127 Essen</Miejscowosc>
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj>Niemcy</Kraj>
+					<Ulica>Berliner Strasse</Ulica>
+					<NrDomu>3</NrDomu>
+					<NrLokalu />
+					<Telefon />
+					<Faks />
+				</Adres>
+			</AdresExt>
+			<AdresExt id="AdresExt_259">
+				<Host>Kontrahent_5</Host>
+				<Typ>2</Typ>
+				<Adres>
+					<KodPocztowy>0</KodPocztowy>
+					<Poczta />
+					<Miejscowosc />
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<Ulica />
+					<NrDomu />
+					<NrLokalu />
+					<Telefon />
+					<Faks />
+				</Adres>
+			</AdresExt>
+		</Adresy>
+		<KodyKreskowe />
+		<!-- TASK: 2690. [4.5] -->
+		<Waluta>00000000-0004-0001-0002-000000000000</Waluta>
+	</Kontrahent>
+	
+	<UrzadSkarbowy id="UrzadSkarbowy_2801" guid="534e8ee7-603f-43ff-bb5e-f0919cdabf5f">
+		<Kod>US01</Kod>
+		<Nazwa>Urząd Skarbowy Kraków - Podgórze</Nazwa>
+		<KodUrzeduSkarbowego>1210</KodUrzeduSkarbowego>
+		<NIP />
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0002-000000000000</SposobZaplaty>
+		<Termin>0</Termin>
+		<Rachunki>
+			<RachunekBankowyPodmiotu id="RachunekBankowyPodmiotu_2802" class="Soneta.CRM.RachunekPIT,Soneta.CRM">
+				<Typ>9011</Typ>
+				<Priorytet>0</Priorytet>
+				<Rachunek>
+					<Numer>
+						<CS />
+						<Kierunek />
+						<Numer />
+					</Numer>
+				</Rachunek>
+				<Nazwa1 />
+				<Nazwa2 />
+				<Kwota>0.00 PLN</Kwota>
+				<Procent>0%</Procent>
+			</RachunekBankowyPodmiotu>
+			<RachunekBankowyPodmiotu id="RachunekBankowyPodmiotu_2803" class="Soneta.CRM.RachunekCIT,Soneta.CRM">
+				<Typ>9012</Typ>
+				<Priorytet>0</Priorytet>
+				<Rachunek>
+					<Numer>
+						<CS />
+						<Kierunek />
+						<Numer />
+					</Numer>
+				</Rachunek>
+				<Nazwa1 />
+				<Nazwa2 />
+				<Kwota>0.00 PLN</Kwota>
+				<Procent>0%</Procent>
+			</RachunekBankowyPodmiotu>
+			<RachunekBankowyPodmiotu id="RachunekBankowyPodmiotu_2804" class="Soneta.CRM.RachunekVAT,Soneta.CRM">
+				<Typ>9013</Typ>
+				<Priorytet>0</Priorytet>
+				<Rachunek>
+					<Numer>
+						<CS />
+						<Kierunek />
+						<Numer />
+					</Numer>
+				</Rachunek>
+				<Nazwa1 />
+				<Nazwa2 />
+				<Kwota>0.00 PLN</Kwota>
+				<Procent>0%</Procent>
+			</RachunekBankowyPodmiotu>
+			<RachunekBankowyPodmiotu id="RachunekBankowyPodmiotu_2805" class="Soneta.CRM.RachunekZalPIT,Soneta.CRM">
+				<Typ>9014</Typ>
+				<Priorytet>0</Priorytet>
+				<Rachunek>
+					<Numer>
+						<CS />
+						<Kierunek />
+						<Numer />
+					</Numer>
+				</Rachunek>
+				<Nazwa1 />
+				<Nazwa2 />
+				<Kwota>0.00 PLN</Kwota>
+				<Procent>0%</Procent>
+			</RachunekBankowyPodmiotu>
+			<RachunekBankowyPodmiotu id="RachunekBankowyPodmiotu_2805_1" class="Soneta.CRM.RachunekAKC,Soneta.CRM">
+				<Typ>9015</Typ>
+				<Priorytet>0</Priorytet>
+				<Rachunek>
+					<Numer>
+						<CS />
+						<Kierunek />
+						<Numer />
+					</Numer>
+				</Rachunek>
+				<Nazwa1 />
+				<Nazwa2 />
+				<Kwota>0.00 PLN</Kwota>
+				<Procent>0%</Procent>
+			</RachunekBankowyPodmiotu>
+		</Rachunki>
+		<Adresy>
+			<AdresExt id="AdresExt_2806">
+				<Typ>1</Typ>
+				<Adres>
+					<KodPocztowy>0</KodPocztowy>
+					<Poczta />
+					<Miejscowosc />
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<Ulica />
+					<NrDomu />
+					<NrLokalu />
+					<Telefon />
+					<Faks />
+				</Adres>
+			</AdresExt>
+		</Adresy>
+	</UrzadSkarbowy>
+	<UrzadSkarbowy id="UrzadSkarbowy_2807" guid="d36f03fe-fef5-45e6-a727-188524891a88">
+		<Kod>US02</Kod>
+		<Nazwa>Urząd Skarbowy Kraków - Śródmieście</Nazwa>
+		<KodUrzeduSkarbowego>1213</KodUrzeduSkarbowego>
+		<NIP />
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0002-000000000000</SposobZaplaty>
+		<Termin>0</Termin>
+		<Rachunki>
+			<RachunekBankowyPodmiotu id="RachunekBankowyPodmiotu_2808" class="Soneta.CRM.RachunekPIT,Soneta.CRM">
+				<Typ>9011</Typ>
+				<Priorytet>0</Priorytet>
+				<Rachunek>
+					<Numer>
+						<CS />
+						<Kierunek />
+						<Numer />
+					</Numer>
+				</Rachunek>
+				<Nazwa1 />
+				<Nazwa2 />
+				<Kwota>0.00 PLN</Kwota>
+				<Procent>0%</Procent>
+			</RachunekBankowyPodmiotu>
+			<RachunekBankowyPodmiotu id="RachunekBankowyPodmiotu_2809" class="Soneta.CRM.RachunekCIT,Soneta.CRM">
+				<Typ>9012</Typ>
+				<Priorytet>0</Priorytet>
+				<Rachunek>
+					<Numer>
+						<CS />
+						<Kierunek />
+						<Numer />
+					</Numer>
+				</Rachunek>
+				<Nazwa1 />
+				<Nazwa2 />
+				<Kwota>0.00 PLN</Kwota>
+				<Procent>0%</Procent>
+			</RachunekBankowyPodmiotu>
+			<RachunekBankowyPodmiotu id="RachunekBankowyPodmiotu_2810" class="Soneta.CRM.RachunekVAT,Soneta.CRM">
+				<Typ>9013</Typ>
+				<Priorytet>0</Priorytet>
+				<Rachunek>
+					<Numer>
+						<CS />
+						<Kierunek />
+						<Numer />
+					</Numer>
+				</Rachunek>
+				<Nazwa1 />
+				<Nazwa2 />
+				<Kwota>0.00 PLN</Kwota>
+				<Procent>0%</Procent>
+			</RachunekBankowyPodmiotu>
+			<RachunekBankowyPodmiotu id="RachunekBankowyPodmiotu_2811" class="Soneta.CRM.RachunekZalPIT,Soneta.CRM">
+				<Typ>9014</Typ>
+				<Priorytet>0</Priorytet>
+				<Rachunek>
+					<Numer>
+						<CS />
+						<Kierunek />
+						<Numer />
+					</Numer>
+				</Rachunek>
+				<Nazwa1 />
+				<Nazwa2 />
+				<Kwota>0.00 PLN</Kwota>
+				<Procent>0%</Procent>
+			</RachunekBankowyPodmiotu>
+			<RachunekBankowyPodmiotu id="RachunekBankowyPodmiotu_2805_2" class="Soneta.CRM.RachunekAKC,Soneta.CRM">
+				<Typ>9015</Typ>
+				<Priorytet>0</Priorytet>
+				<Rachunek>
+					<Numer>
+						<CS />
+						<Kierunek />
+						<Numer />
+					</Numer>
+				</Rachunek>
+				<Nazwa1 />
+				<Nazwa2 />
+				<Kwota>0.00 PLN</Kwota>
+				<Procent>0%</Procent>
+			</RachunekBankowyPodmiotu>
+		</Rachunki>
+		<Adresy>
+			<AdresExt id="AdresExt_2812">
+				<Typ>1</Typ>
+				<Adres>
+					<KodPocztowy>0</KodPocztowy>
+					<Poczta />
+					<Miejscowosc />
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<Ulica />
+					<NrDomu />
+					<NrLokalu />
+					<Telefon />
+					<Faks />
+				</Adres>
+			</AdresExt>
+		</Adresy>
+	</UrzadSkarbowy>
+	<UrzadSkarbowy id="UrzadSkarbowy_2813" guid="5f225776-1d06-472c-b382-7a6d64e99042">
+		<Kod>US03</Kod>
+		<Nazwa>Urząd Skarbowy Kraków - Nowa Huta</Nazwa>
+		<KodUrzeduSkarbowego>1209</KodUrzeduSkarbowego>
+		<NIP />
+		<Kontakt>
+			<SkrytkaPocztowa />
+			<TelefonKomorkowy />
+			<EMAIL />
+			<WWW />
+		</Kontakt>
+		<Osoba>
+			<Osoba />
+			<Adres />
+			<Telefon />
+		</Osoba>
+		<SposobZaplaty>00000000-0003-0001-0002-000000000000</SposobZaplaty>
+		<Termin>0</Termin>
+		<Rachunki>
+			<RachunekBankowyPodmiotu id="RachunekBankowyPodmiotu_2814" class="Soneta.CRM.RachunekPIT,Soneta.CRM">
+				<Typ>9011</Typ>
+				<Priorytet>0</Priorytet>
+				<Rachunek>
+					<Numer>
+						<CS />
+						<Kierunek />
+						<Numer />
+					</Numer>
+				</Rachunek>
+				<Nazwa1 />
+				<Nazwa2 />
+				<Kwota>0.00 PLN</Kwota>
+				<Procent>0%</Procent>
+			</RachunekBankowyPodmiotu>
+			<RachunekBankowyPodmiotu id="RachunekBankowyPodmiotu_2815" class="Soneta.CRM.RachunekCIT,Soneta.CRM">
+				<Typ>9012</Typ>
+				<Priorytet>0</Priorytet>
+				<Rachunek>
+					<Numer>
+						<CS />
+						<Kierunek />
+						<Numer />
+					</Numer>
+				</Rachunek>
+				<Nazwa1 />
+				<Nazwa2 />
+				<Kwota>0.00 PLN</Kwota>
+				<Procent>0%</Procent>
+			</RachunekBankowyPodmiotu>
+			<RachunekBankowyPodmiotu id="RachunekBankowyPodmiotu_2816" class="Soneta.CRM.RachunekVAT,Soneta.CRM">
+				<Typ>9013</Typ>
+				<Priorytet>0</Priorytet>
+				<Rachunek>
+					<Numer>
+						<CS />
+						<Kierunek />
+						<Numer />
+					</Numer>
+				</Rachunek>
+				<Nazwa1 />
+				<Nazwa2 />
+				<Kwota>0.00 PLN</Kwota>
+				<Procent>0%</Procent>
+			</RachunekBankowyPodmiotu>
+			<RachunekBankowyPodmiotu id="RachunekBankowyPodmiotu_2817" class="Soneta.CRM.RachunekZalPIT,Soneta.CRM">
+				<Typ>9014</Typ>
+				<Priorytet>0</Priorytet>
+				<Rachunek>
+					<Numer>
+						<CS />
+						<Kierunek />
+						<Numer />
+					</Numer>
+				</Rachunek>
+				<Nazwa1 />
+				<Nazwa2 />
+				<Kwota>0.00 PLN</Kwota>
+				<Procent>0%</Procent>
+			</RachunekBankowyPodmiotu>
+			<RachunekBankowyPodmiotu id="RachunekBankowyPodmiotu_2805_3" class="Soneta.CRM.RachunekAKC,Soneta.CRM">
+				<Typ>9015</Typ>
+				<Priorytet>0</Priorytet>
+				<Rachunek>
+					<Numer>
+						<CS />
+						<Kierunek />
+						<Numer />
+					</Numer>
+				</Rachunek>
+				<Nazwa1 />
+				<Nazwa2 />
+				<Kwota>0.00 PLN</Kwota>
+				<Procent>0%</Procent>
+			</RachunekBankowyPodmiotu>
+		</Rachunki>
+		<Adresy>
+			<AdresExt id="AdresExt_2818">
+				<Typ>1</Typ>
+				<Adres>
+					<KodPocztowy>0</KodPocztowy>
+					<Poczta />
+					<Miejscowosc />
+					<Gmina />
+					<Powiat />
+					<Wojewodztwo>nieokreślone</Wojewodztwo>
+					<Kraj />
+					<Ulica />
+					<NrDomu />
+					<NrLokalu />
+					<Telefon />
+					<Faks />
+				</Adres>
+			</AdresExt>
+		</Adresy>
+	</UrzadSkarbowy>
+  <RachunekBankowyPodmiotu id="RejestrSP_2_R1" guid="00000000-0003-0002-0003-000000000000" class="Soneta.Kasa.RachunekBankowyEwidencjiSP,Soneta.Kasa">
+    <Rachunek>
+      <Bank />
+      <SWIFT />
+      <Numer>
+        <Kraj>PL</Kraj>
+        <CS>11</CS>
+        <Kierunek>22223333</Kierunek>
+        <Numer>4444 5555 6666 7777</Numer>
+      </Numer>
+    </Rachunek>
+  </RachunekBankowyPodmiotu>
+</session>

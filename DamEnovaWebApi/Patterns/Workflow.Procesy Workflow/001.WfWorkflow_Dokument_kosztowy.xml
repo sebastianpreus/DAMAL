@@ -1,0 +1,3806 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session xmlns="http://www.soneta.pl/schema/business">
+  <WFDefinition id="WFDefinition_1" guid="00000000-0016-0004-0001-00000000000d">
+    <Symbol>Dokument</Symbol>
+    <Name>Dokument Kosztowy</Name>
+    <Numerator>
+      <Wzor>WorkflowDefinition.Symbol/DateFrom.Year:4/DateFrom.Month:2/*</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numerator>
+    <Description />
+    <SingleWorkflowInstance>True</SingleWorkflowInstance>
+    <EditType>Advanced</EditType>
+    <Locked>False</Locked>
+    <IsDeployed>True</IsDeployed>
+  </WFDefinition>
+  <WizardDefinition id="WizardDefinition_12" guid="00000000-0015-0004-0012-00000000000d"> 
+    <Name>DK - Potwierdzenie dokumentu 1</Name>
+    <Description />
+    <Locked>False</Locked>
+    <ParentType>Tuples</ParentType>
+    <Algorithm>False</Algorithm>
+    <Code>#region CreateSteps
+
+public override WizardStepDefinition[] CreateSteps() {
+	return Definition.Steps.ToArray&lt;WizardStepDefinition&gt;();
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsEnable
+
+public override bool IsEnable() {
+	return true;
+}
+
+#endregion
+
+#region BeforeSaveAndFinish
+
+public override void BeforeSaveAndFinish() {
+}
+
+#endregion
+
+#region AfterSaveAndFinish
+
+public override void AfterSaveAndFinish() {
+	using (Session session = Login.CreateSession(false, false, "WizardDefinitionCalculator"))
+	{
+		Context context = Context.Clone(session);
+		using (ITransaction tran = session.Logout(true))
+		{
+			// TODO Dodaj kod wykonywany po zapisie danych w kreatorze
+
+			tran.Commit();
+		}
+		session.Save();
+	}
+}
+
+#endregion</Code>
+    <Lp>12</Lp>
+    <Steps>
+      <WizardStepDefinition id="WizardStepDefinition_66" guid="8a3f94be-be19-4acd-bc5e-a57adc59b3df">
+        <Name>MPK dokumentu</Name>
+        <Lp>1</Lp>
+        <Description />
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_12</WizardDefinition>
+        <StepType>List</StepType>
+        <Page>IGuidedRow.RefTuples.pageform.xml</Page>
+        <PageDesc>Powiązane dokumenty dodatkowe</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+	return null;
+}
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+	return true;
+}
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+ArrayList lista=new ArrayList();
+Soneta.Business.View widok= GetRow&lt;Soneta.Core.DbTuples.DbTuple&gt;().Relations.CreateView();
+widok.Condition&amp;=new Soneta.Business.FieldCondition.Equal("Definicja.Name","MPK");
+string role="";
+Soneta.Business.Db.Task task = (Soneta.Business.Db.Task)Context[typeof(Soneta.Business.Db.Task)];
+role = task.Name;
+    /*foreach (Soneta.Business.Db.OperatorEntitle uprawnienie in Row.Session.Login.Operator.Entitles)
+         {
+             foreach (Soneta.Business.Db.EntitleRole rola in uprawnienie.Entitle.Roles)
+             { 
+            	role+= rola.Role.Name+",";
+             }
+         } */
+   
+foreach (Soneta.Core.DbTuples.DbTupleRel  wiersz in widok)
+{
+	if(role.Contains( (wiersz.Host as Soneta.Ksiega.ElemSlownika ).Symbol) )
+	{ 
+		lista.Add(wiersz); }
+	}
+
+return new View(widok.SubTable.Key,lista);
+
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo />
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+    </Steps>
+  </WizardDefinition>
+  <WizardDefinition id="WizardDefinition_13" guid="00000000-0015-0004-0013-00000000000d">
+    <Name>DK - Weryfikacja merytoryczna</Name>
+    <Description />
+    <Locked>False</Locked>
+    <ParentType>Tuples</ParentType>
+    <Algorithm>False</Algorithm>
+    <Code>#region CreateSteps
+
+public override WizardStepDefinition[] CreateSteps() {
+	return Definition.Steps.ToArray&lt;WizardStepDefinition&gt;();
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsEnable
+
+public override bool IsEnable() {
+	return true;
+}
+
+#endregion
+
+#region BeforeSaveAndFinish
+
+public override void BeforeSaveAndFinish() {
+}
+
+#endregion
+
+#region AfterSaveAndFinish
+
+public override void AfterSaveAndFinish() {
+	using (Session session = Login.CreateSession(false, false, "WizardDefinitionCalculator"))
+	{
+		Context context = Context.Clone(session);
+		using (ITransaction tran = session.Logout(true))
+		{
+			// TODO Dodaj kod wykonywany po zapisie danych w kreatorze
+
+			tran.Commit();
+		}
+		session.Save();
+	}
+}
+
+#endregion</Code>
+    <Lp>13</Lp>
+    <Steps>
+      <WizardStepDefinition id="WizardStepDefinition_68" guid="0d5359f5-0428-46f0-8a30-4c247703887e">
+        <Name>Dokumenty - MPK</Name>
+        <Lp>1</Lp>
+        <Description />
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_13</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>IGuidedRow.HostTuples.pageform.xml</Page>
+        <PageDesc>Dokumenty dodatkowe</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+	return null;
+}
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+	return true;
+}
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+	return null;
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType>WFWorkflows</ParentType>
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo />
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+    </Steps>
+  </WizardDefinition>
+  <WizardDefinition id="WizardDefinition_14" guid="00000000-0015-0004-0014-00000000000d">
+    <Name>DK - Sekretariat</Name>
+    <Description />
+    <Locked>False</Locked>
+    <ParentType>Tuples</ParentType>
+    <Algorithm>True</Algorithm>
+    <Code>#region CreateSteps
+
+public override WizardStepDefinition[] CreateSteps() {
+	return Definition.Steps.ToArray&lt;WizardStepDefinition&gt;();
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsEnable
+
+public override bool IsEnable() {
+	return true;
+}
+
+#endregion
+
+#region BeforeSaveAndFinish
+
+public override void BeforeSaveAndFinish() {
+}
+
+#endregion
+
+#region AfterSaveAndFinish
+
+public override void AfterSaveAndFinish() {
+	using (Session session = Login.CreateSession(false, false, "WizardDefinitionCalculator"))
+	{
+		Context context = Context.Clone(session);
+		using (ITransaction tran = session.Logout(true))
+		{
+			// TODO Dodaj kod wykonywany po zapisie danych w kreatorze
+
+			tran.Commit();
+		}
+		session.Save();
+	}
+}
+
+#endregion</Code>
+    <Lp>14</Lp>
+    <Steps>
+      <WizardStepDefinition id="WizardStepDefinition_69a" guid="2c0dd088-e121-4b68-9328-6f1d1e35a4ea">
+        <Name>Załączniki</Name>
+        <Lp>1</Lp>
+        <Description />
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_14</WizardDefinition>
+        <StepType>Attachment</StepType>
+        <Page />
+        <PageDesc />
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+	return null;
+}
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+	return true;
+}
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+	return null;
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo />
+        <ShowPdfPreview>True</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_70a" guid="8a753227-ecd2-408d-a7e0-fa67c2d8b7ea">
+        <Name>Dokument</Name>
+        <Lp>2</Lp>
+        <Description />
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_14</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>DbTuple.DbTuple.pageform.xml</Page>
+        <PageDesc>Ogólne</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+	if(((Currency)Row.Fields["Kwota"]).Value == 0)
+		return new Exception("Proszę podać kwotę");
+	return null;
+}
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+	return true;
+}
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+	return null;
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo />
+        <ShowPdfPreview>True</ShowPdfPreview>
+      </WizardStepDefinition>
+    </Steps>
+  </WizardDefinition>
+  <WizardDefinition id="WizardDefinition_15" guid="00000000-0015-0004-0015-00000000000d">
+    <Name>DK - MPK dokumentu</Name>
+    <Description />
+    <Locked>False</Locked>
+    <ParentType>Tuples</ParentType>
+    <Algorithm>True</Algorithm>
+    <Code>#region CreateSteps
+
+public override WizardStepDefinition[] CreateSteps() {
+	return Definition.Steps.ToArray&lt;WizardStepDefinition&gt;();
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsEnable
+
+public override bool IsEnable() {
+	return true;
+}
+
+#endregion
+
+#region BeforeSaveAndFinish
+
+public override void BeforeSaveAndFinish() {
+}
+
+#endregion
+
+#region AfterSaveAndFinish
+
+public override void AfterSaveAndFinish() {
+	using (Session session = Login.CreateSession(false, false, "WizardDefinitionCalculator"))
+	{
+		Context context = Context.Clone(session);
+		using (ITransaction tran = session.Logout(true))
+		{
+			// TODO Dodaj kod wykonywany po zapisie danych w kreatorze
+
+			tran.Commit();
+		}
+		session.Save();
+	}
+}
+
+#endregion</Code>
+    <Lp>15</Lp>
+    <Steps>
+      <WizardStepDefinition id="WizardStepDefinition_133" guid="bceab845-dabf-41cf-8c22-2c711b684742">
+        <Name>Ogólne</Name>
+        <Lp>1</Lp>
+        <Description />
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_15</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>DbTuple.DbTuple.pageform.xml</Page>
+        <PageDesc>Ogólne</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+	return null;
+}
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+	return true;
+}
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+	return null;
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo />
+        <ShowPdfPreview>True</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_135" guid="6cf80164-1cc7-4380-982c-8dea792f6e71">
+        <Name>Załączniki</Name>
+        <Lp>2</Lp>
+        <Description />
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_15</WizardDefinition>
+        <StepType>Attachment</StepType>
+        <Page />
+        <PageDesc />
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+	return null;
+}
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+	return true;
+}
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+	return null;
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Business.Db.Wizard.WizardStepDefinition,Soneta.Business' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>True</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_134" guid="a8d28bcf-7fe6-4bf6-843c-e1d2381bd858">
+        <Name>Pozycje MPK</Name>
+        <Lp>3</Lp>
+        <Description />
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_15</WizardDefinition>
+        <StepType>EditInPlaceList</StepType>
+        <Page>IGuidedRow.RefTuples.pageform.xml</Page>
+        <PageDesc>Powiązane dokumenty dodatkowe</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+foreach(Soneta.Core.DbTuples.DbTupleRel rel in Row.Relations)
+{
+	if( rel.Definicja.Name == "MPK" &amp;&amp; rel.Features.GetCurrency("KwotaNetto") != Currency.Zero)
+		return null;
+	}
+	return new Exception("Wprowadź przynajmniej jedną pozycję MPK z wprowadzoną kwotą wyższą niż zero");
+	return null;
+}
+
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+	return true;
+}
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+ArrayList lista=new ArrayList();
+Soneta.Business.View widok= GetRow&lt;Soneta.Core.DbTuples.DbTuple&gt;().Relations.CreateView();
+widok.Condition&amp;=new Soneta.Business.FieldCondition.Equal("Definicja.Name","MPK");
+
+foreach(Object o in widok)
+{
+lista.Add(o);
+}
+
+Soneta.Core.CoreModule cm=Module;
+	var ff = Context[typeof(Soneta.Core.DbTuples.DbTupleFieldDefinition), false] as Soneta.Core.DbTuples.DbTupleFieldDefinition;
+	if(ff == null || ff.Name != "MPK"){
+    foreach(Soneta.Core.DbTuples.DbTupleFieldDefinition tfd in  cm.TuplesDefs.WgNazwa["WFWorkflows","Dokument Zakupowy"].Fields)
+    {
+        if(tfd.Name=="MPK" )
+        { Context.Set(tfd); } 
+    }
+	}
+
+
+return widok;
+
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo />
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_136" guid="8e45c4b3-d7cf-4e12-9280-489543c4de6f">
+        <Name>Struktura organizacyjna</Name>
+        <Lp>4</Lp>
+        <Description />
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_15</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>IZrodloPowiazaniaStrukturyOrganizacyjnej.ElementyStruktury.pageform.xml</Page>
+        <PageDesc>Struktura organizacyjna</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+	return null;
+}
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+	return true;
+}
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+	return null;
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Business.Db.Wizard.WizardStepDefinition,Soneta.Business' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+    </Steps>
+  </WizardDefinition>
+  <WizardDefinition id="WizardDefinition_16" guid="00000000-0015-0004-0016-00000000000d">
+    <Name>DK - Potwierdzenie dokumentu 2</Name>
+    <Description />
+    <Locked>False</Locked>
+    <ParentType>Tuples</ParentType>
+    <Algorithm>False</Algorithm>
+    <Code>#region CreateSteps
+
+public override WizardStepDefinition[] CreateSteps() {
+	return Definition.Steps.ToArray&lt;WizardStepDefinition&gt;();
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsEnable
+
+public override bool IsEnable() {
+	return true;
+}
+
+#endregion
+
+#region BeforeSaveAndFinish
+
+public override void BeforeSaveAndFinish() {
+}
+
+#endregion
+
+#region AfterSaveAndFinish
+
+public override void AfterSaveAndFinish() {
+	using (Session session = Login.CreateSession(false, false, "WizardDefinitionCalculator"))
+	{
+		Context context = Context.Clone(session);
+		using (ITransaction tran = session.Logout(true))
+		{
+			// TODO Dodaj kod wykonywany po zapisie danych w kreatorze
+
+			tran.Commit();
+		}
+		session.Save();
+	}
+}
+
+#endregion
+
+#region ForceUnloockParent
+
+public override bool ForceUnloockParent(Soneta.Business.Db.Task task) {
+	return false;
+}
+
+#endregion</Code>
+    <Lp>16</Lp>
+    <Steps>
+      <WizardStepDefinition id="WizardStepDefinition_74" guid="685686a8-d79d-4f71-b8a3-4efcc5e5cff4">
+        <Name>MPK dokumentu</Name>
+        <Lp>1</Lp>
+        <Description />
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_16</WizardDefinition>
+        <StepType>List</StepType>
+        <Page>IGuidedRow.RefTuples.pageform.xml</Page>
+        <PageDesc>Powiązane dokumenty dodatkowe</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+	return null;
+}
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+	return true;
+}
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+ArrayList lista=new ArrayList();
+Soneta.Business.View widok= GetRow&lt;Soneta.Core.DbTuples.DbTuple&gt;().Relations.CreateView();
+widok.Condition&amp;=new Soneta.Business.FieldCondition.Equal("Definicja.Name","MPK");
+/* string role="";
+Soneta.Business.Db.Task task = (Soneta.Business.Db.Task)Context[typeof(Soneta.Business.Db.Task)];
+role = task.Name;
+    foreach (Soneta.Business.Db.OperatorEntitle uprawnienie in Row.Session.Login.Operator.Entitles)
+         {
+             foreach (Soneta.Business.Db.EntitleRole rola in uprawnienie.Entitle.Roles)
+             { 
+            	role+= rola.Role.Name+",";
+             }
+         } 
+   
+foreach (Soneta.Core.DbTuples.DbTupleRel  wiersz in widok)
+{
+	if(role.Contains( (wiersz.Host as Soneta.Ksiega.ElemSlownika ).Symbol) )
+	{ 
+		lista.Add(wiersz); }
+	}
+*/
+return new View(widok.SubTable.Key,widok);
+
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Core.DbTuples.DbTuple,Soneta.Core' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+    </Steps>
+  </WizardDefinition>
+  <OGSchema id="OGSchema_1" guid="00000000-0016-0005-0001-00000000000d">
+    <Name>DK - Tuples -&gt; Zakup Ewidencja</Name>
+    <Description />
+    <SourceType>Tuples</SourceType>
+    <TargetType>DokEwidencja</TargetType>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;PropertyMappings xmlns="http://www.enova.pl/schemas/OGPropertyMapping"&gt;&lt;PropertyMapping&gt;&lt;sourceproperty&gt;Data&lt;/sourceproperty&gt;&lt;targetproperty&gt;DataDokumentu&lt;/targetproperty&gt;&lt;isrequired&gt;1&lt;/isrequired&gt;&lt;iscontextrequired&gt;0&lt;/iscontextrequired&gt;&lt;/PropertyMapping&gt;&lt;PropertyMapping&gt;&lt;sourceproperty&gt;Data&lt;/sourceproperty&gt;&lt;targetproperty&gt;DataEwidencji&lt;/targetproperty&gt;&lt;isrequired&gt;1&lt;/isrequired&gt;&lt;iscontextrequired&gt;0&lt;/iscontextrequired&gt;&lt;/PropertyMapping&gt;&lt;PropertyMapping&gt;&lt;targetproperty&gt;DataOperacji&lt;/targetproperty&gt;&lt;isrequired&gt;1&lt;/isrequired&gt;&lt;iscontextrequired&gt;0&lt;/iscontextrequired&gt;&lt;/PropertyMapping&gt;&lt;PropertyMapping&gt;&lt;targetproperty&gt;DataWplywu&lt;/targetproperty&gt;&lt;isrequired&gt;1&lt;/isrequired&gt;&lt;iscontextrequired&gt;0&lt;/iscontextrequired&gt;&lt;/PropertyMapping&gt;&lt;PropertyMapping&gt;&lt;sourceproperty&gt;Fields["NumerObcy"].ToString()&lt;/sourceproperty&gt;&lt;targetproperty&gt;NumerDokumentu&lt;/targetproperty&gt;&lt;isrequired&gt;1&lt;/isrequired&gt;&lt;iscontextrequired&gt;0&lt;/iscontextrequired&gt;&lt;/PropertyMapping&gt;&lt;PropertyMapping&gt;&lt;targetproperty&gt;Typ&lt;/targetproperty&gt;&lt;isrequired&gt;1&lt;/isrequired&gt;&lt;iscontextrequired&gt;0&lt;/iscontextrequired&gt;&lt;/PropertyMapping&gt;&lt;PropertyMapping&gt;&lt;sourceproperty&gt;Fields["Kontrahent"] as Soneta.CRM.Kontrahent&lt;/sourceproperty&gt;&lt;targetproperty&gt;Podmiot&lt;/targetproperty&gt;&lt;isrequired&gt;0&lt;/isrequired&gt;&lt;iscontextrequired&gt;0&lt;/iscontextrequired&gt;&lt;/PropertyMapping&gt;&lt;PropertyMapping&gt;&lt;sourceproperty&gt;Fields["Kwota"]&lt;/sourceproperty&gt;&lt;targetproperty&gt;Wartosc&lt;/targetproperty&gt;&lt;isrequired&gt;0&lt;/isrequired&gt;&lt;iscontextrequired&gt;0&lt;/iscontextrequired&gt;&lt;/PropertyMapping&gt;&lt;/PropertyMappings&gt;</XML>
+    <Statement>#region InitTargetRow
+
+public override void InitTargetRow(object targetRow) {
+	base.InitTargetRow(targetRow);
+
+	Soneta.Core.DokEwidencji castedRow = targetRow as Soneta.Core.DokEwidencji;
+//	castedRow.Wartosc=(Currency)SourceRow.Fields["KwotaNetto"];
+	if (castedRow != null) {
+	//System.Windows.Forms.MessageBox.Show("Z_"+castedRow );
+      foreach (Soneta.Core.DbTuples.DbTupleRel relacja in SourceRow.Relations)
+        {
+              if (relacja.Definicja.Name == "MPK" &amp;&amp; relacja.Features.GetString("Zatwierdzono")=="Zatwierdzono")
+             {
+ 	
+     Soneta.Ksiega.KsiegaModule km =Soneta.Ksiega.KsiegaModule.GetInstance(castedRow);
+      Soneta.Ksiega.ElementOpisuEwidencji opis=new Soneta.Ksiega.ElementOpisuEwidencji(castedRow);
+  //as Soneta.Core.IZrodloOpisuAnalitycznego
+  
+     km.OpisAnalityczny.AddRow(opis);
+     opis.Kwota=relacja.Features.GetCurrency("KwotaNetto");
+     opis.Wymiar = "1";
+     opis.Symbol = "222";
+     opis.Opis = "Dokument: "+relacja.Host.ToString();
+     
+	//Soneta.Core.IZrodloOpisuAnalitycznego
+
+	}
+	
+
+      }
+		// Tutaj można inicjować właściwości instancji obiektu
+
+	}
+}
+
+#endregion
+
+#region InvokeConstructor
+
+public override object InvokeConstructor(System.Reflection.ConstructorInfo ci) {
+	object[] param = new object[0];
+
+	return ci.Invoke(param);
+}
+
+#endregion</Statement>
+    <CtorDesc>Soneta.EwidencjaVat.ZakupEwidencja, Soneta.Ksiega|</CtorDesc>
+  </OGSchema>
+  <OGSchema id="OGSchema_2" guid="00000000-0016-0005-0002-00000000000d">
+    <Name>DK - Workflow -&gt; DBTuple</Name>
+    <Description />
+    <SourceType>WFWorkflows</SourceType>
+    <TargetType>Tuples</TargetType>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;PropertyMappings xmlns="http://www.enova.pl/schemas/OGPropertyMapping"&gt;&lt;PropertyMapping&gt;&lt;targetproperty&gt;Data&lt;/targetproperty&gt;&lt;isrequired&gt;1&lt;/isrequired&gt;&lt;iscontextrequired&gt;0&lt;/iscontextrequired&gt;&lt;/PropertyMapping&gt;&lt;PropertyMapping&gt;&lt;targetproperty&gt;Definicja&lt;/targetproperty&gt;&lt;isrequired&gt;1&lt;/isrequired&gt;&lt;iscontextrequired&gt;0&lt;/iscontextrequired&gt;&lt;/PropertyMapping&gt;&lt;/PropertyMappings&gt;</XML>
+    <Statement>#region InitTargetRow
+
+public override void InitTargetRow(object targetRow) {
+	base.InitTargetRow(targetRow);
+
+	Soneta.Core.DbTuples.DbTuple castedRow = targetRow as Soneta.Core.DbTuples.DbTuple;
+	if (castedRow != null) {
+
+		// Tutaj można inicjować właściwości instancji obiektu
+
+	}
+}
+
+#endregion
+
+#region InvokeConstructor
+
+public override object InvokeConstructor(System.Reflection.ConstructorInfo ci) {
+Soneta.Core.CoreModule cm=Soneta.Core.CoreModule.GetInstance(Session);
+	Soneta.Core.DbTuples.DbTupleDefinition def = cm.TuplesDefs.WgNazwa["WFWorkflows","Dokument Zakupowy"];
+Soneta.Core.DbTuples.DbTuple tuple=null;
+	if(def != null) {
+		tuple = def.CreateRow(new Type[] { typeof(Soneta.Workflow.WFWorkflow) }, new object [] { SourceRow });
+		tuple.Data = Date.Today;
+		Soneta.Core.CoreModule.GetInstance(this).Tuples.AddRow(tuple);
+	}
+	return tuple;
+
+}
+
+
+#endregion</Statement>
+    <CtorDesc>Soneta.Core.DbTuples.DbTuple, Soneta.Core|Soneta.Business.RowCreator, Soneta.Business|creator</CtorDesc>
+  </OGSchema>
+  <TaskDefinition id="TaskDefinition_30" guid="687e102e-0dd9-40ce-95ca-164be058a401">
+    <TableName>DokEwidencja</TableName>
+    <Name>Dokument - Dokument_Akcja_1</Name>
+    <FormatedName>Nowy dokument ewidencji</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_Dokument__Dokument_Akcja_1280490817 : TaskCalculatorDokEwidencja {
+
+public Task_Dokument__Dokument_Akcja_1280490817() { }
+public Task_Dokument__Dokument_Akcja_1280490817(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// - Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// - W innym wypadku:
+//   - jeżeli definicja zadania jest startową i manualną zwracana jest wartość wywołania metody workflow.SearchParents(task), która wyszukuje obiekt powiązany z poprzednim zadaniem
+//   - W innym wypadku zwracany jest parametr row
+// W każdym innym przypadku zwracana jest wartość null
+//** end get parent **
+
+
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>Auto</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition />
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_1</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0001-000000000000</WFDefItem>
+    <OGSchema>OGSchema_1</OGSchema>
+    <InitParent>True</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="189,5515" Y="931,9586" /&gt;&lt;Size Width="240" Height="84,00001" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_38">
+        <TaskDefinition>TaskDefinition_30</TaskDefinition>
+        <TableName>DokEwidencja</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { DokEwidencji };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// DokEwidencji : DokEwidencji - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu DokEwidencji,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_31" guid="69ed1a61-1063-41e3-a767-d65011104234">
+    <TableName>DokEwidencja</TableName>
+    <Name>Dokument - Dokument_Koniec_1</Name>
+    <FormatedName>Koniec</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_Dokument__Dokument_Koniec_1952405168 : TaskCalculatorDokEwidencja {
+
+public Task_Dokument__Dokument_Koniec_1952405168() { }
+public Task_Dokument__Dokument_Koniec_1952405168(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// - Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// - W innym wypadku:
+//   - jeżeli definicja zadania jest startową i manualną zwracana jest wartość wywołania metody workflow.SearchParents(task), która wyszukuje obiekt powiązany z poprzednim zadaniem
+//   - W innym wypadku zwracany jest parametr row
+// W każdym innym przypadku zwracana jest wartość null
+//** end get parent **
+
+
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>Auto</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition />
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_1</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0003-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="563,3457" Y="1064,521" /&gt;&lt;Size Width="240" Height="84,00001" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_39">
+        <TaskDefinition>TaskDefinition_31</TaskDefinition>
+        <TableName>DokEwidencja</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { DokEwidencji };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// DokEwidencji : DokEwidencji - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu DokEwidencji,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_32" guid="2154a71c-49ed-42f8-a751-fe0ccb9302ba">
+    <TableName>DokEwidencja</TableName>
+    <Name>Dokument - Dokument_Zadanie_1</Name>
+    <FormatedName>Akceptacja ksiegowa</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_Dokument__Dokument_Zadanie_11144455117 : TaskCalculatorDokEwidencja {
+
+public Task_Dokument__Dokument_Zadanie_11144455117() { }
+public Task_Dokument__Dokument_Zadanie_11144455117(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin overdue time condition **
+
+//** end overdue time condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+public override bool IsVisibleInMenu(GuidedRow guidedRow) {
+	Soneta.Core.DokEwidencji row = (Soneta.Core.DokEwidencji)guidedRow;
+	return true;
+}
+
+public override bool IsVisibleInMenu() {
+	return base.IsVisibleInMenu();
+}
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// - Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// - W innym wypadku:
+//   - jeżeli definicja zadania jest startową i manualną zwracana jest wartość wywołania metody workflow.SearchParents(task), która wyszukuje obiekt powiązany z poprzednim zadaniem
+//   - W innym wypadku zwracany jest parametr row
+// W każdym innym przypadku zwracana jest wartość null
+//** end get parent **
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>InMenu</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition />
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_1</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0006-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="187,1483" Y="1064,521" /&gt;&lt;Size Width="240" Height="84,00001" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_40">
+        <TaskDefinition>TaskDefinition_32</TaskDefinition>
+        <TableName>DokEwidencja</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { DokEwidencji };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// DokEwidencji : DokEwidencji - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu DokEwidencji,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_33" guid="a792a8e4-ce79-4e01-b2bc-8358cf3f9eee">
+    <TableName>Tuples</TableName>
+    <Name>Dokument - Dokument_Decyzja_1</Name>
+    <FormatedName>Złączenie</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>None</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_Dokument__Dokument_Decyzja_11324195916 : TaskCalculatorTuples {
+
+public Task_Dokument__Dokument_Decyzja_11324195916() { }
+public Task_Dokument__Dokument_Decyzja_11324195916(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		OperatorRoleType = OperatorRoleType.Operator;
+		Operator = Row.FirstChangeInfo.Operator;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// - Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// - W innym wypadku:
+//   - jeżeli definicja zadania jest startową i manualną zwracana jest wartość wywołania metody workflow.SearchParents(task), która wyszukuje obiekt powiązany z poprzednim zadaniem
+//   - W innym wypadku zwracany jest parametr row
+// W każdym innym przypadku zwracana jest wartość null
+//** end get parent **
+
+
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Created</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>Auto</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition>WizardDefinition_12</WizardDefinition>
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_1</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0002-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="497,7271" Y="558,0963" /&gt;&lt;Size Width="240" Height="84,00001" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>True</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_41">
+        <TaskDefinition>TaskDefinition_33</TaskDefinition>
+        <TableName>Tuples</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { DbTuple };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// DbTuple : DbTuple - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu DbTuple,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_34" guid="e2a6fb9f-cd2b-4d14-9f1c-2b213ca7a3a3">
+    <TableName>Tuples</TableName>
+    <Name>Dokument - Dokument_Decyzja_2</Name>
+    <FormatedName>Rozgałęzienie</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_Dokument__Dokument_Decyzja_21324195913 : TaskCalculatorTuples {
+
+public Task_Dokument__Dokument_Decyzja_21324195913() { }
+public Task_Dokument__Dokument_Decyzja_21324195913(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+public override bool IsVisibleInMenu(GuidedRow guidedRow) {
+	Soneta.Core.DbTuples.DbTuple row = (Soneta.Core.DbTuples.DbTuple)guidedRow;
+	return true;
+}
+
+public override bool IsVisibleInMenu() {
+	return base.IsVisibleInMenu();
+}
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// - Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// - W innym wypadku:
+//   - jeżeli definicja zadania jest startową i manualną zwracana jest wartość wywołania metody workflow.SearchParents(task), która wyszukuje obiekt powiązany z poprzednim zadaniem
+//   - W innym wypadku zwracany jest parametr row
+// W każdym innym przypadku zwracana jest wartość null
+//** end get parent **
+
+
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>InMenu</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition>00000000-0015-0004-0010-000000000000</WizardDefinition>
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_1</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0002-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="362,2676" Y="204,1441" /&gt;&lt;Size Width="245,4489" Height="84,00001" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_42">
+        <TaskDefinition>TaskDefinition_34</TaskDefinition>
+        <TableName>Tuples</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { DbTuple };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// DbTuple : DbTuple - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu DbTuple,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_35" guid="7b31abf7-bc4c-4044-ae4e-2353a6cc3596">
+    <TableName>Tuples</TableName>
+    <Name>Dokument - Dokument_Koniec_1</Name>
+    <FormatedName>Odrzucony - Koniec</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_Dokument__Dokument_Koniec_1952405168 : TaskCalculatorTuples {
+
+public Task_Dokument__Dokument_Koniec_1952405168() { }
+public Task_Dokument__Dokument_Koniec_1952405168(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// - Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// - W innym wypadku:
+//   - jeżeli definicja zadania jest startową i manualną zwracana jest wartość wywołania metody workflow.SearchParents(task), która wyszukuje obiekt powiązany z poprzednim zadaniem
+//   - W innym wypadku zwracany jest parametr row
+// W każdym innym przypadku zwracana jest wartość null
+//** end get parent **
+
+
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>Auto</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition>WizardDefinition_13</WizardDefinition>
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_1</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0003-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="477,6115" Y="706,761" /&gt;&lt;Size Width="240" Height="84,00001" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_43">
+        <TaskDefinition>TaskDefinition_35</TaskDefinition>
+        <TableName>Tuples</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { DbTuple };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// DbTuple : DbTuple - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu DbTuple,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_36" guid="a9d1ec69-c89c-41ff-9049-ec63bb721b3d">
+    <TableName>Tuples</TableName>
+    <Name>Dokument - Dokument_Start_1</Name>
+    <FormatedName>Sekretariat - Przyjęcie dokumentu</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_Dokument__Dokument_Start_11150615050 : TaskCalculatorTuples {
+
+public Task_Dokument__Dokument_Start_11150615050() { }
+public Task_Dokument__Dokument_Start_11150615050(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+public override bool IsVisibleInMenu(GuidedRow guidedRow) {
+	Soneta.Core.DbTuples.DbTuple row = (Soneta.Core.DbTuples.DbTuple)guidedRow;
+	return true;
+}
+
+public override bool IsVisibleInMenu() {
+	return base.IsVisibleInMenu();
+}
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// - Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// - W innym wypadku:
+//   - jeżeli definicja zadania jest startową i manualną zwracana jest wartość wywołania metody workflow.SearchParents(task), która wyszukuje obiekt powiązany z poprzednim zadaniem
+//   - W innym wypadku zwracany jest parametr row
+// W każdym innym przypadku zwracana jest wartość null
+//** end get parent **
+
+
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>InMenu</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition>WizardDefinition_14</WizardDefinition>
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>True</IsStart>
+    <WFDefinition>WFDefinition_1</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0005-000000000000</WFDefItem>
+    <OGSchema>OGSchema_2</OGSchema>
+    <InitParent>True</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="140,0617" Y="45,71154" /&gt;&lt;Size Width="240" Height="84,00001" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_44">
+        <TaskDefinition>TaskDefinition_36</TaskDefinition>
+        <TableName>Tuples</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { DbTuple };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// DbTuple : DbTuple - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu DbTuple,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_37" guid="3ee2c4cf-47d4-4c4a-95e0-01b689409ab1">
+    <TableName>Tuples</TableName>
+    <Name>Dokument - Dokument_Zadanie_1</Name>
+    <FormatedName>Weryfikacja merytoryczna</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_Dokument__Dokument_Zadanie_11144455117 : TaskCalculatorTuples {
+
+public Task_Dokument__Dokument_Zadanie_11144455117() { }
+public Task_Dokument__Dokument_Zadanie_11144455117(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+public override bool IsVisibleInMenu(GuidedRow guidedRow) {
+	Soneta.Core.DbTuples.DbTuple row = (Soneta.Core.DbTuples.DbTuple)guidedRow;
+	return true;
+}
+
+public override bool IsVisibleInMenu() {
+	return base.IsVisibleInMenu();
+}
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// - Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// - W innym wypadku:
+//   - jeżeli definicja zadania jest startową i manualną zwracana jest wartość wywołania metody workflow.SearchParents(task), która wyszukuje obiekt powiązany z poprzednim zadaniem
+//   - W innym wypadku zwracany jest parametr row
+// W każdym innym przypadku zwracana jest wartość null
+//** end get parent **
+
+
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>InMenu</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition>WizardDefinition_15</WizardDefinition>
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_1</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0006-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="450,2822" Y="48,23916" /&gt;&lt;Size Width="240" Height="84,00001" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_45">
+        <TaskDefinition>TaskDefinition_37</TaskDefinition>
+        <TableName>Tuples</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { DbTuple };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// DbTuple : DbTuple - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu DbTuple,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_38" guid="f05abadb-8927-43dd-878a-6a488f4c90f4">
+    <TableName>Tuples</TableName>
+    <Name>Dokument - Dokument_Zadanie_2</Name>
+    <FormatedName>Potwierdzenie MPK dokumentu - Handel</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_Dokument__Dokument_Zadanie_21144455116 : TaskCalculatorTuples {
+
+public Task_Dokument__Dokument_Zadanie_21144455116() { }
+public Task_Dokument__Dokument_Zadanie_21144455116(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin overdue time condition **
+
+//** end overdue time condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+public override bool IsVisibleInMenu(GuidedRow guidedRow) {
+	Soneta.Core.DbTuples.DbTuple row = (Soneta.Core.DbTuples.DbTuple)guidedRow;
+	return true;
+}
+
+public override bool IsVisibleInMenu() {
+	return base.IsVisibleInMenu();
+}
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// - Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// - W innym wypadku:
+//   - jeżeli definicja zadania jest startową i manualną zwracana jest wartość wywołania metody workflow.SearchParents(task), która wyszukuje obiekt powiązany z poprzednim zadaniem
+//   - W innym wypadku zwracany jest parametr row
+// W każdym innym przypadku zwracana jest wartość null
+//** end get parent **
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>InMenu</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition>WizardDefinition_12</WizardDefinition>
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_1</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0006-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="369,612" Y="394,6918" /&gt;&lt;Size Width="240" Height="84,00001" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_46">
+        <TaskDefinition>TaskDefinition_38</TaskDefinition>
+        <TableName>Tuples</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { DbTuple };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// DbTuple : DbTuple - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu DbTuple,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_39" guid="b2936537-604c-4b13-b65d-7cb67012e27f">
+    <TableName>Tuples</TableName>
+    <Name>Dokument - Dokument_Zadanie_3</Name>
+    <FormatedName>Potwierdzenie MPK dokumentu - CRM</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_Dokument__Dokument_Zadanie_31144455115 : TaskCalculatorTuples {
+
+public Task_Dokument__Dokument_Zadanie_31144455115() { }
+public Task_Dokument__Dokument_Zadanie_31144455115(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin overdue time condition **
+
+//** end overdue time condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+public override bool IsVisibleInMenu(GuidedRow guidedRow) {
+	Soneta.Core.DbTuples.DbTuple row = (Soneta.Core.DbTuples.DbTuple)guidedRow;
+	return true;
+}
+
+public override bool IsVisibleInMenu() {
+	return base.IsVisibleInMenu();
+}
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// - Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// - W innym wypadku:
+//   - jeżeli definicja zadania jest startową i manualną zwracana jest wartość wywołania metody workflow.SearchParents(task), która wyszukuje obiekt powiązany z poprzednim zadaniem
+//   - W innym wypadku zwracany jest parametr row
+// W każdym innym przypadku zwracana jest wartość null
+//** end get parent **
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>InMenu</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition>WizardDefinition_12</WizardDefinition>
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_1</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0006-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="122,3034" Y="397,2177" /&gt;&lt;Size Width="240" Height="84,00001" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_47">
+        <TaskDefinition>TaskDefinition_39</TaskDefinition>
+        <TableName>Tuples</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { DbTuple };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// DbTuple : DbTuple - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu DbTuple,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_40" guid="43c47326-a1c5-452c-8ddf-0b54333174f7">
+    <TableName>Tuples</TableName>
+    <Name>Dokument - Dokument_Zadanie_4</Name>
+    <FormatedName>Potwierdzenie MPK dokumentu - Kadry</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_Dokument__Dokument_Zadanie_41144455122 : TaskCalculatorTuples {
+
+public Task_Dokument__Dokument_Zadanie_41144455122() { }
+public Task_Dokument__Dokument_Zadanie_41144455122(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin overdue time condition **
+
+//** end overdue time condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+public override bool IsVisibleInMenu(GuidedRow guidedRow) {
+	Soneta.Core.DbTuples.DbTuple row = (Soneta.Core.DbTuples.DbTuple)guidedRow;
+	return true;
+}
+
+public override bool IsVisibleInMenu() {
+	return base.IsVisibleInMenu();
+}
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// - Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// - W innym wypadku:
+//   - jeżeli definicja zadania jest startową i manualną zwracana jest wartość wywołania metody workflow.SearchParents(task), która wyszukuje obiekt powiązany z poprzednim zadaniem
+//   - W innym wypadku zwracany jest parametr row
+// W każdym innym przypadku zwracana jest wartość null
+//** end get parent **
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>InMenu</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition>WizardDefinition_12</WizardDefinition>
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_1</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0006-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="612,405" Y="396,5761" /&gt;&lt;Size Width="240" Height="84,00001" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_48">
+        <TaskDefinition>TaskDefinition_40</TaskDefinition>
+        <TableName>Tuples</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { DbTuple };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// DbTuple : DbTuple - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu DbTuple,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_41" guid="ed156651-b8b9-442f-b614-cf374c14227d">
+    <TableName>Tuples</TableName>
+    <Name>Dokument - Dokument_Zadanie_5</Name>
+    <FormatedName>Zatwierdzenie poziom 2</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_Dokument__Dokument_Zadanie_51144455121 : TaskCalculatorTuples {
+
+public Task_Dokument__Dokument_Zadanie_51144455121() { }
+public Task_Dokument__Dokument_Zadanie_51144455121(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+public override bool IsVisibleInMenu(GuidedRow guidedRow) {
+	Soneta.Core.DbTuples.DbTuple row = (Soneta.Core.DbTuples.DbTuple)guidedRow;
+	return true;
+}
+
+public override bool IsVisibleInMenu() {
+	return base.IsVisibleInMenu();
+}
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// - Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// - W innym wypadku:
+//   - jeżeli definicja zadania jest startową i manualną zwracana jest wartość wywołania metody workflow.SearchParents(task), która wyszukuje obiekt powiązany z poprzednim zadaniem
+//   - W innym wypadku zwracany jest parametr row
+// W każdym innym przypadku zwracana jest wartość null
+//** end get parent **
+
+
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>InMenu</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition>WizardDefinition_16</WizardDefinition>
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_1</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0006-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="195,4371" Y="647,5963" /&gt;&lt;Size Width="240" Height="84,00001" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_49">
+        <TaskDefinition>TaskDefinition_41</TaskDefinition>
+        <TableName>Tuples</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { DbTuple };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// DbTuple : DbTuple - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu DbTuple,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_42" guid="9f67c828-a49a-4b2b-b7b8-95f217adc139">
+    <TableName>Tuples</TableName>
+    <Name>Dokument - Dokument_Zadanie_6</Name>
+    <FormatedName>Zatwierdzenie poziom 3</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_Dokument__Dokument_Zadanie_61144455120 : TaskCalculatorTuples {
+
+public Task_Dokument__Dokument_Zadanie_61144455120() { }
+public Task_Dokument__Dokument_Zadanie_61144455120(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+public override bool IsVisibleInMenu(GuidedRow guidedRow) {
+	Soneta.Core.DbTuples.DbTuple row = (Soneta.Core.DbTuples.DbTuple)guidedRow;
+	return true;
+}
+
+public override bool IsVisibleInMenu() {
+	return base.IsVisibleInMenu();
+}
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// - Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// - W innym wypadku:
+//   - jeżeli definicja zadania jest startową i manualną zwracana jest wartość wywołania metody workflow.SearchParents(task), która wyszukuje obiekt powiązany z poprzednim zadaniem
+//   - W innym wypadku zwracany jest parametr row
+// W każdym innym przypadku zwracana jest wartość null
+//** end get parent **
+
+
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>InMenu</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition>WizardDefinition_16</WizardDefinition>
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_1</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0006-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="189,2142" Y="789,8461" /&gt;&lt;Size Width="240" Height="84,00001" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_50">
+        <TaskDefinition>TaskDefinition_42</TaskDefinition>
+        <TableName>Tuples</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { DbTuple };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// DbTuple : DbTuple - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu DbTuple,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <WFTransition id="WFTransition_1" guid="8fb23bca-1145-4d9e-8e0c-6c9f9fe74242">
+    <Name>[A]</Name>
+    <Source>TaskDefinition_30</Source>
+    <Target>TaskDefinition_32</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0001-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+	return true;
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="189,5515" Y="998,2398" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;Point X="0" Y="46,56238" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>False</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_2" guid="b150c7ee-a21d-4578-99a4-3349a33f5cf0">
+    <Name>Do księgowości</Name>
+    <Source>TaskDefinition_42</Source>
+    <Target>TaskDefinition_30</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0002-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+	return task.WFTransition!=null &amp;&amp; task.WFTransition==Transition;
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="189,5515" Y="860,9023" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;Point X="0" Y="56,11249" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>True</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_3" guid="fd9bbeb1-0c65-4a58-b4bb-0c38bfa213a4">
+    <Name>Dokument Wprowadzony</Name>
+    <Source>TaskDefinition_32</Source>
+    <Target>TaskDefinition_31</Target>
+    <WFTransitionDefinition />
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+	RowCondition rctaskParent = RowCondition.Compile(@"[Stan] = 'Wprowadzony'");
+
+	return rctaskParent.RowIsAccepted(null, task.Parent as Row);
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="375,247" Y="1064,521" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;Point X="134,1974" Y="0" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>False</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_4" guid="01232346-f90f-4390-acb7-ec99c6ef153a">
+    <Name>Wszystkie zatwierdzone</Name>
+    <Source>TaskDefinition_33</Source>
+    <Target>TaskDefinition_41</Target>
+    <WFTransitionDefinition />
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+       bool zakonczonoZatwierdzanie=true;
+	   foreach (Soneta.Core.DbTuples.DbTupleRel relacja in (task.Parent as Soneta.Core.DbTuples.DbTuple).Relations)
+        {
+              if (relacja.Definicja.Name == "MPK" &amp;&amp; relacja.Features.GetString("Zatwierdzono")!="Zatwierdzono")
+             {
+                  zakonczonoZatwierdzanie=false;
+             }
+        } 
+
+
+if(zakonczonoZatwierdzanie)
+{
+	foreach(Soneta.Business.Db.Task tt in task.WFWorkflow.SearchPreviousTasks(task))
+	{ 
+		if(tt.Progress!=Soneta.Business.Db.TaskProgress.Realized)
+		zakonczonoZatwierdzanie=false;
+	
+	}
+
+                
+
+}
+
+
+	return zakonczonoZatwierdzanie;
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="407,0821" Y="624,3463" /&gt;&lt;Point X="181,29" Y="0" /&gt;&lt;Point X="181,29" Y="46,5" /&gt;&lt;Point X="0" Y="46,5" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>False</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_5" guid="0ce0e821-1618-48f0-aa5f-bd1c0dc2ae32">
+    <Name>Korekta</Name>
+    <Source>TaskDefinition_33</Source>
+    <Target>TaskDefinition_37</Target>
+    <WFTransitionDefinition />
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+	    bool zakonczonoZatwierdzanie=false;
+	   foreach (Soneta.Core.DbTuples.DbTupleRel relacja in (task.Parent as Soneta.Core.DbTuples.DbTuple).Relations)
+        {
+              if (relacja.Definicja.Name == "MPK" &amp;&amp; relacja.Features.GetString("Zatwierdzono")=="Korekta")
+             {
+                  zakonczonoZatwierdzanie=true;
+             }
+        } 
+        
+        
+if(zakonczonoZatwierdzanie)
+{
+	foreach(Soneta.Business.Db.Task tt in task.WFWorkflow.SearchPreviousTasks(task))
+	{ 
+		if(tt.Progress!=Soneta.Business.Db.TaskProgress.Realized)
+		zakonczonoZatwierdzanie=false;
+	}
+}
+
+	return zakonczonoZatwierdzanie;
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="659,0355" Y="303,1677" /&gt;&lt;Point X="47,44495" Y="509,857" /&gt;&lt;Point X="175,5067" Y="509,857" /&gt;&lt;Point X="175,5067" Y="0" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>False</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_6" guid="e3c789ac-3a2a-4fa7-bc6d-54e5043b0950">
+    <Name>Zatwierdzono wszystkie pozycje</Name>
+    <Source>TaskDefinition_38</Source>
+    <Target>TaskDefinition_33</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0002-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+
+       bool zakonczonoZatwierdzanie=true;
+	   foreach (Soneta.Core.DbTuples.DbTupleRel relacja in (task.Parent as Soneta.Core.DbTuples.DbTuple).Relations)
+        {
+              if (relacja.Definicja.Name == "MPK" &amp;&amp; relacja.Features.GetString("Zatwierdzono")!="Zatwierdzono")
+             {
+                  zakonczonoZatwierdzanie=false;
+             }
+        } 
+
+	return zakonczonoZatwierdzanie || (task.WFTransition!=null &amp;&amp; task.WFTransition==Transition);
+}    
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="433,6696" Y="476,394" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;Point X="0" Y="35,88151" /&gt;&lt;Point X="128,1151" Y="35,88141" /&gt;&lt;Point X="128,1151" Y="77,40451" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>True</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_7" guid="6868da13-bd9d-48b5-bfe6-50bf43a04449">
+    <Name>Zatwierdzono wszystkie pozycje</Name>
+    <Source>TaskDefinition_39</Source>
+    <Target>TaskDefinition_33</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0002-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+
+       bool zakonczonoZatwierdzanie=true;
+	   foreach (Soneta.Core.DbTuples.DbTupleRel relacja in (task.Parent as Soneta.Core.DbTuples.DbTuple).Relations)
+        {
+              if (relacja.Definicja.Name == "MPK" &amp;&amp; relacja.Features.GetString("Zatwierdzono")!="Zatwierdzono")
+             {
+                  zakonczonoZatwierdzanie=false;
+             }
+        } 
+
+	return zakonczonoZatwierdzanie || (task.WFTransition!=null &amp;&amp; task.WFTransition==Transition);
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="249,5153" Y="499,157" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;Point X="0" Y="117,8786" /&gt;&lt;Point X="254,4237" Y="117,8786" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>True</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_8" guid="82368249-f39c-4cfb-8a5b-7214dd79bab0">
+    <Name>Zatwierdzono wszystkie pozycje</Name>
+    <Source>TaskDefinition_40</Source>
+    <Target>TaskDefinition_33</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0002-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+       bool zakonczonoZatwierdzanie=true;
+	   foreach (Soneta.Core.DbTuples.DbTupleRel relacja in (task.Parent as Soneta.Core.DbTuples.DbTuple).Relations)
+        {
+              if (relacja.Definicja.Name == "MPK" &amp;&amp; relacja.Features.GetString("Zatwierdzono")!="Zatwierdzono")
+             {
+                  zakonczonoZatwierdzanie=false;
+             }
+        } 
+	 
+
+	return zakonczonoZatwierdzanie || (task.WFTransition!=null &amp;&amp; task.WFTransition==Transition);
+
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="497,7271" Y="476,3362" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;Point X="0" Y="77,5202" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>True</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_9" guid="225b5053-b2d2-431e-acf6-a730e2f36532">
+    <Name>Handel</Name>
+    <Source>TaskDefinition_34</Source>
+    <Target>TaskDefinition_38</Target>
+    <WFTransitionDefinition />
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+		 
+	   foreach (Soneta.Core.DbTuples.DbTupleRel relacja in (task.Parent as Soneta.Core.DbTuples.DbTuple).Relations)
+        {
+            if (relacja.Definicja.Name == "MPK")
+            {
+                Soneta.Ksiega.ElemSlownika element = relacja.Host as Soneta.Ksiega.ElemSlownika;
+                  if (element.Symbol == Transition.Name &amp;&amp; relacja.Features.GetString("Zatwierdzono")!="Zatwierdzono" )
+
+                return true;
+            }
+        
+        } 
+	   
+	return false;//  base.IsRealized(task);
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="362,2676" Y="299,4179" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;Point X="0" Y="104,5477" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>False</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_10" guid="1991e836-1beb-47f8-ae4e-75ea25b1743a">
+    <Name>CRM</Name>
+    <Source>TaskDefinition_34</Source>
+    <Target>TaskDefinition_39</Target>
+    <WFTransitionDefinition />
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+	   foreach (Soneta.Core.DbTuples.DbTupleRel relacja in (task.Parent as Soneta.Core.DbTuples.DbTuple).Relations)
+        {
+            if (relacja.Definicja.Name == "MPK")
+            {
+                Soneta.Ksiega.ElemSlownika element = relacja.Host as Soneta.Ksiega.ElemSlownika;
+                   if (element.Symbol == Transition.Name &amp;&amp; relacja.Features.GetString("Zatwierdzono")!="Zatwierdzono" )
+                return true;
+            }
+        
+        } 
+	   
+	return false;//  base.IsRealized(task);
+
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="242,2855" Y="300,6809" /&gt;&lt;Point X="239,9642" Y="0" /&gt;&lt;Point X="239,9642" Y="61,75223" /&gt;&lt;Point X="0" Y="61,75227" /&gt;&lt;Point X="0" Y="107,0736" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>False</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_11" guid="3bd6ffb1-0e10-45a4-916b-279833de8004">
+    <Name>Kadry</Name>
+    <Source>TaskDefinition_34</Source>
+    <Target>TaskDefinition_40</Target>
+    <WFTransitionDefinition />
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+	   foreach (Soneta.Core.DbTuples.DbTupleRel relacja in (task.Parent as Soneta.Core.DbTuples.DbTuple).Relations)
+        {
+            if (relacja.Definicja.Name == "MPK")
+            {
+                Soneta.Ksiega.ElemSlownika element = relacja.Host as Soneta.Ksiega.ElemSlownika;
+                if (element.Symbol == Transition.Name &amp;&amp; relacja.Features.GetString("Zatwierdzono")!="Zatwierdzono" )
+                return true;
+            }
+        
+        } 
+	   
+	return false;//  base.IsRealized(task);
+
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="487,3363" Y="300,3601" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;Point X="0" Y="66,88573" /&gt;&lt;Point X="250,1375" Y="66,88577" /&gt;&lt;Point X="250,1375" Y="106,432" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>False</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_12" guid="337576e7-251a-4f60-a7f8-8d2a4f2fb2cc">
+    <Name>Potwierdź</Name>
+    <Source>TaskDefinition_37</Source>
+    <Target>TaskDefinition_34</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0002-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+	return task.WFTransition!=null &amp;&amp; task.WFTransition==Transition;
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="450,2822" Y="126,1916" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;Point X="0" Y="69,90494" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>True</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_13" guid="28c48074-d260-4e58-80b7-7218558ef5f3">
+    <Name>Odrzuć</Name>
+    <Source>TaskDefinition_41</Source>
+    <Target>TaskDefinition_35</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0002-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+	return task.WFTransition!=null &amp;&amp; task.WFTransition==Transition;
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="276,0243" Y="698,6786" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;Point X="0" Y="16,16467" /&gt;&lt;Point X="161,1744" Y="16,16467" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>True</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_14" guid="40b72816-d4a7-4097-9fb0-f15aa874754e">
+    <Name>Odrzuć</Name>
+    <Source>TaskDefinition_42</Source>
+    <Target>TaskDefinition_35</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0002-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+	return task.WFTransition!=null &amp;&amp; task.WFTransition==Transition;
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="393,9128" Y="769,8036" /&gt;&lt;Point X="0" Y="40,08514" /&gt;&lt;Point X="167,3973" Y="40,08514" /&gt;&lt;Point X="167,3973" Y="0" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>True</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_15" guid="6424d39b-642c-4c95-a48a-5ab39877f66e">
+    <Name>Zatwierdź</Name>
+    <Source>TaskDefinition_36</Source>
+    <Target>TaskDefinition_37</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0002-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+	return task.WFTransition!=null &amp;&amp; task.WFTransition==Transition;
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="295,1719" Y="45,71156" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;Point X="68,22052" Y="0" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>True</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_16" guid="ad1bbfd4-4d06-47cf-ad0f-6c78f6c5c084">
+    <Name>Zatwierdzenie poziom 3</Name>
+    <Source>TaskDefinition_41</Source>
+    <Target>TaskDefinition_42</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0002-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+	return task.WFTransition!=null &amp;&amp; task.WFTransition==Transition;
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="189,2142" Y="718,7212" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;Point X="0" Y="56,24982" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>True</IsUserDecision>
+  </WFTransition>
+   <FeatureDefinition id="FeatureDefinition_3" guid="7aa79880-37e1-49ed-8221-78584c212172">
+    <TableName>TuplesRelations</TableName>
+    <Name>KwotaNetto</Name>
+    <Category />
+    <Description />
+    <TypeNumber>Currency</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DBSet</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code>public Currency Feature_KwotaNetto(Currency value) {
+    // Tutaj umieść kod wywoływany przed ustawieniem wartości cechy
+    // Wartość value można zmieniać
+  Currency suma=Currency.Zero;
+ foreach(Soneta.Core.DbTuples.DbTupleRel rel in Row.DbTuple.Relations )  
+ {
+suma+= rel.Features.GetCurrency("KwotaNetto");
+ }
+ if((suma+value)&gt;((Currency)Row.DbTuple.Fields["Kwota"]))
+ throw new Exception("Suma MPK jest większa niż kwota dokumentu");
+ 
+    return value;
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// Row: DbTupleRel - Wiersz przeliczanej cechy
+// Table: TuplesRelations - Tabela wiersza przeliczanej cechy
+// Module: CoreModule - Moduł, w którym znajduje się tabela
+// Session: Session - Obiekt sesji dający dostęp do wszystkich danych programu
+</Code>
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <Info />
+  </FeatureDefinition>
+  <FeatureDefinition id="FeatureDefinition_4" guid="f3ae9ac8-30af-4efa-ac92-d8c0842d4d31">
+    <TableName>TuplesRelations</TableName>
+    <Name>Zatwierdzono</Name>
+    <Category />
+    <Description />
+    <TypeNumber>String</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>ReadOnly</ReadOnlyMode>
+    <InitValueStr>Brak</InitValueStr>
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary>Zatwierdzono</Dictionary>
+    <Info />
+  </FeatureDefinition>
+   <FeatureDefinition id="FeatureDefinition_13" guid="a79d8fc6-e11e-4490-adb4-1d10fc327c26">
+    <TableName>WFWorkflows</TableName>
+    <Name>Kontrahent</Name>
+    <Category />
+    <Description />
+    <TypeNumber>Reference</TypeNumber>
+    <TypeInformation>Kontrahenci</TypeInformation>
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>DB</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code />
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <Info />
+  </FeatureDefinition>
+ <DbTupleDefinition id="DbTupleDefinition_4" guid="3b16a8b0-55f0-4c97-be28-ddbe2b428e40">
+    <NazwaTabeli>WFWorkflows</NazwaTabeli>
+    <Nazwa>Dokument Zakupowy</Nazwa>
+	<FormatedName>Dokument Zakupowy</FormatedName>
+    <Symbol>DZ</Symbol>
+    <Seria>False</Seria>
+    <Numeracja>
+      <Wzor>Definicja.Symbol/Data.Year:4/Data.Month:2/*</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numeracja>
+    <Domyslna>False</Domyslna>
+    <Blokada>False</Blokada>
+    <FolderPath>Domyślny</FolderPath>
+    <Xml>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfPropertyItem xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;0&lt;/Index&gt;
+    &lt;Title&gt;Definicja&lt;/Title&gt;
+    &lt;Name&gt;Definicja&lt;/Name&gt;
+    &lt;PromptWidth&gt;0&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlSource /&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;PostBack&gt;false&lt;/PostBack&gt;
+    &lt;TextDivider&gt;Ogólne&lt;/TextDivider&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;1&lt;/Index&gt;
+    &lt;Title&gt;{new DbTupleExtender.HostCaption}&lt;/Title&gt;
+    &lt;Name&gt;Host&lt;/Name&gt;
+    &lt;PromptWidth&gt;0&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlSource /&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;PostBack&gt;false&lt;/PostBack&gt;
+    &lt;TextDivider /&gt;
+    &lt;ControlVisibility&gt;new DbTupleExtender.IsHostCaptionVisible&lt;/ControlVisibility&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;2&lt;/Index&gt;
+    &lt;Title&gt;Data&lt;/Title&gt;
+    &lt;Name&gt;Data&lt;/Name&gt;
+    &lt;PromptWidth&gt;0&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;100&lt;/ControlWidth&gt;
+    &lt;ControlSource /&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;PostBack&gt;false&lt;/PostBack&gt;
+    &lt;TextDivider&gt;Dokument&lt;/TextDivider&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;3&lt;/Index&gt;
+    &lt;Title&gt;Seria&lt;/Title&gt;
+    &lt;Name&gt;Seria&lt;/Name&gt;
+    &lt;PromptWidth&gt;20&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;100&lt;/ControlWidth&gt;
+    &lt;ControlSource /&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;true&lt;/WithPrev&gt;
+    &lt;PostBack&gt;false&lt;/PostBack&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;4&lt;/Index&gt;
+    &lt;Title&gt;Numer&lt;/Title&gt;
+    &lt;Name&gt;Numer.NumerPelny&lt;/Name&gt;
+    &lt;PromptWidth&gt;0&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ControlSource /&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;PostBack&gt;false&lt;/PostBack&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;5&lt;/Index&gt;
+    &lt;Title&gt;Data Dokumentu&lt;/Title&gt;
+    &lt;Name&gt;Data&lt;/Name&gt;
+    &lt;PromptWidth&gt;0&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;PostBack&gt;false&lt;/PostBack&gt;
+    &lt;TextDivider&gt;Dokument&lt;/TextDivider&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;6&lt;/Index&gt;
+    &lt;Title&gt;Data Ewidencji&lt;/Title&gt;
+    &lt;Name&gt;DataEwidencji&lt;/Name&gt;
+    &lt;PromptWidth&gt;0&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;PostBack&gt;false&lt;/PostBack&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;7&lt;/Index&gt;
+    &lt;Title&gt;Kontrahent&lt;/Title&gt;
+    &lt;Name&gt;Kontrahent&lt;/Name&gt;
+    &lt;PromptWidth&gt;0&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;PostBack&gt;false&lt;/PostBack&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;8&lt;/Index&gt;
+    &lt;Title&gt;Numer Obcy&lt;/Title&gt;
+    &lt;Name&gt;NumerObcy&lt;/Name&gt;
+    &lt;PromptWidth&gt;0&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;PostBack&gt;false&lt;/PostBack&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+  &lt;PropertyItem&gt;
+    &lt;Index&gt;9&lt;/Index&gt;
+    &lt;Title&gt;Kwota&lt;/Title&gt;
+    &lt;Name&gt;Kwota&lt;/Name&gt;
+    &lt;PromptWidth&gt;0&lt;/PromptWidth&gt;
+    &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+    &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+    &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+    &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+    &lt;PostBack&gt;false&lt;/PostBack&gt;
+    &lt;TextDivider /&gt;
+  &lt;/PropertyItem&gt;
+&lt;/ArrayOfPropertyItem&gt;</Xml>
+
+    <Tools>
+      <Code>//** Begin: Class **
+public SubTable GetListMPK()
+{
+//System.Windows.Forms.MessageBox.Show("ODPALONE!!");
+
+ Soneta.Ksiega.KsiegaModule km=Soneta.Ksiega.KsiegaModule.GetInstance(Session);
+              return  km.ElemSlownikow.WgDefinicja[km.DefSlownikow.WgNazwy["MPK"]];
+}//** End: Class **
+//** Begin: Calc **
+internal static class ContextHelper {
+
+    public static Soneta.Business.Db.Wizard.WizardStepDefinition GetWizardStepDefinition(Context context) {
+        return (Soneta.Business.Db.Wizard.WizardStepDefinition)context[typeof(Soneta.Business.Db.Wizard.WizardStepDefinition), false];
+    }
+
+    public static object[] GetSelected(Context context) {
+        var wslsi = (Soneta.Business.Db.Wizard.WizardStepListSelectionInfo)context[typeof(Soneta.Business.Db.Wizard.WizardStepListSelectionInfo), false];
+        if (wslsi == null) return new object[0];
+
+        if (!IsMPKStep(context)) return new object[0];
+
+        var wsd = GetWizardStepDefinition(context);
+
+        return wslsi.GetSelected(wsd.Guid, "");
+    }
+
+    public static bool IsMPKStep(Context context) {
+        var wsd = GetWizardStepDefinition(context);
+
+        return wsd != null &amp;&amp; wsd.Name.ToLower().Contains("mpk dokumentu");
+    }
+
+    public static bool IsMPKTask(Context context) {
+        var task = (Soneta.Business.Db.Task)context[typeof(Soneta.Business.Db.Task), false];
+
+        return task != null &amp;&amp; task.Definition.FormatedName.Contains("Potwierdzenie MPK");
+    }    
+
+}
+
+public abstract class WorkerBase {
+    
+    [Context]
+    public Context Context { get; set; }
+
+    protected void ActionTemplate() {
+        using (var tran = Context.Session.Logout(true)) {
+            foreach(Soneta.Core.DbTuples.DbTupleRel dok in ContextHelper.GetSelected(Context)) {
+                ActionImpl(dok);
+            }
+            
+            tran.Commit();
+        }
+    }
+
+    protected abstract void ActionImpl(Soneta.Core.DbTuples.DbTupleRel dok);
+    
+    protected bool IsVisible() {
+        return ContextHelper.IsMPKTask(Context) &amp;&amp; ContextHelper.IsMPKStep(Context);
+    }
+
+}
+
+public class ZatwierdzWorker : WorkerBase {
+    
+    [Action("Zatwierdz", Target = ActionTarget.ToolbarWithText | ActionTarget.Menu)]
+    public void Zatwierdz() {
+        ActionTemplate();
+    }
+
+    protected override void ActionImpl(Soneta.Core.DbTuples.DbTupleRel dok) {
+        dok.Features["Zatwierdzono"] = "Zatwierdzono";
+    }
+
+    public bool IsVisibleZatwierdz() {
+        return IsVisible();
+    }
+
+}
+
+public class OdtwierdzWorker : WorkerBase {
+
+    [Action("Odtwierdz", Target = ActionTarget.ToolbarWithText | ActionTarget.Menu)]
+    public void Odtwierdz() {
+        ActionTemplate();
+    }
+
+    protected override void ActionImpl(Soneta.Core.DbTuples.DbTupleRel dok) {
+        dok.Features["Zatwierdzono"] = "Brak";
+    }
+
+    public bool IsVisibleOdtwierdz() {
+        return IsVisible();
+    }
+
+}
+
+public class KorektaWorker : WorkerBase {
+
+    [Action("Do korekty", Target = ActionTarget.ToolbarWithText | ActionTarget.Menu)]
+    public void Korekta() {
+        ActionTemplate();
+    }
+
+    protected override void ActionImpl(Soneta.Core.DbTuples.DbTupleRel dok) {
+        dok.Features["Zatwierdzono"] = "Korekta";
+    }
+
+    public bool IsVisibleKorekta() {
+        return IsVisible();
+    }
+
+}//** End: Calc **
+</Code>
+    </Tools>
+    <Fields>
+      <RuntimeFieldDefinition id="RuntimeFieldDefinition_48" guid="022b3bb1-0964-45da-86e8-a5878daad4a4" class="Soneta.Core.DbTuples.DbTupleFieldDefinition,Soneta.Core">
+        <Type>DbTuple</Type>
+        <Definition>DbTupleDefinition_4</Definition>
+        <Lp>1</Lp>
+        <Name>WFWorkflow</Name>
+        <FieldType>Reference</FieldType>
+        <TypeInformation>WFWorkflows</TypeInformation>
+        <FldCaption />
+        <FldDescription />
+        <IsFieldIndexed>False</IsFieldIndexed>
+      </RuntimeFieldDefinition>
+      <RuntimeFieldDefinition id="RuntimeFieldDefinition_49" guid="a4e4c72e-84c6-422c-9405-87216b7fe355" class="Soneta.Core.DbTuples.DbTupleFieldDefinition,Soneta.Core">
+        <Type>DbTuple</Type>
+        <Definition>DbTupleDefinition_4</Definition>
+        <Lp>2</Lp>
+        <Name>Kontrahent</Name>
+        <FieldType>Reference</FieldType>
+        <TypeInformation>Kontrahenci</TypeInformation>
+        <FldCaption />
+        <FldDescription />
+        <IsFieldIndexed>False</IsFieldIndexed>
+      </RuntimeFieldDefinition>
+      <RuntimeFieldDefinition id="RuntimeFieldDefinition_50" guid="5a7802b5-dff9-496e-b64d-9299ca09d6c5" class="Soneta.Core.DbTuples.DbTupleFieldDefinition,Soneta.Core">
+        <Type>DbTuple</Type>
+        <Definition>DbTupleDefinition_4</Definition>
+        <Lp>3</Lp>
+        <Name>DataDokumentu</Name>
+        <FieldType>Date</FieldType>
+        <TypeInformation />
+        <FldCaption />
+        <FldDescription />
+        <IsFieldIndexed>False</IsFieldIndexed>
+      </RuntimeFieldDefinition>
+      <RuntimeFieldDefinition id="RuntimeFieldDefinition_51" guid="14adb23b-ec0c-4c21-a7ea-714e8de48e49" class="Soneta.Core.DbTuples.DbTupleFieldDefinition,Soneta.Core">
+        <Type>DbTuple</Type>
+        <Definition>DbTupleDefinition_4</Definition>
+        <Lp>4</Lp>
+        <Name>DataEwidencji</Name>
+        <FieldType>Date</FieldType>
+        <TypeInformation />
+        <FldCaption />
+        <FldDescription />
+        <IsFieldIndexed>False</IsFieldIndexed>
+      </RuntimeFieldDefinition>
+      <RuntimeFieldDefinition id="RuntimeFieldDefinition_52" guid="8fdd4585-2bf6-4ee3-9fbb-e619e5104605" class="Soneta.Core.DbTuples.DbTupleFieldDefinition,Soneta.Core">
+        <Type>DbTuple</Type>
+        <Definition>DbTupleDefinition_4</Definition>
+        <Lp>5</Lp>
+        <Name>NumerObcy</Name>
+        <FieldType>String</FieldType>
+        <TypeInformation />
+        <FldCaption />
+        <FldDescription />
+        <IsFieldIndexed>False</IsFieldIndexed>
+      </RuntimeFieldDefinition>
+      <RuntimeFieldDefinition id="RuntimeFieldDefinition_53" guid="134bb847-e488-4b10-9c61-a63d81d9dc21" class="Soneta.Core.DbTuples.DbTupleFieldDefinition,Soneta.Core">
+        <Type>DbTuple</Type>
+        <Definition>DbTupleDefinition_4</Definition>
+        <Lp>6</Lp>
+        <Name>MPK</Name>
+        <FieldType>MultiReference</FieldType>
+        <TypeInformation>ElemSlownikow</TypeInformation>
+        <FldCaption />
+        <FldDescription />
+        <IsFieldIndexed>False</IsFieldIndexed>
+      </RuntimeFieldDefinition>
+      <RuntimeFieldDefinition id="RuntimeFieldDefinition_54" guid="dcfa81ad-af0f-4d7f-a013-b03a4c7715f1" class="Soneta.Core.DbTuples.DbTupleFieldDefinition,Soneta.Core">
+        <Type>DbTuple</Type>
+        <Definition>DbTupleDefinition_4</Definition>
+        <Lp>7</Lp>
+        <Name>Kwota</Name>
+        <FieldType>Currency</FieldType>
+        <TypeInformation />
+        <FldCaption />
+        <FldDescription />
+        <IsFieldIndexed>False</IsFieldIndexed>
+      </RuntimeFieldDefinition>
+    </Fields>
+  </DbTupleDefinition>
+    <DefinicjaSlownika id="DefinicjaSlownika_15" guid="687e682c-8270-46c4-8ed0-4377f517447a">
+     <Nazwa>MPK</Nazwa>
+    <tabele />
+    <Algorytm />
+    <Elementy />
+  </DefinicjaSlownika>
+
+  <ElemSlownika id="ElemSlownika_2" guid="23457edb-9fc2-4dd4-b58d-e05437d3f36a">
+    <Definicja>687e682c-8270-46c4-8ed0-4377f517447a</Definicja>
+    <Symbol>Kadry</Symbol>
+    <Nazwa>Kadry</Nazwa>
+    <Zablokowany>False</Zablokowany>
+    <Oddzial />
+  </ElemSlownika>
+  <ElemSlownika id="ElemSlownika_3" guid="d225cfaa-4209-49a8-9441-0b0a5e12d6f0">
+    <Definicja>687e682c-8270-46c4-8ed0-4377f517447a</Definicja>
+    <Symbol>Handel</Symbol>
+    <Nazwa>Handel</Nazwa>
+    <Zablokowany>False</Zablokowany>
+    <Oddzial />
+  </ElemSlownika>
+  <ElemSlownika id="ElemSlownika_4" guid="ff47a2d9-8f50-47d9-bcc1-801db867782b">
+    <Definicja>687e682c-8270-46c4-8ed0-4377f517447a</Definicja>
+    <Symbol>CRM</Symbol>
+    <Nazwa>CRM</Nazwa>
+    <Zablokowany>False</Zablokowany>
+    <Oddzial />
+  </ElemSlownika>
+<CfgNode id="CfgNode_1059" guid="d2e57947-da6f-475d-8c22-30d8b54a5a5c">
+    <Parent>00000000-9014-0002-0000-000000000000</Parent>
+    <Name>forms</Name>
+    <Type>Node</Type>
+    <Attributes />
+  </CfgNode>
+  <CfgNode id="CfgNode_1060" guid="fa9479df-4cbe-40a7-931c-8d6a562c7d66">
+    <Name>grid</Name>
+    <Parent>CfgNode_1059</Parent>
+    <Type>Node</Type>
+    <Attributes />
+  </CfgNode>
+  <CfgNode id="CfgNode_1061" guid="803e6047-75f9-46e9-b759-c10b593d0017">
+    <Name>soneta.business.db.wizard.wizarddefiniti</Name>
+    <Parent>CfgNode_1060</Parent>
+    <Type>Node</Type>
+    <Attributes />
+  </CfgNode>
+  <CfgNode id="CfgNode_1062" guid="9d0bbe4c-0c0c-4f0f-8192-426679eaf9c8">
+    <Name>- mpk dokumentu_pozycje mpk.gridform.xml</Name>
+    <Parent>CfgNode_1061</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1771">
+        <Node>CfgNode_1062</Node>
+        <Name />
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>efbbbf3c3f786d6c2076657273696f6e3d22312e302220656e636f64696e673d227574662d38223f3e0d0a3c44617461466f726d20786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612220786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733d22687474703a2f2f7777772e656e6f76612e706c2f736368656d612f666f726d2e787364223e0d0a20203c47726964204973546f6f6c62617256697369626c653d2274727565222045646974496e506c6163653d227472756522204e6577496e506c6163653d2274727565223e0d0a202020203c4669656c642043617074696f6e48746d6c3d22486f7374222057696474683d22313322204564697456616c75653d227b486f73747d2220466f6f7465723d224e6f6e6522202f3e0d0a202020203c4669656c642043617074696f6e48746d6c3d224b776f74614e6574746f222057696474683d22313422204564697456616c75653d227b46656174757265732e4b776f74614e6574746f7d2220466f6f7465723d224e6f6e6522202f3e0d0a202020203c4669656c642043617074696f6e48746d6c3d225a617477696572647a6f6e6f222057696474683d22323522204564697456616c75653d227b46656174757265732e5a617477696572647a6f6e6f7d2220466f6f7465723d224e6f6e6522202f3e0d0a202020203c44617461204e616d653d22616c6c6f7745646974496e506c616365222056616c75653d223122202f3e0d0a202020203c44617461204e616d653d226175746f436f6c6c6170736547726f7570222056616c75653d223022202f3e0d0a202020203c44617461204e616d653d2273746f7265417070656172616e6365222056616c75653d223022202f3e0d0a202020203c44617461204e616d653d2275736544656661756c74417070656172616e6365222056616c75653d223122202f3e0d0a202020203c44617461204e616d653d226368616e6765436f6c6f7572496e53656c6563746564222056616c75653d223122202f3e0d0a202020203c44617461204e616d653d2274656d706c617465223e0d0a2020202020203c42696e6172793e3737752f50466830636d46545a584a7059577870656d567949485a6c636e4e7062323439496a45754d4349675958427762476c6a5958527062323439496c5a705a5863695067304b4943413863484a766347567964486b67626d46745a543069493078686557393164465a6c636e4e70623234694943382b44516f6749447877636d39775a584a30655342755957316c50534a48636d393163464a766430686c6157646f6443492b4c5445384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a543069556d3933534756705a326830496a34744d54777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a575a584a3055324e7962327873566d6c7a61574a7062476c306553492b51585630627a777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a4f5957316c496a3548636d6c6b566d6c6c647a777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a575a584a3055324e796232787356476c77526d6c6c6247524f5957316c496941765067304b4943413863484a766347567964486b67626d46745a5430695132687062475248636d6c6b544756325a57784f5957316c496941765067304b4943413863484a766347567964486b67626d46745a54306952334a766458424762334a7459585169506e737766546f6757794e706257466e5a5631374d583067657a4a3950433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496b6c755a476c6a59585276636c64705a48526f496a34744d54777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a476158686c5a457870626d5658615752306143492b4d6a777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a50634852706232357a55484a70626e516949476c7a626e56736244306964484a315a53496761584e725a586b39496e5279645755695067304b4943416749447877636d39775a584a30655342755957316c50534a4665484268626d524262477848636d393163484d69506d5a6862484e6c50433977636d39775a584a306554344e4369416750433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496b4e7662485674626c4268626d5673556d3933534756705a326830496a34744d54777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a4962334a3655324e7962327873566d6c7a61574a7062476c306553492b51585630627a777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a47623239305a584a515957356c6245686c6157646f6443492b4c5445384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a543069556d39335532567759584a6864473979534756705a326830496a347750433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496c42795a585a705a586447615756735a453568625755694943382b44516f6749447877636d39775a584a30655342755957316c50534a435a584e30526d6c3054574634556d393351323931626e51695069307850433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496c5a705a5864445958423061573975496941765067304b4943413863484a766347567964486b67626d46745a543069516d39795a4756795533523562475569506b526c5a6d4631624851384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306953473979656c4e6a636d397362464e305a584169506a4d384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306955324e79623278735533523562475569506b7870646d56575a584a3055324e79623278734c43424d61585a6c53473979656c4e6a636d39736244777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a4762324e3163314a6c5933525464486c735a53492b5132567362455a765933567a50433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496b4e316333527662576c36595852706232354762334a74516d3931626d527a496a35414d537859505442414d53785a505442414d537858615752306144307751444573534756705a326830505441384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306952334a7664584247623239305a584a54614739335457396b5a53492b53476c6b5a47567550433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496b647962335677554746755a5778555a586830496941765067304b4943413863484a766347567964486b67626d46745a5430695247563059576c7356474669534756685a4756795447396a5958527062323469506c52766344777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a4d5a585a6c62456c755a4756756443492b4c5445384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306955336c755932687962323570656d5644624739755a584d69506e5279645755384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306955484a6c646d6c6c64307870626d5644623356756443492b4c5445384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306955484a6c646d6c6c64306c755a4756756443492b4c5445384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306951574e3061585a6c526d6c736447567952573568596d786c5a43492b64484a315a54777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a4259335270646d5647615778305a584a5464484a70626d63694943382b44516f6749447877636d39775a584a30655342755957316c50534a44623278316257357a496942706332746c6554306964484a315a534967646d467364575539496a4d695067304b4943416749447877636d39775a584a30655342755957316c50534a4a644756744d53496761584e756457787350534a30636e566c496942706332746c6554306964484a315a53492b44516f67494341674943413863484a766347567964486b67626d46745a54306951323973645731755257527064453568625755694943382b44516f67494341674943413863484a766347567964486b67626d46745a543069566d6c7a61574a735a556c755a475634496a347750433977636d39775a584a306554344e436941674943416749447877636d39775a584a30655342755957316c50534a5761584e70596d786c496a3530636e566c50433977636d39775a584a306554344e436941674943416749447877636d39775a584a30655342755957316c50534a58615752306143492b4d54417750433977636d39775a584a306554344e436941674943416749447877636d39775a584a30655342755957316c50534a556232397356476c77496a354962334e30436c4a6c613239795a43427762336470784956365957353550433977636d39775a584a306554344e436941674943416749447877636d39775a584a30655342755957316c50534a445958423061573975496a354962334e3050433977636d39775a584a306554344e436941674943416749447877636d39775a584a30655342755957316c50534a50634852706232357a5132397364573175496942706332353162477739496e52796457556949476c7a6132563550534a30636e566c496a344e436941674943416749434167504842796233426c636e52354947356862575539496b467362473933553239796443492b56484a315a54777663484a766347567964486b2b44516f6749434167494341384c3342796233426c636e52355067304b4943416749434167504842796233426c636e52354947356862575539496b5a705a57786b546d46745a53492b5347397a6444777663484a766347567964486b2b44516f67494341674943413863484a766347567964486b67626d46745a543069546d46745a53492b593239735347397a6444777663484a766347567964486b2b44516f674943416750433977636d39775a584a306554344e436941674943413863484a766347567964486b67626d46745a5430695358526c6254496949476c7a626e56736244306964484a315a53496761584e725a586b39496e5279645755695067304b4943416749434167504842796233426c636e52354947356862575539496b4e7662485674626b566b6158524f5957316c496941765067304b4943416749434167504842796233426c636e52354947356862575539496c5a7063326c696247564a626d526c6543492b4d54777663484a766347567964486b2b44516f67494341674943413863484a766347567964486b67626d46745a543069566d6c7a61574a735a53492b64484a315a54777663484a766347567964486b2b44516f67494341674943413863484a766347567964486b67626d46745a54306956326c6b64476769506a45774e7a777663484a766347567964486b2b44516f67494341674943413863484a766347567964486b67626d46745a54306956473976624652706343492b533364766447464f5a585230627a6f6757305a6c59585231636d567a4c6b743362335268546d563064473964436a777663484a766347567964486b2b44516f67494341674943413863484a766347567964486b67626d46745a5430695132467764476c766269492b533364766447464f5a585230627a777663484a766347567964486b2b44516f67494341674943413863484a766347567964486b67626d46745a543069543342306157397563304e76624856746269496761584e756457787350534a30636e566c496942706332746c6554306964484a315a53492b44516f67494341674943416749447877636d39775a584a30655342755957316c50534a426247787664314e76636e5169506c5279645755384c3342796233426c636e52355067304b494341674943416750433977636d39775a584a306554344e436941674943416749447877636d39775a584a30655342755957316c50534a47615756735a45356862575569506b5a6c59585231636d567a4c6b743362335268546d5630644738384c3342796233426c636e52355067304b4943416749434167504842796233426c636e52354947356862575539496b356862575569506d4e7662455a6c59585231636d567a4c6b743362335268546d5630644738384c3342796233426c636e52355067304b494341674944777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496b6c305a57307a496942706332353162477739496e52796457556949476c7a6132563550534a30636e566c496a344e436941674943416749447877636d39775a584a30655342755957316c50534a4462327831625735465a476c30546d46745a5349674c7a344e436941674943416749447877636d39775a584a30655342755957316c50534a5761584e70596d786c5357356b5a586769506a49384c3342796233426c636e52355067304b4943416749434167504842796233426c636e52354947356862575539496c5a7063326c6962475569506e5279645755384c3342796233426c636e52355067304b4943416749434167504842796233426c636e52354947356862575539496c64705a48526f496a34784f5449384c3342796233426c636e52355067304b4943416749434167504842796233426c636e52354947356862575539496c52766232785561584169506c7068644864705a584a6b656d3975627a6f6757305a6c59585231636d567a4c6c7068644864705a584a6b656d39756231304b50433977636d39775a584a306554344e436941674943416749447877636d39775a584a30655342755957316c50534a445958423061573975496a356159585233615756795a487076626d38384c3342796233426c636e52355067304b4943416749434167504842796233426c636e52354947356862575539496b397764476c76626e4e44623278316257346949476c7a626e56736244306964484a315a53496761584e725a586b39496e5279645755695067304b49434167494341674943413863484a766347567964486b67626d46745a543069515778736233645462334a30496a3555636e566c50433977636d39775a584a306554344e43694167494341674944777663484a766347567964486b2b44516f67494341674943413863484a766347567964486b67626d46745a543069526d6c6c6247524f5957316c496a35475a57463064584a6c6379356159585233615756795a487076626d38384c3342796233426c636e52355067304b4943416749434167504842796233426c636e52354947356862575539496b356862575569506d4e7662455a6c59585231636d567a4c6c7068644864705a584a6b656d3975627a777663484a766347567964486b2b44516f674943416750433977636d39775a584a306554344e4369416750433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496b356c64306c305a573153623364555a586830496941765067304b4943413863484a766347567964486b67626d46745a5430695532687664304a3164485276626b31765a475569506c4e6f6233644762334a4762324e316332566b513256736244777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a50634852706232357a5447463562335630496942706332353162477739496e52796457556949476c7a6132563550534a30636e566c496a344e436941674943413863484a766347567964486b67626d46745a54306951323973645731756379496761584e756457787350534a30636e566c496942706332746c6554306964484a315a53492b44516f67494341674943413863484a766347567964486b67626d46745a54306955335276636d564262477850634852706232357a496a3530636e566c50433977636d39775a584a306554344e43694167494341384c3342796233426c636e52355067304b4943416749447877636d39775a584a30655342755957316c50534a54644739795a5546736245397764476c76626e4d69506e5279645755384c3342796233426c636e52355067304b494341384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a543069543342306157397563305a706248526c6369496761584e756457787350534a30636e566c496942706332746c6554306964484a315a53492b44516f6749434167504842796233426c636e52354947356862575539496b467362473933526d6c73644756795257527064473979496a356d5957787a5a54777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496c567a5a55356c64304e316333527662555a706248526c636b5270595778765a79492b64484a315a54777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496b315356555a706248526c636b787063335244623356756443492b4d5441774d44777663484a766347567964486b2b44516f674944777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a50634852706232357a5247563059576c73496942706332353162477739496e52796457556949476c7a6132563550534a30636e566c496a344e436941674943413863484a766347567964486b67626d46745a54306952573568596d786c5247563059576c7356473976624652706343492b64484a315a54777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496c4e7459584a305247563059576c73525868775957356b516e5630644739755457396b5a53492b5157783359586c7a52573568596d786c5a44777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496b46736247393354323573655539755a5531686333526c636c4a7664305634634746755a47566b496a3530636e566c50433977636d39775a584a306554344e436941674943413863484a766347567964486b67626d46745a543069515778736233644665484268626d5246625842306555526c6447467062484d69506e5279645755384c3342796233426c636e52355067304b494341384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a543069543342306157397563314e6c6247566a64476c766269496761584e756457787350534a30636e566c496942706332746c6554306964484a315a53492b44516f6749434167504842796233426c636e52354947356862575539496b313162485270553256735a574e30496a3530636e566c50433977636d39775a584a306554344e4369416750433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496b397764476c76626e4e4f59585a705a32463061573975496942706332353162477739496e52796457556949476c7a6132563550534a30636e566c496a344e436941674943413863484a766347567964486b67626d46745a54306956584e6c5647466953325635496a356d5957787a5a54777663484a766347567964486b2b44516f674944777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a50634852706232357a566d6c6c6479496761584e756457787350534a30636e566c496942706332746c6554306964484a315a53492b44516f6749434167504842796233426c636e52354947356862575539496c4e6f62336448636d393163464268626d5673496a356d5957787a5a54777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496b567559574a735a55467763475668636d467559325646646d5675556d3933496a3530636e566c50433977636d39775a584a306554344e436941674943413863484a766347567964486b67626d46745a54306952573568596d786c515842775a5746795957356a5a55396b5a464a766479492b64484a315a54777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496b4631644739445957786a55484a6c646d6c6c64307870626d5644623356756443492b64484a315a54777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496b4e7662485674626b463164473958615752306143492b5a6d4673633255384c3342796233426c636e52355067304b4943416749447877636d39775a584a30655342755957316c50534a4f5a58644a64475674556d39335547397a6158527062323469506b4a76644852766254777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496c4e6f6233644461476c735a484a6c626b6c7552334a76645842515957356c6243492b64484a315a54777663484a766347567964486b2b44516f674944777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a50634852706232357a516d566f59585a706233496949476c7a626e56736244306964484a315a53496761584e725a586b39496e5279645755695067304b4943416749447877636d39775a584a30655342755957316c50534a4264585276554739776457786864475644623278316257357a496a356d5957787a5a54777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496b46316447394665484268626d524262477848636d393163484d69506e5279645755384c3342796233426c636e52355067304b494341384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a5430695247563059576c73534756705a326830496a347a4e5441384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306952334a76645842546457317459584a35496942706332746c6554306964484a315a534967646d467364575539496a41694943382b44516f384c316830636d46545a584a7059577870656d567950673d3d3c2f42696e6172793e0d0a202020203c2f446174613e0d0a202020203c44617461204e616d653d2266656174757265734d756c746947726f7570222056616c75653d223022202f3e0d0a202020203c44617461204e616d653d2266656174757265735375625472656547726f7570222056616c75653d223122202f3e0d0a202020203c44617461204e616d653d226c6f6361746f7246696c746572222056616c75653d2222202f3e0d0a202020203c44617461204e616d653d22757365446173685768656e4c6f636174696e67222056616c75653d2222202f3e0d0a20203c2f477269643e0d0a3c2f44617461466f726d3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_1063" guid="643dab7b-1ce9-42b6-93aa-a197bab4939c">
+    <Name>e dokumentu 1_mpk dokumentu.gridform.xml</Name>
+    <Parent>CfgNode_1061</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1772">
+        <Node>CfgNode_1063</Node>
+        <Name />
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>efbbbf3c3f786d6c2076657273696f6e3d22312e302220656e636f64696e673d227574662d38223f3e0d0a3c44617461466f726d20786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612220786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733d22687474703a2f2f7777772e656e6f76612e706c2f736368656d612f666f726d2e787364223e0d0a20203c47726964204973546f6f6c62617256697369626c653d2274727565222045646974496e506c6163653d227472756522204e6577496e506c6163653d2274727565223e0d0a202020203c4669656c642043617074696f6e48746d6c3d22486f7374222057696474683d22313322204564697456616c75653d227b486f73747d2220466f6f7465723d224e6f6e6522202f3e0d0a202020203c4669656c642043617074696f6e48746d6c3d224b776f74614e6574746f222057696474683d22313422204564697456616c75653d227b46656174757265732e4b776f74614e6574746f7d2220466f6f7465723d224e6f6e6522202f3e0d0a202020203c4669656c642043617074696f6e48746d6c3d225a617477696572647a6f6e6f222057696474683d22323522204564697456616c75653d227b46656174757265732e5a617477696572647a6f6e6f7d2220466f6f7465723d224e6f6e6522202f3e0d0a202020203c44617461204e616d653d22616c6c6f7745646974496e506c616365222056616c75653d223122202f3e0d0a202020203c44617461204e616d653d226175746f436f6c6c6170736547726f7570222056616c75653d223022202f3e0d0a202020203c44617461204e616d653d2273746f7265417070656172616e6365222056616c75653d223022202f3e0d0a202020203c44617461204e616d653d2275736544656661756c74417070656172616e6365222056616c75653d223122202f3e0d0a202020203c44617461204e616d653d226368616e6765436f6c6f7572496e53656c6563746564222056616c75653d223122202f3e0d0a202020203c44617461204e616d653d2274656d706c617465223e0d0a2020202020203c42696e6172793e3737752f50466830636d46545a584a7059577870656d567949485a6c636e4e7062323439496a45754d4349675958427762476c6a5958527062323439496c5a705a5863695067304b4943413863484a766347567964486b67626d46745a543069493078686557393164465a6c636e4e70623234694943382b44516f6749447877636d39775a584a30655342755957316c50534a48636d393163464a766430686c6157646f6443492b4c5445384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a543069556d3933534756705a326830496a34744d54777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a575a584a3055324e7962327873566d6c7a61574a7062476c306553492b51585630627a777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a4f5957316c496a3548636d6c6b566d6c6c647a777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a575a584a3055324e796232787356476c77526d6c6c6247524f5957316c496941765067304b4943413863484a766347567964486b67626d46745a5430695132687062475248636d6c6b544756325a57784f5957316c496941765067304b4943413863484a766347567964486b67626d46745a54306952334a766458424762334a7459585169506e737766546f6757794e706257466e5a5631374d583067657a4a3950433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496b6c755a476c6a59585276636c64705a48526f496a34744d54777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a476158686c5a457870626d5658615752306143492b4d6a777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a50634852706232357a55484a70626e516949476c7a626e56736244306964484a315a53496761584e725a586b39496e5279645755695067304b4943416749447877636d39775a584a30655342755957316c50534a4665484268626d524262477848636d393163484d69506d5a6862484e6c50433977636d39775a584a306554344e4369416750433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496b4e7662485674626c4268626d5673556d3933534756705a326830496a34744d54777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a4962334a3655324e7962327873566d6c7a61574a7062476c306553492b51585630627a777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a47623239305a584a515957356c6245686c6157646f6443492b4c5445384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a543069556d39335532567759584a6864473979534756705a326830496a347750433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496c42795a585a705a586447615756735a453568625755694943382b44516f6749447877636d39775a584a30655342755957316c50534a435a584e30526d6c3054574634556d393351323931626e51695069307850433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496c5a705a5864445958423061573975496941765067304b4943413863484a766347567964486b67626d46745a543069516d39795a4756795533523562475569506b526c5a6d4631624851384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306953473979656c4e6a636d397362464e305a584169506a4d384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306955324e79623278735533523562475569506b7870646d56575a584a3055324e79623278734c43424d61585a6c53473979656c4e6a636d39736244777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a4762324e3163314a6c5933525464486c735a53492b5132567362455a765933567a50433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496b4e316333527662576c36595852706232354762334a74516d3931626d527a496a35414d537859505442414d53785a505442414d537858615752306144307751444573534756705a326830505441384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306952334a7664584247623239305a584a54614739335457396b5a53492b53476c6b5a47567550433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496b647962335677554746755a5778555a586830496941765067304b4943413863484a766347567964486b67626d46745a5430695247563059576c7356474669534756685a4756795447396a5958527062323469506c52766344777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a4d5a585a6c62456c755a4756756443492b4c5445384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306955336c755932687962323570656d5644624739755a584d69506e5279645755384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306955484a6c646d6c6c64307870626d5644623356756443492b4c5445384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306955484a6c646d6c6c64306c755a4756756443492b4c5445384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306951574e3061585a6c526d6c736447567952573568596d786c5a43492b64484a315a54777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a4259335270646d5647615778305a584a5464484a70626d63694943382b44516f6749447877636d39775a584a30655342755957316c50534a44623278316257357a496942706332746c6554306964484a315a534967646d467364575539496a4d695067304b4943416749447877636d39775a584a30655342755957316c50534a4a644756744d53496761584e756457787350534a30636e566c496942706332746c6554306964484a315a53492b44516f67494341674943413863484a766347567964486b67626d46745a54306951323973645731755257527064453568625755694943382b44516f67494341674943413863484a766347567964486b67626d46745a543069566d6c7a61574a735a556c755a475634496a347750433977636d39775a584a306554344e436941674943416749447877636d39775a584a30655342755957316c50534a5761584e70596d786c496a3530636e566c50433977636d39775a584a306554344e436941674943416749447877636d39775a584a30655342755957316c50534a58615752306143492b4d54417750433977636d39775a584a306554344e436941674943416749447877636d39775a584a30655342755957316c50534a556232397356476c77496a354962334e30436c4a6c613239795a43427762336470784956365957353550433977636d39775a584a306554344e436941674943416749447877636d39775a584a30655342755957316c50534a445958423061573975496a354962334e3050433977636d39775a584a306554344e436941674943416749447877636d39775a584a30655342755957316c50534a50634852706232357a5132397364573175496942706332353162477739496e52796457556949476c7a6132563550534a30636e566c496a344e436941674943416749434167504842796233426c636e52354947356862575539496b467362473933553239796443492b56484a315a54777663484a766347567964486b2b44516f6749434167494341384c3342796233426c636e52355067304b4943416749434167504842796233426c636e52354947356862575539496b5a705a57786b546d46745a53492b5347397a6444777663484a766347567964486b2b44516f67494341674943413863484a766347567964486b67626d46745a543069546d46745a53492b593239735347397a6444777663484a766347567964486b2b44516f674943416750433977636d39775a584a306554344e436941674943413863484a766347567964486b67626d46745a5430695358526c6254496949476c7a626e56736244306964484a315a53496761584e725a586b39496e5279645755695067304b4943416749434167504842796233426c636e52354947356862575539496b4e7662485674626b566b6158524f5957316c496941765067304b4943416749434167504842796233426c636e52354947356862575539496c5a7063326c696247564a626d526c6543492b4d54777663484a766347567964486b2b44516f67494341674943413863484a766347567964486b67626d46745a543069566d6c7a61574a735a53492b64484a315a54777663484a766347567964486b2b44516f67494341674943413863484a766347567964486b67626d46745a54306956326c6b64476769506a45774e7a777663484a766347567964486b2b44516f67494341674943413863484a766347567964486b67626d46745a54306956473976624652706343492b533364766447464f5a585230627a6f6757305a6c59585231636d567a4c6b743362335268546d563064473964436a777663484a766347567964486b2b44516f67494341674943413863484a766347567964486b67626d46745a5430695132467764476c766269492b533364766447464f5a585230627a777663484a766347567964486b2b44516f67494341674943413863484a766347567964486b67626d46745a543069543342306157397563304e76624856746269496761584e756457787350534a30636e566c496942706332746c6554306964484a315a53492b44516f67494341674943416749447877636d39775a584a30655342755957316c50534a426247787664314e76636e5169506c5279645755384c3342796233426c636e52355067304b494341674943416750433977636d39775a584a306554344e436941674943416749447877636d39775a584a30655342755957316c50534a47615756735a45356862575569506b5a6c59585231636d567a4c6b743362335268546d5630644738384c3342796233426c636e52355067304b4943416749434167504842796233426c636e52354947356862575539496b356862575569506d4e7662455a6c59585231636d567a4c6b743362335268546d5630644738384c3342796233426c636e52355067304b494341674944777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496b6c305a57307a496942706332353162477739496e52796457556949476c7a6132563550534a30636e566c496a344e436941674943416749447877636d39775a584a30655342755957316c50534a4462327831625735465a476c30546d46745a5349674c7a344e436941674943416749447877636d39775a584a30655342755957316c50534a5761584e70596d786c5357356b5a586769506a49384c3342796233426c636e52355067304b4943416749434167504842796233426c636e52354947356862575539496c5a7063326c6962475569506e5279645755384c3342796233426c636e52355067304b4943416749434167504842796233426c636e52354947356862575539496c64705a48526f496a34784f5449384c3342796233426c636e52355067304b4943416749434167504842796233426c636e52354947356862575539496c52766232785561584169506c7068644864705a584a6b656d3975627a6f6757305a6c59585231636d567a4c6c7068644864705a584a6b656d39756231304b50433977636d39775a584a306554344e436941674943416749447877636d39775a584a30655342755957316c50534a445958423061573975496a356159585233615756795a487076626d38384c3342796233426c636e52355067304b4943416749434167504842796233426c636e52354947356862575539496b397764476c76626e4e44623278316257346949476c7a626e56736244306964484a315a53496761584e725a586b39496e5279645755695067304b49434167494341674943413863484a766347567964486b67626d46745a543069515778736233645462334a30496a3555636e566c50433977636d39775a584a306554344e43694167494341674944777663484a766347567964486b2b44516f67494341674943413863484a766347567964486b67626d46745a543069526d6c6c6247524f5957316c496a35475a57463064584a6c6379356159585233615756795a487076626d38384c3342796233426c636e52355067304b4943416749434167504842796233426c636e52354947356862575539496b356862575569506d4e7662455a6c59585231636d567a4c6c7068644864705a584a6b656d3975627a777663484a766347567964486b2b44516f674943416750433977636d39775a584a306554344e4369416750433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496b356c64306c305a573153623364555a586830496941765067304b4943413863484a766347567964486b67626d46745a5430695532687664304a3164485276626b31765a475569506c4e6f6233644762334a4762324e316332566b513256736244777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a50634852706232357a5447463562335630496942706332353162477739496e52796457556949476c7a6132563550534a30636e566c496a344e436941674943413863484a766347567964486b67626d46745a54306951323973645731756379496761584e756457787350534a30636e566c496942706332746c6554306964484a315a53492b44516f67494341674943413863484a766347567964486b67626d46745a54306955335276636d564262477850634852706232357a496a3530636e566c50433977636d39775a584a306554344e43694167494341384c3342796233426c636e52355067304b4943416749447877636d39775a584a30655342755957316c50534a54644739795a5546736245397764476c76626e4d69506e5279645755384c3342796233426c636e52355067304b494341384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a543069543342306157397563305a706248526c6369496761584e756457787350534a30636e566c496942706332746c6554306964484a315a53492b44516f6749434167504842796233426c636e52354947356862575539496b467362473933526d6c73644756795257527064473979496a356d5957787a5a54777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496c567a5a55356c64304e316333527662555a706248526c636b5270595778765a79492b64484a315a54777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496b315356555a706248526c636b787063335244623356756443492b4d5441774d44777663484a766347567964486b2b44516f674944777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a50634852706232357a5247563059576c73496942706332353162477739496e52796457556949476c7a6132563550534a30636e566c496a344e436941674943413863484a766347567964486b67626d46745a54306952573568596d786c5247563059576c7356473976624652706343492b64484a315a54777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496c4e7459584a305247563059576c73525868775957356b516e5630644739755457396b5a53492b5157783359586c7a52573568596d786c5a44777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496b46736247393354323573655539755a5531686333526c636c4a7664305634634746755a47566b496a3530636e566c50433977636d39775a584a306554344e436941674943413863484a766347567964486b67626d46745a543069515778736233644665484268626d5246625842306555526c6447467062484d69506e5279645755384c3342796233426c636e52355067304b494341384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a543069543342306157397563314e6c6247566a64476c766269496761584e756457787350534a30636e566c496942706332746c6554306964484a315a53492b44516f6749434167504842796233426c636e52354947356862575539496b313162485270553256735a574e30496a3530636e566c50433977636d39775a584a306554344e4369416750433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496b397764476c76626e4e4f59585a705a32463061573975496942706332353162477739496e52796457556949476c7a6132563550534a30636e566c496a344e436941674943413863484a766347567964486b67626d46745a54306956584e6c5647466953325635496a356d5957787a5a54777663484a766347567964486b2b44516f674944777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a50634852706232357a566d6c6c6479496761584e756457787350534a30636e566c496942706332746c6554306964484a315a53492b44516f6749434167504842796233426c636e52354947356862575539496c4e6f62336448636d393163464268626d5673496a356d5957787a5a54777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496b567559574a735a55467763475668636d467559325646646d5675556d3933496a3530636e566c50433977636d39775a584a306554344e436941674943413863484a766347567964486b67626d46745a54306952573568596d786c515842775a5746795957356a5a55396b5a464a766479492b64484a315a54777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496b4631644739445957786a55484a6c646d6c6c64307870626d5644623356756443492b64484a315a54777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496b4e7662485674626b463164473958615752306143492b5a6d4673633255384c3342796233426c636e52355067304b4943416749447877636d39775a584a30655342755957316c50534a4f5a58644a64475674556d39335547397a6158527062323469506b4a76644852766254777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496c4e6f6233644461476c735a484a6c626b6c7552334a76645842515957356c6243492b64484a315a54777663484a766347567964486b2b44516f674944777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a50634852706232357a516d566f59585a706233496949476c7a626e56736244306964484a315a53496761584e725a586b39496e5279645755695067304b4943416749447877636d39775a584a30655342755957316c50534a4264585276554739776457786864475644623278316257357a496a356d5957787a5a54777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496b46316447394665484268626d524262477848636d393163484d69506e5279645755384c3342796233426c636e52355067304b494341384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a5430695247563059576c73534756705a326830496a347a4e5441384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306952334a76645842546457317459584a35496942706332746c6554306964484a315a534967646d467364575539496a41694943382b44516f384c316830636d46545a584a7059577870656d567950673d3d3c2f42696e6172793e0d0a202020203c2f446174613e0d0a202020203c44617461204e616d653d2266656174757265734d756c746947726f7570222056616c75653d223022202f3e0d0a202020203c44617461204e616d653d2266656174757265735375625472656547726f7570222056616c75653d223122202f3e0d0a202020203c44617461204e616d653d226c6f6361746f7246696c746572222056616c75653d2222202f3e0d0a202020203c44617461204e616d653d22757365446173685768656e4c6f636174696e67222056616c75653d2222202f3e0d0a20203c2f477269643e0d0a3c2f44617461466f726d3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+  <CfgNode id="CfgNode_1064" guid="c3c1f9f3-312e-48cb-89a8-82d136bd5936">
+    <Name>e dokumentu 2_mpk dokumentu.gridform.xml</Name>
+    <Parent>CfgNode_1061</Parent>
+    <Type>Leaf</Type>
+    <Attributes>
+      <CfgAttribute id="CfgAttribute_1773">
+        <Node>CfgNode_1064</Node>
+        <Name />
+        <Type>_text</Type>
+        <StrValue />
+        <MemoValue>efbbbf3c3f786d6c2076657273696f6e3d22312e302220656e636f64696e673d227574662d38223f3e0d0a3c44617461466f726d20786d6c6e733a7873643d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612220786d6c6e733a7873693d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d612d696e7374616e63652220786d6c6e733d22687474703a2f2f7777772e656e6f76612e706c2f736368656d612f666f726d2e787364223e0d0a20203c47726964204973546f6f6c62617256697369626c653d2274727565222045646974496e506c6163653d227472756522204e6577496e506c6163653d2274727565223e0d0a202020203c4669656c642043617074696f6e48746d6c3d22486f7374222057696474683d22313322204564697456616c75653d227b486f73747d2220466f6f7465723d224e6f6e6522202f3e0d0a202020203c4669656c642043617074696f6e48746d6c3d224b776f74614e6574746f222057696474683d22313422204564697456616c75653d227b46656174757265732e4b776f74614e6574746f7d2220466f6f7465723d224e6f6e6522202f3e0d0a202020203c4669656c642043617074696f6e48746d6c3d225a617477696572647a6f6e6f222057696474683d22323522204564697456616c75653d227b46656174757265732e5a617477696572647a6f6e6f7d2220466f6f7465723d224e6f6e6522202f3e0d0a202020203c44617461204e616d653d22616c6c6f7745646974496e506c616365222056616c75653d223122202f3e0d0a202020203c44617461204e616d653d226175746f436f6c6c6170736547726f7570222056616c75653d223022202f3e0d0a202020203c44617461204e616d653d2273746f7265417070656172616e6365222056616c75653d223022202f3e0d0a202020203c44617461204e616d653d2275736544656661756c74417070656172616e6365222056616c75653d223122202f3e0d0a202020203c44617461204e616d653d226368616e6765436f6c6f7572496e53656c6563746564222056616c75653d223122202f3e0d0a202020203c44617461204e616d653d2274656d706c617465223e0d0a2020202020203c42696e6172793e3737752f50466830636d46545a584a7059577870656d567949485a6c636e4e7062323439496a45754d4349675958427762476c6a5958527062323439496c5a705a5863695067304b4943413863484a766347567964486b67626d46745a543069493078686557393164465a6c636e4e70623234694943382b44516f6749447877636d39775a584a30655342755957316c50534a48636d393163464a766430686c6157646f6443492b4c5445384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a543069556d3933534756705a326830496a34744d54777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a575a584a3055324e7962327873566d6c7a61574a7062476c306553492b51585630627a777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a4f5957316c496a3548636d6c6b566d6c6c647a777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a575a584a3055324e796232787356476c77526d6c6c6247524f5957316c496941765067304b4943413863484a766347567964486b67626d46745a5430695132687062475248636d6c6b544756325a57784f5957316c496941765067304b4943413863484a766347567964486b67626d46745a54306952334a766458424762334a7459585169506e737766546f6757794e706257466e5a5631374d583067657a4a3950433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496b6c755a476c6a59585276636c64705a48526f496a34744d54777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a476158686c5a457870626d5658615752306143492b4d6a777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a50634852706232357a55484a70626e516949476c7a626e56736244306964484a315a53496761584e725a586b39496e5279645755695067304b4943416749447877636d39775a584a30655342755957316c50534a4665484268626d524262477848636d393163484d69506d5a6862484e6c50433977636d39775a584a306554344e4369416750433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496b4e7662485674626c4268626d5673556d3933534756705a326830496a34744d54777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a4962334a3655324e7962327873566d6c7a61574a7062476c306553492b51585630627a777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a47623239305a584a515957356c6245686c6157646f6443492b4c5445384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a543069556d39335532567759584a6864473979534756705a326830496a347750433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496c42795a585a705a586447615756735a453568625755694943382b44516f6749447877636d39775a584a30655342755957316c50534a435a584e30526d6c3054574634556d393351323931626e51695069307850433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496c5a705a5864445958423061573975496941765067304b4943413863484a766347567964486b67626d46745a543069516d39795a4756795533523562475569506b526c5a6d4631624851384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306953473979656c4e6a636d397362464e305a584169506a4d384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306955324e79623278735533523562475569506b7870646d56575a584a3055324e79623278734c43424d61585a6c53473979656c4e6a636d39736244777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a4762324e3163314a6c5933525464486c735a53492b5132567362455a765933567a50433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496b4e316333527662576c36595852706232354762334a74516d3931626d527a496a35414d537859505442414d53785a505442414d537858615752306144307751444573534756705a326830505441384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306952334a7664584247623239305a584a54614739335457396b5a53492b53476c6b5a47567550433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496b647962335677554746755a5778555a586830496941765067304b4943413863484a766347567964486b67626d46745a5430695247563059576c7356474669534756685a4756795447396a5958527062323469506c52766344777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a4d5a585a6c62456c755a4756756443492b4c5445384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306955336c755932687962323570656d5644624739755a584d69506e5279645755384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306955484a6c646d6c6c64307870626d5644623356756443492b4c5445384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306955484a6c646d6c6c64306c755a4756756443492b4c5445384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306951574e3061585a6c526d6c736447567952573568596d786c5a43492b64484a315a54777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a4259335270646d5647615778305a584a5464484a70626d63694943382b44516f6749447877636d39775a584a30655342755957316c50534a44623278316257357a496942706332746c6554306964484a315a534967646d467364575539496a4d695067304b4943416749447877636d39775a584a30655342755957316c50534a4a644756744d53496761584e756457787350534a30636e566c496942706332746c6554306964484a315a53492b44516f67494341674943413863484a766347567964486b67626d46745a54306951323973645731755257527064453568625755694943382b44516f67494341674943413863484a766347567964486b67626d46745a543069566d6c7a61574a735a556c755a475634496a347750433977636d39775a584a306554344e436941674943416749447877636d39775a584a30655342755957316c50534a5761584e70596d786c496a3530636e566c50433977636d39775a584a306554344e436941674943416749447877636d39775a584a30655342755957316c50534a58615752306143492b4d54417750433977636d39775a584a306554344e436941674943416749447877636d39775a584a30655342755957316c50534a556232397356476c77496a354962334e30436c4a6c613239795a43427762336470784956365957353550433977636d39775a584a306554344e436941674943416749447877636d39775a584a30655342755957316c50534a445958423061573975496a354962334e3050433977636d39775a584a306554344e436941674943416749447877636d39775a584a30655342755957316c50534a50634852706232357a5132397364573175496942706332353162477739496e52796457556949476c7a6132563550534a30636e566c496a344e436941674943416749434167504842796233426c636e52354947356862575539496b467362473933553239796443492b56484a315a54777663484a766347567964486b2b44516f6749434167494341384c3342796233426c636e52355067304b4943416749434167504842796233426c636e52354947356862575539496b5a705a57786b546d46745a53492b5347397a6444777663484a766347567964486b2b44516f67494341674943413863484a766347567964486b67626d46745a543069546d46745a53492b593239735347397a6444777663484a766347567964486b2b44516f674943416750433977636d39775a584a306554344e436941674943413863484a766347567964486b67626d46745a5430695358526c6254496949476c7a626e56736244306964484a315a53496761584e725a586b39496e5279645755695067304b4943416749434167504842796233426c636e52354947356862575539496b4e7662485674626b566b6158524f5957316c496941765067304b4943416749434167504842796233426c636e52354947356862575539496c5a7063326c696247564a626d526c6543492b4d54777663484a766347567964486b2b44516f67494341674943413863484a766347567964486b67626d46745a543069566d6c7a61574a735a53492b64484a315a54777663484a766347567964486b2b44516f67494341674943413863484a766347567964486b67626d46745a54306956326c6b64476769506a45774e7a777663484a766347567964486b2b44516f67494341674943413863484a766347567964486b67626d46745a54306956473976624652706343492b533364766447464f5a585230627a6f6757305a6c59585231636d567a4c6b743362335268546d563064473964436a777663484a766347567964486b2b44516f67494341674943413863484a766347567964486b67626d46745a5430695132467764476c766269492b533364766447464f5a585230627a777663484a766347567964486b2b44516f67494341674943413863484a766347567964486b67626d46745a543069543342306157397563304e76624856746269496761584e756457787350534a30636e566c496942706332746c6554306964484a315a53492b44516f67494341674943416749447877636d39775a584a30655342755957316c50534a426247787664314e76636e5169506c5279645755384c3342796233426c636e52355067304b494341674943416750433977636d39775a584a306554344e436941674943416749447877636d39775a584a30655342755957316c50534a47615756735a45356862575569506b5a6c59585231636d567a4c6b743362335268546d5630644738384c3342796233426c636e52355067304b4943416749434167504842796233426c636e52354947356862575539496b356862575569506d4e7662455a6c59585231636d567a4c6b743362335268546d5630644738384c3342796233426c636e52355067304b494341674944777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496b6c305a57307a496942706332353162477739496e52796457556949476c7a6132563550534a30636e566c496a344e436941674943416749447877636d39775a584a30655342755957316c50534a4462327831625735465a476c30546d46745a5349674c7a344e436941674943416749447877636d39775a584a30655342755957316c50534a5761584e70596d786c5357356b5a586769506a49384c3342796233426c636e52355067304b4943416749434167504842796233426c636e52354947356862575539496c5a7063326c6962475569506e5279645755384c3342796233426c636e52355067304b4943416749434167504842796233426c636e52354947356862575539496c64705a48526f496a34784f5449384c3342796233426c636e52355067304b4943416749434167504842796233426c636e52354947356862575539496c52766232785561584169506c7068644864705a584a6b656d3975627a6f6757305a6c59585231636d567a4c6c7068644864705a584a6b656d39756231304b50433977636d39775a584a306554344e436941674943416749447877636d39775a584a30655342755957316c50534a445958423061573975496a356159585233615756795a487076626d38384c3342796233426c636e52355067304b4943416749434167504842796233426c636e52354947356862575539496b397764476c76626e4e44623278316257346949476c7a626e56736244306964484a315a53496761584e725a586b39496e5279645755695067304b49434167494341674943413863484a766347567964486b67626d46745a543069515778736233645462334a30496a3555636e566c50433977636d39775a584a306554344e43694167494341674944777663484a766347567964486b2b44516f67494341674943413863484a766347567964486b67626d46745a543069526d6c6c6247524f5957316c496a35475a57463064584a6c6379356159585233615756795a487076626d38384c3342796233426c636e52355067304b4943416749434167504842796233426c636e52354947356862575539496b356862575569506d4e7662455a6c59585231636d567a4c6c7068644864705a584a6b656d3975627a777663484a766347567964486b2b44516f674943416750433977636d39775a584a306554344e4369416750433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496b356c64306c305a573153623364555a586830496941765067304b4943413863484a766347567964486b67626d46745a5430695532687664304a3164485276626b31765a475569506c4e6f6233644762334a4762324e316332566b513256736244777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a50634852706232357a5447463562335630496942706332353162477739496e52796457556949476c7a6132563550534a30636e566c496a344e436941674943413863484a766347567964486b67626d46745a54306951323973645731756379496761584e756457787350534a30636e566c496942706332746c6554306964484a315a53492b44516f67494341674943413863484a766347567964486b67626d46745a54306955335276636d564262477850634852706232357a496a3530636e566c50433977636d39775a584a306554344e43694167494341384c3342796233426c636e52355067304b4943416749447877636d39775a584a30655342755957316c50534a54644739795a5546736245397764476c76626e4d69506e5279645755384c3342796233426c636e52355067304b494341384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a543069543342306157397563305a706248526c6369496761584e756457787350534a30636e566c496942706332746c6554306964484a315a53492b44516f6749434167504842796233426c636e52354947356862575539496b467362473933526d6c73644756795257527064473979496a356d5957787a5a54777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496c567a5a55356c64304e316333527662555a706248526c636b5270595778765a79492b64484a315a54777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496b315356555a706248526c636b787063335244623356756443492b4d5441774d44777663484a766347567964486b2b44516f674944777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a50634852706232357a5247563059576c73496942706332353162477739496e52796457556949476c7a6132563550534a30636e566c496a344e436941674943413863484a766347567964486b67626d46745a54306952573568596d786c5247563059576c7356473976624652706343492b64484a315a54777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496c4e7459584a305247563059576c73525868775957356b516e5630644739755457396b5a53492b5157783359586c7a52573568596d786c5a44777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496b46736247393354323573655539755a5531686333526c636c4a7664305634634746755a47566b496a3530636e566c50433977636d39775a584a306554344e436941674943413863484a766347567964486b67626d46745a543069515778736233644665484268626d5246625842306555526c6447467062484d69506e5279645755384c3342796233426c636e52355067304b494341384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a543069543342306157397563314e6c6247566a64476c766269496761584e756457787350534a30636e566c496942706332746c6554306964484a315a53492b44516f6749434167504842796233426c636e52354947356862575539496b313162485270553256735a574e30496a3530636e566c50433977636d39775a584a306554344e4369416750433977636d39775a584a306554344e43694167504842796233426c636e52354947356862575539496b397764476c76626e4e4f59585a705a32463061573975496942706332353162477739496e52796457556949476c7a6132563550534a30636e566c496a344e436941674943413863484a766347567964486b67626d46745a54306956584e6c5647466953325635496a356d5957787a5a54777663484a766347567964486b2b44516f674944777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a50634852706232357a566d6c6c6479496761584e756457787350534a30636e566c496942706332746c6554306964484a315a53492b44516f6749434167504842796233426c636e52354947356862575539496c4e6f62336448636d393163464268626d5673496a356d5957787a5a54777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496b567559574a735a55467763475668636d467559325646646d5675556d3933496a3530636e566c50433977636d39775a584a306554344e436941674943413863484a766347567964486b67626d46745a54306952573568596d786c515842775a5746795957356a5a55396b5a464a766479492b64484a315a54777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496b4631644739445957786a55484a6c646d6c6c64307870626d5644623356756443492b64484a315a54777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496b4e7662485674626b463164473958615752306143492b5a6d4673633255384c3342796233426c636e52355067304b4943416749447877636d39775a584a30655342755957316c50534a4f5a58644a64475674556d39335547397a6158527062323469506b4a76644852766254777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496c4e6f6233644461476c735a484a6c626b6c7552334a76645842515957356c6243492b64484a315a54777663484a766347567964486b2b44516f674944777663484a766347567964486b2b44516f6749447877636d39775a584a30655342755957316c50534a50634852706232357a516d566f59585a706233496949476c7a626e56736244306964484a315a53496761584e725a586b39496e5279645755695067304b4943416749447877636d39775a584a30655342755957316c50534a4264585276554739776457786864475644623278316257357a496a356d5957787a5a54777663484a766347567964486b2b44516f6749434167504842796233426c636e52354947356862575539496b46316447394665484268626d524262477848636d393163484d69506e5279645755384c3342796233426c636e52355067304b494341384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a5430695247563059576c73534756705a326830496a347a4e5441384c3342796233426c636e52355067304b4943413863484a766347567964486b67626d46745a54306952334a76645842546457317459584a35496942706332746c6554306964484a315a534967646d467364575539496a41694943382b44516f384c316830636d46545a584a7059577870656d567950673d3d3c2f42696e6172793e0d0a202020203c2f446174613e0d0a202020203c44617461204e616d653d2266656174757265734d756c746947726f7570222056616c75653d223022202f3e0d0a202020203c44617461204e616d653d2266656174757265735375625472656547726f7570222056616c75653d223122202f3e0d0a202020203c44617461204e616d653d226c6f6361746f7246696c746572222056616c75653d2222202f3e0d0a202020203c44617461204e616d653d22757365446173685768656e4c6f636174696e67222056616c75653d2222202f3e0d0a20203c2f477269643e0d0a3c2f44617461466f726d3e</MemoValue>
+      </CfgAttribute>
+    </Attributes>
+  </CfgNode>
+
+  <!--Administrator-->
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0001-000000000000</Entitle>
+    <Source>DbTupleDefinition:3b16a8b0-55f0-4c97-be28-ddbe2b428e40</Source>
+  </Right>
+
+  <!--enovaNet-->
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000000</Entitle>
+    <Source>DbTupleDefinition:3b16a8b0-55f0-4c97-be28-ddbe2b428e40</Source>
+  </Right>
+
+  <!--enovaNetCRM-->
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000001</Entitle>
+    <Source>DbTupleDefinition:3b16a8b0-55f0-4c97-be28-ddbe2b428e40</Source>
+  </Right>
+
+  <!--enovaNetKadryPlace-->
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000002</Entitle>
+    <Source>DbTupleDefinition:3b16a8b0-55f0-4c97-be28-ddbe2b428e40</Source>
+  </Right>
+
+  <!--enovaNetPLNKierownik-->
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000003</Entitle>
+    <Source>DbTupleDefinition:3b16a8b0-55f0-4c97-be28-ddbe2b428e40</Source>
+  </Right>
+
+  <!--enovaNetPLNDyrektor-->
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000004</Entitle>
+    <Source>DbTupleDefinition:3b16a8b0-55f0-4c97-be28-ddbe2b428e40</Source>
+  </Right>
+
+  <!--enovaNetZAM-->
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000005</Entitle>
+    <Source>DbTupleDefinition:3b16a8b0-55f0-4c97-be28-ddbe2b428e40</Source>
+  </Right>
+
+  <!--enovaNetADM-->
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000006</Entitle>
+    <Source>DbTupleDefinition:3b16a8b0-55f0-4c97-be28-ddbe2b428e40</Source>
+  </Right>
+
+  <!--pulpitKlientBR-->
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000007</Entitle>
+    <Source>DbTupleDefinition:3b16a8b0-55f0-4c97-be28-ddbe2b428e40</Source>
+  </Right>
+
+  <!--enovaNetDST-->
+  <Right>
+    <Entitle>Entitle:00000000-0015-0001-0100-000000000010</Entitle>
+    <Source>DbTupleDefinition:3b16a8b0-55f0-4c97-be28-ddbe2b428e40</Source>
+  </Right>
+
+</session>

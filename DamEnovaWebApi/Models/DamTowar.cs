@@ -15,6 +15,8 @@ namespace DamEnovaWebApi.Models
         public string Jednostka { get; set; }
         public string PKWiU { get; set; }
 
+
+
         //CECHY
         public string T_TYP_SOP3 { get; set; }
         public int T_ID_SOP3 { get; set; }

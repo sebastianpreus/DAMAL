@@ -1,0 +1,2948 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session xmlns="http://www.soneta.pl/schema/business">
+  <WFDefinition id="WFDefinition_1" guid="00000000-0016-0004-0004-00000000000d">
+    <Symbol>ZP</Symbol>
+    <Name>Zatrudnianie pracownika</Name>
+    <Numerator>
+      <Wzor>WorkflowDefinition.Symbol/DateFrom.Year:4/DateFrom.Month:2/*</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numerator>
+    <Description />
+    <SingleWorkflowInstance>True</SingleWorkflowInstance>
+    <EditType>Advanced</EditType>
+    <Locked>False</Locked>
+    <IsDeployed>True</IsDeployed>
+  </WFDefinition>
+  <WizardDefinition id="WizardDefinition_12" guid="00000000-0015-0004-0024-00000000000d">
+    <Name>ZP - Dane kadrowe podstawowe</Name>
+    <Description>Dane kadrowe podstawowe</Description>
+    <Locked>False</Locked>
+    <ParentType>PracHistorie</ParentType>
+    <Algorithm>True</Algorithm>
+    <Code>#region CreateSteps
+
+public override WizardStepDefinition[] CreateSteps() {
+	Context[typeof(Soneta.Kadry.Pracownik.UI)] = Soneta.Kadry.Pracownik.UI.Kadry;
+	return Definition.Steps.ToArray&lt;WizardStepDefinition&gt;();
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	Context[typeof(Soneta.Kadry.Pracownik.UI)] = Soneta.Kadry.Pracownik.UI.Kadry;
+	Context.Set((Soneta.Kadry.PracHistoria) ((Soneta.Kadry.Pracownik)Context[typeof(Soneta.Kadry.Pracownik)]).Last);
+/*
+	try {
+		PracHistoria ph = (PracHistoria)Context[typeof(PracHistoria)];
+	}
+	catch {
+		PracownikFirmy pracownik = new PracownikFirmy();
+		using (ITransaction IT = Context.Session.Logout(true)) {
+			Module.Pracownicy.AddRow(pracownik);
+			IT.Commit();
+		}
+		Context[typeof(Pracownik)] = pracownik;
+		return pracownik.Last;
+	}
+	
+	*/
+	return null;
+}
+
+#endregion
+
+#region IsEnable
+
+public override bool IsEnable() {
+	return true;
+}
+
+#endregion
+
+#region BeforeSaveAndFinish
+
+public override void BeforeSaveAndFinish() {
+}
+
+#endregion
+
+#region AfterSaveAndFinish
+
+public override void AfterSaveAndFinish() {
+}
+
+#endregion
+
+#region ForceUnloockParent
+
+public override bool ForceUnloockParent(Soneta.Business.Db.Task task) {
+	return false;
+}
+
+#endregion</Code>
+    <Lp>12</Lp>
+    <Steps>
+      <WizardStepDefinition id="WizardStepDefinition_66" guid="9938878a-e62e-4c09-bc57-d0c092a83750">
+        <Name>Ogólne</Name>
+        <Lp>1</Lp>
+        <Description>Ogólne</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_12</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>PracHistoria.PracownikOgolne.pageform.xml</Page>
+        <PageDesc>Kadry/Ogólne</PageDesc>
+        <DefinedPageXML>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+      &lt;ArrayOfPropertyItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+      &lt;PropertyItem&gt;
+      &lt;Index&gt;0&lt;/Index&gt;
+      &lt;Title&gt;ImieDrugie&lt;/Title&gt;
+      &lt;Name&gt;ImieDrugie&lt;/Name&gt;
+      &lt;PromptWidth&gt;0&lt;/PromptWidth&gt;
+      &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+      &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+      &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+      &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+      &lt;PostBack&gt;false&lt;/PostBack&gt;
+      &lt;TextDivider /&gt;
+      &lt;/PropertyItem&gt;
+      &lt;PropertyItem&gt;
+      &lt;Index&gt;1&lt;/Index&gt;
+      &lt;Title&gt;Imie&lt;/Title&gt;
+      &lt;Name&gt;Imie&lt;/Name&gt;
+      &lt;PromptWidth&gt;0&lt;/PromptWidth&gt;
+      &lt;ControlWidth&gt;0&lt;/ControlWidth&gt;
+      &lt;ReadOnly&gt;false&lt;/ReadOnly&gt;
+      &lt;ControlHeight&gt;0&lt;/ControlHeight&gt;
+      &lt;WithPrev&gt;false&lt;/WithPrev&gt;
+      &lt;PostBack&gt;false&lt;/PostBack&gt;
+      &lt;TextDivider /&gt;
+      &lt;/PropertyItem&gt;
+      &lt;/ArrayOfPropertyItem&gt;
+    </DefinedPageXML>
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+	return null;
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType>PracHistorie</ParentType>
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_67" guid="d0b8552f-199f-44c5-b4c6-7e16b145aba4">
+        <Name>Dane podatkowe</Name>
+        <Lp>2</Lp>
+        <Description>Dane podatkowe</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_12</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>Soneta.Kadry.UI.Kadry.UI.PracHistoria.PracownikPit.pageform.xml</Page>
+        <PageDesc>Kadry/Dane podatkowe</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_68" guid="73a51b69-486e-4a10-b34e-426a29acaa34">
+        <Name>Dane ubezpieczeniowe</Name>
+        <Lp>3</Lp>
+        <Description>Dane ubezpieczeniowe</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_12</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>Soneta.Kadry.UI.Kadry.UI.PracHistoria.PracownikUbezpieczenie.pageform.xml</Page>
+        <PageDesc>Kadry/Dane ubezpieczeniowe</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_69" guid="0cb919c0-6f53-42b1-b0dd-8c3329621a1e">
+        <Name>Informacja PFRON</Name>
+        <Lp>4</Lp>
+        <Description>Informacja PFRON</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_12</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>Soneta.Kadry.UI.Kadry.UI.PracHistoria.PracownikPFRON.pageform.xml</Page>
+        <PageDesc>Kadry/Informacje PFRON</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_70" guid="50bc04b6-ab4a-4417-9a34-5ca88cd4f1d4">
+        <Name>Podstawa składek FP i FGŚP</Name>
+        <Lp>5</Lp>
+        <Description>Podstawa składek FP i FGŚP</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_12</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>Soneta.Kadry.UI.Kadry.UI.PracHistoria.PracownikSkladkiFP.pageform.xml</Page>
+        <PageDesc>Kadry/Podst. składek FP i FGŚP</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_71" guid="9b7ba728-3c60-4dd1-a1b8-8c424398bd31">
+        <Name>Podstawa składek ZUS</Name>
+        <Lp>6</Lp>
+        <Description>Podstawa składek ZUS</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_12</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>Soneta.Kadry.UI.Kadry.UI.PracHistoria.PracownikSkladkiZUS.pageform.xml</Page>
+        <PageDesc>Kadry/Podst. składek ZUS</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_72" guid="c598831e-8aa2-4294-a339-f756d2f05a9f">
+        <Name>Dostęp WWW</Name>
+        <Lp>7</Lp>
+        <Description>Dostęp WWW</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_12</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>Soneta.Core.UI.EnovaNet.UI.PracHistoria.PracownikWeb.pageform.xml</Page>
+        <PageDesc>Kadry/Dostęp WWW</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_73" guid="dc260deb-35a0-47a8-98c7-a45f6a9f7187">
+        <Name>Historia zatrudnienia</Name>
+        <Lp>8</Lp>
+        <Description>Historia zatrudnienia</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_12</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>Soneta.Kadry.UI.Kadry.UI.PracHistoria.PracownikHistZatr.pageform.xml</Page>
+        <PageDesc>Kadry/Historia zatrudnienia</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_74" guid="78189e3e-530d-4e33-be3e-a4ba24075178">
+        <Name>Prawa dostępu</Name>
+        <Lp>9</Lp>
+        <Description>Prawa dostępu</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_12</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>Soneta.Kadry.UI.Kadry.UI.PracHistoria.PracownikPrawa.pageform.xml</Page>
+        <PageDesc>Kadry/Prawa dostępu</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_75" guid="850d09b9-2875-4fe0-8a6f-8fdd629569e8">
+        <Name>Rachunki bankowe</Name>
+        <Lp>10</Lp>
+        <Description>Rachunki bankowe</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_12</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>Soneta.Kadry.UI.Kadry.UI.PracHistoria.PracownikRachunki.pageform.xml</Page>
+        <PageDesc>Kadry/Rachunki bankowe</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_76" guid="9c93983e-688d-4983-87d7-3128eedf5a81">
+        <Name>Wykształcenie</Name>
+        <Lp>11</Lp>
+        <Description>Wykształcenie</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_12</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>Soneta.Kadry.UI.Kadry.UI.PracHistoria.PracownikWyksztalcenie.pageform.xml</Page>
+        <PageDesc>Kadry/Wykształcenie</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_77" guid="26b72771-3ce4-4dfb-be2f-4338353e5988">
+        <Name>Wydruk Kwestionariusz osobowy</Name>
+        <Lp>12</Lp>
+        <Description>Wydruk Kwestionariusz osobowy</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_12</WizardDefinition>
+        <StepType>Report</StepType>
+        <Page />
+        <PageDesc />
+        <DefinedPageXML />
+        <Report>Dokumenty/Kwestionariusz osobowy</Report>
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+    </Steps>
+  </WizardDefinition>
+  <WizardDefinition id="WizardDefinition_13" guid="00000000-0015-0004-0025-00000000000d">
+    <Name>ZP - Zatrudnienie pracownika</Name>
+    <Description>Zatrudnienie pracownika</Description>
+    <Locked>False</Locked>
+    <ParentType>PracHistorie</ParentType>
+    <Algorithm>True</Algorithm>
+    <Code>#region CreateSteps
+
+public override WizardStepDefinition[] CreateSteps() {
+	Context[typeof(Soneta.Kadry.Pracownik.UI)] = Soneta.Kadry.Pracownik.UI.Kadry;
+	return Definition.Steps.ToArray&lt;WizardStepDefinition&gt;();
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	Context[typeof(Soneta.Kadry.Pracownik.UI)] = Soneta.Kadry.Pracownik.UI.Kadry;
+	Context.Set((Soneta.Kadry.PracHistoria) ((Soneta.Kadry.Pracownik)Context[typeof(Soneta.Kadry.Pracownik)]).Last);
+
+	return null;
+}
+
+#endregion
+
+#region IsEnable
+
+public override bool IsEnable() {
+	return true;
+}
+
+#endregion
+
+#region BeforeSaveAndFinish
+
+public override void BeforeSaveAndFinish() {
+}
+
+#endregion
+
+#region AfterSaveAndFinish
+
+public override void AfterSaveAndFinish() {
+}
+
+#endregion
+
+#region ForceUnloockParent
+
+public override bool ForceUnloockParent(Soneta.Business.Db.Task task) {
+	return false;
+}
+
+#endregion</Code>
+    <Lp>13</Lp>
+    <Steps>
+      <WizardStepDefinition id="WizardStepDefinition_78" guid="88b8626e-b874-4ca6-9bf1-98b68b3db575">
+        <Name>Ogólne</Name>
+        <Lp>1</Lp>
+        <Description>Ogólne</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_13</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>Soneta.Kadry.UI.Kadry.UI.PracHistoria.EtatOgolne.pageform.xml</Page>
+        <PageDesc>Etat/Ogólne</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_79" guid="0e110105-03e3-421c-b31d-e20a6005f03b">
+        <Name>Akordy</Name>
+        <Lp>2</Lp>
+        <Description>Akordy</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_13</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>Soneta.Kadry.UI.Kadry.UI.PracHistoria.PracownikAkordy.pageform.xml</Page>
+        <PageDesc>Etat/Akordy</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_80" guid="44e55cc6-18bf-4314-960e-4d6458c68d31">
+        <Name>Dodatki</Name>
+        <Lp>3</Lp>
+        <Description>Dodatki</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_13</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>Soneta.Kadry.UI.Kadry.UI.PracHistoria.EtatDodatki.pageform.xml</Page>
+        <PageDesc>Etat/Dodatki</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_81" guid="0c3dc9be-444b-4d05-9395-09712083eedb">
+        <Name>Inne dane</Name>
+        <Lp>4</Lp>
+        <Description>Inne dane</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_13</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>Soneta.Kadry.UI.Kadry.UI.PracHistoria.EtatInne.pageform.xml</Page>
+        <PageDesc>Etat/Inne dane</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_82" guid="cb42814c-d74f-41c2-b4a4-aec9dc62b59d">
+        <Name>Świadczenia socjalne</Name>
+        <Lp>5</Lp>
+        <Description>Świadczenia socjalne</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_13</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>Soneta.Kadry.UI.Kadry.UI.PracHistoria.PracownikSwiadczenia.pageform.xml</Page>
+        <PageDesc>Kadry - pozostałe/Świadczenia socjalne</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_83" guid="f7fb78b7-b5b1-4c24-965f-8f4f39fd3dfa">
+        <Name>Limity nieobecności</Name>
+        <Lp>6</Lp>
+        <Description>Limity nieobecności</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_13</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>Soneta.Kadry.UI.Kalend.UI.PracHistoria.PracownikLimity.pageform.xml</Page>
+        <PageDesc>Kalendarz/Limity nieobecności</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+	return null;
+}
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+	return true;
+}
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+	return null;
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfActionAttributeListViewItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ActionAttributeListViewItem&gt;
+    &lt;WorkerType&gt;Soneta.Kalend.UI.PracownikLimityNaliczanieWorker, Soneta.KadryPlace.UI&lt;/WorkerType&gt;
+    &lt;MethodName&gt;DodajLimit&lt;/MethodName&gt;
+  &lt;/ActionAttributeListViewItem&gt;
+&lt;/ArrayOfActionAttributeListViewItem&gt;</WorkersTypes>
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_84" guid="1d077b81-e75d-4022-a940-7ca7838394b5">
+        <Name>Umowa o pracę</Name>
+        <Lp>7</Lp>
+        <Description>Umowa o pracę</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_13</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>Soneta.Kadry.UI.Kadry.UI.PracHistoria.EtatUmowaOPrace.pageform.xml</Page>
+        <PageDesc>Etat/Umowa o pracę</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_85" guid="7af4775d-67f4-4ae2-b2d8-581d2f00e13a">
+        <Name>Wydruk Umowa o pracę</Name>
+        <Lp>8</Lp>
+        <Description>Wydruk Umowa o pracę</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_13</WizardDefinition>
+        <StepType>Report</StepType>
+        <Page />
+        <PageDesc />
+        <DefinedPageXML />
+        <Report>Dokumenty/Umowa o pracę</Report>
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_86" guid="b805621c-d56f-435b-8e79-b022b790c518">
+        <Name>Wydruk Informacja o warunkach zatrudnienia</Name>
+        <Lp>9</Lp>
+        <Description>Wydruk Informacja o warunkach zatrudnienia</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_13</WizardDefinition>
+        <StepType>Report</StepType>
+        <Page />
+        <PageDesc />
+        <DefinedPageXML />
+        <Report>Dokumenty/Informacja o warunkach zatrudnienia</Report>
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+    </Steps>
+  </WizardDefinition>
+  <WizardDefinition id="WizardDefinition_14" guid="00000000-0015-0004-0026-00000000000d">
+    <Name>ZP - Zgłoszenie do ubezpieczenia</Name>
+    <Description>Zgłoszenie do ubezpieczenia</Description>
+    <Locked>False</Locked>
+    <ParentType>PracHistorie</ParentType>
+    <Algorithm>True</Algorithm>
+    <Code>#region CreateSteps
+
+public override WizardStepDefinition[] CreateSteps() {
+	Context[typeof(Soneta.Kadry.Pracownik.UI)] = Soneta.Kadry.Pracownik.UI.Kadry;
+	return Definition.Steps.ToArray&lt;WizardStepDefinition&gt;();
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	Context[typeof(Soneta.Kadry.Pracownik.UI)] = Soneta.Kadry.Pracownik.UI.Kadry;
+		Context.Set((Soneta.Kadry.PracHistoria) ((Soneta.Kadry.Pracownik)Context[typeof(Soneta.Kadry.Pracownik)]).Last);
+
+	return null;
+}
+
+#endregion
+
+#region IsEnable
+
+public override bool IsEnable() {
+	return true;
+}
+
+#endregion
+
+#region BeforeSaveAndFinish
+
+public override void BeforeSaveAndFinish() {
+}
+
+#endregion
+
+#region AfterSaveAndFinish
+
+public override void AfterSaveAndFinish() {
+}
+
+#endregion
+
+#region ForceUnloockParent
+
+public override bool ForceUnloockParent(Soneta.Business.Db.Task task) {
+	return false;
+}
+
+#endregion</Code>
+    <Lp>14</Lp>
+    <Steps>
+      <WizardStepDefinition id="WizardStepDefinition_87" guid="2e25779f-c5b5-4c0d-ab18-1b6db6613e4a">
+        <Name>Ubezpieczenia</Name>
+        <Lp>1</Lp>
+        <Description>Ubezpieczenia</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_14</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>Soneta.Kadry.UI.Kadry.UI.PracHistoria.EtatUbezpieczenia.pageform.xml</Page>
+        <PageDesc>Etat/Ubezpieczenia</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_88" guid="340895f8-fd05-403a-bd20-f164f12cdc0f">
+        <Name>Zgłoszeniowe ZUS</Name>
+        <Lp>2</Lp>
+        <Description>Zgłoszeniowe ZUS</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_14</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>Soneta.Deklaracje.UI.Kadry.UI.PracHistoria.PracownikDeklaracjeZUSZg.pageform.xml</Page>
+        <PageDesc>Deklaracje/Zgłoszeniowe ZUS</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+    </Steps>
+  </WizardDefinition>
+  <WizardDefinition id="WizardDefinition_15" guid="00000000-0015-0004-0027-00000000000d">
+    <Name>ZP - Badania lekarskie i szkolenia BHP</Name>
+    <Description>Badania lekarskie i szkolenia BHP</Description>
+    <Locked>False</Locked>
+    <ParentType>PracHistorie</ParentType>
+    <Algorithm>True</Algorithm>
+    <Code>#region CreateSteps
+
+public override WizardStepDefinition[] CreateSteps() {
+	Context[typeof(Soneta.Kadry.Pracownik.UI)] = Soneta.Kadry.Pracownik.UI.Kadry;
+	return Definition.Steps.ToArray&lt;WizardStepDefinition&gt;();
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	Context[typeof(Soneta.Kadry.Pracownik.UI)] = Soneta.Kadry.Pracownik.UI.Kadry;
+		Context.Set((Soneta.Kadry.PracHistoria) ((Soneta.Kadry.Pracownik)Context[typeof(Soneta.Kadry.Pracownik)]).Last);
+
+	return null;
+}
+
+#endregion
+
+#region IsEnable
+
+public override bool IsEnable() {
+	return true;
+}
+
+#endregion
+
+#region BeforeSaveAndFinish
+
+public override void BeforeSaveAndFinish() {
+}
+
+#endregion
+
+#region AfterSaveAndFinish
+
+public override void AfterSaveAndFinish() {
+}
+
+#endregion
+
+#region ForceUnloockParent
+
+public override bool ForceUnloockParent(Soneta.Business.Db.Task task) {
+	return false;
+}
+
+#endregion</Code>
+    <Lp>15</Lp>
+    <Steps>
+      <WizardStepDefinition id="WizardStepDefinition_94" guid="d523896e-fcff-4dee-8e07-2c50aa0c0908">
+        <Name>Pracownik</Name>
+        <Lp>1</Lp>
+        <Description />
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_15</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>PracHistoria.PracownikOgolne.pageform.xml</Page>
+        <PageDesc>Kadry/Ogólne</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+	return null;
+}
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+	return true;
+}
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+	return null;
+}
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+	return null;
+}
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>True</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_89" guid="38038ad3-77b7-45ea-b676-2cb3b2efecbd">
+        <Name>Badania lekarskie</Name>
+        <Lp>2</Lp>
+        <Description>Badania lekarskie</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_15</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>Soneta.Kadry.UI.Kadry.UI.PracHistoria.PracownikBadaniaLekarskie.pageform.xml</Page>
+        <PageDesc>Kadry - pozostałe/Badania lekarskie</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_90" guid="9a5d3b54-f198-47d8-b7a2-94fbe68ca709">
+        <Name>Wydruk Badania lekarskie wstępne</Name>
+        <Lp>3</Lp>
+        <Description>Wydruk Badania lekarskie wstępne</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_15</WizardDefinition>
+        <StepType>Report</StepType>
+        <Page />
+        <PageDesc />
+        <DefinedPageXML />
+        <Report>Dokumenty/Badania lekarskie/Wstępne</Report>
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_91" guid="d7b2898c-d44f-4cfe-8923-fc326131981f">
+        <Name>Wydruk Badania lekarskie kontrolne</Name>
+        <Lp>4</Lp>
+        <Description>Wydruk Badania lekarskie kontrolne</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_15</WizardDefinition>
+        <StepType>Report</StepType>
+        <Page />
+        <PageDesc />
+        <DefinedPageXML />
+        <Report>Dokumenty/Badania lekarskie/Kontrolne</Report>
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_92" guid="e94105d8-f4af-44ee-95e1-e0a901d452ff">
+        <Name>Wydruk Badania lekarskie okresowe</Name>
+        <Lp>5</Lp>
+        <Description>Wydruk Badania lekarskie okresowe</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_15</WizardDefinition>
+        <StepType>Report</StepType>
+        <Page />
+        <PageDesc />
+        <DefinedPageXML />
+        <Report>Dokumenty/Badania lekarskie/Okresowe</Report>
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+      <WizardStepDefinition id="WizardStepDefinition_93" guid="e9772a03-6f4b-4ffa-8818-5be52aa965e8">
+        <Name>Szkolenia BHP</Name>
+        <Lp>6</Lp>
+        <Description>Szkolenia BHP</Description>
+        <Locked>False</Locked>
+        <DescriptionText />
+        <WizardDefinition>WizardDefinition_15</WizardDefinition>
+        <StepType>Page</StepType>
+        <Page>Soneta.Kadry.UI.Kadry.UI.PracHistoria.PracownikSzkoleniaBHP.pageform.xml</Page>
+        <PageDesc>Kadry - pozostałe/Szkolenia BHP</PageDesc>
+        <DefinedPageXML />
+        <Report />
+        <Collection />
+        <Code>#region Accepted
+
+public override Exception Accepted() {
+      return null;
+      }
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible() {
+      return true;
+      }
+
+#endregion
+
+#region GetViewForListStep
+
+public override View GetViewForListStep() {
+      return null;
+      }
+
+#endregion
+
+#region GetRow
+
+protected override Row GetRow() {
+      return null;
+      }
+
+#endregion
+
+#region IsReadOnlyStep
+
+public override bool IsReadOnlyStep(bool valueFromProperty) {
+	return valueFromProperty;
+}
+
+#endregion</Code>
+        <Save>False</Save>
+        <ParentType />
+        <OperatorType>Current</OperatorType>
+        <Operator />
+        <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+        <IsReadOnlyStep>False</IsReadOnlyStep>
+        <WorkersTypes />
+        <RichEditStepInfo>&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN' &gt;&lt;%@ Register TagPrefix='ea' Namespace='Soneta.Web' Assembly='Soneta.Web' %&gt;&lt;%@ Register TagPrefix='eb' Namespace='Soneta.Core.Web' Assembly='Soneta.Core.Web' %&gt;&lt;%@ Page language='c#' AutoEventWireup='false' codePage='1200' %&gt;&lt;HTML&gt;   &lt;HEAD&gt;&lt;TITLE&gt;Krok kreatora&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;   &lt;FORM method='post' runat='server' ID='form'&gt;       &lt;ea:DataContext id='dataCtx' runat='server' TypeName='Soneta.Kadry.PracHistoria,Soneta.KadryPlace' RightMargin='20' LeftMargin='20' BottomMargin='20' TopMargin='20'&gt;&lt;/ea:DataContext&gt;   &lt;/FORM&gt;&lt;/BODY&gt;&lt;/HTML&gt;</RichEditStepInfo>
+        <ShowPdfPreview>False</ShowPdfPreview>
+      </WizardStepDefinition>
+    </Steps>
+  </WizardDefinition>
+  <OGSchema id="OGSchema_1" guid="00000000-0016-0005-0006-00000000000d">
+    <Name>ZP - WFWorkflow -&gt; Pracownicy</Name>
+    <Description />
+    <SourceType>WFWorkflows</SourceType>
+    <TargetType>Pracownicy</TargetType>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;PropertyMappings xmlns="http://www.enova.pl/schemas/OGPropertyMapping"&gt;&lt;PropertyMapping&gt;&lt;targetproperty&gt;Imie&lt;/targetproperty&gt;&lt;isrequired&gt;1&lt;/isrequired&gt;&lt;iscontextrequired&gt;0&lt;/iscontextrequired&gt;&lt;/PropertyMapping&gt;&lt;PropertyMapping&gt;&lt;targetproperty&gt;Kod&lt;/targetproperty&gt;&lt;isrequired&gt;1&lt;/isrequired&gt;&lt;iscontextrequired&gt;0&lt;/iscontextrequired&gt;&lt;/PropertyMapping&gt;&lt;PropertyMapping&gt;&lt;targetproperty&gt;Nazwisko&lt;/targetproperty&gt;&lt;isrequired&gt;1&lt;/isrequired&gt;&lt;iscontextrequired&gt;0&lt;/iscontextrequired&gt;&lt;/PropertyMapping&gt;&lt;/PropertyMappings&gt;</XML>
+    <Statement>#region InitTargetRow
+
+public override void InitTargetRow(object targetRow) {
+	base.InitTargetRow(targetRow);
+
+	Soneta.Kadry.Pracownik castedRow = targetRow as Soneta.Kadry.Pracownik;
+	if (castedRow != null) {
+
+		// Tutaj można inicjować właściwości instancji obiektu
+
+	}
+}
+
+#endregion
+
+#region InvokeConstructor
+
+public override object InvokeConstructor(System.Reflection.ConstructorInfo ci) {
+	object[] param = new object[0];
+
+	return ci.Invoke(param);
+}
+
+
+#endregion</Statement>
+    <CtorDesc>Soneta.Kadry.PracownikFirmy, Soneta.KadryPlace|</CtorDesc>
+  </OGSchema>
+  <TaskDefinition id="TaskDefinition_30" guid="a97a3556-eb75-45be-8f41-8a7bae42cde0">
+    <TableName>Pracownicy</TableName>
+    <Name>ZP - Zatrudnianie pracownika_Start_1</Name>
+    <FormatedName>Nowy pracownik</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>True</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_ZP__Zatrudnianie_pracownika_Start_1290148075 : TaskCalculatorPracownicy {
+
+public Task_ZP__Zatrudnianie_pracownika_Start_1290148075() { }
+public Task_ZP__Zatrudnianie_pracownika_Start_1290148075(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin overdue time condition **
+
+//** end overdue time condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+public override bool IsVisibleInMenu(GuidedRow guidedRow) {
+	Soneta.Kadry.Pracownik row = (Soneta.Kadry.Pracownik)guidedRow;
+	return true;
+}
+
+public override bool IsVisibleInMenu() {
+	return base.IsVisibleInMenu();
+}
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// 1. Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// 2. Jeżeli pkt. 1 nie ustawi wartości to:
+//   - jeżeli definicja zadania jest powiązana z tabelą WFWorkflow to zwracany jest parametr workflow metody
+//   - jeżeli definicja zadania nie jest startową zwracana jest wartość wywołania metody workflow.SearchParents(...), która wyszukuje obiekt o określonym w definicji zadania typie powiązany z poprzednim zadaniem
+//   - jeżeli definicja zadania jest powiązana z tabelą zgodną z przekazanym wierszem (row) to zwracany jest parametr workflow metody
+// W innym przypadku zwracana jest wartość null
+// Jeżeli metoda wywoływana jest dla akcji automatycznej nie powiązanej z workflow parametry task, workflow i row mają wartość null natomiast context jest pusty (kalkulator ma ustawioną tylko właściwość Definition)
+//** end get parent **
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>InMenu</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition>WizardDefinition_12</WizardDefinition>
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>True</IsStart>
+    <WFDefinition>WFDefinition_1</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0005-000000000000</WFDefItem>
+    <OGSchema>OGSchema_1</OGSchema>
+    <InitParent>True</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="151" Y="75,99997" /&gt;&lt;Size Width="240" Height="84,00001" Type="0" InfoNodeHeight="0" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_38">
+        <TaskDefinition>TaskDefinition_30</TaskDefinition>
+        <TableName>Pracownicy</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { Pracownik };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// Pracownik : Pracownik - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu Pracownik,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_31" guid="f16d1f1b-9ebe-4bbd-ab2f-ba16523cf269">
+    <TableName>Pracownicy</TableName>
+    <Name>ZP - Zatrudnianie pracownika_Zadanie_1</Name>
+    <FormatedName>Zatrudnienie</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_ZP__Zatrudnianie_pracownika_Zadanie_1520922303 : TaskCalculatorPracownicy {
+
+public Task_ZP__Zatrudnianie_pracownika_Zadanie_1520922303() { }
+public Task_ZP__Zatrudnianie_pracownika_Zadanie_1520922303(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin overdue time condition **
+
+//** end overdue time condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+public override bool IsVisibleInMenu(GuidedRow guidedRow) {
+	Soneta.Kadry.Pracownik row = (Soneta.Kadry.Pracownik)guidedRow;
+	return true;
+}
+
+public override bool IsVisibleInMenu() {
+	return base.IsVisibleInMenu();
+}
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// 1. Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// 2. Jeżeli pkt. 1 nie ustawi wartości to:
+//   - jeżeli definicja zadania jest powiązana z tabelą WFWorkflow to zwracany jest parametr workflow metody
+//   - jeżeli definicja zadania nie jest startową zwracana jest wartość wywołania metody workflow.SearchParents(...), która wyszukuje obiekt o określonym w definicji zadania typie powiązany z poprzednim zadaniem
+//   - jeżeli definicja zadania jest powiązana z tabelą zgodną z przekazanym wierszem (row) to zwracany jest parametr workflow metody
+// W innym przypadku zwracana jest wartość null
+// Jeżeli metoda wywoływana jest dla akcji automatycznej nie powiązanej z workflow parametry task, workflow i row mają wartość null natomiast context jest pusty (kalkulator ma ustawioną tylko właściwość Definition)
+//** end get parent **
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>InMenu</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition>WizardDefinition_13</WizardDefinition>
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_1</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0006-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="160" Y="213" /&gt;&lt;Size Width="240" Height="84,00001" Type="0" InfoNodeHeight="0" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_39">
+        <TaskDefinition>TaskDefinition_31</TaskDefinition>
+        <TableName>Pracownicy</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { Pracownik };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// Pracownik : Pracownik - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu Pracownik,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_32" guid="e663b480-dc3f-48c1-8065-7d24a0050723">
+    <TableName>Pracownicy</TableName>
+    <Name>ZP - Zatrudnianie pracownika_Zadanie_2</Name>
+    <FormatedName>Badania</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_ZP__Zatrudnianie_pracownika_Zadanie_2520725695 : TaskCalculatorPracownicy {
+
+public Task_ZP__Zatrudnianie_pracownika_Zadanie_2520725695() { }
+public Task_ZP__Zatrudnianie_pracownika_Zadanie_2520725695(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin overdue time condition **
+
+//** end overdue time condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+public override bool IsVisibleInMenu(GuidedRow guidedRow) {
+	Soneta.Kadry.Pracownik row = (Soneta.Kadry.Pracownik)guidedRow;
+	return true;
+}
+
+public override bool IsVisibleInMenu() {
+	return base.IsVisibleInMenu();
+}
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// 1. Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// 2. Jeżeli pkt. 1 nie ustawi wartości to:
+//   - jeżeli definicja zadania jest powiązana z tabelą WFWorkflow to zwracany jest parametr workflow metody
+//   - jeżeli definicja zadania nie jest startową zwracana jest wartość wywołania metody workflow.SearchParents(...), która wyszukuje obiekt o określonym w definicji zadania typie powiązany z poprzednim zadaniem
+//   - jeżeli definicja zadania jest powiązana z tabelą zgodną z przekazanym wierszem (row) to zwracany jest parametr workflow metody
+// W innym przypadku zwracana jest wartość null
+// Jeżeli metoda wywoływana jest dla akcji automatycznej nie powiązanej z workflow parametry task, workflow i row mają wartość null natomiast context jest pusty (kalkulator ma ustawioną tylko właściwość Definition)
+//** end get parent **
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>InMenu</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition>WizardDefinition_15</WizardDefinition>
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_1</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0006-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="172" Y="478" /&gt;&lt;Size Width="240" Height="84,00001" Type="0" InfoNodeHeight="0" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_40">
+        <TaskDefinition>TaskDefinition_32</TaskDefinition>
+        <TableName>Pracownicy</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { Pracownik };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// Pracownik : Pracownik - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu Pracownik,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_33" guid="445b8efc-2d5f-4733-8939-ea42e5764cfa">
+    <TableName>Pracownicy</TableName>
+    <Name>ZP - Zatrudnianie pracownika_Koniec_1</Name>
+    <FormatedName>Koniec</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_ZP__Zatrudnianie_pracownika_Koniec_1769242198 : TaskCalculatorPracownicy {
+
+public Task_ZP__Zatrudnianie_pracownika_Koniec_1769242198() { }
+public Task_ZP__Zatrudnianie_pracownika_Koniec_1769242198(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin overdue time condition **
+
+//** end overdue time condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// 1. Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// 2. Jeżeli pkt. 1 nie ustawi wartości to:
+//   - jeżeli definicja zadania jest powiązana z tabelą WFWorkflow to zwracany jest parametr workflow metody
+//   - jeżeli definicja zadania nie jest startową zwracana jest wartość wywołania metody workflow.SearchParents(...), która wyszukuje obiekt o określonym w definicji zadania typie powiązany z poprzednim zadaniem
+//   - jeżeli definicja zadania jest powiązana z tabelą zgodną z przekazanym wierszem (row) to zwracany jest parametr workflow metody
+// W innym przypadku zwracana jest wartość null
+// Jeżeli metoda wywoływana jest dla akcji automatycznej nie powiązanej z workflow parametry task, workflow i row mają wartość null natomiast context jest pusty (kalkulator ma ustawioną tylko właściwość Definition)
+//** end get parent **
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>Auto</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition />
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_1</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0003-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="171" Y="621" /&gt;&lt;Size Width="240" Height="84,00001" Type="0" InfoNodeHeight="0" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_41">
+        <TaskDefinition>TaskDefinition_33</TaskDefinition>
+        <TableName>Pracownicy</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { Pracownik };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// Pracownik : Pracownik - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu Pracownik,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_34" guid="be0c5ecc-934b-4193-accf-989b07fa3c9a">
+    <TableName>Pracownicy</TableName>
+    <Name>ZP - Zatrudnianie pracownika_Zadanie_3</Name>
+    <FormatedName>Zgłoszenie do ubezpieczenia</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <Code>public class Task_ZP__Zatrudnianie_pracownika_Zadanie_3520791231 : TaskCalculatorPracownicy {
+
+public Task_ZP__Zatrudnianie_pracownika_Zadanie_3520791231() { }
+public Task_ZP__Zatrudnianie_pracownika_Zadanie_3520791231(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin overdue time condition **
+
+//** end overdue time condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+public override bool IsVisibleInMenu(GuidedRow guidedRow) {
+	Soneta.Kadry.Pracownik row = (Soneta.Kadry.Pracownik)guidedRow;
+	return true;
+}
+
+public override bool IsVisibleInMenu() {
+	return base.IsVisibleInMenu();
+}
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// 1. Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// 2. Jeżeli pkt. 1 nie ustawi wartości to:
+//   - jeżeli definicja zadania jest powiązana z tabelą WFWorkflow to zwracany jest parametr workflow metody
+//   - jeżeli definicja zadania nie jest startową zwracana jest wartość wywołania metody workflow.SearchParents(...), która wyszukuje obiekt o określonym w definicji zadania typie powiązany z poprzednim zadaniem
+//   - jeżeli definicja zadania jest powiązana z tabelą zgodną z przekazanym wierszem (row) to zwracany jest parametr workflow metody
+// W innym przypadku zwracana jest wartość null
+// Jeżeli metoda wywoływana jest dla akcji automatycznej nie powiązanej z workflow parametry task, workflow i row mają wartość null natomiast context jest pusty (kalkulator ma ustawioną tylko właściwość Definition)
+//** end get parent **
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>InMenu</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition>WizardDefinition_14</WizardDefinition>
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_1</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0006-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Boundries&gt;&lt;Position X="163" Y="338,9999" /&gt;&lt;Size Width="240" Height="84,00001" Type="0" InfoNodeHeight="0" /&gt;&lt;/Boundries&gt;&lt;/Root&gt;</XML>
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_42">
+        <TaskDefinition>TaskDefinition_34</TaskDefinition>
+        <TableName>Pracownicy</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { Pracownik };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// Pracownik : Pracownik - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu Pracownik,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+  </TaskDefinition>
+  <WFTransition id="WFTransition_1" guid="169022e5-e0a8-442d-a43e-5e7aeee62b44">
+    <Name>Dalej</Name>
+    <Source>TaskDefinition_30</Source>
+    <Target>TaskDefinition_31</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0002-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+	return task.WFTransition!=null &amp;&amp; task.WFTransition==Transition;
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="151" Y="144,5" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;Point X="0" Y="51,00003" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>True</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_2" guid="9b5f757a-492b-4d8e-a8be-07e91f208430">
+    <Name>Dalej</Name>
+    <Source>TaskDefinition_31</Source>
+    <Target>TaskDefinition_34</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0002-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+	return task.WFTransition!=null &amp;&amp; task.WFTransition==Transition;
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="160" Y="275,9999" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;Point X="0" Y="39,99992" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>True</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_3" guid="a7f47eb9-e164-45b6-b586-6259a63c4cd6">
+    <Name>Dalej</Name>
+    <Source>TaskDefinition_32</Source>
+    <Target>TaskDefinition_33</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0002-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+	return task.WFTransition!=null &amp;&amp; task.WFTransition==Transition;
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="172" Y="549,5" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;Point X="0" Y="57" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>True</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_4" guid="0a9815fb-2c62-47e8-890e-31caecc9717b">
+    <Name>Dalej</Name>
+    <Source>TaskDefinition_34</Source>
+    <Target>TaskDefinition_32</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0002-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+	return task.WFTransition!=null &amp;&amp; task.WFTransition==Transition;
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="163" Y="408,4999" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;Point X="0" Y="53,00012" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>True</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_5" guid="e983df5d-8402-40cc-9b6a-b0528cd1bda1">
+    <Name>Dane do poprawy</Name>
+    <Source>TaskDefinition_31</Source>
+    <Target>TaskDefinition_30</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0002-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+	return task.WFTransition!=null &amp;&amp; task.WFTransition==Transition;
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="307,5" Y="144,5" /&gt;&lt;Point X="9" Y="137" /&gt;&lt;Point X="71,00006" Y="137" /&gt;&lt;Point X="71,00006" Y="0" /&gt;&lt;Point X="71,00006" Y="0" /&gt;&lt;Point X="71,00006" Y="0" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>True</IsUserDecision>
+  </WFTransition>
+  <WFTransition id="WFTransition_6" guid="8da98536-7ff2-4aa7-a637-11438e65f4b4">
+    <Name>Do poprawy dane o zatrudnieniu</Name>
+    <Source>TaskDefinition_34</Source>
+    <Target>TaskDefinition_31</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0002-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+	return task.WFTransition!=null &amp;&amp; task.WFTransition==Transition;
+}
+
+#endregion</Statement>
+    <XML>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Root&gt;&lt;Points&gt;&lt;PinPoint X="312" Y="275,9999" /&gt;&lt;Point X="3" Y="125,9999" /&gt;&lt;Point X="62,00006" Y="125,9999" /&gt;&lt;Point X="62,00006" Y="0" /&gt;&lt;Point X="62,00006" Y="0" /&gt;&lt;Point X="62,00006" Y="0" /&gt;&lt;Point X="0" Y="0" /&gt;&lt;/Points&gt;&lt;/Root&gt;</XML>
+    <IsUserDecision>True</IsUserDecision>
+  </WFTransition>
+</session>

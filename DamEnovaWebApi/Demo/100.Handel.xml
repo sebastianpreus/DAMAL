@@ -242,7 +242,7 @@
 		<DataContext />
 		<Value>Dostawcy</Value>
 	</DictionaryItem>
-
+  
   
   <!-- Inne definicje cech	-->
 
@@ -393,7 +393,47 @@
 // Module: HandelModule - Moduł, w którym znajduje się tabela
 // Session: Session - Obiekt sesji dający dostęp do wszystkich danych program
 
-	</Code>
+	  </Code>
+    <ValueFilter />
+    <Group>False</Group>
+    <History>False</History>
+    <StrictDictionary>False</StrictDictionary>
+    <Dictionary />
+    <BISerialization>False</BISerialization>
+    <Info />
+  </FeatureDefinition>
+
+  <FeatureDefinition guid="5daa7bb2-9377-4615-be60-2a157d3e5ef1">
+    <TableName>DokHandlowe</TableName>
+    <Name>Widocznosc_TF</Name>
+    <Category />
+    <Description />
+    <TypeNumber>Bool</TypeNumber>
+    <TypeInformation />
+    <ReadOnlyMode>Standard</ReadOnlyMode>
+    <InitValueStr />
+    <Algorithm>GetArgs</Algorithm>
+    <ValueRequired>False</ValueRequired>
+    <Precision>0</Precision>
+    <ValueFrom />
+    <ValueTo />
+    <TextLength>0</TextLength>
+    <Code>public bool Get_Feature_Widocznosc_TF( Soneta.Handel.RelacjeDokumentow.DefDokPodrzednego defDokPodrzednego )
+{
+	bool widocznosc = true;
+	
+  if (defDokPodrzednego.Podrzedna.Guid == new Guid("00000000-0011-0002-0060-000000000000"))      // TF
+			widocznosc = Row.Suma.Brutto &gt;= 200m &amp;&amp; Row.Suma.VAT &gt; 0;
+
+	return widocznosc;
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// Row: DokumentHandlowy - Wiersz przeliczanej cechy
+// Table: DokHandlowe - Tabela wiersza przeliczanej cechy
+// Module: HandelModule - Moduł, w którym znajduje się tabela
+// Session: Session - Obiekt sesji dający dostęp do wszystkich danych programu
+</Code>
     <ValueFilter />
     <Group>False</Group>
     <History>False</History>
@@ -418,37 +458,40 @@
     <ValueFrom />
     <ValueTo />
     <TextLength>0</TextLength>
-    <Code>public EwidencjaSP Feature_ESP_wg_waluty 
+   <Code>public EwidencjaSP Feature_ESP_wg_waluty 
 {
     get 
 		{
 			EwidencjaSP esp = Row.EwidencjaSP;
-      if (esp == null)
-			  return esp;
-        
+			if (esp == null)
+				return esp;
+				
 			KasaModule km = KasaModule.GetInstance(Row.Session);
 			Waluta w = km.Waluty.Waluty.WgSymbolu[Row.Kwota.Symbol];			
 			TypEwidencjiSP typesp = Row.SposobZaplaty.Odroczony ? TypEwidencjiSP.RachunekBankowy : TypEwidencjiSP.Kasa;
 			
-			// Jeśli ewidencja ustawiona na płatności nie zgadza się co do typu ze sposobem zapłaty, 
-			// albo co do waluty z kwotą płatności, szukamy właściwej
+			OddzialFirmy oddzial = null;
 			
-			if (esp.Blokada || esp.Typ != typesp || esp.Waluta != w)
+			if (Row.Dokument is DokumentHandlowy)
+			{
+				var dh = (DokumentHandlowy)Row.Dokument;
+				if (dh.Magazyn != null)      
+					oddzial = dh.Magazyn.Oddzial;
+			}
+			else
+				if (Row.Ewidencja != null)
+					oddzial = Row.Ewidencja.Oddzial;
+			
+
+			// Jeśli ewidencja ustawiona na płatności nie zgadza się co do typu ze sposobem zapłaty, 
+			// albo co do waluty z kwotą płatności, albo z dokumentem co do oddziału, szukamy właściwej
+			
+			if (esp.Blokada || esp.Typ != typesp || esp.Waluta != w || 
+			    (oddzial != null &amp;&amp; (esp.Oddzial == null || esp.Oddzial != oddzial)))
 			{
 				
 				// Najpierw sprawdzamy, czy źródłowy dokument jest przypisany do oddziału firmy,
 				// jeśli tak, szukamy ewidencji wśród tych, które są przypisane do tego samego oddziału
-				
-				OddzialFirmy oddzial = null;
-				
-				if (Row.Dokument is DokumentHandlowy)
-				{
-					var dh = (DokumentHandlowy)Row.Dokument;
-					oddzial = dh.Magazyn.Oddzial;
-				}
-				else
-					if (Row.Ewidencja != null)
-						oddzial = Row.Ewidencja.Oddzial;
 				
         if (oddzial != null)
         {
@@ -600,6 +643,7 @@
     <TypDanych>Raporty</TypDanych>
     <RodzajRaportow>Okresowy</RodzajRaportow>
     <OkresRaportow>Miesieczny</OkresRaportow>
+    <ScisleRozliczanieMPP>True</ScisleRozliczanieMPP>
     <Auto>False</Auto>
     <Definicja>00000000-0003-0003-0015-000000000000</Definicja>
     <DefinicjaED />
@@ -714,6 +758,7 @@
     <Nazwa>ABC Sp. z o.o</Nazwa>
     <NIP>111-11-11-128</NIP>
     <EuVAT>1111111128</EuVAT>
+    <PodatnikVAT>True</PodatnikVAT>
     <Blokada>False</Blokada>
     <Kontakt>
       <SkrytkaPocztowa />
@@ -799,6 +844,7 @@
     <Nazwa>ASPEN GmbH</Nazwa>
     <NIP />
     <EuVAT>DE333445566</EuVAT>
+    <PodatnikVAT>True</PodatnikVAT>
     <Blokada>False</Blokada>
     <Kontakt>
       <SkrytkaPocztowa />
@@ -889,6 +935,7 @@ Wiesław Goluch
     </Nazwa>
     <NIP>234-23-44-548</NIP>
     <EuVAT>2342344548</EuVAT>
+    <PodatnikVAT>True</PodatnikVAT>
     <Blokada>False</Blokada>
     <Kontakt>
       <SkrytkaPocztowa />
@@ -974,6 +1021,7 @@ Wiesław Goluch
     <Nazwa>EnergoEko - Fabryka Energii Ekologicznej</Nazwa>
     <NIP>765-42-92-350</NIP>
     <EuVAT>7654292350</EuVAT>
+    <PodatnikVAT>True</PodatnikVAT>
     <Blokada>False</Blokada>
     <Kontakt>
       <SkrytkaPocztowa />
@@ -1061,6 +1109,7 @@ Joanna Mazowiecka
     </Nazwa>
     <NIP>654-78-76-860</NIP>
     <EuVAT>6547876860</EuVAT>
+    <PodatnikVAT>True</PodatnikVAT>
     <Blokada>False</Blokada>
     <Kontakt>
       <SkrytkaPocztowa />
@@ -1148,6 +1197,7 @@ Jacek Cłapek, Witold Generalny
     </Nazwa>
     <NIP>456-23-46-591</NIP>
     <EuVAT>4562346591</EuVAT>
+    <PodatnikVAT>True</PodatnikVAT>
     <Blokada>False</Blokada>
     <Kontakt>
       <SkrytkaPocztowa />
@@ -1233,6 +1283,7 @@ Jacek Cłapek, Witold Generalny
     <Nazwa>Sklep spożywczy - Łukasz Gawron</Nazwa>
     <NIP>876-09-45-064</NIP>
     <EuVAT>8760945064</EuVAT>
+    <PodatnikVAT>True</PodatnikVAT>
     <Blokada>False</Blokada>
     <Kontakt>
       <SkrytkaPocztowa />
@@ -1320,6 +1371,7 @@ Teresa Smuga
     </Nazwa>
     <NIP>298-09-76-514</NIP>
     <EuVAT>2980976514</EuVAT>
+    <PodatnikVAT>True</PodatnikVAT>
     <Blokada>False</Blokada>
     <Kontakt>
       <SkrytkaPocztowa />
@@ -1407,6 +1459,7 @@ Jerzy Sklonowany
     </Nazwa>
     <NIP>123-45-55-236</NIP>
     <EuVAT>1234565236</EuVAT>
+    <PodatnikVAT>True</PodatnikVAT>
     <Blokada>False</Blokada>
     <Kontakt>
       <SkrytkaPocztowa />
@@ -1494,6 +1547,7 @@ Hektor Janiak i wspólnicy
     </Nazwa>
     <NIP>345-34-67-125</NIP>
     <EuVAT>3453467125</EuVAT>
+    <PodatnikVAT>True</PodatnikVAT>
     <Blokada>False</Blokada>
     <Kontakt>
       <SkrytkaPocztowa />
@@ -1581,6 +1635,7 @@ Stanisław Mielecki
     </Nazwa>
     <NIP>949-02-33-442</NIP>
     <EuVAT>9490233442</EuVAT>
+    <PodatnikVAT>True</PodatnikVAT>
     <Blokada>False</Blokada>
     <Kontakt>
       <SkrytkaPocztowa />
@@ -1668,6 +1723,7 @@ Centrala Warszawa
     </Nazwa>
     <NIP>957-09-81-264</NIP>
     <EuVAT>9570981264</EuVAT>
+    <PodatnikVAT>True</PodatnikVAT>
     <Blokada>False</Blokada>
     <Kontakt>
       <SkrytkaPocztowa />
@@ -1755,6 +1811,7 @@ Jadwiga Olszewska, Jan Gembula
     </Nazwa>
     <NIP>543-12-32-309</NIP>
     <EuVAT>5431232309</EuVAT>
+    <PodatnikVAT>True</PodatnikVAT>
     <Blokada>False</Blokada>
     <Kontakt>
       <SkrytkaPocztowa />
@@ -1842,6 +1899,7 @@ Karmelicki Krzysztof i Syn
     </Nazwa>
     <NIP>976-09-89-234</NIP>
     <EuVAT>9760989234</EuVAT>
+    <PodatnikVAT>True</PodatnikVAT>
     <Blokada>False</Blokada>
     <Kontakt>
       <SkrytkaPocztowa />
@@ -1929,6 +1987,7 @@ Ewa Grzywacz
     </Nazwa>
     <NIP>295-38-19-839</NIP>
     <EuVAT>2953819839</EuVAT>
+    <PodatnikVAT>True</PodatnikVAT>
     <Blokada>False</Blokada>
     <Kontakt>
       <SkrytkaPocztowa />
@@ -2014,6 +2073,7 @@ Ewa Grzywacz
     <Nazwa>ROLMAP S.A</Nazwa>
     <NIP>333-33-33-333</NIP>
     <EuVAT>3333333333</EuVAT>
+    <PodatnikVAT>True</PodatnikVAT>
     <Blokada>False</Blokada>
     <Kontakt>
       <SkrytkaPocztowa />
@@ -2101,6 +2161,7 @@ Marta Masły, Wioletta Krupa
     </Nazwa>
     <NIP>765-78-01-220</NIP>
     <EuVAT>7657801220</EuVAT>
+    <PodatnikVAT>True</PodatnikVAT>
     <Blokada>False</Blokada>
     <Kontakt>
       <SkrytkaPocztowa />
@@ -2186,6 +2247,7 @@ Marta Masły, Wioletta Krupa
     <Nazwa>SETKA - Sieć Sklepów Spożywczych Sp. z o.o.</Nazwa>
     <NIP>123-23-45-670</NIP>
     <EuVAT>1232345670</EuVAT>
+    <PodatnikVAT>True</PodatnikVAT>
     <Blokada>False</Blokada>
     <Kontakt>
       <SkrytkaPocztowa />
@@ -2271,6 +2333,7 @@ Marta Masły, Wioletta Krupa
     <Nazwa>Huta szkła artystycznego "Szkiełko i Oko" S.A.</Nazwa>
     <NIP>123-34-78-893</NIP>
     <EuVAT>1233478893</EuVAT>
+    <PodatnikVAT>True</PodatnikVAT>
     <Blokada>False</Blokada>
     <Kontakt>
       <SkrytkaPocztowa />
@@ -2356,6 +2419,7 @@ Marta Masły, Wioletta Krupa
     <Nazwa>ZEFIR J.Nowak i E.Nowak</Nazwa>
     <NIP>222-22-22-222</NIP>
     <EuVAT>2222222222</EuVAT>
+    <PodatnikVAT>True</PodatnikVAT>
     <Blokada>False</Blokada>
     <Kontakt>
       <SkrytkaPocztowa />
@@ -2441,6 +2505,7 @@ Marta Masły, Wioletta Krupa
     <Nazwa>Michel Blanc S.A.R.L</Nazwa>
     <NIP />
     <EuVAT>FR9A888878155</EuVAT>
+    <PodatnikVAT>True</PodatnikVAT>
     <KRS />
     <Blokada>False</Blokada>
     <Kontakt>
@@ -2560,7 +2625,260 @@ Marta Masły, Wioletta Krupa
       <feature name="Rodzaj">\Odbiorcy\</feature>
     </features>
   </Kontrahent>
+  <Kontrahent id="Kontrahent_44" guid="9287d45d-ac59-44d2-b98f-4c2602007fcf">
+    <Kod>JN</Kod>
+    <Nazwa>Jan Nowak</Nazwa>
+    <NIP />
+    <PodatnikVAT>False</PodatnikVAT>
+    <EuVAT />
+    <KRS />
+    <Blokada>False</Blokada>
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy />
+      <EMAIL />
+      <WWW />
+    </Kontakt>
+    <Osoba>
+      <Osoba />
+      <Adres />
+      <Telefon />
+    </Osoba>
+    <SposobZaplaty>00000000-0003-0001-0001-000000000000</SposobZaplaty>
+    <Termin>0</Termin>
+    <TerminPlanowany>0</TerminPlanowany>
+    <LimitKredytu>0.00 PLN</LimitKredytu>
+    <KontrolaDni>0</KontrolaDni>
+    <KontrolaKwota>0.00 PLN</KontrolaKwota>
+    <RodzajPodmiotu>Krajowy</RodzajPodmiotu>
+    <RodzajPodmiotuZakup>BezVAT</RodzajPodmiotuZakup>
+    <StatusPodmiotu>Finalny</StatusPodmiotu>
+    <FormaPrawna>00000000-0009-0013-0002-000000000000</FormaPrawna>
+    <Uwagi />
+    <VATLiczonyOd>OdBrutto</VATLiczonyOd>
+    <Rabat>0.00%</Rabat>
+    <RabatTowaru>0.00%</RabatTowaru>
+    <CenaTowaru />
+    <EFaktura>Brak</EFaktura>
+    <EFakturaOkres>(pusty)</EFakturaOkres>
+    <BlokadaSprzedazy>False</BlokadaSprzedazy>
+    <CenaOdbiorcy>False</CenaOdbiorcy>
+    <Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+    <WyjatkiDlaPO>Brak</WyjatkiDlaPO>
+    <Komunikat />
+    <KomunikatCRM />
+    <KomunikatKS />
+    <RodzajDokumentuKaucji>Docelowy</RodzajDokumentuKaucji>
+    <RodzajPlatnosciKaucji>Naliczaj</RodzajPlatnosciKaucji>
+    <TerminRozliczeniaKaucji>60</TerminRozliczeniaKaucji>
+    <TypLimituKredytowego>Nieograniczony</TypLimituKredytowego>
+    <TypPrzeterminowania>Kwota</TypPrzeterminowania>
+    <OddzialFirmy />
+    <KorespondencjaOpis />
+    <KorespondencjaNazwaFirmy />
+    <AktualizacjaPrzyImporcie>False</AktualizacjaPrzyImporcie>
+    <OdsKarne>
+      <Indywidualne>False</Indywidualne>
+      <RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+      <RozpoczecieDni>31</RozpoczecieDni>
+      <Zwloka>0</Zwloka>
+      <Stopa>Handlowe</Stopa>
+      <OdsIndHist />
+    </OdsKarne>
+    <REGON />
+    <PESEL />
+    <NieWindykowac>False</NieWindykowac>
+    <DefinicjaSprawyWindykacyjnej />
+    <Kategorie />
+    <Branze />
+    <Adresy>
+      <AdresExt id="AdresExt_152">
+        <Host>Kontrahent_44</Host>
+        <Typ>Główny</Typ>
+        <Adres>
+          <KodPocztowy>30327</KodPocztowy>
+          <ZagranicznyKodPocztowy />
+          <Poczta>Kraków</Poczta>
+          <Miejscowosc>Kraków</Miejscowosc>
+          <Gmina />
+          <Powiat />
+          <Wojewodztwo>małopolskie</Wojewodztwo>
+          <Kraj>Polska</Kraj>
+          <KodKraju>PL</KodKraju>
+          <Ulica>Jaworowa</Ulica>
+          <NrDomu>100</NrDomu>
+          <NrLokalu />
+          <NietypowaLokalizacja />
+          <Telefon />
+          <Faks />
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+      <AdresExt id="AdresExt_153">
+        <Host>Kontrahent_44</Host>
+        <Typ>Korespondencyjny</Typ>
+        <Adres>
+          <KodPocztowy>0</KodPocztowy>
+          <ZagranicznyKodPocztowy />
+          <Poczta />
+          <Miejscowosc />
+          <Gmina />
+          <Powiat />
+          <Wojewodztwo>nieokreślone</Wojewodztwo>
+          <Kraj />
+          <KodKraju />
+          <Ulica />
+          <NrDomu />
+          <NrLokalu />
+          <NietypowaLokalizacja />
+          <Telefon />
+          <Faks />
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+    </Adresy>
+    <AdresyWWW />
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe />
+    <Lokalizacje />
+    <TowaryUlubione />
+    <features>
+      <feature name="Rodzaj">\Odbiorcy\</feature>
+    </features>
+  </Kontrahent>
+  <Kontrahent id="Kontrahent_45" guid="8a3f6e3d-55b5-4332-852a-ac4f52b88831">
+    <Kod>KM</Kod>
+    <Nazwa>Klaus Mueller</Nazwa>
+    <NIP />
+    <PodatnikVAT>False</PodatnikVAT>
+    <EuVAT />
+    <KRS />
+    <Blokada>False</Blokada>
+    <Kontakt>
+      <SkrytkaPocztowa />
+      <TelefonKomorkowy />
+      <EMAIL />
+      <WWW />
+    </Kontakt>
+    <Osoba>
+      <Osoba />
+      <Adres />
+      <Telefon />
+    </Osoba>
+    <SposobZaplaty>00000000-0003-0001-0001-000000000000</SposobZaplaty>
+    <Termin>2</Termin>
+    <TerminPlanowany>0</TerminPlanowany>
+    <LimitKredytu>0.00 PLN</LimitKredytu>
+    <KontrolaDni>0</KontrolaDni>
+    <KontrolaKwota>0.00 PLN</KontrolaKwota>
+    <RodzajPodmiotu>Unijny</RodzajPodmiotu>
+    <RodzajPodmiotuZakup>Unijny</RodzajPodmiotuZakup>
+    <StatusPodmiotu>Finalny</StatusPodmiotu>
+    <FormaPrawna>00000000-0009-0013-0002-000000000000</FormaPrawna>
+    <Uwagi />
+    <VATLiczonyOd>OdBrutto</VATLiczonyOd>
+    <Rabat>0.00%</Rabat>
+    <RabatTowaru>0.00%</RabatTowaru>
+    <CenaTowaru />
+    <EFaktura>Brak</EFaktura>
+    <EFakturaOkres>(pusty)</EFakturaOkres>
+    <BlokadaSprzedazy>False</BlokadaSprzedazy>
+    <CenaOdbiorcy>False</CenaOdbiorcy>
+    <Waluta>00000000-0004-0001-0001-000000000000</Waluta>
+    <WyjatkiDlaPO>Brak</WyjatkiDlaPO>
+    <Komunikat />
+    <KomunikatCRM />
+    <KomunikatKS />
+    <RodzajDokumentuKaucji>Docelowy</RodzajDokumentuKaucji>
+    <RodzajPlatnosciKaucji>Naliczaj</RodzajPlatnosciKaucji>
+    <TerminRozliczeniaKaucji>60</TerminRozliczeniaKaucji>
+    <TypLimituKredytowego>Nieograniczony</TypLimituKredytowego>
+    <TypPrzeterminowania>Kwota</TypPrzeterminowania>
+    <OddzialFirmy />
+    <KorespondencjaOpis />
+    <KorespondencjaNazwaFirmy />
+    <AktualizacjaPrzyImporcie>False</AktualizacjaPrzyImporcie>
+    <OdsKarne>
+      <Indywidualne>False</Indywidualne>
+      <RozpoczecieTyp>WgTerminuPlatnosci</RozpoczecieTyp>
+      <RozpoczecieDni>31</RozpoczecieDni>
+      <Zwloka>0</Zwloka>
+      <Stopa>Handlowe</Stopa>
+      <OdsIndHist />
+    </OdsKarne>
+    <REGON />
+    <PESEL />
+    <NieWindykowac>False</NieWindykowac>
+    <DefinicjaSprawyWindykacyjnej />
+    <Kategorie />
+    <Branze />
+    <Adresy>
+      <AdresExt id="AdresExt_154">
+        <Host>Kontrahent_45</Host>
+        <Typ>Główny</Typ>
+        <Adres>
+          <KodPocztowy>0</KodPocztowy>
+          <ZagranicznyKodPocztowy>12105</ZagranicznyKodPocztowy>
+          <Poczta>Berlin</Poczta>
+          <Miejscowosc>Berlin</Miejscowosc>
+          <Gmina />
+          <Powiat />
+          <Wojewodztwo>nieokreślone</Wojewodztwo>
+          <Kraj>Niemcy</Kraj>
+          <KodKraju>DE</KodKraju>
+          <Ulica>Mainzer Strasse</Ulica>
+          <NrDomu>99</NrDomu>
+          <NrLokalu>6</NrLokalu>
+          <NietypowaLokalizacja />
+          <Telefon />
+          <Faks />
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+      <AdresExt id="AdresExt_155">
+        <Host>Kontrahent_45</Host>
+        <Typ>Korespondencyjny</Typ>
+        <Adres>
+          <KodPocztowy>0</KodPocztowy>
+          <ZagranicznyKodPocztowy />
+          <Poczta />
+          <Miejscowosc />
+          <Gmina />
+          <Powiat />
+          <Wojewodztwo>nieokreślone</Wojewodztwo>
+          <Kraj />
+          <KodKraju />
+          <Ulica />
+          <NrDomu />
+          <NrLokalu />
+          <NietypowaLokalizacja />
+          <Telefon />
+          <Faks />
+        </Adres>
+        <IdentyfikacjaAdresu>
+          <GLN />
+        </IdentyfikacjaAdresu>
+      </AdresExt>
+    </Adresy>
+    <AdresyWWW />
+    <Kontakty />
+    <PotwierdzeniaGIODO />
+    <KodyKreskowe />
+    <Lokalizacje />
+    <TowaryUlubione />
+    <features>
+      <feature name="Rodzaj">\Odbiorcy\</feature>
+    </features>
+  </Kontrahent>
 
+  
   <KontrahentKomunikatEDI>
     <Kontrahent>Kontrahent_2</Kontrahent>
     <DefinicjaEDI>00000000-0001-0035-0004-000000000000</DefinicjaEDI>
@@ -9518,6 +9836,16 @@ Marta Masły, Wioletta Krupa
   <!-- KPAR > FVP/FVPP -->
   <DefRelacjiHandlowej guid="00000000-0011-0003-0088-000000000000">
     <CechaWidocznosc>cbfa4774-3288-4657-8696-0acf4485474e</CechaWidocznosc>
+  </DefRelacjiHandlowej>
+
+  <!-- PAR > TF -->
+  <DefRelacjiHandlowej guid="00000000-0011-0003-012d-000000000000">
+    <CechaWidocznosc>5daa7bb2-9377-4615-be60-2a157d3e5ef1</CechaWidocznosc>
+  </DefRelacjiHandlowej>
+
+  <!-- FF > TF -->
+  <DefRelacjiHandlowej guid="00000000-0011-0003-012e-000000000000">
+    <CechaWidocznosc>5daa7bb2-9377-4615-be60-2a157d3e5ef1</CechaWidocznosc>
   </DefRelacjiHandlowej>
 
    <!-- Ustawienia list -->
