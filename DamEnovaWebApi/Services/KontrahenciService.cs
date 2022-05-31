@@ -60,7 +60,6 @@ namespace DamEnovaWebApi.Services
                     damKontrahent.PESEL = kontrahent.PESEL;
                     damKontrahent.REGON = kontrahent.REGON;
                     damKontrahent.KRS = kontrahent.KRS;
-                    // todo GLN/ILN
                     damKontrahent.EMAIL = kontrahent.EMAIL;
 
                     //CECHY
@@ -95,7 +94,7 @@ namespace DamEnovaWebApi.Services
                     newKontrahent.Nazwa = damKontrahent.Nazwa;
                     newKontrahent.NIP = damKontrahent.NIP;
                     newKontrahent.PodatnikVAT = damKontrahent.PodatnikVAT;
-                    if (damKontrahent.StatusPodmiotu == "Finalny")
+                    if (damKontrahent.StatusPodmiotu == "Finalny") //wyslac jako dopuszczalna wartosc
                         newKontrahent.StatusPodmiotu = Soneta.Core.StatusPodmiotu.Finalny;
                     else
                         newKontrahent.StatusPodmiotu = Soneta.Core.StatusPodmiotu.PodmiotGospodarczy;

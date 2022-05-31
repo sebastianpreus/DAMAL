@@ -25,6 +25,9 @@ namespace DamEnovaWebApi.Models
         public string Waluta { get; set; }
         public string Priorytet { get; set; }
         public string Magazyn { get; set; }
+        public DateTime DataOd { get; set; }
+        public DateTime DataDo { get; set; }
+
 
         //CECHY
         public string DH_TYP_SOP3 { get; set; }

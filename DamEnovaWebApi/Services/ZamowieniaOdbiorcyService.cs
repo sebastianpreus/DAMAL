@@ -59,7 +59,8 @@ namespace DamEnovaWebApi.Services
                     damDokument.DH_ID_SOP3 = (int)dok.Features["DH_ID_SOP3"];
                     damDokument.DH_NR_SOP3 = dok.Features["DH_NR_SOP3"].ToString();
 
-                    //damDokument.Priorytet = dok.ParametryRezerwacjiProxy.Priorytet.ToString();
+                    damDokument.DataOd = dok.ParametryRezerwacjiProxy.DataOd;
+                    damDokument.DataDo = dok.ParametryRezerwacjiProxy.DataOd;
 
                     foreach (PozycjaDokHandlowego poz in dok.Pozycje)
                     {
@@ -234,6 +235,9 @@ namespace DamEnovaWebApi.Services
                     dokument.Features["DH_TYP_SOP3"] = damZamowienieOdbiorcy.DH_TYP_SOP3;
                     dokument.Features["DH_ID_SOP3"] = damZamowienieOdbiorcy.DH_ID_SOP3;
                     dokument.Features["DH_NR_SOP3"] = damZamowienieOdbiorcy.DH_NR_SOP3;
+
+                    dokument.ParametryRezerwacjiProxy.DataOd = damZamowienieOdbiorcy.DataOd;
+                    dokument.ParametryRezerwacjiProxy.DataDo = damZamowienieOdbiorcy.DataDo;
 
                     if (damZamowienieOdbiorcy.Kontrahent != null)
                     {

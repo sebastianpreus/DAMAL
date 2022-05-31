@@ -45,7 +45,8 @@ namespace DamEnovaWebApi.Services
                     towar.NumerKatalogowy = damTowar.NumerKatalogowy;
                     //todo stawka vat sprzedaży i zakupu
                     //towar.DefinicjaStawki = damTowar.DefinicjaStawkiVATSprzedazy;
-                    //towar.Jednostka = damTowar.Jednostka;
+
+                    towar.Jednostka = tm.Jednostki.WgKodu[damTowar.Jednostka];
                     towar.PKWiU = damTowar.PKWiU;
 
                     towar.Features["T_TYP_SOP3"] = damTowar.T_TYP_SOP3;
@@ -63,6 +64,9 @@ namespace DamEnovaWebApi.Services
                     towar.Features["T_Gatunek_Prod"] = damTowar.T_Gatunek_Prod;
                     towar.Features["T_Grupa"] = damTowar.T_Grupa;
                     //towar.Features["T_Rodzina"] = damTowar.T_Rodzina; //todo pojawia się błąd że nie może przyjmować wartości "1515" (jako string)
+                    //DefinicjaCeny dfceny = new 
+                    //DefinicjaCeny dfc = Soneta.Towary.DefinicjeCen
+                    Cena cenaPodst = tm.Ceny.WgDefinicja[];
 
                     trans.Commit();
                 }
