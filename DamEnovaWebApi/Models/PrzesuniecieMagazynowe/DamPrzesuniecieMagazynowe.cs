@@ -14,11 +14,11 @@ namespace DamEnovaWebApi.Models
         public DateTime Data { get; set; }
         public string Magazyn { get; set; }
         public string DoMagazynu { get; set; }
+        public int DoMagazynuID { get; set; }
         public decimal Netto { get; set; }
         public decimal VAT { get; set; }
         public decimal Wartosc { get; set; }
         public string Waluta { get; set; }
-        public string Priorytet { get; set; }
 
         //CECHY
         public string DH_TYP_SOP3 { get; set; }

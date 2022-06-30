@@ -15,8 +15,10 @@ namespace DamEnovaWebApi.Models.Base
         public string Dokument { get; set; }
         public string DokumentPartiiPierwotnej { get; set; }
         public DateTime Data { get; set; }
-        public string Dostawca { get; set; }
+        public string Kontrahent { get; set; }
+        public string KontrahentKod { get; set; }
+        public int KontrahentID { get; set; }
         public string Typ { get; set; }
-
+        public string TypTowaru { get; set; }
     }
 }

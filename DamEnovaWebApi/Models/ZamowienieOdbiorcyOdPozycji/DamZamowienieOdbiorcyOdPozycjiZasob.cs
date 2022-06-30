@@ -11,6 +11,8 @@ namespace DamEnovaWebApi.Models
     {
         public string OkresMagazynowy { get; set; }
         public string Towar { get; set; }
+        public string TowarKod { get; set; }
+        public int TowarID { get; set; }
         public string Typ { get; set; }
         public double IloscZasobu { get; set; }
         public string JednostkaMiary { get; set; }

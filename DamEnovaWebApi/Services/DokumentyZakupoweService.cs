@@ -38,14 +38,17 @@ namespace DamEnovaWebApi.Services
                     damDokument.ID = dok.ID;
                     damDokument.Numer = dok.Numer.NumerPelny;
                     damDokument.Typ = dok.Definicja.Symbol;
-
-
+ 
                     damDokument.Zatwierdzony = dok.Zatwierdzony;
                     damDokument.Korekta = dok.Korekta;
                     damDokument.Data = dok.Data;
                     damDokument.DataOperacji = dok.DataOperacji;
-                    if(dok.Kontrahent != null)
+                    if (dok.Kontrahent != null)
+                    {
                         damDokument.Kontrahent = dok.Kontrahent.Nazwa;
+                        damDokument.KontrahentKod = dok.Kontrahent.Kod;
+                        damDokument.KontrahentID = dok.Kontrahent.ID;
+                    }
                     damDokument.Netto = dok.Suma.Netto;
                     damDokument.VAT = dok.Suma.VAT;
                     damDokument.Wartosc = dok.BruttoCy.Value;
@@ -61,6 +64,8 @@ namespace DamEnovaWebApi.Services
 
                         pozycja.Lp = poz.Lp;
                         pozycja.Towar = poz.Towar.Nazwa;
+                        pozycja.TowarKod = poz.Towar.Kod;
+                        pozycja.TowarID = poz.Towar.ID;
                         pozycja.Ilosc = poz.Ilosc.Value;
                         pozycja.JednostkaMiary = poz.Ilosc.Symbol;
                         pozycja.Cena = poz.Cena.Value;
@@ -100,7 +105,11 @@ namespace DamEnovaWebApi.Services
                         dokumentPowiazany.Numer = dokPow.Numer.NumerPelny;
                         dokumentPowiazany.Data = dokPow.Data;
                         if (dokumentPowiazany.Kontrahent != null)
+                        {
                             dokumentPowiazany.Kontrahent = dokPow.Kontrahent.Nazwa;
+                            damDokument.KontrahentKod = dok.Kontrahent.Kod;
+                            damDokument.KontrahentID = dok.Kontrahent.ID;
+                        }
                         dokumentPowiazany.Netto = dokPow.Suma.Netto;
                         dokumentPowiazany.VAT = dokPow.Suma.VAT;
                         dokumentPowiazany.Wartosc = dokPow.Suma.Brutto;

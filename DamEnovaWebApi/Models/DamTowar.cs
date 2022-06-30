@@ -9,6 +9,7 @@ namespace DamEnovaWebApi.Models
     public class DamTowar : DamModelBase
     {
         public string Kod { get; set; }
+        public string Typ { get; set; }
         public string Nazwa { get; set; }
         public string EAN { get; set; }
         public string NumerKatalogowy { get; set; }

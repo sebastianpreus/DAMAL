@@ -41,7 +41,10 @@ namespace DamEnovaWebApi.Services
                     damDokument.Numer = dok.Numer.NumerPelny;
                     damDokument.Data = dok.Data;
                     if (dok.MagazynDo != null)
-                        damDokument.DoMagazynu = dok.MagazynDo.ToStringValue();
+                    {
+                        damDokument.DoMagazynu = dok.MagazynDo.Nazwa;
+                        damDokument.DoMagazynuID = dok.MagazynDo.ID;
+                    }
                     damDokument.Netto = dok.Suma.Netto;
                     damDokument.VAT = dok.Suma.VAT;
                     damDokument.Wartosc = dok.BruttoCy.Value;
@@ -62,6 +65,7 @@ namespace DamEnovaWebApi.Services
                         pozycja.Lp = poz.Lp;
                         pozycja.Towar = poz.Towar.Nazwa;
                         pozycja.TowarKod = poz.Towar.Kod;
+                        pozycja.TowarID = poz.Towar.ID;
                         pozycja.Ilosc = poz.Ilosc.Value;
                         pozycja.JednostkaMiary = poz.Ilosc.Symbol;
                         pozycja.Cena = poz.Cena.Value;
@@ -88,13 +92,16 @@ namespace DamEnovaWebApi.Services
                         damZasob.DamPrzesuniecieMagazynoweId = dok.ID;
 
                         damZasob.OkresMagazynowy = zasob.Okres.ToStringValue();
-                        damZasob.Towar = zasob.Towar.ToStringValue();
+                        damZasob.Towar = zasob.Towar.Nazwa;
+                        damZasob.TowarKod = zasob.Towar.Kod;
+                        damZasob.TowarID = zasob.Towar.ID;
                         damZasob.Typ = zasob.Partia.Typ.ToString();
                         damZasob.IloscZasobu = zasob.IlośćZasobu.Value;
                         damZasob.JednostkaMiary = zasob.IlośćZasobu.Symbol;
                         damZasob.Wartosc = zasob.Partia.Wartosc;
                         damZasob.Cena = zasob.Partia.Cena;
-
+                        damZasob.DokumentPartia = zasob.Partia.Dokument.Numer.NumerPelny;
+                        damZasob.DokumentPartiaPierwotna = zasob.PartiaPierwotna.Dokument.Numer.NumerPelny;
 
                         damDokument.ZasobyDokumentu.Add(damZasob);
                     }
@@ -109,7 +116,11 @@ namespace DamEnovaWebApi.Services
                         dokumentPowiazany.Numer = dokPow.Numer.NumerPelny;
                         dokumentPowiazany.Data = dokPow.Data;
                         if (dokumentPowiazany.Kontrahent != null)
+                        {
                             dokumentPowiazany.Kontrahent = dokPow.Kontrahent.Nazwa;
+                            dokumentPowiazany.KontrahentKod = dokPow.Kontrahent.Kod;
+                            dokumentPowiazany.KontrahentID = dokPow.Kontrahent.ID;
+                        }
                         dokumentPowiazany.Netto = dokPow.Suma.Netto;
                         dokumentPowiazany.VAT = dokPow.Suma.VAT;
                         dokumentPowiazany.Wartosc = dokPow.Suma.Brutto;
@@ -128,7 +139,11 @@ namespace DamEnovaWebApi.Services
                         dokumentPowiazany.Numer = dokPow.Numer.NumerPelny;
                         dokumentPowiazany.Data = dokPow.Data;
                         if (dokumentPowiazany.Kontrahent != null)
+                        {
                             dokumentPowiazany.Kontrahent = dokPow.Kontrahent.Nazwa;
+                            dokumentPowiazany.KontrahentKod = dokPow.Kontrahent.Kod;
+                            dokumentPowiazany.KontrahentID = dokPow.Kontrahent.ID;
+                        }
                         dokumentPowiazany.Netto = dokPow.Suma.Netto;
                         dokumentPowiazany.VAT = dokPow.Suma.VAT;
                         dokumentPowiazany.Wartosc = dokPow.Suma.Brutto;
@@ -207,12 +222,6 @@ namespace DamEnovaWebApi.Services
                     dokument.Features["DH_ID_SOP3"] = damPrzesuniecieMagazynowe.DH_ID_SOP3;
                     dokument.Features["DH_NR_SOP3"] = damPrzesuniecieMagazynowe.DH_NR_SOP3;
 
-
-                    //Kontrahent kontrahent = cm.Kontrahenci.WgKodu[damPrzesuniecieMagazynowe.KontrahentKod];
-                    //if (kontrahent == null)
-                    //    throw new InvalidOperationException("Nieznaleziony kontrahent o kodzie " + damPrzesuniecieMagazynowe.Kontrahent);
-                    //dokument.Kontrahent = kontrahent;
-
                     foreach (var damPozycja in damPrzesuniecieMagazynowe.PozycjeDokumentu)
                     {
                         Towar towar = (Towar)tm.Towary.WgKodu[damPozycja.TowarKod];
@@ -235,55 +244,10 @@ namespace DamEnovaWebApi.Services
                         }
                     }
 
-                    try
-                    {
-                        foreach (SlownikElem sl in core.Slowniki.WgNazwa)
-                        {
-                            if (sl.Kategoria == "PriorytetZamAlg")
-                            {
-                                if (sl.Nazwa == damPrzesuniecieMagazynowe.Priorytet)
-                                    dokument.ParametryRezerwacjiProxy.Priorytet = sl;
-                            }
-                        }
-                    }
-                    catch (Exception)
-                    {
-                        throw new Exception("Błąd ustawiania priorytetu dokumentu");
-                    }
-
-                    //działa dla PW, dla RW nie chce... może trzeba zapisać i dopiero zmienić stan na zatwierdzony
-                    //dokument.Stan = StanDokumentuHandlowego.Zatwierdzony;
-
                     trans.Commit();
                 }
                 session.Save();
                 damPrzesuniecieMagazynowe.ID = dokument.ID;
-            }
-        }
-
-        internal void DeletePrzesuniecieMagazynowe(int id)
-        {
-            using (Session session = Connection.enovalogin.CreateSession(false, false))
-            {
-                HandelModule hm = HandelModule.GetInstance(session);
-                TowaryModule tm = TowaryModule.GetInstance(session);
-                MagazynyModule mm = MagazynyModule.GetInstance(session);
-                CRMModule cm = CRMModule.GetInstance(session);
-                CoreModule core = CoreModule.GetInstance(session);
-
-                using (ITransaction trans = session.Logout(true))
-                {
-                    DokumentHandlowy dokument = new DokumentHandlowy();
-
-                    if (id > 0)
-                    {
-                        dokument = hm.DokHandlowe[id];
-                        dokument.Stan = StanDokumentuHandlowego.Bufor;
-                        dokument.Delete();
-                    }
-                    trans.Commit();
-                }
-                session.Save();
             }
         }
     }

@@ -42,25 +42,22 @@ namespace DamEnovaWebApi.Services
                     damDokument.Typ = dok.Definicja.Symbol;
                     damDokument.Zatwierdzony = dok.Zatwierdzony;
                     damDokument.Anulowany = dok.Anulowany;
-                    damDokument.Potwierdzenie = dok.Potwierdzenie.ToString();
                     damDokument.Numer = dok.Numer.NumerPelny;
                     damDokument.Data = dok.Data;
-                    damDokument.Podrzedne = dok.PodrzędneInfo;
                     damDokument.Kontrahent = dok.Kontrahent.Nazwa;
+                    damDokument.KontrahentKod = dok.Kontrahent.Kod;
+                    damDokument.KontrahentID = dok.Kontrahent.ID;
                     damDokument.Netto = dok.Suma.Netto;
                     damDokument.Wartosc = dok.Suma.Brutto;
+                    damDokument.VAT = dok.Suma.VAT;
+
                     damDokument.Opis = dok.Opis;
-                    //damDokument.StanPokrycia = Workers.StanPokryciaZamówienia.StanPokrycia
-                    damDokument.ZaliczkaPokrywaCalosc = dok.Wydruk.ZaliczkaPokrywaCałość;
                     damDokument.Waluta = dok.Suma.BruttoCy.Symbol;
                     
                     //CECHY
                     damDokument.DH_TYP_SOP3 = dok.Features["DH_TYP_SOP3"].ToString();
                     damDokument.DH_ID_SOP3 = (int)dok.Features["DH_ID_SOP3"];
                     damDokument.DH_NR_SOP3 = dok.Features["DH_NR_SOP3"].ToString();
-
-                    damDokument.DataOd = dok.ParametryRezerwacjiProxy.DataOd;
-                    damDokument.DataDo = dok.ParametryRezerwacjiProxy.DataOd;
 
                     foreach (PozycjaDokHandlowego poz in dok.Pozycje)
                     {
@@ -70,6 +67,8 @@ namespace DamEnovaWebApi.Services
 
                         pozycja.Lp = poz.Lp;
                         pozycja.Towar = poz.Towar.Nazwa;
+                        pozycja.TowarKod = poz.Towar.Kod;
+                        pozycja.TowarID = poz.Towar.ID;
                         pozycja.Ilosc = poz.Ilosc.Value;
                         pozycja.JednostkaMiary = poz.Ilosc.Symbol;
                         pozycja.Cena = poz.Cena.Value;
@@ -77,9 +76,6 @@ namespace DamEnovaWebApi.Services
                         pozycja.CenaPoRabacie = poz.CenaPoRabacie.Value;
                         pozycja.Wartosc = poz.Wartość;
                         pozycja.StavkaVAT = poz.DefinicjaStawki.ToStringValue();
-                        //pozycja.PozostaloIloscWZ = 
-                        //pozycja.PozostaloIloscFV = poz.
-                        //pozycja.StanPokryciaPozycji = poz.
                         pozycja.Waluta = poz.Suma.BruttoCy.Symbol;
                         if (poz.ParametryRezerwacji.Priorytet != null)
                             pozycja.Priorytet = poz.ParametryRezerwacji.Priorytet.ToString();
@@ -87,8 +83,6 @@ namespace DamEnovaWebApi.Services
                         {
                             pozycja.DataOd = poz.ParametryRezerwacji.DataOd;
                             pozycja.DataDo = poz.ParametryRezerwacji.DataDo;
-                            pozycja.CzasOd = poz.ParametryRezerwacji.CzasOd.ToString();
-                            pozycja.CzasDo = poz.ParametryRezerwacji.CzasDo.ToString();
                         }
 
                         //CECHY
@@ -110,7 +104,9 @@ namespace DamEnovaWebApi.Services
                         damZasob.DamZamowienieOdbiorcyId = dok.ID;
 
                         damZasob.OkresMagazynowy = zasob.Okres.ToStringValue();
-                        damZasob.Towar = zasob.Towar.ToStringValue();
+                        damZasob.Towar = zasob.Towar.Nazwa;
+                        damZasob.TowarKod = zasob.Towar.Kod;
+                        damZasob.TowarID = zasob.Towar.ID;
                         damZasob.Typ = zasob.Partia.Typ.ToString();
                         damZasob.IloscZasobu = zasob.Ilosc.Value;
                         damZasob.JednostkaMiary = zasob.IlośćZasobu.Symbol;
@@ -133,7 +129,11 @@ namespace DamEnovaWebApi.Services
                         dokumentPowiazany.Zatwierdzony = dokPow.Zatwierdzony;
                         dokumentPowiazany.Data = dokPow.Data;
                         if (dokumentPowiazany.Kontrahent != null)
+                        {
                             dokumentPowiazany.Kontrahent = dokPow.Kontrahent.Nazwa;
+                            dokumentPowiazany.KontrahentKod = dokPow.Kontrahent.Kod;
+                            dokumentPowiazany.KontrahentID = dokPow.Kontrahent.ID;
+                        }
                         dokumentPowiazany.Netto = dokPow.Suma.Netto;
                         dokumentPowiazany.VAT = dokPow.Suma.VAT;
                         dokumentPowiazany.Wartosc = dokPow.Suma.Brutto;
@@ -153,7 +153,11 @@ namespace DamEnovaWebApi.Services
                         dokumentPowiazany.Zatwierdzony = dokPow.Zatwierdzony;
                         dokumentPowiazany.Data = dokPow.Data;
                         if (dokumentPowiazany.Kontrahent != null)
+                        {
                             dokumentPowiazany.Kontrahent = dokPow.Kontrahent.Nazwa;
+                            dokumentPowiazany.KontrahentKod = dokPow.Kontrahent.Kod;
+                            dokumentPowiazany.KontrahentID = dokPow.Kontrahent.ID;
+                        }
                         dokumentPowiazany.Netto = dokPow.Suma.Netto;
                         dokumentPowiazany.VAT = dokPow.Suma.VAT;
                         dokumentPowiazany.Wartosc = dokPow.Suma.Brutto;
@@ -236,20 +240,17 @@ namespace DamEnovaWebApi.Services
                     dokument.Features["DH_ID_SOP3"] = damZamowienieOdbiorcy.DH_ID_SOP3;
                     dokument.Features["DH_NR_SOP3"] = damZamowienieOdbiorcy.DH_NR_SOP3;
 
-                    dokument.ParametryRezerwacjiProxy.DataOd = damZamowienieOdbiorcy.DataOd;
-                    dokument.ParametryRezerwacjiProxy.DataDo = damZamowienieOdbiorcy.DataDo;
-
-                    if (damZamowienieOdbiorcy.Kontrahent != null)
+                    if (damZamowienieOdbiorcy.KontrahentKod != null)
                     {
-                        Kontrahent kontrahent = cm.Kontrahenci.WgKodu[damZamowienieOdbiorcy.Kontrahent];
+                        Kontrahent kontrahent = cm.Kontrahenci.WgKodu[damZamowienieOdbiorcy.KontrahentKod];
                         if (kontrahent == null)
-                            throw new InvalidOperationException("Nieznaleziony kontrahent o kodzie " + damZamowienieOdbiorcy.Kontrahent);
+                            throw new InvalidOperationException("Nieznaleziony kontrahent o kodzie " + damZamowienieOdbiorcy.KontrahentKod);
                         dokument.Kontrahent = kontrahent;
                     }
 
                     foreach (var damPozycja in damZamowienieOdbiorcy.PozycjeDokumentu)
                     {
-                        Towar towar = (Towar)tm.Towary.WgKodu[damPozycja.Towar];
+                        Towar towar = (Towar)tm.Towary.WgKodu[damPozycja.TowarKod];
                         if (towar != null)
                         {
                             PozycjaDokHandlowego pozycja = new PozycjaDokHandlowego(dokument);
@@ -257,6 +258,24 @@ namespace DamEnovaWebApi.Services
                             pozycja.Towar = towar;
                             pozycja.Ilosc = new Quantity(damPozycja.Ilosc);
                             pozycja.Cena = new DoubleCy(damPozycja.Cena);
+                            pozycja.ParametryRezerwacji.DataOd = damPozycja.DataOd;
+                            pozycja.ParametryRezerwacji.DataDo = damPozycja.DataDo;
+
+                            try
+                            {
+                                foreach (SlownikElem sl in core.Slowniki.WgNazwa)
+                                {
+                                    if (sl.Kategoria == "PriorytetZamAlg")
+                                    {
+                                        if (sl.Nazwa == damZamowienieOdbiorcy.Priorytet)
+                                            pozycja.ParametryRezerwacji.Priorytet = sl; //todo przetestować czy nie ustawia na wszystkich pozycjach
+                                    }
+                                }
+                            }
+                            catch (Exception)
+                            {
+                                throw new Exception("Błąd ustawiania priorytetu dokumentu");
+                            }
 
                             //CECHY
                             pozycja.Features["PDH_TYP_SOP3"] = damPozycja.PDH_TYP_SOP3;

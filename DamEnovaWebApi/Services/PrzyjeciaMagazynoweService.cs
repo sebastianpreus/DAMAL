@@ -47,6 +47,7 @@ namespace DamEnovaWebApi.Services
                     {
                         damDokument.Kontrahent = dok.Kontrahent.Nazwa;
                         damDokument.KontrahentKod = dok.Kontrahent.Kod;
+                        damDokument.KontrahentID = dok.Kontrahent.ID;
                     }
                     damDokument.Netto = dok.Suma.Netto;
                     damDokument.VAT = dok.Suma.VAT;
@@ -66,8 +67,8 @@ namespace DamEnovaWebApi.Services
 
                         pozycja.Lp = poz.Lp;
                         pozycja.Towar = poz.Towar.Nazwa;
-                        pozycja.TowarEAN = poz.Towar.EAN;
                         pozycja.TowarKod = poz.Towar.Kod;
+                        pozycja.TowarID = poz.Towar.ID;
                         pozycja.Ilosc = poz.Ilosc.Value;
                         pozycja.JednostkaMiary = poz.Ilosc.Symbol;
                         pozycja.Cena = poz.Cena.Value;
@@ -93,12 +94,16 @@ namespace DamEnovaWebApi.Services
                         damZasob.DamPrzyjecieMagazynoweId = dok.ID;
 
                         damZasob.OkresMagazynowy = zasob.Okres.ToStringValue();
-                        damZasob.Towar = zasob.Towar.ToStringValue();
+                        damZasob.Towar = zasob.Towar.Nazwa;
+                        damZasob.TowarKod = zasob.Towar.Kod;
+                        damZasob.TowarID = zasob.Towar.ID;
                         damZasob.Typ = zasob.Partia.Typ.ToString();
                         damZasob.IloscZasobu = zasob.IlośćZasobu.Value;
                         damZasob.JednostkaMiary = zasob.IlośćZasobu.Symbol;
                         damZasob.Wartosc = zasob.Partia.Wartosc;
                         damZasob.Cena = zasob.Partia.Cena;
+                        damZasob.DokumentPartia = zasob.Partia.Dokument.Numer.NumerPelny;
+                        damZasob.DokumentPartiaPierwotna = zasob.PartiaPierwotna.Dokument.Numer.NumerPelny;
 
                         damDokument.ZasobyDokumentu.Add(damZasob);
                     }
@@ -113,7 +118,11 @@ namespace DamEnovaWebApi.Services
                         dokumentPowiazany.Numer = dokPow.Numer.NumerPelny;
                         dokumentPowiazany.Data = dokPow.Data;
                         if (dokumentPowiazany.Kontrahent != null)
+                        {
                             dokumentPowiazany.Kontrahent = dokPow.Kontrahent.Nazwa;
+                            dokumentPowiazany.KontrahentKod = dokPow.Kontrahent.Kod;
+                            dokumentPowiazany.KontrahentID = dokPow.Kontrahent.ID;
+                        }
                         dokumentPowiazany.Netto = dokPow.Suma.Netto;
                         dokumentPowiazany.VAT = dokPow.Suma.VAT;
                         dokumentPowiazany.Wartosc = dokPow.Suma.Brutto;
@@ -132,7 +141,11 @@ namespace DamEnovaWebApi.Services
                         dokumentPowiazany.Numer = dokPow.Numer.NumerPelny;
                         dokumentPowiazany.Data = dokPow.Data;
                         if (dokumentPowiazany.Kontrahent != null)
+                        {
                             dokumentPowiazany.Kontrahent = dokPow.Kontrahent.Nazwa;
+                            dokumentPowiazany.KontrahentKod = dokPow.Kontrahent.Kod;
+                            dokumentPowiazany.KontrahentID = dokPow.Kontrahent.ID;
+                        }
                         dokumentPowiazany.Netto = dokPow.Suma.Netto;
                         dokumentPowiazany.VAT = dokPow.Suma.VAT;
                         dokumentPowiazany.Wartosc = dokPow.Suma.Brutto;
@@ -244,53 +257,11 @@ namespace DamEnovaWebApi.Services
 
                     }
 
-                    try
-                    {
-                        foreach (SlownikElem sl in core.Slowniki.WgNazwa)
-                        {
-                            if (sl.Kategoria == "PriorytetZamAlg")
-                            {
-                                if (sl.Nazwa == damPrzyjecieMagazynowe.Priorytet)
-                                    dokument.ParametryRezerwacjiProxy.Priorytet = sl;
-                            }
-                        }
-                    }
-                    catch (Exception)
-                    {
-                        throw new Exception("Błąd ustawiania priorytetu dokumentu");
-                    }
-
                     dokument.Stan = StanDokumentuHandlowego.Zatwierdzony;
                     trans.Commit();
                 }
                 session.Save();
                 damPrzyjecieMagazynowe.ID = dokument.ID;
-            }
-        }
-
-        internal void DeletePrzyjeciaMagazynowe(int id)
-        {
-            using (Session session = Connection.enovalogin.CreateSession(false, false))
-            {
-                HandelModule hm = HandelModule.GetInstance(session);
-                TowaryModule tm = TowaryModule.GetInstance(session);
-                MagazynyModule mm = MagazynyModule.GetInstance(session);
-                CRMModule cm = CRMModule.GetInstance(session);
-                CoreModule core = CoreModule.GetInstance(session);
-
-                using (ITransaction trans = session.Logout(true))
-                {
-                    DokumentHandlowy dokument = new DokumentHandlowy();
-
-                    if (id > 0)
-                    {
-                        dokument = hm.DokHandlowe[id];
-                        dokument.Stan = StanDokumentuHandlowego.Bufor;
-                        dokument.Delete();
-                    }
-                    trans.Commit();
-                }
-                session.Save();
             }
         }
     }

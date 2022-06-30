@@ -11,10 +11,6 @@ namespace DamEnovaWebApi.Models
     public class DamStanMagazynowy : DamModelBase
     {
 
-        
-        
-        public decimal WartoscKsiegowaMagazynu { get; set; }
-        
         public string Kod { get; set; }
         public string Nazwa { get; set; }
         public double StanZamowien { get; set; }

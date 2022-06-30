@@ -47,7 +47,11 @@ namespace DamEnovaWebApi.Services
                     damDokument.Data = dok.Data;
                     damDokument.Numer = dok.Numer.NumerPelny;
                     if (dok.Kontrahent != null)
+                    {
                         damDokument.Kontrahent = dok.Kontrahent.Nazwa;
+                        damDokument.KontrahentKod = dok.Kontrahent.Kod;
+                        damDokument.KontrahentID = dok.Kontrahent.ID;
+                    }
                     damDokument.Marza = o.Marża;
                     damDokument.MarzaProcent = o.MarżaProcent.ToString();
                     damDokument.Netto = dok.SumaPozycjiTowProd.Netto;
@@ -65,6 +69,8 @@ namespace DamEnovaWebApi.Services
 
                         pozycja.Lp = poz.Lp;
                         pozycja.Towar = poz.Towar.Nazwa;
+                        pozycja.TowarKod = poz.Towar.Kod;
+                        pozycja.TowarID = poz.Towar.ID;
                         pozycja.Ilosc = poz.Ilosc.Value;
                         pozycja.JednostkaMiary = poz.Ilosc.Symbol;
                         pozycja.Cena = poz.Cena.Value;
@@ -81,7 +87,9 @@ namespace DamEnovaWebApi.Services
                         damZasob.DamObrotyWgDokumentowId = dok.ID;
 
                         damZasob.OkresMagazynowy = zasob.Okres.ToStringValue();
-                        damZasob.Towar = zasob.Towar.ToStringValue();
+                        damZasob.Towar = zasob.Towar.Nazwa;
+                        damZasob.TowarKod = zasob.Towar.Kod;
+                        damZasob.TowarID = zasob.Towar.ID;
                         damZasob.Typ = zasob.Partia.Typ.ToString();
                         damZasob.IloscZasobu = zasob.Ilosc.Value;
                         damZasob.JednostkaMiary = zasob.IlośćZasobu.Symbol;
@@ -103,7 +111,11 @@ namespace DamEnovaWebApi.Services
                         dokumentPowiazany.Numer = dokPow.Numer.NumerPelny;
                         dokumentPowiazany.Zatwierdzony = dokPow.Zatwierdzony;
                         if (dokumentPowiazany.Kontrahent != null)
+                        {
                             dokumentPowiazany.Kontrahent = dokPow.Kontrahent.Nazwa;
+                            dokumentPowiazany.KontrahentKod = dokPow.Kontrahent.Kod;
+                            dokumentPowiazany.KontrahentID = dokPow.Kontrahent.ID;
+                        }
                         dokumentPowiazany.Netto = dokPow.Suma.Netto;
                         dokumentPowiazany.VAT = dokPow.Suma.VAT;
                         dokumentPowiazany.Wartosc = dokPow.Suma.Brutto;
@@ -122,7 +134,11 @@ namespace DamEnovaWebApi.Services
                         dokumentPowiazany.Numer = dokPow.Numer.NumerPelny;
                         dokumentPowiazany.Zatwierdzony = dokPow.Zatwierdzony;
                         if (dokumentPowiazany.Kontrahent != null)
+                        {
                             dokumentPowiazany.Kontrahent = dokPow.Kontrahent.Nazwa;
+                            dokumentPowiazany.KontrahentKod = dokPow.Kontrahent.Kod;
+                            dokumentPowiazany.KontrahentID = dokPow.Kontrahent.ID;
+                        }
                         dokumentPowiazany.Netto = dokPow.Suma.Netto;
                         dokumentPowiazany.VAT = dokPow.Suma.VAT;
                         dokumentPowiazany.Wartosc = dokPow.Suma.Brutto;

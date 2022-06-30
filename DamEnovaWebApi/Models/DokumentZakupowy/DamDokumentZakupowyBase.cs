@@ -13,6 +13,8 @@ namespace DamEnovaWebApi.Models
         public DateTime Data { get; set; }
         public DateTime DataOperacji { get; set; }
         public string Kontrahent { get; set; }
+        public string KontrahentKod { get; set; }
+        public int KontrahentID { get; set; }
         public decimal Netto { get; set; }
         public decimal VAT { get; set; }
         public decimal Wartosc { get; set; }

@@ -32,35 +32,30 @@ namespace DamEnovaWebApi.Services
                 {
                     DamKontrahent damKontrahent = new DamKontrahent();
 
+                    damKontrahent.ID = kontrahent.ID;
                     damKontrahent.Kod = kontrahent.Kod;
                     damKontrahent.Nazwa = kontrahent.Nazwa;
                     damKontrahent.NIP = damKontrahent.NIP;
                     damKontrahent.PodatnikVAT = kontrahent.PodatnikVAT;
                     damKontrahent.StatusPodmiotu = kontrahent.StatusPodmiotu.ToString();
-                    damKontrahent.FormaPrawna = kontrahent.FormaPrawna.ToString();
+                    //damKontrahent.FormaPrawna = kontrahent.FormaPrawna.ToString();
+                    damKontrahent.PESEL = kontrahent.PESEL;
+                    damKontrahent.REGON = kontrahent.REGON;
+                    damKontrahent.KRS = kontrahent.KRS;
+                    damKontrahent.EMAIL = kontrahent.EMAIL;
 
                     damKontrahent.DamAdres.Miejscowosc = kontrahent.Adres.Miejscowosc;
                     damKontrahent.DamAdres.Ulica = kontrahent.Adres.Ulica;
                     damKontrahent.DamAdres.NrDomu = kontrahent.Adres.NrDomu;
                     damKontrahent.DamAdres.NrLokalu = kontrahent.Adres.NrLokalu;
                     damKontrahent.DamAdres.KodPocztowy = kontrahent.Adres.KodPocztowy;
-                    damKontrahent.DamAdres.Miejscowosc = kontrahent.Adres.Miejscowosc;
                     damKontrahent.DamAdres.Poczta = kontrahent.Adres.Poczta;
                     damKontrahent.DamAdres.Gmina = kontrahent.Adres.Gmina;
                     damKontrahent.DamAdres.Powiat = kontrahent.Adres.Powiat;
-
-                    //todo - przekazac i uzupełnić województwo 
-                    damKontrahent.DamAdres.Wojewodztwo = kontrahent.Adres.Wojewodztwo.ToString();
-
-                    damKontrahent.DamAdres.Kraj = kontrahent.Adres.Kraj;
                     damKontrahent.DamAdres.KodKraju = kontrahent.Adres.KodKraju;
                     damKontrahent.DamAdres.Telefon = kontrahent.Adres.Telefon;
                     damKontrahent.DamAdres.Faks = kontrahent.Adres.Faks;
                     damKontrahent.DamAdres.NietypowaLokalizacja = kontrahent.Adres.NietypowaLokalizacja;
-                    damKontrahent.PESEL = kontrahent.PESEL;
-                    damKontrahent.REGON = kontrahent.REGON;
-                    damKontrahent.KRS = kontrahent.KRS;
-                    damKontrahent.EMAIL = kontrahent.EMAIL;
 
                     //CECHY
                     damKontrahent.K_NUMER_SOP3 = kontrahent.Features["K_NUMER_SOP3"].ToString();
@@ -94,12 +89,11 @@ namespace DamEnovaWebApi.Services
                     newKontrahent.Nazwa = damKontrahent.Nazwa;
                     newKontrahent.NIP = damKontrahent.NIP;
                     newKontrahent.PodatnikVAT = damKontrahent.PodatnikVAT;
-                    if (damKontrahent.StatusPodmiotu == "Finalny") //wyslac jako dopuszczalna wartosc
+                    if (damKontrahent.StatusPodmiotu == "Finalny") 
                         newKontrahent.StatusPodmiotu = Soneta.Core.StatusPodmiotu.Finalny;
                     else
                         newKontrahent.StatusPodmiotu = Soneta.Core.StatusPodmiotu.PodmiotGospodarczy;
-                    //todo jak to wypełnić  ?
-                    //newKontrahent.FormaPrawna = damKontrahent.FormaPrawna;
+
 
                     if (damKontrahent.DamAdres != null)
                     {
@@ -113,8 +107,6 @@ namespace DamEnovaWebApi.Services
                             newKontrahent.Adres.NrLokalu = damKontrahent.DamAdres.NrLokalu;
                         if (damKontrahent.DamAdres.KodPocztowy != 0)
                             newKontrahent.Adres.KodPocztowy = damKontrahent.DamAdres.KodPocztowy;
-                        if (damKontrahent.DamAdres.Miejscowosc != null)
-                            newKontrahent.Adres.Miejscowosc = damKontrahent.DamAdres.Miejscowosc;
                         if (damKontrahent.DamAdres.Poczta != null)
                             newKontrahent.Adres.Poczta = damKontrahent.DamAdres.Poczta;
                         if (damKontrahent.DamAdres.Gmina != null)
@@ -122,10 +114,6 @@ namespace DamEnovaWebApi.Services
                         if (damKontrahent.DamAdres.Powiat != null)
                             newKontrahent.Adres.Powiat = damKontrahent.DamAdres.Powiat;
 
-                        //todo - przekazac i uzupełnić województwo 
-                        //newKontrahent.Adres.Wojewodztwo = damKontrahent.DamAdres.Wojewodztwo;
-                        if (damKontrahent.DamAdres.Kraj != null)
-                            newKontrahent.Adres.Kraj = damKontrahent.DamAdres.Kraj;
                         if (damKontrahent.DamAdres.KodKraju != null)
                             newKontrahent.Adres.KodKraju = damKontrahent.DamAdres.KodKraju;
                         if (damKontrahent.DamAdres.Telefon != null)

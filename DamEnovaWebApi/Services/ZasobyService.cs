@@ -45,11 +45,14 @@ namespace DamEnovaWebApi.Services
                     damZasob.Cena = zasob.Partia.Cena;
                     damZasob.Dokument = zasob.Partia.Dokument.Numer.NumerPelny;
                     damZasob.Data = zasob.Partia.Dokument.Data;
-                    //this.DaokumentPierw = zasob.Partia.WgDokument;
-                    //this.Data = zasob.Partia.WgDokument;
                     if (zasob.PartiaPierwotna.KontrahentPartii != null)
-                        damZasob.Dostawca = zasob.PartiaPierwotna.KontrahentPartii.Nazwa;
-                    damZasob.Typ = zasob.Towar.Typ.ToString();
+                    {
+                        damZasob.Kontrahent = zasob.PartiaPierwotna.KontrahentPartii.Nazwa;
+                        damZasob.KontrahentKod = zasob.PartiaPierwotna.KontrahentPartii.Kod;
+                        damZasob.KontrahentID = zasob.PartiaPierwotna.KontrahentPartii.ID;
+                    }
+                    damZasob.Typ = zasob.Partia.Typ.ToString();
+                    damZasob.TypTowaru = zasob.Towar.Typ.ToString();
 
 
                     damZasoby.Add(damZasob);

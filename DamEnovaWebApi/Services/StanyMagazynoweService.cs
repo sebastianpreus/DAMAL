@@ -83,7 +83,6 @@ namespace DamEnovaWebApi.Services
                         //pozostałe: 
                         stanMagazynowy.ProcentVAT = ((double)towar.ProcentVAT);
                         stanMagazynowy.StanMagazynu = stanMag.StanMagazynu.Value;
-                        stanMagazynowy.WartoscKsiegowaMagazynu = stanMag.WartośćKsięgowaMagazynu;
                         stanMagazynowy.SredniaCenaZakupu = stanMag.CenaŚrednioważona;
 
                         //try { stanMagazynowy.WartoscHurtowa = stanMag.WgCeny["Hurtowa"].WartośćNetto; } catch (Exception) { }

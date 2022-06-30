@@ -36,10 +36,24 @@ namespace DamEnovaWebApi.Services
                     else
                         tm.Towary.AddRow(towar);
 
-
                     towar.Kod = damTowar.Kod;
-                    //todo sprawdzić jak uzupełnić typ towaru
-                    //towar.Typ = TypTowaru.Produkt 
+
+                    switch (damTowar.Typ)
+                    {
+                        case "Produkt":
+                            towar.Typ = TypTowaru.Produkt;
+                            break;
+                        case "Towar":
+                            towar.Typ = TypTowaru.Towar;
+                            break;
+                        case "Usługa":
+                            towar.Typ = TypTowaru.Usługa;
+                            break;
+                        default:
+                            towar.Typ = TypTowaru.Towar;
+                            break;
+                    }
+
                     towar.Nazwa = damTowar.Nazwa;
                     towar.EAN = damTowar.EAN;
                     towar.NumerKatalogowy = damTowar.NumerKatalogowy;
@@ -63,10 +77,10 @@ namespace DamEnovaWebApi.Services
                     towar.Features["T_Rodzaj_Kategoria"] = damTowar.T_Rodzaj_Kategoria;
                     towar.Features["T_Gatunek_Prod"] = damTowar.T_Gatunek_Prod;
                     towar.Features["T_Grupa"] = damTowar.T_Grupa;
-                    //towar.Features["T_Rodzina"] = damTowar.T_Rodzina; //todo pojawia się błąd że nie może przyjmować wartości "1515" (jako string)
+                    towar.Features["T_Rodzina"] = damTowar.T_Rodzina; //todo pojawia się błąd że nie może przyjmować wartości "1515" (jako string)
                     //DefinicjaCeny dfceny = new 
                     //DefinicjaCeny dfc = Soneta.Towary.DefinicjeCen
-                    Cena cenaPodst = tm.Ceny.WgDefinicja[];
+                    //Cena cenaPodst = tm.Ceny.WgDefinicja[];
 
                     trans.Commit();
                 }

@@ -11,6 +11,8 @@ namespace DamEnovaWebApi.Models
     {
         public int Lp { get; set; }
         public string Towar { get; set; }
+        public string TowarKod { get; set; }
+        public int TowarID { get; set; }
         public double Ilosc { get; set; }
         public string JednostkaMiary { get; set; }
         public double Cena { get; set; }
@@ -18,15 +20,10 @@ namespace DamEnovaWebApi.Models
         public double CenaPoRabacie { get; set; }
         public decimal Wartosc { get; set; }
         public string StavkaVAT { get; set; }
-        public int PozostaloIloscWZ { get; set; }
-        public int PozostaloIloscFV { get; set; }
-        public int StanPokryciaPozycji { get; set; }
         public string Waluta { get; set; }
         public string Priorytet { get; set; }
         public DateTime DataOd { get; set; }
         public DateTime DataDo { get; set; }
-        public string CzasOd { get; set; }
-        public string CzasDo { get; set; }
 
 
         public int DamZamowienieOdbiorcyOdPozycjiId { get; set; }

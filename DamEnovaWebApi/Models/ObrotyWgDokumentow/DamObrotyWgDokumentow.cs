@@ -14,6 +14,8 @@ namespace DamEnovaWebApi.Models
         public DateTime Data { get; set; }
         public string Numer { get; set; }
         public string Kontrahent { get; set; }
+        public string KontrahentKod { get; set; }
+        public int KontrahentID { get; set; }
         public decimal Marza { get; set; }
         public string MarzaProcent { get; set; }
         public decimal Netto { get; set; }

@@ -11,11 +11,16 @@ namespace DamEnovaWebApi.Models
     {
         public string OkresMagazynowy { get; set; }
         public string Towar { get; set; }
+        public string TowarKod { get; set; }
+        public int TowarID { get; set; }
         public string Typ { get; set; }
         public double IloscZasobu { get; set; }
         public string JednostkaMiary { get; set; }
         public decimal Wartosc { get; set; }
         public double Cena { get; set; }
+        public string DokumentPartia { get; set; }
+        public string DokumentPartiaPierwotna { get; set; }
+
 
         [ForeignKey("DamPrzyjecieMagazynowe")]
         public int DamPrzyjecieMagazynoweId { get; set; }

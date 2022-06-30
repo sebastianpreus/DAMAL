@@ -44,7 +44,11 @@ namespace DamEnovaWebApi.Services
                     damDokument.Data = dok.Data;
                     damDokument.DataOperacji = dok.DataOperacji;
                     if (dok.Kontrahent != null)
+                    {
                         damDokument.Kontrahent = dok.Kontrahent.Nazwa;
+                        damDokument.KontrahentKod = dok.Kontrahent.Kod;
+                        damDokument.KontrahentID = dok.Kontrahent.ID;
+                    }
                     damDokument.Netto = dok.Suma.Netto;
                     damDokument.VAT = dok.Suma.VAT;
                     damDokument.Wartosc = dok.Suma.BruttoCy.Value;
@@ -63,7 +67,9 @@ namespace DamEnovaWebApi.Services
                         pozycja.DamWydanieMagazynoweId = dok.ID;
 
                         pozycja.Lp = poz.Lp;
-                        pozycja.Towar = poz.Towar.Kod;
+                        pozycja.Towar = poz.Towar.Nazwa;
+                        pozycja.TowarKod = poz.Towar.Kod;
+                        pozycja.TowarID = poz.Towar.ID;
                         pozycja.Ilosc = poz.Ilosc.Value;
                         pozycja.JednostkaMiary = poz.Ilosc.Symbol;
                         pozycja.Cena = poz.Cena.Value;
@@ -89,12 +95,16 @@ namespace DamEnovaWebApi.Services
                         damZasob.DamWydanieMagazynoweId = dok.ID;
 
                         damZasob.OkresMagazynowy = zasob.Okres.ToStringValue();
-                        damZasob.Towar = zasob.Towar.ToStringValue();
+                        damZasob.Towar = zasob.Towar.Nazwa;
+                        damZasob.TowarKod = zasob.Towar.Kod;
+                        damZasob.TowarID = zasob.Towar.ID;
                         damZasob.Typ = zasob.Partia.Typ.ToString();
                         damZasob.IloscZasobu = zasob.IlośćZasobu.Value;
                         damZasob.JednostkaMiary = zasob.IlośćZasobu.Symbol;
                         damZasob.Wartosc = zasob.Partia.Wartosc;
                         damZasob.Cena = zasob.Partia.Cena;
+                        damZasob.DokumentPartia = zasob.Partia.Dokument.Numer.NumerPelny;
+                        damZasob.DokumentPartiaPierwotna = zasob.PartiaPierwotna.Dokument.Numer.NumerPelny;
 
                         damDokument.ZasobyDokumentu.Add(damZasob);
                     }
@@ -109,7 +119,11 @@ namespace DamEnovaWebApi.Services
                         dokumentPowiazany.Numer = dokPow.Numer.NumerPelny;
                         dokumentPowiazany.Data = dokPow.Data;
                         if (dokumentPowiazany.Kontrahent != null)
-                            dokumentPowiazany.Kontrahent = dokPow.Kontrahent.Kod;
+                        {
+                            dokumentPowiazany.Kontrahent = dokPow.Kontrahent.Nazwa;
+                            dokumentPowiazany.KontrahentKod = dokPow.Kontrahent.Kod;
+                            dokumentPowiazany.KontrahentID = dokPow.Kontrahent.ID;
+                        }
                         dokumentPowiazany.Netto = dokPow.Suma.Netto;
                         dokumentPowiazany.VAT = dokPow.Suma.VAT;
                         dokumentPowiazany.Wartosc = dokPow.Suma.Brutto;
@@ -128,7 +142,11 @@ namespace DamEnovaWebApi.Services
                         dokumentPowiazany.Numer = dokPow.Numer.NumerPelny;
                         dokumentPowiazany.Data = dokPow.Data;
                         if (dokumentPowiazany.Kontrahent != null)
+                        {
                             dokumentPowiazany.Kontrahent = dokPow.Kontrahent.Nazwa;
+                            dokumentPowiazany.KontrahentKod = dokPow.Kontrahent.Kod;
+                            dokumentPowiazany.KontrahentID = dokPow.Kontrahent.ID;
+                        }
                         dokumentPowiazany.Netto = dokPow.Suma.Netto;
                         dokumentPowiazany.VAT = dokPow.Suma.VAT;
                         dokumentPowiazany.Wartosc = dokPow.Suma.Brutto;
@@ -257,9 +275,9 @@ namespace DamEnovaWebApi.Services
                     dokument.Features["DH_NR_SOP3"] = damWydanieMagazynowe.DH_NR_SOP3;
 
 
-                    if (damWydanieMagazynowe.Kontrahent != null)
+                    if (damWydanieMagazynowe.KontrahentKod != null)
                     {
-                        Kontrahent kontrahent = cm.Kontrahenci.WgKodu[damWydanieMagazynowe.Kontrahent];
+                        Kontrahent kontrahent = cm.Kontrahenci.WgKodu[damWydanieMagazynowe.KontrahentKod];
                         if (kontrahent == null)
                             throw new InvalidOperationException("Nieznaleziony kontrahent o kodzie " + damWydanieMagazynowe.Kontrahent);
                         dokument.Kontrahent = kontrahent;
@@ -267,7 +285,7 @@ namespace DamEnovaWebApi.Services
 
                     foreach (var damPozycja in damWydanieMagazynowe.PozycjeDokumentu)
                     {
-                        Towar towar = (Towar)tm.Towary.WgKodu[damPozycja.Towar];
+                        Towar towar = (Towar)tm.Towary.WgKodu[damPozycja.TowarKod];
                         if (towar != null)
                         {
                             PozycjaDokHandlowego pozycja = new PozycjaDokHandlowego(dokument);
@@ -287,22 +305,6 @@ namespace DamEnovaWebApi.Services
                         }
                     }
 
-                    //try
-                    //{
-                    //    foreach (SlownikElem sl in core.Slowniki.WgNazwa)
-                    //    {
-                    //        if (sl.Kategoria == "PriorytetZamAlg")
-                    //        {
-                    //            if (sl.Nazwa == damWydanieMagazynowe.Priorytet)
-                    //                dokument.ParametryRezerwacjiProxy.Priorytet = sl;
-                    //        }
-                    //    }
-                    //}
-                    //catch (Exception)
-                    //{
-                    //    throw new Exception("Błąd ustawiania priorytetu dokumentu");
-                    //}
-
                     dokument.Stan = StanDokumentuHandlowego.Zatwierdzony;
 
                     trans.Commit();
@@ -313,6 +315,7 @@ namespace DamEnovaWebApi.Services
             }
         }
 
+        //todo korekta ma być na wydaniach i przesunięciach magazynowych
         public void PostWydaniaMagazynoweKorekta(DamWydanieMagazynowe damWydanieMagazynowe)
         {
             using (Session session = Connection.enovalogin.CreateSession(false, false))
@@ -333,17 +336,26 @@ namespace DamEnovaWebApi.Services
 
                     DokumentHandlowy korekta = defKorekta.KorygujDokument(dokument);
 
+
+                    korekta.Magazyn = mm.Magazyny.WgNazwa[damWydanieMagazynowe.Magazyn];
+                    korekta.Data = damWydanieMagazynowe.Data;
+                    korekta.DataOperacji = damWydanieMagazynowe.DataOperacji;
+                    korekta.Opis = damWydanieMagazynowe.Opis;
+
+                    //CECHY
+                    korekta.Features["DH_TYP_SOP3"] = damWydanieMagazynowe.DH_TYP_SOP3;
+                    korekta.Features["DH_ID_SOP3"] = damWydanieMagazynowe.DH_ID_SOP3;
+                    korekta.Features["DH_NR_SOP3"] = damWydanieMagazynowe.DH_NR_SOP3;
+
                     foreach (PozycjaDokHandlowego pozycja in korekta.Pozycje)
                     {
                         using (var transPozycji = session.Logout(true))
                         {
                             var damPozycja = damWydanieMagazynowe.PozycjeDokumentu.FirstOrDefault(x => x.Lp == pozycja.Lp);
 
-                            //tutaj wszystkie zmiany w tym cena, rabat, ilosc
-                            //pozycja.Cena = new DoubleCy(20.01);
+                            pozycja.Cena = new DoubleCy(damPozycja.Cena);
                             pozycja.Ilosc = new Quantity(damPozycja.Ilosc, pozycja.Ilosc.Symbol);
 
-                            //tutaj musimy zatwierdzic zmodyfikowana pozycje
                             transPozycji.CommitUI();
                         }
                     }

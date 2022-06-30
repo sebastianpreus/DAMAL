@@ -12,16 +12,15 @@ namespace DamEnovaWebApi.Models
         public string Typ { get; set; }
         public bool Zatwierdzony { get; set; }
         public bool Anulowany { get; set; }
-        public string Potwierdzenie { get; set; }
         public string Numer { get; set; }
         public DateTime Data { get; set; }
-        public string Podrzedne { get; set; }
         public string Kontrahent { get; set; }
+        public string KontrahentKod { get; set; }
+        public int KontrahentID { get; set; }
         public decimal Netto { get; set; }
         public decimal Wartosc { get; set; }
+        public decimal VAT { get; set; }
         public string Opis { get; set; }
-        public int StanPokrycia { get; set; }
-        public bool ZaliczkaPokrywaCalosc { get; set; }
         public string Waluta { get; set; }
 
 

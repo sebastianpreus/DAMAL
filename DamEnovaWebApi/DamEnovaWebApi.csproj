@@ -502,8 +502,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Authentication\BasicAuthenticationAttribute.cs" />
     <Compile Include="Authentication\UserValidate.cs" />
-    <Compile Include="Controllers\DamZamowienieOdbiorcyController.cs" />
-    <Compile Include="Controllers\DokumentyController.cs" />
     <Compile Include="Controllers\TowaryController.cs" />
     <Compile Include="Controllers\MagazyController.cs" />
     <Compile Include="Controllers\StanyMagazynoweController.cs" />
@@ -530,8 +528,6 @@
     <Compile Include="Helpers\Filter.cs" />
     <Compile Include="Models\Base\DamModelBase.cs" />
     <Compile Include="Models\DamAdres.cs" />
-    <Compile Include="Models\DamDokument.cs" />
-    <Compile Include="Models\DamDokumentBase.cs" />
     <Compile Include="Models\DamTowar.cs" />
     <Compile Include="Models\DokumentZakupowy\DamDokumentZakupowy.cs" />
     <Compile Include="Models\DokumentZakupowy\DamDokumentZakupowyBase.cs" />
@@ -563,7 +559,6 @@
     <Compile Include="Models\WydanieMagazynowe\DamWydanieMagazynowePowiazany.cs" />
     <Compile Include="Models\WydanieMagazynowe\DamWydanieMagazynowePozycja.cs" />
     <Compile Include="Models\WydanieMagazynowe\DamWydanieMagazynoweZasob.cs" />
-    <Compile Include="Models\DamZamowienieObce.cs" />
     <Compile Include="Models\ZamowienieOdbiorcyOdPozycji\DamZamowienieOdbiorcyOdPozycji.cs" />
     <Compile Include="Models\ZamowienieOdbiorcyOdPozycji\DamZamowienieOdbiorcyOdPozycjiPowiazany.cs" />
     <Compile Include="Models\ZamowienieOdbiorcyOdPozycji\DamZamowienieOdbiorcyOdPozycjiPozycja.cs" />
@@ -573,7 +568,6 @@
     <Compile Include="Models\ZamowienieOdbiorcy\DamZamowienieOdbiorcy.cs" />
     <Compile Include="Models\ZamowienieOdbiorcy\DamZamowienieOdbiorcyZasob.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\DokumentyService.cs" />
     <Compile Include="Services\MagazynyService.cs" />
     <Compile Include="Services\StanyMagazynoweService.cs" />
     <Compile Include="Services\DokumentyZakupoweService.cs" />
